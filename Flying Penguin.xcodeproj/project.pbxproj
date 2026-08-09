@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		F9E600973028BC27001D93E4 /* Flying Penguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying Penguin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E601553028BCBD001D93E4 /* Hungry Frog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Hungry Frog.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -41,6 +42,13 @@
 			isa = PBXGroup;
 			children = (
 				F9E600973028BC27001D93E4 /* Flying Penguin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9E601563028BCBD001D93E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +105,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F9E600983028BC27001D93E4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9E601563028BCBD001D93E4 /* Products */;
+					ProjectRef = F9E601553028BCBD001D93E4 /* Hungry Frog.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F9E600963028BC27001D93E4 /* Flying Penguin */,

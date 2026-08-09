@@ -1,0 +1,76 @@
+//
+//  FoodCatalog.swift
+//  Elephant Challenge: Math Memory
+//
+//  What each character eats. One food per character, in the same order as
+//  `CharacterUnlocks.orderedCharacterIDs`, backed by the `food_1`…`food_10`
+//  artwork. The currency (flies collected as "cards") is a separate concept
+//  and keeps its own fly artwork and wording everywhere — this catalog only
+//  covers what visibly flies around in a level and how that is described.
+//
+
+import Foundation
+
+public struct FoodItem: Identifiable, Equatable, Sendable {
+    /// Short identifier used to key the localized counted name
+    /// ("food.<id> %lld").
+    public let id: String
+    /// Asset catalog name of the artwork ("food_1" … "food_10").
+    public let imageName: String
+
+    public init(id: String, imageName: String) {
+        self.id = id
+        self.imageName = imageName
+    }
+}
+
+public enum FoodCatalog {
+    /// Order must match `CharacterUnlocks.orderedCharacterIDs`, which in turn
+    /// matches `CharacterCatalog.all` — frog through fox, so `food_1` is the
+    /// frog's fly and `food_10` is the fox's chicken.
+    private static let items: [FoodItem] = [
+        FoodItem(id: "fly", imageName: "food_1"),
+        FoodItem(id: "fish", imageName: "food_2"),
+        FoodItem(id: "carrot", imageName: "food_3"),
+        FoodItem(id: "kibble", imageName: "food_4"),
+        FoodItem(id: "meat", imageName: "food_5"),
+        FoodItem(id: "pearl", imageName: "food_6"),
+        FoodItem(id: "shrimp", imageName: "food_7"),
+        FoodItem(id: "peanut", imageName: "food_8"),
+        FoodItem(id: "honey", imageName: "food_9"),
+        FoodItem(id: "chicken", imageName: "food_10")
+    ]
+
+    /// The food a character eats, falling back to the starter's (the fly) for
+    /// an unrecognized ID rather than crashing.
+    public static func food(for characterID: String) -> FoodItem {
+        let index = CharacterUnlocks.orderedCharacterIDs.firstIndex(of: characterID) ?? 0
+        guard items.indices.contains(index) else { return items[0] }
+        return items[index]
+    }
+
+    /// The artwork a character's food flies around as.
+    public static func imageName(for characterID: String) -> String {
+        food(for: characterID).imageName
+    }
+
+    /// "You can collect up to 12 flies in this level." — one whole sentence per
+    /// food, so every language can decline, reorder or reword it freely.
+    public static func collectionLine(for characterID: String, count: Int) -> String {
+        L(key: "levelIntro.cardsBullet.\(food(for: characterID).id) %lld", count: count)
+    }
+
+    /// "You collected all the carrots." — the line under the character on the
+    /// result card when the board was filled, named after what this character
+    /// was actually eating rather than after the frog's flies.
+    ///
+    /// One whole sentence per food again, for the same reason: the noun sits in
+    /// a different case, position and article in every language. A language that
+    /// has not been given the ten food sentences keeps the food-neutral line it
+    /// already has ("You earned every point"), which is a correct translation —
+    /// dropping to English for this one line would be the worse answer.
+    public static func completionLine(for characterID: String) -> String {
+        LTranslated(key: "game.end.completionSubtitle.\(food(for: characterID).id)")
+            ?? L(key: "game.end.completionSubtitle")
+    }
+}
