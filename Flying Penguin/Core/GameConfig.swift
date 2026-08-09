@@ -21,10 +21,13 @@ public enum GameConfig {
     /// between two, three and four, which made every level three separate
     /// scoreboards aiming at three different targets — see `migrateToFixed
     /// AnswerCount` for how those were merged back into one.
-    public static let answerBubbleCount = 5
+    public static let answerBubbleCount = 3
 
     /// Wrong answers a question must supply: every bubble but the right one.
-    public static var distractorCount: Int { answerBubbleCount - 1 }
+    /// Flying Penguin shows three hoops. A fourth, hidden distractor is built
+    /// so a no-correct-answer flight can still show three credible wrong
+    /// answers without inventing values outside the question generator.
+    public static var distractorCount: Int { answerBubbleCount }
 
     // MARK: Lives
 
@@ -136,7 +139,8 @@ public enum GameConfig {
     /// The second half of the catalog is Premium-exclusive: `nil` means the
     /// character cannot be earned with cards at all, no matter the total.
     public static let characterUnlockRequirements: [Int?] = [
-        0,          // frog — from the start
+        0,          // Flying Penguin — new starter
+        0,          // frog — existing requirement retained
         500,        // penguin
         1_500,      // bunny
         3_000,      // dog

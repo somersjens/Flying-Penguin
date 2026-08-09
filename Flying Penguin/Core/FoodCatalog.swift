@@ -44,9 +44,11 @@ public enum FoodCatalog {
     /// The food a character eats, falling back to the starter's (the fly) for
     /// an unrecognized ID rather than crashing.
     public static func food(for characterID: String) -> FoodItem {
+        if characterID == "flying_penguin" { return items[1] }
         let index = CharacterUnlocks.orderedCharacterIDs.firstIndex(of: characterID) ?? 0
-        guard items.indices.contains(index) else { return items[0] }
-        return items[index]
+        let legacyIndex = max(0, index - 1)
+        guard items.indices.contains(legacyIndex) else { return items[0] }
+        return items[legacyIndex]
     }
 
     /// The artwork a character's food flies around as.

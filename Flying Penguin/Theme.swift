@@ -21,8 +21,10 @@ enum Currency {
     static let flyIcon = "fly_currency"
 
     static func icon(for characterID: String) -> String {
+        if characterID == "flying_penguin" { return "currency_2" }
         let index = CharacterUnlocks.orderedCharacterIDs.firstIndex(of: characterID) ?? 0
-        return index == 0 ? flyIcon : "currency_\(index + 1)"
+        let legacyIndex = max(0, index - 1)
+        return legacyIndex == 0 ? flyIcon : "currency_\(legacyIndex + 1)"
     }
 }
 
@@ -171,7 +173,8 @@ struct AnimalCharacter: Identifiable, Equatable {
     /// Localized display name, resolved per language from the string catalog
     /// ("character.frog", "character.penguin", …).
     var localizedName: String {
-        L(key: "character.\(id)")
+        if id == "flying_penguin" { return L(key: "character.penguin") }
+        return L(key: "character.\(id)")
     }
 }
 
@@ -180,15 +183,15 @@ enum CharacterCatalog {
     static let freeCharacterID = CharacterUnlocks.starterCharacterID
 
     /// The localized fallback used when the player leaves their name empty.
-    /// The current game character is Frog, so this resolves to Frog/Kikker and
+    /// The current game character is Penguin, so this resolves to Penguin and
     /// automatically follows every language added to the string catalog.
     static var defaultPlayerName: String {
-        character(id: "frog").localizedName
+        character(id: "flying_penguin").localizedName
     }
 
-    /// Order must match `CharacterUnlocks.orderedCharacterIDs`. Frog leads the
-    /// catalog: it is the game's own character and the one every player starts
-    /// with. Fox closes it. Each palette is taken from the artwork itself —
+    /// Order must match `CharacterUnlocks.orderedCharacterIDs`. Flying Penguin
+    /// leads the catalog; the original ten retain their relative order and
+    /// palettes. Fox closes it. Each palette is taken from the artwork itself —
     /// the dog and the crab are themed on their headband rather than their
     /// fur, which is what keeps them apart from the fox and the bear.
     ///
@@ -199,6 +202,15 @@ enum CharacterCatalog {
     /// throat shading sat beside the mouth instead of behind it. Move one and
     /// re-measure it — the anchor and the mask both hang off this point.
     static let all: [AnimalCharacter] = [
+        AnimalCharacter(id: "flying_penguin", name: "Penguin", emoji: "🐧",
+                        imageName: "main_character_1", thumbnailName: "main_character_1",
+                        sideImageName: "main_character_1",
+                        mouth: MouthGeometry(center: CGPoint(x: 0.735, y: 0.535),
+                                             opening: CGSize(width: 0.070, height: 0.090),
+                                             tongueRGB: (0.82, 0.20, 0.19),
+                                             throatRGB: (0.34, 0.08, 0.03)),
+                        primaryRGB: (0.13, 0.42, 0.86), deepRGB: (0.04, 0.16, 0.38),
+                        skyRGB: (0.86, 0.95, 1.00), tintRGB: (0.68, 0.86, 0.98)),
         AnimalCharacter(id: "frog", name: "Frog", emoji: "🐸",
                         imageName: "front_1", thumbnailName: "thumb_1",
                         sideImageName: "side_1",

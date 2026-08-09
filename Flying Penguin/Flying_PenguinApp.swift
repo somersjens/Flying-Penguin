@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-@main
+// The retained application flow starts in `ElephantChallengeApp`. This
+// Xcode-template wrapper remains available for previews without declaring a
+// second executable entry point.
 struct Flying_PenguinApp: App {
     var body: some Scene {
         WindowGroup {

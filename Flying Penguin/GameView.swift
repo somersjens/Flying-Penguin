@@ -108,6 +108,7 @@ struct GameView: View {
                            onPlayAgain: {
                                showsResult = false
                                playsLevelCompletion = false
+                               playsFishEntrance = true
                                model.restart()
                            },
                            onExit: { dismiss() })
@@ -189,7 +190,7 @@ struct GameView: View {
 
         return GeometryReader { proxy in
             ZStack(alignment: .top) {
-                FlyPlayfield(rounds: model.visibleRounds,
+                FlyingPenguinPlayfield(rounds: model.visibleRounds,
                               maximumRounds: model.maximumRounds,
                               character: character,
                               isPad: isPad,
@@ -209,7 +210,9 @@ struct GameView: View {
                               tutorialMessage: tutorialMessage,
                               tutorialSymbol: model.tutorialStep?.symbolName,
                               tutorialPointer: model.tutorialPointer,
-                              onHit: { model.select(optionID: $0) },
+                              onHit: { optionID, usesTurbo in
+                                  model.select(optionID: optionID, usesTurbo: usesTurbo)
+                              },
                               onImpact: { AppAudio.shared.playSplash() },
                               onSwallow: { model.reportCatchOutcome(isCorrect: $0) },
                               onFishEntranceComplete: finishFishEntrance,

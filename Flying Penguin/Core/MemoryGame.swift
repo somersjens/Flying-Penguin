@@ -297,9 +297,12 @@ public final class MemoryGame {
             // given: a catch made on the last tick of the window still doubles,
             // and the five that reopen the window are not doubled by it.
             let streakWasActive = isStreakBoostActive(at: now)
-            let fishMultiplier = usesBonusFish ? GameConfig.bonusFishMultiplier : 1
-            let streakMultiplier = streakWasActive ? GameConfig.streakMultiplier : 1
-            let earned = GameConfig.normalCardReward * fishMultiplier * streakMultiplier
+            // Flying Penguin's early-choice turbo is an exact +2 reward. It
+            // deliberately does not stack with the older streak multiplier:
+            // the promise painted by the turbo trail is always two points.
+            let earned = usesBonusFish
+                ? GameConfig.normalCardReward * GameConfig.bonusFishMultiplier
+                : GameConfig.normalCardReward * (streakWasActive ? GameConfig.streakMultiplier : 1)
             cards += earned
             result.correctAnswers += 1
             result.cardsEarned += earned

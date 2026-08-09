@@ -258,7 +258,7 @@ final class GameViewModel: ObservableObject {
     /// back as `.ignored` and changes nothing at all. The returned flag tells
     /// the reef whether to burst the bubble.
     @discardableResult
-    func select(optionID: UUID) -> Bool {
+    func select(optionID: UUID, usesTurbo: Bool = false) -> Bool {
         // A guided step only counts the answer it is teaching. Refusing here,
         // before the engine sees the tap, is what makes "nothing happens" mean
         // nothing at all: no score, no life, no round turning over — the tongue
@@ -269,7 +269,7 @@ final class GameViewModel: ObservableObject {
             return false
         }
         let outcome = engine.select(optionID: optionID,
-                                    usesBonusFish: hasBonusFishPower,
+                                    usesBonusFish: usesTurbo || hasBonusFishPower,
                                     now: Date())
         guard outcome != .ignored else { return false }
         // Every real interaction advances the playtime clock. Without these the
