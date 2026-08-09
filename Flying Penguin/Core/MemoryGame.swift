@@ -363,9 +363,9 @@ public final class MemoryGame {
     public func awardFlyComboBonus() {
         guard state == .resolving,
               case .correct? = lastOutcome else { return }
-        cards += GameConfig.flyComboBonus
-        result.cardsEarned += GameConfig.flyComboBonus
-        result.bonusCards += GameConfig.flyComboBonus
+        cards += GameConfig.hoopComboBonus
+        result.cardsEarned += GameConfig.hoopComboBonus
+        result.bonusCards += GameConfig.hoopComboBonus
     }
 
     /// Pushes a running double-points window forward by the time the session

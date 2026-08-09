@@ -20,7 +20,7 @@ struct ResultView: View {
     @State private var isPresented = false
     @State private var badgeLanded = false
     @State private var shineSweep = false
-    @State private var showsFlySwarm = false
+    @State private var showsHoopCelebration = false
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -53,7 +53,7 @@ struct ResultView: View {
     /// flies. When the player runs out of lives, every three bubbles advance to
     /// the next encouraging message, capped at the tenth message.
     private var encouragement: String {
-        guard !isCompleted else { return FoodCatalog.completionLine(for: character.id) }
+        guard !isCompleted else { return L(key: "game.end.completionSubtitle") }
         let index = min(max(levelScore, 0) / 3, 9)
         return L(key: "game.encouragement.\(index)")
     }
@@ -101,15 +101,14 @@ struct ResultView: View {
             // Layered above the card, so the swarm passes over the result
             // rather than behind it. It starts once the card entrance is
             // underway.
-            if showsFlySwarm {
-                FlySwarmCelebration(color: character.deepColor)
+            if showsHoopCelebration {
+                HoopCelebration(color: character.deepColor)
                     .ignoresSafeArea()
                     .allowsHitTesting(false)
             }
         }
         // The best-score badge and the celebration swarm both count in what
         // this character was collecting all session.
-        .currencyIcon(for: character)
         .onAppear {
             withAnimation(.spring(response: 0.46, dampingFraction: 0.82)) {
                 isPresented = true
@@ -119,7 +118,7 @@ struct ResultView: View {
             guard celebrates else { return }
             if !reduceMotion {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.34) {
-                    showsFlySwarm = true
+                    showsHoopCelebration = true
                 }
             }
             // The badge belongs to the best alone, and drops in after the card
@@ -396,13 +395,11 @@ struct ResultView: View {
     }
 }
 
-/// A swarm of flies for a filled board or a new personal best: the reward the
-/// whole game is played for rises up over the card, wandering the way flies
-/// actually do, instead of the bubble rain this used to shower.
-private struct FlySwarmCelebration: View {
+/// Hoops rise over a filled board or a new personal best.
+private struct HoopCelebration: View {
     let color: Color
 
-    @State private var flies: [CelebrationFly]
+    @State private var hoops: [CelebrationHoop]
     @State private var startedAt = Date()
     /// Every fly is drawn from the elapsed time, so once the last one has left
     /// the top edge there is nothing further to redraw and the clock can stop.
@@ -412,12 +409,12 @@ private struct FlySwarmCelebration: View {
         self.color = color
         // Enough to read as a swarm, few enough to leave the card readable
         // underneath it.
-        _flies = State(initialValue: (0..<16).map { _ in CelebrationFly() })
+        _hoops = State(initialValue: (0..<16).map { _ in CelebrationHoop() })
     }
 
     /// When the slowest fly is gone, plus a moment's margin.
     private var span: Double {
-        (flies.map { $0.delay + $0.riseDuration }.max() ?? 0) + 0.2
+        (hoops.map { $0.delay + $0.riseDuration }.max() ?? 0) + 0.2
     }
 
     var body: some View {
@@ -425,8 +422,8 @@ private struct FlySwarmCelebration: View {
             TimelineView(.animation(paused: hasSettled)) { context in
                 let elapsed = context.date.timeIntervalSince(startedAt)
                 ZStack {
-                    ForEach(flies) { fly in
-                        CelebrationFlyView(fly: fly, elapsed: elapsed,
+                    ForEach(hoops) { hoop in
+                        CelebrationHoopView(hoop: hoop, elapsed: elapsed,
                                            area: proxy.size, color: color)
                     }
                 }
@@ -442,7 +439,7 @@ private struct FlySwarmCelebration: View {
     }
 }
 
-private struct CelebrationFly: Identifiable {
+private struct CelebrationHoop: Identifiable {
     let id = UUID()
     /// Share of the width the fly climbs around.
     let x = CGFloat.random(in: 0.06...0.94)
@@ -460,37 +457,37 @@ private struct CelebrationFly: Identifiable {
     let beat = Double.random(in: 15...21)
 }
 
-private struct CelebrationFlyView: View {
-    let fly: CelebrationFly
+private struct CelebrationHoopView: View {
+    let hoop: CelebrationHoop
     let elapsed: TimeInterval
     let area: CGSize
     let color: Color
 
     var body: some View {
-        let t = (elapsed - fly.delay) / fly.riseDuration
+        let t = (elapsed - hoop.delay) / hoop.riseDuration
 
         if t >= 0, t <= 1 {
-            let angle = t * fly.waves * 2 * .pi + fly.phase
+            let angle = t * hoop.waves * 2 * .pi + hoop.phase
             // The climb is linear: a fly holds its speed, it does not coast to
             // a stop the way a falling bubble did.
-            let travel = area.height + fly.size * 2
-            let wingPhase = elapsed * fly.beat * 2 * .pi + fly.phase
+            let travel = area.height + hoop.size * 2
+            let spinPhase = elapsed * hoop.beat * 2 * .pi + hoop.phase
 
             // Just the food itself, in the character's own colour. It used to
             // carry an enlarged white copy behind it for legibility, which read
             // as a halo around every single one of them.
-            CurrencyIcon(size: fly.size)
+            CurrencyIcon(size: hoop.size)
                 .foregroundStyle(color)
                 // Wings beating: the body squeezes narrow and springs back.
-                .scaleEffect(x: 1 - 0.1 * abs(sin(wingPhase)), y: 1)
+                .scaleEffect(x: 1 - 0.1 * abs(sin(spinPhase)), y: 1)
                 // It banks into each turn rather than sliding sideways flat.
                 .rotationEffect(.degrees(cos(angle) * 15))
                 .opacity(fade(at: t))
                 .position(
-                    x: area.width * fly.x + sin(angle) * fly.sway,
-                    y: area.height + fly.size - travel * t
+                    x: area.width * hoop.x + sin(angle) * hoop.sway,
+                    y: area.height + hoop.size - travel * t
                         // A small bob on the wingbeat itself.
-                        + sin(wingPhase) * fly.size * 0.05
+                        + sin(spinPhase) * hoop.size * 0.05
                 )
         }
     }

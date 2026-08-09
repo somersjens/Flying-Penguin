@@ -15,7 +15,7 @@ import SwiftUI
 /// text always matches the questions the player will actually get.
 enum LevelIntro {
     /// Title plus the three explanation lines for a level.
-    static func info(for board: LevelBoard, characterID: String) -> (title: String, bullets: [String]) {
+    static func info(for board: LevelBoard) -> (title: String, bullets: [String]) {
         let level = board.level
         let n = max(1, level.index)
 
@@ -50,10 +50,7 @@ enum LevelIntro {
         // order button — and picking the right card out of the ones on offer.
         let levelLine = modeLine(for: board)
 
-        // Line three: what there is to collect here. Each food has its own
-        // whole sentence rather than a noun dropped into a shared one, so a
-        // language can decline the noun, move it, or reword around it.
-        let cardsLine = FoodCatalog.collectionLine(for: characterID, count: board.maximum)
+        let cardsLine = L(key: "levelIntro.cardsBullet.fly %lld", count: board.maximum)
 
         return (title, [topicLine, levelLine, cardsLine])
     }
@@ -137,11 +134,11 @@ struct LevelIntroCard: View {
     private var headingSpacing: CGFloat { 8 * scale }
 
     var body: some View {
-        let info = LevelIntro.info(for: board, characterID: theme.id)
+        let info = LevelIntro.info(for: board)
         let features = [
             IntroFeature(icon: LevelIntro.symbol(for: level), text: info.bullets[0]),
             IntroFeature(number: level.cardNumber, text: info.bullets[1]),
-            IntroFeature(icon: FoodCatalog.imageName(for: theme.id), text: info.bullets[2])
+            IntroFeature(icon: Currency.iconName, text: info.bullets[2])
         ]
 
         return ZStack {
@@ -211,7 +208,6 @@ struct LevelIntroCard: View {
             }
         }
         .animation(.easeInOut(duration: 0.2), value: showsTutorialNotice)
-        .currencyIcon(for: theme)
     }
 
     /// Portrait on the left; beside it the level title on a single line with
@@ -400,14 +396,8 @@ struct LevelIntroCard: View {
                         .minimumScaleFactor(0.48)
                         .allowsTightening(true)
                 } else {
-                    if feature.icon == Currency.icon(for: theme.id) {
+                    if feature.icon == Currency.iconName {
                         CurrencyIcon(size: 28 * textScale * featureIconScale)
-                    } else if feature.icon.hasPrefix("food_") {
-                        Image(feature.icon)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 36 * textScale * featureIconScale,
-                                   height: 36 * textScale * featureIconScale)
                     } else {
                         Image(systemName: feature.icon)
                             .font(.system(size: (feature.icon == "multiply" ? 34 : 28)

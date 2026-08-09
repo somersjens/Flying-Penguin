@@ -159,7 +159,6 @@ struct PremiumView: View {
         // The store sells the whole cast at once and quotes every unlock in the
         // same unit, so it keeps counting in flies no matter which animal is
         // selected or previewed here.
-        .flyCurrencyIcon()
         .animation(.easeInOut(duration: 0.25), value: previewCharacterID)
         .animation(.spring(response: 0.42, dampingFraction: 0.7), value: premium.isPremium)
         .onAppear {
@@ -326,7 +325,7 @@ struct PremiumView: View {
                       icon: "crown.fill", metrics: metrics)
             } else {
                 badge(text: L(key: "premium.availableAt %lld", count: cards),
-                      icon: Currency.flyIcon, metrics: metrics)
+                      icon: Currency.iconName, metrics: metrics)
             }
         } else {
             badge(
@@ -339,7 +338,7 @@ struct PremiumView: View {
     private func badge(text: String, icon: String?, metrics: PremiumMetrics) -> some View {
         HStack(spacing: 6) {
             if let icon {
-                if icon == Currency.flyIcon {
+                if icon == Currency.iconName {
                     CurrencyIcon(size: metrics.badgeSize)
                 } else {
                     Image(systemName: icon)

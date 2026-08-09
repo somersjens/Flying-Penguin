@@ -73,7 +73,7 @@ public enum GameConfig {
 
     /// Two correct answers inside a second earn this on top of the catch. The
     /// banner announcing it reads the same number, so the two cannot drift.
-    public static let flyComboBonus = 1
+    public static let hoopComboBonus = 1
 
     /// A 2x fish swims across the level this many times. Catching it doubles
     /// the next correct answer; a missed fish simply leaves the screen.

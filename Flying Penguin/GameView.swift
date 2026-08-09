@@ -130,7 +130,6 @@ struct GameView: View {
         // What the level fills with is what the HUD counts and what the
         // celebrations rain down, all the way through the start card, the
         // playfield and the result card.
-        .currencyIcon(for: character)
         .animation(.easeInOut(duration: 0.28), value: model.isGameOver)
         .animation(.easeInOut(duration: 0.25), value: showsIntro)
         .onAppear {
@@ -242,7 +241,7 @@ struct GameView: View {
                     .animation(.easeOut(duration: 0.22), value: playsLevelCompletion)
 
                 if model.comboAnnouncementID > 0 {
-                    ComboFlyBanner(token: model.comboAnnouncementID,
+                    ComboHoopBanner(token: model.comboAnnouncementID,
                                    character: character,
                                    isPad: isPad)
                         .padding(.top, topInset + (isPad ? 116 : 88))
@@ -397,14 +396,14 @@ struct GameView: View {
     }
 }
 
-private struct ComboFlyBanner: View {
+private struct ComboHoopBanner: View {
     let token: Int
     let character: AnimalCharacter
     let isPad: Bool
     @State private var visible = false
 
     var body: some View {
-        Text("game.combo \(GameConfig.flyComboBonus)")
+        Text("game.combo \(GameConfig.hoopComboBonus)")
             .font(.system(size: isPad ? 22 : 17, weight: .black, design: .rounded))
             .foregroundStyle(character.deepColor)
             .padding(.horizontal, isPad ? 18 : 14)
