@@ -21,10 +21,13 @@ enum Currency {
     static let flyIcon = "fly_currency"
 
     static func icon(for characterID: String) -> String {
-        if characterID == "flying_penguin" { return "currency_2" }
-        let index = CharacterUnlocks.orderedCharacterIDs.firstIndex(of: characterID) ?? 0
-        let legacyIndex = max(0, index - 1)
-        return legacyIndex == 0 ? flyIcon : "currency_\(legacyIndex + 1)"
+        let assets = [
+            "flying_penguin": "currency_2", "frog": flyIcon,
+            "bunny": "currency_3", "dog": "currency_4", "lion": "currency_5",
+            "octopus": "currency_6", "crab": "currency_7",
+            "elephant": "currency_8", "bear": "currency_9", "fox": "currency_10"
+        ]
+        return assets[characterID] ?? flyIcon
     }
 }
 
@@ -190,8 +193,8 @@ enum CharacterCatalog {
     }
 
     /// Order must match `CharacterUnlocks.orderedCharacterIDs`. Flying Penguin
-    /// leads the catalog; the original ten retain their relative order and
-    /// palettes. Fox closes it. Each palette is taken from the artwork itself —
+    /// leads the catalog; the old duplicate penguin is omitted and Frog closes
+    /// the collection. Each palette is taken from the artwork itself —
     /// the dog and the crab are themed on their headband rather than their
     /// fur, which is what keeps them apart from the fox and the bear.
     ///
@@ -302,6 +305,11 @@ enum CharacterCatalog {
                         primaryRGB: (0.97, 0.48, 0.08), deepRGB: (0.58, 0.26, 0.01),
                         skyRGB: (0.99, 0.93, 0.89), tintRGB: (0.97, 0.84, 0.73))
     ]
+    .filter { $0.id != "penguin" }
+    .sorted {
+        let order = CharacterUnlocks.orderedCharacterIDs
+        return (order.firstIndex(of: $0.id) ?? .max) < (order.firstIndex(of: $1.id) ?? .max)
+    }
 
     static func character(id: String) -> AnimalCharacter {
         all.first { $0.id == id } ?? all[0]

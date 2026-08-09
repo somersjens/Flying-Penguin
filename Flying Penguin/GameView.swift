@@ -215,6 +215,7 @@ struct GameView: View {
                               },
                               onImpact: { AppAudio.shared.playSplash() },
                               onSwallow: { model.reportCatchOutcome(isCorrect: $0) },
+                              onDive: { model.reportDiveOutcome() },
                               onFishEntranceComplete: finishFishEntrance,
                               onLevelCompletionFinished: finishLevelCompletion)
                     // The playing field is a simulation, not a page: every fly

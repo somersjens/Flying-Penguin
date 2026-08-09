@@ -350,6 +350,12 @@ final class GameViewModel: ObservableObject {
         }
     }
 
+    /// A correct dive has audio feedback, but deliberately no haptic: the
+    /// water animation itself is the physical cue and should stay calm.
+    func reportDiveOutcome() {
+        AppAudio.shared.playCorrect()
+    }
+
     /// Re-arms the countdown for whatever window the engine now holds. Called
     /// on every fifth correct answer, so a run that lands another five with
     /// three seconds left simply pushes the expiry back out to ten.
