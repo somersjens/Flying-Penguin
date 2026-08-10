@@ -229,17 +229,20 @@ struct GameView: View {
                 hud
                     .padding(.horizontal, isPad ? 28 : 16)
                     .padding(.top, hudTop(below: topInset))
-                    .opacity(playsLevelCompletion ? 0 : 1)
-                    .animation(.easeOut(duration: 0.22), value: playsLevelCompletion)
-                    .allowsHitTesting(!playsLevelCompletion)
+                    .opacity(showsGameplayHUD ? 1 : 0)
+                    .scaleEffect(showsGameplayHUD ? 1 : 0.92, anchor: .topLeading)
+                    .offset(x: showsGameplayHUD ? 0 : -12)
+                    .animation(.spring(response: 0.34, dampingFraction: 0.82),
+                               value: showsGameplayHUD)
+                    .allowsHitTesting(showsGameplayHUD)
 
                 // The double-points chip is its own layer rather than a member
                 // of the HUD row: it belongs in the middle of the screen, at
                 // the same height on every device, and the row it used to sit
                 // in grows and shrinks with the score.
                 doublePointsLayer(below: topInset, width: proxy.size.width)
-                    .opacity(playsLevelCompletion ? 0 : 1)
-                    .animation(.easeOut(duration: 0.22), value: playsLevelCompletion)
+                    .opacity(showsGameplayHUD ? 1 : 0)
+                    .animation(.easeOut(duration: 0.22), value: showsGameplayHUD)
 
                 if model.comboAnnouncementID > 0 {
                     ComboHoopBanner(token: model.comboAnnouncementID,
@@ -272,12 +275,11 @@ struct GameView: View {
 
     // MARK: - HUD
 
-    /// The pause button, the counter and the hearts, from the leading edge in.
-    /// The double-points chip is deliberately not part of this row; it has its
-    /// own centred layer.
+    /// Two balanced columns: pause and score on the left, three hearts on the
+    /// right. Both columns have exactly the same total height.
     private var hud: some View {
-        HStack(spacing: hudRowSpacing) {
-            primaryHudRow
+        HStack(spacing: 0) {
+            primaryHudGroup
             Spacer(minLength: 0)
         }
     }
@@ -316,18 +318,19 @@ struct GameView: View {
     }
 
     @ViewBuilder
-    private var primaryHudRow: some View {
-        pauseButton
-        progressCounter
-        LivesView(lives: model.livesRemaining,
-                  character: character,
-                  isPad: isPad,
-                  glyphSize: hudHeartSize,
-                  rowHeight: hudControlSize)
-            .padding(.horizontal, isPad ? 12 : 10)
+    private var primaryHudGroup: some View {
+        HStack(spacing: hudStackSpacing) {
+            VStack(spacing: hudStackSpacing) {
+                pauseButton
+                progressCounter
+            }
+            LivesView(lives: model.livesRemaining,
+                      character: character,
+                      isPad: isPad,
+                      glyphSize: hudHeartSize,
+                      rowHeight: hudControlSize)
+        }
     }
-
-    private var hudRowSpacing: CGFloat { isPad ? 10 : 8 }
 
     /// Pausing freezes the reef in place and puts the level card over it. The
     /// player can continue immediately or leave for the main menu from there.
@@ -356,37 +359,41 @@ struct GameView: View {
 
     /// Every status capsule shares one comfortable touch height, while the
     /// symbols retain enough breathing room to stay legible over the pond.
-    private var hudControlSize: CGFloat { isPad ? 52 : 44 }
-    private var hudSymbolSize: CGFloat { isPad ? 34 : 26 }
-    private var hudHeartSize: CGFloat { isPad ? 30 : 24 }
-    private var pauseGlyphSize: CGFloat { isPad ? 24 : 20 }
-    private var hudNumberSize: CGFloat { isPad ? 30 : 23 }
+    private var hudControlSize: CGFloat { isPad ? 48 : 40 }
+    private var hudStackSpacing: CGFloat { isPad ? 6 : 5 }
+    private var hudSymbolSize: CGFloat { isPad ? 31 : 24 }
+    private var hudHeartSize: CGFloat { isPad ? 30 : 25 }
+    private var pauseGlyphSize: CGFloat { isPad ? 22 : 18 }
+    private var hudNumberSize: CGFloat { isPad ? 27 : 21 }
 
     /// Just the bubbles banked this session. What the board holds is quoted on
     /// the start card and again on the result card, so the playing field does
     /// not have to carry it too.
     private var progressCounter: some View {
-        HStack(alignment: .center, spacing: isPad ? 7 : 5) {
+        ZStack(alignment: .bottomTrailing) {
+            Circle()
+                .fill(.white.opacity(0.90))
+                .overlay(Circle().stroke(character.color.opacity(0.46), lineWidth: 2))
             Text(verbatim: "\(model.cards)")
                 .font(.system(size: hudNumberSize, weight: .heavy, design: .rounded))
                 .monospacedDigit()
                 .lineLimit(1)
                 .contentTransition(.numericText(value: Double(model.cards)))
-            ZStack {
-                CurrencyIcon(size: hudSymbolSize)
-                    .foregroundStyle(.white.opacity(0.85))
-                    .scaleEffect(1.22)
-                CurrencyIcon(size: hudSymbolSize)
-            }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            CurrencyIcon(size: hudSymbolSize * 0.48)
+                .padding(isPad ? 4 : 3)
         }
-        .padding(.horizontal, isPad ? 13 : 11)
-        .frame(height: hudControlSize, alignment: .center)
+        .frame(width: hudControlSize, height: hudControlSize)
         .foregroundStyle(character.deepColor)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: model.cards)
         .accessibilityIdentifier("progress")
         // Named after what this character actually collects, in the app's
         // language — the counter has not been flies-for-everyone since each
         // animal got its own food.
+    }
+
+    private var showsGameplayHUD: Bool {
+        !showsIntro && !playsFishEntrance && !playsLevelCompletion
     }
 
     /// The reef only ticks while the level is actually being played: never
@@ -662,12 +669,12 @@ struct LivesView: View {
     private var heartColor: Color { character.deepColor }
 
     var body: some View {
-        HStack(spacing: isPad ? 5 : 3) {
+        VStack(spacing: isPad ? 6 : 5) {
             ForEach(0..<capacity, id: \.self) { index in
                 heart(at: index)
             }
         }
-        .frame(height: rowHeight, alignment: .center)
+        .frame(width: rowHeight, alignment: .top)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: lives)
         .accessibilityElement()
         .accessibilityIdentifier("lives")

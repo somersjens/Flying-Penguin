@@ -45,6 +45,8 @@ struct FlyingPenguinPlayfield: View {
     @State private var resolved = false
     @State private var diveArmed = false
     @State private var divePhase = 0
+    @State private var resurfacePoseDeadline: Date?
+    @State private var committedLaneIndex: Int?
     @State private var worldOffset: CGFloat = 0
     @State private var entranceStage = 0
     @State private var completionActive = false
@@ -55,23 +57,28 @@ struct FlyingPenguinPlayfield: View {
 
     private var penguinSize: CGFloat { sceneSize.height * (isPad ? 0.27 : 0.235) }
     /// The rings leave a dedicated header band for the moving sum.
-    private var hoopSize: CGFloat { sceneSize.height * (isPad ? 0.20 : 0.19) }
+    /// Three touching hoops fill the complete answer column. Their shared size
+    /// is derived from the available height, so there is no traversable gap.
+    private var hoopSize: CGFloat {
+        let questionBottom = sceneSize.height * 0.141
+        let answerBottom = waterline - sceneSize.height * 0.012
+        return max(1, (answerBottom - questionBottom) / 3)
+    }
     private var waterline: CGFloat { sceneSize.height * 0.90 }
     private var normalPenguinX: CGFloat { sceneSize.width * 0.25 }
-    private var flightMinY: CGFloat { sceneSize.height * 0.28 }
-    private var flightMaxY: CGFloat { sceneSize.height * 0.76 }
-    private var diveY: CGFloat { sceneSize.height + penguinSize * 0.55 }
+    private var flightMinY: CGFloat { lanes.first ?? sceneSize.height * 0.27 }
+    private var flightMaxY: CGFloat { lanes.last ?? sceneSize.height * 0.76 }
+    private var diveY: CGFloat { waterline + penguinSize * 0.42 }
 
     private var lanes: [CGFloat] {
-        let top = questionY + hoopSize * 0.75
-        let bottom = waterline - hoopSize * 0.55
-        let spacing = (bottom - top) / 2
-        return [top, top + spacing, bottom]
+        let first = sceneSize.height * 0.141 + hoopSize * 0.5
+        return [first, first + hoopSize, first + hoopSize * 2]
     }
 
-    private var questionY: CGFloat { sceneSize.height * 0.105 }
+    private var questionY: CGFloat { sceneSize.height * 0.090 }
     private var ringSpawnX: CGFloat {
-        sceneSize.width + hoopSize * 0.22
+        // Start fully offscreen; the first pixel enters on the first live tick.
+        sceneSize.width + hoopSize * 0.51
     }
     private var ringSetSpacing: CGFloat {
         sceneSize.width - normalPenguinX + hoopSize * 0.20
@@ -80,7 +87,9 @@ struct FlyingPenguinPlayfield: View {
         hoopX + ringSetSpacing
     }
     private var cruiseSpeed: CGFloat {
-        max(80, (sceneSize.width + hoopSize - normalPenguinX) / 5) * 1.5
+        // Removing the former 1.5x multiplier gives exactly 50% more time
+        // between sets without pushing the already-visible preview offscreen.
+        max(80, (sceneSize.width + hoopSize - normalPenguinX) / 5)
     }
 
     var body: some View {
@@ -95,7 +104,7 @@ struct FlyingPenguinPlayfield: View {
 
                     FloatingStartMarker(size: penguinSize * 0.58,
                                         reduceMotion: reduceMotion)
-                        .position(x: sceneSize.width * 0.43 + launchCameraOffset,
+                        .position(x: sceneSize.width * 0.58 + launchCameraOffset,
                                   y: waterline - penguinSize * 0.12)
                         .allowsHitTesting(false)
                 }
@@ -151,8 +160,7 @@ struct FlyingPenguinPlayfield: View {
                               flightMotion: penguinFlightMotion,
                               reduceMotion: reduceMotion,
                               flightClock: flightClock)
-                    .opacity(entranceStage < 3 && playsFishEntrance ? 0
-                             : (divePhase == 2 ? 0 : 1))
+                    .opacity(entranceStage < 3 ? 0 : 1)
                     .position(x: displayedPenguinX, y: displayedPenguinY)
                     .shadow(color: .black.opacity(0.18), radius: 6, y: 4)
                     .allowsHitTesting(false)
@@ -197,10 +205,7 @@ struct FlyingPenguinPlayfield: View {
             .onAppear {
                 updateLayout(proxy.size)
                 if playsFishEntrance { beginEntrance() }
-                else {
-                    entranceStage = 5
-                    configureRound(force: true)
-                }
+                else { resolved = true }
             }
             .onChange(of: proxy.size) { _, value in updateLayout(value) }
         }
@@ -339,7 +344,13 @@ struct FlyingPenguinPlayfield: View {
     private var flightGesture: some Gesture {
         DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onChanged { value in
-                guard isLive, isRunning, entranceStage >= 5, !resolved, !completionActive else { return }
+                let canSurface = divePhase == 1 || divePhase == 2 || divePhase == 3
+                guard isRunning, entranceStage >= 5, !completionActive,
+                      (isLive || canSurface), (!resolved || canSurface) else { return }
+                // Any fresh movement reopens the choice, even inside the final
+                // approach zone. The lane is only committed while the finger
+                // is released.
+                committedLaneIndex = nil
                 if dragStartY == nil { dragStartY = targetPenguinY == 0 ? penguinY : targetPenguinY }
                 // Movement is relative to where the penguin was when the drag
                 // began. Touching elsewhere on screen therefore never makes it
@@ -348,11 +359,16 @@ struct FlyingPenguinPlayfield: View {
                 if requested >= waterline {
                     if divePhase != 1 { entrySplashShown = false }
                     diveArmed = true
-                    divePhase = 1
+                    if divePhase != 2 { divePhase = 1 }
                     targetPenguinY = diveY
                 } else {
                     diveArmed = false
-                    divePhase = 0
+                    if canSurface {
+                        divePhase = 3
+                        resurfacePoseDeadline = nil
+                    } else {
+                        divePhase = 0
+                    }
                     targetPenguinY = min(max(requested, flightMinY), flightMaxY)
                 }
             }
@@ -384,6 +400,7 @@ struct FlyingPenguinPlayfield: View {
         if completionActive { return .standing }
         if divePhase == 1 || divePhase == 2 { return .diving }
         if divePhase == 3 { return .resurfacing }
+        if divePhase == 4 { return .recovering }
         switch entranceStage {
         case 0: return .loaded
         case 1: return .compressed
@@ -396,24 +413,33 @@ struct FlyingPenguinPlayfield: View {
 
     @ViewBuilder private var hoopForegrounds: some View {
         ForEach(retiringSets) { set in
-            if abs(set.x - penguinX) < hoopSize * 0.85 {
+            if abs(set.x - penguinX) < hoopSize * 1.15 {
                 ForEach(Array(set.options.enumerated()), id: \.element.id) { index, option in
                     AnswerHoopForeground(tint: character.color,
                                          size: hoopSize,
                                          feedback: set.feedback(for: option.id))
                         .position(x: set.x, y: lanes[index])
+                        .opacity(hoopOcclusionOpacity(at: set.x))
                 }
             }
         }
         if !shownOptions.isEmpty && entranceStage >= 5 && !completionActive,
-           abs(hoopX - penguinX) < hoopSize * 0.85 {
+           abs(hoopX - penguinX) < hoopSize * 1.15 {
             ForEach(Array(shownOptions.enumerated()), id: \.element.id) { index, option in
                 AnswerHoopForeground(tint: character.color,
                                      size: hoopSize,
                                      feedback: feedback(for: option.id))
                     .position(x: hoopX, y: lanes[index])
+                    .opacity(hoopOcclusionOpacity(at: hoopX))
             }
         }
+    }
+
+    private func hoopOcclusionOpacity(at x: CGFloat) -> Double {
+        let fadeStart = hoopSize * 1.15
+        let fadeEnd = hoopSize * 0.82
+        let distance = abs(x - penguinX)
+        return Double(min(1, max(0, (fadeStart - distance) / (fadeStart - fadeEnd))))
     }
 
     private var penguinFlightMotion: PenguinFlightMotion {
@@ -437,6 +463,14 @@ struct FlyingPenguinPlayfield: View {
     private func beginEntrance() {
         entranceStage = 0
         resolved = true
+        shownOptions = []
+        shownPrompt = ""
+        previewOptions = []
+        previewPrompt = ""
+        previewRoundID = nil
+        retiringSets = []
+        activeRoundID = nil
+        hoopX = ringSpawnX
         let fuseDuration = reduceMotion ? 0.12 : 1.45
         let squeezeDuration = reduceMotion ? 0.06 : 0.24
         let flightDuration = reduceMotion ? 0.10 : 0.72
@@ -452,15 +486,10 @@ struct FlyingPenguinPlayfield: View {
                                        duration: flightDuration)) { entranceStage = 3 }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration + 0.10 + flightDuration) {
-            withAnimation(.easeOut(duration: reduceMotion ? 0.04 : 0.16)) { entranceStage = 4 }
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration + 0.26 + flightDuration) {
-            withAnimation(.easeOut(duration: reduceMotion ? 0.05 : 0.20)) { entranceStage = 5 }
+            withAnimation(.easeOut(duration: reduceMotion ? 0.03 : 0.08)) { entranceStage = 5 }
             configureRound(force: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + (reduceMotion ? 0.02 : 0.05)) {
-                resolved = false
-                onFishEntranceComplete()
-            }
+            resolved = false
+            onFishEntranceComplete()
         }
     }
 
@@ -469,10 +498,11 @@ struct FlyingPenguinPlayfield: View {
         guard force || activeRoundID != round.id else { return }
         let promotesPreview = previewRoundID == round.id
         let promotedX = previewX
-        if !shownOptions.isEmpty, hoopX > -hoopSize * 1.5 {
+        if !shownOptions.isEmpty, hoopX > -hoopSize * 0.65 {
             retiringSets.append(RetiringHoopSet(options: shownOptions,
                                                 prompt: shownPrompt,
                                                 x: hoopX))
+            if retiringSets.count > 1 { retiringSets.removeFirst(retiringSets.count - 1) }
         }
         activeRoundID = round.id
         shownPrompt = round.question.prompt
@@ -490,6 +520,7 @@ struct FlyingPenguinPlayfield: View {
         penguinX = normalPenguinX
         resolved = false
         diveArmed = false
+        committedLaneIndex = nil
         // Keep the exact flight height between sets. Only a completed dive
         // changes it as part of its resurfacing sequence.
     }
@@ -511,7 +542,13 @@ struct FlyingPenguinPlayfield: View {
     }
 
     private func presentation(for round: GameRound) -> (options: [AnswerOption], hasNoCorrectAnswer: Bool) {
-        let hasNoCorrectAnswer = round.number.isMultiple(of: 4)
+        // Stable per generated round, but not tied to a repeating question
+        // interval. Independent buckets naturally allow two dive rounds in a
+        // row while keeping the overall chance close to one in four.
+        let seed = round.id.uuidString.utf8.reduce(UInt64(14_695_981_039_346_656_037)) {
+            ($0 ^ UInt64($1)) &* 1_099_511_628_211
+        }
+        let hasNoCorrectAnswer = seed.isMultiple(of: 4)
         let wrong = round.options.filter { !$0.isCorrect }
         if hasNoCorrectAnswer {
             return (Array(wrong.prefix(3)), true)
@@ -550,9 +587,42 @@ struct FlyingPenguinPlayfield: View {
             if abs(delta) < 0.2 { penguinY = targetPenguinY }
         }
 
+        // Only assist in the final fraction of the approach and never while
+        // the player is actively moving. A last-moment drag can therefore
+        // switch lane right up to the hoop centre.
+        let approachDistance = hoopX - penguinX
+        if divePhase == 0, !resolved, dragStartY == nil,
+           approachDistance >= 0, approachDistance <= hoopSize * 0.42 {
+            if committedLaneIndex == nil {
+                committedLaneIndex = lanes.enumerated().min {
+                    abs($0.element - penguinY) < abs($1.element - penguinY)
+                }?.offset
+            }
+            if let committedLaneIndex {
+                let laneY = lanes[committedLaneIndex]
+                let progress = 1 - approachDistance / (hoopSize * 0.42)
+                let response = 6 + progress * 11
+                penguinY += (laneY - penguinY) * (1 - exp(-response * CGFloat(dt)))
+                targetPenguinY = laneY
+            }
+        }
+
         if divePhase == 1, !entrySplashShown,
            penguinY >= waterline - penguinSize * 0.08 {
             entrySplashShown = true
+        }
+
+        if divePhase == 3 {
+            if resurfacePoseDeadline == nil,
+               penguinY <= waterline - penguinSize * 0.05 {
+                resurfacePoseDeadline = now.addingTimeInterval(0.45)
+            } else if let deadline = resurfacePoseDeadline, now >= deadline {
+                resurfacePoseDeadline = nil
+                withAnimation(.easeInOut(duration: 0.30)) { divePhase = 4 }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.30) {
+                    if divePhase == 4 { divePhase = 0 }
+                }
+            }
         }
 
         // Resolve only once the centres align: the penguin visibly travels
@@ -564,7 +634,7 @@ struct FlyingPenguinPlayfield: View {
         let speed = baseSpeed
         worldOffset -= baseSpeed * dt
         for index in retiringSets.indices { retiringSets[index].x -= speed * dt }
-        retiringSets.removeAll { $0.x < -hoopSize * 1.5 }
+        retiringSets.removeAll { $0.x < -hoopSize * 0.65 }
         guard !shownOptions.isEmpty else { return }
         hoopX -= speed * dt
 
@@ -576,24 +646,29 @@ struct FlyingPenguinPlayfield: View {
 
     private func resolvePassage() {
         guard !resolved, let round = rounds.first else { return }
-        resolved = true
+        withAnimation(.easeInOut(duration: 0.24)) { resolved = true }
         let selected: AnswerOption
         let isCorrect: Bool
         let usesHalfLifePenalty: Bool
 
-        if diveArmed, noCorrectAnswer, let correct = round.correctOption {
+        let isBelowRings = diveArmed || divePhase == 1 || divePhase == 2
+        if isBelowRings, noCorrectAnswer, let correct = round.correctOption {
             selected = correct
             isCorrect = true
             usesHalfLifePenalty = false
-            beginResurfacing()
-        } else if diveArmed, let wrong = round.options.first(where: { !$0.isCorrect }) {
+            remainUnderwater()
+        } else if isBelowRings, let wrong = round.options.first(where: { !$0.isCorrect }) {
             // Diving below a regular set deliberately misses every hoop.
             selected = wrong
             isCorrect = false
             usesHalfLifePenalty = true
-            beginResurfacing()
+            remainUnderwater()
         } else {
-            let nearest = lanes.enumerated().min { abs($0.element - penguinY) < abs($1.element - penguinY) }?.offset ?? 1
+            let nearest = committedLaneIndex
+                ?? lanes.enumerated().min {
+                    abs($0.element - penguinY) < abs($1.element - penguinY)
+                }?.offset
+                ?? 1
             selected = shownOptions[min(nearest, shownOptions.count - 1)]
             isCorrect = selected.isCorrect
             usesHalfLifePenalty = false
@@ -610,18 +685,13 @@ struct FlyingPenguinPlayfield: View {
         }
     }
 
-    private func beginResurfacing() {
+    /// Passing a set underwater no longer launches an automatic exit. The
+    /// penguin waits just below the surface until the player drags upward.
+    private func remainUnderwater() {
         divePhase = 2
+        resurfacePoseDeadline = nil
         penguinY = diveY
         targetPenguinY = diveY
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.62) {
-            divePhase = 3
-            penguinY = waterline + penguinSize * 0.30
-            targetPenguinY = lanes[2]
-            // Hold the forward/streamlined resurfacing pose from the first
-            // visible frame, then return directly to ordinary flapping.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.50) { divePhase = 0 }
-        }
     }
 
     private func beginCompletion() {
@@ -664,6 +734,7 @@ private enum PenguinPose: Equatable {
     case flying
     case diving
     case resurfacing
+    case recovering
 }
 
 private enum PenguinFlightMotion: Equatable { case rising, level, falling }
@@ -684,12 +755,14 @@ private struct RiggedPenguin: View {
             rigImage("back_arm")
                 .rotationEffect(.degrees(backArmAngle(phase: phase)),
                                 anchor: UnitPoint(x: 0.715, y: 0.60))
+                .animation(.easeInOut(duration: 0.30), value: pose)
 
             rigImage("main_body")
 
             rigImage("front_arm")
                 .rotationEffect(.degrees(frontArmAngle(phase: phase)),
                                 anchor: UnitPoint(x: 0.55, y: 0.55))
+                .animation(.easeInOut(duration: 0.30), value: pose)
         }
         .frame(width: size * 1.5, height: size)
         .rotationEffect(.degrees(wholeBodyAngle))
@@ -717,7 +790,7 @@ private struct RiggedPenguin: View {
 
     private var wholeBodyAngle: Double {
         switch pose {
-        case .loaded, .compressed, .standing: return 0
+        case .loaded, .compressed, .standing, .recovering: return 0
         case .launching: return -11
         case .threading: return 0
         case .diving: return 14
@@ -750,6 +823,7 @@ private struct RiggedPenguin: View {
         case .compressed: return 190
         // This wing already points toward the beak at its neutral angle.
         case .resurfacing: return 4
+        case .recovering: return 0
         case .diving: return 8
         case .loaded, .standing: return 0
         case .flying:
@@ -769,6 +843,7 @@ private struct RiggedPenguin: View {
         case .threading: return -8
         case .compressed: return 8
         case .resurfacing: return 140
+        case .recovering: return 0
         case .diving: return -8
         case .loaded, .standing: return 0
         case .flying:
@@ -1136,12 +1211,12 @@ private struct MovingQuestionBadge: View {
 
     var body: some View {
         Text(prompt)
-            .font(.system(size: isPad ? 27 : 19, weight: .black, design: .rounded))
+            .font(.system(size: isPad ? 32 : 23, weight: .black, design: .rounded))
             .foregroundStyle(character.deepColor)
             .lineLimit(1)
             .minimumScaleFactor(0.72)
-            .padding(.horizontal, isPad ? 18 : 13)
-            .padding(.vertical, isPad ? 8 : 6)
+            .padding(.horizontal, isPad ? 23 : 17)
+            .padding(.vertical, isPad ? 10 : 8)
             .background(.white.opacity(0.95), in: Capsule())
             .overlay(Capsule().stroke(character.color.opacity(0.42), lineWidth: 2))
             .shadow(color: .black.opacity(0.10), radius: 4, y: 2)
@@ -1165,23 +1240,22 @@ private struct AnswerHoop: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(AngularGradient(colors: [.white, tint, .cyan, .white],
-                                        center: .center),
-                        style: StrokeStyle(lineWidth: size * 0.13, lineCap: .round))
+                .strokeBorder(tint, lineWidth: size * 0.13)
                 .opacity(feedback == .none ? 1 : 0.18)
-                .shadow(color: .blue.opacity(0.35), radius: 5)
 
             Circle()
-                .stroke(AngularGradient(colors: [.white, feedbackColor,
-                                                  feedbackColor, .white],
-                                        center: .center),
-                        style: StrokeStyle(lineWidth: size * 0.13, lineCap: .round))
-                .opacity(feedback == .none ? 0 : 1)
-                .scaleEffect(feedback == .none ? 0.94 : 1)
-                .shadow(color: feedbackColor.opacity(feedback == .none ? 0 : 0.55),
-                        radius: 7)
+                .trim(from: 0.54, to: 0.92)
+                .stroke(.white.opacity(0.68),
+                        style: StrokeStyle(lineWidth: size * 0.035, lineCap: .round))
+                .padding(size * 0.035)
+                .opacity(feedback == .none ? 1 : 0.28)
 
-            Circle().stroke(.white.opacity(0.75), lineWidth: 2)
+            Circle()
+                .strokeBorder(feedbackColor, lineWidth: size * 0.13)
+                .opacity(feedback == .none ? 0 : 1)
+                .scaleEffect(feedback == .none ? 0.975 : 1)
+
+            Circle().strokeBorder(.white.opacity(0.75), lineWidth: 2)
                 .padding(size * 0.09)
             Text(text)
                 .font(.system(size: size * 0.29, weight: .black, design: .rounded))
@@ -1192,10 +1266,11 @@ private struct AnswerHoop: View {
         }
         .frame(width: size, height: size)
         .animation(.easeInOut(duration: 0.28), value: feedback)
+        .drawingGroup(opaque: false, colorMode: .nonLinear)
     }
 }
 
-/// Near-side lower arc of a hoop. It deliberately has no label or fill: those
+/// Near-side right arc of a hoop. It deliberately has no label or fill: those
 /// stay on the back layer and remain readable while the penguin crosses it.
 private struct AnswerHoopForeground: View {
     let tint: Color
@@ -1212,30 +1287,46 @@ private struct AnswerHoopForeground: View {
 
     var body: some View {
         ZStack {
-            Circle()
-                .trim(from: 0, to: 0.5)
-                .stroke(tint,
-                        style: StrokeStyle(lineWidth: size * 0.13, lineCap: .round))
+            RightHalfHoopStroke(color: tint,
+                                size: size,
+                                lineWidth: size * 0.13)
                 .opacity(feedback == .none ? 1 : 0.18)
-                .shadow(color: tint.opacity(0.38), radius: 5)
 
-            Circle()
-                .trim(from: 0, to: 0.5)
-                .stroke(feedbackColor,
-                        style: StrokeStyle(lineWidth: size * 0.13, lineCap: .round))
+            RightHalfHoopStroke(color: feedbackColor,
+                                size: size,
+                                lineWidth: size * 0.13)
                 .opacity(feedback == .none ? 0 : 1)
-                .scaleEffect(feedback == .none ? 0.94 : 1)
-                .shadow(color: feedbackColor.opacity(feedback == .none ? 0 : 0.50),
-                        radius: 6)
+                .scaleEffect(feedback == .none ? 0.975 : 1)
 
-            Circle()
-                .trim(from: 0.02, to: 0.48)
-                .stroke(.white.opacity(0.78), lineWidth: 2)
-                .padding(size * 0.09)
+            RightHalfHoopStroke(color: .white.opacity(0.78),
+                                size: size,
+                                lineWidth: 2,
+                                inset: size * 0.09)
         }
         .frame(width: size, height: size)
         .animation(.easeInOut(duration: 0.28), value: feedback)
         .allowsHitTesting(false)
+    }
+}
+
+/// The right semicircle is the near side of the hoop. The complete hoop is
+/// rendered behind the penguin; this masked duplicate alone is rendered above.
+private struct RightHalfHoopStroke: View {
+    let color: Color
+    let size: CGFloat
+    let lineWidth: CGFloat
+    var inset: CGFloat = 0
+
+    var body: some View {
+        Circle()
+            .strokeBorder(color, lineWidth: lineWidth)
+            .padding(inset)
+            .mask {
+                Rectangle()
+                    .frame(width: size * 0.5)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+            }
+            .frame(width: size, height: size)
     }
 }
 
