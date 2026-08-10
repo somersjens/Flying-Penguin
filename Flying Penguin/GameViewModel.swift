@@ -258,7 +258,8 @@ final class GameViewModel: ObservableObject {
     /// back as `.ignored` and changes nothing at all. The returned flag tells
     /// the reef whether to burst the bubble.
     @discardableResult
-    func select(optionID: UUID, usesTurbo: Bool = false) -> Bool {
+    func select(optionID: UUID,
+                wrongAnswerCostHalves: Int? = nil) -> Bool {
         // A guided step only counts the answer it is teaching. Refusing here,
         // before the engine sees the tap, is what makes "nothing happens" mean
         // nothing at all: no score, no life, no round turning over — the tongue
@@ -269,7 +270,8 @@ final class GameViewModel: ObservableObject {
             return false
         }
         let outcome = engine.select(optionID: optionID,
-                                    usesBonusFish: usesTurbo || hasBonusFishPower,
+                                    usesBonusFish: hasBonusFishPower,
+                                    wrongAnswerCostHalves: wrongAnswerCostHalves,
                                     now: Date())
         guard outcome != .ignored else { return false }
         // Every real interaction advances the playtime clock. Without these the
@@ -324,8 +326,7 @@ final class GameViewModel: ObservableObject {
             if self.engine.state == .gameOver {
                 self.finishSession()
             } else if self.engine.round?.id != previousRoundID {
-                // A new sum is announced and opened. A wrong answer leaves the
-                // same sum in place, and play simply resumes.
+                // Every completed passage opens the already-previewed next sum.
                 self.announceRound()
                 self.openRound()
                 self.tutorial.didOpenRound()

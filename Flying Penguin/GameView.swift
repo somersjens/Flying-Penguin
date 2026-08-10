@@ -209,8 +209,9 @@ struct GameView: View {
                               tutorialMessage: tutorialMessage,
                               tutorialSymbol: model.tutorialStep?.symbolName,
                               tutorialPointer: model.tutorialPointer,
-                              onHit: { optionID, usesTurbo in
-                                  model.select(optionID: optionID, usesTurbo: usesTurbo)
+                              onHit: { optionID, usesHalfLifePenalty in
+                                  model.select(optionID: optionID,
+                                               wrongAnswerCostHalves: usesHalfLifePenalty ? 1 : nil)
                               },
                               onImpact: { AppAudio.shared.playSplash() },
                               onSwallow: { model.reportCatchOutcome(isCorrect: $0) },

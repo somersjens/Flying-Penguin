@@ -105,7 +105,7 @@ public enum GameConfig {
     /// already swooping in while the tongue is still reeling the last fly home,
     /// which is what keeps a good run from stalling between questions.
     public static let correctFeedbackDuration = 0.18
-    public static let wrongFeedbackDuration = 0.55
+    public static let wrongFeedbackDuration = 0.34
     /// Gap between feedback ending and the next round's closed cards appearing.
     public static let roundTransitionDuration = 0.12
 

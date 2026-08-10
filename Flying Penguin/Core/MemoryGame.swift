@@ -122,7 +122,6 @@ public final class MemoryGame {
     /// A wrong answer costs a life but leaves the sum standing: the coral keeps
     /// offering the same answers until the right one is caught. Only a correct
     /// answer moves the session on to the next sum.
-    private var repeatsRound = false
 
     // MARK: Derived
 
@@ -130,9 +129,12 @@ public final class MemoryGame {
         Double(lifeHalves) / Double(GameConfig.lifeGranularity)
     }
 
-    /// Rounds this board can run to. Every round pays at least one bubble, so
-    /// the target is always reachable inside this many.
-    public var maximumRounds: Int { board.maximum }
+    /// The target plus enough prepared replacements for every survivable
+    /// half-heart miss. Wrong passages now move on instead of repeating, while
+    /// the board must remain completable for as long as the player has a life.
+    public var maximumRounds: Int {
+        board.maximum + GameConfig.startingLifeHalves - 1
+    }
 
     /// Whether a tap on an answer card can be accepted right now.
     public var acceptsInput: Bool { state == .answering }
@@ -276,6 +278,7 @@ public final class MemoryGame {
     @discardableResult
     public func select(optionID: UUID,
                        usesBonusFish: Bool = false,
+                       wrongAnswerCostHalves overrideWrongAnswerCostHalves: Int? = nil,
                        now: Date = Date()) -> AnswerOutcome {
         guard state == .answering,
               let round,
@@ -297,9 +300,8 @@ public final class MemoryGame {
             // given: a catch made on the last tick of the window still doubles,
             // and the five that reopen the window are not doubled by it.
             let streakWasActive = isStreakBoostActive(at: now)
-            // Flying Penguin's early-choice turbo is an exact +2 reward. It
-            // deliberately does not stack with the older streak multiplier:
-            // the promise painted by the turbo trail is always two points.
+            // A caught bonus fish doubles this answer. Ordinary flight speed
+            // never changes either score or movement speed.
             let earned = usesBonusFish
                 ? GameConfig.normalCardReward * GameConfig.bonusFishMultiplier
                 : GameConfig.normalCardReward * (streakWasActive ? GameConfig.streakMultiplier : 1)
@@ -328,14 +330,13 @@ public final class MemoryGame {
             let streakWasActive = isStreakBoostActive(at: now)
             result.wrongAnswers += 1
             correctStreak = 0
-            spendLifeHalves(streakWasActive
-                            ? GameConfig.streakWrongAnswerCostHalves
-                            : GameConfig.wrongAnswerCostHalves)
-            // The sum stays on the coral; `advance` puts this very round back
-            // into play instead of installing the next one.
-            repeatsRound = true
+            let lifeCost = overrideWrongAnswerCostHalves
+                ?? (streakWasActive
+                    ? GameConfig.streakWrongAnswerCostHalves
+                    : GameConfig.wrongAnswerCostHalves)
+            spendLifeHalves(lifeCost)
             outcome = .wrong(correctOptionID: round.correctOption?.id ?? optionID,
-                             lostHalfLife: streakWasActive)
+                             lostHalfLife: lifeCost == 1)
         }
         lastOutcome = outcome
         return outcome
@@ -394,23 +395,14 @@ public final class MemoryGame {
         return true
     }
 
-    /// Installs the next round, puts the current one back into play after a
-    /// wrong answer, or ends the session. Returns the new state.
+    /// Installs the next round or ends the session. Every flown passage consumes
+    /// its question, whether the selected answer was right or wrong.
     @discardableResult
     public func advance() -> GameState {
         guard state == .roundComplete else { return state }
 
         if lifeHalves <= 0 {
             finish(reason: .outOfLives)
-            return state
-        }
-        // A missed answer does not use up a round: the same sum comes straight
-        // back, with the life already paid for it.
-        if repeatsRound {
-            repeatsRound = false
-            selectedOptionID = nil
-            lastOutcome = nil
-            state = .answering
             return state
         }
         // The board is full: this is what "level complete" means, and it is
