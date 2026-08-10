@@ -183,6 +183,10 @@ struct ResultView: View {
     /// floating free with its own drop shadow — no white-ringed disc.
     private var characterBadge: some View {
         let heroSize = 118 * scale
+        // The penguin artwork has a much wider transparent canvas than the
+        // square animal portraits. Let its visible wings reach just beyond the
+        // decorative ring instead of leaving the character looking tiny.
+        let artworkScale: CGFloat = character.id == "flying_penguin" ? 1.75 : 1
         return ZStack {
             Circle()
                 .fill(RadialGradient(
@@ -197,6 +201,7 @@ struct ResultView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: heroSize * 0.86, height: heroSize * 0.86)
+                .scaleEffect(artworkScale)
                 .shadow(color: character.deepColor.opacity(0.25), radius: 16, y: 9)
         }
         .frame(width: heroSize, height: heroSize)

@@ -337,6 +337,11 @@ struct HomeView: View {
 
     private var characterButton: some View {
         let box = characterBox
+        // The flying penguin is a wide 3:2 illustration, while the other
+        // portraits are square. Scaling is a drawing-only transform: the tile
+        // keeps its fixed layout size, so the totals beside it never move, but
+        // the extended hand is free to reach beyond the tile's border.
+        let artworkScale: CGFloat = character.id == "flying_penguin" ? 1.55 : 1
         return ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(LinearGradient(colors: [character.skyColor, character.tintColor],
@@ -349,7 +354,7 @@ struct HomeView: View {
                 .resizable()
                 .scaledToFit()
                 .padding(box * 0.08)
-                .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                .scaleEffect(artworkScale)
         }
         .frame(width: box, height: box)
         .shadow(color: character.deepColor.opacity(0.18), radius: 7, y: 3)

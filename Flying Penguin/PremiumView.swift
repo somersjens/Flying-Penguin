@@ -237,6 +237,10 @@ struct PremiumView: View {
             }
 
             let heroSize = metrics.heroSize
+            // Unlike the square animal portraits, the flying penguin sits on a
+            // wide transparent canvas. Enlarge only that artwork so its wings
+            // can overlap the decorative ring slightly.
+            let artworkScale: CGFloat = character.id == "flying_penguin" ? 1.75 : 1
             ZStack {
                 Circle()
                     .fill(RadialGradient(
@@ -251,6 +255,7 @@ struct PremiumView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: heroSize * 0.86, height: heroSize * 0.86)
+                    .scaleEffect(artworkScale)
                     .shadow(color: character.deepColor.opacity(0.25), radius: 16, y: 9)
                     .id(previewCharacterID)
                     .transition(.scale.combined(with: .opacity))
