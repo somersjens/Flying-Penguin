@@ -300,8 +300,8 @@ public final class MemoryGame {
             // given: a catch made on the last tick of the window still doubles,
             // and the five that reopen the window are not doubled by it.
             let streakWasActive = isStreakBoostActive(at: now)
-            // A caught bonus fish doubles this answer. Ordinary flight speed
-            // never changes either score or movement speed.
+            // A caught bonus fish or a successful early golden approach
+            // doubles this answer through the same accounting path.
             let earned = usesBonusFish
                 ? GameConfig.normalCardReward * GameConfig.bonusFishMultiplier
                 : GameConfig.normalCardReward * (streakWasActive ? GameConfig.streakMultiplier : 1)

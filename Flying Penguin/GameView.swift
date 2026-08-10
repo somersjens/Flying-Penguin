@@ -209,8 +209,9 @@ struct GameView: View {
                               tutorialMessage: tutorialMessage,
                               tutorialSymbol: model.tutorialStep?.symbolName,
                               tutorialPointer: model.tutorialPointer,
-                              onHit: { optionID, usesHalfLifePenalty in
+                              onHit: { optionID, usesSpeedBonus, usesHalfLifePenalty in
                                   model.select(optionID: optionID,
+                                               usesSpeedBonus: usesSpeedBonus,
                                                wrongAnswerCostHalves: usesHalfLifePenalty ? 1 : nil)
                               },
                               onImpact: { AppAudio.shared.playSplash() },
@@ -328,7 +329,8 @@ struct GameView: View {
                       character: character,
                       isPad: isPad,
                       glyphSize: hudHeartSize,
-                      rowHeight: hudControlSize)
+                      rowHeight: hudControlSize,
+                      columnHeight: hudControlSize * 2 + hudStackSpacing)
         }
     }
 
@@ -362,7 +364,7 @@ struct GameView: View {
     private var hudControlSize: CGFloat { isPad ? 48 : 40 }
     private var hudStackSpacing: CGFloat { isPad ? 6 : 5 }
     private var hudSymbolSize: CGFloat { isPad ? 31 : 24 }
-    private var hudHeartSize: CGFloat { isPad ? 30 : 25 }
+    private var hudHeartSize: CGFloat { isPad ? 27 : 22 }
     private var pauseGlyphSize: CGFloat { isPad ? 22 : 18 }
     private var hudNumberSize: CGFloat { isPad ? 27 : 21 }
 
@@ -372,15 +374,18 @@ struct GameView: View {
     private var progressCounter: some View {
         ZStack(alignment: .bottomTrailing) {
             Circle()
-                .fill(.white.opacity(0.90))
-                .overlay(Circle().stroke(character.color.opacity(0.46), lineWidth: 2))
+                .fill(character.deepColor)
+                .overlay(Circle().stroke(.white.opacity(0.92), lineWidth: 3))
             Text(verbatim: "\(model.cards)")
                 .font(.system(size: hudNumberSize, weight: .heavy, design: .rounded))
                 .monospacedDigit()
                 .lineLimit(1)
                 .contentTransition(.numericText(value: Double(model.cards)))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .foregroundStyle(.white)
             CurrencyIcon(size: hudSymbolSize * 0.48)
+                .foregroundStyle(character.color)
+                .background(.white, in: Circle())
                 .padding(isPad ? 4 : 3)
         }
         .frame(width: hudControlSize, height: hudControlSize)
@@ -659,6 +664,8 @@ struct LivesView: View {
     var glyphSize: CGFloat = 16
     /// Keeps every HUD group centred on the pause button's horizontal axis.
     var rowHeight: CGFloat = 34
+    /// Fixed total height shared with the pause-and-score column.
+    var columnHeight: CGFloat? = nil
 
     private var wholeHearts: Int { Int(lives.rounded(.down)) }
     private var hasHalf: Bool { lives - Double(wholeHearts) >= 0.5 }
@@ -669,12 +676,13 @@ struct LivesView: View {
     private var heartColor: Color { character.deepColor }
 
     var body: some View {
-        VStack(spacing: isPad ? 6 : 5) {
+        VStack(spacing: 0) {
             ForEach(0..<capacity, id: \.self) { index in
                 heart(at: index)
+                    .frame(maxHeight: .infinity)
             }
         }
-        .frame(width: rowHeight, alignment: .top)
+        .frame(width: rowHeight, height: columnHeight, alignment: .top)
         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: lives)
         .accessibilityElement()
         .accessibilityIdentifier("lives")

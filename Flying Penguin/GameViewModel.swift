@@ -233,6 +233,7 @@ final class GameViewModel: ObservableObject {
         generation &+= 1
         hasRecordedResult = false
         isPaused = false
+        pausedAt = nil
         pendingScheduledWork = nil
         PausedSessionStore.shared.clear(request.board)
         engine = MemoryGame(level: request.level,
@@ -259,6 +260,7 @@ final class GameViewModel: ObservableObject {
     /// the reef whether to burst the bubble.
     @discardableResult
     func select(optionID: UUID,
+                usesSpeedBonus: Bool = false,
                 wrongAnswerCostHalves: Int? = nil) -> Bool {
         // A guided step only counts the answer it is teaching. Refusing here,
         // before the engine sees the tap, is what makes "nothing happens" mean
@@ -269,8 +271,9 @@ final class GameViewModel: ObservableObject {
            !tutorial.accepts(isCorrect: option.isCorrect) {
             return false
         }
+        let spendsBonusFish = hasBonusFishPower
         let outcome = engine.select(optionID: optionID,
-                                    usesBonusFish: hasBonusFishPower,
+                                    usesBonusFish: usesSpeedBonus || spendsBonusFish,
                                     wrongAnswerCostHalves: wrongAnswerCostHalves,
                                     now: Date())
         guard outcome != .ignored else { return false }
@@ -290,7 +293,7 @@ final class GameViewModel: ObservableObject {
             }
             lastCorrectCatchTime = now
             if usedBonusFish {
-                hasBonusFishPower = false
+                if spendsBonusFish { hasBonusFishPower = false }
                 AppAudio.shared.playDoubleScore()
             }
             if startedStreak {
