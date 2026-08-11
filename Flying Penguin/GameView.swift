@@ -99,6 +99,10 @@ struct GameView: View {
             // overlay over the reef that was just played, exactly like the
             // start and pause cards, rather than a replacement for the game.
             playfield
+                .blur(radius: showsResult ? 4 : 0)
+                .scaleEffect(showsResult ? 1.012 : 1)
+                .saturation(showsResult ? 0.84 : 1)
+                .animation(.easeInOut(duration: 0.42), value: showsResult)
                 .transition(.opacity)
 
             if showsResult {
@@ -112,7 +116,10 @@ struct GameView: View {
                                model.restart()
                            },
                            onExit: { dismiss() })
-                    .transition(.opacity.combined(with: .scale(scale: 0.96)))
+                    // ResultView owns its staged backdrop and card entrance.
+                    // A second transition here made the whole overlay—including
+                    // its dimming layer—arrive as one abrupt block.
+                    .transition(.identity)
                     .zIndex(1)
             }
 
@@ -264,9 +271,7 @@ struct GameView: View {
 
     private func finishLevelCompletion() {
         guard playsLevelCompletion else { return }
-        withAnimation(.spring(response: 0.48, dampingFraction: 0.84)) {
-            showsResult = true
-        }
+        showsResult = true
         // Keep the final bubble bloom under the card during its entrance so
         // there is never a flash of the bare playfield between both scenes.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {

@@ -17,6 +17,7 @@ struct ResultView: View {
     let onPlayAgain: () -> Void
     let onExit: () -> Void
 
+    @State private var backdropPresented = false
     @State private var isPresented = false
     @State private var badgeLanded = false
     @State private var shineSweep = false
@@ -69,9 +70,19 @@ struct ResultView: View {
     var body: some View {
         ZStack {
             Color.black
-                .opacity(isPresented ? 0.56 : 0)
+                .opacity(backdropPresented ? 0.30 : 0)
                 .ignoresSafeArea()
-                .animation(.easeOut(duration: 0.24), value: isPresented)
+
+            // A cool tint ties the overlay back to the level instead of
+            // replacing the colourful scene with a flat black curtain.
+            LinearGradient(
+                colors: [character.deepColor.opacity(backdropPresented ? 0.14 : 0),
+                         .clear,
+                         character.tintColor.opacity(backdropPresented ? 0.08 : 0)],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            .ignoresSafeArea()
 
             GeometryReader { proxy in
                 ScrollView {
@@ -95,8 +106,10 @@ struct ResultView: View {
                 .scrollBounceBehavior(.basedOnSize)
             }
             .opacity(isPresented ? 1 : 0)
-            .scaleEffect(isPresented ? 1 : 0.93)
-            .offset(y: isPresented ? 0 : 18)
+            .animation(.easeOut(duration: 0.28), value: isPresented)
+            .scaleEffect(isPresented ? 1 : 0.965)
+            .offset(y: isPresented ? 0 : 14)
+            .animation(.spring(response: 0.50, dampingFraction: 0.86), value: isPresented)
 
             // Layered above the card, so the swarm passes over the result
             // rather than behind it. It starts once the card entrance is
@@ -110,7 +123,13 @@ struct ResultView: View {
         // The best-score badge and the celebration swarm both count in what
         // this character was collecting all session.
         .onAppear {
-            withAnimation(.spring(response: 0.46, dampingFraction: 0.82)) {
+            withAnimation(.easeInOut(duration: 0.42)) {
+                backdropPresented = true
+            }
+            // Let the scene begin to soften before the card takes focus. This
+            // small overlap reads as one continuous hand-off, not two screens
+            // being swapped.
+            DispatchQueue.main.asyncAfter(deadline: .now() + (reduceMotion ? 0 : 0.06)) {
                 isPresented = true
             }
             // A finished board, or a score this level has never seen before,

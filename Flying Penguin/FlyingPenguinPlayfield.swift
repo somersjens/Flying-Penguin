@@ -43,6 +43,10 @@ struct FlyingPenguinPlayfield: View {
     @State private var activeRoundID: UUID?
     @State private var noCorrectAnswer = false
     @State private var resolved = false
+    /// A wrong passage reveals the solution in the moving sum and briefly
+    /// repeats it at the lower-left edge while flight continues uninterrupted.
+    @State private var answerEcho: SolvedAnswerEcho?
+    @State private var emphasizesCorrectAnswer = false
     @State private var diveArmed = false
     @State private var divePhase = 0
     @State private var committedLaneIndex: Int?
@@ -255,6 +259,17 @@ struct FlyingPenguinPlayfield: View {
                         .allowsHitTesting(false)
                 }
 
+                if let answerEcho, entranceStage >= 5, !completionActive {
+                    SolvedAnswerEchoView(prompt: answerEcho.prompt,
+                                         character: character,
+                                         isPad: isPad)
+                        .frame(maxWidth: proxy.size.width * 0.46, alignment: .leading)
+                        .position(x: proxy.size.width * 0.25,
+                                  y: proxy.size.height - bottomReserve - (isPad ? 88 : 68))
+                        .transition(.opacity)
+                        .allowsHitTesting(false)
+                }
+
                 if let tutorialMessage, entranceStage >= 5 {
                     Text(tutorialMessage)
                         .font(.system(size: isPad ? 20 : 15, weight: .bold, design: .rounded))
@@ -321,7 +336,12 @@ struct FlyingPenguinPlayfield: View {
                            waterline: waterline,
                            worldOffset: worldOffset,
                            isPad: isPad,
-                           depth: .front)
+                           depth: .front,
+                           // A foreground floe directly below a ring stack
+                           // reads as a solid obstacle. Keep that gameplay
+                           // corridor visually open, including while an old
+                           // set is drifting out after an answer.
+                           exclusionXs: [hoopX] + retiringSets.map(\.x))
         }
     }
 
@@ -548,6 +568,8 @@ struct FlyingPenguinPlayfield: View {
         previewRoundID = nil
         retiringSets = []
         activeRoundID = nil
+        answerEcho = nil
+        emphasizesCorrectAnswer = false
         hoopX = ringSpawnX
         penguinX = normalPenguinX
         penguinY = lanes[1]
@@ -640,6 +662,7 @@ struct FlyingPenguinPlayfield: View {
         speedRunActive = false
         speedBonusEligible = false
         goldenOptionID = nil
+        emphasizesCorrectAnswer = false
         // Keep the exact flight height between sets. Only a completed dive
         // changes it as part of its resurfacing sequence.
     }
@@ -843,6 +866,14 @@ struct FlyingPenguinPlayfield: View {
             resolved = false
             return
         }
+        if !isCorrect {
+            let solvedPrompt = round.question.prompt.replacingOccurrences(
+                of: "?", with: round.question.correctAnswer
+            )
+            shownPrompt = solvedPrompt
+            emphasizesCorrectAnswer = true
+            showAnswerEcho(solvedPrompt)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
             if noCorrectAnswer && isCorrect { onDive() }
             else { onSwallow(isCorrect) }
@@ -855,6 +886,18 @@ struct FlyingPenguinPlayfield: View {
         divePhase = 2
         penguinY = diveY
         targetPenguinY = diveY
+    }
+
+    /// Keeps the solved sum available after its moving set has passed without
+    /// slowing or blocking the next set. A newer mistake replaces the older
+    /// echo and owns its dismissal token.
+    private func showAnswerEcho(_ prompt: String) {
+        let echo = SolvedAnswerEcho(prompt: prompt)
+        withAnimation(.easeOut(duration: 0.16)) { answerEcho = echo }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.45) {
+            guard answerEcho?.id == echo.id else { return }
+            withAnimation(.easeOut(duration: 0.20)) { answerEcho = nil }
+        }
     }
 
     /// Starts — or keeps — a dive. The height it begins from is recorded here
@@ -926,6 +969,8 @@ struct FlyingPenguinPlayfield: View {
         previewRoundID = nil
         retiringSets = []
         speedRunActive = false
+        answerEcho = nil
+        emphasizesCorrectAnswer = false
         diveArmed = false
         splashes = []
         surfaceSubmerged = false
@@ -941,7 +986,13 @@ struct FlyingPenguinPlayfield: View {
         withAnimation(.linear(duration: duration)) {
             completionProgress = 1
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + duration + 0.05) {
+
+        // Reveal the result once the penguin is almost beyond the trailing
+        // edge. The remaining tail of the flight keeps running underneath the
+        // card, so the animation stays smooth without making the player wait
+        // for movement that is effectively already off-screen.
+        let resultRevealProgress = 0.88
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration * resultRevealProgress) {
             guard completionActive, completionSequence == sequence else { return }
             onLevelCompletionFinished()
         }
@@ -958,6 +1009,7 @@ struct FlyingPenguinPlayfield: View {
         guard resolved,
               let option = shownOptions.first(where: { $0.id == optionID })
         else { return .none }
+        if option.isCorrect, emphasizesCorrectAnswer { return .revealedCorrect }
         return option.isCorrect ? .correct : .wrong
     }
 }
@@ -1230,26 +1282,13 @@ private struct CannonLaunchScene: View {
             .aspectRatio(3.0 / 2.0, contentMode: .fit)
             .frame(width: width, height: height)
             .overlay {
-                ZStack {
-                    CannonFusePath()
-                        .trim(from: 0, to: 0.60)
-                        .stroke(.black,
-                                style: StrokeStyle(lineWidth: width * 0.046,
-                                                   lineCap: .round))
-                        .blendMode(.destinationOut)
-
-                    Capsule()
-                        .fill(RadialGradient(colors: [.yellow, .orange,
-                                                      Color(red: 0.48, green: 0.20, blue: 0.02)],
-                                             center: .topLeading,
-                                             startRadius: 1,
-                                             endRadius: width * 0.035))
-                        .overlay(Capsule().stroke(Color.yellow.opacity(0.9), lineWidth: 2))
-                        .frame(width: width * 0.12, height: width * 0.075)
-                        .rotationEffect(.degrees(-8))
-                        .position(x: width * 0.31, y: height * 0.368)
-                }
-                .frame(width: width, height: height)
+                CannonFusePath()
+                    .trim(from: 0, to: 0.60)
+                    .stroke(.black,
+                            style: StrokeStyle(lineWidth: width * 0.046,
+                                               lineCap: .round))
+                    .blendMode(.destinationOut)
+                    .frame(width: width, height: height)
             }
             .compositingGroup()
             .scaleEffect(x: cannonScaleX, y: cannonScaleY, anchor: .bottomLeading)
@@ -1500,6 +1539,11 @@ private struct SplashEvent: Identifiable {
     let x: CGFloat
 }
 
+private struct SolvedAnswerEcho: Identifiable {
+    let id = UUID()
+    let prompt: String
+}
+
 private struct RetiringHoopSet: Identifiable {
     let id = UUID()
     let options: [AnswerOption]
@@ -1514,7 +1558,7 @@ private struct RetiringHoopSet: Identifiable {
     }
 }
 
-private enum HoopFeedback: Equatable { case none, correct, wrong, golden }
+private enum HoopFeedback: Equatable { case none, correct, revealedCorrect, wrong, golden }
 
 private struct MovingQuestionBadge: View {
     let prompt: String
@@ -1535,6 +1579,25 @@ private struct MovingQuestionBadge: View {
     }
 }
 
+private struct SolvedAnswerEchoView: View {
+    let prompt: String
+    let character: AnimalCharacter
+    let isPad: Bool
+
+    var body: some View {
+        Text(prompt)
+            .font(.system(size: isPad ? 25 : 18, weight: .black, design: .rounded))
+            .foregroundStyle(character.deepColor)
+            .lineLimit(1)
+            .minimumScaleFactor(0.62)
+            .padding(.horizontal, isPad ? 17 : 13)
+            .padding(.vertical, isPad ? 8 : 6)
+            .background(.white.opacity(0.90), in: Capsule())
+            .overlay(Capsule().stroke(character.color.opacity(0.38), lineWidth: 1.5))
+            .shadow(color: .black.opacity(0.08), radius: 3, y: 2)
+    }
+}
+
 private struct AnswerHoop: View {
     let text: String
     let tint: Color
@@ -1544,7 +1607,7 @@ private struct AnswerHoop: View {
     private var feedbackColor: Color {
         switch feedback {
         case .none: return .clear
-        case .correct: return .green
+        case .correct, .revealedCorrect: return .green
         case .wrong: return .red
         case .golden: return Color(red: 1.0, green: 0.70, blue: 0.05)
         }
@@ -1568,11 +1631,18 @@ private struct AnswerHoop: View {
                 .opacity(feedback == .none ? 0 : 1)
                 .scaleEffect(feedback == .none ? 0.975 : 1)
 
+            if feedback == .revealedCorrect {
+                CorrectAnswerSweep(size: size)
+            }
+
             Circle().strokeBorder(.white.opacity(0.75), lineWidth: 2)
                 .padding(size * 0.09)
             Text(text)
                 .font(.system(size: size * 0.29, weight: .black, design: .rounded))
                 .foregroundStyle(Color(red: 0.04, green: 0.16, blue: 0.38))
+                .lineLimit(1)
+                .minimumScaleFactor(0.35)
+                .allowsTightening(true)
                 .padding(.horizontal, size * 0.12)
                 .padding(.vertical, size * 0.06)
                 .background(.white.opacity(0.94), in: Capsule())
@@ -1580,6 +1650,37 @@ private struct AnswerHoop: View {
         .frame(width: size, height: size)
         .animation(.easeInOut(duration: 0.28), value: feedback)
         .drawingGroup(opaque: false, colorMode: .nonLinear)
+    }
+}
+
+/// A thin highlight travels once around the existing correct hoop. It is
+/// inset from the rim, so neither its stroke nor its animation can escape the
+/// hoop's original frame.
+private struct CorrectAnswerSweep: View {
+    let size: CGFloat
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var rotation: Double = 0
+
+    var body: some View {
+        Circle()
+            .trim(from: 0.02, to: 0.24)
+            .stroke(
+                AngularGradient(colors: [.white.opacity(0.05), .white,
+                                         Color.green.opacity(0.75), .white.opacity(0.05)],
+                                center: .center),
+                style: StrokeStyle(lineWidth: size * 0.045, lineCap: .round)
+            )
+            .padding(size * 0.055)
+            .rotationEffect(.degrees(rotation))
+            .onAppear {
+                rotation = 0
+                if reduceMotion {
+                    rotation = 360
+                } else {
+                    withAnimation(.easeInOut(duration: 0.42)) { rotation = 360 }
+                }
+            }
+            .allowsHitTesting(false)
     }
 }
 
@@ -1593,7 +1694,7 @@ private struct AnswerHoopForeground: View {
     private var feedbackColor: Color {
         switch feedback {
         case .none: return .clear
-        case .correct: return .green
+        case .correct, .revealedCorrect: return .green
         case .wrong: return .red
         case .golden: return Color(red: 1.0, green: 0.70, blue: 0.05)
         }
@@ -1643,4 +1744,3 @@ private struct RightHalfHoopStroke: View {
             .frame(width: size, height: size)
     }
 }
-

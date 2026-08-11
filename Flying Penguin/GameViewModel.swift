@@ -107,6 +107,13 @@ final class GameViewModel: ObservableObject {
         guard engine.state == .intro else { return }
         let resumedRound = PausedSessionStore.shared.session(request.board)?.roundNumber ?? 1
         engine.prepare(startingAt: resumedRound)
+#if canImport(UIKit)
+        // Allocate and wake every feedback generator while the intro card still
+        // covers the playfield. The first answer used to lazily create the
+        // notification generator on the main thread in the same frame as the
+        // score, hoop feedback and swallow animation, producing a one-off hitch.
+        prepareHaptics()
+#endif
         sync()
     }
 
@@ -559,6 +566,15 @@ final class GameViewModel: ObservableObject {
     }
 
 #if canImport(UIKit)
+    /// Performs the one-time generator allocation away from a live gameplay
+    /// frame and primes the Taptic engine for the first interaction.
+    private func prepareHaptics() {
+        lightGenerator.prepare()
+        rigidGenerator.prepare()
+        heavyGenerator.prepare()
+        notificationGenerator.prepare()
+    }
+
     /// Keeps a generator warm for the next answer without doing it here.
     /// `prepare()` wakes the Taptic engine, and the frame it was being called on
     /// is the frame a catch lands: the answer's sound, its verdict mark, the
