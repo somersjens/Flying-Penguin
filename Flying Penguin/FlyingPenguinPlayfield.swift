@@ -53,7 +53,11 @@ struct FlyingPenguinPlayfield: View {
     @State private var committedLaneIndex: Int?
     @State private var speedRunActive = false
     @State private var speedBonusEligible = false
-    @State private var goldenOptionID: UUID?
+    @State private var bonusOptionID: UUID?
+    /// Feedback follows the player's actual choice. Unchosen distractors stay
+    /// neutral instead of turning red after a successful passage.
+    @State private var selectedOptionID: UUID?
+    @State private var bypassedWrongSet = false
     @State private var worldOffset: CGFloat = 0
     @State private var entranceStage = 0
     @State private var completionActive = false
@@ -222,7 +226,7 @@ struct FlyingPenguinPlayfield: View {
                 }
 
                 if speedRunActive && !resolved {
-                    GoldenSpeedTrail(size: penguinSize, phase: flightClock)
+                    TurboSpeedWake(size: penguinSize, phase: flightClock)
                         .position(x: penguinX - penguinSize * 0.58, y: penguinY)
                         .transition(.opacity)
                 }
@@ -610,7 +614,9 @@ struct FlyingPenguinPlayfield: View {
         flightClock = 0
         speedRunActive = false
         speedBonusEligible = false
-        goldenOptionID = nil
+        bonusOptionID = nil
+        selectedOptionID = nil
+        bypassedWrongSet = false
         launchSpeedHandoffActive = false
         launchGlideSpeed = 0
         launchWorldOrigin = worldOffset
@@ -659,10 +665,7 @@ struct FlyingPenguinPlayfield: View {
         let promotesPreview = previewRoundID == round.id
         let promotedX = previewX
         if !shownOptions.isEmpty, hoopX > -hoopSize * 0.65 {
-            retiringSets.append(RetiringHoopSet(options: shownOptions,
-                                                prompt: shownPrompt,
-                                                x: hoopX,
-                                                goldenOptionID: goldenOptionID))
+            retiringSets.append(makeRetiringSet())
             if retiringSets.count > 1 { retiringSets.removeFirst(retiringSets.count - 1) }
         }
         activeRoundID = round.id
@@ -684,7 +687,9 @@ struct FlyingPenguinPlayfield: View {
         committedLaneIndex = nil
         speedRunActive = false
         speedBonusEligible = false
-        goldenOptionID = nil
+        bonusOptionID = nil
+        selectedOptionID = nil
+        bypassedWrongSet = false
         emphasizesCorrectAnswer = false
         // Keep the exact flight height between sets. Only a completed dive
         // changes it as part of its resurfacing sequence.
@@ -908,14 +913,15 @@ struct FlyingPenguinPlayfield: View {
         }
 
         usesSpeedBonus = speedBonusEligible && isCorrect
-        if usesSpeedBonus {
-            withAnimation(.easeInOut(duration: 0.20)) { goldenOptionID = selected.id }
-        }
-
         onImpact()
         guard onHit(selected.id, usesSpeedBonus, usesHalfLifePenalty) else {
             resolved = false
             return
+        }
+        selectedOptionID = selected.id
+        bypassedWrongSet = isBelowRings && noCorrectAnswer && isCorrect
+        if usesSpeedBonus {
+            withAnimation(.easeInOut(duration: 0.20)) { bonusOptionID = selected.id }
         }
         if !isCorrect {
             let solvedPrompt = round.question.solvedPrompt
@@ -1017,10 +1023,7 @@ struct FlyingPenguinPlayfield: View {
         // question. It can then drift out at conveyor speed throughout the
         // looping flight instead of vanishing on the hand-off frame.
         if !shownOptions.isEmpty, hoopX > -hoopSize * 0.65 {
-            retiringSets.append(RetiringHoopSet(options: shownOptions,
-                                                prompt: shownPrompt,
-                                                x: hoopX,
-                                                goldenOptionID: goldenOptionID))
+            retiringSets.append(makeRetiringSet())
         }
         shownOptions = []
         shownPrompt = ""
@@ -1061,15 +1064,32 @@ struct FlyingPenguinPlayfield: View {
         // A set travelling in during the launch is never a resolved set: it has
         // not been played yet, so it must not wear an answer's colours.
         guard entranceStage >= 5 else { return .none }
-        if resolved, goldenOptionID == optionID,
+        if resolved, bypassedWrongSet { return .bypassed }
+        if resolved, bonusOptionID == optionID,
            shownOptions.first(where: { $0.id == optionID })?.isCorrect == true {
-            return .golden
+            return .bonus
         }
         guard resolved,
               let option = shownOptions.first(where: { $0.id == optionID })
         else { return .none }
+        if selectedOptionID == optionID {
+            return option.isCorrect ? .correct : .wrong
+        }
         if option.isCorrect, emphasizesCorrectAnswer { return .revealedCorrect }
-        return option.isCorrect ? .correct : .wrong
+        return .inactive
+    }
+
+    /// Freeze the resolved visual state before the next set replaces the
+    /// active options. This preserves a successful all-wrong dive as neutral
+    /// blue instead of recomputing every old option as a mistake.
+    private func makeRetiringSet() -> RetiringHoopSet {
+        let feedbacks = Dictionary(uniqueKeysWithValues: shownOptions.map {
+            ($0.id, feedback(for: $0.id))
+        })
+        return RetiringHoopSet(options: shownOptions,
+                               prompt: shownPrompt,
+                               x: hoopX,
+                               feedbacks: feedbacks)
     }
 }
 
@@ -1529,7 +1549,7 @@ private struct TurboTimingBuoy: View {
     }
 }
 
-private struct GoldenSpeedTrail: View {
+private struct TurboSpeedWake: View {
     let size: CGFloat
     let phase: Double
 
@@ -1538,47 +1558,54 @@ private struct GoldenSpeedTrail: View {
             let width = proxy.size.width
             let height = proxy.size.height
             ZStack {
-                // Three tapered-looking streamlines curl into the slipstream
-                // instead of reading as rigid speed bars.
-                ForEach(0..<3, id: \.self) { index in
+                // Soft, filled wind ribbons taper into the slipstream. Their
+                // translucent area reads as moving air rather than speed bars.
+                ForEach(0..<2, id: \.self) { index in
                     let lane = CGFloat(index)
                     Path { path in
-                        let startY = height * (0.25 + lane * 0.25)
-                        let curl = (lane - 1) * height * 0.10
-                        path.move(to: CGPoint(x: width * 0.96, y: startY))
+                        let centreY = height * (0.35 + lane * 0.30)
+                        let thickness = height * (index == 0 ? 0.14 : 0.11)
+                        let tailY = centreY + (lane == 0 ? -height * 0.12 : height * 0.10)
+                        path.move(to: CGPoint(x: width * 0.98, y: centreY - thickness * 0.30))
                         path.addCurve(
-                            to: CGPoint(x: width * (0.10 + lane * 0.05),
-                                        y: startY + curl),
-                            control1: CGPoint(x: width * 0.72,
-                                              y: startY - curl * 0.65),
-                            control2: CGPoint(x: width * 0.38,
-                                              y: startY + curl * 1.35)
+                            to: CGPoint(x: width * (0.04 + lane * 0.06), y: tailY),
+                            control1: CGPoint(x: width * 0.70, y: centreY - thickness),
+                            control2: CGPoint(x: width * 0.30, y: tailY - thickness * 0.55)
                         )
+                        path.addCurve(
+                            to: CGPoint(x: width * 0.98, y: centreY + thickness * 0.30),
+                            control1: CGPoint(x: width * 0.32, y: tailY + thickness * 0.40),
+                            control2: CGPoint(x: width * 0.72, y: centreY + thickness)
+                        )
+                        path.closeSubpath()
                     }
-                    .trim(from: 0.05 + lane * 0.07, to: 1)
-                    .stroke(index == 1 ? Color.yellow.opacity(0.80)
-                                       : Color.white.opacity(0.68 - Double(index) * 0.08),
-                            style: StrokeStyle(lineWidth: max(2, size * 0.032),
-                                               lineCap: .round))
+                    .fill(LinearGradient(colors: [
+                        Color.white.opacity(0.04),
+                        Color.cyan.opacity(0.18),
+                        Color.mint.opacity(index == 0 ? 0.44 : 0.30),
+                        Color.white.opacity(0.58)
+                    ], startPoint: .leading, endPoint: .trailing))
                 }
 
-                // A few drifting pressure droplets provide motion while using
-                // the playfield's existing clock—no extra timer or blur pass.
-                ForEach(0..<4, id: \.self) { index in
-                    let travel = CGFloat((phase * (0.72 + Double(index) * 0.08)
-                                          + Double(index) * 0.23)
+                // Larger sparkles replace the tiny pressure droplets. They use
+                // the playfield clock, so turbo adds no timer or blur pass.
+                ForEach(0..<5, id: \.self) { index in
+                    let travel = CGFloat((phase * (0.60 + Double(index) * 0.055)
+                                          + Double(index) * 0.19)
                         .truncatingRemainder(dividingBy: 1))
-                    let dotSize = max(3, size * (0.026 + CGFloat(index % 2) * 0.012))
-                    let dotX = width * (0.88 - travel * 0.78)
-                    let wave = sin(CGFloat(phase * 5) + CGFloat(index)) * height * 0.035
-                    let dotY = height * (0.23 + CGFloat(index) * 0.18) + wave
-                    let dotOpacity = Double(1 - travel) * 0.75 + 0.15
-                    Circle()
-                        .fill(index == 0 ? Color.yellow.opacity(0.82)
-                                         : Color.white.opacity(0.74))
-                        .frame(width: dotSize, height: dotSize)
-                        .position(x: dotX, y: dotY)
-                        .opacity(dotOpacity)
+                    let sparkleSize = max(7, size * (0.058 + CGFloat(index % 3) * 0.014))
+                    let sparkleX = width * (0.90 - travel * 0.82)
+                    let wave = sin(CGFloat(phase * 4.2) + CGFloat(index) * 1.7) * height * 0.055
+                    let sparkleY = height * (0.22 + CGFloat(index) * 0.145) + wave
+                    let sparkleOpacity = Double(1 - travel) * 0.72 + 0.22
+                    Image(systemName: index.isMultiple(of: 2) ? "sparkle" : "star.fill")
+                        .font(.system(size: sparkleSize, weight: .bold))
+                        .foregroundStyle(index == 1 ? Color.yellow.opacity(0.92)
+                                                    : Color.white.opacity(0.90))
+                        .rotationEffect(.degrees(Double(index * 29) + phase * 42))
+                        .scaleEffect(0.82 + 0.18 * sin(CGFloat(phase * 6) + CGFloat(index)))
+                        .position(x: sparkleX, y: sparkleY)
+                        .opacity(sparkleOpacity)
                 }
             }
         }
@@ -1608,16 +1635,16 @@ private struct RetiringHoopSet: Identifiable {
     let options: [AnswerOption]
     let prompt: String
     var x: CGFloat
-    let goldenOptionID: UUID?
+    let feedbacks: [UUID: HoopFeedback]
 
     func feedback(for optionID: UUID) -> HoopFeedback {
-        guard let option = options.first(where: { $0.id == optionID }) else { return .none }
-        if option.isCorrect, goldenOptionID == optionID { return .golden }
-        return option.isCorrect ? .correct : .wrong
+        feedbacks[optionID] ?? .none
     }
 }
 
-private enum HoopFeedback: Equatable { case none, correct, revealedCorrect, wrong, golden }
+private enum HoopFeedback: Equatable {
+    case none, inactive, correct, revealedCorrect, wrong, bonus, bypassed
+}
 
 private struct MovingQuestionBadge: View {
     let prompt: String
@@ -1663,35 +1690,58 @@ private struct AnswerHoop: View {
     let size: CGFloat
     let feedback: HoopFeedback
 
-    private var feedbackColor: Color {
+    private var feedbackGradient: AngularGradient {
         switch feedback {
-        case .none: return .clear
-        case .correct, .revealedCorrect: return .green
-        case .wrong: return .red
-        case .golden: return Color(red: 1.0, green: 0.70, blue: 0.05)
+        case .correct, .revealedCorrect, .bonus:
+            return AngularGradient(colors: [
+                Color(red: 0.12, green: 0.78, blue: 0.36),
+                Color(red: 0.57, green: 0.94, blue: 0.39),
+                Color(red: 0.04, green: 0.62, blue: 0.39),
+                Color(red: 0.12, green: 0.78, blue: 0.36)
+            ], center: .center)
+        case .wrong:
+            return AngularGradient(colors: [
+                Color(red: 0.96, green: 0.22, blue: 0.30),
+                Color(red: 1.00, green: 0.48, blue: 0.28),
+                Color(red: 0.82, green: 0.12, blue: 0.38),
+                Color(red: 0.96, green: 0.22, blue: 0.30)
+            ], center: .center)
+        case .bypassed:
+            return AngularGradient(colors: [
+                Color.white.opacity(0.82), Color.cyan.opacity(0.72),
+                Color.blue.opacity(0.45), Color.white.opacity(0.82)
+            ], center: .center)
+        case .none, .inactive:
+            return AngularGradient(colors: [.clear, .clear], center: .center)
         }
     }
+
+    private var showsResolvedRim: Bool { feedback != .none && feedback != .inactive }
 
     var body: some View {
         ZStack {
             Circle()
                 .strokeBorder(tint, lineWidth: size * 0.13)
-                .opacity(feedback == .none ? 1 : 0.18)
+                .opacity(feedback == .none ? 1 : (feedback == .inactive ? 0.42 : 0.16))
 
             Circle()
                 .trim(from: 0.54, to: 0.92)
                 .stroke(.white.opacity(0.68),
                         style: StrokeStyle(lineWidth: size * 0.035, lineCap: .round))
                 .padding(size * 0.035)
-                .opacity(feedback == .none ? 1 : 0.28)
+                .opacity(feedback == .none ? 1 : (feedback == .inactive ? 0.38 : 0.24))
 
             Circle()
-                .strokeBorder(feedbackColor, lineWidth: size * 0.13)
-                .opacity(feedback == .none ? 0 : 1)
-                .scaleEffect(feedback == .none ? 0.975 : 1)
+                .strokeBorder(feedbackGradient, lineWidth: size * 0.13)
+                .opacity(showsResolvedRim ? 1 : 0)
+                .scaleEffect(showsResolvedRim ? 1 : 0.975)
 
-            if feedback == .revealedCorrect {
-                CorrectAnswerSweep(size: size)
+            if feedback == .correct || feedback == .revealedCorrect || feedback == .wrong || feedback == .bonus {
+                FeedbackRimSweep(size: size, feedback: feedback)
+            }
+
+            if feedback == .bonus {
+                BonusStarBurst(size: size)
             }
 
             Circle().strokeBorder(.white.opacity(0.75), lineWidth: 2)
@@ -1712,11 +1762,11 @@ private struct AnswerHoop: View {
     }
 }
 
-/// A thin highlight travels once around the existing correct hoop. It is
-/// inset from the rim, so neither its stroke nor its animation can escape the
-/// hoop's original frame.
-private struct CorrectAnswerSweep: View {
+/// One compact glint makes a complete lap around a resolved rim. It animates
+/// only once, keeping the result lively without leaving a permanent spinner.
+private struct FeedbackRimSweep: View {
     let size: CGFloat
+    let feedback: HoopFeedback
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var rotation: Double = 0
 
@@ -1724,8 +1774,8 @@ private struct CorrectAnswerSweep: View {
         Circle()
             .trim(from: 0.02, to: 0.24)
             .stroke(
-                AngularGradient(colors: [.white.opacity(0.05), .white,
-                                         Color.green.opacity(0.75), .white.opacity(0.05)],
+                AngularGradient(colors: [.white.opacity(0.02), .white.opacity(0.96),
+                                         sweepTint.opacity(0.70), .white.opacity(0.02)],
                                 center: .center),
                 style: StrokeStyle(lineWidth: size * 0.045, lineCap: .round)
             )
@@ -1741,6 +1791,41 @@ private struct CorrectAnswerSweep: View {
             }
             .allowsHitTesting(false)
     }
+
+    private var sweepTint: Color {
+        feedback == .wrong ? .orange : .mint
+    }
+}
+
+/// The turbo reward stays green like a normal correct answer, then adds one
+/// small outward star pop so the bonus is unmistakable without a gold rim.
+private struct BonusStarBurst: View {
+    let size: CGFloat
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var progress: CGFloat = 0
+
+    var body: some View {
+        ZStack {
+            ForEach(0..<8, id: \.self) { index in
+                let angle = Double(index) * 45 - 90
+                Image(systemName: index.isMultiple(of: 2) ? "star.fill" : "sparkle")
+                    .font(.system(size: size * (index.isMultiple(of: 2) ? 0.105 : 0.085),
+                                  weight: .bold))
+                    .foregroundStyle(index.isMultiple(of: 3) ? Color.yellow : Color.white)
+                    .shadow(color: Color.green.opacity(0.30), radius: 2)
+                    .offset(y: -size * (0.38 + progress * 0.22))
+                    .rotationEffect(.degrees(angle))
+                    .opacity(Double(1 - progress * 0.82))
+                    .scaleEffect(0.62 + progress * 0.46)
+            }
+        }
+        .onAppear {
+            progress = reduceMotion ? 0.55 : 0
+            guard !reduceMotion else { return }
+            withAnimation(.easeOut(duration: 0.48)) { progress = 1 }
+        }
+        .allowsHitTesting(false)
+    }
 }
 
 /// Near-side right arc of a hoop. It deliberately has no label or fill: those
@@ -1750,27 +1835,41 @@ private struct AnswerHoopForeground: View {
     let size: CGFloat
     let feedback: HoopFeedback
 
-    private var feedbackColor: Color {
+    private var feedbackGradient: AngularGradient {
         switch feedback {
-        case .none: return .clear
-        case .correct, .revealedCorrect: return .green
-        case .wrong: return .red
-        case .golden: return Color(red: 1.0, green: 0.70, blue: 0.05)
+        case .correct, .revealedCorrect, .bonus:
+            return AngularGradient(colors: [.green, .mint, Color(red: 0.04, green: 0.62, blue: 0.39), .green],
+                                   center: .center)
+        case .wrong:
+            return AngularGradient(colors: [.red, .orange, Color(red: 0.82, green: 0.12, blue: 0.38), .red],
+                                   center: .center)
+        case .bypassed:
+            return AngularGradient(colors: [.white.opacity(0.82), .cyan.opacity(0.72),
+                                             .blue.opacity(0.45), .white.opacity(0.82)],
+                                   center: .center)
+        case .none, .inactive:
+            return AngularGradient(colors: [.clear, .clear], center: .center)
         }
     }
+
+    private var showsResolvedRim: Bool { feedback != .none && feedback != .inactive }
 
     var body: some View {
         ZStack {
             RightHalfHoopStroke(color: tint,
                                 size: size,
                                 lineWidth: size * 0.13)
-                .opacity(feedback == .none ? 1 : 0.18)
+                .opacity(feedback == .none ? 1 : (feedback == .inactive ? 0.42 : 0.18))
 
-            RightHalfHoopStroke(color: feedbackColor,
-                                size: size,
-                                lineWidth: size * 0.13)
-                .opacity(feedback == .none ? 0 : 1)
-                .scaleEffect(feedback == .none ? 0.975 : 1)
+            Circle()
+                .strokeBorder(feedbackGradient, lineWidth: size * 0.13)
+                .mask {
+                    Rectangle()
+                        .frame(width: size * 0.5)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                .opacity(showsResolvedRim ? 1 : 0)
+                .scaleEffect(showsResolvedRim ? 1 : 0.975)
 
             RightHalfHoopStroke(color: .white.opacity(0.78),
                                 size: size,
