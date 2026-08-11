@@ -326,30 +326,37 @@ struct FlyingPenguinPlayfield: View {
         .onChange(of: playsLevelCompletion) { _, value in if value { beginCompletion() } }
     }
 
+    /// The world this character flies across. Same flight, same cannon, same
+    /// rings — a different place to do it in.
+    private var scenery: SceneryTheme { SceneryThemes.theme(for: character.id) }
+
     private var polarBackdrop: some View {
         ZStack {
-            PolarSkyLayer(size: sceneSize, worldOffset: worldOffset)
-            PolarHorizonIce(size: sceneSize,
-                            waterline: waterline,
-                            worldOffset: worldOffset)
+            PolarSkyLayer(size: sceneSize, worldOffset: worldOffset, theme: scenery)
+            SceneryHorizonBand(size: sceneSize,
+                               waterline: waterline,
+                               worldOffset: worldOffset,
+                               theme: scenery)
             PolarWaterBackdrop(size: sceneSize,
                                waterline: waterline,
                                worldOffset: worldOffset,
-                               isPad: isPad)
+                               isPad: isPad,
+                               theme: scenery)
         }
         .clipped()
         .allowsHitTesting(false)
     }
 
-    /// Everything that floats between the sea's two halves. Drawn before the
+    /// Everything that floats between the water's two halves. Drawn before the
     /// rings and under the water foreground, so the wash sinks the lower half
-    /// of every block for free.
+    /// of every object for free.
     private var movingWorld: some View {
-        DriftingSeaIce(size: sceneSize,
-                       waterline: waterline,
-                       worldOffset: worldOffset,
-                       isPad: isPad,
-                       depth: .behind)
+        DriftingFloaters(size: sceneSize,
+                         waterline: waterline,
+                         worldOffset: worldOffset,
+                         isPad: isPad,
+                         depth: .behind,
+                         theme: scenery)
     }
 
     private var waterForeground: some View {
@@ -357,17 +364,19 @@ struct FlyingPenguinPlayfield: View {
             PolarWaterForeground(size: sceneSize,
                                  waterline: waterline,
                                  worldOffset: worldOffset,
-                                 isPad: isPad)
-            DriftingSeaIce(size: sceneSize,
-                           waterline: waterline,
-                           worldOffset: worldOffset,
-                           isPad: isPad,
-                           depth: .front,
-                           // A foreground floe directly below a ring stack
-                           // reads as a solid obstacle. Keep that gameplay
-                           // corridor visually open, including while an old
-                           // set is drifting out after an answer.
-                           exclusionXs: [hoopX] + retiringSets.map(\.x))
+                                 isPad: isPad,
+                                 theme: scenery)
+            DriftingFloaters(size: sceneSize,
+                             waterline: waterline,
+                             worldOffset: worldOffset,
+                             isPad: isPad,
+                             depth: .front,
+                             theme: scenery,
+                             // A foreground object directly below a ring stack
+                             // reads as a solid obstacle. Keep that gameplay
+                             // corridor visually open, including while an old
+                             // set is drifting out after an answer.
+                             exclusionXs: [hoopX] + retiringSets.map(\.x))
         }
     }
 
@@ -401,7 +410,7 @@ struct FlyingPenguinPlayfield: View {
     /// that floe stayed in the way for the whole entrance.
     private var cannonPlatform: some View {
         let height = sceneSize.height * 0.17
-        return CannonLaunchPad()
+        return CannonLaunchPad(theme: scenery)
             .frame(width: sceneSize.width * 0.25, height: height)
             .position(x: launchPlatformX,
                       y: waterline + height * (0.5 - PolarScene.padWaterline))

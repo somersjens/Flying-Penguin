@@ -2,11 +2,17 @@
 //  PolarScenery.swift
 //  Flying Penguin
 //
-//  Everything the penguin flies past: sky and clouds, the horizon, the drifting
-//  sea ice, the water itself, the launch pad the cannon stands on and the
-//  splashes the penguin throws. Every layer reads the playfield's single
-//  `worldOffset` and moves at its own parallax, so one conveyor drives the whole
-//  scene and nothing can drift out of step with the rings.
+//  Everything the character flies past: sky and clouds, the water itself, the
+//  launch pad the cannon stands on and the splashes it throws. Every layer reads
+//  the playfield's single `worldOffset` and moves at its own parallax, so one
+//  conveyor drives the whole scene and nothing can drift out of step with the
+//  rings.
+//
+//  The layers here are shared by all ten worlds and take their colours from a
+//  `SceneryTheme`; what actually differs per character lives in
+//  `SceneryTheme`, `SceneryHorizon`, `SceneryFloaters` and `SceneryAir`. The
+//  `PolarScene` palette below remains the penguin's own, and is what the menu
+//  backdrop is still painted with.
 //
 
 import SwiftUI
@@ -49,16 +55,13 @@ enum PolarScene {
         return CGFloat((raw - raw.rounded(.down)) * 2 - 1)
     }
 
-    // Shared palette, so the menu backdrop and the playfield stay one world.
-    static let skyTop = Color(red: 0.47, green: 0.77, blue: 0.98)
-    static let skyMid = Color(red: 0.74, green: 0.91, blue: 1.00)
-    static let skyLow = Color(red: 0.94, green: 0.985, blue: 1.00)
+    // The ice palette. Every other world takes its colours from its own
+    // `SceneryTheme`; these are what the sea ice itself is drawn in, and what
+    // the menu backdrop is tinted from.
     static let iceLight = Color(red: 0.90, green: 0.98, blue: 1.00)
     static let iceMid = Color(red: 0.62, green: 0.88, blue: 0.97)
     static let iceDeep = Color(red: 0.29, green: 0.70, blue: 0.90)
-    static let seaShallow = Color(red: 0.28, green: 0.83, blue: 0.95)
     static let seaMid = Color(red: 0.05, green: 0.50, blue: 0.80)
-    static let seaDeep = Color(red: 0.01, green: 0.20, blue: 0.55)
     /// Reading colour for copy that sits on the pale menu backdrop.
     static let ink = Color(red: 0.06, green: 0.24, blue: 0.46)
     /// Where the sea crosses `CannonLaunchPad`'s own frame.
@@ -67,10 +70,12 @@ enum PolarScene {
 
 // MARK: - Sky
 
-/// Sky gradient, low polar sun and two parallax bands of clouds.
+/// Sky gradient, the theme's own low sun and two parallax bands of clouds, plus
+/// whatever that world puts in the air between them.
 struct PolarSkyLayer: View {
     let size: CGSize
     let worldOffset: CGFloat
+    let theme: SceneryTheme
 
     /// Kept high in the frame and soft, so the answer rings that travel across
     /// the same band always stay the highest-contrast thing on screen.
@@ -79,18 +84,25 @@ struct PolarSkyLayer: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(colors: [PolarScene.skyTop, PolarScene.skyMid, PolarScene.skyLow],
+            LinearGradient(colors: [theme.skyTop, theme.skyMid, theme.skyLow],
                            startPoint: .top, endPoint: .bottom)
 
             Circle()
-                .fill(RadialGradient(colors: [.white,
-                                              Color(red: 1, green: 0.99, blue: 0.90).opacity(0.55),
-                                              Color.white.opacity(0)],
+                .fill(RadialGradient(colors: [theme.sun.core,
+                                              theme.sun.halo.opacity(0.55),
+                                              theme.sun.halo.opacity(0)],
                                      center: .center,
                                      startRadius: size.width * 0.012,
-                                     endRadius: size.width * 0.16))
-                .frame(width: size.width * 0.32, height: size.width * 0.32)
-                .position(x: size.width * 0.79, y: size.height * 0.19)
+                                     endRadius: size.width * theme.sun.scale * 0.5))
+                .frame(width: size.width * theme.sun.scale,
+                       height: size.width * theme.sun.scale)
+                .position(x: size.width * theme.sun.centre.x,
+                          y: size.height * theme.sun.centre.y)
+
+            SceneryAirLayer(size: size,
+                            worldOffset: worldOffset,
+                            style: theme.air,
+                            tint: theme.airTint)
 
             ForEach(farBand.indices, id: \.self) { index in
                 cloud(index: index,
@@ -119,7 +131,10 @@ struct PolarSkyLayer: View {
                        parallax: CGFloat,
                        width: CGFloat,
                        opacity: Double) -> some View {
-        PolarCloud(seed: index &+ count &* 13)
+        SceneryCloud(seed: index &+ count &* 13,
+                     style: theme.clouds.style,
+                     light: theme.clouds.light,
+                     shade: theme.clouds.shade)
             .frame(width: width, height: width * 0.45)
             .opacity(opacity)
             .position(x: PolarScene.scrollX(index: index,
@@ -132,212 +147,20 @@ struct PolarSkyLayer: View {
     }
 }
 
-/// A soft cartoon cloud: lobes unioned by a single non-zero fill, with a cooler
-/// copy peeking out below for volume. No outline — the sky has to stay quieter
-/// than the rings that cross it.
+/// The polar cloud, for the menu backdrop that is painted in the app's own ice
+/// palette rather than in a character's.
 struct PolarCloud: View {
     let seed: Int
 
     var body: some View {
-        GeometryReader { proxy in
-            ZStack {
-                CloudShape(seed: seed)
-                    .fill(Color(red: 0.71, green: 0.87, blue: 0.97))
-                    .offset(y: proxy.size.height * 0.09)
-                CloudShape(seed: seed)
-                    .fill(LinearGradient(colors: [.white, Color(red: 0.93, green: 0.98, blue: 1)],
-                                         startPoint: .top, endPoint: .bottom))
-            }
-        }
-    }
-}
-
-private struct CloudShape: Shape {
-    let seed: Int
-
-    private static let lobes: [(x: CGFloat, y: CGFloat, r: CGFloat)] = [
-        (0.30, 0.58, 0.175),
-        (0.50, 0.50, 0.225),
-        (0.71, 0.60, 0.180),
-        (0.845, 0.66, 0.115)
-    ]
-
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let w = rect.width
-        let h = rect.height
-        // The lobes carry the silhouette; the base only closes the flat bottom
-        // they all rest on.
-        path.addRoundedRect(in: CGRect(x: w * 0.16, y: h * 0.60,
-                                       width: w * 0.70, height: h * 0.33),
-                            cornerSize: CGSize(width: h * 0.30, height: h * 0.30))
-        for (index, lobe) in Self.lobes.enumerated() {
-            let wobble = PolarScene.jitter(seed &* 5 &+ index)
-            let radius = (lobe.r + wobble * 0.020) * w
-            let centre = CGPoint(x: lobe.x * w, y: (lobe.y + wobble * 0.04) * h)
-            path.addEllipse(in: CGRect(x: centre.x - radius,
-                                       y: centre.y - radius,
-                                       width: radius * 2,
-                                       height: radius * 2))
-        }
-        return path
-    }
-}
-
-// MARK: - Horizon
-
-/// The far shelf: pale ice ridges resting on the waterline. Deliberately low in
-/// contrast — the bottom answer ring travels straight through this band.
-struct PolarHorizonIce: View {
-    let size: CGSize
-    let waterline: CGFloat
-    let worldOffset: CGFloat
-
-    private let count = 4
-
-    var body: some View {
-        ForEach(0..<count, id: \.self) { index in
-            let width = size.width * (0.20 + PolarScene.jitter(index &* 11) * 0.05)
-            let height = size.height * (0.062 + PolarScene.jitter(index &* 5 &+ 1) * 0.016)
-            // Hazy rather than white. Distance is what separates this ridge
-            // from the bright blocks drifting in front of it; drawn in the same
-            // white the two bands merged into one shelf.
-            DriftIceShape(seed: index &* 3 &+ 1, topFraction: 0.94)
-                .fill(LinearGradient(colors: [Color(red: 0.87, green: 0.95, blue: 1.0),
-                                              PolarScene.iceMid.opacity(0.55)],
-                                     startPoint: .top, endPoint: .bottom))
-                .frame(width: width, height: height)
-                .position(x: PolarScene.scrollX(index: index,
-                                                count: count,
-                                                width: size.width,
-                                                worldOffset: worldOffset,
-                                                parallax: 0.10,
-                                                margin: width * 0.7),
-                          y: waterline - height * 0.47)
-                .opacity(0.62)
-        }
+        SceneryCloud(seed: seed,
+                     style: SceneryThemes.polar.clouds.style,
+                     light: SceneryThemes.polar.clouds.light,
+                     shade: SceneryThemes.polar.clouds.shade)
     }
 }
 
 // MARK: - Sea ice
-
-/// Which side of the sea's own surface a band of ice is drawn on.
-enum SeaIceDepth {
-    /// Behind the water foreground: these blocks sit on the crest, and the
-    /// wash sinks their lower half for free.
-    case behind
-    /// In front of it, and lower in the strip. The visible water is barely a
-    /// tenth of the screen, so a block drawn under the wash can only ever sit
-    /// on the same line as the horizon — putting the nearest ones over it is
-    /// what turns one flat shelf into ice actually floating in the sea.
-    case front
-}
-
-/// Ice blocks drifting on the sea, at three distances. Everything rides the
-/// shared conveyor; the further a band is, the slower it goes.
-struct DriftingSeaIce: View {
-    let size: CGSize
-    let waterline: CGFloat
-    let worldOffset: CGFloat
-    let isPad: Bool
-    let depth: SeaIceDepth
-    var exclusionXs: [CGFloat] = []
-
-    private let farCount = 5
-    private let midCount = 4
-    // Kept low on purpose: this band is drawn over the water and therefore over
-    // a diving penguin too. Two blocks read as depth; more of them start
-    // covering the moment the player most needs to see.
-    private let nearCount = 2
-
-    var body: some View {
-        ZStack {
-            switch depth {
-            case .behind:
-                ForEach(0..<farCount, id: \.self) { index in
-                    floe(seed: index &* 5,
-                         width: size.width * (0.070 + PolarScene.jitter(index &* 17) * 0.016),
-                         height: size.height * (0.055 + PolarScene.jitter(index &* 9 &+ 3) * 0.012),
-                         index: index,
-                         count: farCount,
-                         parallax: 0.45,
-                         sink: 0,
-                         foam: false,
-                         opacity: 0.88)
-                }
-                ForEach(0..<midCount, id: \.self) { index in
-                    floe(seed: index &* 7 &+ 2,
-                         width: size.width * (0.105 + PolarScene.jitter(index &* 23 &+ 4) * 0.028),
-                         height: size.height * (0.082 + PolarScene.jitter(index &* 13 &+ 7) * 0.020),
-                         index: index,
-                         count: midCount,
-                         parallax: 0.78,
-                         sink: 0,
-                         foam: false,
-                         opacity: 1)
-                }
-            case .front:
-                ForEach(0..<nearCount, id: \.self) { index in
-                    floe(seed: index &* 11 &+ 5,
-                         width: size.width * (0.125 + PolarScene.jitter(index &* 19 &+ 6) * 0.024),
-                         height: size.height * (0.082 + PolarScene.jitter(index &* 29 &+ 2) * 0.015),
-                         index: index,
-                         count: nearCount,
-                         parallax: 1.0,
-                         sink: size.height * (0.020 + CGFloat(index % 3) * 0.011),
-                         foam: true,
-                         opacity: 1)
-                }
-            }
-        }
-        .allowsHitTesting(false)
-    }
-
-    private func floe(seed: Int,
-                      width: CGFloat,
-                      height: CGFloat,
-                      index: Int,
-                      count: Int,
-                      parallax: CGFloat,
-                      sink: CGFloat,
-                      foam: Bool,
-                      opacity: Double) -> some View {
-        let x = PolarScene.scrollX(index: index,
-                                   count: count,
-                                   width: size.width,
-                                   worldOffset: worldOffset,
-                                   parallax: parallax,
-                                   margin: width * 0.8)
-        return Group {
-            // Foreground ice is selected by placement, not faded at runtime.
-            // Since it moves at the same pace as the rings, a rejected slot
-            // stays rejected for that ring's complete journey across screen.
-            if isClearOfHoops(x: x, floeWidth: width) {
-                SeaIceBlock(seed: seed, isPad: isPad, showsFoam: foam)
-                    .frame(width: width, height: height)
-                    .opacity(opacity)
-                    // Lines the block's own waterline up with the sea's — plus
-                    // however far in front of it this band floats.
-                    .position(x: x,
-                              y: waterline + sink
-                                  + height * (0.5 - SeaIceBlock.topFraction))
-            }
-        }
-    }
-
-    /// Never create a foreground block in a hoop corridor. Retiring hoop sets
-    /// remain exclusions until they are offscreen, so a skipped block cannot
-    /// suddenly appear as soon as the player answers.
-    private func isClearOfHoops(x: CGFloat, floeWidth: CGFloat) -> Bool {
-        switch depth {
-        case .behind: return true
-        case .front: break
-        }
-        guard !exclusionXs.isEmpty else { return true }
-        let clearRadius = floeWidth * 0.70 + size.width * 0.10
-        return exclusionXs.allSatisfy { abs(x - $0) > clearRadius }
-    }
-}
 
 /// One floating block: a blue underside below the surface, a faceted white slab
 /// above it and a snow cap on top.
@@ -463,28 +286,29 @@ private struct DriftIceFacets: Shape {
 
 // MARK: - Water
 
-/// The sea behind everything that floats on it.
+/// The water behind everything that floats on it.
 struct PolarWaterBackdrop: View {
     let size: CGSize
     let waterline: CGFloat
     let worldOffset: CGFloat
     let isPad: Bool
+    let theme: SceneryTheme
 
     var body: some View {
         let amplitude = WaterSurface.amplitude(isPad: isPad)
         let depth = WaterSurface.depth(size: size, waterline: waterline, isPad: isPad)
         ZStack(alignment: .top) {
             WaterBodyShape(phase: worldOffset * 0.55, amplitude: amplitude)
-                .fill(LinearGradient(colors: [PolarScene.seaShallow,
-                                              PolarScene.seaMid,
-                                              PolarScene.seaDeep],
+                .fill(LinearGradient(colors: [theme.water.shallow,
+                                              theme.water.mid,
+                                              theme.water.deep],
                                      startPoint: .top, endPoint: .bottom))
 
             // Long, slow swells far out, then quicker chop closer in.
             ForEach(0..<4, id: \.self) { index in
                 WaveEdge(phase: worldOffset * (0.30 + CGFloat(index) * 0.12),
                          wavelength: 52 + CGFloat(index) * 9)
-                    .stroke(Color.white.opacity(0.26 - Double(index) * 0.042),
+                    .stroke(theme.water.foam.opacity(0.26 - Double(index) * 0.042),
                             style: StrokeStyle(lineWidth: isPad ? 4 : 2.5, lineCap: .round))
                     .frame(height: 11)
                     .offset(y: amplitude + CGFloat(index) * (isPad ? 17 : 13))
@@ -496,34 +320,35 @@ struct PolarWaterBackdrop: View {
     }
 }
 
-/// The translucent near half of the sea. Drawn over the penguin and the ice, so
-/// anything that dips below the line is visibly under water.
+/// The translucent near half of the water. Drawn over the character and the
+/// floating objects, so anything that dips below the line is visibly submerged.
 struct PolarWaterForeground: View {
     let size: CGSize
     let waterline: CGFloat
     let worldOffset: CGFloat
     let isPad: Bool
+    let theme: SceneryTheme
 
     var body: some View {
         let amplitude = WaterSurface.amplitude(isPad: isPad)
         let depth = WaterSurface.depth(size: size, waterline: waterline, isPad: isPad)
         ZStack(alignment: .top) {
             WaterBodyShape(phase: worldOffset * 0.55, amplitude: amplitude)
-                .fill(LinearGradient(colors: [PolarScene.seaShallow.opacity(0.46),
-                                              Color(red: 0.02, green: 0.38, blue: 0.70).opacity(0.80)],
+                .fill(LinearGradient(colors: [theme.water.shallow.opacity(0.46),
+                                              theme.water.mid.opacity(0.80)],
                                      startPoint: .top, endPoint: .bottom))
 
             // The crest itself: one bright, slightly glowing line the eye can
             // lock onto, with a paler echo just under it.
             WaveEdge(phase: worldOffset * 0.55, wavelength: 58)
-                .stroke(.white.opacity(0.95),
+                .stroke(theme.water.crest.opacity(0.95),
                         style: StrokeStyle(lineWidth: isPad ? 7 : 5, lineCap: .round))
                 .frame(height: amplitude * 2)
                 .offset(y: 0)
-                .shadow(color: .cyan.opacity(0.55), radius: 4, y: 2)
+                .shadow(color: theme.water.glow.opacity(0.55), radius: 4, y: 2)
 
             WaveEdge(phase: worldOffset * 0.55 + 14, wavelength: 58)
-                .stroke(Color(red: 0.45, green: 0.93, blue: 1).opacity(0.70),
+                .stroke(theme.water.glow.opacity(0.70),
                         style: StrokeStyle(lineWidth: isPad ? 3.5 : 2.5, lineCap: .round))
                 .frame(height: 13)
                 .offset(y: amplitude + (isPad ? 10 : 7))
@@ -531,7 +356,8 @@ struct PolarWaterForeground: View {
             SurfaceSparkles(width: size.width,
                             worldOffset: worldOffset,
                             amplitude: amplitude,
-                            isPad: isPad)
+                            isPad: isPad,
+                            foam: theme.water.foam)
         }
         .frame(width: size.width, height: depth)
         .position(x: size.width * 0.5,
@@ -547,6 +373,7 @@ private struct SurfaceSparkles: View {
     let worldOffset: CGFloat
     let amplitude: CGFloat
     let isPad: Bool
+    let foam: Color
 
     private let count = 12
 
@@ -554,7 +381,7 @@ private struct SurfaceSparkles: View {
         ForEach(0..<count, id: \.self) { index in
             let jitter = PolarScene.jitter(index &* 29)
             Capsule()
-                .fill(.white.opacity(0.42 + Double(abs(jitter)) * 0.28))
+                .fill(foam.opacity(0.42 + Double(abs(jitter)) * 0.28))
                 .frame(width: width * (0.016 + abs(jitter) * 0.012),
                        height: isPad ? 2.5 : 1.8)
                 .position(x: PolarScene.scrollX(index: index,
@@ -698,73 +525,145 @@ struct WaterSplash: View {
 
 // MARK: - Launch pad
 
-/// The ice the cannon is rolled onto. A built launch site rather than a bare
-/// floe: a berg with a flat snow deck standing clear of the water, a hazard
-/// stripe along its front edge in the cannon's own livery, and an ice face
-/// dropping into the sea.
+/// The island the cannon is rolled onto. A built launch site rather than a bare
+/// floe: a mass with a flat deck standing clear of the water, a hazard stripe
+/// along its front edge in the cannon's own livery, and a face dropping into the
+/// water. The silhouette is the same in every world — the cannon has to look
+/// like the same cannon on the same launch site — and only the material changes:
+/// ice, mossy stone, sun-baked rock, decking, poured concrete.
 ///
 /// The frame's own waterline is `PolarScene.padWaterline`; everything above it
-/// is the deck the cannon stands on and everything below is the ice cliff, so
-/// the caller only has to line those two fractions up with the sea.
+/// is the deck the cannon stands on and everything below is the cliff, so the
+/// caller only has to line those two fractions up with the water.
 struct CannonLaunchPad: View {
+    let theme: SceneryTheme
+
     var body: some View {
         GeometryReader { proxy in
             let w = proxy.size.width
             let h = proxy.size.height
             ZStack {
                 LaunchPadUnderside()
-                    .fill(LinearGradient(colors: [PolarScene.iceDeep.opacity(0.92),
-                                                  PolarScene.seaMid.opacity(0.62)],
+                    .fill(LinearGradient(colors: [theme.pad.deep.opacity(0.92),
+                                                  theme.water.mid.opacity(0.62)],
                                          startPoint: .top, endPoint: .bottom))
 
-                // The gradient's stops are pinned to the waterline, so the ice
-                // goes blue exactly where the sea starts. A single top-to-bottom
-                // wash left the whole thing white, which is what made it read
-                // as the hull of a boat rather than as ice.
+                // The gradient's stops are pinned to the waterline, so the rock
+                // darkens exactly where the water starts. A single top-to-bottom
+                // wash left the whole thing pale, which is what made it read as
+                // the hull of a boat rather than as land.
                 LaunchPadDeck()
                     .fill(LinearGradient(stops: [
-                        .init(color: .white, location: 0.10),
-                        .init(color: PolarScene.iceLight, location: 0.34),
-                        .init(color: PolarScene.iceMid, location: PolarScene.padWaterline),
-                        .init(color: PolarScene.iceDeep.opacity(0.95), location: 0.56),
-                        .init(color: PolarScene.seaMid.opacity(0.85), location: 1)
+                        .init(color: theme.pad.light, location: 0.10),
+                        .init(color: theme.pad.light, location: 0.34),
+                        .init(color: theme.pad.mid, location: PolarScene.padWaterline),
+                        .init(color: theme.pad.deep.opacity(0.95), location: 0.56),
+                        .init(color: theme.water.mid.opacity(0.85), location: 1)
                     ], startPoint: .top, endPoint: .bottom))
-                    .overlay(LaunchPadDeck().stroke(.white, lineWidth: max(2, w * 0.007)))
+                    .overlay(LaunchPadDeck().stroke(theme.pad.light,
+                                                    lineWidth: max(2, w * 0.007)))
 
-                // A shaded plane down the right of the berg. Ice reads as ice
-                // because it has facets catching the light differently.
+                // A shaded plane down the right of the berg. The material reads
+                // as solid because it has facets catching the light differently.
                 LaunchPadShadedFace()
-                    .fill(PolarScene.iceMid.opacity(0.45))
+                    .fill(theme.pad.mid.opacity(0.45))
 
                 LaunchPadFacets()
-                    .stroke(PolarScene.iceDeep.opacity(0.32),
+                    .stroke(theme.pad.deep.opacity(0.32),
                             style: StrokeStyle(lineWidth: max(1.5, w * 0.005),
                                                lineCap: .round,
                                                lineJoin: .round))
+
+                LaunchPadSurface(style: theme.pad.style,
+                                 cap: theme.pad.cap,
+                                 width: w,
+                                 height: h)
 
                 // The short launch strip the cannon's wheels stand on, in its
                 // own livery. A stripe running the full width read as the hull
                 // of a boat instead.
                 LaunchPadStripes(width: w, height: h)
 
-                // Where the sea meets the ice.
+                // Where the water meets the launch site.
                 Capsule()
-                    .fill(.white.opacity(0.88))
+                    .fill(theme.water.foam.opacity(0.88))
                     .frame(width: w * 0.80, height: max(3, h * 0.05))
                     .position(x: w * 0.5, y: h * PolarScene.padWaterline)
 
-                // Loose chunks calving off the near edge.
+                // Loose pieces floating off the near edge, in whatever this
+                // world's water carries.
                 ForEach(0..<2, id: \.self) { index in
                     let side: CGFloat = index == 0 ? -1 : 1
-                    SeaIceBlock(seed: index &* 13 &+ 3, isPad: false, showsFoam: true)
+                    SceneryFloater(style: theme.floater,
+                                   water: theme.water,
+                                   seed: index &* 13 &+ 3,
+                                   isPad: false,
+                                   showsFoam: true)
                         .frame(width: w * 0.19, height: h * 0.46)
                         .position(x: w * (0.5 + side * 0.58),
                                   y: h * (PolarScene.padWaterline
-                                          + 0.46 * (0.5 - SeaIceBlock.topFraction)))
+                                          + 0.46 * (0.5 - theme.floater.surfaceFraction)))
                 }
             }
         }
         .allowsHitTesting(false)
+    }
+}
+
+/// What covers the deck. A handful of marks is enough: the eye only needs to be
+/// told whether it is looking at snow, moss, sand, planking or tile.
+private struct LaunchPadSurface: View {
+    let style: SceneryPadStyle
+    let cap: Color
+    let width: CGFloat
+    let height: CGFloat
+
+    var body: some View {
+        let w = width
+        let h = height
+        ZStack {
+            switch style {
+            case .snow:
+                // The ice pad is already white; a cap layer would only flatten it.
+                EmptyView()
+            case .moss, .blossom:
+                ForEach(0..<4, id: \.self) { index in
+                    let wobble = PolarScene.jitter(index &* 83)
+                    Ellipse()
+                        .fill(cap.opacity(0.85))
+                        .frame(width: w * (0.13 + abs(wobble) * 0.06), height: h * 0.055)
+                        .position(x: w * (0.26 + CGFloat(index) * 0.17 + wobble * 0.02),
+                                  y: h * (0.19 + CGFloat(index % 2) * 0.03))
+                }
+            case .sand, .rock:
+                ForEach(0..<5, id: \.self) { index in
+                    let wobble = PolarScene.jitter(index &* 89 &+ 4)
+                    Circle()
+                        .fill(cap.opacity(0.70))
+                        .frame(width: w * (0.020 + abs(wobble) * 0.014))
+                        .position(x: w * (0.24 + CGFloat(index) * 0.14 + wobble * 0.02),
+                                  y: h * (0.22 + CGFloat(index % 3) * 0.035))
+                }
+            case .plank:
+                ForEach(0..<3, id: \.self) { index in
+                    Capsule()
+                        .fill(cap.opacity(0.55))
+                        .frame(width: w * 0.62, height: max(1.5, h * 0.012))
+                        .position(x: w * 0.52, y: h * (0.19 + CGFloat(index) * 0.045))
+                }
+            case .tile:
+                ForEach(0..<5, id: \.self) { index in
+                    Capsule()
+                        .fill(cap.opacity(0.75))
+                        .frame(width: max(1.2, w * 0.006), height: h * 0.10)
+                        .position(x: w * (0.32 + CGFloat(index) * 0.10), y: h * 0.22)
+                }
+                Capsule()
+                    .fill(cap.opacity(0.75))
+                    .frame(width: w * 0.52, height: max(1.2, h * 0.010))
+                    .position(x: w * 0.52, y: h * 0.22)
+            }
+        }
     }
 }
 
