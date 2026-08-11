@@ -50,7 +50,7 @@ enum LevelIntro {
         // order button — and picking the right card out of the ones on offer.
         let levelLine = modeLine(for: board)
 
-        let cardsLine = L(key: "levelIntro.cardsBullet.fly %lld", count: board.maximum)
+        let cardsLine = L(key: "levelIntro.cardsBullet.hoop %lld", count: board.maximum)
 
         return (title, [topicLine, levelLine, cardsLine])
     }

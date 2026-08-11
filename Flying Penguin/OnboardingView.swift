@@ -73,7 +73,7 @@ struct OnboardingView: View {
                 .scrollBounceBehavior(.basedOnSize)
             }
         }
-        .foregroundStyle(Color(red: 0.43, green: 0.20, blue: 0.03))
+        .foregroundStyle(PolarScene.ink)
         .overlay(alignment: .topLeading) {
             // Steps 2 and 3 can step back to correct a wrong choice. Mirrors
             // the language flag: same glass style, same top inset, left corner.
@@ -85,7 +85,7 @@ struct OnboardingView: View {
             }
         }
         .overlay(alignment: .topTrailing) {
-            LanguagePicker(tint: Color(red: 0.43, green: 0.20, blue: 0.03).opacity(0.6),
+            LanguagePicker(tint: PolarScene.ink.opacity(0.6),
                            scale: isPad ? 1.25 : 1)
                 .padding(.top, isPad ? 20 : 8)
                 .padding(.trailing, isPad ? 28 : 16)
@@ -98,7 +98,7 @@ struct OnboardingView: View {
         } label: {
             Image(systemName: "chevron.backward")
                 .font(.system(size: isPad ? 26 : 22, weight: .semibold))
-                .foregroundStyle(Color(red: 0.43, green: 0.20, blue: 0.03).opacity(0.6))
+                .foregroundStyle(PolarScene.ink.opacity(0.6))
                 .padding(.horizontal, isPad ? 16 : 13)
                 .padding(.vertical, isPad ? 11 : 8)
                 .liquidGlassCapsule()
@@ -107,7 +107,7 @@ struct OnboardingView: View {
     }
 
     private var onboardingBackground: some View {
-        MenuMeadowBackground(accent: Color.orange)
+        MenuPolarBackground(accent: Color.orange)
     }
 
     private var nameStep: some View {
@@ -463,7 +463,7 @@ private struct OnboardingChoiceLabel: View {
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .stroke(Color.orange.opacity(isSelected ? 0.9 : 0), lineWidth: 2.5)
         )
-        .foregroundStyle(Color(red: 0.43, green: 0.20, blue: 0.03))
+        .foregroundStyle(PolarScene.ink)
         .animation(.easeInOut(duration: 0.18), value: isSelected)
     }
 }

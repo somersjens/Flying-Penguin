@@ -382,8 +382,8 @@ func LTranslated(key: String) -> String? {
     return value == key ? nil : value
 }
 
-/// Resolve a runtime key whose text varies with a count — "1 vlieg" against
-/// "3 vliegen". The catalog holds one plural rule per language, so the count
+/// Resolve a runtime key whose text varies with a count — "1 hoop" against
+/// "3 hoops". The catalog holds one plural rule per language, so the count
 /// and the noun agree wherever the app is read; nothing here has to know which
 /// forms a language distinguishes.
 func L(key: String, count: Int) -> String {

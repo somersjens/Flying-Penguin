@@ -145,7 +145,7 @@ struct HomeView: View {
         let _ = progressSync.revision
 
         ZStack {
-            MenuMeadowBackground(accent: character.color)
+            MenuPolarBackground(accent: character.color)
 
             GeometryReader { proxy in
                 ScrollView {

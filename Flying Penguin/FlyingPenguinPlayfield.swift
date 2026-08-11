@@ -60,9 +60,24 @@ struct FlyingPenguinPlayfield: View {
     @State private var launchGlideSpeed: CGFloat = 0
     @State private var launchSpeedHandoffActive = false
     @State private var startMarkerActive = false
-    @State private var startMarkerWorldOrigin: CGFloat = 0
-    @State private var entrySplashShown = false
-    @State private var exitSplashShown = false
+    /// The world position the cannon was fired from. Everything standing on the
+    /// water during the entrance — platform and start marker — is placed
+    /// relative to it, so the launch scenery travels on the same conveyor as
+    /// the rings instead of on a camera animation of its own.
+    @State private var launchWorldOrigin: CGFloat = 0
+    @State private var launchPlatformActive = false
+    /// Splashes are fired as events rather than toggled as flags. A boolean
+    /// that has to be cleared before it can be set again is exactly what made
+    /// a dive occasionally arrive without one; an appended event cannot be
+    /// swallowed by whatever the dive state does next.
+    @State private var splashes: [SplashEvent] = []
+    /// Latches at the surface so one crossing produces one splash, whether the
+    /// penguin swam down to it or was placed under it by a resolved round.
+    @State private var surfaceSubmerged = false
+    @State private var previousPenguinY: CGFloat = 0
+    /// The height the current dive started from, which is what the entry
+    /// splash is sized by.
+    @State private var diveStartY: CGFloat = 0
     @State private var flightClock: Double = 0
 
     private var penguinSize: CGFloat { sceneSize.height * (isPad ? 0.27 : 0.235) }
@@ -92,10 +107,11 @@ struct FlyingPenguinPlayfield: View {
 
     private var questionY: CGFloat { sceneSize.height * 0.090 }
     private var ringSpawnX: CGFloat {
-        // Let the leading rim enter on the very first gameplay frame. The set
-        // is still hidden throughout the cannon sequence, but there is no
-        // empty beat once control is handed to the player.
-        sceneSize.width + hoopSize * 0.30
+        // Fully beyond the trailing edge, so a set always slides into frame
+        // rather than appearing with its rim already inside it. The first set
+        // is put on the conveyor at the moment of the shot and covers most of
+        // this distance during the launch itself.
+        sceneSize.width + hoopSize * 0.55
     }
     private var ringSetSpacing: CGFloat {
         sceneSize.width - normalPenguinX + hoopSize * 0.20
@@ -116,7 +132,9 @@ struct FlyingPenguinPlayfield: View {
 
                 movingWorld
 
-                if entranceStage >= 5 && !completionActive {
+                // The deadline buoy belongs to a set. Before the start marker
+                // hands the first one over there is nothing to be early for.
+                if entranceStage >= 3 && !completionActive && !shownOptions.isEmpty {
                     TurboTimingBuoy(isAvailable: timingMarkerX(for: hoopX) > penguinX)
                         .frame(width: penguinSize * 0.25, height: penguinSize * 0.31)
                         .position(x: timingMarkerX(for: hoopX),
@@ -129,11 +147,11 @@ struct FlyingPenguinPlayfield: View {
                     }
                 }
 
-                if entranceStage < 5 && playsFishEntrance {
+                if launchPlatformActive {
                     cannonLaunch
                 }
 
-                if startMarkerActive && playsFishEntrance {
+                if startMarkerActive {
                     FloatingStartMarker(size: penguinSize * 0.58,
                                         reduceMotion: reduceMotion)
                         .position(x: startMarkerX,
@@ -155,7 +173,7 @@ struct FlyingPenguinPlayfield: View {
                     }
                 }
 
-                if !previewOptions.isEmpty && entranceStage >= 5 && !completionActive {
+                if !previewOptions.isEmpty && entranceStage >= 3 && !completionActive {
                     MovingQuestionBadge(prompt: previewPrompt,
                                         character: character,
                                         isPad: isPad)
@@ -169,7 +187,7 @@ struct FlyingPenguinPlayfield: View {
                     }
                 }
 
-                if !shownOptions.isEmpty && entranceStage >= 5 && !completionActive {
+                if !shownOptions.isEmpty && entranceStage >= 3 && !completionActive {
                     MovingQuestionBadge(prompt: shownPrompt,
                                         character: character,
                                         isPad: isPad)
@@ -201,7 +219,12 @@ struct FlyingPenguinPlayfield: View {
                         penguinSize: penguinSize,
                         reduceMotion: reduceMotion
                     ))
+                    // The reveal belongs to the muzzle, not to the flight. It
+                    // used to inherit the launch curve's own 0.72s, which left
+                    // a half-transparent penguin hanging over the whole arc.
                     .opacity(entranceStage < 3 ? 0 : 1)
+                    .animation(.easeOut(duration: reduceMotion ? 0.03 : 0.16),
+                               value: entranceStage >= 3)
                     .position(x: completionActive ? completionStart.x : displayedPenguinX,
                               y: completionActive ? completionStart.y : displayedPenguinY)
                     .shadow(color: .black.opacity(0.18), radius: 6, y: 4)
@@ -212,23 +235,23 @@ struct FlyingPenguinPlayfield: View {
                 // the character visibly pass through the opening.
                 hoopForegrounds
 
-                if entranceStage < 5 && playsFishEntrance {
+                if launchPlatformActive {
                     cannonForeground
                 }
 
                 waterForeground
 
-                if entrySplashShown && (divePhase == 1 || divePhase == 2) {
-                    WaterSplash(direction: .entering, reduceMotion: reduceMotion)
-                        .frame(width: penguinSize * 1.48, height: penguinSize * 0.82)
-                        .position(x: penguinX, y: waterline)
-                        .allowsHitTesting(false)
+                if launchPlatformActive {
+                    cannonPlatform
                 }
 
-                if exitSplashShown {
-                    WaterSplash(direction: .exiting, reduceMotion: reduceMotion)
-                        .frame(width: penguinSize * 1.22, height: penguinSize * 0.70)
-                        .position(x: penguinX, y: waterline)
+                ForEach(splashes) { splash in
+                    WaterSplash(direction: splash.direction,
+                                strength: splash.strength,
+                                reduceMotion: reduceMotion)
+                        .frame(width: penguinSize * (1.15 + splash.strength * 0.80),
+                               height: penguinSize * (0.78 + splash.strength * 0.62))
+                        .position(x: splash.x, y: waterline)
                         .allowsHitTesting(false)
                 }
 
@@ -264,82 +287,47 @@ struct FlyingPenguinPlayfield: View {
 
     private var polarBackdrop: some View {
         ZStack {
-            LinearGradient(colors: [Color(red: 0.68, green: 0.88, blue: 1),
-                                    Color(red: 0.91, green: 0.97, blue: 1)],
-                           startPoint: .top, endPoint: .bottom)
-            Circle().fill(.white.opacity(0.55)).blur(radius: 24)
-                .frame(width: sceneSize.width * 0.28)
-                .position(x: sceneSize.width * 0.78, y: sceneSize.height * 0.22)
-            ForEach(0..<6, id: \.self) { index in
-                Capsule().fill(.white.opacity(0.28))
-                    .frame(width: sceneSize.width * 0.18, height: isPad ? 8 : 5)
-                    .position(x: scrollingX(index: index),
-                              y: sceneSize.height * (0.18 + CGFloat(index % 3) * 0.16))
-            }
-            waterBackdrop
+            PolarSkyLayer(size: sceneSize, worldOffset: worldOffset)
+            PolarHorizonIce(size: sceneSize,
+                            waterline: waterline,
+                            worldOffset: worldOffset)
+            PolarWaterBackdrop(size: sceneSize,
+                               waterline: waterline,
+                               worldOffset: worldOffset,
+                               isPad: isPad)
         }
         .clipped()
         .allowsHitTesting(false)
     }
 
+    /// Everything that floats between the sea's two halves. Drawn before the
+    /// rings and under the water foreground, so the wash sinks the lower half
+    /// of every block for free.
     private var movingWorld: some View {
-        ForEach(0..<5, id: \.self) { index in
-            Path { path in
-                path.move(to: CGPoint(x: 0, y: 9))
-                path.addLine(to: CGPoint(x: 22, y: 0))
-                path.addLine(to: CGPoint(x: 46, y: 9))
-                path.addLine(to: CGPoint(x: 68, y: 2))
-                path.addLine(to: CGPoint(x: 94, y: 10))
-            }
-            .stroke(Color.white.opacity(0.55), lineWidth: 3)
-            .frame(width: 94, height: 12)
-            .position(x: scrollingX(index: index), y: waterline + 28 + CGFloat(index % 2) * 25)
-        }
-    }
-
-    private var waterBackdrop: some View {
-        let depth = max(0, sceneSize.height - waterline + 12)
-        return ZStack {
-            WaterBodyShape()
-                .fill(LinearGradient(colors: [Color(red: 0.26, green: 0.82, blue: 0.94),
-                                              Color(red: 0.05, green: 0.47, blue: 0.78),
-                                              Color(red: 0.02, green: 0.22, blue: 0.57)],
-                                     startPoint: .top, endPoint: .bottom))
-            ForEach(0..<4, id: \.self) { index in
-                WaveEdge()
-                    .stroke(Color.white.opacity(0.28 - Double(index) * 0.045),
-                            style: StrokeStyle(lineWidth: isPad ? 4 : 2.5, lineCap: .round))
-                    .frame(height: 11)
-                    .offset(y: 10 + CGFloat(index) * 13)
-            }
-        }
-        .frame(width: sceneSize.width, height: depth)
-        .position(x: sceneSize.width * 0.5, y: waterline + depth * 0.5 - 9)
+        DriftingSeaIce(size: sceneSize,
+                       waterline: waterline,
+                       worldOffset: worldOffset,
+                       isPad: isPad,
+                       depth: .behind)
     }
 
     private var waterForeground: some View {
-        let depth = max(0, sceneSize.height - waterline + 14)
-        return ZStack(alignment: .top) {
-            WaterBodyShape()
-                .fill(LinearGradient(colors: [Color.cyan.opacity(0.42),
-                                              Color(red: 0.02, green: 0.38, blue: 0.70).opacity(0.78)],
-                                     startPoint: .top, endPoint: .bottom))
-            WaveEdge()
-                .stroke(.white.opacity(0.94),
-                        style: StrokeStyle(lineWidth: isPad ? 7 : 5, lineCap: .round))
-                .frame(height: 17)
-                .offset(y: 1)
-                .shadow(color: .cyan.opacity(0.55), radius: 4, y: 2)
-            WaveEdge()
-                .stroke(Color(red: 0.39, green: 0.91, blue: 1).opacity(0.72),
-                        style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
-                .frame(height: 13)
-                .offset(y: 10)
+        ZStack {
+            PolarWaterForeground(size: sceneSize,
+                                 waterline: waterline,
+                                 worldOffset: worldOffset,
+                                 isPad: isPad)
+            DriftingSeaIce(size: sceneSize,
+                           waterline: waterline,
+                           worldOffset: worldOffset,
+                           isPad: isPad,
+                           depth: .front)
         }
-        .frame(width: sceneSize.width, height: depth)
-        .position(x: sceneSize.width * 0.5, y: waterline + depth * 0.5 - 8)
-        .allowsHitTesting(false)
     }
+
+    /// The cannon stands on the pad's deck, so both are placed from the same
+    /// number: raise or lower one and the other follows.
+    private var cannonCentreY: CGFloat { sceneSize.height * 0.735 }
 
     private var cannonLaunch: some View {
         CannonLaunchScene(stage: entranceStage,
@@ -347,8 +335,7 @@ struct FlyingPenguinPlayfield: View {
                           layer: .base)
             .frame(width: sceneSize.width * 0.269,
                    height: sceneSize.width * 0.179)
-            .position(x: sceneSize.width * 0.145 + launchCameraOffset,
-                      y: sceneSize.height * 0.79)
+            .position(x: launchPlatformX, y: cannonCentreY)
             .allowsHitTesting(false)
     }
 
@@ -358,23 +345,36 @@ struct FlyingPenguinPlayfield: View {
                           layer: .barrelForeground)
             .frame(width: sceneSize.width * 0.269,
                    height: sceneSize.width * 0.179)
-            .position(x: sceneSize.width * 0.145 + launchCameraOffset,
-                      y: sceneSize.height * 0.79)
+            .position(x: launchPlatformX, y: cannonCentreY)
             .allowsHitTesting(false)
     }
 
-    private var launchCameraOffset: CGFloat {
-        switch entranceStage {
-        case 0, 1, 2: return 0
-        default: return -sceneSize.width * 0.46
-        }
+    /// Drawn after the sea, not with the cannon. The launch site is the nearest
+    /// thing in the world; behind the water it was hidden by whichever floe
+    /// happened to be drifting past — and since both travel at the same speed,
+    /// that floe stayed in the way for the whole entrance.
+    private var cannonPlatform: some View {
+        let height = sceneSize.height * 0.17
+        return CannonLaunchPad()
+            .frame(width: sceneSize.width * 0.25, height: height)
+            .position(x: launchPlatformX,
+                      y: waterline + height * (0.5 - PolarScene.padWaterline))
+            .allowsHitTesting(false)
+    }
+
+    /// How far the launch site has travelled since the shot. It is pure world
+    /// movement: the platform stands still while the fuse burns, leaves frame at
+    /// the muzzle speed, and keeps drifting at exactly the speed of the water
+    /// and the rings once the player has control. No stage ever moves it by
+    /// itself, so the hand-over cannot produce a jump or a second pace.
+    private var launchCameraOffset: CGFloat { worldOffset - launchWorldOrigin }
+
+    private var launchPlatformX: CGFloat {
+        sceneSize.width * 0.145 + launchCameraOffset
     }
 
     private var startMarkerX: CGFloat {
-        let gameplayDrift = entranceStage >= 5
-            ? worldOffset - startMarkerWorldOrigin
-            : 0
-        return sceneSize.width * 0.58 + launchCameraOffset + gameplayDrift
+        sceneSize.width * 0.58 + launchCameraOffset
     }
 
     private var flightGesture: some Gesture {
@@ -393,19 +393,10 @@ struct FlyingPenguinPlayfield: View {
                 // jump to the finger.
                 let requested = (dragStartY ?? penguinY) + value.translation.height
                 if requested >= waterline {
-                    if divePhase != 1 { entrySplashShown = false }
-                    exitSplashShown = false
-                    diveArmed = true
-                    if divePhase != 2 { divePhase = 1 }
-                    targetPenguinY = diveY
+                    armDive()
                 } else {
                     diveArmed = false
                     if canSurface {
-                        // Enter the ascent once; repeated drag events only
-                        // adjust its destination and never restart the pose.
-                        if divePhase != 3 && divePhase != 4 {
-                            exitSplashShown = false
-                        }
                         // Once recovery has started, keep its smooth arm turn
                         // intact while still accepting a new target height.
                         if divePhase != 4 { divePhase = 3 }
@@ -434,11 +425,7 @@ struct FlyingPenguinPlayfield: View {
         speedBonusEligible = isEarly
 
         if location.y > lanes[2] + hoopSize * 0.46 {
-            entrySplashShown = false
-            exitSplashShown = false
-            diveArmed = true
-            divePhase = 1
-            targetPenguinY = diveY
+            armDive()
             return
         }
 
@@ -447,7 +434,6 @@ struct FlyingPenguinPlayfield: View {
         }?.offset ?? 1
         if divePhase == 1 || divePhase == 2 || divePhase == 3 {
             divePhase = 3
-            exitSplashShown = false
         } else if divePhase != 4 {
             divePhase = 0
         }
@@ -471,7 +457,9 @@ struct FlyingPenguinPlayfield: View {
 
     private var displayedPenguinY: CGFloat {
         switch entranceStage {
-        case 0, 1, 2: return sceneSize.height * 0.70
+        // The muzzle's own height, so the penguin leaves the barrel rather than
+        // appearing beside it. It follows `cannonCentreY`.
+        case 0, 1, 2: return cannonCentreY - sceneSize.width * 0.179 * 0.22
         case 3: return lanes[1]
         case 4: return lanes[1]
         default: return penguinY
@@ -506,7 +494,7 @@ struct FlyingPenguinPlayfield: View {
                 }
             }
         }
-        if !shownOptions.isEmpty && entranceStage >= 5 && !completionActive,
+        if !shownOptions.isEmpty && entranceStage >= 3 && !completionActive,
            abs(hoopX - penguinX) < hoopSize * 1.15 {
             ForEach(Array(shownOptions.enumerated()), id: \.element.id) { index, option in
                 AnswerHoopForeground(tint: character.color,
@@ -540,6 +528,8 @@ struct FlyingPenguinPlayfield: View {
         if penguinY == 0 {
             penguinY = lanes[1]
             targetPenguinY = penguinY
+            previousPenguinY = penguinY
+            diveStartY = penguinY
         }
         if hoopX == 0 { hoopX = ringSpawnX }
     }
@@ -567,16 +557,20 @@ struct FlyingPenguinPlayfield: View {
         diveArmed = false
         divePhase = 0
         committedLaneIndex = nil
-        entrySplashShown = false
-        exitSplashShown = false
+        splashes = []
+        surfaceSubmerged = false
+        previousPenguinY = penguinY
+        diveStartY = penguinY
         lastTick = nil
         flightClock = 0
         speedRunActive = false
         speedBonusEligible = false
         goldenOptionID = nil
         launchSpeedHandoffActive = false
+        launchGlideSpeed = 0
+        launchWorldOrigin = worldOffset
+        launchPlatformActive = true
         startMarkerActive = true
-        startMarkerWorldOrigin = worldOffset
         let fuseDuration = reduceMotion ? 0.12 : 1.45
         let squeezeDuration = reduceMotion ? 0.06 : 0.24
         let flightDuration = reduceMotion ? 0.10 : 0.72
@@ -587,22 +581,35 @@ struct FlyingPenguinPlayfield: View {
             withAnimation(.easeOut(duration: reduceMotion ? 0.03 : 0.10)) { entranceStage = 2 }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration + 0.10) {
+            // The shot starts the world. From this frame one deceleration curve
+            // carries the scenery, the launch platform and the first ring set,
+            // straight through the moment the player takes over.
             launchGlideSpeed = sceneSize.width * 1.25
+            launchSpeedHandoffActive = true
             withAnimation(.timingCurve(0.12, 0.72, 0.78, 0.88,
                                        duration: flightDuration)) { entranceStage = 3 }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration + 0.10 + flightDuration) {
-            startMarkerWorldOrigin = worldOffset
-            launchSpeedHandoffActive = true
             withAnimation(.easeOut(duration: reduceMotion ? 0.03 : 0.08)) { entranceStage = 5 }
-            configureRound(force: true)
+            // A no-op once the start marker has handed the first set over. It
+            // only does the work itself when the launch was too short for the
+            // marker to be passed, as with reduced motion.
+            configureRound(force: false)
             resolved = false
+            if reduceMotion {
+                // Nothing drifts out of frame on its own here, so the launch
+                // site leaves with the entrance it belongs to.
+                launchPlatformActive = false
+                startMarkerActive = false
+            }
             onFishEntranceComplete()
         }
     }
 
     private func configureRound(force: Bool) {
-        guard entranceStage >= 5, let round = rounds.first, sceneSize.width > 0 else { return }
+        // From the shot onwards, so the first set can already be travelling
+        // while the penguin is still leaving the barrel.
+        guard entranceStage >= 3, let round = rounds.first, sceneSize.width > 0 else { return }
         guard force || activeRoundID != round.id else { return }
         let promotesPreview = previewRoundID == round.id
         let promotedX = previewX
@@ -683,12 +690,12 @@ struct FlyingPenguinPlayfield: View {
             return
         }
 
-        if entranceStage == 3 || entranceStage == 4 {
-            let blend = 1 - exp(-3.2 * CGFloat(dt))
-            launchGlideSpeed += (cruiseSpeed - launchGlideSpeed) * blend
-            worldOffset -= launchGlideSpeed * dt
-            return
-        }
+        // Nothing moves while the fuse burns. From the shot on, one conveyor
+        // carries everything that stands in the world — scenery, launch site,
+        // start marker and rings — at one shared speed.
+        guard entranceStage >= 3 else { return }
+        advanceWorld(dt: CGFloat(dt))
+
         guard entranceStage >= 5 else { return }
         if !reduceMotion { flightClock += dt }
 
@@ -728,71 +735,71 @@ struct FlyingPenguinPlayfield: View {
             }
         }
 
-        if divePhase == 1, !entrySplashShown,
-           penguinY >= waterline - penguinSize * 0.08 {
-            entrySplashShown = true
-        }
+        // The surface itself decides when a splash is thrown, not the dive
+        // state machine. Whatever moved the penguin across the line — a drag,
+        // a tap, or a round resolving under water — the crossing is what is
+        // measured, so a splash can no longer be skipped.
+        updateSurfaceCrossing(dt: CGFloat(dt))
+
         if divePhase == 1, penguinY >= waterline + penguinSize * 0.10 {
             withAnimation(.easeInOut(duration: 0.26)) { divePhase = 2 }
         }
 
         if divePhase == 3 {
-            if !exitSplashShown,
-               penguinY <= waterline - penguinSize * 0.05 {
-                exitSplashShown = true
-            }
-
             // Keep the strong exit pose for the complete ascent. Only when
             // the player-selected height is reached do body and wings rotate
             // back into normal flight together.
             let reachedTarget = abs(targetPenguinY - penguinY) <= max(3, penguinSize * 0.018)
-            if exitSplashShown && reachedTarget {
+            if !surfaceSubmerged && reachedTarget {
                 withAnimation(.easeInOut(duration: 0.30)) { divePhase = 4 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.30) {
-                    if divePhase == 4 {
-                        divePhase = 0
-                        exitSplashShown = false
-                    }
+                    if divePhase == 4 { divePhase = 0 }
                 }
             }
         }
 
+        guard isLive, !resolved, !shownOptions.isEmpty else { return }
         // Resolve only once the centres align: the penguin visibly travels
         // through the hoop instead of triggering against its leading edge.
-        let contactX = penguinX
-        let baseSpeed = cruiseSpeed
-        // An early ring tap accelerates the conveyor, never the penguin's
-        // screen position. It ends exactly at the hoop centre.
-        let speedMultiplier: CGFloat = speedRunActive && !resolved ? 2 : 1
-        let requestedSpeed = baseSpeed * speedMultiplier
-        let speed: CGFloat
+        guard hoopX <= penguinX else { return }
+        resolvePassage()
+    }
+
+    /// Moves everything that stands in the world on by one frame.
+    ///
+    /// The muzzle speed decays into the cruise speed along a single curve that
+    /// keeps running across the hand-over, so the moment the player takes
+    /// control is not a moment the world can be seen changing pace. An early
+    /// ring tap accelerates the same conveyor, never the penguin's screen
+    /// position.
+    private func advanceWorld(dt: CGFloat) {
+        let requested = cruiseSpeed * (speedRunActive && !resolved ? 2 : 1)
+        var speed = requested
         if launchSpeedHandoffActive {
-            // Continue the launch velocity into gameplay and ease it down to
-            // cruise speed. Switching straight to cruise produced the small
-            // but perceptible hitch at the first set.
-            let blend = 1 - exp(-5.8 * CGFloat(dt))
-            launchGlideSpeed += (requestedSpeed - launchGlideSpeed) * blend
+            launchGlideSpeed += (requested - launchGlideSpeed) * (1 - exp(-3.4 * dt))
             speed = launchGlideSpeed
-            if abs(launchGlideSpeed - requestedSpeed) < 1.5 {
-                launchGlideSpeed = requestedSpeed
+            if abs(launchGlideSpeed - requested) < 1.5 {
+                launchGlideSpeed = requested
                 launchSpeedHandoffActive = false
             }
-        } else {
-            speed = requestedSpeed
         }
         worldOffset -= speed * dt
+        // The start marker is the starting line: the moment the penguin draws
+        // level with it, the first set is put on the conveyor at the trailing
+        // edge and rides in from there. Spawning it at the shot instead sent it
+        // across the screen at the muzzle speed.
+        if activeRoundID == nil, startMarkerX <= normalPenguinX {
+            configureRound(force: true)
+        }
+        if launchPlatformActive, launchPlatformX < -sceneSize.width * 0.30 {
+            launchPlatformActive = false
+        }
         if startMarkerActive, startMarkerX < -penguinSize * 0.45 {
             startMarkerActive = false
         }
         for index in retiringSets.indices { retiringSets[index].x -= speed * dt }
         retiringSets.removeAll { $0.x < -hoopSize * 0.65 }
-        guard !shownOptions.isEmpty else { return }
-        hoopX -= speed * dt
-
-        guard isLive, !resolved else { return }
-
-        guard hoopX <= contactX else { return }
-        resolvePassage()
+        if !shownOptions.isEmpty { hoopX -= speed * dt }
     }
 
     private func resolvePassage() {
@@ -850,6 +857,60 @@ struct FlyingPenguinPlayfield: View {
         targetPenguinY = diveY
     }
 
+    /// Starts — or keeps — a dive. The height it begins from is recorded here
+    /// because that, not the speed on the frame the surface happens to be
+    /// crossed, is what the entry splash is sized by. Taking it at the moment
+    /// the dive is armed also survives a round that resolves under water and
+    /// puts the penguin below the line in a single step.
+    private func armDive() {
+        if divePhase != 1 && divePhase != 2 { diveStartY = penguinY }
+        diveArmed = true
+        if divePhase != 2 { divePhase = 1 }
+        targetPenguinY = diveY
+    }
+
+    /// One splash per surface crossing, in either direction. The latch is on
+    /// the penguin's position rather than on the dive state, so however it got
+    /// under the line — dragged, tapped, or placed there by a resolved round —
+    /// the water is always broken visibly.
+    private func updateSurfaceCrossing(dt: CGFloat) {
+        let level = waterline - penguinSize * 0.06
+        let previous = previousPenguinY
+        previousPenguinY = penguinY
+        if !surfaceSubmerged, penguinY >= level {
+            surfaceSubmerged = true
+            emitSplash(.entering, strength: diveStrength)
+        } else if surfaceSubmerged, penguinY <= level - penguinSize * 0.05 {
+            surfaceSubmerged = false
+            let climb = max(0, previous - penguinY) / max(dt, 1.0 / 240)
+            emitSplash(.exiting, strength: climb / max(1, sceneSize.height * 1.5))
+        }
+    }
+
+    /// How hard the penguin hit the water. A drop from the top of the flight
+    /// window arrives at 1 and throws the full crown; a slip in from just above
+    /// the surface still splashes, just modestly.
+    private var diveStrength: CGFloat {
+        let fall = waterline - diveStartY
+        let span = max(1, waterline - flightMinY)
+        return min(1, max(0.16, fall / span))
+    }
+
+    private func emitSplash(_ direction: WaterSplashDirection, strength: CGFloat) {
+        let event = SplashEvent(direction: direction,
+                                strength: min(1, max(0, strength)),
+                                x: penguinX)
+        splashes.append(event)
+        // A cap, not a queue: rapid dives should overlap, not pile up.
+        if splashes.count > 3 { splashes.removeFirst(splashes.count - 3) }
+        let life = WaterSplash.life(direction: direction,
+                                    strength: event.strength,
+                                    reduceMotion: reduceMotion)
+        DispatchQueue.main.asyncAfter(deadline: .now() + life + 0.05) {
+            splashes.removeAll { $0.id == event.id }
+        }
+    }
+
     private func beginCompletion() {
         guard !completionActive else { return }
         completionSequence &+= 1
@@ -866,8 +927,12 @@ struct FlyingPenguinPlayfield: View {
         retiringSets = []
         speedRunActive = false
         diveArmed = false
-        entrySplashShown = false
-        exitSplashShown = false
+        splashes = []
+        surfaceSubmerged = false
+        // The world stops for the finale, so anything still drifting out of
+        // frame would stand frozen in it.
+        launchPlatformActive = false
+        startMarkerActive = false
 
         // Give the exit its own unhurried beat after the loop. At 2.4 seconds
         // the final screen-width was crossed in barely half a second, which
@@ -882,16 +947,10 @@ struct FlyingPenguinPlayfield: View {
         }
     }
 
-    private func scrollingX(index: Int) -> CGFloat {
-        guard sceneSize.width > 0 else { return 0 }
-        let spacing = sceneSize.width / 4
-        let raw = worldOffset * 0.22 + CGFloat(index) * spacing
-        let span = sceneSize.width + spacing
-        let wrapped = raw.truncatingRemainder(dividingBy: span)
-        return wrapped < 0 ? wrapped + span : wrapped
-    }
-
     private func feedback(for optionID: UUID) -> HoopFeedback {
+        // A set travelling in during the launch is never a resolved set: it has
+        // not been played yet, so it must not wear an answer's colours.
+        guard entranceStage >= 5 else { return .none }
         if resolved, goldenOptionID == optionID,
            shownOptions.first(where: { $0.id == optionID })?.isCorrect == true {
             return .golden
@@ -1130,10 +1189,6 @@ private struct CannonLaunchScene: View {
             let height = proxy.size.height
             ZStack {
                 if layer == .base {
-                    IceFloeView()
-                        .frame(width: width * 0.94, height: height * 0.29)
-                        .position(x: width * 0.48, y: height * 0.89)
-
                     cannonArtwork(width: width, height: height)
 
                     CannonFusePath()
@@ -1294,109 +1349,6 @@ private struct MuzzleFlash: View {
     }
 }
 
-private struct IceFloeView: View {
-    var body: some View {
-        GeometryReader { proxy in
-            let width = proxy.size.width
-            let height = proxy.size.height
-            ZStack {
-                IceFloeUnderside()
-                    .fill(LinearGradient(colors: [Color(red: 0.36, green: 0.78, blue: 0.92),
-                                                  Color(red: 0.06, green: 0.40, blue: 0.70)],
-                                         startPoint: .top, endPoint: .bottom))
-                    .overlay(IceFloeUnderside()
-                        .stroke(Color(red: 0.20, green: 0.65, blue: 0.86), lineWidth: 2))
-
-                IceFloe()
-                    .fill(LinearGradient(colors: [.white,
-                                                  Color(red: 0.84, green: 0.97, blue: 1),
-                                                  Color(red: 0.55, green: 0.86, blue: 0.96)],
-                                         startPoint: .topLeading,
-                                         endPoint: .bottomTrailing))
-                    .overlay(IceFloe().stroke(.white.opacity(0.98), lineWidth: 3))
-
-                IceFloeFacets()
-                    .stroke(Color(red: 0.16, green: 0.68, blue: 0.88).opacity(0.42),
-                            style: StrokeStyle(lineWidth: 2,
-                                               lineCap: .round,
-                                               lineJoin: .round))
-
-                Capsule()
-                    .fill(.white.opacity(0.92))
-                    .frame(width: width * 0.70, height: max(3, height * 0.055))
-                    .position(x: width * 0.47, y: height * 0.31)
-
-                ForEach(0..<3, id: \.self) { index in
-                    Circle()
-                        .fill(.white.opacity(0.88 - Double(index) * 0.16))
-                        .frame(width: width * (0.025 + CGFloat(index) * 0.006))
-                        .position(x: width * (0.24 + CGFloat(index) * 0.24),
-                                  y: height * (0.24 + CGFloat(index % 2) * 0.08))
-                }
-            }
-        }
-        .shadow(color: .blue.opacity(0.28), radius: 8, y: 5)
-    }
-}
-
-private struct IceFloe: Shape {
-    func path(in rect: CGRect) -> Path {
-        Path { path in
-            path.move(to: CGPoint(x: rect.width * 0.03, y: rect.height * 0.43))
-            path.addCurve(to: CGPoint(x: rect.width * 0.18, y: rect.height * 0.20),
-                          control1: CGPoint(x: rect.width * 0.06, y: rect.height * 0.30),
-                          control2: CGPoint(x: rect.width * 0.10, y: rect.height * 0.22))
-            path.addCurve(to: CGPoint(x: rect.width * 0.82, y: rect.height * 0.19),
-                          control1: CGPoint(x: rect.width * 0.38, y: rect.height * 0.08),
-                          control2: CGPoint(x: rect.width * 0.65, y: rect.height * 0.10))
-            path.addCurve(to: CGPoint(x: rect.width * 0.98, y: rect.height * 0.42),
-                          control1: CGPoint(x: rect.width * 0.92, y: rect.height * 0.23),
-                          control2: CGPoint(x: rect.width * 0.97, y: rect.height * 0.32))
-            path.addCurve(to: CGPoint(x: rect.width * 0.84, y: rect.height * 0.61),
-                          control1: CGPoint(x: rect.width, y: rect.height * 0.52),
-                          control2: CGPoint(x: rect.width * 0.93, y: rect.height * 0.58))
-            path.addCurve(to: CGPoint(x: rect.width * 0.16, y: rect.height * 0.63),
-                          control1: CGPoint(x: rect.width * 0.62, y: rect.height * 0.70),
-                          control2: CGPoint(x: rect.width * 0.35, y: rect.height * 0.70))
-            path.addCurve(to: CGPoint(x: rect.width * 0.03, y: rect.height * 0.43),
-                          control1: CGPoint(x: rect.width * 0.08, y: rect.height * 0.59),
-                          control2: CGPoint(x: rect.width * 0.02, y: rect.height * 0.51))
-            path.closeSubpath()
-        }
-    }
-}
-
-private struct IceFloeUnderside: Shape {
-    func path(in rect: CGRect) -> Path {
-        Path { path in
-            path.move(to: CGPoint(x: rect.width * 0.08, y: rect.height * 0.46))
-            path.addLine(to: CGPoint(x: rect.width * 0.18, y: rect.height * 0.72))
-            path.addLine(to: CGPoint(x: rect.width * 0.31, y: rect.height * 0.69))
-            path.addLine(to: CGPoint(x: rect.width * 0.42, y: rect.height * 0.94))
-            path.addLine(to: CGPoint(x: rect.width * 0.54, y: rect.height * 0.70))
-            path.addLine(to: CGPoint(x: rect.width * 0.68, y: rect.height * 0.87))
-            path.addLine(to: CGPoint(x: rect.width * 0.82, y: rect.height * 0.66))
-            path.addLine(to: CGPoint(x: rect.width * 0.94, y: rect.height * 0.45))
-            path.closeSubpath()
-        }
-    }
-}
-
-private struct IceFloeFacets: Shape {
-    func path(in rect: CGRect) -> Path {
-        Path { path in
-            path.move(to: CGPoint(x: rect.width * 0.18, y: rect.height * 0.20))
-            path.addLine(to: CGPoint(x: rect.width * 0.31, y: rect.height * 0.61))
-            path.addLine(to: CGPoint(x: rect.width * 0.46, y: rect.height * 0.15))
-            path.move(to: CGPoint(x: rect.width * 0.31, y: rect.height * 0.61))
-            path.addLine(to: CGPoint(x: rect.width * 0.61, y: rect.height * 0.65))
-            path.addLine(to: CGPoint(x: rect.width * 0.69, y: rect.height * 0.14))
-            path.move(to: CGPoint(x: rect.width * 0.61, y: rect.height * 0.65))
-            path.addLine(to: CGPoint(x: rect.width * 0.86, y: rect.height * 0.24))
-        }
-    }
-}
-
 /// A small world-space reference that makes the camera follow readable. It
 /// starts beside the cannon, floats on the surface, and leaves frame together
 /// with the launch platform while the penguin settles at screen centre.
@@ -1535,6 +1487,17 @@ private struct GoldenSpeedTrail: View {
         .frame(width: size * 1.55, height: size * 0.82)
         .allowsHitTesting(false)
     }
+}
+
+/// One splash, alive only for as long as it plays. Handing the renderer a list
+/// of events rather than a pair of booleans is what guarantees a dive always
+/// gets its splash: nothing later in the dive can clear a flag it needs.
+private struct SplashEvent: Identifiable {
+    let id = UUID()
+    let direction: WaterSplashDirection
+    /// 0…1, from the height the dive started at.
+    let strength: CGFloat
+    let x: CGFloat
 }
 
 private struct RetiringHoopSet: Identifiable {
@@ -1681,90 +1644,3 @@ private struct RightHalfHoopStroke: View {
     }
 }
 
-private struct WaveEdge: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.minX, y: rect.midY))
-        let wavelength: CGFloat = 52
-        var x = rect.minX
-        while x < rect.maxX {
-            path.addCurve(to: CGPoint(x: x + wavelength, y: rect.midY),
-                          control1: CGPoint(x: x + wavelength * 0.25, y: rect.minY),
-                          control2: CGPoint(x: x + wavelength * 0.75, y: rect.maxY))
-            x += wavelength
-        }
-        return path
-    }
-}
-
-private struct WaterBodyShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let amplitude: CGFloat = min(9, rect.height * 0.22)
-        let wavelength: CGFloat = 58
-        path.move(to: CGPoint(x: rect.minX, y: amplitude))
-        var x = rect.minX
-        while x < rect.maxX {
-            path.addCurve(to: CGPoint(x: x + wavelength, y: amplitude),
-                          control1: CGPoint(x: x + wavelength * 0.25, y: 0),
-                          control2: CGPoint(x: x + wavelength * 0.75, y: amplitude * 2))
-            x += wavelength
-        }
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        path.closeSubpath()
-        return path
-    }
-}
-
-private enum WaterSplashDirection: Equatable { case entering, exiting }
-
-private struct WaterSplash: View {
-    let direction: WaterSplashDirection
-    let reduceMotion: Bool
-    @State private var expanded = false
-
-    var body: some View {
-        GeometryReader { proxy in
-            let width = proxy.size.width
-            let height = proxy.size.height
-            let lift = height * (direction == .exiting ? 0.78 : 0.54)
-            ZStack {
-                Ellipse()
-                    .stroke(.white.opacity(0.92), lineWidth: max(3, width * 0.035))
-                    .frame(width: width * 0.68, height: height * 0.24)
-                    .scaleEffect(expanded ? 1.35 : 0.28)
-
-                ForEach(0..<9, id: \.self) { index in
-                    let spread = (CGFloat(index) - 4) / 4
-                    Capsule()
-                        .fill(LinearGradient(colors: [.white,
-                                                      Color.cyan.opacity(0.82)],
-                                             startPoint: .top, endPoint: .bottom))
-                        .frame(width: max(5, width * 0.045),
-                               height: height * (direction == .exiting ? 0.34 : 0.25))
-                        .rotationEffect(.degrees(Double(spread) * 52))
-                        .offset(x: expanded ? spread * width * 0.42 : 0,
-                                y: expanded ? -lift * (1 - abs(spread) * 0.38) : height * 0.08)
-                }
-
-                ForEach(0..<7, id: \.self) { index in
-                    let spread = (CGFloat(index) - 3) / 3
-                    Circle()
-                        .fill(.white.opacity(0.88))
-                        .frame(width: max(4, width * 0.055),
-                               height: max(4, width * 0.055))
-                        .offset(x: expanded ? spread * width * 0.52 : 0,
-                                y: expanded ? -lift * 0.56 - abs(spread) * height * 0.16 : 0)
-                }
-            }
-            .frame(width: width, height: height)
-            .position(x: width * 0.5, y: height * 0.55)
-            .opacity(expanded ? 0 : 1)
-            .animation(reduceMotion ? .easeOut(duration: 0.18)
-                       : .easeOut(duration: direction == .exiting ? 0.72 : 0.62),
-                       value: expanded)
-        }
-        .onAppear { expanded = true }
-    }
-}

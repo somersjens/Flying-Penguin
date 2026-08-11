@@ -208,11 +208,10 @@ struct ResultView: View {
         .accessibilityHidden(true)
     }
 
-    /// The level-based description, flanked by the small leaf ornaments the
-    /// original reference used around "Good try".
+    /// The level-based description, flanked by small star ornaments.
     private var encouragementRow: some View {
         HStack(spacing: 6 * scale) {
-            leafOrnament
+            starOrnament
             Text(verbatim: encouragement)
                 .font(.system(size: (isCompleted ? 13 : 14) * textScale,
                               weight: isCompleted ? .medium : .semibold))
@@ -220,18 +219,15 @@ struct ResultView: View {
                 .multilineTextAlignment(.center)
                 .lineLimit(2)
                 .minimumScaleFactor(0.8)
-            // The right leaf is the left one's exact mirror image, not an
-            // independently rotated copy.
-            leafOrnament.scaleEffect(x: -1, y: 1)
+            starOrnament
         }
         .frame(minHeight: 20 * scale)
     }
 
-    private var leafOrnament: some View {
-        Image(systemName: "leaf.fill")
+    private var starOrnament: some View {
+        Image(systemName: "star.fill")
             .font(.system(size: 10 * textScale, weight: .semibold))
             .foregroundStyle(character.color.opacity(0.5))
-            .rotationEffect(.degrees(18))
     }
 
     /// The one line in the app whose word order is fixed by its layout: the
