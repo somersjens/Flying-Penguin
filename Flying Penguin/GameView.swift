@@ -127,6 +127,7 @@ struct GameView: View {
                 LevelIntroCard(board: request.board,
                                theme: character,
                                isPauseCard: showsPauseCard,
+                               lastMissedChallenge: model.lastMissedChallenge,
                                isTutorialArmed: $isTutorialArmed,
                                onStart: startSession,
                                onExit: { dismiss() })

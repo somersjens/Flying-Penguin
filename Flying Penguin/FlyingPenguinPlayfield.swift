@@ -867,9 +867,7 @@ struct FlyingPenguinPlayfield: View {
             return
         }
         if !isCorrect {
-            let solvedPrompt = round.question.prompt.replacingOccurrences(
-                of: "?", with: round.question.correctAnswer
-            )
+            let solvedPrompt = round.question.solvedPrompt
             shownPrompt = solvedPrompt
             emphasizesCorrectAnswer = true
             showAnswerEcho(solvedPrompt)
@@ -894,7 +892,7 @@ struct FlyingPenguinPlayfield: View {
     private func showAnswerEcho(_ prompt: String) {
         let echo = SolvedAnswerEcho(prompt: prompt)
         withAnimation(.easeOut(duration: 0.16)) { answerEcho = echo }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.45) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             guard answerEcho?.id == echo.id else { return }
             withAnimation(.easeOut(duration: 0.20)) { answerEcho = nil }
         }

@@ -42,6 +42,9 @@ final class GameViewModel: ObservableObject {
     /// its bubble-style announcement even after an earlier streak was broken.
     @Published private(set) var streakAnnouncementID = 0
     @Published private(set) var comboAnnouncementID = 0
+    /// The most recent question answered incorrectly, with its answer filled
+    /// in. It remains part of this run until a fresh run is started.
+    @Published private(set) var lastMissedChallenge: String?
     @Published private(set) var visibleRounds: [GameRound] = []
     /// The guided run, if this session is one. Both are mirrors of the director
     /// below, published the same way the engine's state is.
@@ -128,6 +131,7 @@ final class GameViewModel: ObservableObject {
         if let paused = PausedSessionStore.shared.session(request.board) {
             engine.resume(from: paused)
             hasBonusFishPower = paused.hasBonusFishPower ?? false
+            lastMissedChallenge = paused.lastMissedChallenge
         } else {
             engine.start()
         }
@@ -222,7 +226,10 @@ final class GameViewModel: ObservableObject {
     /// player would restart from zero anyway.
     private func savePausedSessionIfNeeded() {
         guard !hasRecordedResult,
-              let paused = engine.pausedSession(hasBonusFishPower: hasBonusFishPower)
+              let paused = engine.pausedSession(
+                hasBonusFishPower: hasBonusFishPower,
+                lastMissedChallenge: lastMissedChallenge
+              )
         else { return }
         guard paused.cards > 0 else {
             PausedSessionStore.shared.clear(request.board)
@@ -248,6 +255,7 @@ final class GameViewModel: ObservableObject {
                             mode: request.mode)
         engine.start()
         hasBonusFishPower = false
+        lastMissedChallenge = nil
         streakAnnouncementID = 0
         comboAnnouncementID = 0
         lastCorrectCatchTime = nil
@@ -312,6 +320,7 @@ final class GameViewModel: ObservableObject {
             if startedStreak { tutorial.didStartBonus() }
             delay = GameConfig.nextRoundDelay.correct
         case .wrong:
+            lastMissedChallenge = engine.round?.question.solvedPrompt
             tutorial.didAnswer(isCorrect: false)
             lastCorrectCatchTime = nil
             // Neither the verdict's sound nor its haptic fires here any more —

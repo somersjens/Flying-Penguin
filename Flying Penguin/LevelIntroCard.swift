@@ -93,6 +93,9 @@ struct LevelIntroCard: View {
     /// True when this instance was opened by the in-game pause button. A saved
     /// session also makes the card a continuation screen on a later visit.
     var isPauseCard = false
+    /// Supplied directly by a live run. A reopened saved run falls back to the
+    /// same value stored in `paused` below.
+    var lastMissedChallenge: String? = nil
     /// Whether the run this card starts is a guided one. Owned by the game
     /// screen, because the card goes away and the run does not.
     @Binding var isTutorialArmed: Bool
@@ -111,6 +114,9 @@ struct LevelIntroCard: View {
     }
 
     private var isContinuation: Bool { isPauseCard || paused != nil }
+    private var displayedLastChallenge: String? {
+        lastMissedChallenge ?? paused?.lastMissedChallenge
+    }
 
     @ObservedObject private var audio = AppAudio.shared
     @ObservedObject private var language = LanguageManager.shared
@@ -274,8 +280,9 @@ struct LevelIntroCard: View {
     /// Confirms that the run is safely waiting without repeating a potentially
     /// awkward singular/plural bubble count.
     private var pausedMessage: some View {
-        // The empty half keeps the note centred under the action column rather
-        // than under the whole card.
+        // Both halves mirror the columns above: pause status stays beneath the
+        // actions, while the latest missed challenge sits beneath the three
+        // level explanations. Before the first mistake that half stays empty.
         HStack(spacing: 0) {
             HStack(spacing: 6) {
                 Image(systemName: "pause.fill")
@@ -288,9 +295,24 @@ struct LevelIntroCard: View {
 
             Color.clear.frame(width: 1, height: 0)
 
-            Color.clear
-                .frame(maxWidth: .infinity)
-                .frame(height: 0)
+            Group {
+                if let displayedLastChallenge {
+                    HStack(spacing: 6) {
+                        Image(systemName: "clock.arrow.circlepath")
+                        Text(verbatim: displayedLastChallenge)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.55)
+                    }
+                    .font(.system(size: 13 * textScale, weight: .semibold))
+                    .foregroundStyle(theme.deepColor.opacity(0.62))
+                    .frame(maxWidth: .infinity)
+                    .accessibilityIdentifier("intro-last-challenge")
+                } else {
+                    Color.clear
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 0)
+                }
+            }
                 .padding(.leading, 22 * scale)
         }
         .accessibilityIdentifier("intro-paused")

@@ -34,6 +34,13 @@ public struct MathQuestion: Equatable, Codable, Sendable {
         self.kind = kind
     }
 
+    /// The completed form shown after a mistake. Replacing the placeholder —
+    /// rather than appending an answer — also handles forms such as
+    /// `1/4 = ?/12`, where the answer belongs inside the expression.
+    public var solvedPrompt: String {
+        prompt.replacingOccurrences(of: "?", with: correctAnswer)
+    }
+
     /// A question is only ever shown when this holds: a non-empty prompt, a
     /// non-empty answer, and distractors that are unique and all genuinely
     /// wrong. `QuestionGenerator` asserts this before handing a question out.

@@ -35,6 +35,8 @@ public struct PausedSession: Codable, Equatable, Sendable {
     public let heartFishProgress: Int?
     public let heartFishTarget: Int?
     public let isHeartFishAvailable: Bool?
+    /// Optional so older stored runs resume without a remembered mistake.
+    public let lastMissedChallenge: String?
 
     public init(boardID: String,
                 roundNumber: Int,
@@ -49,7 +51,8 @@ public struct PausedSession: Codable, Equatable, Sendable {
                 hasBonusFishPower: Bool? = nil,
                 heartFishProgress: Int? = nil,
                 heartFishTarget: Int? = nil,
-                isHeartFishAvailable: Bool? = nil) {
+                isHeartFishAvailable: Bool? = nil,
+                lastMissedChallenge: String? = nil) {
         self.boardID = boardID
         self.roundNumber = roundNumber
         self.cards = cards
@@ -64,6 +67,7 @@ public struct PausedSession: Codable, Equatable, Sendable {
         self.heartFishProgress = heartFishProgress
         self.heartFishTarget = heartFishTarget
         self.isHeartFishAvailable = isHeartFishAvailable
+        self.lastMissedChallenge = lastMissedChallenge
     }
 
     /// A record is only usable if it describes a session that can still be
