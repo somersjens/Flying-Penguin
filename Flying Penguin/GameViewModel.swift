@@ -73,6 +73,14 @@ final class GameViewModel: ObservableObject {
     private var startsGuided = false
 
     var maximumRounds: Int { engine.maximumRounds }
+
+    /// True during the short feedback beat after the passage that will fill
+    /// the board. The playfield uses this head start to glide into its finale
+    /// instead of waiting motionless for the engine to close the round.
+    var preparesLevelCompletion: Bool {
+        guard engine.state == .resolving, engine.livesRemaining > 0 else { return false }
+        return engine.cards >= request.board.maximum || engine.roundNumber >= engine.maximumRounds
+    }
     var acceptsInput: Bool { state == .answering && !isPaused }
 
     init(request: GameSessionRequest) {

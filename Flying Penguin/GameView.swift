@@ -100,7 +100,6 @@ struct GameView: View {
             // start and pause cards, rather than a replacement for the game.
             playfield
                 .blur(radius: showsResult ? 4 : 0)
-                .scaleEffect(showsResult ? 1.012 : 1)
                 .saturation(showsResult ? 0.84 : 1)
                 .animation(.easeInOut(duration: 0.42), value: showsResult)
                 .transition(.opacity)
@@ -204,6 +203,7 @@ struct GameView: View {
                               isLive: model.acceptsInput,
                               isRunning: isReefRunning,
                               playsFishEntrance: playsFishEntrance,
+                              preparesLevelCompletion: model.preparesLevelCompletion,
                               playsLevelCompletion: playsLevelCompletion,
                               reduceMotion: reduceMotion,
                               // The HUD's own height, so the swarm's ceiling is

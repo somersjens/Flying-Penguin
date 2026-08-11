@@ -11,6 +11,7 @@ struct FlyingPenguinPlayfield: View {
     let isLive: Bool
     let isRunning: Bool
     let playsFishEntrance: Bool
+    let preparesLevelCompletion: Bool
     let playsLevelCompletion: Bool
     let reduceMotion: Bool
     let topReserve: CGFloat
@@ -58,6 +59,9 @@ struct FlyingPenguinPlayfield: View {
     @State private var completionActive = false
     @State private var completionProgress: CGFloat = 0
     @State private var completionStart = CGPoint.zero
+    /// A small continuation of the last passage during its feedback beat. It
+    /// hands the penguin to the loop with forward momentum instead of a pause.
+    @State private var completionLeadX: CGFloat = 0
     /// Invalidates a delayed finale callback when a fresh run starts.
     @State private var completionSequence = 0
     @State private var lastTick: Date?
@@ -127,6 +131,18 @@ struct FlyingPenguinPlayfield: View {
         // Removing the former 1.5x multiplier gives exactly 50% more time
         // between sets without pushing the already-visible preview offscreen.
         max(80, (sceneSize.width + hoopSize - normalPenguinX) / 5)
+    }
+    /// The lane assist is time based as well as size based. Turbo attempts
+    /// therefore get more physical runway instead of cutting the correction
+    /// window in half when the conveyor doubles its speed.
+    private var approachSpeed: CGFloat {
+        cruiseSpeed * (speedRunActive && !resolved ? 2 : 1)
+    }
+    private var laneAssistDistance: CGFloat {
+        max(hoopSize * 0.42, approachSpeed * 0.36)
+    }
+    private var laneCommitDistance: CGFloat {
+        max(hoopSize * 0.14, approachSpeed * 0.13)
     }
 
     var body: some View {
@@ -229,7 +245,7 @@ struct FlyingPenguinPlayfield: View {
                     .opacity(entranceStage < 3 ? 0 : 1)
                     .animation(.easeOut(duration: reduceMotion ? 0.03 : 0.16),
                                value: entranceStage >= 3)
-                    .position(x: completionActive ? completionStart.x : displayedPenguinX,
+                    .position(x: completionActive ? completionStart.x : displayedPenguinX + completionLeadX,
                               y: completionActive ? completionStart.y : displayedPenguinY)
                     .shadow(color: .black.opacity(0.18), radius: 6, y: 4)
                     .allowsHitTesting(false)
@@ -297,6 +313,12 @@ struct FlyingPenguinPlayfield: View {
             if live && resolved { configureRound(force: true) }
         }
         .onChange(of: playsFishEntrance) { _, value in if value { beginEntrance() } }
+        .onChange(of: preparesLevelCompletion) { _, value in
+            guard value, !completionActive else { return }
+            withAnimation(.easeOut(duration: reduceMotion ? 0.05 : 0.30)) {
+                completionLeadX = sceneSize.width * 0.045
+            }
+        }
         .onChange(of: playsLevelCompletion) { _, value in if value { beginCompletion() } }
     }
 
@@ -402,11 +424,11 @@ struct FlyingPenguinPlayfield: View {
             .onChanged { value in
                 let canSurface = (1...4).contains(divePhase)
                 guard isRunning, entranceStage >= 5, !completionActive,
-                      (isLive || canSurface), (!resolved || canSurface) else { return }
-                // Any fresh movement reopens the choice, even inside the final
-                // approach zone. The lane is only committed while the finger
-                // is released.
-                committedLaneIndex = nil
+                      (isLive || canSurface), (!resolved || canSurface),
+                      committedLaneIndex == nil else { return }
+                // The choice remains live throughout the assist zone. Only the
+                // short commit zone at the hoop itself stops accepting a new
+                // lane, so a late drag can still redirect an in-flight penguin.
                 if dragStartY == nil { dragStartY = targetPenguinY == 0 ? penguinY : targetPenguinY }
                 // Movement is relative to where the penguin was when the drag
                 // began. Touching elsewhere on screen therefore never makes it
@@ -436,9 +458,9 @@ struct FlyingPenguinPlayfield: View {
 
     private func handleRingTap(at location: CGPoint) {
         guard isLive, isRunning, entranceStage >= 5, !resolved,
+              committedLaneIndex == nil,
               location.x >= hoopX - hoopSize * 0.72 else { return }
 
-        committedLaneIndex = nil
         dragStartY = nil
         let isEarly = timingMarkerX(for: hoopX) > penguinX
         speedRunActive = true
@@ -559,6 +581,7 @@ struct FlyingPenguinPlayfield: View {
         completionActive = false
         completionProgress = 0
         completionStart = .zero
+        completionLeadX = 0
         entranceStage = 0
         resolved = true
         shownOptions = []
@@ -710,6 +733,12 @@ struct FlyingPenguinPlayfield: View {
             // The world has stopped, but the wings keep beating throughout the
             // looping exit so the penguin never turns into a rigid cut-out.
             if !reduceMotion { flightClock += dt }
+            // The solved hoops belong to the passage that just happened. Let
+            // them finish travelling off-screen instead of deleting or
+            // freezing them when the finale takes over the penguin.
+            let hoopStep = cruiseSpeed * CGFloat(dt)
+            for index in retiringSets.indices { retiringSets[index].x -= hoopStep }
+            retiringSets.removeAll { $0.x < -hoopSize * 0.65 }
             return
         }
 
@@ -737,25 +766,47 @@ struct FlyingPenguinPlayfield: View {
             if abs(delta) < 0.2 { penguinY = targetPenguinY }
         }
 
-        // Only assist in the final fraction of the approach and never while
-        // the player is actively moving. A last-moment drag can therefore
-        // switch lane right up to the hoop centre.
+        // In the final approach, steer toward the player's requested height,
+        // not merely the penguin's current height. This is what lets a late
+        // switch win even while the character is still travelling between two
+        // lanes. The force grows smoothly as the hoop arrives.
         let approachDistance = hoopX - penguinX
-        let assistDistance = hoopSize * (dragStartY == nil ? 0.42 : 0.16)
         if divePhase == 0, !resolved,
-           approachDistance >= 0, approachDistance <= assistDistance {
-            if committedLaneIndex == nil {
-                committedLaneIndex = lanes.enumerated().min {
-                    abs($0.element - penguinY) < abs($1.element - penguinY)
-                }?.offset
+           approachDistance >= 0, approachDistance <= laneAssistDistance {
+            let requestedLane = lanes.enumerated().min {
+                abs($0.element - targetPenguinY) < abs($1.element - targetPenguinY)
+            }?.offset ?? 1
+
+            // Keep re-evaluating intent until there is only a very short,
+            // speed-adjusted amount of travel left. From that point one lane
+            // owns the passage, avoiding an ambiguous between-hoops result.
+            if committedLaneIndex == nil, approachDistance <= laneCommitDistance {
+                committedLaneIndex = requestedLane
             }
-            if let committedLaneIndex {
-                let laneY = lanes[committedLaneIndex]
-                let progress = 1 - approachDistance / assistDistance
-                let response = 6 + progress * 11
-                penguinY += (laneY - penguinY) * (1 - exp(-response * CGFloat(dt)))
+
+            let assistedLane = committedLaneIndex ?? requestedLane
+            let laneY = lanes[assistedLane]
+            let progress = 1 - approachDistance / laneAssistDistance
+            var response = 7 + progress * progress * 16
+
+            if committedLaneIndex != nil {
+                // Once committed, converge to practically the lane centre by
+                // the time the hoop centre reaches the penguin. The final-frame
+                // placement removes the last sub-pixel ambiguity without a
+                // visible teleport.
+                let remainingTime = max(CGFloat(dt), approachDistance / max(1, approachSpeed))
+                response = max(response, 4.8 / remainingTime)
+                targetPenguinY = laneY
+                if approachDistance <= approachSpeed * CGFloat(dt) * 1.05 {
+                    penguinY = laneY
+                }
+            } else if dragStartY == nil {
+                // With no finger down, let the same movement controller settle
+                // too. A new drag still replaces this target until commitment.
                 targetPenguinY = laneY
             }
+
+            penguinY += (laneY - penguinY) * (1 - exp(-response * CGFloat(dt)))
         }
 
         // The surface itself decides when a splash is thrown, not the dive
@@ -956,16 +1007,26 @@ struct FlyingPenguinPlayfield: View {
         guard !completionActive else { return }
         completionSequence &+= 1
         let sequence = completionSequence
-        completionStart = CGPoint(x: penguinX, y: penguinY)
+        completionStart = CGPoint(x: penguinX + completionLeadX, y: penguinY)
         completionActive = true
         completionProgress = 0
+        completionLeadX = 0
         resolved = true
+
+        // Preserve the final set as a retiring set before clearing the active
+        // question. It can then drift out at conveyor speed throughout the
+        // looping flight instead of vanishing on the hand-off frame.
+        if !shownOptions.isEmpty, hoopX > -hoopSize * 0.65 {
+            retiringSets.append(RetiringHoopSet(options: shownOptions,
+                                                prompt: shownPrompt,
+                                                x: hoopX,
+                                                goldenOptionID: goldenOptionID))
+        }
         shownOptions = []
         shownPrompt = ""
         previewOptions = []
         previewPrompt = ""
         previewRoundID = nil
-        retiringSets = []
         speedRunActive = false
         answerEcho = nil
         emphasizesCorrectAnswer = false
