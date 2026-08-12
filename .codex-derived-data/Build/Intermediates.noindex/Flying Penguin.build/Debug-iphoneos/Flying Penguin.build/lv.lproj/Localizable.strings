@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Lācis</string>
+	<key>character.bunny</key>
+	<string>Zaķis</string>
+	<key>character.crab</key>
+	<string>Krabis</string>
+	<key>character.dog</key>
+	<string>Suns</string>
+	<key>character.elephant</key>
+	<string>Zilonis</string>
+	<key>character.fox</key>
+	<string>Lapsa</string>
+	<key>character.frog</key>
+	<string>Varde</string>
+	<key>character.lion</key>
+	<string>Lauva</string>
+	<key>character.octopus</key>
+	<string>Astoņkājis</string>
+	<key>character.penguin</key>
+	<string>Pingvīns</string>
+	<key>common.cancel</key>
+	<string>Atcelt</string>
+	<key>common.continue</key>
+	<string>Turpināt</string>
+	<key>common.done</key>
+	<string>Gatavs</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>Labi</string>
+	<key>common.save</key>
+	<string>Saglabāt</string>
+	<key>currency.hoop.plural</key>
+	<string>riņķi</string>
+	<key>currency.hoop.singular</key>
+	<string>riņķis</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Labs mēģinājums</string>
+	<key>game.encouragement.1</key>
+	<string>Labs sākums</string>
+	<key>game.encouragement.2</key>
+	<string>Turpini trenēties</string>
+	<key>game.encouragement.3</key>
+	<string>Nemaz nav slikti</string>
+	<key>game.encouragement.4</key>
+	<string>Tev labi sanāk</string>
+	<key>game.encouragement.5</key>
+	<string>Lielisks sniegums</string>
+	<key>game.encouragement.6</key>
+	<string>Labi padarīts</string>
+	<key>game.encouragement.7</key>
+	<string>Ļoti labi nospēlēts</string>
+	<key>game.encouragement.8</key>
+	<string>Finišs jau redzams</string>
+	<key>game.encouragement.9</key>
+	<string>Tu esi gandrīz galā</string>
+	<key>game.encouragement.complete</key>
+	<string>Izcili, viss pareizi!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Tu nopelnīji katru punktu.</string>
+	<key>game.end.completionSuffix</key>
+	<string>pabeigts!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Spēle beigusies</string>
+	<key>game.end.mainMenu</key>
+	<string>Galvenā izvēlne</string>
+	<key>game.end.playAgain</key>
+	<string>Spēlēt vēlreiz</string>
+	<key>game.highScore</key>
+	<string>Rekords</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Atpakaļ uz galveno izvēlni</string>
+	<key>game.intro.continue</key>
+	<string>Turpināt</string>
+	<key>game.intro.progressPaused</key>
+	<string>Tavs progress ir apturēts.</string>
+	<key>game.intro.start</key>
+	<string>Sākt līmeni</string>
+	<key>game.intro.startTutorial</key>
+	<string>Sākt pamācību</string>
+	<key>game.streakBoost.title</key>
+	<string>Dubulti punkti!</string>
+	<key>goal.period</key>
+	<string>Mērķa periods</string>
+	<key>goal.promptDaily</key>
+	<string>Cik minūtes dienā vēlies spēlēt?</string>
+	<key>goal.promptWeekly</key>
+	<string>Cik minūtes nedēļā vēlies spēlēt?</string>
+	<key>goal.title</key>
+	<string>Spēles mērķis</string>
+	<key>goalPeriod.daily</key>
+	<string>Katru dienu</string>
+	<key>goalPeriod.weekly</key>
+	<string>Katru nedēļu</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>vēl %lld</string>
+	<key>home.totalLabel</key>
+	<string>Kopā</string>
+	<key>info.mode.fractions.header</key>
+	<string>Daļas</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Viena un vairākas daļas</string>
+	<key>info.mode.fractions.single</key>
+	<string>Vienmēr viena daļa</string>
+	<key>info.mode.header</key>
+	<string>Secība</string>
+	<key>info.mode.mixed</key>
+	<string>Kopā ar zemākiem līmeņiem</string>
+	<key>info.mode.order</key>
+	<string>Noteikta secība</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Ar decimālskaitļiem</string>
+	<key>info.mode.percentages.header</key>
+	<string>Veids</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Bez decimālskaitļiem</string>
+	<key>info.mode.random</key>
+	<string>Nejauša secība</string>
+	<key>info.super.all</key>
+	<string>Saskaitīšana, atņemšana, reizināšana, dalīšana un procenti</string>
+	<key>info.super.basic</key>
+	<string>Saskaitīšana un atņemšana</string>
+	<key>info.super.fraction</key>
+	<string>Saskaitīšana, atņemšana, reizināšana un dalīšana</string>
+	<key>info.super.times</key>
+	<string>Saskaitīšana, atņemšana un reizināšana</string>
+	<key>info.topic.header</key>
+	<string>Uzdevumu veidi</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Uzdevumi, kuros skaitli **pieskaiti**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Pieskaiti %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld burkānu**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld vistu**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld zivju**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld medus burciņu**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld riņķi**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld suņu cepumu**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld gaļas gabaliņu**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld zemesriekstu**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld pērļu**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Šajā līmenī vari savākt ne vairāk kā **%lld garneļu**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Uzdevumi, kuros skaitli **dali**.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Dalīt ar %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Jautājumi līdz **%lld. līmenim**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Jautājumi no **1. līmeņa**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Viss sajaukts**: plusi, mīnusi, reizināšana, daļas un procenti.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Vienmēr **viena daļa** no veselā.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Viena vai vairākas daļas** no veselā.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Uzdevumi **noteiktā secībā**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Atbildes **bez komatiem**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Arī atbildes **ar komatiem**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Uzdevumi **jauktā secībā**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Uzdevumi ar **procentiem**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ no skaitļa</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Uzdevumi, kuros skaitli **atņem**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Atņem %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Uzdevumi, kuros **reizini**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld reizrēķins</string>
+	<key>menu.maximumCount</key>
+	<string>MAKS.</string>
+	<key>menu.moreLevels</key>
+	<string>Vairāk līmeņu</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium līmeņi</string>
+	<key>menu.startHere</key>
+	<string>Sāc šeit</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Atbloķē vairāk ar Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Vairākas</string>
+	<key>mode.fractions.single</key>
+	<string>Viena</string>
+	<key>mode.mixed</key>
+	<string>Jaukts</string>
+	<key>mode.order</key>
+	<string>Secība</string>
+	<key>mode.percentages.decimal</key>
+	<string>Decimāls</string>
+	<key>mode.percentages.whole</key>
+	<string>Vesels</string>
+	<key>mode.random</key>
+	<string>Nejauši</string>
+	<key>name.placeholder</key>
+	<string>Tavs vārds</string>
+	<key>name.whatsYourName</key>
+	<string>Kā tevi sauc?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Nopelniet vēl dažas riņķi, lai atbloķētu šo dzīvnieku! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Jūsu dzīvnieki gaida. Atgriezieties spēlēt un turpiniet vākt riņķi!</string>
+	<key>notif.comeback.title</key>
+	<string>Mums tevis pietrūkst! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Panāksim 3. dienu! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium ietver %lld līmeņus katrai tēmai un visiem 10 dzīvniekiem. Piedzīvojums turpinās!</string>
+	<key>notif.premium.title</key>
+	<string>Atbloķējiet vairāk līmeņu un dzīvnieku! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Ir pagājušas %lld dienas. Atrisināsim dažus matemātikas uzdevumus un nopelnīsim vairāk riņķi!</string>
+	<key>notif.reactivate.title</key>
+	<string>Vai esat gatavs spēlēt vēlreiz? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Dažādi jaukti uzdevumi kopā.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Jau diezgan labi</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Trenējies ar uzdevumiem secībā.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Tikko sāki</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Uzdevumi nejaušā secībā.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Jau nedaudz trenējies</string>
+	<key>onboarding.level.title</key>
+	<string>Cik labi tu to jau proti?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Sāksim! Kā tevi sauc?</string>
+	<key>onboarding.name.title</key>
+	<string>Rēķināt vēl nekad nav bijis tik jautri!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Izvēlies tēmu, ar ko sākt.</string>
+	<key>onboarding.subject.title</key>
+	<string>Ko tu vēlies iemācīties?</string>
+	<key>parentGate.approved</key>
+	<string>Apstiprināts</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Mēģinājumi: %1$lld no %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Turēt: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>aplis</string>
+	<key>parentGate.shape.diamond</key>
+	<string>rombs</string>
+	<key>parentGate.shape.heart</key>
+	<string>sirds</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>sešstūris</string>
+	<key>parentGate.shape.plus</key>
+	<string>pluss</string>
+	<key>parentGate.shape.square</key>
+	<string>kvadrāts</string>
+	<key>parentGate.shape.star</key>
+	<string>zvaigzne</string>
+	<key>parentGate.shape.triangle</key>
+	<string>trīsstūris</string>
+	<key>parentGate.subtitle</key>
+	<string>Lai aizsargātu mazos spēlētājus, pirms pirkuma turpināšanas pieaugušajam jāizpilda šī pārbaude.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Pieskārieni: %1$lld no %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Vajadzīgs pieaugušā apstiprinājums</string>
+	<key>premium.availableAt %lld</key>
+	<string>Pieejams no %lld trofejām</string>
+	<key>premium.availableFromStart</key>
+	<string>Pieejams jau no sākuma</string>
+	<key>premium.characterUnlocked</key>
+	<string>ATBLOĶĒTS JAUNS TĒLS</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Nopelnītas %lld riņķi</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Tikai ar Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Ar Premium vari brīvi spēlēt ar visiem 10 dzīvniekiem.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Visi dzīvnieki pieejami</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Vienmēr pietiek jaunu uzdevumu treniņam.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 līmeņi katrā tēmā</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Spēlē bez pārtraukumiem.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Bez reklāmām</string>
+	<key>premium.oneTime</key>
+	<string>Vienreizējs pirkums. Tavs uz visiem laikiem.</string>
+	<key>premium.restore</key>
+	<string>Atjaunot pirkumus</string>
+	<key>premium.start</key>
+	<string>Sākt</string>
+	<key>premium.storeUnavailable</key>
+	<string>Veikals pašlaik nav pieejams. Lūdzu, mēģini vēlāk.</string>
+	<key>premium.unlock</key>
+	<string>Atbloķēt Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Atbloķēt Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Atbloķēts ar Premium</string>
+	<key>result.complete</key>
+	<string>Līmenis pabeigts!</string>
+	<key>result.stopped</key>
+	<string>Apturēts</string>
+	<key>settings.character</key>
+	<string>Tēls</string>
+	<key>settings.characterInfo</key>
+	<string>Katrs dzīvnieks visai spēlei piešķir savu krāsu motīvu.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Pielāgots: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Dienas mērķis</string>
+	<key>settings.goalInfo</key>
+	<string>Sērijas mērķis sākas ar 5 minūtēm dienā. Skaita tikai aktīvo spēles laiku.</string>
+	<key>settings.music</key>
+	<string>Mūzika</string>
+	<key>settings.playGoals</key>
+	<string>Spēles mērķi</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium atbloķēts. Paldies!</string>
+	<key>settings.sound</key>
+	<string>Skaņa</string>
+	<key>settings.soundEffects</key>
+	<string>Mūzika un efekti</string>
+	<key>settings.soundInfo</key>
+	<string>Izslēdz skaņu, lai spēlētu klusi. Spēle darbojas tieši tāpat.</string>
+	<key>settings.title</key>
+	<string>Iestatījumi</string>
+	<key>streak.dayOne</key>
+	<string>1. diena</string>
+	<key>topic.addition</key>
+	<string>Saskaitīšana</string>
+	<key>topic.addition.detail</key>
+	<string>Tikai saskaitīšana</string>
+	<key>topic.fractions</key>
+	<string>Daļas</string>
+	<key>topic.fractions.detail</key>
+	<string>Tikai dalīšana</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Jaukti uzdevumi</string>
+	<key>topic.percentages</key>
+	<string>Procenti</string>
+	<key>topic.percentages.detail</key>
+	<string>Tikai procenti</string>
+	<key>topic.subtraction</key>
+	<string>Atņemšana</string>
+	<key>topic.subtraction.detail</key>
+	<string>Tikai atņemšana</string>
+	<key>topic.tables</key>
+	<string>Reizrēķins</string>
+	<key>topic.tables.detail</key>
+	<string>Tikai reizināšana</string>
+	<key>tutorial.notice.message</key>
+	<string>Tu jau spēlē. Pabeidz spēli vai izvēlies līmeni, kuru vēl neesi sācis, lai spēlētu pamācību.</string>
+	<key>tutorial.notice.title</key>
+	<string>Tikai spēles sākumā</string>
+</dict>
+</plist>

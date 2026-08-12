@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/QuestionGenerator.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/QuestionGenerator.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/QuestionGenerator.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/QuestionGenerator.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/QuestionGenerator.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/QuestionGenerator.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/RoundFactory.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/RoundFactory.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/RoundFactory.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/RoundFactory.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/RoundFactory.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/RoundFactory.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/SeededGenerator.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/SeededGenerator.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/SeededGenerator.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/SeededGenerator.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/SeededGenerator.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/SeededGenerator.swiftdeps"
+  }
+}

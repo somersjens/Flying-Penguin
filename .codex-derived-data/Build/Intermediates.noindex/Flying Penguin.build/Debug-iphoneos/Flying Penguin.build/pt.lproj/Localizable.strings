@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Urso</string>
+	<key>character.bunny</key>
+	<string>Coelho</string>
+	<key>character.crab</key>
+	<string>Caranguejo</string>
+	<key>character.dog</key>
+	<string>Cão</string>
+	<key>character.elephant</key>
+	<string>Elefante</string>
+	<key>character.fox</key>
+	<string>Raposa</string>
+	<key>character.frog</key>
+	<string>Sapo</string>
+	<key>character.lion</key>
+	<string>Leão</string>
+	<key>character.octopus</key>
+	<string>Polvo</string>
+	<key>character.penguin</key>
+	<string>Pinguim</string>
+	<key>common.cancel</key>
+	<string>Cancelar</string>
+	<key>common.continue</key>
+	<string>Continuar</string>
+	<key>common.done</key>
+	<string>Pronto</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Guardar</string>
+	<key>currency.hoop.plural</key>
+	<string>aros</string>
+	<key>currency.hoop.singular</key>
+	<string>aro</string>
+	<key>game.combo %lld</key>
+	<string>Combo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Boa tentativa</string>
+	<key>game.encouragement.1</key>
+	<string>É um começo</string>
+	<key>game.encouragement.2</key>
+	<string>Continua a praticar</string>
+	<key>game.encouragement.3</key>
+	<string>Nada mal</string>
+	<key>game.encouragement.4</key>
+	<string>Muito bem</string>
+	<key>game.encouragement.5</key>
+	<string>Belo resultado</string>
+	<key>game.encouragement.6</key>
+	<string>Muito bem</string>
+	<key>game.encouragement.7</key>
+	<string>Jogaste muito bem</string>
+	<key>game.encouragement.8</key>
+	<string>A meta está à vista</string>
+	<key>game.encouragement.9</key>
+	<string>Estás quase lá</string>
+	<key>game.encouragement.complete</key>
+	<string>Pontuação perfeita!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ganhaste todos os pontos.</string>
+	<key>game.end.completionSuffix</key>
+	<string>concluído!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Fim do jogo</string>
+	<key>game.end.mainMenu</key>
+	<string>Menu principal</string>
+	<key>game.end.playAgain</key>
+	<string>Jogar de novo</string>
+	<key>game.highScore</key>
+	<string>Recorde</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Voltar ao menu principal</string>
+	<key>game.intro.continue</key>
+	<string>Continuar</string>
+	<key>game.intro.progressPaused</key>
+	<string>O teu progresso está em pausa.</string>
+	<key>game.intro.start</key>
+	<string>Começar nível</string>
+	<key>game.intro.startTutorial</key>
+	<string>Iniciar tutorial</string>
+	<key>game.streakBoost.title</key>
+	<string>Pontos a dobrar!</string>
+	<key>goal.period</key>
+	<string>Período da meta</string>
+	<key>goal.promptDaily</key>
+	<string>Quantos minutos queres jogar por dia?</string>
+	<key>goal.promptWeekly</key>
+	<string>Quantos minutos queres jogar por semana?</string>
+	<key>goal.title</key>
+	<string>Meta de jogo</string>
+	<key>goalPeriod.daily</key>
+	<string>Diária</string>
+	<key>goalPeriod.weekly</key>
+	<string>Semanal</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>mais %lld</string>
+	<key>home.totalLabel</key>
+	<string>Total</string>
+	<key>info.mode.fractions.header</key>
+	<string>Partes</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Uma ou várias partes</string>
+	<key>info.mode.fractions.single</key>
+	<string>Sempre uma parte</string>
+	<key>info.mode.header</key>
+	<string>Ordem</string>
+	<key>info.mode.mixed</key>
+	<string>Misturado com níveis anteriores</string>
+	<key>info.mode.order</key>
+	<string>Ordem fixa</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Com números decimais</string>
+	<key>info.mode.percentages.header</key>
+	<string>Tipo</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Sem números decimais</string>
+	<key>info.mode.random</key>
+	<string>Ordem aleatória</string>
+	<key>info.super.all</key>
+	<string>Adição, subtração, multiplicação, divisão e percentagens</string>
+	<key>info.super.basic</key>
+	<string>Adição e subtração</string>
+	<key>info.super.fraction</key>
+	<string>Adição, subtração, multiplicação e divisão</string>
+	<key>info.super.times</key>
+	<string>Adição, subtração e multiplicação</string>
+	<key>info.topic.header</key>
+	<string>Tipos de contas</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Contas em que **somas** um número.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Somar %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Podes apanhar até **%lld cenouras** neste nível.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Podes apanhar até **%lld galinhas** neste nível.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Podes apanhar até **%lld peixes** neste nível.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Podes apanhar até **%lld frascos de mel** neste nível.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Podes apanhar até **%lld aros** neste nível.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Podes apanhar até **%lld biscoitos para cães** neste nível.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Podes apanhar até **%lld pedaços de carne** neste nível.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Podes apanhar até **%lld amendoins** neste nível.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Podes apanhar até **%lld pérolas** neste nível.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Podes apanhar até **%lld camarões** neste nível.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Contas em que **divides** um número.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Dividir por %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Perguntas até ao **nível %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Perguntas do **nível 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Tudo misturado**: somar, subtrair, multiplicar, frações e percentagens.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Sempre **uma só parte** de um todo.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Uma ou mais partes** de um todo.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Perguntas em **ordem fixa**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Respostas **sem decimais**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Também respostas **com decimais**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Perguntas em **ordem aleatória**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Contas com **percentagens**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ de um número</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Contas em que **subtrais** um número.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Subtrair %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Contas em que **multiplicas**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Tabuada do %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MÁX.</string>
+	<key>menu.moreLevels</key>
+	<string>Mais níveis</string>
+	<key>menu.premiumLevels</key>
+	<string>Níveis premium</string>
+	<key>menu.startHere</key>
+	<string>Começa aqui</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Desbloqueia mais com Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Várias</string>
+	<key>mode.fractions.single</key>
+	<string>Uma</string>
+	<key>mode.mixed</key>
+	<string>Misturado</string>
+	<key>mode.order</key>
+	<string>Ordem</string>
+	<key>mode.percentages.decimal</key>
+	<string>Decimal</string>
+	<key>mode.percentages.whole</key>
+	<string>Inteiro</string>
+	<key>mode.random</key>
+	<string>Aleatório</string>
+	<key>name.placeholder</key>
+	<string>O teu nome</string>
+	<key>name.whatsYourName</key>
+	<string>Como te chamas?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Ganhe mais alguns aros para desbloquear este animal! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Seus animais estão esperando. Volte para jogar e continue coletando aros!</string>
+	<key>notif.comeback.title</key>
+	<string>Que saudades de você! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Vamos fazer o dia 3 acontecer! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium inclui %lld níveis para cada tópico e todos os 10 animais. A aventura continua!</string>
+	<key>notif.premium.title</key>
+	<string>Desbloqueie mais níveis e animais! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Já se passaram %lld dias. Vamos resolver alguns exercícios de matemática e ganhar mais aros!</string>
+	<key>notif.reactivate.title</key>
+	<string>Pronto para jogar de novo? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Várias contas misturadas.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Já és bastante bom</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Pratica contas por ordem.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Acabaste de começar</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Contas por ordem aleatória.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Já praticaste um pouco</string>
+	<key>onboarding.level.title</key>
+	<string>Quão bom já és nisto?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Vamos começar. Como te chamas?</string>
+	<key>onboarding.name.title</key>
+	<string>Fazer contas nunca foi tão divertido!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Escolhe um tema para começar.</string>
+	<key>onboarding.subject.title</key>
+	<string>O que queres aprender?</string>
+	<key>parentGate.approved</key>
+	<string>Aprovado</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Tentativas: %1$lld de %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Premir: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>círculo</string>
+	<key>parentGate.shape.diamond</key>
+	<string>losango</string>
+	<key>parentGate.shape.heart</key>
+	<string>coração</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>hexágono</string>
+	<key>parentGate.shape.plus</key>
+	<string>sinal de mais</string>
+	<key>parentGate.shape.square</key>
+	<string>quadrado</string>
+	<key>parentGate.shape.star</key>
+	<string>estrela</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triângulo</string>
+	<key>parentGate.subtitle</key>
+	<string>Para proteger os jogadores mais novos, um adulto tem de concluir esta verificação antes de continuar para a compra.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Toques: %1$lld de %2$lld</string>
+	<key>parentGate.title</key>
+	<string>É necessária a aprovação de um adulto</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponível a partir de %lld troféus</string>
+	<key>premium.availableFromStart</key>
+	<string>Disponível desde o início</string>
+	<key>premium.characterUnlocked</key>
+	<string>NOVA PERSONAGEM DESBLOQUEADA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Já ganhaste %lld aros</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Exclusivo com Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Com Premium, podes jogar livremente com os 10 animais.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Acesso a todos os animais</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Sempre novas contas para praticar.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 níveis por tema</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Joga sem interrupções.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Sem anúncios</string>
+	<key>premium.oneTime</key>
+	<string>Compra única. Teu para sempre.</string>
+	<key>premium.restore</key>
+	<string>Restaurar compras</string>
+	<key>premium.start</key>
+	<string>Começar</string>
+	<key>premium.storeUnavailable</key>
+	<string>A loja não está disponível agora. Tenta novamente mais tarde.</string>
+	<key>premium.unlock</key>
+	<string>Desbloquear Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Desbloquear Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Desbloqueado com Premium</string>
+	<key>result.complete</key>
+	<string>Nível concluído!</string>
+	<key>result.stopped</key>
+	<string>Em pausa</string>
+	<key>settings.character</key>
+	<string>Personagem</string>
+	<key>settings.characterInfo</key>
+	<string>Cada animal dá ao jogo inteiro o seu próprio tema de cores.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Personalizado: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Meta diária</string>
+	<key>settings.goalInfo</key>
+	<string>A meta da sequência começa nos 5 minutos por dia. Só conta o tempo de jogo ativo.</string>
+	<key>settings.music</key>
+	<string>Música</string>
+	<key>settings.playGoals</key>
+	<string>Metas de jogo</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium desbloqueado. Obrigado!</string>
+	<key>settings.sound</key>
+	<string>Som</string>
+	<key>settings.soundEffects</key>
+	<string>Música e efeitos</string>
+	<key>settings.soundInfo</key>
+	<string>Desliga o som para jogar em silêncio. O jogo funciona exatamente da mesma forma.</string>
+	<key>settings.title</key>
+	<string>Definições</string>
+	<key>streak.dayOne</key>
+	<string>Dia 1</string>
+	<key>topic.addition</key>
+	<string>Somar</string>
+	<key>topic.addition.detail</key>
+	<string>Só somar</string>
+	<key>topic.fractions</key>
+	<string>Frações</string>
+	<key>topic.fractions.detail</key>
+	<string>Só dividir</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Contas misturadas</string>
+	<key>topic.percentages</key>
+	<string>Percentagens</string>
+	<key>topic.percentages.detail</key>
+	<string>Só percentagens</string>
+	<key>topic.subtraction</key>
+	<string>Subtrair</string>
+	<key>topic.subtraction.detail</key>
+	<string>Só subtrair</string>
+	<key>topic.tables</key>
+	<string>Tabuadas</string>
+	<key>topic.tables.detail</key>
+	<string>Só multiplicar</string>
+	<key>tutorial.notice.message</key>
+	<string>Estás a meio de um jogo. Acaba-o primeiro ou escolhe um nível que ainda não começaste para fazer o tutorial.</string>
+	<key>tutorial.notice.title</key>
+	<string>Só no início de um jogo</string>
+</dict>
+</plist>

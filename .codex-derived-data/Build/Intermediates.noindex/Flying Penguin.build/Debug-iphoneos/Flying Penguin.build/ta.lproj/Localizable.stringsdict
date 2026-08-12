@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>இன்னும் %lld வளையம் மட்டுமே! ⭕</string>
+			<key>other</key>
+			<string>இன்னும் %lld வளையம் மட்டுமே! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>இன்று %lld நிமிடம் விளையாடி இன்னும் சில சேகரிக்கவும்.</string>
+			<key>other</key>
+			<string>இன்று %lld நிமிடம் விளையாடி இன்னும் சில சேகரிக்கவும்.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld வளையம் சேகரித்தாய்! ⭕</string>
+			<key>other</key>
+			<string>%lld வளையம் சேகரித்தாய்! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld நிமிடம் விளையாடி உங்கள் தொடரை வளர்த்துக் கொள்ளுங்கள்.</string>
+			<key>other</key>
+			<string>%lld நிமிடங்கள் விளையாடி உங்கள் தொடரை வளர்த்துக் கொள்ளுங்கள்.</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld நிமிடம் விளையாடி உங்கள் தொடரைத் தொடருங்கள்!</string>
+			<key>other</key>
+			<string>%lld நிமிடங்கள் விளையாடி உங்கள் தொடரைத் தொடருங்கள்!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>உங்கள் தினசரி விளையாட்டுத் தொடர் %lld நாட்களை எட்டியுள்ளது! 🔥</string>
+			<key>other</key>
+			<string>உங்கள் தினசரி விளையாட்டுத் தொடர் %lld நாட்களை எட்டியுள்ளது! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>இது உங்கள் மொத்த வளையம் %lld ஆகக் கொண்டுவருகிறது. அற்புதமான வேலை!</string>
+			<key>other</key>
+			<string>இது உங்கள் மொத்த வளையம் %lld ஆகக் கொண்டுவருகிறது. அற்புதமான வேலை!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>இந்த வாரம் %lld வளையம்ப் பெற்றுள்ளீர்கள்! 🎉</string>
+			<key>other</key>
+			<string>இந்த வாரம் %lld வளையம்ப் பெற்றுள்ளீர்கள்! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ ஐ %2$lld விநாடிகள் அழுத்திப் பிடிக்கவும்.</string>
+			<key>other</key>
+			<string>%1$@ ஐ %2$lld விநாடிகள் அழுத்திப் பிடிக்கவும்.</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>இப்போது %2$@ ஐ %1$lld முறை தட்டவும்.</string>
+			<key>other</key>
+			<string>இப்போது %2$@ ஐ %1$lld முறை தட்டவும்.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

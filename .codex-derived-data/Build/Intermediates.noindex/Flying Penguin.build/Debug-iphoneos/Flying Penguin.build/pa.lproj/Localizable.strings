@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>ਭਾਲੂ</string>
+	<key>character.bunny</key>
+	<string>ਖਰਗੋਸ਼</string>
+	<key>character.crab</key>
+	<string>ਕੇਕੜਾ</string>
+	<key>character.dog</key>
+	<string>ਕੁੱਤਾ</string>
+	<key>character.elephant</key>
+	<string>ਹਾਥੀ</string>
+	<key>character.fox</key>
+	<string>ਲੂੰਬੜੀ</string>
+	<key>character.frog</key>
+	<string>ਡੱਡੂ</string>
+	<key>character.lion</key>
+	<string>ਸ਼ੇਰ</string>
+	<key>character.octopus</key>
+	<string>ਆਕਟੋਪਸ</string>
+	<key>character.penguin</key>
+	<string>ਪੇਂਗੁਇਨ</string>
+	<key>common.cancel</key>
+	<string>ਰੱਦ ਕਰੋ</string>
+	<key>common.continue</key>
+	<string>ਅੱਗੇ</string>
+	<key>common.done</key>
+	<string>ਹੋ ਗਿਆ</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld ਮਿੰਟ</string>
+	<key>common.ok</key>
+	<string>ਠੀਕ ਹੈ</string>
+	<key>common.save</key>
+	<string>ਸੰਭਾਲੋ</string>
+	<key>currency.hoop.plural</key>
+	<string>ਛੱਲੇ</string>
+	<key>currency.hoop.singular</key>
+	<string>ਛੱਲਾ</string>
+	<key>game.combo %lld</key>
+	<string>ਕੌਂਬੋ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>ਵਧੀਆ ਕੋਸ਼ਿਸ਼</string>
+	<key>game.encouragement.1</key>
+	<string>ਸ਼ੁਰੂਆਤ ਹੋ ਗਈ</string>
+	<key>game.encouragement.2</key>
+	<string>ਅਭਿਆਸ ਕਰਦੇ ਰਹੋ</string>
+	<key>game.encouragement.3</key>
+	<string>ਬਿਲਕੁਲ ਮਾੜਾ ਨਹੀਂ</string>
+	<key>game.encouragement.4</key>
+	<string>ਵਧੀਆ ਕਰ ਰਹੇ ਹੋ</string>
+	<key>game.encouragement.5</key>
+	<string>ਵਧੀਆ ਪ੍ਰਦਰਸ਼ਨ</string>
+	<key>game.encouragement.6</key>
+	<string>ਸ਼ਾਬਾਸ਼</string>
+	<key>game.encouragement.7</key>
+	<string>ਬਹੁਤ ਵਧੀਆ ਖੇਡੇ</string>
+	<key>game.encouragement.8</key>
+	<string>ਅੰਤ ਨੇੜੇ ਹੈ</string>
+	<key>game.encouragement.9</key>
+	<string>ਤੁਸੀਂ ਲਗਭਗ ਪਹੁੰਚ ਗਏ</string>
+	<key>game.encouragement.complete</key>
+	<string>ਬਿਲਕੁਲ ਸਹੀ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ਤੁਸੀਂ ਹਰ ਅੰਕ ਕਮਾਇਆ।</string>
+	<key>game.end.completionSuffix</key>
+	<string>ਪੂਰਾ!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ਖੇਡ ਖਤਮ</string>
+	<key>game.end.mainMenu</key>
+	<string>ਮੁੱਖ ਮੀਨੂ</string>
+	<key>game.end.playAgain</key>
+	<string>ਫਿਰ ਖੇਡੋ</string>
+	<key>game.highScore</key>
+	<string>ਸਭ ਤੋਂ ਵੱਧ ਸਕੋਰ</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>ਮੁੱਖ ਮੀਨੂ ਵੱਲ</string>
+	<key>game.intro.continue</key>
+	<string>ਅੱਗੇ ਖੇਡੋ</string>
+	<key>game.intro.progressPaused</key>
+	<string>ਤੁਹਾਡੀ ਤਰੱਕੀ ਰੁਕੀ ਹੋਈ ਹੈ।</string>
+	<key>game.intro.start</key>
+	<string>ਲੈਵਲ ਸ਼ੁਰੂ ਕਰੋ</string>
+	<key>game.intro.startTutorial</key>
+	<string>ਟਿਊਟੋਰਿਅਲ ਸ਼ੁਰੂ ਕਰੋ</string>
+	<key>game.streakBoost.title</key>
+	<string>ਦੁੱਗਣੇ ਅੰਕ!</string>
+	<key>goal.period</key>
+	<string>ਟੀਚੇ ਦੀ ਮਿਆਦ</string>
+	<key>goal.promptDaily</key>
+	<string>ਤੁਸੀਂ ਹਰ ਰੋਜ਼ ਕਿੰਨੇ ਮਿੰਟ ਖੇਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+	<key>goal.promptWeekly</key>
+	<string>ਤੁਸੀਂ ਹਰ ਹਫ਼ਤੇ ਕਿੰਨੇ ਮਿੰਟ ਖੇਡਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+	<key>goal.title</key>
+	<string>ਖੇਡਣ ਦਾ ਟੀਚਾ</string>
+	<key>goalPeriod.daily</key>
+	<string>ਰੋਜ਼ਾਨਾ</string>
+	<key>goalPeriod.weekly</key>
+	<string>ਹਫ਼ਤਾਵਾਰੀ</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ਹੋਰ %lld</string>
+	<key>home.totalLabel</key>
+	<string>ਕੁੱਲ</string>
+	<key>info.mode.fractions.header</key>
+	<string>ਹਿੱਸੇ</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>ਇੱਕ ਜਾਂ ਕਈ ਹਿੱਸੇ</string>
+	<key>info.mode.fractions.single</key>
+	<string>ਹਮੇਸ਼ਾ ਇੱਕ ਹਿੱਸਾ</string>
+	<key>info.mode.header</key>
+	<string>ਕ੍ਰਮ</string>
+	<key>info.mode.mixed</key>
+	<string>ਹੇਠਲੇ ਲੈਵਲਾਂ ਨਾਲ ਮਿਲੇ-ਜੁਲੇ</string>
+	<key>info.mode.order</key>
+	<string>ਪੱਕਾ ਕ੍ਰਮ</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>ਦਸ਼ਮਲਵ ਗਿਣਤੀਆਂ ਸਮੇਤ</string>
+	<key>info.mode.percentages.header</key>
+	<string>ਕਿਸਮ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>ਦਸ਼ਮਲਵ ਤੋਂ ਬਿਨਾਂ</string>
+	<key>info.mode.random</key>
+	<string>ਬੇਤਰਤੀਬ ਕ੍ਰਮ</string>
+	<key>info.super.all</key>
+	<string>ਜੋੜ, ਘਟਾਓ, ਗੁਣਾ, ਭਾਗ ਅਤੇ ਪ੍ਰਤੀਸ਼ਤ</string>
+	<key>info.super.basic</key>
+	<string>ਜੋੜ ਅਤੇ ਘਟਾਓ</string>
+	<key>info.super.fraction</key>
+	<string>ਜੋੜ, ਘਟਾਓ, ਗੁਣਾ ਅਤੇ ਭਾਗ</string>
+	<key>info.super.times</key>
+	<string>ਜੋੜ, ਘਟਾਓ ਅਤੇ ਗੁਣਾ</string>
+	<key>info.topic.header</key>
+	<string>ਸਵਾਲਾਂ ਦੀਆਂ ਕਿਸਮਾਂ</string>
+	<key>levelIntro.addition.intro</key>
+	<string>ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਸੰਖਿਆ **ਜੋੜਦੇ** ਹੋ।</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lld ਜੋੜੋ</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਗਾਜਰਾਂ** ਇਕੱਠੀਆਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਮੁਰਗੀਆਂ** ਇਕੱਠੀਆਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਮੱਛੀਆਂ** ਇਕੱਠੀਆਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਸ਼ਹਿਦ ਦੇ ਘੜੇ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਛੱਲੇ** ਇਕੱਠੀਆਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਕੁੱਤੇ ਦੇ ਬਿਸਕੁਟ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਮਾਸ ਦੇ ਟੁਕੜੇ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਮੂੰਗਫਲੀਆਂ** ਇਕੱਠੀਆਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਮੋਤੀ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਝੀਂਗੇ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਸੰਖਿਆ ਨੂੰ **ਭਾਗ** ਦਿੰਦੇ ਹੋ।</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>%lld ਨਾਲ ਭਾਗ</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>**ਲੈਵਲ %lld** ਤੱਕ ਦੇ ਸਵਾਲ।</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>**ਲੈਵਲ 1** ਦੇ ਸਵਾਲ।</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**ਸਭ ਕੁਝ ਮਿਲਿਆ-ਜੁਲਿਆ**: ਜੋੜ, ਘਟਾਓ, ਗੁਣਾ, ਭਿੰਨਾਂ ਤੇ ਪ੍ਰਤੀਸ਼ਤ।</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>ਸੁਪਰਮਿਕਸ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>ਹਮੇਸ਼ਾਂ ਪੂਰੇ ਦਾ **ਇੱਕ ਹਿੱਸਾ**।</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>ਪੂਰੇ ਦੇ **ਇੱਕ ਜਾਂ ਵੱਧ ਹਿੱਸੇ**।</string>
+	<key>levelIntro.mode.order</key>
+	<string>ਸਵਾਲ **ਤੈਅ ਕ੍ਰਮ** ਵਿੱਚ।</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>ਜਵਾਬ **ਦਸ਼ਮਲਵ ਤੋਂ ਬਿਨਾਂ**।</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>ਜਵਾਬ **ਦਸ਼ਮਲਵ ਨਾਲ ਵੀ**।</string>
+	<key>levelIntro.mode.random</key>
+	<string>ਸਵਾਲ **ਰਲਵੇਂ ਕ੍ਰਮ** ਵਿੱਚ।</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>**ਪ੍ਰਤੀਸ਼ਤ** ਵਾਲੇ ਸਵਾਲ।</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>ਕਿਸੇ ਸੰਖਿਆ ਦਾ %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਸੰਖਿਆ **ਘਟਾਉਂਦੇ** ਹੋ।</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lld ਘਟਾਓ</string>
+	<key>levelIntro.tables.intro</key>
+	<string>ਜਿੱਥੇ ਤੁਸੀਂ **ਗੁਣਾ** ਕਰਦੇ ਹੋ।</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld ਦਾ ਪਹਾੜਾ</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>ਹੋਰ ਲੈਵਲ</string>
+	<key>menu.premiumLevels</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਲੈਵਲ</string>
+	<key>menu.startHere</key>
+	<string>ਇੱਥੋਂ ਸ਼ੁਰੂ ਕਰੋ</string>
+	<key>menu.unlockWithPremium</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਨਾਲ ਹੋਰ ਖੋਲ੍ਹੋ</string>
+	<key>mode.fractions.multiple</key>
+	<string>ਕਈ</string>
+	<key>mode.fractions.single</key>
+	<string>ਇੱਕ</string>
+	<key>mode.mixed</key>
+	<string>ਮਿਲਿਆ-ਜੁਲਿਆ</string>
+	<key>mode.order</key>
+	<string>ਕ੍ਰਮ</string>
+	<key>mode.percentages.decimal</key>
+	<string>ਦਸ਼ਮਲਵ</string>
+	<key>mode.percentages.whole</key>
+	<string>ਪੂਰੀ ਗਿਣਤੀ</string>
+	<key>mode.random</key>
+	<string>ਬੇਤਰਤੀਬ</string>
+	<key>name.placeholder</key>
+	<string>ਤੁਹਾਡਾ ਨਾਮ</string>
+	<key>name.whatsYourName</key>
+	<string>ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: ਇਸ ਜਾਨਵਰ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਕੁਝ ਹੋਰ ਛੱਲੇ ਕਮਾਓ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ਤੁਹਾਡੇ ਜਾਨਵਰ ਉਡੀਕ ਕਰ ਰਹੇ ਹਨ। ਖੇਡਣ ਲਈ ਵਾਪਸ ਆਓ ਅਤੇ ਛੱਲੇ ਇਕੱਠੀਆਂ ਕਰਦੇ ਰਹੋ!</string>
+	<key>notif.comeback.title</key>
+	<string>ਅਸੀਂ ਤੁਹਾਨੂੰ ਯਾਦ ਕਰਦੇ ਹਾਂ! 👋</string>
+	<key>notif.day3.title</key>
+	<string>ਆਉ ਦਿਨ 3 ਨੂੰ ਪੂਰਾ ਕਰੀਏ! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>ਜੰਪਿੰਗ ਫੌਕਸ ਪ੍ਰੀਮੀਅਮ ਵਿੱਚ ਹਰ ਵਿਸ਼ੇ ਲਈ %lld ਪੱਧਰ ਅਤੇ ਸਾਰੇ 10 ਜਾਨਵਰ ਸ਼ਾਮਲ ਹਨ। ਸਾਹਸ ਜਾਰੀ ਰਹਿੰਦਾ ਹੈ!</string>
+	<key>notif.premium.title</key>
+	<string>ਹੋਰ ਪੱਧਰਾਂ ਅਤੇ ਜਾਨਵਰਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰੋ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ਦਿਨ ਹੋ ਗਏ ਹਨ। ਆਓ ਕੁਝ ਗਣਿਤ ਅਭਿਆਸਾਂ ਨੂੰ ਹੱਲ ਕਰੀਏ ਅਤੇ ਹੋਰ ਛੱਲੇ ਹਾਸਲ ਕਰੀਏ!</string>
+	<key>notif.reactivate.title</key>
+	<string>ਦੁਬਾਰਾ ਖੇਡਣ ਲਈ ਤਿਆਰ ਹੋ? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>ਵੱਖ-ਵੱਖ ਮਿਲੇ-ਜੁਲੇ ਹਿਸਾਬ ਇਕੱਠੇ।</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>ਪਹਿਲਾਂ ਹੀ ਕਾਫ਼ੀ ਵਧੀਆ</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ਕ੍ਰਮਵਾਰ ਹਿਸਾਬਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>ਹੁਣੇ ਸ਼ੁਰੂ ਕੀਤਾ</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>ਬੇਤਰਤੀਬ ਕ੍ਰਮ ਵਿੱਚ ਹਿਸਾਬ।</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>ਥੋੜ੍ਹਾ ਅਭਿਆਸ ਹੋ ਚੁੱਕਾ</string>
+	<key>onboarding.level.title</key>
+	<string>ਤੁਸੀਂ ਇਸ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ ਕਿੰਨੇ ਚੰਗੇ ਹੋ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ। ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?</string>
+	<key>onboarding.name.title</key>
+	<string>ਹਿਸਾਬ ਕਰਨਾ ਕਦੇ ਇੰਨਾ ਮਜ਼ੇਦਾਰ ਨਹੀਂ ਸੀ!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇੱਕ ਵਿਸ਼ਾ ਚੁਣੋ।</string>
+	<key>onboarding.subject.title</key>
+	<string>ਤੁਸੀਂ ਕੀ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+	<key>parentGate.approved</key>
+	<string>ਮਨਜ਼ੂਰ</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ਕੋਸ਼ਿਸ਼ਾਂ: %1$lld ਵਿੱਚੋਂ %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>ਦਬਾ ਕੇ ਰੱਖੋ: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ਗੋਲ</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ਹੀਰਾ</string>
+	<key>parentGate.shape.heart</key>
+	<string>ਦਿਲ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>ਛੇਕੋਣ</string>
+	<key>parentGate.shape.plus</key>
+	<string>ਜੋੜ ਦਾ ਨਿਸ਼ਾਨ</string>
+	<key>parentGate.shape.square</key>
+	<string>ਵਰਗ</string>
+	<key>parentGate.shape.star</key>
+	<string>ਤਾਰਾ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>ਤਿਕੋਣ</string>
+	<key>parentGate.subtitle</key>
+	<string>ਨੰਨੇ ਖਿਡਾਰੀਆਂ ਦੀ ਸੁਰੱਖਿਆ ਲਈ, ਖਰੀਦ ਅੱਗੇ ਵਧਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਕਿਸੇ ਵੱਡੇ ਨੂੰ ਇਹ ਜਾਂਚ ਪੂਰੀ ਕਰਨੀ ਪਵੇਗੀ।</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>ਟੈਪ: %1$lld ਵਿੱਚੋਂ %2$lld</string>
+	<key>parentGate.title</key>
+	<string>ਵੱਡੇ ਦੀ ਮਨਜ਼ੂਰੀ ਲੋੜੀਂਦੀ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ਟ੍ਰਾਫੀਆਂ ਤੋਂ ਉਪਲਬਧ</string>
+	<key>premium.availableFromStart</key>
+	<string>ਸ਼ੁਰੂ ਤੋਂ ਉਪਲਬਧ</string>
+	<key>premium.characterUnlocked</key>
+	<string>ਨਵਾਂ ਕਿਰਦਾਰ ਅਨਲੌਕ ਹੋਇਆ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ਤੁਸੀਂ %lld ਛੱਲੇ ਕਮਾਈਆਂ</string>
+	<key>premium.exclusiveBadge</key>
+	<string>ਸਿਰਫ਼ Premium ਨਾਲ</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਨਾਲ ਸਾਰੇ 10 ਜਾਨਵਰਾਂ ਨਾਲ ਖੁੱਲ੍ਹ ਕੇ ਖੇਡੋ।</string>
+	<key>premium.feature.animals.title</key>
+	<string>ਸਾਰੇ ਜਾਨਵਰ ਖੋਲ੍ਹੋ</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>ਅਭਿਆਸ ਲਈ ਹਮੇਸ਼ਾ ਕਾਫ਼ੀ ਨਵੇਂ ਹਿਸਾਬ।</string>
+	<key>premium.feature.levels.title</key>
+	<string>ਹਰ ਵਿਸ਼ੇ ਦੇ 99 ਲੈਵਲ</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>ਬਿਨਾਂ ਰੁਕਾਵਟ ਦੇ ਖੇਡੋ।</string>
+	<key>premium.feature.noAds.title</key>
+	<string>ਕੋਈ ਇਸ਼ਤਿਹਾਰ ਨਹੀਂ</string>
+	<key>premium.oneTime</key>
+	<string>ਇੱਕ ਵਾਰ ਖਰੀਦੋ। ਹਮੇਸ਼ਾ ਤੁਹਾਡਾ।</string>
+	<key>premium.restore</key>
+	<string>ਖਰੀਦਾਂ ਮੁੜ ਲਵੋ</string>
+	<key>premium.start</key>
+	<string>ਸ਼ੁਰੂ</string>
+	<key>premium.storeUnavailable</key>
+	<string>ਸਟੋਰ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ। ਬਾਅਦ ਵਿੱਚ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+	<key>premium.unlock</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਖੋਲ੍ਹੋ</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਖੋਲ੍ਹੋ · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premium ਨਾਲ ਅਨਲੌਕ ਹੋਇਆ</string>
+	<key>result.complete</key>
+	<string>ਲੈਵਲ ਪੂਰਾ!</string>
+	<key>result.stopped</key>
+	<string>ਰੁਕਿਆ</string>
+	<key>settings.character</key>
+	<string>ਕਿਰਦਾਰ</string>
+	<key>settings.characterInfo</key>
+	<string>ਹਰ ਜਾਨਵਰ ਪੂਰੀ ਖੇਡ ਲਈ ਆਪਣਾ ਰੰਗੀਨ ਥੀਮ ਲਿਆਉਂਦਾ ਹੈ।</string>
+	<key>settings.customMinutes %lld</key>
+	<string>ਆਪਣਾ: %lld ਮਿੰਟ</string>
+	<key>settings.dailyGoal</key>
+	<string>ਰੋਜ਼ਾਨਾ ਟੀਚਾ</string>
+	<key>settings.goalInfo</key>
+	<string>ਲਗਾਤਾਰ ਖੇਡਣ ਦਾ ਟੀਚਾ ਹਰ ਰੋਜ਼ 5 ਮਿੰਟ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ। ਸਿਰਫ਼ ਸਰਗਰਮ ਖੇਡ ਸਮਾਂ ਗਿਣਿਆ ਜਾਂਦਾ ਹੈ।</string>
+	<key>settings.music</key>
+	<string>ਸੰਗੀਤ</string>
+	<key>settings.playGoals</key>
+	<string>ਖੇਡਣ ਦੇ ਟੀਚੇ</string>
+	<key>settings.premiumUnlocked</key>
+	<string>ਪ੍ਰੀਮੀਅਮ ਖੁੱਲ੍ਹ ਗਿਆ। ਧੰਨਵਾਦ!</string>
+	<key>settings.sound</key>
+	<string>ਆਵਾਜ਼</string>
+	<key>settings.soundEffects</key>
+	<string>ਸੰਗੀਤ ਤੇ ਧੁਨੀ ਪ੍ਰਭਾਵ</string>
+	<key>settings.soundInfo</key>
+	<string>ਚੁੱਪਚਾਪ ਖੇਡਣ ਲਈ ਆਵਾਜ਼ ਬੰਦ ਕਰੋ। ਖੇਡ ਓਹੀ ਰਹੇਗੀ।</string>
+	<key>settings.title</key>
+	<string>ਸੈਟਿੰਗਾਂ</string>
+	<key>streak.dayOne</key>
+	<string>ਦਿਨ 1</string>
+	<key>topic.addition</key>
+	<string>ਜੋੜ</string>
+	<key>topic.addition.detail</key>
+	<string>ਸਿਰਫ਼ ਜੋੜ</string>
+	<key>topic.fractions</key>
+	<string>ਭਿੰਨਾਂ</string>
+	<key>topic.fractions.detail</key>
+	<string>ਸਿਰਫ਼ ਭਾਗ</string>
+	<key>topic.mixed</key>
+	<string>ਸੁਪਰਮਿਕਸ</string>
+	<key>topic.mixed.detail</key>
+	<string>ਮਿਲੇ-ਜੁਲੇ ਹਿਸਾਬ</string>
+	<key>topic.percentages</key>
+	<string>ਪ੍ਰਤੀਸ਼ਤ</string>
+	<key>topic.percentages.detail</key>
+	<string>ਸਿਰਫ਼ ਪ੍ਰਤੀਸ਼ਤ</string>
+	<key>topic.subtraction</key>
+	<string>ਘਟਾਓ</string>
+	<key>topic.subtraction.detail</key>
+	<string>ਸਿਰਫ਼ ਘਟਾਓ</string>
+	<key>topic.tables</key>
+	<string>ਪਹਾੜੇ</string>
+	<key>topic.tables.detail</key>
+	<string>ਸਿਰਫ਼ ਗੁਣਾ</string>
+	<key>tutorial.notice.message</key>
+	<string>ਤੁਸੀਂ ਇੱਕ ਖੇਡ ਦੇ ਵਿਚਕਾਰ ਹੋ। ਪਹਿਲਾਂ ਇਸਨੂੰ ਪੂਰਾ ਕਰੋ ਜਾਂ ਕੋਈ ਨਾ-ਸ਼ੁਰੂ ਕੀਤਾ ਲੈਵਲ ਚੁਣੋ, ਫਿਰ ਟਿਊਟੋਰਿਅਲ ਖੇਡੋ।</string>
+	<key>tutorial.notice.title</key>
+	<string>ਸਿਰਫ਼ ਖੇਡ ਦੀ ਸ਼ੁਰੂਆਤ ਵਿੱਚ</string>
+</dict>
+</plist>

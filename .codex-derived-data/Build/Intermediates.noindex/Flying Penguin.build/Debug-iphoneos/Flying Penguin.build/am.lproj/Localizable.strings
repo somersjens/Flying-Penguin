@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>ድብ</string>
+	<key>character.bunny</key>
+	<string>ጥንቸል</string>
+	<key>character.crab</key>
+	<string>ሸርጣን</string>
+	<key>character.dog</key>
+	<string>ውሻ</string>
+	<key>character.elephant</key>
+	<string>ዝሆን</string>
+	<key>character.fox</key>
+	<string>ቀበሮ</string>
+	<key>character.frog</key>
+	<string>እንቁራሪት</string>
+	<key>character.lion</key>
+	<string>አንበሳ</string>
+	<key>character.octopus</key>
+	<string>ኦክቶፐስ</string>
+	<key>character.penguin</key>
+	<string>ፔንግዊን</string>
+	<key>common.cancel</key>
+	<string>ሰርዝ</string>
+	<key>common.continue</key>
+	<string>ቀጥል</string>
+	<key>common.done</key>
+	<string>ጨርሷል</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld ደቂቃ</string>
+	<key>common.ok</key>
+	<string>እሺ</string>
+	<key>common.save</key>
+	<string>አስቀምጥ</string>
+	<key>currency.hoop.plural</key>
+	<string>ቀለበቶች</string>
+	<key>currency.hoop.singular</key>
+	<string>ቀለበት</string>
+	<key>game.combo %lld</key>
+	<string>ኮምቦ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>ጥሩ ሙከራ</string>
+	<key>game.encouragement.1</key>
+	<string>ጥሩ ጅምር</string>
+	<key>game.encouragement.2</key>
+	<string>ልምምድህን ቀጥል</string>
+	<key>game.encouragement.3</key>
+	<string>መጥፎ አይደለም</string>
+	<key>game.encouragement.4</key>
+	<string>ጥሩ እየሠራህ ነው</string>
+	<key>game.encouragement.5</key>
+	<string>ጥሩ ውጤት</string>
+	<key>game.encouragement.6</key>
+	<string>ጎበዝ</string>
+	<key>game.encouragement.7</key>
+	<string>በጣም ጥሩ</string>
+	<key>game.encouragement.8</key>
+	<string>መጨረሻው ቀርቧል</string>
+	<key>game.encouragement.9</key>
+	<string>ልትደርስ ነው</string>
+	<key>game.encouragement.complete</key>
+	<string>ሁሉም ትክክል!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>እያንዳንዱን ነጥብ አግኝተሃል።</string>
+	<key>game.end.completionSuffix</key>
+	<string>ተጠናቋል!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ጨዋታው አልቋል</string>
+	<key>game.end.mainMenu</key>
+	<string>ዋና ምናሌ</string>
+	<key>game.end.playAgain</key>
+	<string>እንደገና ተጫወት</string>
+	<key>game.highScore</key>
+	<string>ከፍተኛ ውጤት</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>ወደ ዋና ምናሌ ተመለስ</string>
+	<key>game.intro.continue</key>
+	<string>መጫወትህን ቀጥል</string>
+	<key>game.intro.progressPaused</key>
+	<string>እድገትህ ቆሟል።</string>
+	<key>game.intro.start</key>
+	<string>ደረጃውን ጀምር</string>
+	<key>game.intro.startTutorial</key>
+	<string>መማሪያውን ጀምር</string>
+	<key>game.streakBoost.title</key>
+	<string>ድርብ ነጥብ!</string>
+	<key>goal.period</key>
+	<string>የግብ ጊዜ</string>
+	<key>goal.promptDaily</key>
+	<string>በቀን ስንት ደቂቃ መጫወት ትፈልጋለህ?</string>
+	<key>goal.promptWeekly</key>
+	<string>በሳምንት ስንት ደቂቃ መጫወት ትፈልጋለህ?</string>
+	<key>goal.title</key>
+	<string>የጨዋታ ግብ</string>
+	<key>goalPeriod.daily</key>
+	<string>በየቀኑ</string>
+	<key>goalPeriod.weekly</key>
+	<string>በየሳምንቱ</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ተጨማሪ %lld</string>
+	<key>home.totalLabel</key>
+	<string>ጠቅላላ</string>
+	<key>info.mode.fractions.header</key>
+	<string>ክፍሎች</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>አንድ እና ብዙ ክፍሎች</string>
+	<key>info.mode.fractions.single</key>
+	<string>ሁልጊዜ አንድ ክፍል</string>
+	<key>info.mode.header</key>
+	<string>ቅደም ተከተል</string>
+	<key>info.mode.mixed</key>
+	<string>ከዝቅተኛ ደረጃዎች ጋር ድብልቅ</string>
+	<key>info.mode.order</key>
+	<string>ቋሚ ቅደም ተከተል</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>የአስርዮሽ ቁጥሮችን ጨምሮ</string>
+	<key>info.mode.percentages.header</key>
+	<string>ዓይነት</string>
+	<key>info.mode.percentages.whole</key>
+	<string>ያለ አስርዮሽ ቁጥሮች</string>
+	<key>info.mode.random</key>
+	<string>የዘፈቀደ ቅደም ተከተል</string>
+	<key>info.super.all</key>
+	<string>መደመር፣ መቀነስ፣ ማባዛት፣ ማካፈል እና መቶኛ</string>
+	<key>info.super.basic</key>
+	<string>መደመር እና መቀነስ</string>
+	<key>info.super.fraction</key>
+	<string>መደመር፣ መቀነስ፣ ማባዛት እና ማካፈል</string>
+	<key>info.super.times</key>
+	<string>መደመር፣ መቀነስ እና ማባዛት</string>
+	<key>info.topic.header</key>
+	<string>የጥያቄ ዓይነቶች</string>
+	<key>levelIntro.addition.intro</key>
+	<string>ቁጥርን **የምትደምርባቸው** ስሌቶች።</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lld ጨምር</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ካሮት** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ዶሮ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ዓሣ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld የማር ማሰሮ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ቀለበቶች** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld የውሻ ብስኩት** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld የስጋ ቁራጭ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ኦቾሎኒ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ዕንቁ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ሽሪምፕ** መሰብሰብ ትችላለህ።</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>ቁጥርን **የምትከፍልባቸው** ስሌቶች።</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>በ %lld ክፈል</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>እስከ **ደረጃ %lld** ያሉ ጥያቄዎች።</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>ከ **ደረጃ 1** የሚጀምሩ ጥያቄዎች።</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**ሁሉም ተቀላቅሎ**፦ መደመር፣ መቀነስ፣ ማባዛት፣ ክፍልፋይ እና መቶኛ።</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>ሱፐርሚክስ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>ሁልጊዜ ከአንድ ሙሉ **አንድ ክፍል**።</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>ከአንድ ሙሉ **አንድ ወይም ከዚያ በላይ ክፍሎች**።</string>
+	<key>levelIntro.mode.order</key>
+	<string>ጥያቄዎች **በቋሚ ቅደም ተከተል**።</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>መልሶች **ያለ ዴሲማል**።</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>መልሶች **ከዴሲማል ጋር**ም።</string>
+	<key>levelIntro.mode.random</key>
+	<string>ጥያቄዎች **በዘፈቀደ ቅደም ተከተል**።</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>**መቶኛ** ያላቸው ስሌቶች።</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>የቁጥር %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>ቁጥርን **የምትቀንስባቸው** ስሌቶች።</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lld ቀንስ</string>
+	<key>levelIntro.tables.intro</key>
+	<string>**የምታባዛባቸው** ስሌቶች።</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>የ %lld ማባዣ</string>
+	<key>menu.maximumCount</key>
+	<string>ከፍተኛ</string>
+	<key>menu.moreLevels</key>
+	<string>ተጨማሪ ደረጃዎች</string>
+	<key>menu.premiumLevels</key>
+	<string>ፕሪሚየም ደረጃዎች</string>
+	<key>menu.startHere</key>
+	<string>ከዚህ ጀምር</string>
+	<key>menu.unlockWithPremium</key>
+	<string>በፕሪሚየም ተጨማሪ ክፈት</string>
+	<key>mode.fractions.multiple</key>
+	<string>ብዙ</string>
+	<key>mode.fractions.single</key>
+	<string>አንድ</string>
+	<key>mode.mixed</key>
+	<string>የተደባለቀ</string>
+	<key>mode.order</key>
+	<string>ቅደም ተከተል</string>
+	<key>mode.percentages.decimal</key>
+	<string>አስርዮሽ</string>
+	<key>mode.percentages.whole</key>
+	<string>ሙሉ</string>
+	<key>mode.random</key>
+	<string>የዘፈቀደ</string>
+	<key>name.placeholder</key>
+	<string>ስምህ</string>
+	<key>name.whatsYourName</key>
+	<string>ስምህ ማን ነው?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: ይህን እንስሳ ለመክፈት ጥቂት ተጨማሪ ቀለበቶች ያግኙ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>እንስሳትዎ እየጠበቁ ናቸው. ለመጫወት ይመለሱ እና ቀለበቶች መሰብሰብዎን ይቀጥሉ!</string>
+	<key>notif.comeback.title</key>
+	<string>ትናፍቀናለህ! 👋</string>
+	<key>notif.day3.title</key>
+	<string>3ኛው ቀን እንዲሆን እናድርግ! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>ዝላይ ፎክስ ፕሪሚየም ለእያንዳንዱ ርዕስ %lld ደረጃዎችን እና ሁሉንም 10 እንስሳትን ያካትታል።ጀብዱ ይቀጥላል!</string>
+	<key>notif.premium.title</key>
+	<string>ተጨማሪ ደረጃዎችን እና እንስሳትን ይክፈቱ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ቀን ሆኖታል።አንዳንድ የሂሳብ ልምምዶችን እንፍታ እና ብዙ ቀለበቶች እናገኝ!</string>
+	<key>notif.reactivate.title</key>
+	<string>እንደገና ለመጫወት ዝግጁ ነዎት? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>የተለያዩ ድብልቅ ስሌቶች።</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>አስቀድመህ ጥሩ ነህ</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ስሌቶችን በቅደም ተከተል ተለማመድ።</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>አሁን ጀምረሃል</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>ስሌቶች በዘፈቀደ ቅደም ተከተል።</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>ትንሽ ተለማምደሃል</string>
+	<key>onboarding.level.title</key>
+	<string>ቀድሞውኑ ምን ያህል ጥሩ ነህ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>እንጀምር። ስምህ ማን ነው?</string>
+	<key>onboarding.name.title</key>
+	<string>ስሌት መሥራት ይህን ያህል አስደሳች ሆኖ አያውቅም!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>ለመጀመር ርዕስ ምረጥ።</string>
+	<key>onboarding.subject.title</key>
+	<string>ምን መማር ትፈልጋለህ?</string>
+	<key>parentGate.approved</key>
+	<string>ጸድቋል</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ሙከራዎች፦ %1$lld ከ%2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>ይያዙ፦ %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ክብ</string>
+	<key>parentGate.shape.diamond</key>
+	<string>አልማዝ</string>
+	<key>parentGate.shape.heart</key>
+	<string>ልብ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>ባለስድስት ጎን</string>
+	<key>parentGate.shape.plus</key>
+	<string>መደመር</string>
+	<key>parentGate.shape.square</key>
+	<string>ካሬ</string>
+	<key>parentGate.shape.star</key>
+	<string>ኮከብ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>ሦስት ማዕዘን</string>
+	<key>parentGate.subtitle</key>
+	<string>ትንንሽ ተጫዋቾችን ለመጠበቅ፣ ወደ ግዢው ከመቀጠል በፊት አንድ አዋቂ ይህን ማረጋገጫ ማጠናቀቅ አለበት።</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>ንክኪዎች፦ %1$lld ከ%2$lld</string>
+	<key>parentGate.title</key>
+	<string>የአዋቂ ፈቃድ ያስፈልጋል</string>
+	<key>premium.availableAt %lld</key>
+	<string>ከ%lld ዋንጫዎች ጀምሮ ይገኛል</string>
+	<key>premium.availableFromStart</key>
+	<string>ከመጀመሪያው ይገኛል</string>
+	<key>premium.characterUnlocked</key>
+	<string>አዲስ ገጸ ባህሪ ተከፍቷል</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld ቀለበቶች አግኝተሃል</string>
+	<key>premium.exclusiveBadge</key>
+	<string>ለPremium ብቻ</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>በፕሪሚየም ከ10ቱም እንስሳት ጋር ያለገደብ ትጫወታለህ።</string>
+	<key>premium.feature.animals.title</key>
+	<string>ሁሉንም እንስሳት ተጠቀም</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>ለመለማመድ ሁልጊዜ በቂ አዳዲስ ስሌቶች አሉ።</string>
+	<key>premium.feature.levels.title</key>
+	<string>በእያንዳንዱ ርዕስ 99 ደረጃዎች</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>ያለምንም መቋረጥ ተጫወት።</string>
+	<key>premium.feature.noAds.title</key>
+	<string>ማስታወቂያ የለም</string>
+	<key>premium.oneTime</key>
+	<string>የአንድ ጊዜ ግዢ። ለዘላለም ያንተ።</string>
+	<key>premium.restore</key>
+	<string>ግዢዎችን መልስ</string>
+	<key>premium.start</key>
+	<string>ጀምር</string>
+	<key>premium.storeUnavailable</key>
+	<string>መደብሩ አሁን አይገኝም። እባክዎ ቆይተው እንደገና ይሞክሩ።</string>
+	<key>premium.unlock</key>
+	<string>ፕሪሚየምን ክፈት</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ፕሪሚየምን ክፈት · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>በPremium ተከፍቷል</string>
+	<key>result.complete</key>
+	<string>ደረጃው ተጠናቋል!</string>
+	<key>result.stopped</key>
+	<string>ቆሟል</string>
+	<key>settings.character</key>
+	<string>ገጸ ባሕሪ</string>
+	<key>settings.characterInfo</key>
+	<string>እያንዳንዱ እንስሳ ለጨዋታው በሙሉ የራሱን የቀለም ገጽታ ያመጣል።</string>
+	<key>settings.customMinutes %lld</key>
+	<string>ብጁ፦ %lld ደቂቃ</string>
+	<key>settings.dailyGoal</key>
+	<string>የቀን ግብ</string>
+	<key>settings.goalInfo</key>
+	<string>የተከታታይ ቀን ግብ በቀን ከ5 ደቂቃ ይጀምራል። የሚቆጠረው ንቁ የጨዋታ ጊዜ ብቻ ነው።</string>
+	<key>settings.music</key>
+	<string>ሙዚቃ</string>
+	<key>settings.playGoals</key>
+	<string>የጨዋታ ግቦች</string>
+	<key>settings.premiumUnlocked</key>
+	<string>ፕሪሚየም ተከፍቷል። እናመሰግናለን!</string>
+	<key>settings.sound</key>
+	<string>ድምፅ</string>
+	<key>settings.soundEffects</key>
+	<string>ሙዚቃ እና ድምፆች</string>
+	<key>settings.soundInfo</key>
+	<string>በጸጥታ ለመጫወት ድምፁን አጥፋ። ጨዋታው እንደበፊቱ ይሰራል።</string>
+	<key>settings.title</key>
+	<string>ቅንብሮች</string>
+	<key>streak.dayOne</key>
+	<string>ቀን 1</string>
+	<key>topic.addition</key>
+	<string>መደመር</string>
+	<key>topic.addition.detail</key>
+	<string>መደመር ብቻ</string>
+	<key>topic.fractions</key>
+	<string>ክፍልፋዮች</string>
+	<key>topic.fractions.detail</key>
+	<string>መካፈል ብቻ</string>
+	<key>topic.mixed</key>
+	<string>ሱፐርሚክስ</string>
+	<key>topic.mixed.detail</key>
+	<string>የተቀላቀሉ ስሌቶች</string>
+	<key>topic.percentages</key>
+	<string>መቶኛ</string>
+	<key>topic.percentages.detail</key>
+	<string>መቶኛ ብቻ</string>
+	<key>topic.subtraction</key>
+	<string>መቀነስ</string>
+	<key>topic.subtraction.detail</key>
+	<string>መቀነስ ብቻ</string>
+	<key>topic.tables</key>
+	<string>ማባዣ ሰንጠረዦች</string>
+	<key>topic.tables.detail</key>
+	<string>ማባዛት ብቻ</string>
+	<key>tutorial.notice.message</key>
+	<string>ጨዋታ መሀል ነህ። መጀመሪያ ጨርሰው፣ ወይም ያልጀመርከውን ደረጃ ምረጥና መማሪያውን ተጫወት።</string>
+	<key>tutorial.notice.title</key>
+	<string>በጨዋታ መጀመሪያ ብቻ</string>
+</dict>
+</plist>
