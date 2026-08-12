@@ -82,7 +82,7 @@ enum CharacterCatalog {
     /// taken from its portrait artwork.
     static let all: [AnimalCharacter] = [
         AnimalCharacter(id: "flying_penguin", name: "Penguin", emoji: "🐧",
-                        imageName: "main_character_1", thumbnailName: "main_character_1",
+                        imageName: "1_main_character", thumbnailName: "1_main_character",
                         primaryRGB: (0.13, 0.42, 0.86), deepRGB: (0.04, 0.16, 0.38),
                         skyRGB: (0.86, 0.95, 1.00), tintRGB: (0.68, 0.86, 0.98)),
         AnimalCharacter(id: "frog", name: "Frog", emoji: "🐸",
