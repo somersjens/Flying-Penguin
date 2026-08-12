@@ -93,19 +93,19 @@ final class AppAudio: NSObject, ObservableObject {
     // is why their `volume`/`lead` have never had to change. The three `wav`
     // files were already PCM.
     //
-    // The newer files (`splash`, `wrong_answer`, `score_increase_main`) are AAC
-    // inside the same CAF container, which is a quarter of the download for no
-    // cost at all: every effect is decoded into a PCM buffer once in `prepare()`
-    // and only ever scheduled from memory afterwards, so nothing here is ever
-    // decoded on a busy frame whatever the file holds. Their leading silence was
-    // trimmed out of the files themselves rather than skipped at load, so their
-    // `lead` is 0.
+    // New effects are trimmed mono AAC. Every effect is decoded into a PCM
+    // buffer once in `prepare()` and only ever scheduled from memory afterwards,
+    // so the compact files reduce the app download without adding work to a
+    // gameplay frame. Their silence is removed in the assets themselves.
     private static let effects: [Effect] = [
-        Effect(key: "correct",       file: "sfx_correct",        ext: "caf", volume: 0.14, lead: 0.0),
-        // The strike landing on a piece of food, right or wrong, and the
-        // wrong answer arriving in the mouth behind it.
+        Effect(key: "correct",       file: "sfx_good",           ext: "m4a", volume: 0.069, lead: 0.0),
         Effect(key: "splash",        file: "splash",             ext: "caf", volume: 0.24, lead: 0.0),
-        Effect(key: "wrongAnswer",   file: "wrong_answer",       ext: "caf", volume: 0.087, lead: 0.0),
+        Effect(key: "wrongAnswer",   file: "sfx_wrong",          ext: "m4a", volume: 0.10, lead: 0.0),
+        Effect(key: "fireCrackle",   file: "sfx_fire_crackle",   ext: "m4a", volume: 0.30, lead: 0.0),
+        Effect(key: "cannonShoot",   file: "sfx_cannon_shoot",   ext: "m4a", volume: 0.15, lead: 0.0),
+        Effect(key: "turbo",         file: "sfx_turbo",          ext: "m4a", volume: 0.15, lead: 0.0),
+        Effect(key: "lifePickup",    file: "sfx_life_pickup",    ext: "m4a", volume: 0.10, lead: 0.0),
+        Effect(key: "endCelebration", file: "sfx_end_screen_celebration", ext: "m4a", volume: 0.20, lead: 0.0),
         // The question card turning face up.
         Effect(key: "cardReveal",    file: "sfx_card_reveal",    ext: "caf", volume: 0.19, lead: 0.010),
         // The thick double card appearing, and the doubled score landing.
@@ -277,7 +277,8 @@ final class AppAudio: NSObject, ObservableObject {
         prepareQueue.async { [weak self] in
             // AVAudioPlayer's endless loop keeps this single compressed music
             // asset in memory without repeatedly loading or creating players.
-            let music = Self.makePlayer(named: "frog_music", loops: -1, volume: 0)
+            let music = Self.makePlayer(named: "background_music", ext: "mp3",
+                                        loops: -1, volume: 0)
             DispatchQueue.main.async {
                 guard let self else { return }
                 if self.musicPlayer == nil { self.musicPlayer = music }
@@ -485,13 +486,26 @@ final class AppAudio: NSObject, ObservableObject {
     // MARK: - Sound effects
 
     // Answers.
-    func playCorrect()          { playEffect("correct") }
-    func playSplash()           { playEffect("splash") }        // the tongue lands on food
-    func playWrongAnswer()      { playEffect("wrongAnswer") }   // a wrong answer is swallowed
+    func playCorrect() {
+        stopEffect("wrongAnswer")
+        playEffect("correct")
+    }
+    func playSplash()           { playEffect("splash") }          // entering the water
+    func playWrongAnswer() {
+        // Verdicts are mutually exclusive. In particular, a stale tail from a
+        // preceding correct answer must never colour a wrong hoop passage.
+        stopEffect("correct")
+        playEffect("wrongAnswer")
+    }
+    func playFireCrackle()      { playEffect("fireCrackle") }     // the cannon fuse burns
+    func stopFireCrackle()      { stopEffect("fireCrackle") }
+    func playCannonShoot()      { playEffect("cannonShoot") }     // the cannon fires
+    func playTurbo()            { playEffect("turbo") }           // the player accelerates
+    func playLifePickup()       { playEffect("lifePickup") }      // a life is picked up
+    func playEndCelebration()   { playEffect("endCelebration") }  // result hoops rise
     func playCardReveal()       { playEffect("cardReveal") }       // the question becomes visible
     func playDoubleCardAppear() { playEffect("doubleCard") }       // the thick special card
     func playDoubleScore()      { playEffect("doubleScore") }      // a double card paid out
-    func playLifeRestored()     { playEffect("characterUnlock") }  // heart fish caught
     func playSessionStart()     { playEffect("sessionStart") }
     func playSessionComplete()  { playEffect("sessionComplete") }
     func playHighScore()        { playEffect("highScore") }        // new personal best
@@ -518,6 +532,14 @@ final class AppAudio: NSObject, ObservableObject {
         // frame. The lead trim and volume are already baked in at load time.
         if !node.isPlaying { node.play() }
         node.scheduleBuffer(buffer, at: nil, options: .interrupts, completionHandler: nil)
+    }
+
+    /// Ends a timed effect early when its matching visual is shortened (for
+    /// example the fuse under Reduce Motion). The node remains ready to reuse.
+    private func stopEffect(_ key: String) {
+        guard let node = effectNodes[key], node.isPlaying else { return }
+        node.stop()
+        if engine.isRunning { node.play() }
     }
 
     // MARK: - Interruptions & backgrounding

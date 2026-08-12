@@ -138,6 +138,7 @@ struct ResultView: View {
             if !reduceMotion {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.34) {
                     showsHoopCelebration = true
+                    AppAudio.shared.playEndCelebration()
                 }
             }
             // The badge belongs to the best alone, and drops in after the card

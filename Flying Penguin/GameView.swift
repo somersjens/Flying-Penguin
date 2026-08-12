@@ -239,7 +239,6 @@ struct GameView: View {
                                                usesSpeedBonus: usesSpeedBonus,
                                                wrongAnswerCostHalves: usesHalfLifePenalty ? 1 : nil)
                               },
-                              onImpact: { AppAudio.shared.playSplash() },
                               onSwallow: { model.reportCatchOutcome(isCorrect: $0) },
                               onDive: { model.reportDiveOutcome() },
                               onFishEntranceComplete: finishFishEntrance,
@@ -304,6 +303,7 @@ struct GameView: View {
     /// pick-up and flying a ghost after it says nothing.
     private func collectLifeHeart(at point: CGPoint) {
         guard model.canTakeLifeHeart else { return }
+        AppAudio.shared.playLifePickup()
         let target = livesTarget(filling: model.livesRemaining)
         guard livesFrame != .zero else {
             landLifeHeart(at: nil)

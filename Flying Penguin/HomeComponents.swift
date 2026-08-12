@@ -519,7 +519,7 @@ struct LevelCardView: View {
 
     /// A level that crosses its maximum on this return stays in its ordinary
     /// card until the bubbles have finished counting. Only then do the gold
-    /// card, crown and ferns arrive together.
+    /// card, crown and rings arrive together.
     private var isNewMaximumCelebration: Bool {
         celebrationStartedAt != nil && (celebrationStart ?? best) < maximum && best >= maximum
     }
@@ -673,7 +673,7 @@ struct LevelCardView: View {
                            delay: Self.scoreCountDelay,
                            duration: Self.scoreCountDuration)
                 .font(.system(size: 13 * cardScale, weight: .bold))
-            CurrencyIcon(size: 15 * cardScale)
+            LevelCardRingIcon(size: 15 * cardScale)
                 // The launch anchor is read from the unscaled layout frame, so
                 // the flying card starts exactly overlapping this glyph.
                 .background {
@@ -734,34 +734,42 @@ struct LevelCardView: View {
 
     // MARK: Completed card
 
-    /// The completed card celebrates in two colours: a `hero` (number, score,
-    /// dots, ribbon behind the crown) and a `metal` (crown, border, glow).
-    /// Green would disappear into a green theme, so that one case swaps to
-    /// violet — which is what keeps the contrast strong in every theme.
+    /// The completed card celebrates in two colours: a theme-specific `hero`
+    /// (number, score, dots and ribbon behind the crown) and a gold `metal`
+    /// (crown, border and glow). Each hero colour is deliberately dark enough
+    /// to stay crisp on the warm maximum-card background.
     private var completedPalette: (hero: Color, metal: Color) {
         Self.completedPalette(for: theme)
     }
 
     static func completedPalette(for theme: AnimalCharacter) -> (hero: Color, metal: Color) {
-        let green = Color(red: 0.24, green: 0.60, blue: 0.28)
         let gold = Color(red: 0.87, green: 0.66, blue: 0.12)
-        let violet = Color(red: 0.42, green: 0.35, blue: 0.78)
-        return (80...175).contains(themeHue(for: theme)) ? (violet, gold) : (green, gold)
-    }
-
-    /// Hue (0–360°) of the selected theme, used to keep the completed card's
-    /// festive colours distinct from whichever animal is active.
-    private static func themeHue(for theme: AnimalCharacter) -> Double {
-        let (r, g, b) = theme.primaryRGB
-        let mx = max(r, g, b), mn = min(r, g, b), d = mx - mn
-        guard d > 0 else { return 0 }
-        let h: Double
-        switch mx {
-        case r: h = (g - b) / d
-        case g: h = 2 + (b - r) / d
-        default: h = 4 + (r - g) / d
+        let hero: Color
+        switch theme.id {
+        case "flying_penguin":
+            hero = theme.deepColor
+        case "frog":
+            hero = Color(red: 0.40, green: 0.24, blue: 0.62)
+        case "bunny":
+            hero = Color(red: 0.47, green: 0.20, blue: 0.36)
+        case "dog":
+            hero = Color(red: 0.68, green: 0.25, blue: 0.16)
+        case "lion":
+            hero = Color(red: 0.18, green: 0.48, blue: 0.24)
+        case "octopus":
+            hero = Color(red: 0.08, green: 0.38, blue: 0.43)
+        case "crab":
+            hero = Color(red: 0.08, green: 0.30, blue: 0.55)
+        case "elephant":
+            hero = Color(red: 0.47, green: 0.23, blue: 0.34)
+        case "bear":
+            hero = Color(red: 0.08, green: 0.39, blue: 0.37)
+        case "fox":
+            hero = Color(red: 0.19, green: 0.27, blue: 0.58)
+        default:
+            hero = theme.deepColor
         }
-        return (h * 60).truncatingRemainder(dividingBy: 360) + (h < 0 ? 360 : 0)
+        return (hero, gold)
     }
 
     private var completedCard: some View {
@@ -781,7 +789,7 @@ struct LevelCardView: View {
                                    delay: Self.scoreCountDelay,
                                    duration: Self.scoreCountDuration)
                         .font(.system(size: 13 * cardScale, weight: .bold))
-                    CurrencyIcon(size: 15 * cardScale)
+                    LevelCardRingIcon(size: 15 * cardScale)
                         // Once the max card has been revealed, the flight must
                         // still start on this exact bubble. Without an anchor
                         // here the standard card's disappearing glyph leaves
@@ -827,7 +835,7 @@ struct LevelCardView: View {
                 .stroke(metal, lineWidth: 2.5 * cardScale)
         )
         .overlay {
-            completedFerns(color: hero, highlight: metal)
+            completedRings(color: hero)
         }
         .overlay(alignment: .top) {
             completedRibbon(fill: hero, crown: metal)
@@ -836,33 +844,31 @@ struct LevelCardView: View {
         .shadow(color: metal.opacity(0.35), radius: 6, y: 3)
     }
 
-    /// A small twig strung with lily blossoms grows up both sides of every
-    /// maxed level, pulled in toward the score rather than hugging the
-    /// card's outer edge — a shape that reads as a sprig from the frog's own
-    /// pond, not a drifting plant.
-    private func completedFerns(color _: Color, highlight: Color) -> some View {
+    /// Three same-colour rings form one overlapping chain on both sides of a
+    /// maxed level. The chain uses the ribbon's theme colour and leans inward.
+    private func completedRings(color: Color) -> some View {
         HStack(spacing: 0) {
-            CompletionTwig(color: highlight, revealStartedAt: fernRevealStartedAt)
-                .frame(width: 16 * cardScale, height: 40 * cardScale)
-                .rotationEffect(.degrees(-3), anchor: .bottom)
+            CompletionRings(color: color, revealStartedAt: ringRevealStartedAt)
+                .frame(width: 16 * cardScale, height: 44 * cardScale)
+                .rotationEffect(.degrees(-13), anchor: .bottom)
                 .offset(x: 30 * cardScale, y: 5 * cardScale)
 
             Spacer(minLength: 0)
 
-            CompletionTwig(color: highlight, revealStartedAt: fernRevealStartedAt)
-                .frame(width: 16 * cardScale, height: 40 * cardScale)
+            CompletionRings(color: color, revealStartedAt: ringRevealStartedAt)
+                .frame(width: 16 * cardScale, height: 44 * cardScale)
                 .scaleEffect(x: -1, y: 1)
-                .rotationEffect(.degrees(3), anchor: .bottom)
+                .rotationEffect(.degrees(13), anchor: .bottom)
                 .offset(x: -30 * cardScale, y: 5 * cardScale)
         }
         .allowsHitTesting(false)
         .accessibilityHidden(true)
     }
 
-    /// The completed card is inserted at this exact instant. Giving the ferns
+    /// The completed card is inserted at this exact instant. Giving the rings
     /// the shared timestamp keeps both sides perfectly synchronized even when
     /// SwiftUI creates one side a frame later than the other.
-    private var fernRevealStartedAt: Date? {
+    private var ringRevealStartedAt: Date? {
         guard isNewMaximumCelebration, let celebrationStartedAt else { return nil }
         return celebrationStartedAt.addingTimeInterval(Self.scoreCountDelay + Self.scoreCountDuration)
     }
@@ -904,42 +910,31 @@ struct LevelCardView: View {
     }
 }
 
-/// A compact twig for the sides of a completed level card, strung with tiny
-/// lily blossoms along a gently bowed stem. It echoes a celebratory laurel
-/// while staying close to what a frog would actually sit next to, rather
-/// than the drifting, curled fronds of a reef plant.
-private struct CompletionTwig: View {
+/// A compact chain of three interlocking rings for the sides of a completed
+/// level card, all matching the theme colour behind the crown.
+private struct CompletionRings: View {
     let color: Color
     /// Nil means this is an already-completed card and should render fully.
     let revealStartedAt: Date?
 
-    private struct Leaf: Identifiable {
+    private struct Ring: Identifiable {
         let id: Int
         let x: CGFloat
         let y: CGFloat
-        /// Fraction of the twig's *width* — used for both dimensions of the
-        /// blossom's frame, so it always stays circular even though the
-        /// overall twig is much taller than it is wide.
-        let size: CGFloat
-        let rotation: Double
     }
 
-    /// Four blossoms, generously spaced so each reads as its own flower
-    /// instead of blurring into a busy cluster.
-    private let leaves: [Leaf] = [
-        Leaf(id: 0, x: 0.62, y: 0.85, size: 0.50, rotation: 0),
-        Leaf(id: 1, x: 0.36, y: 0.62, size: 0.54, rotation: 18),
-        Leaf(id: 2, x: 0.58, y: 0.39, size: 0.50, rotation: -16),
-        Leaf(id: 3, x: 0.36, y: 0.16, size: 0.44, rotation: 10)
+    private let rings: [Ring] = [
+        Ring(id: 0, x: 0.41, y: 0.70),
+        Ring(id: 1, x: 0.50, y: 0.50),
+        Ring(id: 2, x: 0.59, y: 0.30)
     ]
 
-    /// The reveal lasts well under a second, after which the twig is a still
-    /// ornament. Left running, its timeline would go on waking every completed
-    /// card on the menu — two twigs apiece — at the display's full refresh rate
+    /// The reveal lasts well under a second, after which the rings are still.
+    /// Left running, the timeline would wake every completed card at full rate
     /// for as long as the screen is up, including while a level is being played
     /// over it.
     @State private var hasSettled = false
-    /// Comfortably past the last blossom (stem 0.48s, final leaf 0.625s).
+    /// Comfortably past the final ring's spring reveal.
     private static let revealDuration: TimeInterval = 0.9
 
     var body: some View {
@@ -949,47 +944,33 @@ private struct CompletionTwig: View {
             } ?? .greatestFiniteMagnitude
             GeometryReader { proxy in
                 ZStack {
-                    TwigStemShape()
-                        .trim(from: 0, to: stemProgress(at: elapsed))
-                        .stroke(color.opacity(0.62),
-                                style: StrokeStyle(lineWidth: max(1, proxy.size.width * 0.05),
-                                                   lineCap: .round))
-
-                    ForEach(leaves) { leaf in
-                        let progress = leafProgress(leaf, at: elapsed)
-                        let leafX = proxy.size.width * leaf.x
-                        let leafY = proxy.size.height * leaf.y
-
-                        // A short petiole connects every leaf to the bowed
-                        // stem, so the ornament reads as a growing twig rather
-                        // than a loose row of leaves.
-                        Path { path in
-                            path.move(to: CGPoint(x: proxy.size.width * stemX(at: leaf.y),
-                                                  y: leafY))
-                            path.addLine(to: CGPoint(x: leafX, y: leafY))
+                    ForEach(rings) { ring in
+                        let progress = ringProgress(ring, at: elapsed)
+                        let lineWidth = max(1.25, proxy.size.width * 0.105)
+                        ZStack {
+                            // The pale under-stroke opens a narrow gap at each
+                            // crossing, so the same-colour hoops still read as
+                            // separate, interlocking rings.
+                            Circle()
+                                .stroke(Color(red: 1.0, green: 0.94, blue: 0.78),
+                                        lineWidth: lineWidth + max(0.9, proxy.size.width * 0.065))
+                            Circle()
+                                .stroke(color,
+                                        style: StrokeStyle(lineWidth: lineWidth,
+                                                           lineCap: .round))
                         }
-                        .trim(from: 0, to: min(1, progress))
-                        .stroke(color.opacity(0.48),
-                                style: StrokeStyle(lineWidth: max(0.7, proxy.size.width * 0.025),
-                                                   lineCap: .round))
-
-                        TwigLilyShape()
-                            .fill(
-                                LinearGradient(colors: [color.opacity(0.95), color.opacity(0.62)],
-                                               startPoint: .topLeading,
-                                               endPoint: .bottomTrailing)
-                            )
-                            .frame(width: proxy.size.width * leaf.size,
-                                   height: proxy.size.width * leaf.size)
+                            .frame(width: proxy.size.width * 0.72,
+                                   height: proxy.size.width * 0.72)
                             .scaleEffect(progress, anchor: .center)
-                            .rotationEffect(.degrees(leaf.rotation + (1 - progress) * 30))
+                            .rotationEffect(.degrees((1 - progress) * 28))
                             .opacity(min(1, progress))
-                            .position(x: leafX, y: leafY)
+                            .position(x: proxy.size.width * ring.x,
+                                      y: proxy.size.height * ring.y)
                     }
                 }
             }
         }
-        .shadow(color: color.opacity(0.16), radius: 1, y: 0.5)
+        .shadow(color: .black.opacity(0.12), radius: 1, y: 0.5)
         .task(id: revealStartedAt) {
             guard let revealStartedAt else {
                 hasSettled = true
@@ -1006,66 +987,29 @@ private struct CompletionTwig: View {
         }
     }
 
-    private func stemProgress(at elapsed: TimeInterval) -> CGFloat {
-        CGFloat(min(1, max(0, elapsed / 0.48)))
-    }
-
-    private func leafProgress(_ leaf: Leaf, at elapsed: TimeInterval) -> CGFloat {
-        let delay = 0.16 + Double(leaf.id) * 0.055
+    private func ringProgress(_ ring: Ring, at elapsed: TimeInterval) -> CGFloat {
+        let delay = 0.10 + Double(ring.id) * 0.07
         let raw = min(1, max(0, (elapsed - delay) / 0.30))
-        // Back ease: each leaf opens with a tiny organic overshoot.
+        // Match the former ornament's tiny back-ease overshoot.
         let c1 = 1.70158
         let c3 = c1 + 1
         return CGFloat(1 + c3 * pow(raw - 1, 3) + c1 * pow(raw - 1, 2))
     }
-
-    /// Approximation of the stem's horizontal position at a leaf's height,
-    /// mirroring `TwigStemShape`'s single shallow bow.
-    private func stemX(at y: CGFloat) -> CGFloat {
-        let t = 1 - y
-        return (1 - t) * (1 - t) * 0.70 + 2 * (1 - t) * t * 0.50 + t * t * 0.56
-    }
 }
 
-/// A tiny five-petal lily blossom, strung one after another up the twig —
-/// a shape a frog would actually sit beside, rather than a pointed reef
-/// frond. Being radially symmetric it reads cleanly at any rotation, which
-/// is what lets a whole string of them sit naturally along a bowed stem.
-private struct TwigLilyShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        let center = CGPoint(x: rect.midX, y: rect.midY)
-        let petalCount = 5
-        let petalLength = rect.height * 0.46
-        let petalWidth = rect.width * 0.34
+/// The original score-hoop artwork, inset slightly inside its layout frame so
+/// its organic top and bottom keep a little breathing room at compact sizes.
+private struct LevelCardRingIcon: View {
+    let size: CGFloat
 
-        for index in 0..<petalCount {
-            let angle = CGFloat(index) / CGFloat(petalCount) * 2 * .pi
-            let petalRect = CGRect(x: -petalWidth / 2, y: -petalLength,
-                                   width: petalWidth, height: petalLength)
-            var petal = Path(ellipseIn: petalRect)
-            let transform = CGAffineTransform(rotationAngle: angle)
-                .concatenating(CGAffineTransform(translationX: center.x, y: center.y))
-            petal = petal.applying(transform)
-            path.addPath(petal)
-        }
-
-        let coreRadius = rect.width * 0.10
-        path.addEllipse(in: CGRect(x: center.x - coreRadius, y: center.y - coreRadius,
-                                   width: coreRadius * 2, height: coreRadius * 2))
-        return path
-    }
-}
-
-/// A single shallow bow — a small twig's natural bend — rather than the deep
-/// S-curl of a drifting reef frond.
-private struct TwigStemShape: Shape {
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        path.move(to: CGPoint(x: rect.width * 0.70, y: rect.height * 0.95))
-        path.addQuadCurve(to: CGPoint(x: rect.width * 0.56, y: rect.height * 0.08),
-                          control: CGPoint(x: rect.width * 0.50, y: rect.height * 0.50))
-        return path
+    var body: some View {
+        Image(Currency.iconName)
+            .renderingMode(.template)
+            .resizable()
+            .scaledToFit()
+            .frame(width: size * 0.88, height: size * 0.88)
+            .frame(width: size, height: size)
+            .accessibilityHidden(true)
     }
 }
 

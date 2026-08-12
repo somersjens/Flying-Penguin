@@ -33,7 +33,6 @@ struct FlyingPenguinPlayfield: View {
     /// flies up to it neither grows nor shrinks on the way.
     var lifeHeartSize: CGFloat = 22
     let onHit: (UUID, Bool, Bool) -> Bool
-    let onImpact: () -> Void
     let onSwallow: (Bool) -> Void
     let onDive: () -> Void
     let onFishEntranceComplete: () -> Void
@@ -699,7 +698,7 @@ struct FlyingPenguinPlayfield: View {
             // dive included — may take the lesson off its rails.
             guard !tutorialHold else { return }
             dragStartY = nil
-            speedRunActive = true
+            activateTurbo()
             speedBonusEligible = timingMarkerX(for: hoopX) > penguinX
             guard !tutorial.blocksDiving else { return }
             armDive()
@@ -719,7 +718,7 @@ struct FlyingPenguinPlayfield: View {
         }
 
         dragStartY = nil
-        speedRunActive = true
+        activateTurbo()
         speedBonusEligible = timingMarkerX(for: hoopX) > penguinX
 
         if divePhase == 1 || divePhase == 2 || divePhase == 3 {
@@ -733,6 +732,14 @@ struct FlyingPenguinPlayfield: View {
 
     private func timingMarkerX(for ringX: CGFloat) -> CGFloat {
         ringX - cruiseSpeed * 1.55
+    }
+
+    /// A valid early ring tap doubles the conveyor speed for this set. Keep the
+    /// sound on the state transition so repeated touches cannot stack it.
+    private func activateTurbo() {
+        guard !speedRunActive else { return }
+        speedRunActive = true
+        AppAudio.shared.playTurbo()
     }
 
     /// Which of the three hoops carries the answer, if any of them does.
@@ -880,13 +887,21 @@ struct FlyingPenguinPlayfield: View {
         hasPlacedRescueHeart = false
         tutorialHold = false
         tutorialTurboTapped = false
+        AppAudio.shared.playFireCrackle()
         let fuseDuration = reduceMotion ? 0.12 : 1.45
         let squeezeDuration = reduceMotion ? 0.06 : 0.24
         let flightDuration = reduceMotion ? 0.10 : 0.72
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration * 0.72) {
             withAnimation(.spring(response: squeezeDuration, dampingFraction: 0.58)) { entranceStage = 1 }
         }
+        // Schedule just ahead of the visual frame: the trimmed effect keeps a
+        // tiny natural attack, so its boom lands on the muzzle flash itself.
+        let cannonSoundLead: TimeInterval = 0.035
+        DispatchQueue.main.asyncAfter(deadline: .now() + max(0, fuseDuration - cannonSoundLead)) {
+            AppAudio.shared.playCannonShoot()
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration) {
+            AppAudio.shared.stopFireCrackle()
             withAnimation(.easeOut(duration: reduceMotion ? 0.03 : 0.10)) { entranceStage = 2 }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + fuseDuration + 0.10) {
@@ -1252,7 +1267,6 @@ struct FlyingPenguinPlayfield: View {
         }
 
         usesSpeedBonus = speedBonusEligible && isCorrect
-        onImpact()
         guard onHit(selected.id, usesSpeedBonus, usesHalfLifePenalty) else {
             resolved = false
             return
@@ -1334,6 +1348,7 @@ struct FlyingPenguinPlayfield: View {
         previousPenguinY = penguinY
         if !surfaceSubmerged, penguinY >= level {
             surfaceSubmerged = true
+            AppAudio.shared.playSplash()
             emitSplash(.entering, strength: diveStrength)
         } else if surfaceSubmerged, penguinY <= level - penguinSize * 0.05 {
             surfaceSubmerged = false

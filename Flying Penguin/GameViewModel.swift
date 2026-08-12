@@ -119,16 +119,13 @@ final class GameViewModel: ObservableObject {
         livesRemaining > 0 && livesRemaining < GameConfig.startingLives
     }
 
-    /// A heart in the flight path has arrived at the meter. Both kinds land
-    /// here — the one the life lesson parks behind its wrong hoop and the
-    /// session's single rescue heart — because both mean the same thing: a life
-    /// comes back.
+    /// A heart in the flight path has arrived at the meter. The pickup sound
+    /// already played at contact; arrival only updates the life and its haptic.
     @discardableResult
     func collectLifeHeart() -> Bool {
         guard engine.restoreLifeHalves(GameConfig.lifeHeartRecoveryHalves) > 0 else { return false }
         PlaytimeTracker.shared.registerInteraction()
         sync()
-        AppAudio.shared.playLifeRestored()
         haptic(.success)
         // Only the lesson's heart is being waited for; in a normal run this is
         // a no-op, because there is no step to advance.
@@ -315,6 +312,7 @@ final class GameViewModel: ObservableObject {
         PlaytimeTracker.shared.registerInteraction()
         let token = generation
         let delay: Double
+        let announcesNextRound: Bool
         switch outcome {
         case .correct(_, let usedBonusFish):
             let now = ProcessInfo.processInfo.systemUptime
@@ -328,6 +326,7 @@ final class GameViewModel: ObservableObject {
                 AppAudio.shared.playDoubleScore()
             }
             delay = GameConfig.nextRoundDelay.correct
+            announcesNextRound = true
         case .wrong:
             lastMissedChallenge = engine.round?.question.solvedPrompt
             lastCorrectCatchTime = nil
@@ -336,6 +335,10 @@ final class GameViewModel: ObservableObject {
             // sounded at all: it played on the strike and drowned out the
             // wrong-answer sound arriving at the mouth behind it.
             delay = GameConfig.nextRoundDelay.wrong
+            // `wrong_2` intentionally has a long tail. The reveal chime used
+            // to start 0.46 seconds after the passage and sounded like a second
+            // positive verdict on top of it.
+            announcesNextRound = false
         case .ignored:
             return false
         }
@@ -351,10 +354,10 @@ final class GameViewModel: ObservableObject {
             let previousRoundID = self.engine.round?.id
             self.engine.advance()
             if self.engine.state == .gameOver {
-                self.finishSession()
+                self.finishSession(playsFanfare: announcesNextRound)
             } else if self.engine.round?.id != previousRoundID {
                 // Every completed passage opens the already-previewed next sum.
-                self.announceRound()
+                if announcesNextRound { self.announceRound() }
                 self.openRound()
             }
             self.sync()
@@ -400,7 +403,7 @@ final class GameViewModel: ObservableObject {
         guard restoredHalves > 0 else { return false }
         PlaytimeTracker.shared.registerInteraction()
         sync()
-        AppAudio.shared.playLifeRestored()
+        AppAudio.shared.playLifePickup()
         haptic(.success)
         return true
     }
@@ -412,20 +415,20 @@ final class GameViewModel: ObservableObject {
 
     // MARK: - Finishing
 
-    private func finishSession() {
+    private func finishSession(playsFanfare: Bool) {
         // The board filling up, or the lives running out, ends the lesson with
         // the session it was being taught in.
         director.cancel()
-        recordResultIfNeeded()
+        recordResultIfNeeded(playsFanfare: playsFanfare)
     }
 
     /// Writes the session to disk exactly once, whichever way the screen is
     /// left: game over, the close button, or a swipe away.
-    private func recordResultIfNeeded() {
+    private func recordResultIfNeeded(playsFanfare: Bool = true) {
         guard engine.state == .gameOver, !hasRecordedResult else { return }
         hasRecordedResult = true
         // A level that reached its end is finished, not paused.
-        if engine.gameOverReason != .quit {
+        if engine.gameOverReason != .quit, playsFanfare {
             PausedSessionStore.shared.clear(request.board)
         }
 
