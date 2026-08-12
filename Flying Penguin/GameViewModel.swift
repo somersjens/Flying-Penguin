@@ -38,10 +38,14 @@ final class GameViewModel: ObservableObject {
     /// in. It remains part of this run until a fresh run is started.
     @Published private(set) var lastMissedChallenge: String?
     @Published private(set) var visibleRounds: [GameRound] = []
-    /// The guided run, if this session is one. Both are mirrors of the director
-    /// below, published the same way the engine's state is.
-    @Published private(set) var tutorialStep: TutorialStep?
-    @Published private(set) var tutorialPointer: TutorialPointer?
+    /// The guided run, if this session is one: what is being taught and which
+    /// rules it bends. A mirror of the director below, published the same way
+    /// the engine's state is.
+    @Published private(set) var tutorial = TutorialPlan()
+    /// Whether the session's one rescue heart is owed to the next set of hoops.
+    /// Never during a guided run: the lesson places hearts of its own, and two
+    /// kinds of heart in the air at once teaches nothing.
+    @Published private(set) var isRescueHeartDue = false
 
     /// Invalidates pending timed work when a round is superseded (restart, or
     /// leaving the screen), so a late callback can never touch a newer round.
@@ -52,11 +56,9 @@ final class GameViewModel: ObservableObject {
     /// covering the reef. It runs once on continue instead of behind the card.
     private var pendingScheduledWork: (() -> Void)?
     private var lastCorrectCatchTime: TimeInterval?
-    /// The guided run's state machine. It is asked what to show and which
-    /// answers count; it never touches the engine itself.
-    private let tutorial = TutorialDirector()
-    /// Set by the start card (or by the welcome flow) before the first round.
-    private var startsGuided = false
+    /// The guided run's state machine. It is asked what to show and which rules
+    /// the step being taught bends; it never touches the engine itself.
+    private let director = TutorialDirector()
 
     var maximumRounds: Int { engine.maximumRounds }
 
@@ -78,21 +80,67 @@ final class GameViewModel: ObservableObject {
         // card's switch, and the player is free to turn it off there. What the
         // card was showing when Start was pressed is what counts, and that
         // arrives through `armTutorial`.
-        tutorial.onChange = { [weak self] in self?.syncTutorial() }
+        director.onChange = { [weak self] in self?.syncTutorial() }
     }
 
     // MARK: - Tutorial
 
     /// Arms the guided run for the session about to start. Only meaningful
     /// before `begin()`: a run already in progress is never taken over.
+    ///
+    /// The first step is applied here rather than at `begin()`, because the
+    /// cannon puts the first set of hoops on the conveyor while the penguin is
+    /// still in the barrel — and the lesson that opens the run is the one that
+    /// says there are no hoops yet. Nothing of it is visible this early: the
+    /// message card waits for the flight to settle.
     func armTutorial() {
         guard engine.state == .intro else { return }
-        startsGuided = true
+        director.begin()
+    }
+
+    /// The playing field is the only place that knows how a passage actually
+    /// ended, so every lesson is driven from there.
+    func reportTutorial(_ event: TutorialEvent) {
+        guard director.isRunning else { return }
+        director.report(event)
     }
 
     private func syncTutorial() {
-        set(\.tutorialStep, tutorial.step)
-        set(\.tutorialPointer, tutorial.pointer)
+        set(\.tutorial, director.plan)
+        set(\.isRescueHeartDue, engine.isRescueHeartDue && !director.isRunning)
+    }
+
+    // MARK: - Life hearts
+
+    /// Whether a heart still has a life to give. Asked before the caught heart
+    /// sets off for the meter, because the life is only put on the meter when
+    /// it arrives — there is no point flying one to a full row of hearts.
+    var canTakeLifeHeart: Bool {
+        livesRemaining > 0 && livesRemaining < GameConfig.startingLives
+    }
+
+    /// A heart in the flight path has arrived at the meter. Both kinds land
+    /// here — the one the life lesson parks behind its wrong hoop and the
+    /// session's single rescue heart — because both mean the same thing: a life
+    /// comes back.
+    @discardableResult
+    func collectLifeHeart() -> Bool {
+        guard engine.restoreLifeHalves(GameConfig.lifeHeartRecoveryHalves) > 0 else { return false }
+        PlaytimeTracker.shared.registerInteraction()
+        sync()
+        AppAudio.shared.playLifeRestored()
+        haptic(.success)
+        // Only the lesson's heart is being waited for; in a normal run this is
+        // a no-op, because there is no step to advance.
+        director.report(.collectedHeart)
+        return true
+    }
+
+    /// The rescue heart has been put in the world. Placing it is what spends
+    /// it: flying past one is a miss, not a second chance.
+    func placeRescueHeart() {
+        engine.spendRescueHeart()
+        sync()
     }
 
     // MARK: - Lifecycle
@@ -130,9 +178,6 @@ final class GameViewModel: ObservableObject {
         }
         openRound()
         announceRound()
-        // The first message goes up with the first sum, never before it: the
-        // step it opens on is about the sum standing on screen.
-        if startsGuided { tutorial.begin() }
         sync()
     }
 
@@ -149,7 +194,7 @@ final class GameViewModel: ObservableObject {
     }
 
     func end() {
-        tutorial.cancel()
+        director.cancel()
         // Leaving without finishing pauses the level rather than discarding it.
         savePausedSessionIfNeeded()
         recordResultIfNeeded()
@@ -218,8 +263,7 @@ final class GameViewModel: ObservableObject {
     /// level is spent.
     func restart() {
         // Play again is an ordinary run: the lesson was taught once.
-        tutorial.cancel()
-        startsGuided = false
+        director.cancel()
         generation &+= 1
         hasRecordedResult = false
         isPaused = false
@@ -249,19 +293,20 @@ final class GameViewModel: ObservableObject {
     func select(optionID: UUID,
                 usesSpeedBonus: Bool = false,
                 wrongAnswerCostHalves: Int? = nil) -> Bool {
-        // A guided step only counts the answer it is teaching. Refusing here,
-        // before the engine sees the tap, is what makes "nothing happens" mean
-        // nothing at all: no score, no life, no round turning over — the tongue
-        // simply comes back empty.
-        if tutorial.isRunning, let round = engine.round,
-           let option = round.options.first(where: { $0.id == optionID }),
-           !tutorial.accepts(isCorrect: option.isCorrect) {
-            return false
-        }
+        // A guided step never refuses an answer — the passage always resolves
+        // and the run moves on. What it does change is the price: while the
+        // early lessons are being taught a mistake costs nothing, and in the
+        // life lesson only a wrong hoop the penguin really flew through does.
+        // A non-nil cost here is the playing field saying the set was passed
+        // underneath, which is the one case that half-price penalty covers.
+        let costHalves = tutorial.preventsLifeLoss
+            || (tutorial.preventsBypassLifeLoss && wrongAnswerCostHalves != nil)
+            ? 0
+            : wrongAnswerCostHalves
         let spendsBonusFish = hasBonusFishPower
         let outcome = engine.select(optionID: optionID,
                                     usesBonusFish: usesSpeedBonus || spendsBonusFish,
-                                    wrongAnswerCostHalves: wrongAnswerCostHalves)
+                                    wrongAnswerCostHalves: costHalves)
         guard outcome != .ignored else { return false }
         // Every real interaction advances the playtime clock. Without these the
         // tracker only ever sees one gap from the first touch to the last,
@@ -282,11 +327,9 @@ final class GameViewModel: ObservableObject {
                 if spendsBonusFish { hasBonusFishPower = false }
                 AppAudio.shared.playDoubleScore()
             }
-            tutorial.didAnswer(isCorrect: true)
             delay = GameConfig.nextRoundDelay.correct
         case .wrong:
             lastMissedChallenge = engine.round?.question.solvedPrompt
-            tutorial.didAnswer(isCorrect: false)
             lastCorrectCatchTime = nil
             // Neither the verdict's sound nor its haptic fires here any more —
             // both wait for `reportCatchOutcome`. The life going is no longer
@@ -372,7 +415,7 @@ final class GameViewModel: ObservableObject {
     private func finishSession() {
         // The board filling up, or the lives running out, ends the lesson with
         // the session it was being taught in.
-        tutorial.cancel()
+        director.cancel()
         recordResultIfNeeded()
     }
 
@@ -444,6 +487,7 @@ final class GameViewModel: ObservableObject {
         if engine.state == .gameOver { set(\.result, engine.result) }
         set(\.isGameOver, engine.state == .gameOver)
         set(\.isHeartFishAvailable, engine.isHeartFishAvailable)
+        set(\.isRescueHeartDue, engine.isRescueHeartDue && !director.isRunning)
         set(\.visibleRounds, engine.visibleRounds)
     }
 

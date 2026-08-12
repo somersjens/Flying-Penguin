@@ -79,6 +79,23 @@ public enum GameConfig {
     public static let heartFishRecoveryHalves = 1
     public static let criticalHeartFishRecoveryHalves = 2
 
+    // MARK: The rescue heart
+
+    /// What a heart floating in the flight path puts back, in halves — one
+    /// whole life. It is the same heart in the guided run's life lesson, which
+    /// is what lets that lesson give back exactly what it just cost.
+    public static let lifeHeartRecoveryHalves = 2
+    /// A session offers exactly one rescue heart, and only to a player who is
+    /// down to this much life: one heart, or the last half of one.
+    public static let rescueHeartLifeThresholdHalves = 2
+    /// How long the player carries on alone before it appears. Two passages is
+    /// enough for the loss to have sunk in and short enough to still feel like
+    /// an answer to it.
+    public static let rescueHeartDelayRounds = 2
+    /// Never offered once the board is this far along: a rescue arriving on the
+    /// finish line rescues nothing.
+    public static let rescueHeartMaximumProgress = 0.9
+
     // MARK: Timing (seconds)
     //
     // The brief is explicit: the next round must be able to start within

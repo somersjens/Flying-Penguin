@@ -110,6 +110,34 @@ public final class MemoryGame {
     public private(set) var heartFishTarget = GameConfig.heartFishCorrectAnswers
     public private(set) var isHeartFishAvailable = false
 
+    /// The round the player first dropped to their last life on, if they have.
+    /// The one rescue heart of the session is measured from here.
+    private var rescueHeartArmedRound: Int?
+    /// Set once that heart has been put in the world. It is never offered a
+    /// second time, whether it was taken or flown straight past.
+    private var hasSpentRescueHeart = false
+
+    /// Whether the session's single rescue heart should be placed in the next
+    /// set of hoops. It is owed to a player who has been down to their last
+    /// life for a couple of passages, and never to one who is already all but
+    /// finished — a rescue landing on the finish line rescues nothing.
+    public var isRescueHeartDue: Bool {
+        guard !hasSpentRescueHeart,
+              state != .gameOver,
+              lifeHalves > 0,
+              lifeHalves < GameConfig.startingLifeHalves,
+              let armed = rescueHeartArmedRound,
+              roundNumber >= armed + GameConfig.rescueHeartDelayRounds
+        else { return false }
+        return Double(cards) < Double(board.maximum) * GameConfig.rescueHeartMaximumProgress
+    }
+
+    /// Called by the view the moment the heart is actually placed, which is
+    /// what spends it — not catching it.
+    public func spendRescueHeart() {
+        hasSpentRescueHeart = true
+    }
+
     /// Set once the session is over; nil while playing.
     public private(set) var gameOverReason: GameOverReason?
 
@@ -198,6 +226,11 @@ public final class MemoryGame {
         result.doubleCardsAnswered = session.doubleCardsAnswered
         result.bonusCards = session.bonusCards
         result.cardsEarned = session.cards
+        // A run that comes back already on its last life is owed the same
+        // rescue as one that gets there in front of us.
+        if lifeHalves > 0, lifeHalves <= GameConfig.rescueHeartLifeThresholdHalves {
+            rescueHeartArmedRound = roundNumber
+        }
         heartFishProgress = session.heartFishProgress ?? 0
         heartFishTarget = session.heartFishTarget ?? GameConfig.heartFishCorrectAnswers
         isHeartFishAvailable = session.isHeartFishAvailable ?? false
@@ -318,6 +351,18 @@ public final class MemoryGame {
         return lifeHalves - previous
     }
 
+    /// Gives life back outright, which is what the guided run's heart pick-up
+    /// does: the lesson costs a life on purpose and hands it straight back, so
+    /// the real game never starts a heart down. Capped at the starting lives,
+    /// and refused once the session is already over.
+    @discardableResult
+    public func restoreLifeHalves(_ halves: Int) -> Int {
+        guard halves > 0, lifeHalves > 0, lifeHalves < GameConfig.startingLifeHalves else { return 0 }
+        let previous = lifeHalves
+        lifeHalves = min(GameConfig.startingLifeHalves, lifeHalves + halves)
+        return lifeHalves - previous
+    }
+
     /// Adds the fly game's speed bonus without bypassing the normal result and
     /// persistence totals. The caller has already established that this was a
     /// second correct catch inside the combo window.
@@ -390,6 +435,12 @@ public final class MemoryGame {
         let wasFull = lifeHalves == GameConfig.startingLifeHalves
         lifeHalves = max(0, lifeHalves - halves)
         if wasFull && lifeHalves > 0 { resetHeartFishProgress() }
+        // The rescue heart is armed by the mistake that put the player on their
+        // last life, and counts its passages from there.
+        if rescueHeartArmedRound == nil, lifeHalves > 0,
+           lifeHalves <= GameConfig.rescueHeartLifeThresholdHalves {
+            rescueHeartArmedRound = roundNumber
+        }
     }
 
     private func advanceHeartFishProgressIfNeeded() {

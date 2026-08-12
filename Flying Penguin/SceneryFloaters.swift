@@ -33,6 +33,7 @@ struct DriftingFloaters: View {
     let depth: FloaterDepth
     let theme: SceneryTheme
     var exclusionXs: [CGFloat] = []
+    var exclusionSpacing: CGFloat? = nil
 
     private let farCount = 5
     private let midCount = 4
@@ -100,9 +101,10 @@ struct DriftingFloaters: View {
                                    parallax: parallax,
                                    margin: width * 0.8)
         return Group {
-            // Foreground objects are selected by placement, not faded at
-            // runtime. Since they move at the same pace as the rings, a rejected
-            // slot stays rejected for that ring's complete journey across screen.
+            // Foreground objects are selected by their slot, not faded after
+            // they have already appeared. Both this band and the hoop corridor
+            // move at parallax 1, so the choice remains stable for the complete
+            // journey across the screen.
             if isClearOfHoops(x: x, itemWidth: width) {
                 SceneryFloater(style: theme.floater,
                                water: theme.water,
@@ -120,9 +122,11 @@ struct DriftingFloaters: View {
         }
     }
 
-    /// Never create a foreground object in a hoop corridor. Retiring hoop sets
-    /// remain exclusions until they are offscreen, so a skipped object cannot
-    /// suddenly appear as soon as the player answers.
+    /// Never create a foreground object in a hoop corridor. The hoops form a
+    /// repeating conveyor, so checking the complete repeating corridor rather
+    /// than only the sets currently on screen makes this a stable placement
+    /// decision. Promoting the preview advances the anchor by exactly one
+    /// spacing and therefore cannot make an object appear or disappear.
     private func isClearOfHoops(x: CGFloat, itemWidth: CGFloat) -> Bool {
         switch depth {
         case .behind: return true
@@ -130,6 +134,12 @@ struct DriftingFloaters: View {
         }
         guard !exclusionXs.isEmpty else { return true }
         let clearRadius = itemWidth * 0.70 + size.width * 0.10
+        if let spacing = exclusionSpacing, spacing > 0,
+           let anchor = exclusionXs.first {
+            let remainder = abs((x - anchor).truncatingRemainder(dividingBy: spacing))
+            let distanceToCorridor = min(remainder, spacing - remainder)
+            return distanceToCorridor > clearRadius
+        }
         return exclusionXs.allSatisfy { abs(x - $0) > clearRadius }
     }
 }

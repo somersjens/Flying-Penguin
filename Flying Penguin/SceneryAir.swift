@@ -58,7 +58,13 @@ private struct SceneryCloudShape: Shape {
         var path = Path()
         let w = rect.width
         let h = rect.height
-        let baseTop: CGFloat = style == .wispy ? 0.68 : 0.60
+        let baseTop: CGFloat
+        switch style {
+        case .puffy:
+            baseTop = 0.60
+        case .wispy:
+            baseTop = 0.68
+        }
         // The lobes carry the silhouette; the base only closes the flat bottom
         // they all rest on.
         path.addRoundedRect(in: CGRect(x: w * 0.16, y: h * baseTop,

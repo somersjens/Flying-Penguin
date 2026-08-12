@@ -87,8 +87,6 @@ struct HomeView: View {
     /// is replaced in a single pop instead of ticking down with the total.
     @State private var unlockPrompt: NextCharacterPrompt?
     @State private var unlockPreviewTrigger = 0
-    /// The level card left lit by the tutorial's closing step, or nil.
-    @State private var tutorialSpotlightLevelID: String?
 
     private var character: AnimalCharacter { CharacterCatalog.current(isPremium: premium.isPremium) }
     private var topic: MathTopic { MathTopic(rawValue: topicRaw) ?? MathTopic.allCases[0] }
@@ -182,9 +180,6 @@ struct HomeView: View {
                     // costs no reading direction: it has nothing to read.
                     .environment(\.layoutDirection, .leftToRight)
                 }
-                // Last, so the wash lies over the whole menu — the card it
-                // leaves lit shows through the hole cut for it.
-                .overlay { tutorialSpotlightOverlay }
             }
         }
         .coordinateSpace(name: "home")
@@ -805,8 +800,6 @@ struct HomeView: View {
             rememberBeforePlaying(level)
             selection = LevelSelection(level: level)
         }
-        // The tutorial's closing step cuts its window out of this frame.
-        .reportAnchor("levelCard.\(level.id)")
     }
 
     private func status(for level: MathLevel, recommendedID: String?) -> LevelCardStatus {
@@ -962,61 +955,13 @@ struct HomeView: View {
     // MARK: Tutorial
 
     /// How long the menu is given to settle before the guided level rises over
-    /// it, and how long the closing step holds the menu before the ordinary
-    /// return celebration takes over.
+    /// it.
     private static let tutorialHandoverDelay = 0.55
-    private static let tutorialSpotlightFade = 0.4
-    private static let tutorialSpotlightHold = 3.0
-
-    /// Back from a guided run: the menu dims around the one card the score
-    /// landed on, says where it is, and only then plays its usual celebration.
-    /// Everything the celebration counts up is already being held at its
-    /// pre-session value (see `holdsPreSessionValues`), so waiting here costs
-    /// nothing but the wait itself.
-    private func beginTutorialClosingStep(then celebrate: @escaping () -> Void) {
-        withAnimation(.easeInOut(duration: Self.tutorialSpotlightFade)) {
-            tutorialSpotlightLevelID = lastPlayedLevelID
-        }
-        let hold = Self.tutorialSpotlightFade + Self.tutorialSpotlightHold
-        DispatchQueue.main.asyncAfter(deadline: .now() + hold) {
-            withAnimation(.easeInOut(duration: 0.35)) {
-                tutorialSpotlightLevelID = nil
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35, execute: celebrate)
-        }
-    }
-
-    /// The dimmed menu and the line above it. The card the player just filled
-    /// stays lit, so "this is where your score is" has something to point at.
-    @ViewBuilder
-    private var tutorialSpotlightOverlay: some View {
-        if let levelID = tutorialSpotlightLevelID {
-            ZStack(alignment: .top) {
-                // No anchor (the card is scrolled out of sight) simply dims the
-                // lot: better than cutting a window where nothing is.
-                TutorialSpotlight(hole: controlAnchors["levelCard.\(levelID)"])
-
-                // The closing step is about the score, so it carries the same
-                // trophy the counters it is pointing at are filled with.
-                TutorialMessageCard(text: L("tutorial.score"),
-                                    symbolName: "trophy.fill",
-                                    theme: character)
-                    .frame(maxWidth: isPad ? 520 : 400)
-                    .padding(.top, isPad ? 26 : 16)
-            }
-            .transition(.opacity)
-            .allowsHitTesting(false)
-        }
-    }
 
     /// Back from a session: bank the totals and celebrate anything earned. The
     /// before-values are captured first, so the level score and the headers
     /// count up from what the player had rather than snapping to the new value.
     private func handleSessionDismissed() {
-        guard !TutorialCenter.shared.takeMenuStep() else {
-            beginTutorialClosingStep(then: recordSessionReturn)
-            return
-        }
         recordSessionReturn()
     }
 

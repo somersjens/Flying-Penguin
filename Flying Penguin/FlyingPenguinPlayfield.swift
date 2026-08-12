@@ -16,9 +16,22 @@ struct FlyingPenguinPlayfield: View {
     let reduceMotion: Bool
     let topReserve: CGFloat
     let bottomReserve: CGFloat
+    /// What the guided run is teaching right now, and which rules it bends.
+    /// A default plan is an ordinary session and costs the field nothing.
+    var tutorial: TutorialPlan = TutorialPlan()
     var tutorialMessage: String? = nil
-    var tutorialSymbol: String? = nil
-    var tutorialPointer: TutorialPointer? = nil
+    /// How a lesson is answered: the field is the only place that knows how a
+    /// passage, a drag or a tap actually ended.
+    var onTutorialEvent: (TutorialEvent) -> Void = { _ in }
+    /// True while the session's one rescue heart is owed to the next set.
+    var isRescueHeartDue: Bool = false
+    /// Raised the moment that heart is actually put in the world.
+    var onRescueHeartPlaced: () -> Void = {}
+    /// A heart in the flight path was flown into, at this point on screen.
+    var onLifeHeartCollected: (CGPoint) -> Void = { _ in }
+    /// How big a heart is drawn — the lives meter's own size, so the one that
+    /// flies up to it neither grows nor shrinks on the way.
+    var lifeHeartSize: CGFloat = 22
     let onHit: (UUID, Bool, Bool) -> Bool
     let onImpact: () -> Void
     let onSwallow: (Bool) -> Void
@@ -94,6 +107,22 @@ struct FlyingPenguinPlayfield: View {
     /// splash is sized by.
     @State private var diveStartY: CGFloat = 0
     @State private var flightClock: Double = 0
+    /// Every heart standing in the world: the ones the life lesson parks behind
+    /// its wrong hoops, and the session's single rescue heart. They travel on
+    /// the same conveyor as everything else, so they stay exactly where they
+    /// were placed relative to the set they belong to.
+    @State private var lifeHearts: [LifeHeartPickup] = []
+    /// Guards the rescue heart against being placed twice in one frame, before
+    /// the engine's answer to the first placement has come back.
+    @State private var hasPlacedRescueHeart = false
+    /// True while the turbo lesson is waiting for the player: the world stands
+    /// still with the set and its tap hint in plain view.
+    @State private var tutorialHold = false
+    /// Set for the length of one set once its right hoop has been tapped. The
+    /// lesson only ever waits for a tap that has not happened yet: without this
+    /// a set tapped a moment before it reaches the holding point would stop
+    /// dead with nothing left to ask for.
+    @State private var tutorialTurboTapped = false
 
     private var penguinSize: CGFloat { sceneSize.height * (isPad ? 0.27 : 0.235) }
     /// The rings leave a dedicated header band for the moving sum.
@@ -228,6 +257,16 @@ struct FlyingPenguinPlayfield: View {
                     }
                 }
 
+                // The lesson parks a heart per wrong hoop, just behind it;
+                // a rescue heart stands on its own, mid-way between two sets.
+                ForEach(lifeHearts) { heart in
+                    LifeHeartView(size: lifeHeartSize,
+                                  tint: character.deepColor,
+                                  reduceMotion: reduceMotion)
+                        .position(x: heart.x, y: lanes[min(heart.lane, lanes.count - 1)])
+                        .allowsHitTesting(false)
+                }
+
                 if speedRunActive && !resolved {
                     TurboSpeedWake(size: penguinSize, phase: flightClock)
                         .position(x: penguinX - penguinSize * 0.58, y: penguinY)
@@ -293,14 +332,37 @@ struct FlyingPenguinPlayfield: View {
                         .allowsHitTesting(false)
                 }
 
-                if let tutorialMessage, entranceStage >= 5 {
-                    Text(tutorialMessage)
-                        .font(.system(size: isPad ? 20 : 15, weight: .bold, design: .rounded))
-                        .foregroundStyle(character.deepColor)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 9)
-                        .background(.white.opacity(0.92), in: Capsule())
-                        .position(x: proxy.size.width * 0.52, y: proxy.size.height - bottomReserve - 28)
+                // The tap hint sits above the hoop it is asking for, so "tap the
+                // right hoop" has something to point at. It goes out the moment
+                // the deadline is missed, because from there the tap is no
+                // longer the one being taught.
+                if tutorial.highlightsTurbo, !resolved, entranceStage >= 5,
+                   let index = correctHoopIndex,
+                   timingMarkerX(for: hoopX) > penguinX {
+                    TutorialTapPulse(size: hoopSize * 0.86,
+                                     tint: character.deepColor,
+                                     reduceMotion: reduceMotion)
+                        .position(x: hoopX, y: lanes[index])
+                        .allowsHitTesting(false)
+                }
+
+                if let tutorialMessage, let symbol = tutorial.step?.symbolName,
+                   entranceStage >= 5 {
+                    // Low and only as wide as the sentence needs. The card is
+                    // given nearly the whole width to play with so its one line
+                    // stays one line; the cap is what the type then shrinks to
+                    // fit, and a short lesson still gets a short card.
+                    TutorialMessageCard(text: tutorialMessage,
+                                        symbolName: symbol,
+                                        theme: character,
+                                        isPad: isPad)
+                        .frame(maxWidth: proxy.size.width * 0.94)
+                        .padding(.bottom, bottomReserve + (isPad ? 8 : 5))
+                        .frame(maxWidth: .infinity, maxHeight: .infinity,
+                               alignment: .bottom)
+                        // Every touch belongs to the flight: the lesson must
+                        // never swallow the tap it is asking for.
+                        .allowsHitTesting(false)
                 }
             }
             .contentShape(Rectangle())
@@ -327,6 +389,52 @@ struct FlyingPenguinPlayfield: View {
             }
         }
         .onChange(of: playsLevelCompletion) { _, value in if value { beginCompletion() } }
+        .onChange(of: tutorial) { _, _ in applyTutorialPlan() }
+    }
+
+    /// A step change rewrites what a set is allowed to be. A lesson hands over
+    /// during the beat between one passage and the next sum being installed, so
+    /// the set that carries the new rules is the one still waiting off-screen —
+    /// nothing changes under the penguin's nose.
+    private func applyTutorialPlan() {
+        tutorialHold = false
+        tutorialTurboTapped = false
+        // The lesson's own hearts go with it. Whatever is left of them when it
+        // hands over — the untaken one of a pair, or a set placed just before
+        // the tutorial finished — is cleared, so the real game never starts
+        // with a free life floating in it. A rescue heart is nobody's lesson
+        // and stays where it is.
+        if !tutorial.placesHearts { lifeHearts.removeAll(where: \.isLesson) }
+        if tutorial.hidesHoops {
+            shownOptions = []
+            shownPrompt = ""
+            previewOptions = []
+            previewPrompt = ""
+            previewRoundID = nil
+            activeRoundID = nil
+            lifeHearts.removeAll(where: \.isLesson)
+            resolved = false
+            return
+        }
+        guard entranceStage >= 3, sceneSize.width > 0 else { return }
+        guard !shownOptions.isEmpty else {
+            // Coming out of the two movement lessons: the first real set is put
+            // on the conveyor at the trailing edge and rides in from there.
+            configureRound(force: true)
+            return
+        }
+        // The set on its way in is the one the new step gets to shape. It is
+        // taken over wholesale when the round turns over, so re-tuning it here
+        // is what puts the lesson's rules on the very next hoops the player
+        // meets.
+        configurePreview()
+        // The set already in frame keeps whatever it was dealt: swapping three
+        // answers in plain sight is worse than one set of the old shape.
+        guard !resolved, hoopX > sceneSize.width, let round = rounds.first else { return }
+        let presented = presentation(for: round)
+        shownOptions = presented.options
+        noCorrectAnswer = presented.hasNoCorrectAnswer
+        placeTutorialHearts()
     }
 
     /// The world this character flies across. Same flight, same cannon, same
@@ -379,7 +487,8 @@ struct FlyingPenguinPlayfield: View {
                              // reads as a solid obstacle. Keep that gameplay
                              // corridor visually open, including while an old
                              // set is drifting out after an answer.
-                             exclusionXs: [hoopX] + retiringSets.map(\.x))
+                             exclusionXs: [hoopX],
+                             exclusionSpacing: ringSetSpacing)
         }
     }
 
@@ -471,6 +580,7 @@ struct FlyingPenguinPlayfield: View {
                     let requested = (dragStartY ?? penguinY) + value.translation.height
                     movePenguinToward(y: requested)
                 }
+                reportDraggedHeight()
             }
             .onEnded { _ in
                 let completedPressHold = directPressActive
@@ -509,7 +619,9 @@ struct FlyingPenguinPlayfield: View {
         // Tapping at or beyond the active hoops keeps the existing turbo lane
         // selection. Everywhere before that zone is direct, unboosted height
         // control: the penguin smoothly flies to the tapped vertical position.
-        if location.x >= hoopX - hoopSize * 0.72 {
+        // With no set on the conveyor at all — the two movement lessons — every
+        // tap is a height tap, wherever the retired hoops happen to stand.
+        if !shownOptions.isEmpty, location.x >= hoopX - hoopSize * 0.72 {
             handleRingTap(at: location)
         } else {
             handleHeightTap(at: location)
@@ -520,12 +632,49 @@ struct FlyingPenguinPlayfield: View {
         guard acceptsVerticalControl else { return }
 
         dragStartY = nil
+        reportTappedHeight(at: location)
         movePenguinToward(y: location.y)
+    }
+
+    /// The first lesson asks for a low point and a high point. Which half of
+    /// the flight band the penguin has been *sent to* is what counts, so the
+    /// step is satisfied by the drag itself rather than by waiting for the
+    /// character to finish travelling there.
+    private func reportDraggedHeight() {
+        guard tutorial.tracksDrag else { return }
+        let span = flightMaxY - flightMinY
+        guard span > 1 else { return }
+        if targetPenguinY >= flightMinY + span * 0.62 {
+            onTutorialEvent(.draggedLow)
+        } else if targetPenguinY <= flightMinY + span * 0.38 {
+            onTutorialEvent(.draggedHigh)
+        }
+    }
+
+    /// The second lesson is about the penguin, not about the screen: a tap
+    /// counts as "under me" or "above me" relative to where it is flying.
+    private func reportTappedHeight(at location: CGPoint) {
+        guard tutorial.tracksTaps else { return }
+        let margin = penguinSize * 0.30
+        if location.y > penguinY + margin {
+            onTutorialEvent(.tappedBelow)
+        } else if location.y < penguinY - margin {
+            onTutorialEvent(.tappedAbove)
+        }
     }
 
     private func movePenguinToward(y requestedY: CGFloat) {
         let canSurface = (1...4).contains(divePhase)
         if requestedY >= waterline {
+            // While flying itself is being taught the water is off limits: the
+            // penguin flattens out along the bottom of the flight band instead
+            // of diving out of the lesson.
+            guard !tutorial.blocksDiving else {
+                diveArmed = false
+                divePhase = 0
+                targetPenguinY = flightMaxY
+                return
+            }
             armDive()
             return
         }
@@ -544,12 +693,14 @@ struct FlyingPenguinPlayfield: View {
               committedLaneIndex == nil,
               location.x >= hoopX - hoopSize * 0.72 else { return }
 
-        dragStartY = nil
-        let isEarly = timingMarkerX(for: hoopX) > penguinX
-        speedRunActive = true
-        speedBonusEligible = isEarly
-
         if location.y > lanes[2] + hoopSize * 0.46 {
+            // The held set is waiting for one specific tap; nothing else — a
+            // dive included — may take the lesson off its rails.
+            guard !tutorialHold else { return }
+            dragStartY = nil
+            speedRunActive = true
+            speedBonusEligible = timingMarkerX(for: hoopX) > penguinX
+            guard !tutorial.blocksDiving else { return }
             armDive()
             return
         }
@@ -557,6 +708,19 @@ struct FlyingPenguinPlayfield: View {
         let lane = lanes.enumerated().min {
             abs($0.element - location.y) < abs($1.element - location.y)
         }?.offset ?? 1
+        // While the turbo lesson holds the world still, only the hoop it is
+        // pointing at releases it. Anything else leaves the set standing.
+        if lane == correctHoopIndex {
+            tutorialTurboTapped = true
+            tutorialHold = false
+        } else if tutorialHold {
+            return
+        }
+
+        dragStartY = nil
+        speedRunActive = true
+        speedBonusEligible = timingMarkerX(for: hoopX) > penguinX
+
         if divePhase == 1 || divePhase == 2 || divePhase == 3 {
             divePhase = 3
         } else if divePhase != 4 {
@@ -569,6 +733,16 @@ struct FlyingPenguinPlayfield: View {
     private func timingMarkerX(for ringX: CGFloat) -> CGFloat {
         ringX - cruiseSpeed * 1.55
     }
+
+    /// Which of the three hoops carries the answer, if any of them does.
+    private var correctHoopIndex: Int? {
+        shownOptions.firstIndex { $0.isCorrect }
+    }
+
+    /// Where a held set comes to a stop: fully in frame, and still comfortably
+    /// on the near side of its own deadline, so the tap that releases it is the
+    /// early tap the lesson is asking for.
+    private var tutorialHoldX: CGFloat { sceneSize.width * 0.78 }
 
     private var displayedPenguinX: CGFloat {
         switch entranceStage {
@@ -701,6 +875,10 @@ struct FlyingPenguinPlayfield: View {
         launchWorldOrigin = worldOffset
         launchPlatformActive = true
         startMarkerActive = true
+        lifeHearts = []
+        hasPlacedRescueHeart = false
+        tutorialHold = false
+        tutorialTurboTapped = false
         let fuseDuration = reduceMotion ? 0.12 : 1.45
         let squeezeDuration = reduceMotion ? 0.06 : 0.24
         let flightDuration = reduceMotion ? 0.10 : 0.72
@@ -740,6 +918,9 @@ struct FlyingPenguinPlayfield: View {
         // From the shot onwards, so the first set can already be travelling
         // while the penguin is still leaving the barrel.
         guard entranceStage >= 3, let round = rounds.first, sceneSize.width > 0 else { return }
+        // The first two lessons are about flying and nothing else: no set is
+        // put on the conveyor at all until the hoops are introduced.
+        guard !tutorial.hidesHoops else { return }
         guard force || activeRoundID != round.id else { return }
         let promotesPreview = previewRoundID == round.id
         let promotedX = previewX
@@ -770,8 +951,59 @@ struct FlyingPenguinPlayfield: View {
         selectedOptionID = nil
         bypassedWrongSet = false
         emphasizesCorrectAnswer = false
+        tutorialTurboTapped = false
+        placeTutorialHearts()
+        placeRescueHeartIfDue()
         // Keep the exact flight height between sets. Only a completed dive
         // changes it as part of its resurfacing sequence.
+    }
+
+    /// Parks a heart just behind every wrong hoop of the set being introduced.
+    /// Behind, because the conveyor runs right to left: a heart placed further
+    /// out arrives after the hoop it belongs to, which is exactly what makes it
+    /// reachable only to a penguin that has just flown through that hoop.
+    private func placeTutorialHearts() {
+        guard tutorial.placesHearts, !shownOptions.isEmpty else { return }
+        let offset = hoopSize * 0.95
+        lifeHearts.removeAll { $0.isLesson && $0.setID == activeRoundID }
+        lifeHearts += shownOptions.enumerated().compactMap { index, option in
+            guard !option.isCorrect else { return nil }
+            return LifeHeartPickup(setID: activeRoundID,
+                                   lane: index,
+                                   x: hoopX + offset,
+                                   isLesson: true)
+        }
+    }
+
+    /// The session's one rescue heart, placed halfway between the set that is
+    /// arriving and the one before it, in the lane the answer is in — so the
+    /// line that takes the player to the heart is the same line that takes them
+    /// through the right hoop. A set with no right answer has no such lane and
+    /// simply waits for the next one.
+    private func placeRescueHeartIfDue() {
+        guard isRescueHeartDue, !hasPlacedRescueHeart,
+              !tutorial.isRunning, !shownOptions.isEmpty,
+              let lane = correctHoopIndex else { return }
+        hasPlacedRescueHeart = true
+        lifeHearts.append(LifeHeartPickup(setID: activeRoundID,
+                                          lane: lane,
+                                          x: hoopX - ringSetSpacing * 0.5,
+                                          isLesson: false))
+        onRescueHeartPlaced()
+    }
+
+    /// A heart is taken when the penguin reaches it in the lane it is sitting
+    /// in. Under water it is out of reach, which is the point.
+    private func collectLifeHearts() {
+        guard !lifeHearts.isEmpty, divePhase != 1, divePhase != 2 else { return }
+        let reach = hoopSize * 0.46
+        guard let taken = lifeHearts.first(where: { heart in
+            guard heart.lane < lanes.count else { return false }
+            return abs(heart.x - penguinX) <= reach
+                && abs(lanes[heart.lane] - penguinY) <= hoopSize * 0.44
+        }) else { return }
+        lifeHearts.removeAll { $0.id == taken.id }
+        onLifeHeartCollected(CGPoint(x: penguinX, y: lanes[taken.lane]))
     }
 
     private func configurePreview() {
@@ -797,13 +1029,21 @@ struct FlyingPenguinPlayfield: View {
         let seed = round.id.uuidString.utf8.reduce(UInt64(14_695_981_039_346_656_037)) {
             ($0 ^ UInt64($1)) &* 1_099_511_628_211
         }
-        let hasNoCorrectAnswer = seed.isMultiple(of: 4)
+        // A lesson decides what its own set has to be: three wrong answers
+        // while diving underneath is being taught, one right answer for every
+        // step after it. Everything else is left to chance, as in a real run.
+        var hasNoCorrectAnswer = seed.isMultiple(of: 4)
+        if tutorial.forcesNoCorrectAnswer { hasNoCorrectAnswer = true }
+        if tutorial.forcesCorrectAnswer { hasNoCorrectAnswer = false }
         let wrong = round.options.filter { !$0.isCorrect }
         if hasNoCorrectAnswer {
             return (Array(wrong.prefix(3)), true)
         }
         guard let correct = round.correctOption else { return (Array(wrong.prefix(3)), false) }
         let choices = [correct] + Array(wrong.prefix(2))
+        // A lesson may ask for the answer in the top hoop; ordinary play rotates
+        // it so no lane is ever the safe bet.
+        guard !tutorial.putsAnswerOnTop else { return (choices, false) }
         let offset = round.number % choices.count
         return (Array(choices[offset...] + choices[..<offset]), false)
     }
@@ -830,9 +1070,18 @@ struct FlyingPenguinPlayfield: View {
         // carries everything that stands in the world — scenery, launch site,
         // start marker and rings — at one shared speed.
         guard entranceStage >= 3 else { return }
-        advanceWorld(dt: CGFloat(dt))
+        // The turbo lesson stops the conveyor once the player has had their
+        // three free sets: the hoops and the tap hint stand still until the
+        // right one is tapped. Only the world waits — the penguin keeps flying,
+        // and every touch keeps being answered.
+        if tutorial.holdsForTurbo, !tutorialHold, !resolved, !tutorialTurboTapped,
+           !shownOptions.isEmpty, hoopX <= tutorialHoldX {
+            tutorialHold = true
+        }
+        if !tutorialHold { advanceWorld(dt: CGFloat(dt)) }
 
         guard entranceStage >= 5 else { return }
+        collectLifeHearts()
         if !reduceMotion { flightClock += dt }
 
         // One critically damped movement path owns vertical control. It reacts
@@ -957,6 +1206,12 @@ struct FlyingPenguinPlayfield: View {
         }
         for index in retiringSets.indices { retiringSets[index].x -= speed * dt }
         retiringSets.removeAll { $0.x < -hoopSize * 0.65 }
+        // The lesson's hearts ride the same conveyor as the set they were
+        // placed behind, so the gap between hoop and heart never changes.
+        if !lifeHearts.isEmpty {
+            for index in lifeHearts.indices { lifeHearts[index].x -= speed * dt }
+            lifeHearts.removeAll { $0.x < -hoopSize * 0.65 }
+        }
         if !shownOptions.isEmpty { hoopX -= speed * dt }
     }
 
@@ -1006,6 +1261,19 @@ struct FlyingPenguinPlayfield: View {
         // Keep that synthetic choice out of the visual feedback so only the
         // revealed correct hoop turns green; red remains reserved for a wrong
         // hoop the penguin really flew through.
+        // What the passage was is only knowable here: the engine is told an
+        // option, but whether the penguin threaded a hoop or went underneath
+        // the lot is the field's own business — and it is the whole difference
+        // between the lessons being taught.
+        if tutorial.isRunning {
+            if isBelowRings {
+                onTutorialEvent(.passedUnderSet)
+            } else if isCorrect {
+                onTutorialEvent(.passedCorrectHoop(withTurbo: usesSpeedBonus))
+            } else {
+                onTutorialEvent(.passedWrongHoop)
+            }
+        }
         selectedOptionID = isBelowRings ? nil : selected.id
         bypassedWrongSet = isBelowRings && noCorrectAnswer && isCorrect
         if usesSpeedBonus {
@@ -1124,6 +1392,9 @@ struct FlyingPenguinPlayfield: View {
         diveArmed = false
         splashes = []
         surfaceSubmerged = false
+        lifeHearts = []
+        tutorialHold = false
+        tutorialTurboTapped = false
         // The world stops for the finale, so anything still drifting out of
         // frame would stand frozen in it.
         launchPlatformActive = false
@@ -1716,6 +1987,81 @@ private struct SplashEvent: Identifiable {
 private struct SolvedAnswerEcho: Identifiable {
     let id = UUID()
     let prompt: String
+}
+
+/// One heart standing in the world: behind the wrong hoop of the life lesson,
+/// or alone in the gap between two sets as the session's rescue. It carries its
+/// own position rather than an offset from a set, so the next set arriving
+/// cannot drag it along with it.
+private struct LifeHeartPickup: Identifiable {
+    let id = UUID()
+    /// The round whose set this heart was placed with.
+    let setID: UUID?
+    let lane: Int
+    var x: CGFloat
+    /// True for the hearts the guided run puts out, which go when it ends.
+    let isLesson: Bool
+}
+
+/// A life waiting in the flight path. Deliberately the very same heart the
+/// lives meter is drawn with — the character's deep colour behind a soft white
+/// outline — so what it gives back needs no explaining.
+private struct LifeHeartView: View {
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let phase = reduceMotion ? 0
+                : sin(context.date.timeIntervalSinceReferenceDate * .pi * 2.4)
+            LifeHeartGlyph(size: size, tint: tint)
+                .scaleEffect(1 + phase * 0.08)
+                .shadow(color: .black.opacity(0.20), radius: 5, y: 3)
+        }
+        .frame(width: size, height: size)
+    }
+}
+
+/// Asks for a tap, on the one hoop the turbo lesson is about. Rings leave the
+/// rim while a hand stands off to the right, pointing back at it — off to the
+/// side deliberately, because a hand in the middle of the hoop covers the one
+/// thing the player has to read: the answer.
+private struct TutorialTapPulse: View {
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let clock = context.date.timeIntervalSinceReferenceDate
+            let nudge = reduceMotion ? 0 : CGFloat(sin(clock * .pi * 2.4))
+            ZStack {
+                ForEach(0..<2, id: \.self) { index in
+                    let progress = reduceMotion ? 0.45
+                        : CGFloat((clock * 0.9 + Double(index) * 0.5)
+                            .truncatingRemainder(dividingBy: 1))
+                    Circle()
+                        .stroke(tint.opacity(Double(1 - progress) * 0.75),
+                                lineWidth: size * 0.07)
+                        .scaleEffect(0.42 + progress * 0.72)
+                }
+
+                // The hand taps toward the rim: it sits just outside the hoop's
+                // right edge and leans into it, so the eye is led from the hand
+                // to the ring rather than away from it.
+                Image(systemName: "hand.point.left.fill")
+                    .font(.system(size: size * 0.34, weight: .black))
+                    .foregroundStyle(tint)
+                    .padding(size * 0.09)
+                    .background(.white.opacity(0.94), in: Circle())
+                    .shadow(color: .black.opacity(0.18), radius: 3, y: 2)
+                    .offset(x: size * (0.66 - 0.05 * nudge))
+            }
+            .frame(width: size, height: size)
+        }
+        .frame(width: size, height: size)
+    }
 }
 
 private struct RetiringHoopSet: Identifiable {

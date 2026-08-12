@@ -66,6 +66,15 @@ struct GameView: View {
     /// The tutorial switch on the start card. It only decides what the start
     /// button says and does; the run itself is driven by the view model.
     @State private var isTutorialArmed = false
+    /// Where the lives meter sits, measured in the same space the playing field
+    /// draws in, so a caught heart can be flown to the exact heart it fills.
+    @State private var livesFrame: CGRect = .zero
+    /// Hearts on their way from the flight path to the meter.
+    @State private var heartFlights: [HeartFlight] = []
+    /// The short pop a heart leaves on the meter as it lands.
+    @State private var heartLandings: [HeartLanding] = []
+    /// Bumped when a heart lands, which is when the meter says "+1".
+    @State private var lifeGainToken = 0
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -211,12 +220,20 @@ struct GameView: View {
                               // or the Dynamic Island behind it.
                               topReserve: topInset + (isPad ? 64 : 50),
                               bottomReserve: screenInsets.bottom,
-                              // What the tutorial is saying, and which fly it is
-                              // pointing at. Both are nil in a normal session,
-                              // and the playing field costs nothing for them.
+                              // What the tutorial is teaching, what it is
+                              // saying, and where its answers go back to. All
+                              // three are inert in a normal session, and the
+                              // playing field costs nothing for them.
+                              tutorial: model.tutorial,
                               tutorialMessage: tutorialMessage,
-                              tutorialSymbol: model.tutorialStep?.symbolName,
-                              tutorialPointer: model.tutorialPointer,
+                              onTutorialEvent: { model.reportTutorial($0) },
+                              // The one rescue heart of the session, and the
+                              // hearts the life lesson parks behind its wrong
+                              // hoops, share this pair of hooks.
+                              isRescueHeartDue: model.isRescueHeartDue,
+                              onRescueHeartPlaced: { model.placeRescueHeart() },
+                              onLifeHeartCollected: collectLifeHeart(at:),
+                              lifeHeartSize: hudHeartSize,
                               onHit: { optionID, usesSpeedBonus, usesHalfLifePenalty in
                                   model.select(optionID: optionID,
                                                usesSpeedBonus: usesSpeedBonus,
@@ -252,14 +269,84 @@ struct GameView: View {
                         .padding(.top, topInset + (isPad ? 116 : 88))
                         .allowsHitTesting(false)
                 }
+
+                // Drawn over the HUD, because the whole point of the flight is
+                // that it ends on the meter.
+                ForEach(heartFlights) { flight in
+                    HeartFlightView(flight: flight,
+                                    tint: character.deepColor,
+                                    size: hudHeartSize)
+                }
+                .allowsHitTesting(false)
+
+                ForEach(heartLandings) { landing in
+                    HeartLandingPop(point: landing.point,
+                                    tint: character.deepColor,
+                                    size: hudHeartSize)
+                }
+                .allowsHitTesting(false)
             }
+            .coordinateSpace(name: Self.gameSpace)
+            .onPreferenceChange(LivesFrameKey.self) { livesFrame = $0 }
         }
         .ignoresSafeArea()
     }
 
+    /// The name the playing field's own coordinates and the HUD's measured
+    /// frames agree in. Both fill the screen ignoring the safe area, so a point
+    /// the field hands over needs no conversion at all.
+    private static let gameSpace = "game"
+
+    /// A heart was flown into. The heart itself travels first, unchanged in
+    /// size and shape, to the exact slot on the meter it is going to fill — and
+    /// only when it lands does the life count up. Carrying it there and then
+    /// adding it is what makes the meter's answer legible; adding it at the
+    /// pick-up and flying a ghost after it says nothing.
+    private func collectLifeHeart(at point: CGPoint) {
+        guard model.canTakeLifeHeart else { return }
+        let target = livesTarget(filling: model.livesRemaining)
+        guard livesFrame != .zero else {
+            landLifeHeart(at: nil)
+            return
+        }
+        let flight = HeartFlight(source: point,
+                                 target: target,
+                                 arc: isPad ? 90 : 64,
+                                 duration: reduceMotion ? 0.28 : 0.62)
+        heartFlights.append(flight)
+        DispatchQueue.main.asyncAfter(deadline: .now() + flight.duration) {
+            heartFlights.removeAll { $0.id == flight.id }
+            landLifeHeart(at: target)
+        }
+    }
+
+    /// The heart has arrived: the life goes on the meter, the meter pops, and
+    /// the "+1" says what just happened.
+    private func landLifeHeart(at point: CGPoint?) {
+        guard model.collectLifeHeart() else { return }
+        lifeGainToken &+= 1
+        guard let point else { return }
+        let pop = HeartLanding(point: point)
+        heartLandings.append(pop)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+            heartLandings.removeAll { $0.id == pop.id }
+        }
+    }
+
+    /// The centre of the heart that is about to fill. The meter draws its
+    /// hearts as equal slices of one column, so the slot is worked out from the
+    /// lives the player had before the pick-up rather than measured separately.
+    private func livesTarget(filling livesBefore: Double) -> CGPoint {
+        let capacity = max(1, Int(GameConfig.startingLives.rounded(.up)))
+        let index = min(capacity - 1, max(0, Int(livesBefore.rounded(.down))))
+        let slot = livesFrame.height / CGFloat(capacity)
+        return CGPoint(x: livesFrame.midX,
+                       y: livesFrame.minY + slot * (CGFloat(index) + 0.5))
+    }
+
     /// The line the guided run is on, resolved in the language being read.
     private var tutorialMessage: String? {
-        model.tutorialStep.map { L(key: $0.messageKey) }
+        model.tutorial.step.map { L(key: $0.messageKey) }
     }
 
     private func finishLevelCompletion() {
@@ -300,6 +387,27 @@ struct GameView: View {
                       glyphSize: hudHeartSize,
                       rowHeight: hudControlSize,
                       columnHeight: hudControlSize * 2 + hudStackSpacing)
+                // Where the meter is, in the playing field's own coordinates.
+                .background {
+                    GeometryReader { proxy in
+                        Color.clear.preference(
+                            key: LivesFrameKey.self,
+                            value: proxy.frame(in: .named(Self.gameSpace))
+                        )
+                    }
+                }
+                // A caught heart gives a life back. Saying so at the meter, as
+                // the heart lands on it, is what makes three hearts again make
+                // sense to a child who just watched one go.
+                .overlay(alignment: .trailing) {
+                    if lifeGainToken > 0 {
+                        LifeGainBadge(token: lifeGainToken,
+                                      character: character,
+                                      isPad: isPad)
+                            .fixedSize()
+                            .offset(x: isPad ? 74 : 58)
+                    }
+                }
         }
     }
 
@@ -375,6 +483,139 @@ struct GameView: View {
     /// the background.
     private var isReefRunning: Bool {
         !showsIntro && (!model.isGameOver || playsLevelCompletion) && scenePhase == .active
+    }
+}
+
+// MARK: - Life hearts
+
+/// One heart, drawn exactly as the lives meter draws a full one: a soft white
+/// outline behind the character's own deep colour. Everything that stands for a
+/// life uses this — the meter, the hearts floating in the flight path, and the
+/// copy that flies between them — so a heart is recognisable wherever it is.
+struct LifeHeartGlyph: View {
+    let size: CGFloat
+    let tint: Color
+
+    var body: some View {
+        ZStack {
+            Image(systemName: "heart.fill")
+                .foregroundStyle(.white.opacity(0.85))
+                .scaleEffect(1.22)
+            Image(systemName: "heart.fill")
+                .foregroundStyle(tint)
+        }
+        .font(.system(size: size, weight: .bold))
+        .frame(width: size, height: size)
+    }
+}
+
+/// Where the lives meter is, published up to the screen so a caught heart knows
+/// where to fly. The larger frame wins, which simply means the real one: an
+/// empty default can never displace a measured rect.
+private struct LivesFrameKey: PreferenceKey {
+    static let defaultValue = CGRect.zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
+        let next = nextValue()
+        if next != .zero { value = next }
+    }
+}
+
+/// One heart landing on the meter, kept only for the length of its pop.
+private struct HeartLanding: Identifiable {
+    let id = UUID()
+    let point: CGPoint
+}
+
+/// The beat that says the life was counted: the heart that just arrived swells
+/// once and clears, leaving the meter's own heart lit behind it.
+private struct HeartLandingPop: View {
+    let point: CGPoint
+    let tint: Color
+    let size: CGFloat
+    @State private var progress: CGFloat = 0
+
+    var body: some View {
+        LifeHeartGlyph(size: size, tint: tint)
+            .scaleEffect(1 + progress * 0.85)
+            .opacity(Double(1 - progress))
+            .position(point)
+            .onAppear {
+                withAnimation(.easeOut(duration: 0.45)) { progress = 1 }
+            }
+    }
+}
+
+/// A heart travelling from the flight path to the meter.
+private struct HeartFlight: Identifiable {
+    let id = UUID()
+    let source: CGPoint
+    let target: CGPoint
+    /// How high the arc lifts at its midpoint.
+    let arc: CGFloat
+    let duration: Double
+}
+
+/// Carries the caught heart up to the slot it fills. Same heart, same size,
+/// same colour as the one already on the meter and the one it was picked up
+/// from — it neither grows, shrinks nor fades on the way, so what arrives is
+/// plainly the heart that left.
+private struct HeartFlightView: View {
+    let flight: HeartFlight
+    let tint: Color
+    let size: CGFloat
+    @State private var progress: CGFloat = 0
+
+    var body: some View {
+        LifeHeartGlyph(size: size, tint: tint)
+            .position(point(at: progress))
+            .onAppear {
+                withAnimation(.easeInOut(duration: flight.duration)) { progress = 1 }
+            }
+    }
+
+    private func point(at t: CGFloat) -> CGPoint {
+        CGPoint(x: flight.source.x + (flight.target.x - flight.source.x) * t,
+                y: flight.source.y + (flight.target.y - flight.source.y) * t
+                    - sin(t * .pi) * flight.arc)
+    }
+}
+
+/// "+1" and a heart, once, beside the lives meter. It is the other half of the
+/// life lesson: the heart behind the wrong hoop is picked up, and this says what
+/// picking it up did.
+private struct LifeGainBadge: View {
+    let token: Int
+    let character: AnimalCharacter
+    let isPad: Bool
+    @State private var visible = false
+
+    var body: some View {
+        HStack(spacing: 3) {
+            Image(systemName: "heart.fill")
+            Text(verbatim: "+1")
+        }
+        .font(.system(size: isPad ? 19 : 15, weight: .black, design: .rounded))
+        .foregroundStyle(character.deepColor)
+        .padding(.horizontal, isPad ? 10 : 8)
+        .padding(.vertical, isPad ? 6 : 4)
+        .background(.white.opacity(0.95), in: Capsule())
+        .overlay(Capsule().stroke(character.color.opacity(0.55), lineWidth: 2))
+        .shadow(color: .black.opacity(0.14), radius: 4, y: 2)
+        .scaleEffect(visible ? 1 : 0.6)
+        .opacity(visible ? 1 : 0)
+        .offset(y: visible ? -10 : 6)
+        .onAppear { animate() }
+        .onChange(of: token) { _, _ in animate() }
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+    }
+
+    private func animate() {
+        visible = false
+        withAnimation(.spring(response: 0.3, dampingFraction: 0.62)) { visible = true }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            withAnimation(.easeOut(duration: 0.3)) { visible = false }
+        }
     }
 }
 

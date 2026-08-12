@@ -1,14 +1,17 @@
 //
 //  Tutorial.swift
-//  Hungry Frog
+//  Flying Penguin
 //
-//  The guided first run teaches the essentials: read the sum, catch the right
-//  fly, see what a mistake costs, and where the score ends up.
+//  The guided first run teaches the seven things a flight is made of: dragging
+//  the penguin, tapping it to a height, diving under a set that holds no answer,
+//  flying through the right hoop, tapping that hoop early for turbo, what a
+//  wrong hoop costs — and that the life it costs comes straight back.
 //
-//  Nothing here re-implements a rule. The tutorial only decides *which* answers
-//  count while a step is being taught and *what* is being said about it; the sum,
-//  the score and the lives come out of `MemoryGame` exactly as
-//  they do in a normal session, which is what makes the lesson true.
+//  Nothing here re-implements a rule. The tutorial only decides *which* sets are
+//  offered while a step is being taught, *what* is being said about it, and what
+//  a mistake is allowed to cost during the lesson; the sum, the score and the
+//  lives come out of `MemoryGame` exactly as they do in a normal session, which
+//  is what makes the lesson true.
 //
 
 import SwiftUI
@@ -16,66 +19,183 @@ import Combine
 
 // MARK: - Steps
 
-/// The three taught beats of a run. Where the score lands belongs
-/// to the menu the player comes back to, not to the game, so it is not a case
-/// here; see `TutorialCenter.pendingMenuStep`.
+/// The seven taught beats of a guided run, in the order they are taught.
 enum TutorialStep: Int, Equatable, CaseIterable {
-    /// Read the sum, catch the fly carrying its answer.
-    case findTheAnswer = 1
-    /// Catch a wrong one on purpose, and see what it costs.
-    case tryAWrongOne
+    /// Hold the penguin and drag it up and down.
+    case dragToFly = 1
+    /// Tap above and below the penguin instead of dragging it.
+    case tapToFly
+    /// A set with no right answer in it: dive underneath the lot.
+    case diveUnder
+    /// One of the three hoops carries the answer. Fly through it.
+    case correctHoop
+    /// Tap that hoop before the cone for the doubled, accelerated approach.
+    case turbo
+    /// What a wrong hoop costs, and the heart waiting behind it.
+    case wrongHoop
     /// Handing the game over.
-    case goodLuck = 5
+    case goodLuck
 
     var messageKey: String { "tutorial.step\(rawValue)" }
 
-    /// One glyph per lesson, so a step is recognisable before it is read: the
-    /// sum, the mistake it costs, and the send-off.
+    /// One glyph per lesson, so a step is recognisable before it is read.
     var symbolName: String {
         switch self {
-        case .findTheAnswer: return "plus.forwardslash.minus"
-        case .tryAWrongOne:  return "heart.slash.fill"
-        case .goodLuck:      return "hand.thumbsup.fill"
+        case .dragToFly:   return "hand.draw.fill"
+        case .tapToFly:    return "hand.tap.fill"
+        case .diveUnder:   return "arrow.down.circle.fill"
+        case .correctHoop: return "checkmark.circle.fill"
+        case .turbo:       return "bolt.fill"
+        case .wrongHoop:   return "heart.slash.fill"
+        case .goodLuck:    return "play.circle.fill"
         }
     }
 }
 
-/// Which fly the pointer arrow is aimed at while a step runs.
-enum TutorialPointer: Equatable {
-    case correct
-    case wrong
+// MARK: - What a step changes about the game
+
+/// Everything the playing field and the view model have to know about the step
+/// being taught, in one value. A default-constructed plan is an ordinary,
+/// unguided session, which is what a finished tutorial leaves behind.
+struct TutorialPlan: Equatable {
+    var step: TutorialStep?
+
+    /// No hoops at all: the first two steps are only about flying.
+    var hidesHoops = false
+    /// The water is off limits while movement is being taught.
+    var blocksDiving = false
+    /// Watch for the penguin being dragged to a low and to a high point.
+    var tracksDrag = false
+    /// Watch for a tap under and a tap above the penguin.
+    var tracksTaps = false
+    /// Every hoop in the set is wrong, so the only way through is underneath.
+    var forcesNoCorrectAnswer = false
+    /// Exactly one of the three hoops carries the answer.
+    var forcesCorrectAnswer = false
+    /// Put that answer in the top hoop. The turbo lesson asks for a tap on it
+    /// while the cone, the wake and the message all live along the bottom of
+    /// the screen; from the lowest lane the whole lesson piles up in one
+    /// corner, and from the top it has room to be read.
+    var putsAnswerOnTop = false
+    /// Pulse the right hoop.
+    var highlightsTurbo = false
+    /// Freeze the next set as it arrives until the right hoop is tapped.
+    var holdsForTurbo = false
+    /// A heart waits directly behind each wrong hoop.
+    var placesHearts = false
+    /// Nothing a mistake does during this step may cost a life.
+    var preventsLifeLoss = false
+    /// Only passing underneath is free; a wrong hoop costs a life as it should.
+    var preventsBypassLifeLoss = false
+
+    var isRunning: Bool { step != nil }
+
+    /// The rules that belong to a step. `holdsForTurbo` is layered on top by the
+    /// director once the player has had their three free sets.
+    static func plan(for step: TutorialStep?) -> TutorialPlan {
+        var plan = TutorialPlan()
+        plan.step = step
+        switch step {
+        case .dragToFly:
+            plan.hidesHoops = true
+            plan.blocksDiving = true
+            plan.tracksDrag = true
+        case .tapToFly:
+            plan.hidesHoops = true
+            plan.blocksDiving = true
+            plan.tracksTaps = true
+        case .diveUnder:
+            plan.forcesNoCorrectAnswer = true
+            plan.preventsLifeLoss = true
+        case .correctHoop:
+            plan.forcesCorrectAnswer = true
+            plan.preventsLifeLoss = true
+        case .turbo:
+            plan.forcesCorrectAnswer = true
+            plan.putsAnswerOnTop = true
+            plan.preventsLifeLoss = true
+            plan.highlightsTurbo = true
+        case .wrongHoop:
+            plan.forcesCorrectAnswer = true
+            plan.placesHearts = true
+            plan.preventsBypassLifeLoss = true
+        case .goodLuck, .none:
+            break
+        }
+        return plan
+    }
+}
+
+// MARK: - What the player did
+
+/// The things a guided run listens for. They are raised by the playing field,
+/// which is the only place that knows how a passage actually ended.
+enum TutorialEvent: Equatable {
+    /// Dragged down into the lower part of the flight band.
+    case draggedLow
+    /// Dragged up into the upper part of it.
+    case draggedHigh
+    /// Tapped below the penguin.
+    case tappedBelow
+    /// Tapped above it.
+    case tappedAbove
+    /// Flew underneath the complete set.
+    case passedUnderSet
+    /// Flew through the hoop carrying the answer.
+    case passedCorrectHoop(withTurbo: Bool)
+    /// Flew through one of the wrong hoops.
+    case passedWrongHoop
+    /// Picked up the heart waiting behind a wrong hoop.
+    case collectedHeart
 }
 
 // MARK: - Director
 
 /// The state machine behind a guided run. It holds no game state of its own: it
-/// is told what happened by `GameViewModel` and answers two questions — what is
-/// on screen, and which answers count right now.
+/// is told what happened and answers two questions — what is on screen, and
+/// which rules are bent while this step is being taught.
 @MainActor
 final class TutorialDirector {
-    private(set) var step: TutorialStep?
-    private(set) var pointer: TutorialPointer?
+    private(set) var plan = TutorialPlan()
 
-    /// Raised whenever `step` or `pointer` changed, so the view model can mirror
-    /// them onto its published properties in one place.
+    var step: TutorialStep? { plan.step }
+    var isRunning: Bool { plan.isRunning }
+
+    /// Raised whenever the plan changed, so the view model can mirror it onto
+    /// its published properties in one place.
     var onChange: (() -> Void)?
 
-    var isRunning: Bool { step != nil }
-
-    /// How long a step's own reaction — the tick, or the droppings — is given
-    /// before the next message replaces it. The first is timed to land just
-    /// after the next sum stands; the second lets the burst fall.
-    private static let correctHandover = 0.45
-    private static let wrongHandover = 1.5
+    /// How long a step's own reaction is given before the next message replaces
+    /// it: long enough to see that it worked, short enough not to wait.
+    private static let moveHandover = 0.55
+    /// A passage hands over inside its own feedback beat, deliberately before
+    /// the engine installs the next sum: the set that arrives next is still the
+    /// playing field's preview at that moment, so it can be re-tuned to the new
+    /// lesson's rules before it ever becomes the set being flown at.
+    private static let passHandover = 0.22
+    /// The life coming back is the whole point of step six; it gets its beat.
+    private static let heartHandover = 0.95
     /// How long the closing message stays up.
-    private static let farewell = 3.0
+    private static let farewell = 3.5
+    /// Sets the player may let pass in the turbo step before it waits for them.
+    private static let turboFreeSets = 3
 
+    private var draggedLow = false
+    private var draggedHigh = false
+    private var tappedBelow = false
+    private var tappedAbove = false
+    private var lostLifeToWrongHoop = false
+    private var passedSetsInTurboStep = 0
+    /// True between a step being satisfied and the next one arriving, so the
+    /// step that is on its way out cannot be completed a second time.
+    private var isAdvancing = false
     private var stepWork: DispatchWorkItem?
+
     // MARK: Lifecycle
 
     func begin() {
-        guard step == nil else { return }
-        apply(step: .findTheAnswer, pointer: .correct)
+        guard plan.step == nil else { return }
+        apply(.dragToFly)
     }
 
     /// Ends the run without finishing it — the screen is going away, or the
@@ -83,66 +203,95 @@ final class TutorialDirector {
     func cancel() {
         stepWork?.cancel()
         stepWork = nil
-        guard step != nil || pointer != nil else { return }
-        step = nil
-        pointer = nil
+        isAdvancing = false
+        guard plan.step != nil else { return }
+        plan = TutorialPlan()
         onChange?()
-    }
-
-    // MARK: What counts
-
-    /// Which answers the step being taught accepts. A tap that is refused here
-    /// never reaches the engine: the tongue goes out and comes back empty, so
-    /// nothing is scored, nothing is lost, and the lesson stays on its rails.
-    ///
-    func accepts(isCorrect: Bool) -> Bool {
-        switch step {
-        case .tryAWrongOne:
-            return !isCorrect
-        case .findTheAnswer:
-            return isCorrect
-        case .goodLuck, .none:
-            return true
-        }
     }
 
     // MARK: What happened
 
-    /// An answer the step was waiting for has landed. The arrow comes down on
-    /// the spot, before anything else happens: the fly it was pointing at is
-    /// being eaten, and leaving it up for even a moment sends it hunting for
-    /// another fly carrying the same kind of answer — which is exactly what
-    /// made it appear to jump to a second wrong fly after a mistake.
-    func didAnswer(isCorrect: Bool) {
-        let answered = step
-        if pointer != nil {
-            pointer = nil
-            onChange?()
-        }
+    func report(_ event: TutorialEvent) {
+        guard let step = plan.step, !isAdvancing else { return }
 
-        switch answered {
-        case .findTheAnswer where isCorrect:
-            schedule(after: Self.correctHandover) { [weak self] in
-                self?.apply(step: .tryAWrongOne, pointer: .wrong)
+        switch step {
+        case .dragToFly:
+            switch event {
+            case .draggedLow:  draggedLow = true
+            case .draggedHigh: draggedHigh = true
+            default: return
             }
-        case .tryAWrongOne where !isCorrect:
-            schedule(after: Self.wrongHandover) { [weak self] in
-                guard let self else { return }
-                self.apply(step: .goodLuck, pointer: nil)
-                self.schedule(after: Self.farewell) { [weak self] in
-                    self?.cancel()
+            if draggedLow && draggedHigh {
+                advance(to: .tapToFly, after: Self.moveHandover)
+            }
+
+        case .tapToFly:
+            switch event {
+            case .tappedBelow: tappedBelow = true
+            case .tappedAbove: tappedAbove = true
+            default: return
+            }
+            if tappedBelow && tappedAbove {
+                advance(to: .diveUnder, after: Self.moveHandover)
+            }
+
+        case .diveUnder:
+            // Only going underneath the whole set teaches the lesson. A wrong
+            // hoop costs nothing here and simply brings the next set along.
+            if event == .passedUnderSet {
+                advance(to: .correctHoop, after: Self.passHandover)
+            }
+
+        case .correctHoop:
+            if case .passedCorrectHoop = event {
+                advance(to: .turbo, after: Self.passHandover)
+            }
+
+        case .turbo:
+            switch event {
+            case .passedCorrectHoop(let withTurbo) where withTurbo:
+                advance(to: .wrongHoop, after: Self.passHandover)
+            case .passedCorrectHoop, .passedUnderSet, .passedWrongHoop:
+                // Three sets to try it unaided; after that the next one waits.
+                passedSetsInTurboStep += 1
+                if passedSetsInTurboStep >= Self.turboFreeSets, !plan.holdsForTurbo {
+                    plan.holdsForTurbo = true
+                    onChange?()
                 }
+            default: break
             }
-        default:
+
+        case .wrongHoop:
+            switch event {
+            case .passedWrongHoop:
+                lostLifeToWrongHoop = true
+            case .collectedHeart where lostLifeToWrongHoop:
+                advance(to: .goodLuck, after: Self.heartHandover)
+            default: break
+            }
+
+        case .goodLuck:
             break
         }
     }
 
     // MARK: Plumbing
 
-    private func apply(step: TutorialStep?, pointer: TutorialPointer?) {
-        self.step = step
-        self.pointer = pointer
+    private func advance(to step: TutorialStep, after delay: Double) {
+        isAdvancing = true
+        schedule(after: delay) { [weak self] in
+            guard let self else { return }
+            self.apply(step)
+            guard step == .goodLuck else { return }
+            self.schedule(after: Self.farewell) { [weak self] in
+                self?.cancel()
+            }
+        }
+    }
+
+    private func apply(_ step: TutorialStep) {
+        isAdvancing = false
+        plan = TutorialPlan.plan(for: step)
         onChange?()
     }
 
@@ -157,8 +306,7 @@ final class TutorialDirector {
 // MARK: - Hand-overs between screens
 
 /// The one piece of tutorial state that outlives a screen: the welcome flow asks
-/// for a level to be opened straight into a guided run, and the guided run asks
-/// the menu for the closing step once it is over.
+/// for a level to be opened straight into a guided run.
 @MainActor
 final class TutorialCenter: ObservableObject {
     static let shared = TutorialCenter()
@@ -168,8 +316,6 @@ final class TutorialCenter: ObservableObject {
     /// The level the welcome flow wants opened, guided, the moment the menu
     /// appears. Nil at every other launch.
     @Published private(set) var autoStartLevel: MathLevel?
-    /// True from the end of a guided run until the menu has shown its last step.
-    @Published private(set) var pendingMenuStep = false
 
     private init() {}
 
@@ -191,20 +337,9 @@ final class TutorialCenter: ObservableObject {
         return autoStartLevel
     }
 
-    /// A guided run has begun. The closing step is owed from here rather than
-    /// from the end of the run: a full-screen cover calls its `onDismiss` —
-    /// which is where the menu picks this up — before the screen it was
-    /// covering the menu with ever disappears, so anything raised on the way
-    /// out arrives one beat too late to be seen.
+    /// A guided run has begun.
     func guidedRunStarted() {
         UserDefaults.standard.set(true, forKey: Self.completedKey)
-        pendingMenuStep = true
-    }
-
-    /// Taken by the menu when the player comes back, once.
-    func takeMenuStep() -> Bool {
-        defer { pendingMenuStep = false }
-        return pendingMenuStep
     }
 }
 
@@ -233,10 +368,15 @@ struct TutorialMessageCard: View {
                 .font(.system(size: isPad ? 20 : 15.5, weight: .heavy, design: .rounded))
                 .foregroundStyle(theme.deepColor)
                 .multilineTextAlignment(.leading)
-                .lineLimit(3)
-                .minimumScaleFactor(0.62)
-                .fixedSize(horizontal: false, vertical: true)
-                .frame(maxWidth: .infinity, alignment: .leading)
+                // One line, always. The card is a band across the bottom of a
+                // landscape screen with three lanes of hoops above it: a second
+                // line grows downward into the lowest lane and covers the very
+                // answer the lesson is talking about. A long sentence in a long
+                // language shrinks to fit instead — the caller caps how wide
+                // the card may get, and the type follows.
+                .lineLimit(1)
+                .minimumScaleFactor(0.4)
+                .allowsTightening(true)
         }
         .padding(.horizontal, isPad ? 20 : 14)
         .padding(.vertical, isPad ? 14 : 10)
@@ -309,45 +449,5 @@ struct TutorialNoticeCard: View {
             .shadow(color: theme.deepColor.opacity(0.3), radius: 18, y: 8)
         }
         .transition(.opacity)
-    }
-}
-
-// MARK: - The menu's closing step
-
-/// Dims the menu around the level that was just played, so the one card the
-/// score landed on is the only thing lit. The hole is punched out of the wash
-/// rather than drawn over the card, which keeps the card itself untouched — it
-/// is still the live view, mid-celebration, underneath.
-struct TutorialSpotlight: View {
-    /// The card to leave lit, in the shared "home" space. Nil dims the lot.
-    let hole: CGRect?
-    var cornerRadius: CGFloat = 18
-    var padding: CGFloat = 6
-
-    var body: some View {
-        // One path with an even-odd fill rather than a blend mode: a
-        // `destinationOut` hole needs a compositing group, and a group is
-        // clipped to its own bounds — which would leave the safe-area edges of
-        // a landscape screen undimmed. Here the wash is simply drawn well past
-        // every edge, and the coordinates stay the menu's own.
-        GeometryReader { proxy in
-            Path { path in
-                let overhang: CGFloat = 240
-                path.addRect(CGRect(x: -overhang, y: -overhang,
-                                    width: proxy.size.width + overhang * 2,
-                                    height: proxy.size.height + overhang * 2))
-                if let hole {
-                    path.addRoundedRect(
-                        in: hole.insetBy(dx: -padding, dy: -padding),
-                        cornerSize: CGSize(width: cornerRadius + padding,
-                                           height: cornerRadius + padding),
-                        style: .continuous
-                    )
-                }
-            }
-            .fill(Color.black.opacity(0.5), style: FillStyle(eoFill: true))
-        }
-        .allowsHitTesting(false)
-        .accessibilityHidden(true)
     }
 }
