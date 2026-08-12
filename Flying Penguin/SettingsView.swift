@@ -191,10 +191,10 @@ struct SettingsView: View {
                     Circle()
                         .fill(animal.color.opacity(0.22))
                         .frame(width: 52, height: 52)
-                    animal.thumbnail
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 46, height: 46)
+                    CharacterPortrait(character: animal,
+                                      side: 46,
+                                      magnification: 1.55,
+                                      usesThumbnail: true)
                         .opacity(isLocked ? 0.5 : 1)
                     if isLocked {
                         Image(systemName: "lock.circle.fill")

@@ -1557,59 +1557,6 @@ private enum PenguinPose: Equatable {
 
 private enum PenguinFlightMotion: Equatable { case rising, level, falling }
 
-/// One character's flight artwork: a body canvas with a separate arm canvas on
-/// either side of it. Every layer of a rig shares the same 3:2 canvas and the
-/// same alignment, so the arms only ever need their own shoulder point.
-///
-/// Assets are named after the character's position in `CharacterUnlocks
-/// .orderedCharacterIDs` — `1_body_only`, `2_body_only`, … — so a new character
-/// is a folder of four PNGs plus one entry in `all` below.
-private struct CharacterRig {
-    let bodyImage: String
-    let frontArmImage: String
-    let backArmImage: String
-    /// Shoulder of the far arm, in its own canvas' unit space. Sits a little
-    /// above the joint's centre so the arm swings from the top of the socket.
-    let backShoulder: UnitPoint
-    /// Shoulder of the near arm, measured the same way.
-    let frontShoulder: UnitPoint
-    /// Brings this artwork onto the starter penguin's footprint: every
-    /// character has to read at one size and leave the cannon from one spot,
-    /// and the drawings themselves fill their canvas differently.
-    let artScale: CGFloat
-    /// Shift after scaling, as a fraction of the rig frame.
-    let artOffset: CGSize
-
-    /// Keyed by character ID. A character with no rig here flies the starter
-    /// penguin's artwork, which is what every character did before rigs were
-    /// drawn per animal.
-    static let all: [String: CharacterRig] = [
-        "flying_penguin": CharacterRig(
-            bodyImage: "1_body_only",
-            frontArmImage: "1_front_arm",
-            backArmImage: "1_back_arm",
-            backShoulder: UnitPoint(x: 0.715, y: 0.60),
-            frontShoulder: UnitPoint(x: 0.55, y: 0.55),
-            artScale: 1,
-            artOffset: .zero),
-        "bunny": CharacterRig(
-            bodyImage: "2_body_only",
-            frontArmImage: "2_front_arm",
-            backArmImage: "2_back_arm",
-            backShoulder: UnitPoint(x: 0.647, y: 0.697),
-            frontShoulder: UnitPoint(x: 0.503, y: 0.604),
-            // The bunny is drawn a fifth larger than the penguin and sits high
-            // and left of centre; ears and outstretched legs are what push it
-            // there, so the correction is a plain scale and shift.
-            artScale: 0.82,
-            artOffset: CGSize(width: 0.036, height: 0.032))
-    ]
-
-    static func rig(for characterID: String) -> CharacterRig {
-        all[characterID] ?? all[CharacterUnlocks.starterCharacterID]!
-    }
-}
-
 /// The three source canvases share exactly the same geometry. Keeping every
 /// layer full-size preserves the artist's alignment; only each arm rotates
 /// around its own fixed shoulder point.

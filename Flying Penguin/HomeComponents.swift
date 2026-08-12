@@ -222,10 +222,9 @@ struct NameEditorCard: View {
 
     private var card: some View {
         HStack(spacing: 16 * scale) {
-            theme.artwork
-                .resizable()
-                .scaledToFit()
-                .frame(width: 64 * scale, height: 64 * scale)
+            CharacterPortrait(character: theme,
+                              side: 64 * scale,
+                              magnification: 1.55)
 
             VStack(alignment: .leading, spacing: 10 * scale) {
                 Text("name.whatsYourName")

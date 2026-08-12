@@ -237,10 +237,9 @@ struct PremiumView: View {
             }
 
             let heroSize = metrics.heroSize
-            // Unlike the square animal portraits, the flying penguin sits on a
-            // wide transparent canvas. Enlarge only that artwork so its wings
-            // can overlap the decorative ring slightly.
-            let artworkScale: CGFloat = character.id == "flying_penguin" ? 1.75 : 1
+            // Every portrait sits on a wide transparent canvas, so the artwork
+            // is enlarged to let the outstretched arms overlap the decorative
+            // ring slightly instead of floating small inside it.
             ZStack {
                 Circle()
                     .fill(RadialGradient(
@@ -251,11 +250,9 @@ struct PremiumView: View {
                 Circle()
                     .stroke(character.color.opacity(0.30), lineWidth: 2)
                     .frame(width: heroSize * 0.92, height: heroSize * 0.92)
-                character.artwork
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: heroSize * 0.86, height: heroSize * 0.86)
-                    .scaleEffect(artworkScale)
+                CharacterPortrait(character: character,
+                                  side: heroSize * 0.86,
+                                  magnification: 1.75)
                     .shadow(color: character.deepColor.opacity(0.25), radius: 16, y: 9)
                     .id(previewCharacterID)
                     .transition(.scale.combined(with: .opacity))
@@ -399,10 +396,10 @@ struct PremiumView: View {
             if isAccessible { characterID = animal.id }
         } label: {
             VStack(spacing: metrics.tileSpacing) {
-                animal.thumbnail
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: artSide, height: artSide)
+                CharacterPortrait(character: animal,
+                                  side: artSide,
+                                  magnification: 1.55,
+                                  usesThumbnail: true)
                     .frame(height: artSide * 1.1)
                     .opacity(isAccessible ? 1 : 0.9)
 
@@ -655,10 +652,9 @@ struct PremiumView: View {
                         }
                         .rotationEffect(.degrees(unlockBurstRotation))
 
-                        animal.artwork
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: stageSize * 0.72, height: stageSize * 0.72)
+                        CharacterPortrait(character: animal,
+                                          side: stageSize * 0.72,
+                                          magnification: 1.55)
                             .scaleEffect(unlockCharacterScale)
                             .rotationEffect(.degrees(unlockCharacterRotation))
                             .offset(y: unlockCharacterFloating ? -7 * scale : 7 * scale)
