@@ -375,6 +375,31 @@ public final class ProgressStore {
         min(mergedValue(forKey: Key.best(board)), board.maximum)
     }
 
+    /// The already-reconciled value in local storage, without contacting the
+    /// cloud store. SwiftUI uses this while laying out menus: a body pass can
+    /// ask for dozens of scores, and turning every read into an iCloud merge
+    /// makes scrolling and state animations do storage work on the main thread.
+    /// `ProgressSync` updates these local values in the background and bumps
+    /// its revision once the snapshot is ready.
+    public func storedBestScore(_ board: LevelBoard) -> Int {
+        min(max(0, defaults.integer(forKey: Key.best(board))), board.maximum)
+    }
+
+    /// Local equivalent of `bestScoreAcrossBoards`, intended for read-only UI
+    /// summaries after `ProgressSync` has reconciled the store.
+    public func storedBestScoreAcrossBoards(level: MathLevel) -> Int {
+        LevelBoard.all(for: level).reduce(0) { $0 + storedBestScore($1) }
+    }
+
+    /// One cached-friendly pass for a topic header. Keeping this as a store
+    /// operation avoids accidental cloud access from a frequently recomputed
+    /// SwiftUI property.
+    public func storedScoreTotal(for topic: MathTopic) -> Int {
+        LevelCatalog.levels(for: topic).reduce(0) {
+            $0 + storedBestScoreAcrossBoards(level: $1)
+        }
+    }
+
     /// Every board a level has been played on, added up. The topic and the menu
     /// use this: a score earned with three cards, or on another Supermix
     /// combination, must not vanish from the totals because the player has
@@ -404,6 +429,13 @@ public final class ProgressStore {
     /// How often this board has been taken all the way to its maximum.
     public func maxCompletionCount(_ board: LevelBoard) -> Int {
         min(GameConfig.maximumCompletionCount, mergedValue(forKey: Key.maxCompletions(board)))
+    }
+
+    /// Menu rendering counterpart of `maxCompletionCount(_:)`; see
+    /// `storedBestScore(_:)` for why cloud work is kept out of body passes.
+    public func storedMaxCompletionCount(_ board: LevelBoard) -> Int {
+        min(GameConfig.maximumCompletionCount,
+            max(0, defaults.integer(forKey: Key.maxCompletions(board))))
     }
 
     /// Counts one more run that reached the maximum, and returns the new tally.

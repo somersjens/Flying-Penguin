@@ -22,6 +22,15 @@ final class ProgressSync: ObservableObject {
     private let cloudStore = NSUbiquitousKeyValueStore.default
     private var notificationToken: NSObjectProtocol?
     private var defaultsToken: NSObjectProtocol?
+    /// A full score reconciliation touches every board of all 594 levels. It is
+    /// durable-storage work, not UI work, so serialize and coalesce it away
+    /// from the main actor. Only the final revision notification returns to the
+    /// main queue.
+    private let reconcileQueue = DispatchQueue(
+        label: "com.flyingpenguin.progress.reconcile",
+        qos: .utility
+    )
+    private var fullReconcileQueued = false
 
     /// iCloud key for the player's name. Kept distinct from the local
     /// UserDefaults key so the mirroring below is always explicit.
@@ -36,7 +45,7 @@ final class ProgressSync: ObservableObject {
             object: cloudStore,
             queue: .main
         ) { [weak self] _ in
-            self?.reconcileAllProgress()
+            self?.scheduleFullReconciliation()
             self?.restorePlayerNameFromCloudIfNeeded()
         }
 
@@ -52,12 +61,12 @@ final class ProgressSync: ObservableObject {
             self?.pushPlayerNameToCloudIfChanged()
         }
 
-        cloudStore.synchronize()
         lastKnownPlayerName = UserDefaults.standard.string(forKey: GameSettings.playerNameKey) ?? ""
-        // Let the singleton finish initializing before ProgressStore accesses it.
+        // Let the singleton and first visible frame finish before starting the
+        // complete cloud snapshot. `synchronize()` and thousands of key reads
+        // used to land together on the main thread immediately after launch.
         DispatchQueue.main.async { [weak self] in
-            self?.reconcileAllProgress()
-            self?.syncPlayerNameAtLaunch()
+            self?.scheduleFullReconciliation(synchronizingCloud: true)
         }
     }
 
@@ -89,14 +98,52 @@ final class ProgressSync: ObservableObject {
     /// Re-reads every durable value after launch, an account change or an
     /// incoming iCloud update. Writing the winner to both stores makes this
     /// safe to call repeatedly and lets @AppStorage update the visible UI.
+    private func scheduleFullReconciliation(synchronizingCloud: Bool = false) {
+        guard !fullReconcileQueued else { return }
+        fullReconcileQueued = true
+        reconcileQueue.async { [weak self] in
+            guard let self else { return }
+            if synchronizingCloud { self.cloudStore.synchronize() }
+            self.reconcileAllProgress()
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                // Preserve launch ordering: the old synchronous path refreshed
+                // iCloud before reading the profile name. Doing this only after
+                // the background synchronize avoids briefly restoring stale or
+                // empty profile data.
+                if synchronizingCloud { self.syncPlayerNameAtLaunch() }
+                self.fullReconcileQueued = false
+                self.revision &+= 1
+            }
+        }
+    }
+
     private func reconcileAllProgress() {
+        // Snapshot both stores once. Calling `object(forKey:)` through
+        // ProgressStore for every board caused roughly 1,881 individual local
+        // and ubiquitous-store reads per pass. Dictionary lookup keeps the
+        // same monotonic merge semantics with far less locking and IPC churn.
+        let defaults = UserDefaults.standard
+        let localSnapshot = defaults.dictionaryRepresentation()
+        let cloudSnapshot = cloudStore.dictionaryRepresentation
+
         for topic in MathTopic.allCases {
             for level in LevelCatalog.levels(for: topic) {
-                _ = Progress.store.bestScoreAcrossBoards(level: level)
+                for board in LevelBoard.all(for: level) {
+                    let key = ProgressStore.Key.best(board)
+                    let local = max(0, (localSnapshot[key] as? NSNumber)?.intValue ?? 0)
+                    let cloud = max(0, (cloudSnapshot[key] as? NSNumber)?.intValue ?? 0)
+                    let winner = max(local, cloud)
+                    if cloud < winner {
+                        cloudStore.set(NSNumber(value: winner), forKey: key)
+                    }
+                    if local < winner {
+                        defaults.set(winner, forKey: key)
+                    }
+                }
             }
         }
         reconcileDurableProfile()
-        revision &+= 1
     }
 
     /// Progress outside the per-level scoreboards also needs to survive an app

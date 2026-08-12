@@ -224,24 +224,20 @@ final class AppAudio: NSObject, ObservableObject {
                                                       trimLeading: effect.lead)
             }
             DispatchQueue.main.async {
-                self.installEffectBuffers(buffers)
-                self.audioResourcesReady = true
-                // Only touch the audio session when sound is on, so a muted app
-                // never interrupts the user's own audio.
-                if self.hasAnyAudioEnabled {
-                    self.activateSession()
-                    self.startMusicIfReady()
-                }
+                self.installEffectBuffersInBatches(buffers)
             }
         }
     }
 
-    /// Attaches one player node per effect and wires it to the engine's mixer at
-    /// the buffer's own format (the mixer resamples as needed, so effects keep
-    /// their native rates). Runs once, on the main thread, after the background
-    /// decode; the engine itself is only started when sound is on.
-    private func installEffectBuffers(_ buffers: [String: AVAudioPCMBuffer]) {
-        for effect in Self.effects where effectBuffers[effect.key] == nil {
+    /// Attaches nodes in small main-run-loop batches. AVAudioEngine graph
+    /// mutation has to stay serialized, but attaching all effects in one pass
+    /// produced a visible cold-launch frame spike on slower devices even though
+    /// the file decoding itself was already off-main.
+    private func installEffectBuffersInBatches(_ buffers: [String: AVAudioPCMBuffer],
+                                               startingAt start: Int = 0) {
+        let batchSize = 5
+        let end = min(start + batchSize, Self.effects.count)
+        for effect in Self.effects[start..<end] where effectBuffers[effect.key] == nil {
             guard let buffer = buffers[effect.key] else { continue }
             effectBuffers[effect.key] = buffer
             let node = AVAudioPlayerNode()
@@ -250,6 +246,17 @@ final class AppAudio: NSObject, ObservableObject {
             engine.connect(node, to: engine.mainMixerNode, format: buffer.format)
             effectNodes[effect.key] = node
         }
+
+        if end < Self.effects.count {
+            // Yield a render opportunity before touching the next part of the
+            // graph; the decoded buffers stay retained by this short-lived job.
+            DispatchQueue.main.async { [weak self] in
+                self?.installEffectBuffersInBatches(buffers, startingAt: end)
+            }
+            return
+        }
+
+        audioResourcesReady = true
         // The session can go active before this background decode finishes — the
         // tutorial starts gameplay immediately, with no start card, so
         // `activateSession()` runs while `effectNodes` is still empty and
@@ -258,6 +265,12 @@ final class AppAudio: NSObject, ObservableObject {
         // would stay down and every effect would be silent. Now that the nodes
         // exist, bring the engine up here.
         if sessionOutputReady { startEngineIfNeeded() }
+        // Only touch the audio session when sound is on, so a muted app never
+        // interrupts the user's own audio.
+        if hasAnyAudioEnabled {
+            activateSession()
+            startMusicIfReady()
+        }
     }
 
     /// Loads the looping music asset, once, and only while the music is on.

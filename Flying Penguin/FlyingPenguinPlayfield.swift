@@ -1,6 +1,37 @@
 import SwiftUI
 import Combine
 
+/// A stable, lifecycle-controlled source for simulation frames. Keeping the
+/// publisher itself stable lets SwiftUI always invoke the current `tick`
+/// closure, while stopping its upstream timer prevents 60 main-thread wakeups
+/// per second behind pause/result cards or while the app is backgrounded.
+private final class PlayfieldFrameClock {
+    let ticks = PassthroughSubject<Date, Never>()
+    private var subscription: AnyCancellable?
+
+    func start() {
+        guard subscription == nil else { return }
+        let process = ProcessInfo.processInfo
+        let usesReducedCadence = process.isLowPowerModeEnabled
+            || process.thermalState == .serious
+            || process.thermalState == .critical
+        let interval = usesReducedCadence ? 1.0 / 30.0 : 1.0 / 60.0
+        subscription = Timer.publish(every: interval,
+                                     tolerance: interval * 0.08,
+                                     on: .main,
+                                     in: .common)
+            .autoconnect()
+            .sink { [weak self] in self?.ticks.send($0) }
+    }
+
+    func stop() {
+        subscription?.cancel()
+        subscription = nil
+    }
+
+    deinit { stop() }
+}
+
 /// The Flying Penguin interaction. Session rules remain in `MemoryGame`; this
 /// view only turns a vertical flight path (or a dive) into one option id.
 struct FlyingPenguinPlayfield: View {
@@ -38,7 +69,7 @@ struct FlyingPenguinPlayfield: View {
     let onFishEntranceComplete: () -> Void
     let onLevelCompletionFinished: () -> Void
 
-    private let timer = Timer.publish(every: 1.0 / 60.0, on: .main, in: .common).autoconnect()
+    @State private var frameClock = PlayfieldFrameClock()
 
     @State private var sceneSize: CGSize = .zero
     @State private var penguinY: CGFloat = 0
@@ -372,11 +403,19 @@ struct FlyingPenguinPlayfield: View {
                 updateLayout(proxy.size)
                 if playsFishEntrance { beginEntrance() }
                 else { resolved = true }
+                updateFrameClock(running: isRunning)
             }
             .onChange(of: proxy.size) { _, value in updateLayout(value) }
         }
         .ignoresSafeArea()
-        .onReceive(timer, perform: tick)
+        .onReceive(frameClock.ticks, perform: tick)
+        .onChange(of: isRunning) { _, running in
+            updateFrameClock(running: running)
+        }
+        .onDisappear {
+            frameClock.stop()
+            lastTick = nil
+        }
         .onChange(of: rounds.first?.id) { _, _ in configureRound(force: true) }
         .onChange(of: isLive) { _, live in
             if live && resolved { configureRound(force: true) }
@@ -390,6 +429,17 @@ struct FlyingPenguinPlayfield: View {
         }
         .onChange(of: playsLevelCompletion) { _, value in if value { beginCompletion() } }
         .onChange(of: tutorial) { _, _ in applyTutorialPlan() }
+    }
+
+    private func updateFrameClock(running: Bool) {
+        if running {
+            // Never fold time spent paused into the next physics step.
+            lastTick = nil
+            frameClock.start()
+        } else {
+            frameClock.stop()
+            lastTick = nil
+        }
     }
 
     /// A step change rewrites what a set is allowed to be. A lesson hands over

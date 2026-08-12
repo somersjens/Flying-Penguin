@@ -87,6 +87,10 @@ struct HomeView: View {
     /// is replaced in a single pop instead of ticking down with the total.
     @State private var unlockPrompt: NextCharacterPrompt?
     @State private var unlockPreviewTrigger = 0
+    /// Topic totals span as many as 99 levels and several boards per level.
+    /// Keep that storage scan out of SwiftUI body recomputation; refresh it
+    /// only when the selected topic or the reconciled progress snapshot moves.
+    @State private var topicCardTotal = 0
 
     private var character: AnimalCharacter { CharacterCatalog.current(isPremium: premium.isPremium) }
     private var topic: MathTopic { MathTopic(rawValue: topicRaw) ?? MathTopic.allCases[0] }
@@ -119,6 +123,23 @@ struct HomeView: View {
     /// three short lines and the streak bar, so the controls get the wider half.
     private var playerPanelWidth: CGFloat { isPad ? 458 : 325 }
 
+    /// A real lazy grid needs concrete columns. The app is landscape and tops
+    /// out at four; compact windows can still fall back to fewer without ever
+    /// squeezing a card below its readable minimum.
+    private var levelGridColumns: [GridItem] {
+        let fallbackWidth = AppLayout.landscapeContentWidth
+        let width = viewportWidth > 0
+            ? min(AppLayout.landscapeContentWidth,
+                  max(0, viewportWidth - AppLayout.landscapeGutter * 2))
+            : fallbackWidth
+        let minimum = isPad ? CGFloat(210) : CGFloat(118)
+        let fitting = Int(((width + levelGridSpacing)
+            / (minimum + levelGridSpacing)).rounded(.down))
+        let count = min(4, max(1, fitting))
+        return Array(repeating: GridItem(.flexible(), spacing: levelGridSpacing),
+                     count: count)
+    }
+
     /// The room the topics and the row under them have, worked out from the same
     /// numbers the card is laid out with. Knowing it here means the controls can
     /// size themselves to the screen without a nested `GeometryReader` — and the
@@ -139,9 +160,6 @@ struct HomeView: View {
     }
 
     var body: some View {
-        // Reading the revision redraws the personal bests when iCloud updates.
-        let _ = progressSync.revision
-
         ZStack {
             MenuPolarBackground(accent: character.color)
 
@@ -226,8 +244,19 @@ struct HomeView: View {
         .task {
             premium.startInitialRefresh()
             totalCards = Progress.store.totalCards
+            refreshTopicCardTotal()
             synchronizeUnlockPrompt(animated: false)
             startTutorialLevelIfRequested()
+        }
+        .onChange(of: topicRaw) { _, _ in
+            refreshTopicCardTotal()
+        }
+        .onChange(of: progressSync.revision) { _, _ in
+            // The cloud pass writes a complete local snapshot before changing
+            // the revision, so this is one cheap UI update rather than hundreds
+            // of cloud-backed reads during layout.
+            totalCards = Progress.store.totalCards
+            refreshTopicCardTotal()
         }
         .onChange(of: totalCards) { _, _ in
             // A returning session banks its cards before any of the celebration
@@ -453,15 +482,18 @@ struct HomeView: View {
 
     /// Cards earned across every level of the selected topic.
     private var topicCards: Int {
-        topicCards(for: topic)
+        topicCardTotal
     }
 
     /// Every board counts: a level's scores on two, three and four cards — and
     /// on each Supermix combination — all contribute to its topic, so switching
     /// never appears to wipe progress off the topic total.
     private func topicCards(for topic: MathTopic) -> Int {
-        LevelCatalog.levels(for: topic)
-            .reduce(0) { $0 + Progress.store.bestScoreAcrossBoards(level: $1) }
+        Progress.store.storedScoreTotal(for: topic)
+    }
+
+    private func refreshTopicCardTotal() {
+        topicCardTotal = topicCards(for: topic)
     }
 
     /// The scoreboard the menu is currently showing for a level.
@@ -473,7 +505,7 @@ struct HomeView: View {
     /// until the celebration is ready to count it up.
     private func heldBest(for level: MathLevel, board: LevelBoard) -> Int {
         if holdsPreSessionValues, level.id == lastPlayedLevelID { return lastPlayedLevelBest }
-        return Progress.store.bestScore(board)
+        return Progress.store.storedBestScore(board)
     }
 
     /// The six topics share the full width, matching the level cards below.
@@ -752,18 +784,16 @@ struct HomeView: View {
         let levels = LevelCatalog.levels(for: topic)
         let regular = levels.filter { !$0.requiresPremium }
         let premiumLevels = levels.filter { $0.requiresPremium }
-        let hasProgress = levels.contains {
-            Progress.store.bestScoreAcrossBoards(level: $0) > 0
-        }
+        let hasProgress = topicCardTotal > 0
         let recommendedID = hasProgress ? nil : regular.first?.id
 
         return VStack(alignment: .leading, spacing: 14) {
-            AdaptiveLevelGrid(spacing: levelGridSpacing,
-                              minimumCardWidth: isPad ? 210 : 118,
-                              maximumColumns: 4,
-                              cardHeight: levelCardHeight) {
+            LazyVGrid(columns: levelGridColumns,
+                      alignment: .leading,
+                      spacing: levelGridSpacing) {
                 ForEach(regular) { level in
                     levelCard(level, recommendedID: recommendedID)
+                        .frame(height: levelCardHeight)
                 }
             }
 
@@ -780,7 +810,7 @@ struct HomeView: View {
             status: status(for: level, recommendedID: recommendedID),
             best: heldBest(for: level, board: board),
             maximum: board.maximum,
-            maxCompletions: Progress.store.maxCompletionCount(board),
+            maxCompletions: Progress.store.storedMaxCompletionCount(board),
             pausedCards: PausedSessionStore.shared.session(board)?.cards,
             celebrationStart: celebration?.levelID == level.id
                 ? celebration?.levelStart : nil,
@@ -804,7 +834,7 @@ struct HomeView: View {
         // Completion is per board: the crown belongs to the scoreboard the
         // player is looking at, not to the level as a whole.
         let board = board(for: level)
-        if Progress.store.bestScore(board) >= board.maximum { return .completed }
+        if Progress.store.storedBestScore(board) >= board.maximum { return .completed }
         if level.id == recommendedID { return .recommended }
         return .available
     }
@@ -830,12 +860,12 @@ struct HomeView: View {
                         .frame(height: 1.5)
                 }
 
-                AdaptiveLevelGrid(spacing: levelGridSpacing,
-                                  minimumCardWidth: isPad ? 210 : 118,
-                                  maximumColumns: 4,
-                                  cardHeight: levelCardHeight) {
+                LazyVGrid(columns: levelGridColumns,
+                          alignment: .leading,
+                          spacing: levelGridSpacing) {
                     ForEach(levels) { level in
                         levelCard(level, recommendedID: nil)
+                            .frame(height: levelCardHeight)
                     }
                 }
             }
@@ -882,7 +912,7 @@ struct HomeView: View {
     /// so reading these on dismissal would only ever see the new values.
     private func rememberBeforePlaying(_ level: MathLevel) {
         lastPlayedLevelID = level.id
-        lastPlayedLevelBest = Progress.store.bestScore(board(for: level))
+        lastPlayedLevelBest = Progress.store.storedBestScore(board(for: level))
         lastPlayedTopic = topicCards(for: level.topic)
         lastPlayedTotal = Progress.store.totalCards
         holdsPreSessionValues = true
@@ -969,9 +999,10 @@ struct HomeView: View {
         let totalStart = lastPlayedTotal
 
         totalCards = Progress.store.totalCards
+        refreshTopicCardTotal()
         let levelNow = levelID
             .flatMap { LevelCatalog.level(id: $0) }
-            .map { Progress.store.bestScore(board(for: $0)) } ?? 0
+            .map { Progress.store.storedBestScore(board(for: $0)) } ?? 0
 
         if let levelID, levelNow > levelStart || totalCards > totalStart {
             let level = LevelCatalog.level(id: levelID)

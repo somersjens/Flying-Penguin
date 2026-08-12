@@ -171,7 +171,21 @@ struct SceneryFloater: View {
     let isPad: Bool
     var showsFoam = false
 
+    @ViewBuilder
     var body: some View {
+        // Only the two near objects need a lifted silhouette. The nine far/mid
+        // objects are deliberately low-contrast scenery; grouping and
+        // shadowing each one created nine moving offscreen textures per frame.
+        if showsFoam {
+            content
+                .compositingGroup()
+                .shadow(color: water.deep.opacity(0.28), radius: 3, y: 2)
+        } else {
+            content
+        }
+    }
+
+    private var content: some View {
         GeometryReader { proxy in
             let w = proxy.size.width
             let h = proxy.size.height
@@ -200,8 +214,6 @@ struct SceneryFloater: View {
                 }
             }
         }
-        .compositingGroup()
-        .shadow(color: water.deep.opacity(0.28), radius: 3, y: 2)
     }
 
     @ViewBuilder

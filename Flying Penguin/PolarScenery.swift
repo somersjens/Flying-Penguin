@@ -218,8 +218,10 @@ struct SeaIceBlock: View {
                 }
             }
         }
-        .compositingGroup()
-        .shadow(color: PolarScene.seaMid.opacity(0.35), radius: 4, y: 2)
+        // Depth styling belongs to `SceneryFloater`, which knows whether this
+        // is one of the two foreground objects. Applying a grouped shadow here
+        // forced every distant ice block through an offscreen render pass on
+        // every simulation frame (and foreground blocks were shadowed twice).
     }
 }
 

@@ -10,9 +10,27 @@
 		F9E600973028BC27001D93E4 /* Flying Penguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flying Penguin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F900000130E0000000000001 /* Exceptions for "Flying Penguin" folder in "Flying Penguin" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Products.storekit,
+				Translations.csv,
+				Tools/Hungry_Frog_vertaalsheet_07082026.csv,
+				Tools/Hungry_Frog_vertaalsheet_07082026.gecorrigeerd.csv,
+				Tools/README.md,
+				Tools/translations.py,
+			);
+			target = F9E600963028BC27001D93E4 /* Flying Penguin */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F9E600993028BC27001D93E4 /* Flying Penguin */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F900000130E0000000000001 /* Exceptions for "Flying Penguin" folder in "Flying Penguin" target */,
+			);
 			path = "Flying Penguin";
 			sourceTree = "<group>";
 		};
@@ -293,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_OPTIMIZATION = space;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
