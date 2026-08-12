@@ -1,0 +1,12 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/CharacterUnlocks.swift" : {
+    "abi-baseline-json" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying_Penguin.abi.json",
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying Penguin-primary.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying Penguin-primary.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying Penguin-primary.dia",
+    "objc-header" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying_Penguin-Swift.h",
+    "swiftdoc" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying_Penguin.swiftdoc",
+    "swiftmodule" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying_Penguin.swiftmodule",
+    "swiftsourceinfo" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Release/Flying Penguin.build/Objects-normal/arm64/Flying_Penguin.swiftsourceinfo"
+  }
+}

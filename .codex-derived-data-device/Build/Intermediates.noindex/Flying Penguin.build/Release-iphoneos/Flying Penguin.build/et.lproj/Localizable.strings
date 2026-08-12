@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Karu</string>
+	<key>character.bunny</key>
+	<string>Jänku</string>
+	<key>character.crab</key>
+	<string>Krabi</string>
+	<key>character.dog</key>
+	<string>Koer</string>
+	<key>character.elephant</key>
+	<string>Elevant</string>
+	<key>character.fox</key>
+	<string>Rebane</string>
+	<key>character.frog</key>
+	<string>Konn</string>
+	<key>character.lion</key>
+	<string>Lõvi</string>
+	<key>character.octopus</key>
+	<string>Kaheksajalg</string>
+	<key>character.penguin</key>
+	<string>Pingviin</string>
+	<key>common.cancel</key>
+	<string>Loobu</string>
+	<key>common.continue</key>
+	<string>Jätka</string>
+	<key>common.done</key>
+	<string>Valmis</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Salvesta</string>
+	<key>currency.hoop.plural</key>
+	<string>rõngad</string>
+	<key>currency.hoop.singular</key>
+	<string>rõngas</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Tubli katse</string>
+	<key>game.encouragement.1</key>
+	<string>Algus on tehtud</string>
+	<key>game.encouragement.2</key>
+	<string>Harjuta edasi</string>
+	<key>game.encouragement.3</key>
+	<string>Pole üldse paha</string>
+	<key>game.encouragement.4</key>
+	<string>Sul läheb hästi</string>
+	<key>game.encouragement.5</key>
+	<string>Hea tulemus</string>
+	<key>game.encouragement.6</key>
+	<string>Hästi tehtud</string>
+	<key>game.encouragement.7</key>
+	<string>Väga hästi mängitud</string>
+	<key>game.encouragement.8</key>
+	<string>Lõpp juba paistab</string>
+	<key>game.encouragement.9</key>
+	<string>Oled peaaegu kohal</string>
+	<key>game.encouragement.complete</key>
+	<string>Täiuslik tulemus!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Sa teenisid kõik punktid välja.</string>
+	<key>game.end.completionSuffix</key>
+	<string>valmis!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Mäng läbi</string>
+	<key>game.end.mainMenu</key>
+	<string>Peamenüü</string>
+	<key>game.end.playAgain</key>
+	<string>Mängi uuesti</string>
+	<key>game.highScore</key>
+	<string>Rekord</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Tagasi peamenüüsse</string>
+	<key>game.intro.continue</key>
+	<string>Jätka</string>
+	<key>game.intro.progressPaused</key>
+	<string>Sinu edenemine on pausil.</string>
+	<key>game.intro.start</key>
+	<string>Alusta taset</string>
+	<key>game.intro.startTutorial</key>
+	<string>Alusta õpetust</string>
+	<key>game.streakBoost.title</key>
+	<string>Topeltpunktid!</string>
+	<key>goal.period</key>
+	<string>Eesmärgi periood</string>
+	<key>goal.promptDaily</key>
+	<string>Mitu minutit tahad päevas mängida?</string>
+	<key>goal.promptWeekly</key>
+	<string>Mitu minutit tahad nädalas mängida?</string>
+	<key>goal.title</key>
+	<string>Mängueesmärk</string>
+	<key>goalPeriod.daily</key>
+	<string>Iga päev</string>
+	<key>goalPeriod.weekly</key>
+	<string>Iga nädal</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>veel %lld</string>
+	<key>home.totalLabel</key>
+	<string>Kokku</string>
+	<key>info.mode.fractions.header</key>
+	<string>Osad</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Üks või mitu osa</string>
+	<key>info.mode.fractions.single</key>
+	<string>Alati üks osa</string>
+	<key>info.mode.header</key>
+	<string>Järjekord</string>
+	<key>info.mode.mixed</key>
+	<string>Koos varasemate tasemetega</string>
+	<key>info.mode.order</key>
+	<string>Kindel järjekord</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Koos kümnendarvudega</string>
+	<key>info.mode.percentages.header</key>
+	<string>Liik</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Ilma kümnendarvudeta</string>
+	<key>info.mode.random</key>
+	<string>Juhuslik järjekord</string>
+	<key>info.super.all</key>
+	<string>Liitmine, lahutamine, korrutamine, jagamine ja protsendid</string>
+	<key>info.super.basic</key>
+	<string>Liitmine ja lahutamine</string>
+	<key>info.super.fraction</key>
+	<string>Liitmine, lahutamine, korrutamine ja jagamine</string>
+	<key>info.super.times</key>
+	<string>Liitmine, lahutamine ja korrutamine</string>
+	<key>info.topic.header</key>
+	<string>Ülesannete tüübid</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Tehted, kus sa arvu **liidad**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Liida %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld porgandit**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld kana**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld kala**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld meepurki**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld rõngad**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld koeraküpsist**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld lihatükki**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld maapähklit**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld pärlit**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Selles tasemes saad koguda kuni **%lld krevetti**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Tehted, kus sa arvu **jagad**.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Jaga %lld-ga</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Küsimused kuni **tasemeni %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Küsimused **tasemelt 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Kõik segamini**: liitmine, lahutamine, korrutamine, murrud ja protsendid.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Alati **üks osa** tervikust.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Üks või mitu osa** tervikust.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Küsimused **kindlas järjekorras**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Vastused **ilma komakohata**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Ka vastused **komakohaga**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Küsimused **segamini**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Tehted **protsentidega**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ arvust</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Tehted, kus sa arvu **lahutad**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Lahuta %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Tehted, kus sa **korrutad**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld korrutustabel</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>Veel tasemeid</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium-tasemed</string>
+	<key>menu.startHere</key>
+	<string>Alusta siit</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Ava Premiumiga rohkem</string>
+	<key>mode.fractions.multiple</key>
+	<string>Mitu</string>
+	<key>mode.fractions.single</key>
+	<string>Üks</string>
+	<key>mode.mixed</key>
+	<string>Segatud</string>
+	<key>mode.order</key>
+	<string>Järjekord</string>
+	<key>mode.percentages.decimal</key>
+	<string>Kümnend</string>
+	<key>mode.percentages.whole</key>
+	<string>Täisarv</string>
+	<key>mode.random</key>
+	<string>Juhuslik</string>
+	<key>name.placeholder</key>
+	<string>Sinu nimi</string>
+	<key>name.whatsYourName</key>
+	<string>Mis su nimi on?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Teenige selle looma avamiseks veel mõned rõngad! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Teie loomad ootavad. Tulge tagasi mängima ja jätkake rõngad kogumist!</string>
+	<key>notif.comeback.title</key>
+	<string>Me igatseme sind! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Teeme 3. päeva teoks! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium sisaldab %lld taset iga teema ja kõigi 10 looma jaoks. Seiklus jätkub!</string>
+	<key>notif.premium.title</key>
+	<string>Avage rohkem tasemeid ja loomi! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld päeva on möödas. Lahendame mõned matemaatikaülesanded ja teenime rohkem rõngad!</string>
+	<key>notif.reactivate.title</key>
+	<string>Kas olete uuesti mängimiseks valmis? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Erinevad segaülesanded koos.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Juba päris tubli</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Harjuta ülesandeid järjekorras.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Alles alustasid</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Ülesanded juhuslikus järjekorras.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Oled juba harjutanud</string>
+	<key>onboarding.level.title</key>
+	<string>Kui hästi sa seda juba oskad?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Hakkame pihta. Mis su nimi on?</string>
+	<key>onboarding.name.title</key>
+	<string>Arvutamine pole kunagi nii lõbus olnud!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Vali alustamiseks teema.</string>
+	<key>onboarding.subject.title</key>
+	<string>Mida tahad õppida?</string>
+	<key>parentGate.approved</key>
+	<string>Kinnitatud</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Katsed: %1$lld / %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Hoia: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ring</string>
+	<key>parentGate.shape.diamond</key>
+	<string>romb</string>
+	<key>parentGate.shape.heart</key>
+	<string>süda</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>kuusnurk</string>
+	<key>parentGate.shape.plus</key>
+	<string>pluss</string>
+	<key>parentGate.shape.square</key>
+	<string>ruut</string>
+	<key>parentGate.shape.star</key>
+	<string>täht</string>
+	<key>parentGate.shape.triangle</key>
+	<string>kolmnurk</string>
+	<key>parentGate.subtitle</key>
+	<string>Noorte mängijate kaitsmiseks peab täiskasvanu enne ostu jätkamist selle kontrolli läbima.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Puudutusi: %1$lld / %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Vajalik täiskasvanu kinnitus</string>
+	<key>premium.availableAt %lld</key>
+	<string>Saadaval alates %lld karikast</string>
+	<key>premium.availableFromStart</key>
+	<string>Kohe algusest saadaval</string>
+	<key>premium.characterUnlocked</key>
+	<string>UUS TEGELANE AVATUD</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Oled teeninud %lld rõngad</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Ainult Premiumiga</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Premiumiga saad vabalt mängida kõigi 10 loomaga.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Kõik loomad avatud</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Alati piisavalt uusi ülesandeid harjutamiseks.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 taset igas teemas</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Mängi täiesti katkestusteta.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Reklaamideta</string>
+	<key>premium.oneTime</key>
+	<string>Ühekordne ost. Jääb sulle igaveseks.</string>
+	<key>premium.restore</key>
+	<string>Taasta ostud</string>
+	<key>premium.start</key>
+	<string>Alusta</string>
+	<key>premium.storeUnavailable</key>
+	<string>Pood pole praegu saadaval. Proovi hiljem uuesti.</string>
+	<key>premium.unlock</key>
+	<string>Ava Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Ava Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premiumiga avatud</string>
+	<key>result.complete</key>
+	<string>Tase läbitud!</string>
+	<key>result.stopped</key>
+	<string>Pausil</string>
+	<key>settings.character</key>
+	<string>Tegelane</string>
+	<key>settings.characterInfo</key>
+	<string>Iga loom annab kogu mängule oma värviteema.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Kohandatud: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Päevaeesmärk</string>
+	<key>settings.goalInfo</key>
+	<string>Järjepidevuse eesmärk algab 5 minutist päevas. Arvesse läheb ainult aktiivne mänguaeg.</string>
+	<key>settings.music</key>
+	<string>Muusika</string>
+	<key>settings.playGoals</key>
+	<string>Mängueesmärgid</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium on avatud. Aitäh!</string>
+	<key>settings.sound</key>
+	<string>Heli</string>
+	<key>settings.soundEffects</key>
+	<string>Muusika ja heliefektid</string>
+	<key>settings.soundInfo</key>
+	<string>Vaikseks mängimiseks lülita heli välja. Mäng ise jääb samaks.</string>
+	<key>settings.title</key>
+	<string>Seaded</string>
+	<key>streak.dayOne</key>
+	<string>1. päev</string>
+	<key>topic.addition</key>
+	<string>Liitmine</string>
+	<key>topic.addition.detail</key>
+	<string>Ainult liitmine</string>
+	<key>topic.fractions</key>
+	<string>Murrud</string>
+	<key>topic.fractions.detail</key>
+	<string>Ainult jagamine</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Segatehted</string>
+	<key>topic.percentages</key>
+	<string>Protsendid</string>
+	<key>topic.percentages.detail</key>
+	<string>Ainult protsendid</string>
+	<key>topic.subtraction</key>
+	<string>Lahutamine</string>
+	<key>topic.subtraction.detail</key>
+	<string>Ainult lahutamine</string>
+	<key>topic.tables</key>
+	<string>Korrutustabel</string>
+	<key>topic.tables.detail</key>
+	<string>Ainult korrutamine</string>
+	<key>tutorial.notice.message</key>
+	<string>Sul on mäng pooleli. Lõpeta see või vali tase, mida sa pole veel alustanud, et õpetust mängida.</string>
+	<key>tutorial.notice.title</key>
+	<string>Ainult mängu alguses</string>
+</dict>
+</plist>

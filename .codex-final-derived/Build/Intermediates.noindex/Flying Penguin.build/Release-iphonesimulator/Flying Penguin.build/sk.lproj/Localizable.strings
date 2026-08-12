@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Medveď</string>
+	<key>character.bunny</key>
+	<string>Zajačik</string>
+	<key>character.crab</key>
+	<string>Krab</string>
+	<key>character.dog</key>
+	<string>Pes</string>
+	<key>character.elephant</key>
+	<string>Slon</string>
+	<key>character.fox</key>
+	<string>Líška</string>
+	<key>character.frog</key>
+	<string>Žaba</string>
+	<key>character.lion</key>
+	<string>Lev</string>
+	<key>character.octopus</key>
+	<string>Chobotnica</string>
+	<key>character.penguin</key>
+	<string>Tučniak</string>
+	<key>common.cancel</key>
+	<string>Zrušiť</string>
+	<key>common.continue</key>
+	<string>Ďalej</string>
+	<key>common.done</key>
+	<string>Hotovo</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Uložiť</string>
+	<key>currency.hoop.plural</key>
+	<string>obruče</string>
+	<key>currency.hoop.singular</key>
+	<string>obruč</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Dobrý pokus</string>
+	<key>game.encouragement.1</key>
+	<string>To je začiatok</string>
+	<key>game.encouragement.2</key>
+	<string>Trénuj ďalej</string>
+	<key>game.encouragement.3</key>
+	<string>Vôbec nie zlé</string>
+	<key>game.encouragement.4</key>
+	<string>Darí sa ti</string>
+	<key>game.encouragement.5</key>
+	<string>Pekný výkon</string>
+	<key>game.encouragement.6</key>
+	<string>Výborne</string>
+	<key>game.encouragement.7</key>
+	<string>Veľmi dobre</string>
+	<key>game.encouragement.8</key>
+	<string>Cieľ je na dohľad</string>
+	<key>game.encouragement.9</key>
+	<string>Už si skoro tam</string>
+	<key>game.encouragement.complete</key>
+	<string>Perfektné, všetko správne!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Získal si každý bod.</string>
+	<key>game.end.completionSuffix</key>
+	<string>hotovo!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Koniec hry</string>
+	<key>game.end.mainMenu</key>
+	<string>Hlavné menu</string>
+	<key>game.end.playAgain</key>
+	<string>Hrať znova</string>
+	<key>game.highScore</key>
+	<string>Rekord</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Späť do hlavného menu</string>
+	<key>game.intro.continue</key>
+	<string>Pokračovať</string>
+	<key>game.intro.progressPaused</key>
+	<string>Tvoj postup je pozastavený.</string>
+	<key>game.intro.start</key>
+	<string>Spustiť úroveň</string>
+	<key>game.intro.startTutorial</key>
+	<string>Spustiť návod</string>
+	<key>game.streakBoost.title</key>
+	<string>Dvojité body!</string>
+	<key>goal.period</key>
+	<string>Obdobie cieľa</string>
+	<key>goal.promptDaily</key>
+	<string>Koľko minút chceš hrať denne?</string>
+	<key>goal.promptWeekly</key>
+	<string>Koľko minút chceš hrať týždenne?</string>
+	<key>goal.title</key>
+	<string>Herný cieľ</string>
+	<key>goalPeriod.daily</key>
+	<string>Denne</string>
+	<key>goalPeriod.weekly</key>
+	<string>Týždenne</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ešte %lld</string>
+	<key>home.totalLabel</key>
+	<string>Celkom</string>
+	<key>info.mode.fractions.header</key>
+	<string>Časti</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Jedna aj viac častí</string>
+	<key>info.mode.fractions.single</key>
+	<string>Vždy jedna časť</string>
+	<key>info.mode.header</key>
+	<string>Poradie</string>
+	<key>info.mode.mixed</key>
+	<string>Zmiešané s nižšími úrovňami</string>
+	<key>info.mode.order</key>
+	<string>Pevné poradie</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Aj desatinné čísla</string>
+	<key>info.mode.percentages.header</key>
+	<string>Typ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Bez desatinných čísel</string>
+	<key>info.mode.random</key>
+	<string>Náhodné poradie</string>
+	<key>info.super.all</key>
+	<string>Sčítanie, odčítanie, násobenie, delenie a percentá</string>
+	<key>info.super.basic</key>
+	<string>Sčítanie a odčítanie</string>
+	<key>info.super.fraction</key>
+	<string>Sčítanie, odčítanie, násobenie a delenie</string>
+	<key>info.super.times</key>
+	<string>Sčítanie, odčítanie a násobenie</string>
+	<key>info.topic.header</key>
+	<string>Typy príkladov</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Príklady, kde číslo **pripočítaš**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Pripočítaj %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld mrkiev**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld sliepok**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld rýb**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld pohárikov medu**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld obruče**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld psích sušienok**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld kúskov mäsa**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld arašidov**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld perál**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld kreviet**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Príklady, kde číslo **delíš**.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Delenie %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Otázky až po **úroveň %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Otázky od **úrovne 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Všetko zmiešané**: plus, mínus, násobenie, zlomky a percentá.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Vždy **jedna časť** celku.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Jedna alebo viac častí** celku.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Otázky v **pevnom poradí**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Odpovede **bez desatinných čísel**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Aj odpovede **s desatinnými číslami**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Otázky v **náhodnom poradí**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Príklady s **percentami**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ z čísla</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Príklady, kde číslo **odčítaš**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Odčítaj %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Príklady, kde **násobíš**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Násobilka %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>Viac úrovní</string>
+	<key>menu.premiumLevels</key>
+	<string>Prémiové úrovne</string>
+	<key>menu.startHere</key>
+	<string>Začni tu</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Odomkni viac s Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Viac</string>
+	<key>mode.fractions.single</key>
+	<string>Jedna</string>
+	<key>mode.mixed</key>
+	<string>Zmiešané</string>
+	<key>mode.order</key>
+	<string>Poradie</string>
+	<key>mode.percentages.decimal</key>
+	<string>Desatinné</string>
+	<key>mode.percentages.whole</key>
+	<string>Celé</string>
+	<key>mode.random</key>
+	<string>Náhodne</string>
+	<key>name.placeholder</key>
+	<string>Tvoje meno</string>
+	<key>name.whatsYourName</key>
+	<string>Ako sa voláš?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Získajte niekoľko ďalších obruče a odomknite toto zviera! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Vaše zvieratá čakajú. Vráťte sa hrať a zbierajte obruče!</string>
+	<key>notif.comeback.title</key>
+	<string>Chýbaš nám! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Uskutočnime deň 3! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium obsahuje %lld úrovní pre každú tému a všetkých 10 zvierat. Dobrodružstvo pokračuje!</string>
+	<key>notif.premium.title</key>
+	<string>Odomknite ďalšie úrovne a zvieratá! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Prešli %lld dni. Poďme vyriešiť nejaké matematické cvičenia a zarobiť viac obruče!</string>
+	<key>notif.reactivate.title</key>
+	<string>Ste pripravení hrať znova? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Rôzne zmiešané príklady.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Už ti to celkom ide</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Trénuj príklady v poradí.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Práve začínaš</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Príklady v náhodnom poradí.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Už máš niečo natrénované</string>
+	<key>onboarding.level.title</key>
+	<string>Ako dobre ti to už ide?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Poďme na to. Ako sa voláš?</string>
+	<key>onboarding.name.title</key>
+	<string>Počítanie ešte nikdy nebolo také zábavné!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Vyber si tému, ktorou začneš.</string>
+	<key>onboarding.subject.title</key>
+	<string>Čo sa chceš naučiť?</string>
+	<key>parentGate.approved</key>
+	<string>Schválené</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Pokusy: %1$lld z %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Podrž: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>kruh</string>
+	<key>parentGate.shape.diamond</key>
+	<string>kosoštvorec</string>
+	<key>parentGate.shape.heart</key>
+	<string>srdce</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>šesťuholník</string>
+	<key>parentGate.shape.plus</key>
+	<string>plus</string>
+	<key>parentGate.shape.square</key>
+	<string>štvorec</string>
+	<key>parentGate.shape.star</key>
+	<string>hviezda</string>
+	<key>parentGate.shape.triangle</key>
+	<string>trojuholník</string>
+	<key>parentGate.subtitle</key>
+	<string>Na ochranu malých hráčov musí dospelý pred pokračovaním k nákupu dokončiť túto kontrolu.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Ťuknutia: %1$lld z %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Potrebné schválenie dospelého</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dostupné od %lld trofejí</string>
+	<key>premium.availableFromStart</key>
+	<string>Dostupné od začiatku</string>
+	<key>premium.characterUnlocked</key>
+	<string>ODOMKNUTÁ NOVÁ POSTAVA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Získal si %lld obruče</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Exkluzívne s Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>S Premium môžeš voľne hrať so všetkými 10 zvieratami.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Všetky zvieratá</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Vždy dosť nových príkladov na tréning.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 úrovní na tému</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Hraj úplne bez prerušení.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Bez reklám</string>
+	<key>premium.oneTime</key>
+	<string>Jednorazový nákup. Navždy tvoje.</string>
+	<key>premium.restore</key>
+	<string>Obnoviť nákupy</string>
+	<key>premium.start</key>
+	<string>Začať</string>
+	<key>premium.storeUnavailable</key>
+	<string>Obchod teraz nie je dostupný. Skús to znova neskôr.</string>
+	<key>premium.unlock</key>
+	<string>Odomknúť Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Odomknúť Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Odomknuté s Premium</string>
+	<key>result.complete</key>
+	<string>Úroveň hotová!</string>
+	<key>result.stopped</key>
+	<string>Pozastavené</string>
+	<key>settings.character</key>
+	<string>Postavička</string>
+	<key>settings.characterInfo</key>
+	<string>Každé zviera prinesie do celej hry vlastnú farebnú tému.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Vlastné: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Denný cieľ</string>
+	<key>settings.goalInfo</key>
+	<string>Cieľ série začína na 5 minútach denne. Počíta sa iba aktívny čas hrania.</string>
+	<key>settings.music</key>
+	<string>Hudba</string>
+	<key>settings.playGoals</key>
+	<string>Herné ciele</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium odomknuté. Ďakujeme!</string>
+	<key>settings.sound</key>
+	<string>Zvuk</string>
+	<key>settings.soundEffects</key>
+	<string>Hudba a efekty</string>
+	<key>settings.soundInfo</key>
+	<string>Vypni zvuk a hraj potichu. Hra funguje úplne rovnako.</string>
+	<key>settings.title</key>
+	<string>Nastavenia</string>
+	<key>streak.dayOne</key>
+	<string>1. deň</string>
+	<key>topic.addition</key>
+	<string>Sčítanie</string>
+	<key>topic.addition.detail</key>
+	<string>Len sčítanie</string>
+	<key>topic.fractions</key>
+	<string>Zlomky</string>
+	<key>topic.fractions.detail</key>
+	<string>Len delenie</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Zmiešané príklady</string>
+	<key>topic.percentages</key>
+	<string>Percentá</string>
+	<key>topic.percentages.detail</key>
+	<string>Len percentá</string>
+	<key>topic.subtraction</key>
+	<string>Odčítanie</string>
+	<key>topic.subtraction.detail</key>
+	<string>Len odčítanie</string>
+	<key>topic.tables</key>
+	<string>Násobilka</string>
+	<key>topic.tables.detail</key>
+	<string>Len násobenie</string>
+	<key>tutorial.notice.message</key>
+	<string>Už hráš hru. Dokonči ju alebo vyber úroveň, ktorú si ešte nezačal, a spusti návod.</string>
+	<key>tutorial.notice.title</key>
+	<string>Len na začiatku hry</string>
+</dict>
+</plist>

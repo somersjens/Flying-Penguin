@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Hartza</string>
+	<key>character.bunny</key>
+	<string>Untxia</string>
+	<key>character.crab</key>
+	<string>Karramarroa</string>
+	<key>character.dog</key>
+	<string>Txakurra</string>
+	<key>character.elephant</key>
+	<string>Elefantea</string>
+	<key>character.fox</key>
+	<string>Azeria</string>
+	<key>character.frog</key>
+	<string>Igela</string>
+	<key>character.lion</key>
+	<string>Lehoia</string>
+	<key>character.octopus</key>
+	<string>Olagarroa</string>
+	<key>character.penguin</key>
+	<string>Pinguinoa</string>
+	<key>common.cancel</key>
+	<string>Utzi</string>
+	<key>common.continue</key>
+	<string>Jarraitu</string>
+	<key>common.done</key>
+	<string>Eginda</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>Ados</string>
+	<key>common.save</key>
+	<string>Gorde</string>
+	<key>currency.hoop.plural</key>
+	<string>uztaiak</string>
+	<key>currency.hoop.singular</key>
+	<string>uztai</string>
+	<key>game.combo %lld</key>
+	<string>Konboa! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Saiakera ona</string>
+	<key>game.encouragement.1</key>
+	<string>Hasiera bat da</string>
+	<key>game.encouragement.2</key>
+	<string>Jarraitu praktikatzen</string>
+	<key>game.encouragement.3</key>
+	<string>Ez dago batere gaizki</string>
+	<key>game.encouragement.4</key>
+	<string>Oso ondo</string>
+	<key>game.encouragement.5</key>
+	<string>Emaitza polita</string>
+	<key>game.encouragement.6</key>
+	<string>Ongi egina</string>
+	<key>game.encouragement.7</key>
+	<string>Bikain jokatu duzu</string>
+	<key>game.encouragement.8</key>
+	<string>Amaiera gertu dago</string>
+	<key>game.encouragement.9</key>
+	<string>Ia iritsi zara</string>
+	<key>game.encouragement.complete</key>
+	<string>Puntuazio perfektua!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Puntu guztiak irabazi dituzu.</string>
+	<key>game.end.completionSuffix</key>
+	<string>osatuta!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Jokoa amaitu da</string>
+	<key>game.end.mainMenu</key>
+	<string>Menu nagusia</string>
+	<key>game.end.playAgain</key>
+	<string>Jokatu berriro</string>
+	<key>game.highScore</key>
+	<string>Errekorra</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Menu nagusira</string>
+	<key>game.intro.continue</key>
+	<string>Jarraitu</string>
+	<key>game.intro.progressPaused</key>
+	<string>Zure aurrerapena pausatuta dago.</string>
+	<key>game.intro.start</key>
+	<string>Hasi maila</string>
+	<key>game.intro.startTutorial</key>
+	<string>Hasi tutoriala</string>
+	<key>game.streakBoost.title</key>
+	<string>Puntu bikoitzak!</string>
+	<key>goal.period</key>
+	<string>Helburu-epea</string>
+	<key>goal.promptDaily</key>
+	<string>Zenbat minutuz jokatu nahi duzu egunean?</string>
+	<key>goal.promptWeekly</key>
+	<string>Zenbat minutuz jokatu nahi duzu astean?</string>
+	<key>goal.title</key>
+	<string>Jolas-helburua</string>
+	<key>goalPeriod.daily</key>
+	<string>Egunero</string>
+	<key>goalPeriod.weekly</key>
+	<string>Astero</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld gehiago</string>
+	<key>home.totalLabel</key>
+	<string>Guztira</string>
+	<key>info.mode.fractions.header</key>
+	<string>Zatiak</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Zati bat eta hainbat zati</string>
+	<key>info.mode.fractions.single</key>
+	<string>Beti zati bakarra</string>
+	<key>info.mode.header</key>
+	<string>Ordena</string>
+	<key>info.mode.mixed</key>
+	<string>Beheko mailekin nahasita</string>
+	<key>info.mode.order</key>
+	<string>Ordena finkoa</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Zenbaki hamartarrak barne</string>
+	<key>info.mode.percentages.header</key>
+	<string>Mota</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Zenbaki hamartarrik gabe</string>
+	<key>info.mode.random</key>
+	<string>Ausazko ordena</string>
+	<key>info.super.all</key>
+	<string>Batuketa, kenketa, biderketa, zatiketa eta ehunekoak</string>
+	<key>info.super.basic</key>
+	<string>Batuketa eta kenketa</string>
+	<key>info.super.fraction</key>
+	<string>Batuketa, kenketa, biderketa eta zatiketa</string>
+	<key>info.super.times</key>
+	<string>Batuketa, kenketa eta biderketa</string>
+	<key>info.topic.header</key>
+	<string>Eragiketa motak</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Zenbaki bat \*\*batzen\*\* duten eragiketak.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Gehitu %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Maila honetan gehienez \*\*%lld azenario\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Maila honetan gehienez \*\*%lld oilasko\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Maila honetan gehienez \*\*%lld arrain\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Maila honetan gehienez \*\*%lld ezti-pote\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Maila honetan gehienez \*\*%lld uztaiak\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Maila honetan gehienez \*\*%lld txakur-gaileta\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Maila honetan gehienez \*\*%lld haragi-zati\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Maila honetan gehienez \*\*%lld kakahuete\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Maila honetan gehienez \*\*%lld perla\*\* bil ditzakezu.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Maila honetan gehienez \*\*%lld ganba\*\* bil ditzakezu.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Zenbaki bat \*\*zatitzen\*\* duten eragiketak.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Zatitu %lldz</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>\*\*%lld. mailara\*\* arteko galderak.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>\*\*1. mailako\*\* galderak.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>\*\*Dena nahastuta\*\*: batuketak, kenketak, biderketak, zatikiak eta ehunekoak.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Osotasun baten \*\*zati bakarra\*\* beti.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>Osotasun baten \*\*zati bat edo gehiago\*\*.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Galderak \*\*ordena finkoan\*\*.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Erantzunak \*\*hamartarrik gabe\*\*.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Erantzunak ere \*\*hamartarrekin\*\*.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Galderak \*\*ausazko ordenan\*\*.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>\*\*Ehunekoak\*\* dituzten eragiketak.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>Zenbaki baten %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Zenbaki bat \*\*kentzen\*\* duten eragiketak.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Kendu %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>\*\*Biderketak\*\* dituzten eragiketak.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lldren taula</string>
+	<key>menu.maximumCount</key>
+	<string>GEH.</string>
+	<key>menu.moreLevels</key>
+	<string>Maila gehiago</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium mailak</string>
+	<key>menu.startHere</key>
+	<string>Hasi hemen</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Desblokeatu gehiago Premium-ekin</string>
+	<key>mode.fractions.multiple</key>
+	<string>Hainbat</string>
+	<key>mode.fractions.single</key>
+	<string>Bakarra</string>
+	<key>mode.mixed</key>
+	<string>Nahasia</string>
+	<key>mode.order</key>
+	<string>Ordena</string>
+	<key>mode.percentages.decimal</key>
+	<string>Hamartarra</string>
+	<key>mode.percentages.whole</key>
+	<string>Osoa</string>
+	<key>mode.random</key>
+	<string>Ausaz</string>
+	<key>name.placeholder</key>
+	<string>Zure izena</string>
+	<key>name.whatsYourName</key>
+	<string>Nola duzu izena?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Irabazi uztaiak batzuk animalia hau desblokeatzeko! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Zure animaliak zain daude. Itzuli jolastera eta jarraitu uztaiak biltzen!</string>
+	<key>notif.comeback.title</key>
+	<string>Faltan botatzen zaitugu! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Egin dezagun 3. eguna! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium-ek %lld maila biltzen ditu gai bakoitzeko eta 10 animalia guztientzat. Abenturak aurrera jarraitzen du!</string>
+	<key>notif.premium.title</key>
+	<string>Desblokeatu maila eta animalia gehiago! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld egun pasa dira. Ebatzi ditzagun matematikako ariketa batzuk eta irabaz ditzagun garaikur gehiago!</string>
+	<key>notif.reactivate.title</key>
+	<string>Berriro jolasteko prest? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Nahasketa-ariketa desberdinak batera.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Dagoeneko nahiko ondo</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Praktikatu ariketak ordenan.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Hasi berria</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Ariketak ausazko ordenan.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Dagoeneko praktikatu duzu</string>
+	<key>onboarding.level.title</key>
+	<string>Zenbateraino moldatzen zara honekin?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Has gaitezen. Nola duzu izena?</string>
+	<key>onboarding.name.title</key>
+	<string>Kalkuluak egitea ez da inoiz hain dibertigarria izan!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Aukeratu hasteko gai bat.</string>
+	<key>onboarding.subject.title</key>
+	<string>Zer ikasi nahi duzu?</string>
+	<key>parentGate.approved</key>
+	<string>Onartuta</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Saiakerak: %1$lld / %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Eduki sakatuta: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>zirkulua</string>
+	<key>parentGate.shape.diamond</key>
+	<string>erronboa</string>
+	<key>parentGate.shape.heart</key>
+	<string>bihotza</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>hexagonoa</string>
+	<key>parentGate.shape.plus</key>
+	<string>plus ikurra</string>
+	<key>parentGate.shape.square</key>
+	<string>karratua</string>
+	<key>parentGate.shape.star</key>
+	<string>izarra</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triangelua</string>
+	<key>parentGate.subtitle</key>
+	<string>Jokalari gazteak babesteko, heldu batek egiaztapen hau osatu behar du erosketarekin jarraitu aurretik.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Sakatzeak: %1$lld / %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Heldu baten baimena behar da</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld garaikurretik aurrera erabilgarri</string>
+	<key>premium.availableFromStart</key>
+	<string>Hasieratik erabilgarri</string>
+	<key>premium.characterUnlocked</key>
+	<string>PERTSONAIA BERRIA DESBLOKEATU DA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld uztaiak irabazi dituzu</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Premium-ekin esklusiboa</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Premium-ekin, libre jokatu dezakezu 10 animaliekin.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Animalia guztiak erabilgarri</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Beti ariketa berri nahikoa praktikatzeko.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 maila gai bakoitzeko</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Jokatu etenik gabe.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Iragarkirik gabe</string>
+	<key>premium.oneTime</key>
+	<string>Ordainketa bakarra. Betiko zurea.</string>
+	<key>premium.restore</key>
+	<string>Berrezarri erosketak</string>
+	<key>premium.start</key>
+	<string>Hasi</string>
+	<key>premium.storeUnavailable</key>
+	<string>Denda ez dago erabilgarri orain. Saiatu berriro geroago.</string>
+	<key>premium.unlock</key>
+	<string>Desblokeatu Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Desblokeatu Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premium-ekin desblokeatua</string>
+	<key>result.complete</key>
+	<string>Maila amaituta!</string>
+	<key>result.stopped</key>
+	<string>Pausatuta</string>
+	<key>settings.character</key>
+	<string>Pertsonaia</string>
+	<key>settings.characterInfo</key>
+	<string>Animalia bakoitzak bere kolore-gaia ematen dio joko osoari.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Pertsonalizatua: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Eguneko helburua</string>
+	<key>settings.goalInfo</key>
+	<string>Segidaren helburua eguneko 5 minututan hasten da. Jolas-denbora aktiboa bakarrik zenbatzen da.</string>
+	<key>settings.music</key>
+	<string>Musika</string>
+	<key>settings.playGoals</key>
+	<string>Jolas-helburuak</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium desblokeatuta. Eskerrik asko!</string>
+	<key>settings.sound</key>
+	<string>Soinua</string>
+	<key>settings.soundEffects</key>
+	<string>Musika eta efektuak</string>
+	<key>settings.soundInfo</key>
+	<string>Itzali soinua lasai jokatzeko. Jokoak berdin-berdin funtzionatzen du.</string>
+	<key>settings.title</key>
+	<string>Ezarpenak</string>
+	<key>streak.dayOne</key>
+	<string>1. eguna</string>
+	<key>topic.addition</key>
+	<string>Batuketa</string>
+	<key>topic.addition.detail</key>
+	<string>Batuketak bakarrik</string>
+	<key>topic.fractions</key>
+	<string>Zatikiak</string>
+	<key>topic.fractions.detail</key>
+	<string>Zatiketak bakarrik</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Eragiketa nahasiak</string>
+	<key>topic.percentages</key>
+	<string>Ehunekoak</string>
+	<key>topic.percentages.detail</key>
+	<string>Ehunekoak bakarrik</string>
+	<key>topic.subtraction</key>
+	<string>Kenketa</string>
+	<key>topic.subtraction.detail</key>
+	<string>Kenketak bakarrik</string>
+	<key>topic.tables</key>
+	<string>Taulak</string>
+	<key>topic.tables.detail</key>
+	<string>Biderketak bakarrik</string>
+	<key>tutorial.notice.message</key>
+	<string>Joko baten erdian zaude. Amaitu, edo aukeratu hasi gabeko maila bat tutoriala egiteko.</string>
+	<key>tutorial.notice.title</key>
+	<string>Jokoaren hasieran bakarrik</string>
+</dict>
+</plist>

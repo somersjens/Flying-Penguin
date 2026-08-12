@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>熊</string>
+	<key>character.bunny</key>
+	<string>兔子</string>
+	<key>character.crab</key>
+	<string>螃蟹</string>
+	<key>character.dog</key>
+	<string>狗</string>
+	<key>character.elephant</key>
+	<string>大象</string>
+	<key>character.fox</key>
+	<string>狐狸</string>
+	<key>character.frog</key>
+	<string>青蛙</string>
+	<key>character.lion</key>
+	<string>狮子</string>
+	<key>character.octopus</key>
+	<string>章鱼</string>
+	<key>character.penguin</key>
+	<string>企鹅</string>
+	<key>common.cancel</key>
+	<string>取消</string>
+	<key>common.continue</key>
+	<string>继续</string>
+	<key>common.done</key>
+	<string>完成</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld 分钟</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>保存</string>
+	<key>currency.hoop.plural</key>
+	<string>圆环</string>
+	<key>currency.hoop.singular</key>
+	<string>圆环</string>
+	<key>game.combo %lld</key>
+	<string>连击！+%lld</string>
+	<key>game.encouragement.0</key>
+	<string>不错的尝试</string>
+	<key>game.encouragement.1</key>
+	<string>这是个好开始</string>
+	<key>game.encouragement.2</key>
+	<string>继续练习</string>
+	<key>game.encouragement.3</key>
+	<string>很不错哦</string>
+	<key>game.encouragement.4</key>
+	<string>做得不错</string>
+	<key>game.encouragement.5</key>
+	<string>表现真棒</string>
+	<key>game.encouragement.6</key>
+	<string>做得好</string>
+	<key>game.encouragement.7</key>
+	<string>玩得真棒</string>
+	<key>game.encouragement.8</key>
+	<string>终点就在眼前</string>
+	<key>game.encouragement.9</key>
+	<string>就快到了</string>
+	<key>game.encouragement.complete</key>
+	<string>满分！</string>
+	<key>game.end.completionSubtitle</key>
+	<string>每一分都是你赢来的。</string>
+	<key>game.end.completionSuffix</key>
+	<string>完成！</string>
+	<key>game.end.gameOverTitle</key>
+	<string>游戏结束</string>
+	<key>game.end.mainMenu</key>
+	<string>主菜单</string>
+	<key>game.end.playAgain</key>
+	<string>再玩一次</string>
+	<key>game.highScore</key>
+	<string>最高分</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>返回主菜单</string>
+	<key>game.intro.continue</key>
+	<string>继续</string>
+	<key>game.intro.progressPaused</key>
+	<string>进度已暂停。</string>
+	<key>game.intro.start</key>
+	<string>开始关卡</string>
+	<key>game.intro.startTutorial</key>
+	<string>开始教程</string>
+	<key>game.streakBoost.title</key>
+	<string>双倍得分！</string>
+	<key>goal.period</key>
+	<string>目标周期</string>
+	<key>goal.promptDaily</key>
+	<string>你每天想玩几分钟？</string>
+	<key>goal.promptWeekly</key>
+	<string>你每周想玩几分钟？</string>
+	<key>goal.title</key>
+	<string>游戏目标</string>
+	<key>goalPeriod.daily</key>
+	<string>每天</string>
+	<key>goalPeriod.weekly</key>
+	<string>每周</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>还差 %lld</string>
+	<key>home.totalLabel</key>
+	<string>总计</string>
+	<key>info.mode.fractions.header</key>
+	<string>份数</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>一份或多份</string>
+	<key>info.mode.fractions.single</key>
+	<string>总是一份</string>
+	<key>info.mode.header</key>
+	<string>顺序</string>
+	<key>info.mode.mixed</key>
+	<string>混合较低关卡</string>
+	<key>info.mode.order</key>
+	<string>固定顺序</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>包含小数</string>
+	<key>info.mode.percentages.header</key>
+	<string>类型</string>
+	<key>info.mode.percentages.whole</key>
+	<string>不含小数</string>
+	<key>info.mode.random</key>
+	<string>随机顺序</string>
+	<key>info.super.all</key>
+	<string>加法、减法、乘法、除法和百分数</string>
+	<key>info.super.basic</key>
+	<string>加法和减法</string>
+	<key>info.super.fraction</key>
+	<string>加法、减法、乘法和除法</string>
+	<key>info.super.times</key>
+	<string>加法、减法和乘法</string>
+	<key>info.topic.header</key>
+	<string>题目类型</string>
+	<key>levelIntro.addition.intro</key>
+	<string>把一个数\*\*加上\*\*另一个数。</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>加 %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>本关最多可收集 \*\*%lld 根胡萝卜\*\*。</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>本关最多可收集 \*\*%lld 只鸡\*\*。</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>本关最多可收集 \*\*%lld 条鱼\*\*。</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>本关最多可收集 \*\*%lld 罐蜂蜜\*\*。</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>本关最多可收集 \*\*%lld 只圆环\*\*。</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>本关最多可收集 \*\*%lld 块狗饼干\*\*。</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>本关最多可收集 \*\*%lld 块肉\*\*。</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>本关最多可收集 \*\*%lld 颗花生\*\*。</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>本关最多可收集 \*\*%lld 颗珍珠\*\*。</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>本关最多可收集 \*\*%lld 只虾\*\*。</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>把一个数\*\*除以\*\*另一个数。</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>除以 %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>题目到\*\*第 %lld 关\*\*。</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>来自\*\*第 1 关\*\*的题目。</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>\*\*全部混合\*\*：加、减、乘、分数和百分数。</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>超级混合 %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>总是一个整体的\*\*一部分\*\*。</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>整体的\*\*一份或多份\*\*。</string>
+	<key>levelIntro.mode.order</key>
+	<string>题目按\*\*固定顺序\*\*出现。</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>答案\*\*没有小数\*\*。</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>答案也\*\*有小数\*\*。</string>
+	<key>levelIntro.mode.random</key>
+	<string>题目\*\*随机出现\*\*。</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>\*\*百分数\*\*题。</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>一个数的 %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>从一个数中\*\*减去\*\*另一个数。</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>减 %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>做\*\*乘法\*\*题。</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld 的乘法表</string>
+	<key>menu.maximumCount</key>
+	<string>最多</string>
+	<key>menu.moreLevels</key>
+	<string>更多关卡</string>
+	<key>menu.premiumLevels</key>
+	<string>高级关卡</string>
+	<key>menu.startHere</key>
+	<string>从这里开始</string>
+	<key>menu.unlockWithPremium</key>
+	<string>升级高级版，解锁更多</string>
+	<key>mode.fractions.multiple</key>
+	<string>多份</string>
+	<key>mode.fractions.single</key>
+	<string>一份</string>
+	<key>mode.mixed</key>
+	<string>混合</string>
+	<key>mode.order</key>
+	<string>顺序</string>
+	<key>mode.percentages.decimal</key>
+	<string>小数</string>
+	<key>mode.percentages.whole</key>
+	<string>整数</string>
+	<key>mode.random</key>
+	<string>随机</string>
+	<key>name.placeholder</key>
+	<string>你的名字</string>
+	<key>name.whatsYourName</key>
+	<string>你叫什么名字？</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: 赢得更多圆环来解锁这只动物！ 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>你的动物正在等待。回来玩并继续收集圆环！</string>
+	<key>notif.comeback.title</key>
+	<string>我们想你！ 👋</string>
+	<key>notif.day3.title</key>
+	<string>让我们实现第三天吧！ ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium 包含每个主题的 %lld 个关卡和全部 10 种动物。冒险仍在继续！</string>
+	<key>notif.premium.title</key>
+	<string>解锁更多关卡和动物！ 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>已经%lld天了。让我们解决一些数学练习并赢得更多圆环！</string>
+	<key>notif.reactivate.title</key>
+	<string>准备好再玩了吗？ 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>不同的混合题放在一起。</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>已经很不错</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>按顺序练习算式。</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>刚刚开始</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>随机顺序的算式。</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>已经练过一些</string>
+	<key>onboarding.level.title</key>
+	<string>你已经有多熟练？</string>
+	<key>onboarding.name.subtitle</key>
+	<string>开始吧。你叫什么名字？</string>
+	<key>onboarding.name.title</key>
+	<string>做算术从没这么好玩！</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>选择一个主题开始。</string>
+	<key>onboarding.subject.title</key>
+	<string>你想学什么？</string>
+	<key>parentGate.approved</key>
+	<string>已通过</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>尝试次数：%1$lld/%2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>按住：%lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>圆形</string>
+	<key>parentGate.shape.diamond</key>
+	<string>菱形</string>
+	<key>parentGate.shape.heart</key>
+	<string>爱心</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>六边形</string>
+	<key>parentGate.shape.plus</key>
+	<string>加号</string>
+	<key>parentGate.shape.square</key>
+	<string>正方形</string>
+	<key>parentGate.shape.star</key>
+	<string>星形</string>
+	<key>parentGate.shape.triangle</key>
+	<string>三角形</string>
+	<key>parentGate.subtitle</key>
+	<string>为了保护小玩家，继续购买前需要一位成年人完成验证。</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>轻点次数：%1$lld/%2$lld</string>
+	<key>parentGate.title</key>
+	<string>需要成年人同意</string>
+	<key>premium.availableAt %lld</key>
+	<string>获得 %lld 个奖杯后可用</string>
+	<key>premium.availableFromStart</key>
+	<string>从一开始即可使用</string>
+	<key>premium.characterUnlocked</key>
+	<string>已解锁新角色</string>
+	<key>premium.earnedCards %lld</key>
+	<string>你已获得 %lld 只圆环</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Premium 专属</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>高级版可自由使用全部 10 种动物。</string>
+	<key>premium.feature.animals.title</key>
+	<string>使用所有动物</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>总有足够的新题可以练习。</string>
+	<key>premium.feature.levels.title</key>
+	<string>每个主题 99 关</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>畅玩无打扰。</string>
+	<key>premium.feature.noAds.title</key>
+	<string>无广告</string>
+	<key>premium.oneTime</key>
+	<string>一次购买，永久拥有。</string>
+	<key>premium.restore</key>
+	<string>恢复购买</string>
+	<key>premium.start</key>
+	<string>开始</string>
+	<key>premium.storeUnavailable</key>
+	<string>商店暂时不可用，请稍后再试。</string>
+	<key>premium.unlock</key>
+	<string>解锁高级版</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>解锁高级版 · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>已通过 Premium 解锁</string>
+	<key>result.complete</key>
+	<string>关卡完成！</string>
+	<key>result.stopped</key>
+	<string>已暂停</string>
+	<key>settings.character</key>
+	<string>角色</string>
+	<key>settings.characterInfo</key>
+	<string>每种动物都会给整个游戏带来自己的配色。</string>
+	<key>settings.customMinutes %lld</key>
+	<string>自定义：%lld 分钟</string>
+	<key>settings.dailyGoal</key>
+	<string>每日目标</string>
+	<key>settings.goalInfo</key>
+	<string>连续目标从每天 5 分钟开始。只有实际游戏时间才会计入。</string>
+	<key>settings.music</key>
+	<string>音乐</string>
+	<key>settings.playGoals</key>
+	<string>游戏目标</string>
+	<key>settings.premiumUnlocked</key>
+	<string>高级版已解锁，谢谢！</string>
+	<key>settings.sound</key>
+	<string>声音</string>
+	<key>settings.soundEffects</key>
+	<string>音乐和音效</string>
+	<key>settings.soundInfo</key>
+	<string>关闭声音，安静地玩。游戏玩法完全不变。</string>
+	<key>settings.title</key>
+	<string>设置</string>
+	<key>streak.dayOne</key>
+	<string>第 1 天</string>
+	<key>topic.addition</key>
+	<string>加法</string>
+	<key>topic.addition.detail</key>
+	<string>只有加法</string>
+	<key>topic.fractions</key>
+	<string>分数</string>
+	<key>topic.fractions.detail</key>
+	<string>只有除法</string>
+	<key>topic.mixed</key>
+	<string>超级混合</string>
+	<key>topic.mixed.detail</key>
+	<string>混合运算</string>
+	<key>topic.percentages</key>
+	<string>百分数</string>
+	<key>topic.percentages.detail</key>
+	<string>只有百分数</string>
+	<key>topic.subtraction</key>
+	<string>减法</string>
+	<key>topic.subtraction.detail</key>
+	<string>只有减法</string>
+	<key>topic.tables</key>
+	<string>乘法表</string>
+	<key>topic.tables.detail</key>
+	<string>只有乘法</string>
+	<key>tutorial.notice.message</key>
+	<string>你正在游戏中。先完成它，或选择一个还没开始的关卡，再开始教程。</string>
+	<key>tutorial.notice.title</key>
+	<string>只能在游戏开始时</string>
+</dict>
+</plist>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>ខ្លាឃ្មុំ</string>
+	<key>character.bunny</key>
+	<string>ទន្សាយ</string>
+	<key>character.crab</key>
+	<string>ក្តាម</string>
+	<key>character.dog</key>
+	<string>ឆ្កែ</string>
+	<key>character.elephant</key>
+	<string>ដំរី</string>
+	<key>character.fox</key>
+	<string>កញ្ជ្រោង</string>
+	<key>character.frog</key>
+	<string>កង្កែប</string>
+	<key>character.lion</key>
+	<string>តោ</string>
+	<key>character.octopus</key>
+	<string>មឹក</string>
+	<key>character.penguin</key>
+	<string>ភេនឃ្វីន</string>
+	<key>common.cancel</key>
+	<string>បោះបង់</string>
+	<key>common.continue</key>
+	<string>បន្ត</string>
+	<key>common.done</key>
+	<string>រួចរាល់</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld នាទី</string>
+	<key>common.ok</key>
+	<string>យល់ព្រម</string>
+	<key>common.save</key>
+	<string>រក្សាទុក</string>
+	<key>currency.hoop.plural</key>
+	<string>រង្វង់</string>
+	<key>currency.hoop.singular</key>
+	<string>រង្វង់</string>
+	<key>game.combo %lld</key>
+	<string>កុំបូ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>ព្យាយាមបានល្អ</string>
+	<key>game.encouragement.1</key>
+	<string>ជាការចាប់ផ្តើម</string>
+	<key>game.encouragement.2</key>
+	<string>បន្តហាត់ទៀត</string>
+	<key>game.encouragement.3</key>
+	<string>មិនអន់ទេ</string>
+	<key>game.encouragement.4</key>
+	<string>ធ្វើបានល្អ</string>
+	<key>game.encouragement.5</key>
+	<string>លទ្ធផលល្អ</string>
+	<key>game.encouragement.6</key>
+	<string>ធ្វើបានល្អណាស់</string>
+	<key>game.encouragement.7</key>
+	<string>លេងបានល្អណាស់</string>
+	<key>game.encouragement.8</key>
+	<string>ជិតដល់ទីហើយ</string>
+	<key>game.encouragement.9</key>
+	<string>អ្នកជិតបានហើយ</string>
+	<key>game.encouragement.complete</key>
+	<string>ពិន្ទុពេញ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>អ្នករកបានគ្រប់ពិន្ទុ។</string>
+	<key>game.end.completionSuffix</key>
+	<string>រួចរាល់!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ចប់ហ្គេម</string>
+	<key>game.end.mainMenu</key>
+	<string>ម៉ឺនុយមេ</string>
+	<key>game.end.playAgain</key>
+	<string>លេងម្តងទៀត</string>
+	<key>game.highScore</key>
+	<string>ពិន្ទុខ្ពស់</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>ត្រឡប់ទៅម៉ឺនុយមេ</string>
+	<key>game.intro.continue</key>
+	<string>បន្តលេង</string>
+	<key>game.intro.progressPaused</key>
+	<string>ការលេងបានផ្អាក។</string>
+	<key>game.intro.start</key>
+	<string>ចាប់ផ្តើមកម្រិត</string>
+	<key>game.intro.startTutorial</key>
+	<string>ចាប់ផ្តើមណែនាំ</string>
+	<key>game.streakBoost.title</key>
+	<string>ពិន្ទុគុណពីរ!</string>
+	<key>goal.period</key>
+	<string>រយៈពេលគោលដៅ</string>
+	<key>goal.promptDaily</key>
+	<string>អ្នកចង់លេងប៉ុន្មាននាទីក្នុងមួយថ្ងៃ?</string>
+	<key>goal.promptWeekly</key>
+	<string>អ្នកចង់លេងប៉ុន្មាននាទីក្នុងមួយសប្ដាហ៍?</string>
+	<key>goal.title</key>
+	<string>គោលដៅលេង</string>
+	<key>goalPeriod.daily</key>
+	<string>ប្រចាំថ្ងៃ</string>
+	<key>goalPeriod.weekly</key>
+	<string>ប្រចាំសប្ដាហ៍</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld ទៀត</string>
+	<key>home.totalLabel</key>
+	<string>សរុប</string>
+	<key>info.mode.fractions.header</key>
+	<string>ផ្នែក</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>មួយផ្នែក និងច្រើនផ្នែក</string>
+	<key>info.mode.fractions.single</key>
+	<string>តែមួយផ្នែកជានិច្ច</string>
+	<key>info.mode.header</key>
+	<string>លំដាប់</string>
+	<key>info.mode.mixed</key>
+	<string>លាយជាមួយកម្រិតមុនៗ</string>
+	<key>info.mode.order</key>
+	<string>លំដាប់ថេរ</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>រួមទាំងលេខទសភាគ</string>
+	<key>info.mode.percentages.header</key>
+	<string>ប្រភេទ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>គ្មានលេខទសភាគ</string>
+	<key>info.mode.random</key>
+	<string>លំដាប់ចៃដន្យ</string>
+	<key>info.super.all</key>
+	<string>បូក ដក គុណ ចែក និងភាគរយ</string>
+	<key>info.super.basic</key>
+	<string>បូក និងដក</string>
+	<key>info.super.fraction</key>
+	<string>បូក ដក គុណ និងចែក</string>
+	<key>info.super.times</key>
+	<string>បូក ដក និងគុណ</string>
+	<key>info.topic.header</key>
+	<string>ប្រភេទលំហាត់</string>
+	<key>levelIntro.addition.intro</key>
+	<string>លំហាត់ដែលអ្នក **បូក** ចំនួនមួយ។</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>បូក %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ការ៉ុត %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **មាន់ %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ត្រី %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ពាងទឹកឃ្មុំ %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **រង្វង់ %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **នំឆ្កែ %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **សាច់ %lld ដុំ** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **សណ្ដែកដី %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **គុជ %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>អ្នកអាចប្រមូលបានរហូតដល់ **បង្គា %lld** ក្នុងលេវែលនេះ។</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>លំហាត់ដែលអ្នក **ចែក** ចំនួនមួយ។</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>ចែកនឹង %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>សំណួររហូតដល់ **លេវែល %lld**។</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>សំណួរចាប់ពី **លេវែល 1**។</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**ចម្រុះទាំងអស់**៖ បូក ដក គុណ ប្រភាគ និងភាគរយ។</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>តែងតែជា **មួយផ្នែក** នៃទាំងមូល។</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**មួយ ឬច្រើនផ្នែក** នៃទាំងមូល។</string>
+	<key>levelIntro.mode.order</key>
+	<string>សំណួរតាម **លំដាប់ថេរ**។</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>ចម្លើយ **គ្មានទសភាគ**។</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>ចម្លើយក៏មាន **ទសភាគ**។</string>
+	<key>levelIntro.mode.random</key>
+	<string>សំណួរតាម **លំដាប់ចៃដន្យ**។</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>លំហាត់មាន **ភាគរយ**។</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ នៃចំនួនមួយ</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>លំហាត់ដែលអ្នក **ដក** ចំនួនមួយ។</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>ដក %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>លំហាត់ដែលអ្នក **គុណ**។</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>តារាងគុណ %lld</string>
+	<key>menu.maximumCount</key>
+	<string>អតិបរមា</string>
+	<key>menu.moreLevels</key>
+	<string>កម្រិតបន្ថែម</string>
+	<key>menu.premiumLevels</key>
+	<string>លេវែល Premium</string>
+	<key>menu.startHere</key>
+	<string>ចាប់ផ្តើមទីនេះ</string>
+	<key>menu.unlockWithPremium</key>
+	<string>ដោះសោបន្ថែមជាមួយព្រីមៀម</string>
+	<key>mode.fractions.multiple</key>
+	<string>ច្រើនផ្នែក</string>
+	<key>mode.fractions.single</key>
+	<string>មួយផ្នែក</string>
+	<key>mode.mixed</key>
+	<string>ចម្រុះ</string>
+	<key>mode.order</key>
+	<string>លំដាប់</string>
+	<key>mode.percentages.decimal</key>
+	<string>ទសភាគ</string>
+	<key>mode.percentages.whole</key>
+	<string>ចំនួនគត់</string>
+	<key>mode.random</key>
+	<string>ចៃដន្យ</string>
+	<key>name.placeholder</key>
+	<string>ឈ្មោះរបស់អ្នក</string>
+	<key>name.whatsYourName</key>
+	<string>អ្នកឈ្មោះអ្វី?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: ទទួលបានរង្វង់ពីរបីទៀតដើម្បីដោះសោសត្វនេះ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>សត្វរបស់អ្នកកំពុងរង់ចាំ។ត្រលប់មកលេង ហើយបន្តប្រមូលរង្វង់!</string>
+	<key>notif.comeback.title</key>
+	<string>យើងនឹកអ្នក! 👋</string>
+	<key>notif.day3.title</key>
+	<string>សូមឱ្យថ្ងៃទី 3 កើតឡើង! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium រួមបញ្ចូលកម្រិត %lld សម្រាប់គ្រប់ប្រធានបទ និងសត្វទាំង 10 ។ដំណើរផ្សងព្រេងនៅតែបន្ត!</string>
+	<key>notif.premium.title</key>
+	<string>ដោះសោកម្រិតនិងសត្វកាន់តែច្រើន! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>មានរយៈពេល %lld ថ្ងៃ។តោះ​ដោះស្រាយ​លំហាត់​គណិត​ខ្លះ​ហើយ​ឈ្នះ​រង្វង់​ទៀត!</string>
+	<key>notif.reactivate.title</key>
+	<string>ត្រៀម​លេង​ម្ដង​ទៀត​ហើយ​ឬ​នៅ? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>លំហាត់ចម្រុះផ្សេងៗលាយគ្នា។</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>ពូកែគួរសមហើយ</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ហាត់លំហាត់តាមលំដាប់។</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>ទើបចាប់ផ្តើម</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>លំហាត់តាមលំដាប់ចៃដន្យ។</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>បានហាត់ខ្លះហើយ</string>
+	<key>onboarding.level.title</key>
+	<string>អ្នកពូកែប៉ុណ្ណាហើយ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>ចាប់ផ្តើមគ្នា។ អ្នកឈ្មោះអ្វី?</string>
+	<key>onboarding.name.title</key>
+	<string>គណនាលំហាត់មិនធ្លាប់សប្បាយបែបនេះទេ!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>ជ្រើសប្រធានបទមួយដើម្បីចាប់ផ្តើម។</string>
+	<key>onboarding.subject.title</key>
+	<string>អ្នកចង់រៀនអ្វី?</string>
+	<key>parentGate.approved</key>
+	<string>បានអនុម័ត</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ការព្យាយាម៖ %1$lld ក្នុងចំណោម %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>ចុចឱ្យជាប់៖ %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>រង្វង់</string>
+	<key>parentGate.shape.diamond</key>
+	<string>រាងពេជ្រ</string>
+	<key>parentGate.shape.heart</key>
+	<string>បេះដូង</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>ឆកោណ</string>
+	<key>parentGate.shape.plus</key>
+	<string>សញ្ញាបូក</string>
+	<key>parentGate.shape.square</key>
+	<string>ការ៉េ</string>
+	<key>parentGate.shape.star</key>
+	<string>ផ្កាយ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>ត្រីកោណ</string>
+	<key>parentGate.subtitle</key>
+	<string>ដើម្បីការពារអ្នកលេងវ័យក្មេង មនុស្សពេញវ័យត្រូវបំពេញការត្រួតពិនិត្យនេះ មុនបន្តទៅការទិញ។</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>ចំនួនប៉ះ៖ %1$lld ក្នុងចំណោម %2$lld</string>
+	<key>parentGate.title</key>
+	<string>ត្រូវការការយល់ព្រមពីមនុស្សពេញវ័យ</string>
+	<key>premium.availableAt %lld</key>
+	<string>មានចាប់ពីពាន %lld</string>
+	<key>premium.availableFromStart</key>
+	<string>មានតាំងពីដំបូង</string>
+	<key>premium.characterUnlocked</key>
+	<string>បានដោះសោតួអង្គថ្មី</string>
+	<key>premium.earnedCards %lld</key>
+	<string>អ្នករកបានរង្វង់ %lld</string>
+	<key>premium.exclusiveBadge</key>
+	<string>ផ្តាច់មុខជាមួយ Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>ជាមួយព្រីមៀម អ្នកអាចលេងដោយសេរីជាមួយសត្វទាំង 10។</string>
+	<key>premium.feature.animals.title</key>
+	<string>ប្រើសត្វទាំងអស់</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>តែងតែមានលំហាត់ថ្មីគ្រប់គ្រាន់សម្រាប់ហាត់។</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 កម្រិតក្នុងមួយប្រធានបទ</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>លេងដោយគ្មានការរំខាន។</string>
+	<key>premium.feature.noAds.title</key>
+	<string>គ្មានពាណិជ្ជកម្ម</string>
+	<key>premium.oneTime</key>
+	<string>ទិញតែម្តង។ ជារបស់អ្នករហូត។</string>
+	<key>premium.restore</key>
+	<string>ស្ដារការទិញ</string>
+	<key>premium.start</key>
+	<string>ចាប់ផ្តើម</string>
+	<key>premium.storeUnavailable</key>
+	<string>ហាងមិនអាចប្រើបានឥឡូវនេះទេ។ សូមព្យាយាមម្ដងទៀតពេលក្រោយ។</string>
+	<key>premium.unlock</key>
+	<string>ដោះសោព្រីមៀម</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ដោះសោព្រីមៀម · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>បានដោះសោជាមួយ Premium</string>
+	<key>result.complete</key>
+	<string>លេវែលចប់!</string>
+	<key>result.stopped</key>
+	<string>បានផ្អាក</string>
+	<key>settings.character</key>
+	<string>តួអង្គ</string>
+	<key>settings.characterInfo</key>
+	<string>សត្វនីមួយៗផ្តល់ពណ៌រចនាប័ទ្មផ្ទាល់ខ្លួនដល់ហ្គេមទាំងមូល។</string>
+	<key>settings.customMinutes %lld</key>
+	<string>កំណត់ផ្ទាល់៖ %lld នាទី</string>
+	<key>settings.dailyGoal</key>
+	<string>គោលដៅប្រចាំថ្ងៃ</string>
+	<key>settings.goalInfo</key>
+	<string>គោលដៅលេងជាប់គ្នាចាប់ផ្តើមពី 5 នាទីក្នុងមួយថ្ងៃ។ រាប់តែពេលលេងសកម្មប៉ុណ្ណោះ។</string>
+	<key>settings.music</key>
+	<string>តន្ត្រី</string>
+	<key>settings.playGoals</key>
+	<string>គោលដៅលេង</string>
+	<key>settings.premiumUnlocked</key>
+	<string>បានដោះសោព្រីមៀម។ អរគុណ!</string>
+	<key>settings.sound</key>
+	<string>សំឡេង</string>
+	<key>settings.soundEffects</key>
+	<string>តន្ត្រី និងសំឡេង</string>
+	<key>settings.soundInfo</key>
+	<string>បិទសំឡេងដើម្បីលេងស្ងាត់។ ហ្គេមនៅតែដំណើរការដូចគ្នា។</string>
+	<key>settings.title</key>
+	<string>ការកំណត់</string>
+	<key>streak.dayOne</key>
+	<string>ថ្ងៃទី 1</string>
+	<key>topic.addition</key>
+	<string>បូក</string>
+	<key>topic.addition.detail</key>
+	<string>បូកតែប៉ុណ្ណោះ</string>
+	<key>topic.fractions</key>
+	<string>ប្រភាគ</string>
+	<key>topic.fractions.detail</key>
+	<string>ចែកតែប៉ុណ្ណោះ</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>លំហាត់ចម្រុះ</string>
+	<key>topic.percentages</key>
+	<string>ភាគរយ</string>
+	<key>topic.percentages.detail</key>
+	<string>ភាគរយតែប៉ុណ្ណោះ</string>
+	<key>topic.subtraction</key>
+	<string>ដក</string>
+	<key>topic.subtraction.detail</key>
+	<string>ដកតែប៉ុណ្ណោះ</string>
+	<key>topic.tables</key>
+	<string>តារាងគុណ</string>
+	<key>topic.tables.detail</key>
+	<string>គុណតែប៉ុណ្ណោះ</string>
+	<key>tutorial.notice.message</key>
+	<string>អ្នកកំពុងលេងហ្គេម។ លេងឱ្យចប់ ឬជ្រើសលេវែលដែលមិនទាន់ចាប់ផ្តើម ដើម្បីលេងការណែនាំ។</string>
+	<key>tutorial.notice.title</key>
+	<string>បានតែនៅដើមហ្គេម</string>
+</dict>
+</plist>

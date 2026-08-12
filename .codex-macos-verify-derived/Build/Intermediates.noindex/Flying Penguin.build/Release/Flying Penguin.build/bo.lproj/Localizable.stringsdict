@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ཨ་ལོང་%lldལས་མེད་པ་རེད། . ⭕</string>
+			<key>other</key>
+			<string>ཨ་ལོང་%lldལས་མེད་པ་རེད། . ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>དེ་རིང་སྐར་མ %lld རྩེ་ནས་ད་དུང་ཁ་ཤས་བསྡུས།</string>
+			<key>other</key>
+			<string>དེ་རིང་སྐར་མ %lld རྩེ་ནས་ད་དུང་ཁ་ཤས་བསྡུས།</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ཨ་ལོང་ %lld བསྡུས! ⭕</string>
+			<key>other</key>
+			<string>ཨ་ལོང་ %lld བསྡུས! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>སྐར་མ་ %lld ཡི་རྩེད་མོའི་དུས་ཚོད་འགོ་འཛུགས་ནས་ཉིན་ལྟར་རྩེད་མོའི་རྒྱུན་རིང་དུ་གཏོང་དགོས།</string>
+			<key>other</key>
+			<string>སྐར་མ་ %lld ཡི་རྩེད་མོའི་དུས་ཚོད་འགོ་འཛུགས་ནས་ཉིན་ལྟར་རྩེད་མོའི་རྒྱུན་རིང་དུ་གཏོང་དགོས།</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>སྐར་མ་ %lld རྩེད་ནས་ཉིན་ལྟར་རྩེད་མོ་རྩེ་རྒྱུ་རྒྱུན་འཁྱོངས་བྱོས།</string>
+			<key>other</key>
+			<string>སྐར་མ་ %lld རྩེད་ནས་ཉིན་ལྟར་རྩེད་མོ་རྩེ་རྒྱུ་རྒྱུན་འཁྱོངས་བྱོས།</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ཁྱེད་རང་གི་ཉིན་རེའི་རྩེད་མོའི་རིམ་པ་དེ་ཉིན་%lldལ་སླེབས་ཡོད། 🔥</string>
+			<key>other</key>
+			<string>ཁྱེད་རང་གི་ཉིན་རེའི་རྩེད་མོའི་རིམ་པ་དེ་ཉིན་%lldལ་སླེབས་ཡོད། 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>དེས་ཁྱེད་ཀྱི་བསྡོམས་པས་ཨ་ལོང་%lldལ་སླེབས་ཡོད།ཡ་མཚན་ཅན་གྱི་ལས་ཀ་རེད།</string>
+			<key>other</key>
+			<string>དེས་ཁྱེད་ཀྱི་བསྡོམས་པས་ཨ་ལོང་%lldལ་སླེབས་ཡོད།ཡ་མཚན་ཅན་གྱི་ལས་ཀ་རེད།</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ཁྱོད་ཀྱིས་བདུན་ཕྲག་འདིར་ཨ་ལོང་%lldཐོབ་ཡོད། . 🎉</string>
+			<key>other</key>
+			<string>ཁྱོད་ཀྱིས་བདུན་ཕྲག་འདིར་ཨ་ལོང་%lldཐོབ་ཡོད། . 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ ལ་སྐར་ཆ་ %2$lld མནན་ནས་སྡོད།</string>
+			<key>other</key>
+			<string>%1$@ ལ་སྐར་ཆ་ %2$lld མནན་ནས་སྡོད།</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ད་ལྟ་ %2$@ ལ་ %1$lld ཐེངས་རེག</string>
+			<key>other</key>
+			<string>ད་ལྟ་ %2$@ ལ་ %1$lld ཐེངས་རེག</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

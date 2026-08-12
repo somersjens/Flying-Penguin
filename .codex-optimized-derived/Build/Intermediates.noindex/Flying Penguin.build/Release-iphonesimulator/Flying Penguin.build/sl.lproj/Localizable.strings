@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Medved</string>
+	<key>character.bunny</key>
+	<string>Zajček</string>
+	<key>character.crab</key>
+	<string>Rak</string>
+	<key>character.dog</key>
+	<string>Pes</string>
+	<key>character.elephant</key>
+	<string>Slon</string>
+	<key>character.fox</key>
+	<string>Lisica</string>
+	<key>character.frog</key>
+	<string>Žaba</string>
+	<key>character.lion</key>
+	<string>Lev</string>
+	<key>character.octopus</key>
+	<string>Hobotnica</string>
+	<key>character.penguin</key>
+	<string>Pingvin</string>
+	<key>common.cancel</key>
+	<string>Prekliči</string>
+	<key>common.continue</key>
+	<string>Naprej</string>
+	<key>common.done</key>
+	<string>Končano</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Shrani</string>
+	<key>currency.hoop.plural</key>
+	<string>obroči</string>
+	<key>currency.hoop.singular</key>
+	<string>obroč</string>
+	<key>game.combo %lld</key>
+	<string>Kombinacija! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Dober poskus</string>
+	<key>game.encouragement.1</key>
+	<string>Dober začetek</string>
+	<key>game.encouragement.2</key>
+	<string>Vadi še naprej</string>
+	<key>game.encouragement.3</key>
+	<string>Sploh ni slabo</string>
+	<key>game.encouragement.4</key>
+	<string>Dobro ti gre</string>
+	<key>game.encouragement.5</key>
+	<string>Lep dosežek</string>
+	<key>game.encouragement.6</key>
+	<string>Odlično</string>
+	<key>game.encouragement.7</key>
+	<string>Zelo dobro odigrano</string>
+	<key>game.encouragement.8</key>
+	<string>Cilj je že blizu</string>
+	<key>game.encouragement.9</key>
+	<string>Skoraj si tam</string>
+	<key>game.encouragement.complete</key>
+	<string>Vse pravilno!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Prislužil si si vsako točko.</string>
+	<key>game.end.completionSuffix</key>
+	<string>končano!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Konec igre</string>
+	<key>game.end.mainMenu</key>
+	<string>Glavni meni</string>
+	<key>game.end.playAgain</key>
+	<string>Igraj znova</string>
+	<key>game.highScore</key>
+	<string>Rekord</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Nazaj v glavni meni</string>
+	<key>game.intro.continue</key>
+	<string>Nadaljuj</string>
+	<key>game.intro.progressPaused</key>
+	<string>Napredek je začasno ustavljen.</string>
+	<key>game.intro.start</key>
+	<string>Začni stopnjo</string>
+	<key>game.intro.startTutorial</key>
+	<string>Začni vadnico</string>
+	<key>game.streakBoost.title</key>
+	<string>Dvojne točke!</string>
+	<key>goal.period</key>
+	<string>Obdobje cilja</string>
+	<key>goal.promptDaily</key>
+	<string>Koliko minut želiš igrati na dan?</string>
+	<key>goal.promptWeekly</key>
+	<string>Koliko minut želiš igrati na teden?</string>
+	<key>goal.title</key>
+	<string>Igralni cilj</string>
+	<key>goalPeriod.daily</key>
+	<string>Dnevno</string>
+	<key>goalPeriod.weekly</key>
+	<string>Tedensko</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>še %lld</string>
+	<key>home.totalLabel</key>
+	<string>Skupaj</string>
+	<key>info.mode.fractions.header</key>
+	<string>Deli</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>En ali več delov</string>
+	<key>info.mode.fractions.single</key>
+	<string>Vedno en del</string>
+	<key>info.mode.header</key>
+	<string>Vrstni red</string>
+	<key>info.mode.mixed</key>
+	<string>Mešano z lažjimi stopnjami</string>
+	<key>info.mode.order</key>
+	<string>Določen vrstni red</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Tudi decimalna števila</string>
+	<key>info.mode.percentages.header</key>
+	<string>Vrsta</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Brez decimalnih števil</string>
+	<key>info.mode.random</key>
+	<string>Naključni vrstni red</string>
+	<key>info.super.all</key>
+	<string>Seštevanje, odštevanje, množenje, deljenje in odstotki</string>
+	<key>info.super.basic</key>
+	<string>Seštevanje in odštevanje</string>
+	<key>info.super.fraction</key>
+	<string>Seštevanje, odštevanje, množenje in deljenje</string>
+	<key>info.super.times</key>
+	<string>Seštevanje, odštevanje in množenje</string>
+	<key>info.topic.header</key>
+	<string>Vrste računov</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Računi, kjer število **prišteješ**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Prištej %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld korenčkov**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld kokoši**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld rib**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld lončkov medu**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld obroči**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld pasjih piškotov**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld kosov mesa**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld arašidov**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld biserov**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>V tej stopnji lahko zbereš največ **%lld kozic**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Računi, kjer število **deliš**.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Deli z %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Naloge do **stopnje %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Naloge od **stopnje 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Vse pomešano**: plus, minus, krat, ulomki in odstotki.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Vedno **en del** celote.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**En ali več delov** celote.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Naloge v **določenem vrstnem redu**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Odgovori **brez decimalk**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Tudi odgovori **z decimalkami**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Naloge v **naključnem vrstnem redu**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Računi z **odstotki**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ od števila</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Računi, kjer število **odšteješ**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Odštej %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Računi, kjer **množiš**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Poštevanka %lld</string>
+	<key>menu.maximumCount</key>
+	<string>NAJVEČ</string>
+	<key>menu.moreLevels</key>
+	<string>Več stopenj</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium stopnje</string>
+	<key>menu.startHere</key>
+	<string>Začni tukaj</string>
+	<key>menu.unlockWithPremium</key>
+	<string>S Premiumom odkleni več</string>
+	<key>mode.fractions.multiple</key>
+	<string>Več delov</string>
+	<key>mode.fractions.single</key>
+	<string>En del</string>
+	<key>mode.mixed</key>
+	<string>Mešano</string>
+	<key>mode.order</key>
+	<string>Vrstni red</string>
+	<key>mode.percentages.decimal</key>
+	<string>Decimalno</string>
+	<key>mode.percentages.whole</key>
+	<string>Celo</string>
+	<key>mode.random</key>
+	<string>Naključno</string>
+	<key>name.placeholder</key>
+	<string>Tvoje ime</string>
+	<key>name.whatsYourName</key>
+	<string>Kako ti je ime?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Zaslužite še nekaj obroči, da odklenete to žival! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Vaše živali čakajo. Vrnite se igrat in še naprej zbirajte obroči!</string>
+	<key>notif.comeback.title</key>
+	<string>Pogrešamo te! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Naj se zgodi 3. dan! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium vključuje %lld stopenj za vsako temo in vseh 10 živali. Pustolovščina se nadaljuje!</string>
+	<key>notif.premium.title</key>
+	<string>Odkleni več stopenj in živali! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Minilo je %lld dni. Rešimo nekaj matematičnih vaj in zaslužimo več obroči!</string>
+	<key>notif.reactivate.title</key>
+	<string>Ste pripravljeni znova igrati? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Različne mešane naloge skupaj.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Že kar dobro</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Vadi naloge po vrsti.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Šele začenjam</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Naloge v naključnem vrstnem redu.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Nekaj že znam</string>
+	<key>onboarding.level.title</key>
+	<string>Kako dobro ti to že gre?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Začnimo. Kako ti je ime?</string>
+	<key>onboarding.name.title</key>
+	<string>Računanje še nikoli ni bilo tako zabavno!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Za začetek izberi temo.</string>
+	<key>onboarding.subject.title</key>
+	<string>Kaj se želiš naučiti?</string>
+	<key>parentGate.approved</key>
+	<string>Odobreno</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Poskusi: %1$lld od %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Drži: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>krog</string>
+	<key>parentGate.shape.diamond</key>
+	<string>romb</string>
+	<key>parentGate.shape.heart</key>
+	<string>srce</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>šestkotnik</string>
+	<key>parentGate.shape.plus</key>
+	<string>plus</string>
+	<key>parentGate.shape.square</key>
+	<string>kvadrat</string>
+	<key>parentGate.shape.star</key>
+	<string>zvezda</string>
+	<key>parentGate.shape.triangle</key>
+	<string>trikotnik</string>
+	<key>parentGate.subtitle</key>
+	<string>Za zaščito mladih igralcev mora odrasla oseba pred nadaljevanjem nakupa opraviti to preverjanje.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Dotiki: %1$lld od %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Potrebna je odobritev odrasle osebe</string>
+	<key>premium.availableAt %lld</key>
+	<string>Na voljo od %lld pokalov</string>
+	<key>premium.availableFromStart</key>
+	<string>Na voljo od začetka</string>
+	<key>premium.characterUnlocked</key>
+	<string>ODKLENJEN NOV LIK</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Zbral si %lld obroči</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Ekskluzivno s Premiumom</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>S Premiumom se lahko prosto igraš z vsemi 10 živalmi.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Dostop do vseh živali</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Vedno dovolj novih nalog za vajo.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 stopenj na temo</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Igraj povsem brez prekinitev.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Brez oglasov</string>
+	<key>premium.oneTime</key>
+	<string>Enkratni nakup. Za vedno tvoje.</string>
+	<key>premium.restore</key>
+	<string>Obnovi nakupe</string>
+	<key>premium.start</key>
+	<string>Začni</string>
+	<key>premium.storeUnavailable</key>
+	<string>Trgovina trenutno ni na voljo. Poskusi znova pozneje.</string>
+	<key>premium.unlock</key>
+	<string>Odkleni Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Odkleni Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Odklenjeno s Premiumom</string>
+	<key>result.complete</key>
+	<string>Stopnja končana!</string>
+	<key>result.stopped</key>
+	<string>Začasno ustavljeno</string>
+	<key>settings.character</key>
+	<string>Junak</string>
+	<key>settings.characterInfo</key>
+	<string>Vsaka žival obarva celotno igro s svojo barvno temo.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Po meri: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Dnevni cilj</string>
+	<key>settings.goalInfo</key>
+	<string>Cilj niza se začne pri 5 minutah na dan. Šteje le čas aktivnega igranja.</string>
+	<key>settings.music</key>
+	<string>Glasba</string>
+	<key>settings.playGoals</key>
+	<string>Igralni cilji</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium odklenjen. Hvala!</string>
+	<key>settings.sound</key>
+	<string>Zvok</string>
+	<key>settings.soundEffects</key>
+	<string>Glasba in učinki</string>
+	<key>settings.soundInfo</key>
+	<string>Izklopi zvok za tiho igranje. Igra ostane povsem enaka.</string>
+	<key>settings.title</key>
+	<string>Nastavitve</string>
+	<key>streak.dayOne</key>
+	<string>1. dan</string>
+	<key>topic.addition</key>
+	<string>Seštevanje</string>
+	<key>topic.addition.detail</key>
+	<string>Samo seštevanje</string>
+	<key>topic.fractions</key>
+	<string>Ulomki</string>
+	<key>topic.fractions.detail</key>
+	<string>Samo deljenje</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Mešani računi</string>
+	<key>topic.percentages</key>
+	<string>Odstotki</string>
+	<key>topic.percentages.detail</key>
+	<string>Samo odstotki</string>
+	<key>topic.subtraction</key>
+	<string>Odštevanje</string>
+	<key>topic.subtraction.detail</key>
+	<string>Samo odštevanje</string>
+	<key>topic.tables</key>
+	<string>Poštevanka</string>
+	<key>topic.tables.detail</key>
+	<string>Samo množenje</string>
+	<key>tutorial.notice.message</key>
+	<string>Sredi igre si. Dokončaj jo ali izberi stopnjo, ki je še nisi začel, da lahko odigraš vadnico.</string>
+	<key>tutorial.notice.title</key>
+	<string>Samo na začetku igre</string>
+</dict>
+</plist>

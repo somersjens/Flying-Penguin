@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Lokys</string>
+	<key>character.bunny</key>
+	<string>Zuikutis</string>
+	<key>character.crab</key>
+	<string>Krabas</string>
+	<key>character.dog</key>
+	<string>Šuo</string>
+	<key>character.elephant</key>
+	<string>Dramblys</string>
+	<key>character.fox</key>
+	<string>Lapė</string>
+	<key>character.frog</key>
+	<string>Varlė</string>
+	<key>character.lion</key>
+	<string>Liūtas</string>
+	<key>character.octopus</key>
+	<string>Aštuonkojis</string>
+	<key>character.penguin</key>
+	<string>Pingvinas</string>
+	<key>common.cancel</key>
+	<string>Atšaukti</string>
+	<key>common.continue</key>
+	<string>Tęsti</string>
+	<key>common.done</key>
+	<string>Baigta</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>Gerai</string>
+	<key>common.save</key>
+	<string>Išsaugoti</string>
+	<key>currency.hoop.plural</key>
+	<string>lankai</string>
+	<key>currency.hoop.singular</key>
+	<string>lankas</string>
+	<key>game.combo %lld</key>
+	<string>Serija! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Geras bandymas</string>
+	<key>game.encouragement.1</key>
+	<string>Tai jau pradžia</string>
+	<key>game.encouragement.2</key>
+	<string>Mokykis toliau</string>
+	<key>game.encouragement.3</key>
+	<string>Visai neblogai</string>
+	<key>game.encouragement.4</key>
+	<string>Puikiai sekasi</string>
+	<key>game.encouragement.5</key>
+	<string>Puikus rezultatas</string>
+	<key>game.encouragement.6</key>
+	<string>Šaunuolis</string>
+	<key>game.encouragement.7</key>
+	<string>Labai gerai sužaista</string>
+	<key>game.encouragement.8</key>
+	<string>Finišas jau arti</string>
+	<key>game.encouragement.9</key>
+	<string>Beveik pasiekei</string>
+	<key>game.encouragement.complete</key>
+	<string>Puikiai! Viskas teisingai!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Uždirbai kiekvieną tašką.</string>
+	<key>game.end.completionSuffix</key>
+	<string>baigta!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Žaidimas baigtas</string>
+	<key>game.end.mainMenu</key>
+	<string>Pagrindinis meniu</string>
+	<key>game.end.playAgain</key>
+	<string>Žaisti dar kartą</string>
+	<key>game.highScore</key>
+	<string>Rekordas</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Grįžti į pagrindinį meniu</string>
+	<key>game.intro.continue</key>
+	<string>Tęsti</string>
+	<key>game.intro.progressPaused</key>
+	<string>Tavo pažanga pristabdyta.</string>
+	<key>game.intro.start</key>
+	<string>Pradėti lygį</string>
+	<key>game.intro.startTutorial</key>
+	<string>Pradėti pamokėlę</string>
+	<key>game.streakBoost.title</key>
+	<string>Dvigubi taškai!</string>
+	<key>goal.period</key>
+	<string>Tikslo laikotarpis</string>
+	<key>goal.promptDaily</key>
+	<string>Kiek minučių per dieną nori žaisti?</string>
+	<key>goal.promptWeekly</key>
+	<string>Kiek minučių per savaitę nori žaisti?</string>
+	<key>goal.title</key>
+	<string>Žaidimo tikslas</string>
+	<key>goalPeriod.daily</key>
+	<string>Kasdien</string>
+	<key>goalPeriod.weekly</key>
+	<string>Kas savaitę</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>dar %lld</string>
+	<key>home.totalLabel</key>
+	<string>Iš viso</string>
+	<key>info.mode.fractions.header</key>
+	<string>Dalys</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Viena ir kelios dalys</string>
+	<key>info.mode.fractions.single</key>
+	<string>Visada viena dalis</string>
+	<key>info.mode.header</key>
+	<string>Tvarka</string>
+	<key>info.mode.mixed</key>
+	<string>Kartu su žemesniais lygiais</string>
+	<key>info.mode.order</key>
+	<string>Fiksuota tvarka</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Su dešimtainiais skaičiais</string>
+	<key>info.mode.percentages.header</key>
+	<string>Tipas</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Be dešimtainių skaičių</string>
+	<key>info.mode.random</key>
+	<string>Atsitiktinė tvarka</string>
+	<key>info.super.all</key>
+	<string>Sudėtis, atimtis, daugyba, dalyba ir procentai</string>
+	<key>info.super.basic</key>
+	<string>Sudėtis ir atimtis</string>
+	<key>info.super.fraction</key>
+	<string>Sudėtis, atimtis, daugyba ir dalyba</string>
+	<key>info.super.times</key>
+	<string>Sudėtis, atimtis ir daugyba</string>
+	<key>info.topic.header</key>
+	<string>Užduočių tipai</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Uždaviniai, kuriuose skaičių **pridedi**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Pridėti %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld morkų**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld vištų**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld žuvų**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld medaus puodynėlių**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld lankai**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld šunų skanėstų**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld mėsos gabalėlių**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld žemės riešutų**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld perlų**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld krevečių**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Uždaviniai, kuriuose skaičių **daliji**.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Dalyba iš %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Klausimai iki **%lld lygio**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Klausimai nuo **1 lygio**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Viskas sumaišyta**: pliusas, minusas, daugyba, trupmenos ir procentai.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermišinys %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Visada **viena dalis** visumos.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Viena ar kelios dalys** visumos.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Klausimai **nustatyta tvarka**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Atsakymai **be dešimtainių**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Taip pat atsakymai **su dešimtainiais**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Klausimai **atsitiktine tvarka**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Uždaviniai su **procentais**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ nuo skaičiaus</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Uždaviniai, kuriuose skaičių **atimi**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Atimti %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Uždaviniai, kuriuose **daugini**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld daugybos lentelė</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>Daugiau lygių</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium lygiai</string>
+	<key>menu.startHere</key>
+	<string>Pradėk čia</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Atrakink daugiau su Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Kelios</string>
+	<key>mode.fractions.single</key>
+	<string>Viena</string>
+	<key>mode.mixed</key>
+	<string>Mišru</string>
+	<key>mode.order</key>
+	<string>Tvarka</string>
+	<key>mode.percentages.decimal</key>
+	<string>Dešimtainiai</string>
+	<key>mode.percentages.whole</key>
+	<string>Sveikieji</string>
+	<key>mode.random</key>
+	<string>Atsitiktinai</string>
+	<key>name.placeholder</key>
+	<string>Tavo vardas</string>
+	<key>name.whatsYourName</key>
+	<string>Koks tavo vardas?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Uždirbkite dar kelis lankai, kad atrakintumėte šį gyvūną! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Jūsų gyvūnai laukia. Grįžkite žaisti ir toliau rinkti lankai!</string>
+	<key>notif.comeback.title</key>
+	<string>Mes tavęs pasiilgome! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Kad įvyktų 3 diena! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium apima %lld lygius kiekvienai temai ir visiems 10 gyvūnų. Nuotykis tęsiasi!</string>
+	<key>notif.premium.title</key>
+	<string>Atrakinkite daugiau lygių ir gyvūnų! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Praėjo %lld dienos. Išspręskime keletą matematikos pratimų ir pelnykime daugiau lankai!</string>
+	<key>notif.reactivate.title</key>
+	<string>Pasiruošę vėl žaisti? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Įvairios mišrios užduotys kartu.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Jau visai gerai</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Treniruokis su užduotimis iš eilės.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Ką tik pradėjau</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Užduotys atsitiktine tvarka.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Jau šiek tiek mokiausi</string>
+	<key>onboarding.level.title</key>
+	<string>Kaip gerai tai jau moki?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Pradėkime. Koks tavo vardas?</string>
+	<key>onboarding.name.title</key>
+	<string>Skaičiuoti dar niekada nebuvo taip smagu!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Pasirink temą, nuo kurios pradėsi.</string>
+	<key>onboarding.subject.title</key>
+	<string>Ko nori išmokti?</string>
+	<key>parentGate.approved</key>
+	<string>Patvirtinta</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Bandymai: %1$lld iš %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Laikyti: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>apskritimas</string>
+	<key>parentGate.shape.diamond</key>
+	<string>rombas</string>
+	<key>parentGate.shape.heart</key>
+	<string>širdis</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>šešiakampis</string>
+	<key>parentGate.shape.plus</key>
+	<string>pliusas</string>
+	<key>parentGate.shape.square</key>
+	<string>kvadratas</string>
+	<key>parentGate.shape.star</key>
+	<string>žvaigždė</string>
+	<key>parentGate.shape.triangle</key>
+	<string>trikampis</string>
+	<key>parentGate.subtitle</key>
+	<string>Kad apsaugotume mažuosius žaidėjus, prieš tęsiant pirkimą šį patikrinimą turi atlikti suaugusysis.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Bakstelėjimai: %1$lld iš %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Reikia suaugusiojo patvirtinimo</string>
+	<key>premium.availableAt %lld</key>
+	<string>Pasiekiama nuo %lld trofėjų</string>
+	<key>premium.availableFromStart</key>
+	<string>Pasiekiama nuo pradžių</string>
+	<key>premium.characterUnlocked</key>
+	<string>ATRAKINTAS NAUJAS VEIKĖJAS</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Uždirbai %lld lankai</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Tik su Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Su Premium gali laisvai žaisti su visais 10 gyvūnų.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Visi gyvūnai</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Visada užteks naujų užduočių mokytis.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 lygiai kiekvienai temai</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Žaisk be jokių trukdžių.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Be reklamų</string>
+	<key>premium.oneTime</key>
+	<string>Vienkartinis pirkinys. Tavo visam laikui.</string>
+	<key>premium.restore</key>
+	<string>Atkurti pirkinius</string>
+	<key>premium.start</key>
+	<string>Pradėti</string>
+	<key>premium.storeUnavailable</key>
+	<string>Parduotuvė dabar nepasiekiama. Bandyk dar kartą vėliau.</string>
+	<key>premium.unlock</key>
+	<string>Atrakinti Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Atrakinti Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Atrakinta su Premium</string>
+	<key>result.complete</key>
+	<string>Lygis baigtas!</string>
+	<key>result.stopped</key>
+	<string>Pristabdyta</string>
+	<key>settings.character</key>
+	<string>Veikėjas</string>
+	<key>settings.characterInfo</key>
+	<string>Kiekvienas gyvūnas visam žaidimui suteikia savo spalvų temą.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Pasirinkta: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Dienos tikslas</string>
+	<key>settings.goalInfo</key>
+	<string>Dienos serijos tikslas prasideda nuo 5 minučių per dieną. Skaičiuojamas tik aktyvus žaidimo laikas.</string>
+	<key>settings.music</key>
+	<string>Muzika</string>
+	<key>settings.playGoals</key>
+	<string>Žaidimo tikslai</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium atrakinta. Ačiū!</string>
+	<key>settings.sound</key>
+	<string>Garsas</string>
+	<key>settings.soundEffects</key>
+	<string>Muzika ir efektai</string>
+	<key>settings.soundInfo</key>
+	<string>Išjunk garsą ir žaisk tyliai. Žaidimas veiks lygiai taip pat.</string>
+	<key>settings.title</key>
+	<string>Nustatymai</string>
+	<key>streak.dayOne</key>
+	<string>1 diena</string>
+	<key>topic.addition</key>
+	<string>Sudėtis</string>
+	<key>topic.addition.detail</key>
+	<string>Tik sudėtis</string>
+	<key>topic.fractions</key>
+	<string>Trupmenos</string>
+	<key>topic.fractions.detail</key>
+	<string>Tik dalyba</string>
+	<key>topic.mixed</key>
+	<string>Supermišinys</string>
+	<key>topic.mixed.detail</key>
+	<string>Mišrūs veiksmai</string>
+	<key>topic.percentages</key>
+	<string>Procentai</string>
+	<key>topic.percentages.detail</key>
+	<string>Tik procentai</string>
+	<key>topic.subtraction</key>
+	<string>Atimtis</string>
+	<key>topic.subtraction.detail</key>
+	<string>Tik atimtis</string>
+	<key>topic.tables</key>
+	<string>Daugyba</string>
+	<key>topic.tables.detail</key>
+	<string>Tik daugyba</string>
+	<key>tutorial.notice.message</key>
+	<string>Jau žaidi. Pabaik žaidimą arba pasirink dar nepradėtą lygį, kad galėtum žaisti pamokėlę.</string>
+	<key>tutorial.notice.title</key>
+	<string>Tik žaidimo pradžioje</string>
+</dict>
+</plist>

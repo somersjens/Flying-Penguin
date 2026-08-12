@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>යාමට ඇත්තේ වළල්ල %lldක් පමණි! ⭕</string>
+			<key>other</key>
+			<string>යාමට ඇත්තේ වළල්ල %lldක් පමණි! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>අද විනාඩි %lldක් සෙල්ලම් කරලා තව ටිකක් එකතු කරන්න.</string>
+			<key>other</key>
+			<string>අද විනාඩි %lldක් සෙල්ලම් කරලා තව ටිකක් එකතු කරන්න.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld වළල්ල එකතු කළා! ⭕</string>
+			<key>other</key>
+			<string>%lld වළල්ල එකතු කළා! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>මිනිත්තු %lldක ක්‍රීඩා සැසියක් ආරම්භ කර ඔබේ දෛනික ක්‍රීඩා මාලාව දිගු කරන්න.</string>
+			<key>other</key>
+			<string>මිනිත්තු %lldක ක්‍රීඩා සැසියක් ආරම්භ කර ඔබේ දෛනික ක්‍රීඩා මාලාව දිගු කරන්න.</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>මිනිත්තු %lld ක් ක්‍රීඩා කර ඔබේ දෛනික ක්‍රීඩා මාලාව දිගටම කරගෙන යන්න!</string>
+			<key>other</key>
+			<string>මිනිත්තු %lld ක් ක්‍රීඩා කර ඔබේ දෛනික ක්‍රීඩා මාලාව දිගටම කරගෙන යන්න!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ඔබේ දෛනික ක්‍රීඩා මාලාව දින %lldකට ළඟා වී ඇත! 🔥</string>
+			<key>other</key>
+			<string>ඔබේ දෛනික ක්‍රීඩා මාලාව දින %lldකට ළඟා වී ඇත! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>එය ඔබගේ මුළු වළල්ල %lld දක්වා ගෙන එයි. පුදුම වැඩක්!</string>
+			<key>other</key>
+			<string>එය ඔබගේ මුළු වළල්ල %lld දක්වා ගෙන එයි. පුදුම වැඩක්!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ඔබ මේ සතියේ වළල්ල %lldක් උපයා ගත්තා! 🎉</string>
+			<key>other</key>
+			<string>ඔබ මේ සතියේ වළල්ල %lldක් උපයා ගත්තා! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ තත්පර %2$lldක් ඔබාගෙන සිටින්න.</string>
+			<key>other</key>
+			<string>%1$@ තත්පර %2$lldක් ඔබාගෙන සිටින්න.</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>දැන් %2$@ %1$lld වරක් තට්ටු කරන්න.</string>
+			<key>other</key>
+			<string>දැන් %2$@ %1$lld වරක් තට්ටු කරන්න.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

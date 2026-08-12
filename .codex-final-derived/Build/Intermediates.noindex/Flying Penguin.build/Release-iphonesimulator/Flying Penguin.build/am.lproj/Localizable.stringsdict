@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld ቀለበት ብቻ ቀርተዋል! ⭕</string>
+			<key>other</key>
+			<string>%lld ቀለበት ብቻ ቀርተዋል! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld ደቂቃ ዛሬ ተጫወትና ጥቂት ተጨማሪ ሰብስብ።</string>
+			<key>other</key>
+			<string>%lld ደቂቃ ዛሬ ተጫወትና ጥቂት ተጨማሪ ሰብስብ።</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld ቀለበት ሰበሰብክ! ⭕</string>
+			<key>other</key>
+			<string>%lld ቀለበት ሰበሰብክ! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>የ%lld ደቂቃ የጨዋታ ክፍለ ጊዜ ይጀምሩ እና የእለት ተእለት ጨዋታዎትን ያራዝሙ።</string>
+			<key>other</key>
+			<string>የ%lld ደቂቃ የጨዋታ ክፍለ ጊዜ ይጀምሩ እና የእለት ተእለት ጨዋታዎትን ያራዝሙ።</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ለ %lld ደቂቃዎች ይጫወቱ እና የእለት ተእለት ጨዋታዎን ይቀጥሉ!</string>
+			<key>other</key>
+			<string>ለ %lld ደቂቃዎች ይጫወቱ እና የእለት ተእለት ጨዋታዎን ይቀጥሉ!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>የእለት ተእለት ጨዋታዎ %lld ቀናት ደርሷል! 🔥</string>
+			<key>other</key>
+			<string>የእለት ተእለት ጨዋታዎ %lld ቀናት ደርሷል! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ያ በአጠቃላይ %lld ቀለበት ያመጣልዎታል።የሚገርም ስራ!</string>
+			<key>other</key>
+			<string>ያ በአጠቃላይ %lld ቀለበት ያመጣልዎታል።የሚገርም ስራ!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>በዚህ ሳምንት %lld ቀለበት አግኝተዋል! 🎉</string>
+			<key>other</key>
+			<string>በዚህ ሳምንት %lld ቀለበት አግኝተዋል! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ን ለ%2$lld ሰከንድ ተጭነው ይያዙ።</string>
+			<key>other</key>
+			<string>%1$@ን ለ%2$lld ሰከንድ ተጭነው ይያዙ።</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>አሁን %2$@ን %1$lld ጊዜ ይንኩ።</string>
+			<key>other</key>
+			<string>አሁን %2$@ን %1$lld ጊዜ ይንኩ።</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

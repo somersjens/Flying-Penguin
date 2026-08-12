@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Béar</string>
+	<key>character.bunny</key>
+	<string>Coinín</string>
+	<key>character.crab</key>
+	<string>Portán</string>
+	<key>character.dog</key>
+	<string>Madra</string>
+	<key>character.elephant</key>
+	<string>Eilifint</string>
+	<key>character.fox</key>
+	<string>Sionnach</string>
+	<key>character.frog</key>
+	<string>Frog</string>
+	<key>character.lion</key>
+	<string>Leon</string>
+	<key>character.octopus</key>
+	<string>Ochtapas</string>
+	<key>character.penguin</key>
+	<string>Piongain</string>
+	<key>common.cancel</key>
+	<string>Cealaigh</string>
+	<key>common.continue</key>
+	<string>Ar aghaidh</string>
+	<key>common.done</key>
+	<string>Déanta</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld nóim</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Sábháil</string>
+	<key>currency.hoop.plural</key>
+	<string>fonsaí</string>
+	<key>currency.hoop.singular</key>
+	<string>fonsa</string>
+	<key>game.combo %lld</key>
+	<string>Combo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Iarracht mhaith</string>
+	<key>game.encouragement.1</key>
+	<string>Sin tús maith</string>
+	<key>game.encouragement.2</key>
+	<string>Lean ort ag cleachtadh</string>
+	<key>game.encouragement.3</key>
+	<string>Ní dona ar chor ar bith</string>
+	<key>game.encouragement.4</key>
+	<string>Ag éirí go maith leat</string>
+	<key>game.encouragement.5</key>
+	<string>Sár-obair</string>
+	<key>game.encouragement.6</key>
+	<string>Maith thú</string>
+	<key>game.encouragement.7</key>
+	<string>Ar fheabhas ar fad</string>
+	<key>game.encouragement.8</key>
+	<string>Tá an deireadh le feiceáil</string>
+	<key>game.encouragement.9</key>
+	<string>Tá tú beagnach ann</string>
+	<key>game.encouragement.complete</key>
+	<string>Scór foirfe!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Thuill tú gach pointe.</string>
+	<key>game.end.completionSuffix</key>
+	<string>críochnaithe!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Cluiche thart</string>
+	<key>game.end.mainMenu</key>
+	<string>Príomh-roghchlár</string>
+	<key>game.end.playAgain</key>
+	<string>Imir arís</string>
+	<key>game.highScore</key>
+	<string>Scór is airde</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Ar ais chuig an bpríomh-roghchlár</string>
+	<key>game.intro.continue</key>
+	<string>Lean ar aghaidh</string>
+	<key>game.intro.progressPaused</key>
+	<string>Tá do dhul chun cinn ar sos.</string>
+	<key>game.intro.start</key>
+	<string>Tosaigh an leibhéal</string>
+	<key>game.intro.startTutorial</key>
+	<string>Tosaigh an treoir</string>
+	<key>game.streakBoost.title</key>
+	<string>Pointí dúbailte!</string>
+	<key>goal.period</key>
+	<string>Tréimhse sprice</string>
+	<key>goal.promptDaily</key>
+	<string>Cé mhéad nóiméad ar mhaith leat imirt gach lá?</string>
+	<key>goal.promptWeekly</key>
+	<string>Cé mhéad nóiméad ar mhaith leat imirt gach seachtain?</string>
+	<key>goal.title</key>
+	<string>Sprioc imeartha</string>
+	<key>goalPeriod.daily</key>
+	<string>Gach lá</string>
+	<key>goalPeriod.weekly</key>
+	<string>Gach seachtain</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld eile</string>
+	<key>home.totalLabel</key>
+	<string>Iomlán</string>
+	<key>info.mode.fractions.header</key>
+	<string>Codanna</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Cuid amháin nó níos mó</string>
+	<key>info.mode.fractions.single</key>
+	<string>Cuid amháin i gcónaí</string>
+	<key>info.mode.header</key>
+	<string>Ord</string>
+	<key>info.mode.mixed</key>
+	<string>Measctha le leibhéil níos ísle</string>
+	<key>info.mode.order</key>
+	<string>Ord socraithe</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Le huimhreacha deachúlacha</string>
+	<key>info.mode.percentages.header</key>
+	<string>Cineál</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Gan uimhreacha deachúlacha</string>
+	<key>info.mode.random</key>
+	<string>Ord randamach</string>
+	<key>info.super.all</key>
+	<string>Suimiú, dealú, iolrú, roinnt agus céatadáin</string>
+	<key>info.super.basic</key>
+	<string>Suimiú agus dealú</string>
+	<key>info.super.fraction</key>
+	<string>Suimiú, dealú, iolrú agus roinnt</string>
+	<key>info.super.times</key>
+	<string>Suimiú, dealú agus iolrú</string>
+	<key>info.topic.header</key>
+	<string>Cineálacha ceisteanna</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Suimeanna ina **gcuireann tú** uimhir leis.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Cuir %lld leis</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Is féidir leat suas le **%lld cairéad** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Is féidir leat suas le **%lld sicín** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Is féidir leat suas le **%lld iasc** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Is féidir leat suas le **%lld próca meala** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Is féidir leat suas le **%lld fonsaí** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Is féidir leat suas le **%lld briosca madra** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Is féidir leat suas le **%lld píosa feola** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Is féidir leat suas le **%lld piseanna talún** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Is féidir leat suas le **%lld péarla** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Is féidir leat suas le **%lld ribí róibéis** a bhailiú sa leibhéal seo.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Suimeanna ina **roinneann tú** uimhir.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Roinn ar %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Ceisteanna suas go **leibhéal %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Ceisteanna ó **leibhéal 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Gach rud measctha**: móide, lúide, iolrú, codáin agus céatadáin.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Sár-mheascán %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>**Cuid amháin** d’iomlán i gcónaí.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Cuid amháin nó níos mó** d’iomlán.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Ceisteanna in **ord seasta**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Freagraí **gan deachúlacha**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Freagraí **le deachúlacha** freisin.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Ceisteanna in **ord randamach**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Suimeanna le **céatadáin**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ d’uimhir</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Suimeanna ina **mbaineann tú** uimhir.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Bain %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Suimeanna ina **n-iolraíonn tú**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Tábla %lld</string>
+	<key>menu.maximumCount</key>
+	<string>UAS</string>
+	<key>menu.moreLevels</key>
+	<string>Tuilleadh leibhéal</string>
+	<key>menu.premiumLevels</key>
+	<string>Leibhéil Premium</string>
+	<key>menu.startHere</key>
+	<string>Tosaigh anseo</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Díghlasáil tuilleadh le Préimh</string>
+	<key>mode.fractions.multiple</key>
+	<string>Iolrach</string>
+	<key>mode.fractions.single</key>
+	<string>Aon chuid</string>
+	<key>mode.mixed</key>
+	<string>Measctha</string>
+	<key>mode.order</key>
+	<string>Ord</string>
+	<key>mode.percentages.decimal</key>
+	<string>Deachúlach</string>
+	<key>mode.percentages.whole</key>
+	<string>Slánuimhir</string>
+	<key>mode.random</key>
+	<string>Randamach</string>
+	<key>name.placeholder</key>
+	<string>D’ainm</string>
+	<key>name.whatsYourName</key>
+	<string>Cad is ainm duit?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Faigh cúpla fonsaí eile chun an t-ainmhí seo a dhíghlasáil! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tá do chuid ainmhithe ag fanacht. Tar ar ais ag imirt agus lean ort ag bailiú fonsaí!</string>
+	<key>notif.comeback.title</key>
+	<string>Is fada uainn thú! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Déanaimis an tríú lá! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Cuimsíonn Hungry Frog Premium %lld leibhéal do gach ábhar agus do gach 10 n-ainmhí. Leanann an eachtra ar aghaidh!</string>
+	<key>notif.premium.title</key>
+	<string>Díghlasáil níos mó leibhéil agus ainmhithe! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Tá sé %lld lá. Déanaimis roinnt cleachtaí matamaitice a réiteach agus níos mó fonsaí a thuilleamh!</string>
+	<key>notif.reactivate.title</key>
+	<string>Réidh le himirt arís? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Suimeanna éagsúla measctha le chéile.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Maith go leor cheana</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Cleachtaigh suimeanna in ord.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Díreach tosaithe</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Suimeanna in ord randamach.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Roinnt cleachtaidh déanta</string>
+	<key>onboarding.level.title</key>
+	<string>Cé chomh maith is atá tú air seo?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Tosaímis. Cad is ainm duit?</string>
+	<key>onboarding.name.title</key>
+	<string>Ní raibh suimeanna chomh spraíúil riamh!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Roghnaigh ábhar le tosú.</string>
+	<key>onboarding.subject.title</key>
+	<string>Cad ba mhaith leat a fhoghlaim?</string>
+	<key>parentGate.approved</key>
+	<string>Ceadaithe</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Iarrachtaí: %1$lld as %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Coinnigh: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ciorcal</string>
+	<key>parentGate.shape.diamond</key>
+	<string>muileata</string>
+	<key>parentGate.shape.heart</key>
+	<string>croí</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>heicseagán</string>
+	<key>parentGate.shape.plus</key>
+	<string>móide</string>
+	<key>parentGate.shape.square</key>
+	<string>cearnóg</string>
+	<key>parentGate.shape.star</key>
+	<string>réalta</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triantán</string>
+	<key>parentGate.subtitle</key>
+	<string>Chun imreoirí óga a chosaint, caithfidh duine fásta an tseiceáil seo a dhéanamh sula leanfar leis an gceannach.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Tapálacha: %1$lld as %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Cead duine fásta de dhíth</string>
+	<key>premium.availableAt %lld</key>
+	<string>Ar fáil ó %lld trófaí</string>
+	<key>premium.availableFromStart</key>
+	<string>Ar fáil ón tús</string>
+	<key>premium.characterUnlocked</key>
+	<string>CARACHTAR NUA DÍGHLASÁILTE</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Tá %lld fonsaí tuillte agat</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Eisiach le Préimh</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Le Préimh, is féidir leat imirt gan srian leis na 10 n-ainmhí.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Na hainmhithe go léir</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Neart suimeanna nua le cleachtadh i gcónaí.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 leibhéal in aghaidh an ábhair</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Imir gan aon bhriseadh.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Gan fógraí</string>
+	<key>premium.oneTime</key>
+	<string>Ceannach aonuaire. Is leatsa go deo é.</string>
+	<key>premium.restore</key>
+	<string>Athchóirigh ceannacháin</string>
+	<key>premium.start</key>
+	<string>Tosaigh</string>
+	<key>premium.storeUnavailable</key>
+	<string>Níl an siopa ar fáil anois. Bain triail eile as ar ball.</string>
+	<key>premium.unlock</key>
+	<string>Díghlasáil Préimh</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Díghlasáil Préimh · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Díghlasáilte le Préimh</string>
+	<key>result.complete</key>
+	<string>Leibhéal críochnaithe!</string>
+	<key>result.stopped</key>
+	<string>Ar sos</string>
+	<key>settings.character</key>
+	<string>Carachtar</string>
+	<key>settings.characterInfo</key>
+	<string>Tugann gach ainmhí a théama dathanna féin don chluiche ar fad.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Saincheaptha: %lld nóim</string>
+	<key>settings.dailyGoal</key>
+	<string>Sprioc laethúil</string>
+	<key>settings.goalInfo</key>
+	<string>Tosaíonn sprioc na sraithe ag 5 nóiméad sa lá. Ní áirítear ach am imeartha gníomhach.</string>
+	<key>settings.music</key>
+	<string>Ceol</string>
+	<key>settings.playGoals</key>
+	<string>Spriocanna imeartha</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Préimh díghlasáilte. Go raibh maith agat!</string>
+	<key>settings.sound</key>
+	<string>Fuaim</string>
+	<key>settings.soundEffects</key>
+	<string>Ceol agus maisíochtaí</string>
+	<key>settings.soundInfo</key>
+	<string>Múch an fhuaim le himirt go ciúin. Oibríonn an cluiche mar an gcéanna.</string>
+	<key>settings.title</key>
+	<string>Socruithe</string>
+	<key>streak.dayOne</key>
+	<string>Lá 1</string>
+	<key>topic.addition</key>
+	<string>Suimiú</string>
+	<key>topic.addition.detail</key>
+	<string>Suimiú amháin</string>
+	<key>topic.fractions</key>
+	<string>Codáin</string>
+	<key>topic.fractions.detail</key>
+	<string>Roinnt amháin</string>
+	<key>topic.mixed</key>
+	<string>Sár-mheascán</string>
+	<key>topic.mixed.detail</key>
+	<string>Oibríochtaí measctha</string>
+	<key>topic.percentages</key>
+	<string>Céatadáin</string>
+	<key>topic.percentages.detail</key>
+	<string>Céatadáin amháin</string>
+	<key>topic.subtraction</key>
+	<string>Dealú</string>
+	<key>topic.subtraction.detail</key>
+	<string>Dealú amháin</string>
+	<key>topic.tables</key>
+	<string>Táblaí</string>
+	<key>topic.tables.detail</key>
+	<string>Iolrú amháin</string>
+	<key>tutorial.notice.message</key>
+	<string>Tá tú i lár cluiche. Críochnaigh é, nó roghnaigh leibhéal nár thosaigh tú fós, chun an treoir a imirt.</string>
+	<key>tutorial.notice.title</key>
+	<string>Ag tús cluiche amháin</string>
+</dict>
+</plist>

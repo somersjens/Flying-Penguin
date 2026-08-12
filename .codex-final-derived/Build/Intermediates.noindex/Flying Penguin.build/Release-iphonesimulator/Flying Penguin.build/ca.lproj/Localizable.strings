@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Ós</string>
+	<key>character.bunny</key>
+	<string>Conill</string>
+	<key>character.crab</key>
+	<string>Cranc</string>
+	<key>character.dog</key>
+	<string>Gos</string>
+	<key>character.elephant</key>
+	<string>Elefant</string>
+	<key>character.fox</key>
+	<string>Guineu</string>
+	<key>character.frog</key>
+	<string>Granota</string>
+	<key>character.lion</key>
+	<string>Lleó</string>
+	<key>character.octopus</key>
+	<string>Pop</string>
+	<key>character.penguin</key>
+	<string>Pingüí</string>
+	<key>common.cancel</key>
+	<string>Cancel·la</string>
+	<key>common.continue</key>
+	<string>Continua</string>
+	<key>common.done</key>
+	<string>Fet</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>D’acord</string>
+	<key>common.save</key>
+	<string>Desa</string>
+	<key>currency.hoop.plural</key>
+	<string>cèrcols</string>
+	<key>currency.hoop.singular</key>
+	<string>cèrcol</string>
+	<key>game.combo %lld</key>
+	<string>Combo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Bon intent</string>
+	<key>game.encouragement.1</key>
+	<string>És un començament</string>
+	<key>game.encouragement.2</key>
+	<string>Continua practicant</string>
+	<key>game.encouragement.3</key>
+	<string>Gens malament</string>
+	<key>game.encouragement.4</key>
+	<string>Ho fas bé</string>
+	<key>game.encouragement.5</key>
+	<string>Bona actuació</string>
+	<key>game.encouragement.6</key>
+	<string>Molt bé</string>
+	<key>game.encouragement.7</key>
+	<string>Molt ben jugat</string>
+	<key>game.encouragement.8</key>
+	<string>El final és a prop</string>
+	<key>game.encouragement.9</key>
+	<string>Ja gairebé hi ets</string>
+	<key>game.encouragement.complete</key>
+	<string>Perfecte, tot bé!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Has guanyat tots els punts.</string>
+	<key>game.end.completionSuffix</key>
+	<string>completat!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Fi del joc</string>
+	<key>game.end.mainMenu</key>
+	<string>Menú principal</string>
+	<key>game.end.playAgain</key>
+	<string>Torna-hi</string>
+	<key>game.highScore</key>
+	<string>Rècord</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Torna al menú principal</string>
+	<key>game.intro.continue</key>
+	<string>Continua</string>
+	<key>game.intro.progressPaused</key>
+	<string>El teu progrés està pausat.</string>
+	<key>game.intro.start</key>
+	<string>Comença el nivell</string>
+	<key>game.intro.startTutorial</key>
+	<string>Inicia el tutorial</string>
+	<key>game.streakBoost.title</key>
+	<string>Punts dobles!</string>
+	<key>goal.period</key>
+	<string>Període de l’objectiu</string>
+	<key>goal.promptDaily</key>
+	<string>Quants minuts vols jugar cada dia?</string>
+	<key>goal.promptWeekly</key>
+	<string>Quants minuts vols jugar cada setmana?</string>
+	<key>goal.title</key>
+	<string>Objectiu de joc</string>
+	<key>goalPeriod.daily</key>
+	<string>Diari</string>
+	<key>goalPeriod.weekly</key>
+	<string>Setmanal</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld més</string>
+	<key>home.totalLabel</key>
+	<string>Total</string>
+	<key>info.mode.fractions.header</key>
+	<string>Parts</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Una o diverses parts</string>
+	<key>info.mode.fractions.single</key>
+	<string>Sempre una sola part</string>
+	<key>info.mode.header</key>
+	<string>Ordre</string>
+	<key>info.mode.mixed</key>
+	<string>Barrejat amb nivells anteriors</string>
+	<key>info.mode.order</key>
+	<string>Ordre fix</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Amb nombres decimals</string>
+	<key>info.mode.percentages.header</key>
+	<string>Tipus</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Sense nombres decimals</string>
+	<key>info.mode.random</key>
+	<string>Ordre aleatori</string>
+	<key>info.super.all</key>
+	<string>Suma, resta, multiplicació, divisió i percentatges</string>
+	<key>info.super.basic</key>
+	<string>Suma i resta</string>
+	<key>info.super.fraction</key>
+	<string>Suma, resta, multiplicació i divisió</string>
+	<key>info.super.times</key>
+	<string>Suma, resta i multiplicació</string>
+	<key>info.topic.header</key>
+	<string>Tipus de problemes</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Sumes on **afegeixes** un nombre.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Suma %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Pots recollir fins a **%lld pastanagues** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Pots recollir fins a **%lld gallines** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Pots recollir fins a **%lld peixos** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Pots recollir fins a **%lld pots de mel** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Pots recollir fins a **%lld cèrcols** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Pots recollir fins a **%lld galetes de gos** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Pots recollir fins a **%lld trossos de carn** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Pots recollir fins a **%lld cacauets** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Pots recollir fins a **%lld perles** en aquest nivell.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Pots recollir fins a **%lld gambes** en aquest nivell.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Sumes on **divideixes** un nombre.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Divideix per %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Preguntes fins al **nivell %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Preguntes del **nivell 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Tot barrejat**: sumar, restar, multiplicar, fraccions i percentatges.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Sempre **una sola part** d’un tot.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Una o més parts** d’un tot.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Preguntes en **ordre fix**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Respostes **sense decimals**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>També respostes **amb decimals**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Preguntes en **ordre aleatori**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Sumes amb **percentatges**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ d’un nombre</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Sumes on **restes** un nombre.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Resta %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Sumes on **multipliques**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Taula del %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MÀX.</string>
+	<key>menu.moreLevels</key>
+	<string>Més nivells</string>
+	<key>menu.premiumLevels</key>
+	<string>Nivells prèmium</string>
+	<key>menu.startHere</key>
+	<string>Comença aquí</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Desbloqueja’n més amb Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Diverses</string>
+	<key>mode.fractions.single</key>
+	<string>Una</string>
+	<key>mode.mixed</key>
+	<string>Mixt</string>
+	<key>mode.order</key>
+	<string>Ordre</string>
+	<key>mode.percentages.decimal</key>
+	<string>Decimal</string>
+	<key>mode.percentages.whole</key>
+	<string>Enter</string>
+	<key>mode.random</key>
+	<string>Aleatori</string>
+	<key>name.placeholder</key>
+	<string>El teu nom</string>
+	<key>name.whatsYourName</key>
+	<string>Com et dius?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Guanya uns quants cèrcols més per desbloquejar aquest animal! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Els teus animals estan esperant. Torna a jugar i segueix recollint cèrcols!</string>
+	<key>notif.comeback.title</key>
+	<string>Et trobem a faltar! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Fem que el dia 3 passi! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium inclou %lld nivells per a cada tema i els 10 animals. L'aventura segueix endavant!</string>
+	<key>notif.premium.title</key>
+	<string>Desbloqueja més nivells i animals! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Han passat %lld dies. Anem a resoldre alguns exercicis de matemàtiques i guanyar més cèrcols!</string>
+	<key>notif.reactivate.title</key>
+	<string>Preparat per tornar a jugar? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Diferents operacions mixtes.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Ja ho fas força bé</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Practica operacions en ordre.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Acabes de començar</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Operacions en ordre aleatori.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Ja has practicat una mica</string>
+	<key>onboarding.level.title</key>
+	<string>Com se’t dona això?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Comencem. Com et dius?</string>
+	<key>onboarding.name.title</key>
+	<string>Fer operacions mai havia estat tan divertit!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Tria un tema per començar.</string>
+	<key>onboarding.subject.title</key>
+	<string>Què vols aprendre?</string>
+	<key>parentGate.approved</key>
+	<string>Aprovat</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Intents: %1$lld de %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Mantén premut: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>cercle</string>
+	<key>parentGate.shape.diamond</key>
+	<string>rombe</string>
+	<key>parentGate.shape.heart</key>
+	<string>cor</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>hexàgon</string>
+	<key>parentGate.shape.plus</key>
+	<string>signe més</string>
+	<key>parentGate.shape.square</key>
+	<string>quadrat</string>
+	<key>parentGate.shape.star</key>
+	<string>estrella</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triangle</string>
+	<key>parentGate.subtitle</key>
+	<string>Per protegir els jugadors més petits, un adult ha de completar aquesta comprovació abans de continuar amb la compra.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Tocs: %1$lld de %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Cal l’aprovació d’un adult</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponible a partir de %lld trofeus</string>
+	<key>premium.availableFromStart</key>
+	<string>Disponible des del principi</string>
+	<key>premium.characterUnlocked</key>
+	<string>NOU PERSONATGE DESBLOQUEJAT</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Has aconseguit %lld cèrcols</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Exclusiu amb Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Amb Premium pots jugar lliurement amb els 10 animals.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Accés a tots els animals</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Sempre hi ha operacions noves per practicar.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 nivells per tema</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Juga sense cap interrupció.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Sense anuncis</string>
+	<key>premium.oneTime</key>
+	<string>Compra única. Per sempre teu.</string>
+	<key>premium.restore</key>
+	<string>Restaura les compres</string>
+	<key>premium.start</key>
+	<string>Comença</string>
+	<key>premium.storeUnavailable</key>
+	<string>La botiga no està disponible ara mateix. Torna-ho a provar més tard.</string>
+	<key>premium.unlock</key>
+	<string>Desbloqueja Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Desbloqueja Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Desbloquejat amb Premium</string>
+	<key>result.complete</key>
+	<string>Nivell complet!</string>
+	<key>result.stopped</key>
+	<string>Pausat</string>
+	<key>settings.character</key>
+	<string>Personatge</string>
+	<key>settings.characterInfo</key>
+	<string>Cada animal dona al joc el seu propi tema de colors.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Personalitzat: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Objectiu diari</string>
+	<key>settings.goalInfo</key>
+	<string>L’objectiu de ratxa comença amb 5 minuts al dia. Només compta el temps de joc actiu.</string>
+	<key>settings.music</key>
+	<string>Música</string>
+	<key>settings.playGoals</key>
+	<string>Objectius de joc</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium desbloquejat. Gràcies!</string>
+	<key>settings.sound</key>
+	<string>So</string>
+	<key>settings.soundEffects</key>
+	<string>Música i efectes</string>
+	<key>settings.soundInfo</key>
+	<string>Desactiva el so per jugar en silenci. El joc funciona igual.</string>
+	<key>settings.title</key>
+	<string>Configuració</string>
+	<key>streak.dayOne</key>
+	<string>Dia 1</string>
+	<key>topic.addition</key>
+	<string>Suma</string>
+	<key>topic.addition.detail</key>
+	<string>Només sumes</string>
+	<key>topic.fractions</key>
+	<string>Fraccions</string>
+	<key>topic.fractions.detail</key>
+	<string>Només divisions</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Operacions barrejades</string>
+	<key>topic.percentages</key>
+	<string>Percentatges</string>
+	<key>topic.percentages.detail</key>
+	<string>Només percentatges</string>
+	<key>topic.subtraction</key>
+	<string>Resta</string>
+	<key>topic.subtraction.detail</key>
+	<string>Només restes</string>
+	<key>topic.tables</key>
+	<string>Taules</string>
+	<key>topic.tables.detail</key>
+	<string>Només multiplicacions</string>
+	<key>tutorial.notice.message</key>
+	<string>Estàs enmig d’una partida. Acaba-la o tria un nivell que encara no hagis començat per jugar el tutorial.</string>
+	<key>tutorial.notice.title</key>
+	<string>Només a l’inici d’una partida</string>
+</dict>
+</plist>

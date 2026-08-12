@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>หมี</string>
+	<key>character.bunny</key>
+	<string>กระต่าย</string>
+	<key>character.crab</key>
+	<string>ปู</string>
+	<key>character.dog</key>
+	<string>หมา</string>
+	<key>character.elephant</key>
+	<string>ช้าง</string>
+	<key>character.fox</key>
+	<string>จิ้งจอก</string>
+	<key>character.frog</key>
+	<string>กบ</string>
+	<key>character.lion</key>
+	<string>สิงโต</string>
+	<key>character.octopus</key>
+	<string>หมึกยักษ์</string>
+	<key>character.penguin</key>
+	<string>เพนกวิน</string>
+	<key>common.cancel</key>
+	<string>ยกเลิก</string>
+	<key>common.continue</key>
+	<string>ต่อไป</string>
+	<key>common.done</key>
+	<string>เสร็จ</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld นาที</string>
+	<key>common.ok</key>
+	<string>ตกลง</string>
+	<key>common.save</key>
+	<string>บันทึก</string>
+	<key>currency.hoop.plural</key>
+	<string>ห่วง</string>
+	<key>currency.hoop.singular</key>
+	<string>ห่วง</string>
+	<key>game.combo %lld</key>
+	<string>คอมโบ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>พยายามได้ดี</string>
+	<key>game.encouragement.1</key>
+	<string>เริ่มต้นได้ดี</string>
+	<key>game.encouragement.2</key>
+	<string>ฝึกต่อไปนะ</string>
+	<key>game.encouragement.3</key>
+	<string>ไม่เลวเลย</string>
+	<key>game.encouragement.4</key>
+	<string>ทำได้ดี</string>
+	<key>game.encouragement.5</key>
+	<string>ผลงานเยี่ยม</string>
+	<key>game.encouragement.6</key>
+	<string>เก่งมาก</string>
+	<key>game.encouragement.7</key>
+	<string>เล่นได้เยี่ยม</string>
+	<key>game.encouragement.8</key>
+	<string>ใกล้ถึงเส้นชัยแล้ว</string>
+	<key>game.encouragement.9</key>
+	<string>อีกนิดเดียว</string>
+	<key>game.encouragement.complete</key>
+	<string>ยอดเยี่ยม ถูกหมด!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>เธอได้ทุกคะแนนด้วยตัวเอง</string>
+	<key>game.end.completionSuffix</key>
+	<string>เสร็จแล้ว!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>จบเกม</string>
+	<key>game.end.mainMenu</key>
+	<string>เมนูหลัก</string>
+	<key>game.end.playAgain</key>
+	<string>เล่นอีกครั้ง</string>
+	<key>game.highScore</key>
+	<string>คะแนนสูงสุด</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>กลับเมนูหลัก</string>
+	<key>game.intro.continue</key>
+	<string>เล่นต่อ</string>
+	<key>game.intro.progressPaused</key>
+	<string>พักความคืบหน้าไว้</string>
+	<key>game.intro.start</key>
+	<string>เริ่มด่าน</string>
+	<key>game.intro.startTutorial</key>
+	<string>เริ่มสอนเล่น</string>
+	<key>game.streakBoost.title</key>
+	<string>คะแนนสองเท่า!</string>
+	<key>goal.period</key>
+	<string>ช่วงเป้าหมาย</string>
+	<key>goal.promptDaily</key>
+	<string>อยากเล่นวันละกี่นาที?</string>
+	<key>goal.promptWeekly</key>
+	<string>อยากเล่นสัปดาห์ละกี่นาที?</string>
+	<key>goal.title</key>
+	<string>เป้าหมายการเล่น</string>
+	<key>goalPeriod.daily</key>
+	<string>รายวัน</string>
+	<key>goalPeriod.weekly</key>
+	<string>รายสัปดาห์</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>อีก %lld</string>
+	<key>home.totalLabel</key>
+	<string>รวม</string>
+	<key>info.mode.fractions.header</key>
+	<string>ส่วน</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>หนึ่งส่วนและหลายส่วน</string>
+	<key>info.mode.fractions.single</key>
+	<string>หนึ่งส่วนเสมอ</string>
+	<key>info.mode.header</key>
+	<string>ลำดับ</string>
+	<key>info.mode.mixed</key>
+	<string>ผสมกับด่านก่อนหน้า</string>
+	<key>info.mode.order</key>
+	<string>ลำดับตายตัว</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>รวมเลขทศนิยม</string>
+	<key>info.mode.percentages.header</key>
+	<string>ประเภท</string>
+	<key>info.mode.percentages.whole</key>
+	<string>ไม่มีเลขทศนิยม</string>
+	<key>info.mode.random</key>
+	<string>ลำดับสุ่ม</string>
+	<key>info.super.all</key>
+	<string>บวก ลบ คูณ หาร และเปอร์เซ็นต์</string>
+	<key>info.super.basic</key>
+	<string>บวกและลบ</string>
+	<key>info.super.fraction</key>
+	<string>บวก ลบ คูณ และหาร</string>
+	<key>info.super.times</key>
+	<string>บวก ลบ และคูณ</string>
+	<key>info.topic.header</key>
+	<string>ประเภทโจทย์</string>
+	<key>levelIntro.addition.intro</key>
+	<string>โจทย์ที่ให้ **บวก** ตัวเลข</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>บวก %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>ด่านนี้เก็บ **แครอต %lld หัว** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>ด่านนี้เก็บ **ไก่ %lld ตัว** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>ด่านนี้เก็บ **ปลา %lld ตัว** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>ด่านนี้เก็บ **น้ำผึ้ง %lld กระปุก** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ด่านนี้เก็บ **ห่วง %lld ตัว** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>ด่านนี้เก็บ **ขนมสุนัข %lld ชิ้น** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>ด่านนี้เก็บ **เนื้อ %lld ชิ้น** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>ด่านนี้เก็บ **ถั่วลิสง %lld เม็ด** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>ด่านนี้เก็บ **ไข่มุก %lld เม็ด** ได้สูงสุด</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>ด่านนี้เก็บ **กุ้ง %lld ตัว** ได้สูงสุด</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>โจทย์ที่ให้ **หาร** ตัวเลข</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>หารด้วย %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>คำถามถึง **ด่าน %lld**</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>คำถามจาก **ด่าน 1**</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**รวมทุกอย่าง**: บวก ลบ คูณ เศษส่วน และเปอร์เซ็นต์</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>ซูเปอร์มิกซ์ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>เป็น **ส่วนเดียว** ของทั้งหมดเสมอ</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**หนึ่งส่วนขึ้นไป** ของทั้งหมด</string>
+	<key>levelIntro.mode.order</key>
+	<string>คำถามเรียง **ตามลำดับ**</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>คำตอบ **ไม่มีทศนิยม**</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>มีคำตอบ **แบบทศนิยม** ด้วย</string>
+	<key>levelIntro.mode.random</key>
+	<string>คำถาม **สลับลำดับ**</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>โจทย์ **เปอร์เซ็นต์**</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ ของจำนวน</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>โจทย์ที่ให้ **ลบ** ตัวเลข</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>ลบ %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>โจทย์ที่ให้ **คูณ**</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>สูตรคูณ %lld</string>
+	<key>menu.maximumCount</key>
+	<string>สูงสุด</string>
+	<key>menu.moreLevels</key>
+	<string>ด่านเพิ่มเติม</string>
+	<key>menu.premiumLevels</key>
+	<string>ด่านพรีเมียม</string>
+	<key>menu.startHere</key>
+	<string>เริ่มตรงนี้</string>
+	<key>menu.unlockWithPremium</key>
+	<string>ปลดล็อกเพิ่มด้วยพรีเมียม</string>
+	<key>mode.fractions.multiple</key>
+	<string>หลายส่วน</string>
+	<key>mode.fractions.single</key>
+	<string>หนึ่งส่วน</string>
+	<key>mode.mixed</key>
+	<string>คละ</string>
+	<key>mode.order</key>
+	<string>ลำดับ</string>
+	<key>mode.percentages.decimal</key>
+	<string>ทศนิยม</string>
+	<key>mode.percentages.whole</key>
+	<string>จำนวนเต็ม</string>
+	<key>mode.random</key>
+	<string>สุ่ม</string>
+	<key>name.placeholder</key>
+	<string>ชื่อของเธอ</string>
+	<key>name.whatsYourName</key>
+	<string>เธอชื่ออะไร?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: รับห่วงเพิ่มอีกเล็กน้อยเพื่อปลดล็อคสัตว์ตัวนี้! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>สัตว์ของคุณกำลังรออยู่กลับมาเล่นสะสมห่วงกันต่อ!</string>
+	<key>notif.comeback.title</key>
+	<string>เราคิดถึงคุณ! 👋</string>
+	<key>notif.day3.title</key>
+	<string>มาทำให้วันที่ 3 เกิดขึ้นกันเถอะ! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium มี %lld ด่านสำหรับทุกหัวข้อและสัตว์ทั้งหมด 10 ตัวการผจญภัยดำเนินต่อไป!</string>
+	<key>notif.premium.title</key>
+	<string>ปลดล็อคระดับและสัตว์เพิ่มเติม! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>ผ่านมา %lld วันแล้วมาแก้แบบฝึกหัดคณิตศาสตร์และรับห่วงเพิ่มกันเถอะ!</string>
+	<key>notif.reactivate.title</key>
+	<string>พร้อมที่จะเล่นอีกครั้งหรือยัง? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>โจทย์ผสมหลายแบบคละกัน</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>ทำได้ดีแล้ว</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ฝึกโจทย์ตามลำดับ</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>เพิ่งเริ่ม</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>โจทย์ตามลำดับสุ่ม</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>ฝึกมาบ้างแล้ว</string>
+	<key>onboarding.level.title</key>
+	<string>ตอนนี้เธอเก่งแค่ไหนแล้ว?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>มาเริ่มกันเลย เธอชื่ออะไร?</string>
+	<key>onboarding.name.title</key>
+	<string>คิดเลขไม่เคยสนุกเท่านี้!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>เลือกหัวข้อที่จะเริ่ม</string>
+	<key>onboarding.subject.title</key>
+	<string>อยากเรียนอะไร?</string>
+	<key>parentGate.approved</key>
+	<string>อนุมัติแล้ว</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ลองแล้ว: %1$lld จาก %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>กดค้าง: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>วงกลม</string>
+	<key>parentGate.shape.diamond</key>
+	<string>สี่เหลี่ยมข้าวหลามตัด</string>
+	<key>parentGate.shape.heart</key>
+	<string>หัวใจ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>หกเหลี่ยม</string>
+	<key>parentGate.shape.plus</key>
+	<string>เครื่องหมายบวก</string>
+	<key>parentGate.shape.square</key>
+	<string>สี่เหลี่ยม</string>
+	<key>parentGate.shape.star</key>
+	<string>ดาว</string>
+	<key>parentGate.shape.triangle</key>
+	<string>สามเหลี่ยม</string>
+	<key>parentGate.subtitle</key>
+	<string>เพื่อปกป้องผู้เล่นตัวน้อย ผู้ใหญ่ต้องผ่านการตรวจสอบนี้ก่อนซื้อ</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>แตะแล้ว: %1$lld จาก %2$lld</string>
+	<key>parentGate.title</key>
+	<string>ต้องได้รับอนุมัติจากผู้ใหญ่</string>
+	<key>premium.availableAt %lld</key>
+	<string>ใช้ได้เมื่อมีถ้วยรางวัล %lld ใบ</string>
+	<key>premium.availableFromStart</key>
+	<string>ใช้ได้ตั้งแต่เริ่มต้น</string>
+	<key>premium.characterUnlocked</key>
+	<string>ปลดล็อกตัวละครใหม่แล้ว</string>
+	<key>premium.earnedCards %lld</key>
+	<string>คุณเก็บห่วงได้ %lld ตัว</string>
+	<key>premium.exclusiveBadge</key>
+	<string>เฉพาะ Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>พรีเมียมให้เล่นกับสัตว์ทั้ง 10 ตัวได้อย่างอิสระ</string>
+	<key>premium.feature.animals.title</key>
+	<string>ใช้สัตว์ได้ทุกตัว</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>มีโจทย์ใหม่ให้ฝึกเสมอ</string>
+	<key>premium.feature.levels.title</key>
+	<string>หัวข้อละ 99 ด่าน</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>เล่นได้ต่อเนื่องไม่มีสะดุด</string>
+	<key>premium.feature.noAds.title</key>
+	<string>ไม่มีโฆษณา</string>
+	<key>premium.oneTime</key>
+	<string>ซื้อครั้งเดียว เป็นของเธอตลอดไป</string>
+	<key>premium.restore</key>
+	<string>กู้คืนการซื้อ</string>
+	<key>premium.start</key>
+	<string>เริ่ม</string>
+	<key>premium.storeUnavailable</key>
+	<string>ขณะนี้ร้านค้าใช้งานไม่ได้ โปรดลองอีกครั้งภายหลัง</string>
+	<key>premium.unlock</key>
+	<string>ปลดล็อกพรีเมียม</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ปลดล็อกพรีเมียม · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>ปลดล็อกด้วย Premium</string>
+	<key>result.complete</key>
+	<string>ผ่านด่านแล้ว!</string>
+	<key>result.stopped</key>
+	<string>พักอยู่</string>
+	<key>settings.character</key>
+	<string>ตัวละคร</string>
+	<key>settings.characterInfo</key>
+	<string>สัตว์แต่ละตัวมีธีมสีของตัวเองทั้งเกม</string>
+	<key>settings.customMinutes %lld</key>
+	<string>กำหนดเอง: %lld นาที</string>
+	<key>settings.dailyGoal</key>
+	<string>เป้าหมายรายวัน</string>
+	<key>settings.goalInfo</key>
+	<string>เป้าหมายต่อเนื่องเริ่มที่วันละ 5 นาที นับเฉพาะเวลาเล่นจริง</string>
+	<key>settings.music</key>
+	<string>เพลง</string>
+	<key>settings.playGoals</key>
+	<string>เป้าหมายการเล่น</string>
+	<key>settings.premiumUnlocked</key>
+	<string>ปลดล็อกพรีเมียมแล้ว ขอบคุณ!</string>
+	<key>settings.sound</key>
+	<string>เสียง</string>
+	<key>settings.soundEffects</key>
+	<string>เพลงและเอฟเฟกต์</string>
+	<key>settings.soundInfo</key>
+	<string>ปิดเสียงเพื่อเล่นเงียบ ๆ เกมยังเล่นเหมือนเดิม</string>
+	<key>settings.title</key>
+	<string>การตั้งค่า</string>
+	<key>streak.dayOne</key>
+	<string>วันที่ 1</string>
+	<key>topic.addition</key>
+	<string>การบวก</string>
+	<key>topic.addition.detail</key>
+	<string>เฉพาะการบวก</string>
+	<key>topic.fractions</key>
+	<string>เศษส่วน</string>
+	<key>topic.fractions.detail</key>
+	<string>เฉพาะการหาร</string>
+	<key>topic.mixed</key>
+	<string>ซูเปอร์มิกซ์</string>
+	<key>topic.mixed.detail</key>
+	<string>โจทย์แบบผสม</string>
+	<key>topic.percentages</key>
+	<string>เปอร์เซ็นต์</string>
+	<key>topic.percentages.detail</key>
+	<string>เฉพาะเปอร์เซ็นต์</string>
+	<key>topic.subtraction</key>
+	<string>การลบ</string>
+	<key>topic.subtraction.detail</key>
+	<string>เฉพาะการลบ</string>
+	<key>topic.tables</key>
+	<string>สูตรคูณ</string>
+	<key>topic.tables.detail</key>
+	<string>เฉพาะการคูณ</string>
+	<key>tutorial.notice.message</key>
+	<string>กำลังเล่นอยู่ เล่นให้จบ หรือเลือกด่านที่ยังไม่ได้เริ่มเพื่อเล่นบทสอน</string>
+	<key>tutorial.notice.title</key>
+	<string>ใช้ได้ตอนเริ่มเกมเท่านั้น</string>
+</dict>
+</plist>

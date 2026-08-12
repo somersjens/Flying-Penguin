@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Мечка</string>
+	<key>character.bunny</key>
+	<string>Зайче</string>
+	<key>character.crab</key>
+	<string>Рак</string>
+	<key>character.dog</key>
+	<string>Куче</string>
+	<key>character.elephant</key>
+	<string>Слон</string>
+	<key>character.fox</key>
+	<string>Лисица</string>
+	<key>character.frog</key>
+	<string>Жаба</string>
+	<key>character.lion</key>
+	<string>Лъв</string>
+	<key>character.octopus</key>
+	<string>Октопод</string>
+	<key>character.penguin</key>
+	<string>Пингвин</string>
+	<key>common.cancel</key>
+	<string>Отказ</string>
+	<key>common.continue</key>
+	<string>Напред</string>
+	<key>common.done</key>
+	<string>Готово</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld мин</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Запази</string>
+	<key>currency.hoop.plural</key>
+	<string>обръчи</string>
+	<key>currency.hoop.singular</key>
+	<string>обръч</string>
+	<key>game.combo %lld</key>
+	<string>Комбо! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Добър опит</string>
+	<key>game.encouragement.1</key>
+	<string>Добро начало</string>
+	<key>game.encouragement.2</key>
+	<string>Продължавай да упражняваш</string>
+	<key>game.encouragement.3</key>
+	<string>Изобщо не е зле</string>
+	<key>game.encouragement.4</key>
+	<string>Справяш се добре</string>
+	<key>game.encouragement.5</key>
+	<string>Чудесен резултат</string>
+	<key>game.encouragement.6</key>
+	<string>Браво</string>
+	<key>game.encouragement.7</key>
+	<string>Много добра игра</string>
+	<key>game.encouragement.8</key>
+	<string>Финалът се вижда</string>
+	<key>game.encouragement.9</key>
+	<string>Почти успя</string>
+	<key>game.encouragement.complete</key>
+	<string>Всичко вярно!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Спечели всяка точка.</string>
+	<key>game.end.completionSuffix</key>
+	<string>завършено!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Край на играта</string>
+	<key>game.end.mainMenu</key>
+	<string>Главно меню</string>
+	<key>game.end.playAgain</key>
+	<string>Играй пак</string>
+	<key>game.highScore</key>
+	<string>Рекорд</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Към главното меню</string>
+	<key>game.intro.continue</key>
+	<string>Продължи</string>
+	<key>game.intro.progressPaused</key>
+	<string>Напредъкът е на пауза.</string>
+	<key>game.intro.start</key>
+	<string>Начало на нивото</string>
+	<key>game.intro.startTutorial</key>
+	<string>Започни урока</string>
+	<key>game.streakBoost.title</key>
+	<string>Двойни точки!</string>
+	<key>goal.period</key>
+	<string>Период на целта</string>
+	<key>goal.promptDaily</key>
+	<string>Колко минути искаш да играеш на ден?</string>
+	<key>goal.promptWeekly</key>
+	<string>Колко минути искаш да играеш на седмица?</string>
+	<key>goal.title</key>
+	<string>Цел за игра</string>
+	<key>goalPeriod.daily</key>
+	<string>Всеки ден</string>
+	<key>goalPeriod.weekly</key>
+	<string>Всяка седмица</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>още %lld</string>
+	<key>home.totalLabel</key>
+	<string>Общо</string>
+	<key>info.mode.fractions.header</key>
+	<string>Части</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Една или няколко части</string>
+	<key>info.mode.fractions.single</key>
+	<string>Винаги една част</string>
+	<key>info.mode.header</key>
+	<string>Ред</string>
+	<key>info.mode.mixed</key>
+	<string>Смесено с по-ниски нива</string>
+	<key>info.mode.order</key>
+	<string>Фиксиран ред</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>С десетични числа</string>
+	<key>info.mode.percentages.header</key>
+	<string>Вид</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Без десетични числа</string>
+	<key>info.mode.random</key>
+	<string>Случаен ред</string>
+	<key>info.super.all</key>
+	<string>Събиране, изваждане, умножение, деление и проценти</string>
+	<key>info.super.basic</key>
+	<string>Събиране и изваждане</string>
+	<key>info.super.fraction</key>
+	<string>Събиране, изваждане, умножение и деление</string>
+	<key>info.super.times</key>
+	<string>Събиране, изваждане и умножение</string>
+	<key>info.topic.header</key>
+	<string>Видове задачи</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Задачи, в които **събираш** число.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Плюс %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Можеш да събереш до **%lld моркова** в това ниво.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Можеш да събереш до **%lld пилета** в това ниво.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Можеш да събереш до **%lld риби** в това ниво.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Можеш да събереш до **%lld бурканчета мед** в това ниво.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Можеш да събереш до **%lld обръчи** в това ниво.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Можеш да събереш до **%lld кучешки бисквитки** в това ниво.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Можеш да събереш до **%lld парчета месо** в това ниво.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Можеш да събереш до **%lld фъстъка** в това ниво.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Можеш да събереш до **%lld перли** в това ниво.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Можеш да събереш до **%lld скариди** в това ниво.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Задачи, в които **делиш** число.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Деление на %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Задачи до **ниво %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Задачи от **ниво 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Всичко смесено**: плюс, минус, умножение, дроби и проценти.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Супермикс %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Винаги **една част** от цяло.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Една или повече части** от цяло.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Задачи в **точен ред**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Отговори **без десетични числа**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>И отговори **с десетични числа**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Задачи в **случаен ред**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Задачи с **проценти**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ от число</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Задачи, в които **изваждаш** число.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Минус %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Задачи, в които **умножаваш**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Таблица по %lld</string>
+	<key>menu.maximumCount</key>
+	<string>МАКС</string>
+	<key>menu.moreLevels</key>
+	<string>Още нива</string>
+	<key>menu.premiumLevels</key>
+	<string>Премиум нива</string>
+	<key>menu.startHere</key>
+	<string>Започни тук</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Отключи още с Премиум</string>
+	<key>mode.fractions.multiple</key>
+	<string>Няколко</string>
+	<key>mode.fractions.single</key>
+	<string>Една</string>
+	<key>mode.mixed</key>
+	<string>Смесено</string>
+	<key>mode.order</key>
+	<string>Ред</string>
+	<key>mode.percentages.decimal</key>
+	<string>Десетично</string>
+	<key>mode.percentages.whole</key>
+	<string>Цяло</string>
+	<key>mode.random</key>
+	<string>Случайно</string>
+	<key>name.placeholder</key>
+	<string>Твоето име</string>
+	<key>name.whatsYourName</key>
+	<string>Как се казваш?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Спечелете още няколко обръчи, за да отключите това животно! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Животните ви чакат. Върнете се да играете и продължавайте да събирате обръчи!</string>
+	<key>notif.comeback.title</key>
+	<string>Липсваш ни! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Нека ден 3 се случи! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium включва %lld нива за всяка тема и всички 10 животни. Приключението продължава!</string>
+	<key>notif.premium.title</key>
+	<string>Отключете повече нива и животни! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Минаха %lld дни. Нека да решим някои математически упражнения и да спечелим повече обръчи!</string>
+	<key>notif.reactivate.title</key>
+	<string>Готови ли сте да играете отново? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Различни смесени задачи.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Вече доста добре</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Упражнявай задачи подред.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Току-що започнах</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Задачи в случаен ред.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Вече съм упражнявал</string>
+	<key>onboarding.level.title</key>
+	<string>Колко си добър в това?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Да започваме. Как се казваш?</string>
+	<key>onboarding.name.title</key>
+	<string>Смятането никога не е било толкова забавно!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Избери тема, с която да започнеш.</string>
+	<key>onboarding.subject.title</key>
+	<string>Какво искаш да научиш?</string>
+	<key>parentGate.approved</key>
+	<string>Одобрено</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Опити: %1$lld от %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Задръж: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>кръг</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ромб</string>
+	<key>parentGate.shape.heart</key>
+	<string>сърце</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>шестоъгълник</string>
+	<key>parentGate.shape.plus</key>
+	<string>плюс</string>
+	<key>parentGate.shape.square</key>
+	<string>квадрат</string>
+	<key>parentGate.shape.star</key>
+	<string>звезда</string>
+	<key>parentGate.shape.triangle</key>
+	<string>триъгълник</string>
+	<key>parentGate.subtitle</key>
+	<string>За да защитим малките играчи, възрастен трябва да премине тази проверка преди покупката.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Докосвания: %1$lld от %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Нужно е одобрение от възрастен</string>
+	<key>premium.availableAt %lld</key>
+	<string>Достъпно от %lld трофея</string>
+	<key>premium.availableFromStart</key>
+	<string>Достъпно от самото начало</string>
+	<key>premium.characterUnlocked</key>
+	<string>ОТКЛЮЧЕН Е НОВ ГЕРОЙ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Спечели %lld обръчи</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Ексклузивно с Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>С Премиум можеш да играеш свободно с всичките 10 животни.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Всички животни</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Винаги има достатъчно нови задачи за упражнение.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 нива на тема</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Играй без никакви прекъсвания.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Без реклами</string>
+	<key>premium.oneTime</key>
+	<string>Еднократна покупка. Завинаги твое.</string>
+	<key>premium.restore</key>
+	<string>Възстанови покупките</string>
+	<key>premium.start</key>
+	<string>Старт</string>
+	<key>premium.storeUnavailable</key>
+	<string>Магазинът не е достъпен в момента. Опитай пак по-късно.</string>
+	<key>premium.unlock</key>
+	<string>Отключи Премиум</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Отключи Премиум · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Отключено с Premium</string>
+	<key>result.complete</key>
+	<string>Нивото е завършено!</string>
+	<key>result.stopped</key>
+	<string>На пауза</string>
+	<key>settings.character</key>
+	<string>Герой</string>
+	<key>settings.characterInfo</key>
+	<string>Всяко животно дава своя цветна тема на цялата игра.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>По избор: %lld мин</string>
+	<key>settings.dailyGoal</key>
+	<string>Дневна цел</string>
+	<key>settings.goalInfo</key>
+	<string>Целта за поредица започва от 5 минути на ден. Брои се само активното време за игра.</string>
+	<key>settings.music</key>
+	<string>Музика</string>
+	<key>settings.playGoals</key>
+	<string>Цели за игра</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Премиум е отключен. Благодарим!</string>
+	<key>settings.sound</key>
+	<string>Звук</string>
+	<key>settings.soundEffects</key>
+	<string>Музика и ефекти</string>
+	<key>settings.soundInfo</key>
+	<string>Изключи звука за тиха игра. Играта си остава същата.</string>
+	<key>settings.title</key>
+	<string>Настройки</string>
+	<key>streak.dayOne</key>
+	<string>Ден 1</string>
+	<key>topic.addition</key>
+	<string>Събиране</string>
+	<key>topic.addition.detail</key>
+	<string>Само събиране</string>
+	<key>topic.fractions</key>
+	<string>Дроби</string>
+	<key>topic.fractions.detail</key>
+	<string>Само деление</string>
+	<key>topic.mixed</key>
+	<string>Супермикс</string>
+	<key>topic.mixed.detail</key>
+	<string>Смесени действия</string>
+	<key>topic.percentages</key>
+	<string>Проценти</string>
+	<key>topic.percentages.detail</key>
+	<string>Само проценти</string>
+	<key>topic.subtraction</key>
+	<string>Изваждане</string>
+	<key>topic.subtraction.detail</key>
+	<string>Само изваждане</string>
+	<key>topic.tables</key>
+	<string>Таблици</string>
+	<key>topic.tables.detail</key>
+	<string>Само умножение</string>
+	<key>tutorial.notice.message</key>
+	<string>Вече играеш. Завърши играта или избери ниво, което още не си започнал, за да пуснеш урока.</string>
+	<key>tutorial.notice.title</key>
+	<string>Само в началото на игра</string>
+</dict>
+</plist>

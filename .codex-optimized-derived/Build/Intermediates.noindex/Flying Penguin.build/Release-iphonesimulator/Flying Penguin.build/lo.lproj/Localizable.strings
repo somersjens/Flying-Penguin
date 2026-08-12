@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>ໝີ</string>
+	<key>character.bunny</key>
+	<string>ກະຕ່າຍ</string>
+	<key>character.crab</key>
+	<string>ປູ</string>
+	<key>character.dog</key>
+	<string>ໝາ</string>
+	<key>character.elephant</key>
+	<string>ຊ້າງ</string>
+	<key>character.fox</key>
+	<string>ໝາຈອກ</string>
+	<key>character.frog</key>
+	<string>ກົບ</string>
+	<key>character.lion</key>
+	<string>ສິງ</string>
+	<key>character.octopus</key>
+	<string>ປາໝຶກ</string>
+	<key>character.penguin</key>
+	<string>ເພນກວິນ</string>
+	<key>common.cancel</key>
+	<string>ຍົກເລີກ</string>
+	<key>common.continue</key>
+	<string>ຕໍ່ໄປ</string>
+	<key>common.done</key>
+	<string>ສຳເລັດ</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld ນາທີ</string>
+	<key>common.ok</key>
+	<string>ຕົກລົງ</string>
+	<key>common.save</key>
+	<string>ບັນທຶກ</string>
+	<key>currency.hoop.plural</key>
+	<string>ວົງ</string>
+	<key>currency.hoop.singular</key>
+	<string>ວົງ</string>
+	<key>game.combo %lld</key>
+	<string>ຄອມໂບ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>ລອງໄດ້ດີ</string>
+	<key>game.encouragement.1</key>
+	<string>ເລີ່ມໄດ້ດີ</string>
+	<key>game.encouragement.2</key>
+	<string>ຝຶກຕໍ່ໄປ</string>
+	<key>game.encouragement.3</key>
+	<string>ບໍ່ຮ້າຍເລີຍ</string>
+	<key>game.encouragement.4</key>
+	<string>ເຮັດໄດ້ດີ</string>
+	<key>game.encouragement.5</key>
+	<string>ຜົນງານດີ</string>
+	<key>game.encouragement.6</key>
+	<string>ເກັ່ງຫຼາຍ</string>
+	<key>game.encouragement.7</key>
+	<string>ຫຼິ້ນໄດ້ດີຫຼາຍ</string>
+	<key>game.encouragement.8</key>
+	<string>ໃກ້ຮອດເສັ້ນໄຊແລ້ວ</string>
+	<key>game.encouragement.9</key>
+	<string>ເກືອບຮອດແລ້ວ</string>
+	<key>game.encouragement.complete</key>
+	<string>ຖືກທຸກຂໍ້!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ເຈົ້າໄດ້ທຸກຄະແນນແລ້ວ.</string>
+	<key>game.end.completionSuffix</key>
+	<string>ສຳເລັດ!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ເກມຈົບ</string>
+	<key>game.end.mainMenu</key>
+	<string>ເມນູຫຼັກ</string>
+	<key>game.end.playAgain</key>
+	<string>ຫຼິ້ນອີກ</string>
+	<key>game.highScore</key>
+	<string>ຄະແນນສູງສຸດ</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>ກັບເມນູຫຼັກ</string>
+	<key>game.intro.continue</key>
+	<string>ຫຼິ້ນຕໍ່</string>
+	<key>game.intro.progressPaused</key>
+	<string>ຄວາມຄືບໜ້າຖືກຢຸດໄວ້.</string>
+	<key>game.intro.start</key>
+	<string>ເລີ່ມດ່ານ</string>
+	<key>game.intro.startTutorial</key>
+	<string>ເລີ່ມສອນ</string>
+	<key>game.streakBoost.title</key>
+	<string>ຄະແນນສອງເທົ່າ!</string>
+	<key>goal.period</key>
+	<string>ໄລຍະເປົ້າໝາຍ</string>
+	<key>goal.promptDaily</key>
+	<string>ຢາກຫຼິ້ນມື້ລະຈັກນາທີ?</string>
+	<key>goal.promptWeekly</key>
+	<string>ຢາກຫຼິ້ນອາທິດລະຈັກນາທີ?</string>
+	<key>goal.title</key>
+	<string>ເປົ້າໝາຍການຫຼິ້ນ</string>
+	<key>goalPeriod.daily</key>
+	<string>ລາຍວັນ</string>
+	<key>goalPeriod.weekly</key>
+	<string>ລາຍອາທິດ</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ອີກ %lld</string>
+	<key>home.totalLabel</key>
+	<string>ລວມ</string>
+	<key>info.mode.fractions.header</key>
+	<string>ສ່ວນ</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>ໜຶ່ງສ່ວນ ແລະ ຫຼາຍສ່ວນ</string>
+	<key>info.mode.fractions.single</key>
+	<string>ໜຶ່ງສ່ວນສະເໝີ</string>
+	<key>info.mode.header</key>
+	<string>ລຳດັບ</string>
+	<key>info.mode.mixed</key>
+	<string>ປະສົມກັບດ່ານທີ່ຕ່ຳກວ່າ</string>
+	<key>info.mode.order</key>
+	<string>ລຳດັບຄົງທີ່</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>ລວມຈຳນວນທົດສະນິຍົມ</string>
+	<key>info.mode.percentages.header</key>
+	<string>ປະເພດ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>ບໍ່ມີຈຳນວນທົດສະນິຍົມ</string>
+	<key>info.mode.random</key>
+	<string>ລຳດັບສຸ່ມ</string>
+	<key>info.super.all</key>
+	<string>ບວກ, ລົບ, ຄູນ, ຫານ ແລະ ເປີເຊັນ</string>
+	<key>info.super.basic</key>
+	<string>ບວກ ແລະ ລົບ</string>
+	<key>info.super.fraction</key>
+	<string>ບວກ, ລົບ, ຄູນ ແລະ ຫານ</string>
+	<key>info.super.times</key>
+	<string>ບວກ, ລົບ ແລະ ຄູນ</string>
+	<key>info.topic.header</key>
+	<string>ປະເພດໂຈດ</string>
+	<key>levelIntro.addition.intro</key>
+	<string>ໂຈດທີ່ເຈົ້າ **ບວກ** ຕົວເລກ.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>ບວກ %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ຫົວແຄຣອດ**.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ໄກ່**.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ປາ**.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ໄຫນ້ຳເຜິ້ງ**.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ວົງ**.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ຂະໜົມໝາ**.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ຊິ້ນຊີ້ນ**.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ຖົ່ວດິນ**.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ໄຂ່ມຸກ**.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>ດ່ານນີ້ເກັບໄດ້ສູງສຸດ **%lld ກຸ້ງ**.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>ໂຈດທີ່ເຈົ້າ **ຫານ** ຕົວເລກ.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>ຫານດ້ວຍ %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>ຄຳຖາມເຖິງ **ດ່ານ %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>ຄຳຖາມຈາກ **ດ່ານ 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**ປົນກັນໝົດ**: ບວກ, ລົບ, ຄູນ, ເສດສ່ວນ ແລະ ເປີເຊັນ.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>ຊູເປີມິກ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>ເປັນ **ສ່ວນດຽວ** ຂອງທັງໝົດສະເໝີ.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**ໜຶ່ງ ຫຼື ຫຼາຍສ່ວນ** ຂອງທັງໝົດ.</string>
+	<key>levelIntro.mode.order</key>
+	<string>ຄຳຖາມຕາມ **ລຳດັບຄົງທີ່**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>ຄຳຕອບ **ບໍ່ມີທົດສະນິຍົມ**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>ມີຄຳຕອບ **ທົດສະນິຍົມ** ດ້ວຍ.</string>
+	<key>levelIntro.mode.random</key>
+	<string>ຄຳຖາມ **ປົນກັນ**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>ໂຈດທີ່ມີ **ເປີເຊັນ**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ ຂອງຕົວເລກ</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>ໂຈດທີ່ເຈົ້າ **ລົບ** ຕົວເລກ.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>ລົບ %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>ໂຈດທີ່ເຈົ້າ **ຄູນ**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>ສູດຄູນ %lld</string>
+	<key>menu.maximumCount</key>
+	<string>ສູງສຸດ</string>
+	<key>menu.moreLevels</key>
+	<string>ດ່ານເພີ່ມ</string>
+	<key>menu.premiumLevels</key>
+	<string>ດ່ານພຣີມຽມ</string>
+	<key>menu.startHere</key>
+	<string>ເລີ່ມທີ່ນີ້</string>
+	<key>menu.unlockWithPremium</key>
+	<string>ປົດລັອກເພີ່ມດ້ວຍພຣີມຽມ</string>
+	<key>mode.fractions.multiple</key>
+	<string>ຫຼາຍສ່ວນ</string>
+	<key>mode.fractions.single</key>
+	<string>ໜຶ່ງສ່ວນ</string>
+	<key>mode.mixed</key>
+	<string>ປະສົມກັນ</string>
+	<key>mode.order</key>
+	<string>ລຳດັບ</string>
+	<key>mode.percentages.decimal</key>
+	<string>ທົດສະນິຍົມ</string>
+	<key>mode.percentages.whole</key>
+	<string>ຈຳນວນເຕັມ</string>
+	<key>mode.random</key>
+	<string>ສຸ່ມ</string>
+	<key>name.placeholder</key>
+	<string>ຊື່ຂອງເຈົ້າ</string>
+	<key>name.whatsYourName</key>
+	<string>ເຈົ້າຊື່ຫຍັງ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: ຮັບຮາງວັນອີກສອງສາມອັນເພື່ອປົດລັອກສັດນີ້! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ສັດ​ຂອງ​ທ່ານ​ກໍາ​ລັງ​ລໍ​ຖ້າ​. ກັບມາຫຼິ້ນ ແລະເກັບວົງຕໍ່ໄປ!</string>
+	<key>notif.comeback.title</key>
+	<string>ພວກເຮົາຄິດຮອດເຈົ້າ! 👋</string>
+	<key>notif.day3.title</key>
+	<string>ຂໍໃຫ້ວັນທີ 3 ເກີດຂຶ້ນ! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium ປະກອບມີ %lld ລະດັບສຳລັບທຸກໆຫົວຂໍ້ ແລະສັດທັງໝົດ 10 ໂຕ. ການຜະຈົນໄພສືບຕໍ່!</string>
+	<key>notif.premium.title</key>
+	<string>ປົດລັອກຫຼາຍລະດັບ ແລະສັດ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ມື້ແລ້ວ. ມາແກ້ບົດເຝິກຫັດຄະນິດສາດ ແລະ ຮັບຮາງວັນເພີ່ມເຕີມ!</string>
+	<key>notif.reactivate.title</key>
+	<string>ພ້ອມ​ທີ່​ຈະ​ຫຼິ້ນ​ອີກ​ເທື່ອ​ຫນຶ່ງ​? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>ໂຈດປະສົມຫຼາຍແບບຢູ່ນຳກັນ.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>ເກັ່ງພໍສົມຄວນແລ້ວ</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ຝຶກໂຈດຕາມລຳດັບ.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>ຫາກໍເລີ່ມ</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>ໂຈດຕາມລຳດັບສຸ່ມ.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>ຝຶກມາແລ້ວໜ້ອຍໜຶ່ງ</string>
+	<key>onboarding.level.title</key>
+	<string>ຕອນນີ້ເຈົ້າເກັ່ງປານໃດ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>ມາເລີ່ມກັນ. ເຈົ້າຊື່ຫຍັງ?</string>
+	<key>onboarding.name.title</key>
+	<string>ເຮັດໂຈດບໍ່ເຄີຍມ່ວນຂະໜາດນີ້!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>ເລືອກຫົວຂໍ້ເພື່ອເລີ່ມ.</string>
+	<key>onboarding.subject.title</key>
+	<string>ເຈົ້າຢາກຮຽນຫຍັງ?</string>
+	<key>parentGate.approved</key>
+	<string>ອະນຸມັດແລ້ວ</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ລອງ: %1$lld ຈາກ %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>ກົດຄ້າງ: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ວົງມົນ</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ຮູບເພັດ</string>
+	<key>parentGate.shape.heart</key>
+	<string>ຫົວໃຈ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>ຫົກຫຼ່ຽມ</string>
+	<key>parentGate.shape.plus</key>
+	<string>ເຄື່ອງໝາຍບວກ</string>
+	<key>parentGate.shape.square</key>
+	<string>ສີ່ຫຼ່ຽມ</string>
+	<key>parentGate.shape.star</key>
+	<string>ດາວ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>ສາມຫຼ່ຽມ</string>
+	<key>parentGate.subtitle</key>
+	<string>ເພື່ອປົກປ້ອງຜູ້ຫຼິ້ນເດັກນ້ອຍ ຜູ້ໃຫຍ່ຕ້ອງກວດສອບນີ້ໃຫ້ສຳເລັດກ່ອນຊື້.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>ແຕະ: %1$lld ຈາກ %2$lld</string>
+	<key>parentGate.title</key>
+	<string>ຕ້ອງມີຜູ້ໃຫຍ່ອະນຸມັດ</string>
+	<key>premium.availableAt %lld</key>
+	<string>ມີໃຫ້ໃຊ້ຕັ້ງແຕ່ %lld ຖ້ວຍ</string>
+	<key>premium.availableFromStart</key>
+	<string>ມີໃຫ້ໃຊ້ຕັ້ງແຕ່ເລີ່ມ</string>
+	<key>premium.characterUnlocked</key>
+	<string>ປົດລັອກຕົວລະຄອນໃໝ່ແລ້ວ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ເຈົ້າໄດ້ວົງ %lld ໂຕ</string>
+	<key>premium.exclusiveBadge</key>
+	<string>ສະເພາະ Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>ດ້ວຍພຣີມຽມ ເຈົ້າຫຼິ້ນກັບສັດທັງ 10 ໂຕໄດ້ຢ່າງອິດສະຫຼະ.</string>
+	<key>premium.feature.animals.title</key>
+	<string>ເຂົ້າເຖິງສັດທຸກໂຕ</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>ມີໂຈດໃໝ່ໃຫ້ຝຶກສະເໝີ.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 ດ່ານຕໍ່ຫົວຂໍ້</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>ຫຼິ້ນໄດ້ໂດຍບໍ່ຖືກຂັດຈັງຫວະ.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>ບໍ່ມີໂຄສະນາ</string>
+	<key>premium.oneTime</key>
+	<string>ຊື້ຄັ້ງດຽວ. ເປັນຂອງເຈົ້າຕະຫຼອດໄປ.</string>
+	<key>premium.restore</key>
+	<string>ກູ້ຄືນການຊື້</string>
+	<key>premium.start</key>
+	<string>ເລີ່ມ</string>
+	<key>premium.storeUnavailable</key>
+	<string>ຕອນນີ້ຮ້ານຄ້າບໍ່ພ້ອມ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ.</string>
+	<key>premium.unlock</key>
+	<string>ປົດລັອກພຣີມຽມ</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ປົດລັອກພຣີມຽມ · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>ປົດລັອກດ້ວຍ Premium</string>
+	<key>result.complete</key>
+	<string>ຜ່ານດ່ານແລ້ວ!</string>
+	<key>result.stopped</key>
+	<string>ຢຸດໄວ້</string>
+	<key>settings.character</key>
+	<string>ຕົວລະຄອນ</string>
+	<key>settings.characterInfo</key>
+	<string>ສັດແຕ່ລະໂຕມີຊຸດສີຂອງຕົນເອງສຳລັບທັງເກມ.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>ກຳນົດເອງ: %lld ນາທີ</string>
+	<key>settings.dailyGoal</key>
+	<string>ເປົ້າໝາຍລາຍວັນ</string>
+	<key>settings.goalInfo</key>
+	<string>ເປົ້າໝາຍຕໍ່ເນື່ອງເລີ່ມທີ່ 5 ນາທີຕໍ່ມື້. ນັບສະເພາະເວລາທີ່ຫຼິ້ນຈິງ.</string>
+	<key>settings.music</key>
+	<string>ເພງ</string>
+	<key>settings.playGoals</key>
+	<string>ເປົ້າໝາຍການຫຼິ້ນ</string>
+	<key>settings.premiumUnlocked</key>
+	<string>ປົດລັອກພຣີມຽມແລ້ວ. ຂອບໃຈ!</string>
+	<key>settings.sound</key>
+	<string>ສຽງ</string>
+	<key>settings.soundEffects</key>
+	<string>ເພງ ແລະ ເອັບເຟັກ</string>
+	<key>settings.soundInfo</key>
+	<string>ປິດສຽງເພື່ອຫຼິ້ນແບບງຽບໆ. ເກມຍັງຫຼິ້ນໄດ້ຄືເກົ່າ.</string>
+	<key>settings.title</key>
+	<string>ການຕັ້ງຄ່າ</string>
+	<key>streak.dayOne</key>
+	<string>ມື້ທີ 1</string>
+	<key>topic.addition</key>
+	<string>ບວກ</string>
+	<key>topic.addition.detail</key>
+	<string>ບວກເທົ່ານັ້ນ</string>
+	<key>topic.fractions</key>
+	<string>ເສດສ່ວນ</string>
+	<key>topic.fractions.detail</key>
+	<string>ຫານເທົ່ານັ້ນ</string>
+	<key>topic.mixed</key>
+	<string>ຊູເປີມິກ</string>
+	<key>topic.mixed.detail</key>
+	<string>ໂຈດປົນກັນ</string>
+	<key>topic.percentages</key>
+	<string>ເປີເຊັນ</string>
+	<key>topic.percentages.detail</key>
+	<string>ເປີເຊັນເທົ່ານັ້ນ</string>
+	<key>topic.subtraction</key>
+	<string>ລົບ</string>
+	<key>topic.subtraction.detail</key>
+	<string>ລົບເທົ່ານັ້ນ</string>
+	<key>topic.tables</key>
+	<string>ສູດຄູນ</string>
+	<key>topic.tables.detail</key>
+	<string>ຄູນເທົ່ານັ້ນ</string>
+	<key>tutorial.notice.message</key>
+	<string>ເຈົ້າກຳລັງຫຼິ້ນຢູ່. ຫຼິ້ນໃຫ້ຈົບ ຫຼື ເລືອກດ່ານທີ່ຍັງບໍ່ໄດ້ເລີ່ມ ເພື່ອຫຼິ້ນບົດສອນ.</string>
+	<key>tutorial.notice.title</key>
+	<string>ໄດ້ສະເພາະຕອນເລີ່ມເກມ</string>
+</dict>
+</plist>

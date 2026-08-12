@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Beruang</string>
+	<key>character.bunny</key>
+	<string>Arnab</string>
+	<key>character.crab</key>
+	<string>Ketam</string>
+	<key>character.dog</key>
+	<string>Anjing</string>
+	<key>character.elephant</key>
+	<string>Gajah</string>
+	<key>character.fox</key>
+	<string>Rubah</string>
+	<key>character.frog</key>
+	<string>Katak</string>
+	<key>character.lion</key>
+	<string>Singa</string>
+	<key>character.octopus</key>
+	<string>Kurita</string>
+	<key>character.penguin</key>
+	<string>Penguin</string>
+	<key>common.cancel</key>
+	<string>Batal</string>
+	<key>common.continue</key>
+	<string>Teruskan</string>
+	<key>common.done</key>
+	<string>Selesai</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Simpan</string>
+	<key>currency.hoop.plural</key>
+	<string>gelung-gelung</string>
+	<key>currency.hoop.singular</key>
+	<string>gelung</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Cubaan bagus</string>
+	<key>game.encouragement.1</key>
+	<string>Baru bermula</string>
+	<key>game.encouragement.2</key>
+	<string>Terus berlatih</string>
+	<key>game.encouragement.3</key>
+	<string>Boleh tahan</string>
+	<key>game.encouragement.4</key>
+	<string>Bagus</string>
+	<key>game.encouragement.5</key>
+	<string>Prestasi bagus</string>
+	<key>game.encouragement.6</key>
+	<string>Syabas</string>
+	<key>game.encouragement.7</key>
+	<string>Sangat bagus</string>
+	<key>game.encouragement.8</key>
+	<string>Garisan penamat dah dekat</string>
+	<key>game.encouragement.9</key>
+	<string>Hampir sampai</string>
+	<key>game.encouragement.complete</key>
+	<string>Skor sempurna!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Kamu berjaya dapat semua mata.</string>
+	<key>game.end.completionSuffix</key>
+	<string>selesai!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Permainan tamat</string>
+	<key>game.end.mainMenu</key>
+	<string>Menu utama</string>
+	<key>game.end.playAgain</key>
+	<string>Main lagi</string>
+	<key>game.highScore</key>
+	<string>Rekod</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Kembali ke menu utama</string>
+	<key>game.intro.continue</key>
+	<string>Teruskan</string>
+	<key>game.intro.progressPaused</key>
+	<string>Kemajuan dijeda.</string>
+	<key>game.intro.start</key>
+	<string>Mula tahap</string>
+	<key>game.intro.startTutorial</key>
+	<string>Mula tutorial</string>
+	<key>game.streakBoost.title</key>
+	<string>Mata berganda!</string>
+	<key>goal.period</key>
+	<string>Tempoh sasaran</string>
+	<key>goal.promptDaily</key>
+	<string>Berapa minit kamu mahu bermain setiap hari?</string>
+	<key>goal.promptWeekly</key>
+	<string>Berapa minit kamu mahu bermain setiap minggu?</string>
+	<key>goal.title</key>
+	<string>Sasaran main</string>
+	<key>goalPeriod.daily</key>
+	<string>Harian</string>
+	<key>goalPeriod.weekly</key>
+	<string>Mingguan</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld lagi</string>
+	<key>home.totalLabel</key>
+	<string>Jumlah</string>
+	<key>info.mode.fractions.header</key>
+	<string>Bahagian</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Satu atau banyak bahagian</string>
+	<key>info.mode.fractions.single</key>
+	<string>Sentiasa satu bahagian</string>
+	<key>info.mode.header</key>
+	<string>Urutan</string>
+	<key>info.mode.mixed</key>
+	<string>Campur dengan tahap lebih rendah</string>
+	<key>info.mode.order</key>
+	<string>Urutan tetap</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Termasuk nombor perpuluhan</string>
+	<key>info.mode.percentages.header</key>
+	<string>Jenis</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Tanpa nombor perpuluhan</string>
+	<key>info.mode.random</key>
+	<string>Urutan rawak</string>
+	<key>info.super.all</key>
+	<string>Tambah, tolak, darab, bahagi dan peratus</string>
+	<key>info.super.basic</key>
+	<string>Tambah dan tolak</string>
+	<key>info.super.fraction</key>
+	<string>Tambah, tolak, darab dan bahagi</string>
+	<key>info.super.times</key>
+	<string>Tambah, tolak dan darab</string>
+	<key>info.topic.header</key>
+	<string>Jenis soalan</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Soalan yang kamu **tambah** nombor.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Tambah %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld lobak** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld ayam** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld ikan** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld balang madu** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld gelung-gelung** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld biskut anjing** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld ketul daging** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld kacang tanah** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld mutiara** dalam tahap ini.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Kamu boleh kumpul hingga **%lld udang** dalam tahap ini.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Soalan yang kamu **bahagi** nombor.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Bahagi %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Soalan hingga **tahap %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Soalan dari **tahap 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Semua bercampur**: tambah, tolak, darab, pecahan dan peratus.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Sentiasa **satu bahagian** daripada keseluruhan.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Satu atau lebih bahagian** daripada keseluruhan.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Soalan dalam **susunan tetap**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Jawapan **tanpa perpuluhan**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Juga jawapan **dengan perpuluhan**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Soalan dalam **susunan rawak**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Soalan dengan **peratus**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ daripada nombor</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Soalan yang kamu **tolak** nombor.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Tolak %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Soalan yang kamu **darab**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Sifir %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MAKS</string>
+	<key>menu.moreLevels</key>
+	<string>Lagi tahap</string>
+	<key>menu.premiumLevels</key>
+	<string>Tahap premium</string>
+	<key>menu.startHere</key>
+	<string>Mula di sini</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Buka lebih banyak dengan Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Banyak</string>
+	<key>mode.fractions.single</key>
+	<string>Satu</string>
+	<key>mode.mixed</key>
+	<string>Bercampur</string>
+	<key>mode.order</key>
+	<string>Urutan</string>
+	<key>mode.percentages.decimal</key>
+	<string>Perpuluhan</string>
+	<key>mode.percentages.whole</key>
+	<string>Bulat</string>
+	<key>mode.random</key>
+	<string>Rawak</string>
+	<key>name.placeholder</key>
+	<string>Nama kamu</string>
+	<key>name.whatsYourName</key>
+	<string>Siapa nama kamu?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Peroleh beberapa lagi gelung-gelung untuk membuka kunci haiwan ini! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Haiwan anda sedang menunggu. Kembali bermain dan terus mengumpul gelung-gelung!</string>
+	<key>notif.comeback.title</key>
+	<string>Kami rindu awak! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Mari jadikan hari ke-3 berlaku! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium termasuk %lld tahap untuk setiap topik dan kesemua 10 haiwan. Pengembaraan diteruskan!</string>
+	<key>notif.premium.title</key>
+	<string>Buka kunci lebih banyak tahap dan haiwan! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>dah %lld hari. Mari selesaikan beberapa latihan matematik dan dapatkan lebih banyak gelung-gelung!</string>
+	<key>notif.reactivate.title</key>
+	<string>Bersedia untuk bermain lagi? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Soalan campur yang berbeza.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Dah agak bagus</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Berlatih dengan soalan ikut urutan.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Baru mula</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Soalan dalam urutan rawak.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Dah pernah berlatih</string>
+	<key>onboarding.level.title</key>
+	<string>Sejauh mana kamu dah pandai?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Mari mula. Siapa nama kamu?</string>
+	<key>onboarding.name.title</key>
+	<string>Mengira tak pernah seseronok ini!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Pilih topik untuk mula.</string>
+	<key>onboarding.subject.title</key>
+	<string>Apa yang kamu mahu belajar?</string>
+	<key>parentGate.approved</key>
+	<string>Diluluskan</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Cubaan: %1$lld daripada %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Tahan: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>bulatan</string>
+	<key>parentGate.shape.diamond</key>
+	<string>berlian</string>
+	<key>parentGate.shape.heart</key>
+	<string>hati</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>heksagon</string>
+	<key>parentGate.shape.plus</key>
+	<string>tambah</string>
+	<key>parentGate.shape.square</key>
+	<string>segi empat</string>
+	<key>parentGate.shape.star</key>
+	<string>bintang</string>
+	<key>parentGate.shape.triangle</key>
+	<string>segi tiga</string>
+	<key>parentGate.subtitle</key>
+	<string>Untuk melindungi pemain muda, orang dewasa mesti selesaikan semakan ini sebelum meneruskan pembelian.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Ketikan: %1$lld daripada %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Kelulusan orang dewasa diperlukan</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tersedia mulai %lld trofi</string>
+	<key>premium.availableFromStart</key>
+	<string>Tersedia sejak mula</string>
+	<key>premium.characterUnlocked</key>
+	<string>WATAK BAHARU DIBUKA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Kamu sudah dapat %lld simpai-simpai</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Eksklusif dengan Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Dengan premium, kamu bebas bermain dengan semua 10 haiwan.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Akses semua haiwan</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Sentiasa ada soalan baharu untuk dilatih.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 tahap setiap topik</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Main tanpa gangguan.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Tiada iklan</string>
+	<key>premium.oneTime</key>
+	<string>Beli sekali. Milik kamu selamanya.</string>
+	<key>premium.restore</key>
+	<string>Pulihkan pembelian</string>
+	<key>premium.start</key>
+	<string>Mula</string>
+	<key>premium.storeUnavailable</key>
+	<string>Kedai tidak tersedia sekarang. Cuba lagi nanti.</string>
+	<key>premium.unlock</key>
+	<string>Buka Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Buka Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Dibuka dengan Premium</string>
+	<key>result.complete</key>
+	<string>Tahap selesai!</string>
+	<key>result.stopped</key>
+	<string>Dijeda</string>
+	<key>settings.character</key>
+	<string>Watak</string>
+	<key>settings.characterInfo</key>
+	<string>Setiap haiwan membawa tema warnanya sendiri ke seluruh permainan.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Tersuai: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Sasaran harian</string>
+	<key>settings.goalInfo</key>
+	<string>Sasaran rentetan bermula pada 5 minit sehari. Hanya masa bermain aktif dikira.</string>
+	<key>settings.music</key>
+	<string>Muzik</string>
+	<key>settings.playGoals</key>
+	<string>Sasaran main</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium dibuka. Terima kasih!</string>
+	<key>settings.sound</key>
+	<string>Bunyi</string>
+	<key>settings.soundEffects</key>
+	<string>Muzik dan kesan</string>
+	<key>settings.soundInfo</key>
+	<string>Matikan bunyi untuk bermain senyap. Permainan tetap sama.</string>
+	<key>settings.title</key>
+	<string>Tetapan</string>
+	<key>streak.dayOne</key>
+	<string>Hari 1</string>
+	<key>topic.addition</key>
+	<string>Tambah</string>
+	<key>topic.addition.detail</key>
+	<string>Tambah sahaja</string>
+	<key>topic.fractions</key>
+	<string>Pecahan</string>
+	<key>topic.fractions.detail</key>
+	<string>Bahagi sahaja</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Operasi bercampur</string>
+	<key>topic.percentages</key>
+	<string>Peratus</string>
+	<key>topic.percentages.detail</key>
+	<string>Peratus sahaja</string>
+	<key>topic.subtraction</key>
+	<string>Tolak</string>
+	<key>topic.subtraction.detail</key>
+	<string>Tolak sahaja</string>
+	<key>topic.tables</key>
+	<string>Sifir</string>
+	<key>topic.tables.detail</key>
+	<string>Darab sahaja</string>
+	<key>tutorial.notice.message</key>
+	<string>Kamu sedang bermain. Habiskan dulu, atau pilih tahap yang belum dimulakan untuk bermain tutorial.</string>
+	<key>tutorial.notice.title</key>
+	<string>Hanya pada awal permainan</string>
+</dict>
+</plist>
