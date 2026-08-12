@@ -32,6 +32,9 @@ struct FlyingPenguinPlayfield: View {
     @State private var penguinY: CGFloat = 0
     @State private var targetPenguinY: CGFloat = 0
     @State private var dragStartY: CGFloat?
+    @State private var pressHoldSequence = 0
+    @State private var directPressActive = false
+    @State private var suppressTapAfterPressHold = false
     @State private var penguinX: CGFloat = 0
     @State private var hoopX: CGFloat = 0
     @State private var shownOptions: [AnswerOption] = []
@@ -302,7 +305,7 @@ struct FlyingPenguinPlayfield: View {
             }
             .contentShape(Rectangle())
             .gesture(flightGesture)
-            .simultaneousGesture(ringTapGesture)
+            .simultaneousGesture(playfieldTapGesture)
             .onAppear {
                 updateLayout(proxy.size)
                 if playsFishEntrance { beginEntrance() }
@@ -432,41 +435,108 @@ struct FlyingPenguinPlayfield: View {
         sceneSize.width * 0.58 + launchCameraOffset
     }
 
+    private var acceptsVerticalControl: Bool {
+        let canSurface = (1...4).contains(divePhase)
+        return isRunning && entranceStage >= 5 && !completionActive
+            && (isLive || canSurface) && (!resolved || canSurface)
+            && committedLaneIndex == nil
+    }
+
     private var flightGesture: some Gesture {
         DragGesture(minimumDistance: 0, coordinateSpace: .local)
             .onChanged { value in
-                let canSurface = (1...4).contains(divePhase)
-                guard isRunning, entranceStage >= 5, !completionActive,
-                      (isLive || canSurface), (!resolved || canSurface),
-                      committedLaneIndex == nil else { return }
+                guard acceptsVerticalControl else { return }
                 // The choice remains live throughout the assist zone. Only the
                 // short commit zone at the hoop itself stops accepting a new
                 // lane, so a late drag can still redirect an in-flight penguin.
-                if dragStartY == nil { dragStartY = targetPenguinY == 0 ? penguinY : targetPenguinY }
-                // Movement is relative to where the penguin was when the drag
-                // began. Touching elsewhere on screen therefore never makes it
-                // jump to the finger.
-                let requested = (dragStartY ?? penguinY) + value.translation.height
-                if requested >= waterline {
-                    armDive()
+                if dragStartY == nil {
+                    dragStartY = targetPenguinY == 0 ? penguinY : targetPenguinY
+                    directPressActive = false
+                    beginPressHold(at: value.startLocation)
+                }
+
+                let distance = hypot(value.translation.width, value.translation.height)
+                if distance > 8, !directPressActive {
+                    // The player started dragging before the hold completed.
+                    // Invalidate its delayed callback and retain relative drag.
+                    pressHoldSequence += 1
+                }
+
+                if directPressActive {
+                    movePenguinToward(y: value.location.y)
                 } else {
-                    diveArmed = false
-                    if canSurface {
-                        // Once recovery has started, keep its smooth arm turn
-                        // intact while still accepting a new target height.
-                        if divePhase != 4 { divePhase = 3 }
-                    } else {
-                        divePhase = 0
-                    }
-                    targetPenguinY = min(max(requested, flightMinY), flightMaxY)
+                    // Movement is relative to where the penguin was when the
+                    // drag began. A stationary hold deliberately switches to
+                    // the absolute finger height after a short delay.
+                    let requested = (dragStartY ?? penguinY) + value.translation.height
+                    movePenguinToward(y: requested)
                 }
             }
-            .onEnded { _ in dragStartY = nil }
+            .onEnded { _ in
+                let completedPressHold = directPressActive
+                pressHoldSequence += 1
+                directPressActive = false
+                dragStartY = nil
+                if completedPressHold {
+                    suppressTapAfterPressHold = true
+                    DispatchQueue.main.async {
+                        suppressTapAfterPressHold = false
+                    }
+                }
+            }
     }
 
-    private var ringTapGesture: some Gesture {
+    private func beginPressHold(at location: CGPoint) {
+        pressHoldSequence += 1
+        let sequence = pressHoldSequence
+        guard location.x < hoopX - hoopSize * 0.72 else { return }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.28) {
+            guard pressHoldSequence == sequence, dragStartY != nil,
+                  acceptsVerticalControl else { return }
+            directPressActive = true
+            movePenguinToward(y: location.y)
+        }
+    }
+
+    private var playfieldTapGesture: some Gesture {
         SpatialTapGesture()
-            .onEnded { value in handleRingTap(at: value.location) }
+            .onEnded { value in handlePlayfieldTap(at: value.location) }
+    }
+
+    private func handlePlayfieldTap(at location: CGPoint) {
+        guard !directPressActive, !suppressTapAfterPressHold else { return }
+        // Tapping at or beyond the active hoops keeps the existing turbo lane
+        // selection. Everywhere before that zone is direct, unboosted height
+        // control: the penguin smoothly flies to the tapped vertical position.
+        if location.x >= hoopX - hoopSize * 0.72 {
+            handleRingTap(at: location)
+        } else {
+            handleHeightTap(at: location)
+        }
+    }
+
+    private func handleHeightTap(at location: CGPoint) {
+        guard acceptsVerticalControl else { return }
+
+        dragStartY = nil
+        movePenguinToward(y: location.y)
+    }
+
+    private func movePenguinToward(y requestedY: CGFloat) {
+        let canSurface = (1...4).contains(divePhase)
+        if requestedY >= waterline {
+            armDive()
+            return
+        }
+
+        diveArmed = false
+        if canSurface {
+            if divePhase != 4 { divePhase = 3 }
+        } else {
+            divePhase = 0
+        }
+        targetPenguinY = min(max(requestedY, flightMinY), flightMaxY)
     }
 
     private func handleRingTap(at location: CGPoint) {
@@ -898,7 +968,11 @@ struct FlyingPenguinPlayfield: View {
         let usesSpeedBonus: Bool
         let usesHalfLifePenalty: Bool
 
+        // Treat the visible flight path as authoritative too. During a quick
+        // resurfacing the dive phase may already have advanced while the
+        // penguin is still physically below the complete hoop stack.
         let isBelowRings = diveArmed || divePhase == 1 || divePhase == 2
+            || penguinY > lanes[2] + hoopSize * 0.46
         if isBelowRings, noCorrectAnswer, let correct = round.correctOption {
             selected = correct
             isCorrect = true
@@ -927,7 +1001,12 @@ struct FlyingPenguinPlayfield: View {
             resolved = false
             return
         }
-        selectedOptionID = selected.id
+        // A regular set passed underneath still needs a wrong option for the
+        // game engine to apply its penalty, but no hoop was actually touched.
+        // Keep that synthetic choice out of the visual feedback so only the
+        // revealed correct hoop turns green; red remains reserved for a wrong
+        // hoop the penguin really flew through.
+        selectedOptionID = isBelowRings ? nil : selected.id
         bypassedWrongSet = isBelowRings && noCorrectAnswer && isCorrect
         if usesSpeedBonus {
             withAnimation(.easeInOut(duration: 0.20)) { bonusOptionID = selected.id }

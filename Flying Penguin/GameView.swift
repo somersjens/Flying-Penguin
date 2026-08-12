@@ -245,14 +245,6 @@ struct GameView: View {
                                value: showsGameplayHUD)
                     .allowsHitTesting(showsGameplayHUD)
 
-                // The double-points chip is its own layer rather than a member
-                // of the HUD row: it belongs in the middle of the screen, at
-                // the same height on every device, and the row it used to sit
-                // in grows and shrinks with the score.
-                doublePointsLayer(below: topInset, width: proxy.size.width)
-                    .opacity(showsGameplayHUD ? 1 : 0)
-                    .animation(.easeOut(duration: 0.22), value: showsGameplayHUD)
-
                 if model.comboAnnouncementID > 0 {
                     ComboHoopBanner(token: model.comboAnnouncementID,
                                    character: character,
@@ -291,37 +283,8 @@ struct GameView: View {
         }
     }
 
-    /// Where the top row starts, so the chip's own layer lines up with it
-    /// rather than floating at a height of its own.
     private func hudTop(below topInset: CGFloat) -> CGFloat {
         topInset + (isPad ? 12 : 6)
-    }
-
-    /// The double-points chip, centred on the screen and level with the rest of
-    /// the HUD, so it reads the same on an iPad as on a phone.
-    ///
-    /// The band it is given is what keeps it clear of its two neighbours: the
-    /// row of controls on the leading edge and the sum card on the trailing
-    /// one. Both are a good deal narrower than a fifth of the screen from their
-    /// own edge, and when a longer translation will not fit the band the chip's
-    /// own `ViewThatFits` drops to the short wording rather than growing into
-    /// them.
-    private func doublePointsLayer(below topInset: CGFloat, width: CGFloat) -> some View {
-        Group {
-            if let deadline = model.boostDeadline {
-                DoublePointsChip(deadline: deadline,
-                                 token: model.streakAnnouncementID,
-                                 character: character,
-                                 isPad: isPad,
-                                 height: hudControlSize)
-                    .transition(.scale(scale: 0.4).combined(with: .opacity))
-            }
-        }
-        .frame(maxWidth: max(0, width * 0.2))
-        .padding(.top, hudTop(below: topInset))
-        .allowsHitTesting(false)
-        .animation(.spring(response: 0.34, dampingFraction: 0.62),
-                   value: model.boostDeadline)
     }
 
     @ViewBuilder
@@ -440,150 +403,6 @@ private struct ComboHoopBanner: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
             withAnimation(.easeOut(duration: 0.2)) { visible = false }
         }
-    }
-}
-
-/// The double-points window, in the HUD next to the score it is doubling.
-///
-/// It sits in the top row rather than over the pond on purpose: the reward has
-/// to be unmissable, but the question and the swarm underneath it are what the
-/// child is actually working with, and a banner across them would cost more
-/// time than the boost gives back.
-private struct DoublePointsChip: View {
-    let deadline: Date
-    /// Bumped on every fifth correct answer, so a window renewed while it is
-    /// still running replays the flash instead of quietly resetting its ring.
-    let token: Int
-    let character: AnimalCharacter
-    let isPad: Bool
-    let height: CGFloat
-
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
-    @State private var flash: CGFloat = 0
-    /// True over the last three seconds of the window. Held as state and
-    /// animated once rather than recomputed per frame, so the chip's gradient,
-    /// stroke and shadow are laid out a single time and the pulse afterwards
-    /// costs nothing but a transform.
-    @State private var isEnding = false
-    @State private var endingWork: DispatchWorkItem?
-
-    private var ringSize: CGFloat { isPad ? 34 : 27 }
-
-    var body: some View {
-        // Only the countdown ring is redrawn on a clock (see `CountdownRing`).
-        // Wrapping the whole chip in a `TimelineView`, as this used to, rebuilt
-        // its gradient, its shadow and a `ViewThatFits` — which lays its
-        // contents out twice — twenty times a second, for the entire length of
-        // a streak. That is exactly the stretch of play the chip appears in.
-        //
-        // The ring is a sibling of the `ViewThatFits`, not inside it: only the
-        // wording is in question, and a candidate that is merely measured
-        // should not be a second live countdown.
-        HStack(spacing: isPad ? 9 : 6) {
-            // Spelling the reward out is worth the width wherever the HUD has
-            // it; where it does not, the multiplier and the ring say the same
-            // thing in a third of the space.
-            ViewThatFits(in: .horizontal) {
-                wording(spellsItOut: true)
-                wording(spellsItOut: false)
-            }
-            CountdownRing(deadline: deadline, size: ringSize, isPad: isPad)
-        }
-        .foregroundStyle(.white)
-        .padding(.horizontal, isPad ? 14 : 11)
-        .frame(height: height)
-        .background {
-            Capsule()
-                .fill(LinearGradient(colors: [character.color, character.deepColor],
-                                     startPoint: .topLeading,
-                                     endPoint: .bottomTrailing))
-                .overlay {
-                    Capsule().stroke(.white.opacity(0.9), lineWidth: 2)
-                }
-                .shadow(color: character.deepColor.opacity(0.35), radius: 7, y: 3)
-        }
-        // The last three seconds pulse, so the window closing is felt
-        // rather than only read off the number.
-        .scaleEffect(isEnding ? 1.06 : 1)
-        .overlay {
-            Capsule()
-                .stroke(.white, lineWidth: 3)
-                .scaleEffect(1 + flash * 0.5)
-                .opacity(Double(1 - flash))
-        }
-        .accessibilityElement(children: .ignore)
-        .onAppear { pulse(); armEndingPulse() }
-        .onChange(of: token) { _, _ in pulse() }
-        // A window renewed while it is still running pushes the closing pulse
-        // back out with it.
-        .onChange(of: deadline) { _, _ in armEndingPulse() }
-        .onDisappear { endingWork?.cancel() }
-    }
-
-    private func wording(spellsItOut: Bool) -> some View {
-        HStack(spacing: isPad ? 9 : 6) {
-            Text(verbatim: "\(GameConfig.streakMultiplier)×")
-                .font(.system(size: isPad ? 26 : 20, weight: .black, design: .rounded))
-            if spellsItOut {
-                Text("game.streakBoost.title")
-                    .font(.system(size: isPad ? 17 : 13, weight: .heavy, design: .rounded))
-                    .lineLimit(1)
-                    .fixedSize()
-            }
-        }
-    }
-
-    private func pulse() {
-        guard !reduceMotion else { return }
-        flash = 0
-        withAnimation(.easeOut(duration: 0.55)) { flash = 1 }
-    }
-
-    /// Schedules the closing pulse for the moment three seconds are left. The
-    /// swell itself is a repeating animation the render server owns, so no
-    /// frame of it costs a body evaluation.
-    private func armEndingPulse() {
-        endingWork?.cancel()
-        withTransaction(Transaction(animation: nil)) { isEnding = false }
-        guard !reduceMotion else { return }
-        let work = DispatchWorkItem {
-            withAnimation(.easeInOut(duration: 0.5).repeatForever(autoreverses: true)) {
-                isEnding = true
-            }
-        }
-        endingWork = work
-        DispatchQueue.main.asyncAfter(
-            deadline: .now() + max(0, deadline.timeIntervalSinceNow - 3),
-            execute: work
-        )
-    }
-}
-
-/// A ring that empties over the double-points window, with the whole seconds
-/// left in it. The only part of the chip that is on a clock.
-private struct CountdownRing: View {
-    let deadline: Date
-    let size: CGFloat
-    let isPad: Bool
-
-    var body: some View {
-        TimelineView(.periodic(from: .now, by: 1.0 / 12.0)) { context in
-            let remaining = max(0, deadline.timeIntervalSince(context.date))
-            let share = min(1, max(0, remaining / GameConfig.streakBoostDuration))
-            ZStack {
-                Circle()
-                    .stroke(.white.opacity(0.32), lineWidth: isPad ? 4 : 3)
-                Circle()
-                    .trim(from: 0, to: share)
-                    .stroke(.white,
-                            style: StrokeStyle(lineWidth: isPad ? 4 : 3, lineCap: .round))
-                    .rotationEffect(.degrees(-90))
-                Text(verbatim: "\(Int(ceil(remaining)))")
-                    .font(.system(size: isPad ? 15 : 12, weight: .heavy, design: .rounded))
-                    .monospacedDigit()
-            }
-        }
-        .frame(width: size, height: size)
     }
 }
 

@@ -46,7 +46,7 @@ public enum GameOverReason: String, Equatable, Sendable {
 
 /// What resolving a tap produced, so the view knows which feedback to play.
 public enum AnswerOutcome: Equatable, Sendable {
-    case correct(cardsEarned: Int, usedBonusFish: Bool, startedStreak: Bool)
+    case correct(cardsEarned: Int, usedBonusFish: Bool)
     case wrong(correctOptionID: UUID, lostHalfLife: Bool)
     /// The tap was ignored (wrong state, or the round was already answered).
     case ignored
@@ -106,12 +106,6 @@ public final class MemoryGame {
     public private(set) var selectedOptionID: UUID?
     public private(set) var lastOutcome: AnswerOutcome?
     public private(set) var result = SessionResult()
-    public private(set) var correctStreak = 0
-    /// When the current double-points window runs out, or nil when no window is
-    /// open. The engine owns no timer of its own: every rule that depends on the
-    /// window compares this against the moment being resolved, so the score a
-    /// tap earns is decided by when the tap happened and nothing else.
-    public private(set) var boostDeadline: Date?
     public private(set) var heartFishProgress = 0
     public private(set) var heartFishTarget = GameConfig.heartFishCorrectAnswers
     public private(set) var isHeartFishAvailable = false
@@ -138,20 +132,6 @@ public final class MemoryGame {
 
     /// Whether a tap on an answer card can be accepted right now.
     public var acceptsInput: Bool { state == .answering }
-
-    /// Whether double points are running at `now`.
-    public func isStreakBoostActive(at now: Date) -> Bool {
-        guard let boostDeadline else { return false }
-        return now < boostDeadline
-    }
-
-    public var isStreakBoostActive: Bool { isStreakBoostActive(at: Date()) }
-
-    /// Seconds of double points left, for the countdown on the playing field.
-    public func streakBoostRemaining(at now: Date = Date()) -> TimeInterval {
-        guard let boostDeadline else { return 0 }
-        return max(0, boostDeadline.timeIntervalSince(now))
-    }
 
     /// Whether the answer values are readable. They are during the memorising
     /// beat, and again while the round resolves so the player can see what they
@@ -218,7 +198,6 @@ public final class MemoryGame {
         result.doubleCardsAnswered = session.doubleCardsAnswered
         result.bonusCards = session.bonusCards
         result.cardsEarned = session.cards
-        correctStreak = session.correctStreak ?? 0
         heartFishProgress = session.heartFishProgress ?? 0
         heartFishTarget = session.heartFishTarget ?? GameConfig.heartFishCorrectAnswers
         isHeartFishAvailable = session.isHeartFishAvailable ?? false
@@ -246,7 +225,6 @@ public final class MemoryGame {
                              bonusCards: result.bonusCards,
                              // Legacy field: the helper it counted is gone.
                              flamethrowersUsed: 0,
-                             correctStreak: correctStreak,
                              hasBonusFishPower: hasBonusFishPower,
                              heartFishProgress: heartFishProgress,
                              heartFishTarget: heartFishTarget,
@@ -280,8 +258,7 @@ public final class MemoryGame {
     @discardableResult
     public func select(optionID: UUID,
                        usesBonusFish: Bool = false,
-                       wrongAnswerCostHalves overrideWrongAnswerCostHalves: Int? = nil,
-                       now: Date = Date()) -> AnswerOutcome {
+                       wrongAnswerCostHalves overrideWrongAnswerCostHalves: Int? = nil) -> AnswerOutcome {
         guard state == .answering,
               let round,
               selectedOptionID == nil,
@@ -298,15 +275,11 @@ public final class MemoryGame {
 
         let outcome: AnswerOutcome
         if option.isCorrect {
-            // The answer is paid at the rate that was running when it was
-            // given: a catch made on the last tick of the window still doubles,
-            // and the five that reopen the window are not doubled by it.
-            let streakWasActive = isStreakBoostActive(at: now)
             // A caught bonus fish or a successful early golden approach
-            // doubles this answer through the same accounting path.
+            // doubles this answer.
             let earned = usesBonusFish
                 ? GameConfig.normalCardReward * GameConfig.bonusFishMultiplier
-                : GameConfig.normalCardReward * (streakWasActive ? GameConfig.streakMultiplier : 1)
+                : GameConfig.normalCardReward
             cards += earned
             result.correctAnswers += 1
             result.cardsEarned += earned
@@ -314,28 +287,13 @@ public final class MemoryGame {
                 result.doubleCardsAnswered += 1
             }
             result.bonusCards += earned - GameConfig.normalCardReward
-            correctStreak += 1
             advanceHeartFishProgressIfNeeded()
-            // Every fifth in a row, not only the first five: a long run keeps
-            // renewing its own window from the top.
-            let startedStreak = correctStreak.isMultiple(of: GameConfig.streakThreshold)
-            if startedStreak {
-                boostDeadline = now.addingTimeInterval(GameConfig.streakBoostDuration)
-            }
             outcome = .correct(cardsEarned: earned,
-                               usedBonusFish: usesBonusFish,
-                               startedStreak: startedStreak)
+                               usedBonusFish: usesBonusFish)
         } else {
-            // A mistake breaks the run towards the next window but does not
-            // close the one already running — it was earned, and taking it away
-            // mid-countdown reads as the game cheating.
-            let streakWasActive = isStreakBoostActive(at: now)
             result.wrongAnswers += 1
-            correctStreak = 0
             let lifeCost = overrideWrongAnswerCostHalves
-                ?? (streakWasActive
-                    ? GameConfig.streakWrongAnswerCostHalves
-                    : GameConfig.wrongAnswerCostHalves)
+                ?? GameConfig.wrongAnswerCostHalves
             spendLifeHalves(lifeCost)
             outcome = .wrong(correctOptionID: round.correctOption?.id ?? optionID,
                              lostHalfLife: lifeCost == 1)
@@ -369,14 +327,6 @@ public final class MemoryGame {
         cards += GameConfig.hoopComboBonus
         result.cardsEarned += GameConfig.hoopComboBonus
         result.bonusCards += GameConfig.hoopComboBonus
-    }
-
-    /// Pushes a running double-points window forward by the time the session
-    /// spent behind the pause card, so a break never eats into a reward the
-    /// player has already earned.
-    public func shiftBoostDeadline(by interval: TimeInterval) {
-        guard interval > 0, let boostDeadline else { return }
-        self.boostDeadline = boostDeadline.addingTimeInterval(interval)
     }
 
     /// A missed heart fish returns after four more correct answers, rather than

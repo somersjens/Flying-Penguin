@@ -27,9 +27,6 @@ public struct PausedSession: Codable, Equatable, Sendable {
     public let doubleCardsAnswered: Int
     public let bonusCards: Int
     public let flamethrowersUsed: Int
-    /// Optional so sessions written before the in-level streak feature remain
-    /// decodable and simply resume without an active streak/aura.
-    public let correctStreak: Int?
     public let hasBonusFishPower: Bool?
     /// Optional for compatibility with sessions saved before heart fish.
     public let heartFishProgress: Int?
@@ -47,7 +44,6 @@ public struct PausedSession: Codable, Equatable, Sendable {
                 doubleCardsAnswered: Int,
                 bonusCards: Int,
                 flamethrowersUsed: Int,
-                correctStreak: Int? = nil,
                 hasBonusFishPower: Bool? = nil,
                 heartFishProgress: Int? = nil,
                 heartFishTarget: Int? = nil,
@@ -62,7 +58,6 @@ public struct PausedSession: Codable, Equatable, Sendable {
         self.doubleCardsAnswered = doubleCardsAnswered
         self.bonusCards = bonusCards
         self.flamethrowersUsed = flamethrowersUsed
-        self.correctStreak = correctStreak
         self.hasBonusFishPower = hasBonusFishPower
         self.heartFishProgress = heartFishProgress
         self.heartFishTarget = heartFishTarget
@@ -80,7 +75,6 @@ public struct PausedSession: Codable, Equatable, Sendable {
             && cards >= 0
             && correctAnswers >= 0
             && wrongAnswers >= 0
-            && (correctStreak ?? 0) >= 0
             && (heartFishProgress ?? 0) >= 0
             && (heartFishTarget ?? GameConfig.heartFishCorrectAnswers) >= 1
     }

@@ -32,15 +32,7 @@ final class GameViewModel: ObservableObject {
     @Published private(set) var isGameOver = false
     @Published private(set) var result = SessionResult()
     @Published private(set) var hasBonusFishPower = false
-    @Published private(set) var correctStreak = 0
-    @Published private(set) var isStreakBoostActive = false
-    /// The moment double points run out, so the playing field can draw a live
-    /// countdown without asking the engine every frame.
-    @Published private(set) var boostDeadline: Date?
     @Published private(set) var isHeartFishAvailable = false
-    /// Changes each time the streak boost starts, allowing the view to replay
-    /// its bubble-style announcement even after an earlier streak was broken.
-    @Published private(set) var streakAnnouncementID = 0
     @Published private(set) var comboAnnouncementID = 0
     /// The most recent question answered incorrectly, with its answer filled
     /// in. It remains part of this run until a fresh run is started.
@@ -60,12 +52,6 @@ final class GameViewModel: ObservableObject {
     /// covering the reef. It runs once on continue instead of behind the card.
     private var pendingScheduledWork: (() -> Void)?
     private var lastCorrectCatchTime: TimeInterval?
-    /// Fires when the double-points window closes. The engine already scores by
-    /// timestamp; this only exists to drop the published flag, the music speed
-    /// and the countdown chip on the exact second they expire.
-    private var boostExpiryWork: DispatchWorkItem?
-    /// When the pause card went up, so the countdown can be handed back intact.
-    private var pausedAt: Date?
     /// The guided run's state machine. It is asked what to show and which
     /// answers count; it never touches the engine itself.
     private let tutorial = TutorialDirector()
@@ -132,7 +118,6 @@ final class GameViewModel: ObservableObject {
     func begin() {
         guard engine.state == .intro else { return }
         isPaused = false
-        pausedAt = nil
         PlaytimeTracker.shared.challengeStarted()
         AppAudio.shared.setGameplayActive(true)
         AppAudio.shared.playSessionStart()
@@ -170,13 +155,9 @@ final class GameViewModel: ObservableObject {
         recordResultIfNeeded()
         PlaytimeTracker.shared.challengeEnded()
         AppAudio.shared.setGameplayActive(false)
-        AppAudio.shared.setGameplayRate(1)
         generation &+= 1
         pendingScheduledWork = nil
         lastCorrectCatchTime = nil
-        boostExpiryWork?.cancel()
-        boostExpiryWork = nil
-        pausedAt = nil
     }
 
     /// Temporarily stops an active run without ending it. The snapshot also
@@ -188,13 +169,7 @@ final class GameViewModel: ObservableObject {
         savePausedSessionIfNeeded()
         PlaytimeTracker.shared.challengeEnded()
         AppAudio.shared.setGameplayActive(false)
-        AppAudio.shared.setGameplayRate(1)
         lastCorrectCatchTime = nil
-        // The countdown stops with the game; `resume` hands back exactly what
-        // was left on it.
-        boostExpiryWork?.cancel()
-        boostExpiryWork = nil
-        pausedAt = Date()
     }
 
     /// Continues the in-memory run after its pause card. No round is rebuilt,
@@ -202,16 +177,9 @@ final class GameViewModel: ObservableObject {
     func resume() {
         guard engine.state != .intro, engine.state != .gameOver else { return }
         isPaused = false
-        if let pausedAt {
-            engine.shiftBoostDeadline(by: Date().timeIntervalSince(pausedAt))
-            self.pausedAt = nil
-            scheduleBoostExpiry()
-        }
         PlaytimeTracker.shared.challengeStarted()
         AppAudio.shared.setGameplayActive(true)
         sync()
-        AppAudio.shared.setGameplayRate(isStreakBoostActive
-                                        ? Float(GameConfig.streakSpeedMultiplier) : 1)
         let work = pendingScheduledWork
         pendingScheduledWork = nil
         work?()
@@ -255,7 +223,6 @@ final class GameViewModel: ObservableObject {
         generation &+= 1
         hasRecordedResult = false
         isPaused = false
-        pausedAt = nil
         pendingScheduledWork = nil
         PausedSessionStore.shared.clear(request.board)
         engine = MemoryGame(level: request.level,
@@ -264,11 +231,8 @@ final class GameViewModel: ObservableObject {
         engine.start()
         hasBonusFishPower = false
         lastMissedChallenge = nil
-        streakAnnouncementID = 0
         comboAnnouncementID = 0
         lastCorrectCatchTime = nil
-        boostExpiryWork?.cancel()
-        boostExpiryWork = nil
         AppAudio.shared.playSessionStart()
         openRound()
         announceRound()
@@ -297,8 +261,7 @@ final class GameViewModel: ObservableObject {
         let spendsBonusFish = hasBonusFishPower
         let outcome = engine.select(optionID: optionID,
                                     usesBonusFish: usesSpeedBonus || spendsBonusFish,
-                                    wrongAnswerCostHalves: wrongAnswerCostHalves,
-                                    now: Date())
+                                    wrongAnswerCostHalves: wrongAnswerCostHalves)
         guard outcome != .ignored else { return false }
         // Every real interaction advances the playtime clock. Without these the
         // tracker only ever sees one gap from the first touch to the last,
@@ -308,7 +271,7 @@ final class GameViewModel: ObservableObject {
         let token = generation
         let delay: Double
         switch outcome {
-        case .correct(_, let usedBonusFish, let startedStreak):
+        case .correct(_, let usedBonusFish):
             let now = ProcessInfo.processInfo.systemUptime
             if let previous = lastCorrectCatchTime, now - previous <= 1 {
                 engine.awardFlyComboBonus()
@@ -319,13 +282,7 @@ final class GameViewModel: ObservableObject {
                 if spendsBonusFish { hasBonusFishPower = false }
                 AppAudio.shared.playDoubleScore()
             }
-            if startedStreak {
-                streakAnnouncementID &+= 1
-                AppAudio.shared.playDoubleScore()
-                scheduleBoostExpiry()
-            }
             tutorial.didAnswer(isCorrect: true)
-            if startedStreak { tutorial.didStartBonus() }
             delay = GameConfig.nextRoundDelay.correct
         case .wrong:
             lastMissedChallenge = engine.round?.question.solvedPrompt
@@ -356,7 +313,6 @@ final class GameViewModel: ObservableObject {
                 // Every completed passage opens the already-previewed next sum.
                 self.announceRound()
                 self.openRound()
-                self.tutorial.didOpenRound()
             }
             self.sync()
         }
@@ -382,26 +338,6 @@ final class GameViewModel: ObservableObject {
     /// water animation itself is the physical cue and should stay calm.
     func reportDiveOutcome() {
         AppAudio.shared.playCorrect()
-    }
-
-    /// Re-arms the countdown for whatever window the engine now holds. Called
-    /// on every fifth correct answer, so a run that lands another five with
-    /// three seconds left simply pushes the expiry back out to ten.
-    private func scheduleBoostExpiry() {
-        boostExpiryWork?.cancel()
-        guard let deadline = engine.boostDeadline else { return }
-        let work = DispatchWorkItem { [weak self] in
-            guard let self else { return }
-            self.boostExpiryWork = nil
-            self.sync()
-            // The window closing is the cue for the tutorial's last message.
-            self.tutorial.bonusDidEnd()
-        }
-        boostExpiryWork = work
-        DispatchQueue.main.asyncAfter(
-            deadline: .now() + max(0, deadline.timeIntervalSinceNow) + 0.05,
-            execute: work
-        )
     }
 
     /// Called by the reef when the player catches the passing 2x fish. Multiple
@@ -437,9 +373,6 @@ final class GameViewModel: ObservableObject {
         // The board filling up, or the lives running out, ends the lesson with
         // the session it was being taught in.
         tutorial.cancel()
-        AppAudio.shared.setGameplayRate(1)
-        boostExpiryWork?.cancel()
-        boostExpiryWork = nil
         recordResultIfNeeded()
     }
 
@@ -510,13 +443,8 @@ final class GameViewModel: ObservableObject {
         // uses its reason to decide whether to play the reef finale first.
         if engine.state == .gameOver { set(\.result, engine.result) }
         set(\.isGameOver, engine.state == .gameOver)
-        set(\.correctStreak, engine.correctStreak)
-        set(\.isStreakBoostActive, engine.isStreakBoostActive)
-        set(\.boostDeadline, isStreakBoostActive ? engine.boostDeadline : nil)
         set(\.isHeartFishAvailable, engine.isHeartFishAvailable)
         set(\.visibleRounds, engine.visibleRounds)
-        AppAudio.shared.setGameplayRate(isStreakBoostActive
-                                        ? Float(GameConfig.streakSpeedMultiplier) : 1)
     }
 
     private func set<Value: Equatable>(_ keyPath: ReferenceWritableKeyPath<GameViewModel, Value>,

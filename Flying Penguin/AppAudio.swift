@@ -277,8 +277,7 @@ final class AppAudio: NSObject, ObservableObject {
         prepareQueue.async { [weak self] in
             // AVAudioPlayer's endless loop keeps this single compressed music
             // asset in memory without repeatedly loading or creating players.
-            let music = Self.makePlayer(named: "frog_music", loops: -1, volume: 0,
-                                        enableRate: true)
+            let music = Self.makePlayer(named: "frog_music", loops: -1, volume: 0)
             DispatchQueue.main.async {
                 guard let self else { return }
                 if self.musicPlayer == nil { self.musicPlayer = music }
@@ -290,16 +289,11 @@ final class AppAudio: NSObject, ObservableObject {
     /// Builds a fully prepared player. Runs the decode/`prepareToPlay` cost on
     /// whatever (background) queue calls it.
     private static func makePlayer(named name: String, ext: String = "m4a",
-                                   loops: Int, volume: Float,
-                                   enableRate: Bool = false) -> AVAudioPlayer? {
+                                   loops: Int, volume: Float) -> AVAudioPlayer? {
         guard let url = Bundle.main.url(forResource: name, withExtension: ext),
               let player = try? AVAudioPlayer(contentsOf: url) else { return nil }
         player.numberOfLoops = loops
         player.volume = volume
-        // Rate has to be enabled before the player is prepared, otherwise the
-        // decoder is set up without the time-stretch stage and the streak
-        // speed-up has to reconfigure it mid-playback.
-        player.enableRate = enableRate
         player.prepareToPlay()
         return player
     }
@@ -468,24 +462,6 @@ final class AppAudio: NSObject, ObservableObject {
 
     private func setMusicVolume(_ volume: Float, fade: TimeInterval = 0.7) {
         musicPlayer?.setVolume(volume, fadeDuration: fade)
-    }
-
-    /// The playback rate currently applied to the loop, so a repeated request
-    /// for the rate already running is not passed on to the player.
-    private var appliedGameplayRate: Float = 1
-
-    /// Keeps the soundtrack in step with the temporary fast streak mode.
-    ///
-    /// This is called on every state sync — several times per answered sum —
-    /// and almost always asks for the rate that is already playing. Writing
-    /// `rate` re-times the running decoder, so the guard is what keeps a fast
-    /// run of correct answers from re-rating the music on every one of them.
-    func setGameplayRate(_ rate: Float) {
-        guard let player = musicPlayer else { return }
-        let clamped = min(max(rate, 0.5), 2)
-        guard clamped != appliedGameplayRate else { return }
-        appliedGameplayRate = clamped
-        player.rate = clamped
     }
 
     /// Fades the music out and stops it — used only when sound is switched off

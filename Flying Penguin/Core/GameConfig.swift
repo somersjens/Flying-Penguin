@@ -59,18 +59,6 @@ public enum GameConfig {
 
     // MARK: Bonuses
 
-    /// Every five correct answers in a row open a fixed window of double
-    /// points. The window is a reward for the run just made, so it keeps
-    /// counting down through a mistake instead of being snatched away; landing
-    /// another five in a row inside it simply restarts the full ten seconds.
-    public static let streakThreshold = 5
-    public static let streakMultiplier = 2
-    public static let streakBoostDuration: TimeInterval = 10
-    public static let streakSpeedMultiplier = 1.5
-    /// The first mistake while the streak boost is active breaks the streak,
-    /// but only costs half a life instead of a full one.
-    public static let streakWrongAnswerCostHalves = 1
-
     /// Two correct answers inside a second earn this on top of the catch. The
     /// banner announcing it reads the same number, so the two cannot drift.
     public static let hoopComboBonus = 1

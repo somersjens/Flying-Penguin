@@ -2,14 +2,12 @@
 //  Tutorial.swift
 //  Hungry Frog
 //
-//  The guided first run. It teaches the five things a child has to know — read
-//  the sum, catch the right fly, what a mistake costs, that five in a row pays a
-//  bonus, and where the score ends up — by letting them do each one rather than
-//  by describing it.
+//  The guided first run teaches the essentials: read the sum, catch the right
+//  fly, see what a mistake costs, and where the score ends up.
 //
 //  Nothing here re-implements a rule. The tutorial only decides *which* answers
 //  count while a step is being taught and *what* is being said about it; the sum,
-//  the score, the lives and the bonus all come out of `MemoryGame` exactly as
+//  the score and the lives come out of `MemoryGame` exactly as
 //  they do in a normal session, which is what makes the lesson true.
 //
 
@@ -18,7 +16,7 @@ import Combine
 
 // MARK: - Steps
 
-/// The five taught beats of a run. The sixth — where the score lands — belongs
+/// The three taught beats of a run. Where the score lands belongs
 /// to the menu the player comes back to, not to the game, so it is not a case
 /// here; see `TutorialCenter.pendingMenuStep`.
 enum TutorialStep: Int, Equatable, CaseIterable {
@@ -26,23 +24,17 @@ enum TutorialStep: Int, Equatable, CaseIterable {
     case findTheAnswer = 1
     /// Catch a wrong one on purpose, and see what it costs.
     case tryAWrongOne
-    /// Five in a row for the bonus.
-    case fiveInARow
-    /// The bonus is running.
-    case doublePoints
     /// Handing the game over.
-    case goodLuck
+    case goodLuck = 5
 
     var messageKey: String { "tutorial.step\(rawValue)" }
 
     /// One glyph per lesson, so a step is recognisable before it is read: the
-    /// sum, the mistake it costs, the run, the reward, and the send-off.
+    /// sum, the mistake it costs, and the send-off.
     var symbolName: String {
         switch self {
         case .findTheAnswer: return "plus.forwardslash.minus"
         case .tryAWrongOne:  return "heart.slash.fill"
-        case .fiveInARow:    return "flame.fill"
-        case .doublePoints:  return "sparkles"
         case .goodLuck:      return "hand.thumbsup.fill"
         }
     }
@@ -79,10 +71,6 @@ final class TutorialDirector {
     private static let farewell = 3.0
 
     private var stepWork: DispatchWorkItem?
-    /// The bonus can be renewed by another five in a row inside its own window;
-    /// only the first one moves the tutorial on.
-    private var hasTaughtBonus = false
-
     // MARK: Lifecycle
 
     func begin() {
@@ -107,14 +95,11 @@ final class TutorialDirector {
     /// never reaches the engine: the tongue goes out and comes back empty, so
     /// nothing is scored, nothing is lost, and the lesson stays on its rails.
     ///
-    /// This is also what keeps the player alive through the streak: the only
-    /// answer that counts while five in a row are being collected is the right
-    /// one, so there is no mistake to pay for.
     func accepts(isCorrect: Bool) -> Bool {
         switch step {
         case .tryAWrongOne:
             return !isCorrect
-        case .findTheAnswer, .fiveInARow, .doublePoints:
+        case .findTheAnswer:
             return isCorrect
         case .goodLuck, .none:
             return true
@@ -142,40 +127,14 @@ final class TutorialDirector {
             }
         case .tryAWrongOne where !isCorrect:
             schedule(after: Self.wrongHandover) { [weak self] in
-                self?.apply(step: .fiveInARow, pointer: .correct)
+                guard let self else { return }
+                self.apply(step: .goodLuck, pointer: nil)
+                self.schedule(after: Self.farewell) { [weak self] in
+                    self?.cancel()
+                }
             }
         default:
             break
-        }
-    }
-
-    /// A fresh sum is standing, so the answer is pointed out again. The arrow
-    /// stays on it until that answer is actually given — a hint that times out
-    /// on its own is a hint that vanishes exactly while it is being read.
-    ///
-    /// The bonus window is deliberately not included: it points the answer out
-    /// once, when it opens, and then leaves the player to it.
-    func didOpenRound() {
-        guard step == .fiveInARow, pointer == nil else { return }
-        pointer = .correct
-        onChange?()
-    }
-
-    /// Five in a row landed and the double-points window opened. The answer is
-    /// pointed out one last time here, until that sum is answered.
-    func didStartBonus() {
-        guard !hasTaughtBonus,
-              step == .fiveInARow || step == .doublePoints else { return }
-        hasTaughtBonus = true
-        apply(step: .doublePoints, pointer: .correct)
-    }
-
-    /// The window ran out: one last message, then the game is the player's.
-    func bonusDidEnd() {
-        guard step == .doublePoints else { return }
-        apply(step: .goodLuck, pointer: nil)
-        schedule(after: Self.farewell) { [weak self] in
-            self?.cancel()
         }
     }
 
