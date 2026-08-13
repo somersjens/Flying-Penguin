@@ -918,16 +918,26 @@ struct HomeView: View {
         holdsPreSessionValues = true
     }
 
-    /// The hand-over from the welcome flow. The menu is allowed to arrive first
-    /// and settle — the level rising over a menu that is already there reads as
-    /// one continuous movement, where opening the game on top of a cross-fade
-    /// reads as two screens fighting.
+    /// The hand-over from the welcome flow. The menu builds itself here, behind
+    /// the welcome screen that is still on top, and the guided level rises over
+    /// that — one continuous movement from the last answer into the game. Only
+    /// once the level covers the screen is the welcome screen let go, out of
+    /// sight, leaving the settled menu underneath to return to.
     private func startTutorialLevelIfRequested() {
-        guard let level = TutorialCenter.shared.takeAutoStartLevel() else { return }
+        guard let level = TutorialCenter.shared.takeAutoStartLevel() else {
+            TutorialCenter.shared.finishWelcomeHandover()
+            return
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + Self.tutorialHandoverDelay) {
-            guard selection == nil else { return }
+            guard selection == nil else {
+                TutorialCenter.shared.finishWelcomeHandover()
+                return
+            }
             rememberBeforePlaying(level)
             selection = LevelSelection(level: level, startsGuided: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + Self.tutorialCoverDuration) {
+                TutorialCenter.shared.finishWelcomeHandover()
+            }
         }
     }
 
@@ -981,9 +991,16 @@ struct HomeView: View {
 
     // MARK: Tutorial
 
-    /// How long the menu is given to settle before the guided level rises over
-    /// it.
-    private static let tutorialHandoverDelay = 0.55
+    /// How long the last welcome answer is left standing before the guided
+    /// level rises over it. Just enough for the tick on the chosen row to
+    /// register — the menu is being built behind it and needs no time of its
+    /// own, so any longer only stalls the movement into the game.
+    private static let tutorialHandoverDelay = 0.2
+
+    /// The full-screen cover's own presentation. The welcome screen is held for
+    /// this long after the level is asked for, so it is released behind a game
+    /// that already covers it rather than in view.
+    private static let tutorialCoverDuration = 0.7
 
     /// Back from a session: bank the totals and celebrate anything earned. The
     /// before-values are captured first, so the level score and the headers

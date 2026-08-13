@@ -66,6 +66,8 @@ enum PolarScene {
     static let ink = Color(red: 0.06, green: 0.24, blue: 0.46)
     /// Where the sea crosses `CannonLaunchPad`'s own frame.
     static let padWaterline: CGFloat = 0.40
+    /// Height of the levelled strip that carries the cannon's wheels.
+    static let padDeckFraction: CGFloat = 0.165
 }
 
 // MARK: - Sky
@@ -581,11 +583,6 @@ struct CannonLaunchPad: View {
                                  width: w,
                                  height: h)
 
-                // The short launch strip the cannon's wheels stand on, in its
-                // own livery. A stripe running the full width read as the hull
-                // of a boat instead.
-                LaunchPadStripes(width: w, height: h)
-
                 // Where the water meets the launch site.
                 Capsule()
                     .fill(theme.water.foam.opacity(0.88))
@@ -682,7 +679,7 @@ private struct LaunchPadDeck: Shape {
         path.addLine(to: CGPoint(x: w * 0.245, y: h * 0.215))
         // The levelled strip the wheels rest on.
         path.addLine(to: CGPoint(x: w * 0.32, y: h * 0.155))
-        path.addLine(to: CGPoint(x: w * 0.70, y: h * 0.165))
+        path.addLine(to: CGPoint(x: w * 0.70, y: h * PolarScene.padDeckFraction))
         path.addLine(to: CGPoint(x: w * 0.775, y: h * 0.075))
         path.addLine(to: CGPoint(x: w * 0.855, y: h * 0.235))
         path.addLine(to: CGPoint(x: w * 0.915, y: h * 0.165))
@@ -753,26 +750,5 @@ private struct LaunchPadFacets: Shape {
         path.move(to: CGPoint(x: w * 0.55, y: h * 0.165))
         path.addLine(to: CGPoint(x: w * 0.58, y: h * 0.70))
         return path
-    }
-}
-
-private struct LaunchPadStripes: View {
-    let width: CGFloat
-    let height: CGFloat
-
-    var body: some View {
-        HStack(spacing: 0) {
-            ForEach(0..<7, id: \.self) { index in
-                Rectangle()
-                    .fill(index.isMultiple(of: 2)
-                          ? Color(red: 0.88, green: 0.20, blue: 0.20)
-                          : Color.white)
-            }
-        }
-        .frame(width: width * 0.40, height: max(3, height * 0.05))
-        .clipShape(Capsule())
-        .overlay(Capsule().stroke(.white.opacity(0.9), lineWidth: 1.2))
-        .position(x: width * 0.40, y: height * 0.305)
-        .opacity(0.95)
     }
 }

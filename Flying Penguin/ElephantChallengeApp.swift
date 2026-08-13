@@ -30,6 +30,7 @@ struct ElephantChallengeApp: App {
     @State private var showsOnboardingReplay = false
     @StateObject private var language = LanguageManager.shared
     @StateObject private var promotedPurchase = PromotedPurchaseCoordinator.shared
+    @StateObject private var tutorial = TutorialCenter.shared
 
     init() {
         // Bring stored progress up to the current version before anything can
@@ -67,7 +68,14 @@ struct ElephantChallengeApp: App {
                         // replacing the other, so the hand-over reads as a
                         // single settling motion instead of a cut.
                         .transition(.opacity.combined(with: .scale(scale: 1.015)))
-                } else {
+                }
+                // Stays on top for the whole hand-over to the tutorial: the menu
+                // is built and settles behind it, and the guided level rises
+                // over the very screen the last answer was given on. Without
+                // this the menu would cross-fade in and straight back out, which
+                // reads as a screen flashing past on the way to the game.
+                if !onboardingComplete || showsOnboardingReplay
+                    || tutorial.isHandingOverFromWelcome {
                     OnboardingView {
                         withAnimation(.easeInOut(duration: 0.35)) {
                             showsOnboardingReplay = false

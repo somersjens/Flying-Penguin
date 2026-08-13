@@ -317,6 +317,12 @@ final class TutorialCenter: ObservableObject {
     /// appears. Nil at every other launch.
     @Published private(set) var autoStartLevel: MathLevel?
 
+    /// True from the last welcome answer until the guided level is on screen.
+    /// While it holds, the welcome screen stays put and the menu is built up
+    /// behind it: the child answered a question and the game rises over that
+    /// same screen, rather than the menu flashing past in between.
+    @Published private(set) var isHandingOverFromWelcome = false
+
     private init() {}
 
     /// Whether the player has ever been through a guided run. Only used to keep
@@ -329,12 +335,20 @@ final class TutorialCenter: ObservableObject {
     /// player just chose is what they will be taught on.
     func requestAutoStart(topic: MathTopic) {
         autoStartLevel = MathLevel(topic: topic, index: 1)
+        isHandingOverFromWelcome = true
     }
 
     /// Taken by the menu, once.
     func takeAutoStartLevel() -> MathLevel? {
         defer { autoStartLevel = nil }
         return autoStartLevel
+    }
+
+    /// The guided level covers the screen, so the welcome screen underneath it
+    /// has nothing left to hold. Also called when the hand-over cannot happen,
+    /// so a failed start can never leave the welcome screen on top.
+    func finishWelcomeHandover() {
+        isHandingOverFromWelcome = false
     }
 
     /// A guided run has begun.

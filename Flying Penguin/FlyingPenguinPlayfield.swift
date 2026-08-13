@@ -154,7 +154,9 @@ struct FlyingPenguinPlayfield: View {
     /// dead with nothing left to ask for.
     @State private var tutorialTurboTapped = false
 
-    private var penguinSize: CGFloat { sceneSize.height * (isPad ? 0.27 : 0.235) }
+    // iPad's squarer playfield already gives the character more visual weight.
+    // Retain a small tablet lift without letting it crowd the sum and water.
+    private var penguinSize: CGFloat { sceneSize.height * (isPad ? 0.245 : 0.235) }
     /// The rings leave a dedicated header band for the moving sum.
     /// Three touching hoops fill the complete answer column. Their shared size
     /// is derived from the available height, so there is no traversable gap.
@@ -194,9 +196,11 @@ struct FlyingPenguinPlayfield: View {
         hoopX + ringSetSpacing
     }
     private var cruiseSpeed: CGFloat {
-        // Removing the former 1.5x multiplier gives exactly 50% more time
-        // between sets without pushing the already-visible preview offscreen.
-        max(80, (sceneSize.width + hoopSize - normalPenguinX) / 5)
+        // A squarer iPad viewport has a little less horizontal reading runway.
+        // Give it roughly nine percent more time per set. Every moving world
+        // layer reads this speed, so scenery, markers and hoops stay locked.
+        let passageDuration: CGFloat = isPad ? 5.45 : 5
+        return max(80, (sceneSize.width + hoopSize - normalPenguinX) / passageDuration)
     }
     /// The lane assist is time based as well as size based. Turbo attempts
     /// therefore get more physical runway instead of cutting the correction
@@ -537,21 +541,61 @@ struct FlyingPenguinPlayfield: View {
                              // reads as a solid obstacle. Keep that gameplay
                              // corridor visually open, including while an old
                              // set is drifting out after an answer.
-                             exclusionXs: [hoopX],
+                             exclusionXs: [foregroundHoopAnchorX],
                              exclusionSpacing: ringSetSpacing)
         }
     }
 
+    /// A virtual first-ring corridor that is attached to the conveyor before
+    /// the first set exists. The real set is installed when the start marker
+    /// reaches the penguin; at that instant this anchor lands on `ringSpawnX`.
+    /// Keeping it alive before then prevents near-water items from blinking as
+    /// the launch changes from an empty field to its first set of hoops.
+    private var foregroundHoopAnchorX: CGFloat {
+        ringSpawnX + launchCameraOffset + startMarkerLead
+    }
+
+    private var startMarkerLead: CGFloat {
+        sceneSize.width * 0.58 - normalPenguinX
+    }
+
     /// The cannon stands on the pad's deck, so both are placed from the same
     /// number: raise or lower one and the other follows.
-    private var cannonCentreY: CGFloat { sceneSize.height * 0.735 }
+    private var cannonWidth: CGFloat { sceneSize.width * 0.269 }
+    private var cannonHeight: CGFloat { sceneSize.width * 0.179 }
+    private var launchPadHeight: CGFloat {
+        // Keep the launch rock as low and wide as the iPhone version. Scaling
+        // its width and height from different screen axes made it much taller
+        // on iPad's squarer viewport, which lifted the cannon onto a high peak.
+        min(sceneSize.height * 0.17, sceneSize.width * 0.0785)
+    }
+
+    private var cannonCentreY: CGFloat {
+        guard isPad else { return sceneSize.height * 0.735 }
+        // `canon.png` has transparent padding below the wheels: the last solid
+        // artwork row is 586 in a 683-pixel image. Anchor that visible edge,
+        // rather than the frame edge, to the levelled deck. This remains exact
+        // at every iPad preview size and avoids another screenshot-based offset.
+        let deckY = waterline
+            - launchPadHeight * (PolarScene.padWaterline - PolarScene.padDeckFraction)
+        let visibleWheelBottom = CGFloat(586) / CGFloat(683)
+        let wheelOffsetFromCentre = cannonHeight * (visibleWheelBottom - 0.5)
+        let contactOverlap = min(3, launchPadHeight * 0.035)
+        return deckY - wheelOffsetFromCentre + contactOverlap
+    }
+
+    /// The character and the cannon share one launch origin. Any iPad deck
+    /// correction therefore also moves the loaded pose and the first frame of
+    /// the flight, keeping the character inside the barrel until departure.
+    private var cannonMuzzleY: CGFloat {
+        cannonCentreY - cannonHeight * 0.22
+    }
 
     private var cannonLaunch: some View {
         CannonLaunchScene(stage: entranceStage,
                           reduceMotion: reduceMotion,
                           layer: .base)
-            .frame(width: sceneSize.width * 0.269,
-                   height: sceneSize.width * 0.179)
+            .frame(width: cannonWidth, height: cannonHeight)
             .position(x: launchPlatformX, y: cannonCentreY)
             .allowsHitTesting(false)
     }
@@ -560,8 +604,7 @@ struct FlyingPenguinPlayfield: View {
         CannonLaunchScene(stage: entranceStage,
                           reduceMotion: reduceMotion,
                           layer: .barrelForeground)
-            .frame(width: sceneSize.width * 0.269,
-                   height: sceneSize.width * 0.179)
+            .frame(width: cannonWidth, height: cannonHeight)
             .position(x: launchPlatformX, y: cannonCentreY)
             .allowsHitTesting(false)
     }
@@ -571,7 +614,7 @@ struct FlyingPenguinPlayfield: View {
     /// happened to be drifting past — and since both travel at the same speed,
     /// that floe stayed in the way for the whole entrance.
     private var cannonPlatform: some View {
-        let height = sceneSize.height * 0.17
+        let height = launchPadHeight
         return CannonLaunchPad(theme: scenery)
             .frame(width: sceneSize.width * 0.25, height: height)
             .position(x: launchPlatformX,
@@ -814,9 +857,9 @@ struct FlyingPenguinPlayfield: View {
 
     private var displayedPenguinY: CGFloat {
         switch entranceStage {
-        // The muzzle's own height, so the penguin leaves the barrel rather than
-        // appearing beside it. It follows `cannonCentreY`.
-        case 0, 1, 2: return cannonCentreY - sceneSize.width * 0.179 * 0.22
+        // The muzzle's own height, so the character leaves the barrel rather
+        // than appearing beside it. It follows every iPad deck correction.
+        case 0, 1, 2: return cannonMuzzleY
         case 3: return lanes[1]
         case 4: return lanes[1]
         default: return penguinY
@@ -2158,12 +2201,12 @@ private struct MovingQuestionBadge: View {
 
     var body: some View {
         Text(prompt)
-            .font(.system(size: isPad ? 32 : 23, weight: .black, design: .rounded))
+            .font(.system(size: isPad ? 36 : 23, weight: .black, design: .rounded))
             .foregroundStyle(character.deepColor)
             .lineLimit(1)
             .minimumScaleFactor(0.72)
-            .padding(.horizontal, isPad ? 23 : 17)
-            .padding(.vertical, isPad ? 10 : 8)
+            .padding(.horizontal, isPad ? 25 : 17)
+            .padding(.vertical, isPad ? 11 : 8)
             .background(.white.opacity(0.95), in: Capsule())
             .overlay(Capsule().stroke(character.color.opacity(0.42), lineWidth: 2))
             .shadow(color: .black.opacity(0.10), radius: 4, y: 2)

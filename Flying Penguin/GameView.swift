@@ -218,7 +218,7 @@ struct GameView: View {
                               // The HUD's own height, so the swarm's ceiling is
                               // the underside of the HUD and never the status bar
                               // or the Dynamic Island behind it.
-                              topReserve: topInset + (isPad ? 64 : 50),
+                              topReserve: topInset + (isPad ? 76 : 50),
                               bottomReserve: screenInsets.bottom,
                               // What the tutorial is teaching, what it is
                               // saying, and where its answers go back to. All
@@ -265,7 +265,7 @@ struct GameView: View {
                     ComboHoopBanner(token: model.comboAnnouncementID,
                                    character: character,
                                    isPad: isPad)
-                        .padding(.top, topInset + (isPad ? 116 : 88))
+                        .padding(.top, topInset + (isPad ? 142 : 88))
                         .allowsHitTesting(false)
                 }
 
@@ -405,7 +405,7 @@ struct GameView: View {
                                       character: character,
                                       isPad: isPad)
                             .fixedSize()
-                            .offset(x: isPad ? 74 : 58)
+                            .offset(x: isPad ? 88 : 58)
                     }
                 }
         }
@@ -438,18 +438,17 @@ struct GameView: View {
 
     /// Every status capsule shares one comfortable touch height, while the
     /// symbols retain enough breathing room to stay legible over the pond.
-    private var hudControlSize: CGFloat { isPad ? 48 : 40 }
-    private var hudStackSpacing: CGFloat { isPad ? 6 : 5 }
-    private var hudSymbolSize: CGFloat { isPad ? 31 : 24 }
-    private var hudHeartSize: CGFloat { isPad ? 27 : 22 }
-    private var pauseGlyphSize: CGFloat { isPad ? 22 : 18 }
-    private var hudNumberSize: CGFloat { isPad ? 27 : 21 }
+    private var hudControlSize: CGFloat { isPad ? 58 : 40 }
+    private var hudStackSpacing: CGFloat { isPad ? 8 : 5 }
+    private var hudHeartSize: CGFloat { isPad ? 34 : 22 }
+    private var pauseGlyphSize: CGFloat { isPad ? 27 : 18 }
+    private var hudNumberSize: CGFloat { isPad ? 33 : 21 }
 
     /// Just the bubbles banked this session. What the board holds is quoted on
     /// the start card and again on the result card, so the playing field does
     /// not have to carry it too.
     private var progressCounter: some View {
-        ZStack(alignment: .bottomTrailing) {
+        ZStack {
             Circle()
                 .fill(character.deepColor)
                 .overlay(Circle().stroke(.white.opacity(0.92), lineWidth: 3))
@@ -460,10 +459,6 @@ struct GameView: View {
                 .contentTransition(.numericText(value: Double(model.cards)))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundStyle(.white)
-            CurrencyIcon(size: hudSymbolSize * 0.48)
-                .foregroundStyle(character.color)
-                .background(.white, in: Circle())
-                .padding(isPad ? 4 : 3)
         }
         .frame(width: hudControlSize, height: hudControlSize)
         .foregroundStyle(character.deepColor)
