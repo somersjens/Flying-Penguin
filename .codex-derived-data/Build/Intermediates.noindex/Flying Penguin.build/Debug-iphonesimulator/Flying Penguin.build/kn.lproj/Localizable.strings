@@ -54,6 +54,8 @@
 	<string>ಇನ್ನೇನು ತಲುಪುತ್ತೀಯ</string>
 	<key>game.encouragement.complete</key>
 	<string>ಎಲ್ಲವೂ ಸರಿಯಾಗಿದೆ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ನೀನು ಎಲ್ಲಾ ವಲಯಗಳನ್ನು ಸಂಗ್ರಹಿಸಿದ್ದೀಯ</string>
 	<key>game.end.completionSuffix</key>
 	<string>ಪೂರ್ಣ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ಸಂಖ್ಯೆಯನ್ನು **ಕೂಡಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ಸೇರಿಸು</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ವಲಯಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ಸಂಖ್ಯೆಯನ್ನು **ಭಾಗಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ನಿನ್ನ ಹೆಸರು</string>
 	<key>name.whatsYourName</key>
 	<string>ನಿನ್ನ ಹೆಸರೇನು?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ಅನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಲು ಇನ್ನೂ ಕೆಲವು ವಲಯಗಳನ್ನು ಗಳಿಸು! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ನಿನ್ನ ಪ್ರಾಣಿಗಳು ಕಾಯುತ್ತಿವೆ. ಮತ್ತೆ ಆಟಕ್ಕೆ ಬಂದು ಇನ್ನಷ್ಟು ವಲಯಗಳನ್ನು ಸಂಗ್ರಹಿಸು!</string>
 	<key>notif.comeback.title</key>
 	<string>ನಾವು ನಿನ್ನನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೇವೆ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ಜಂಪಿಂಗ್ ಫಾಕ್ಸ್ ಪ್ರೀಮಿಯಂ ಪ್ರತಿ ವಿಷಯ ಮತ್ತು ಎಲ್ಲಾ 10 ಪ್ರಾಣಿಗಳಿಗೆ %lld ಹಂತಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಸಾಹಸವು ಮುಂದುವರಿಯುತ್ತದೆ!</string>
 	<key>notif.premium.title</key>
 	<string>ಹೆಚ್ಚಿನ ಮಟ್ಟಗಳು ಮತ್ತು ಪ್ರಾಣಿಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ದಿನಗಳಾಗಿವೆ. ಕೆಲವು ಲೆಕ್ಕಗಳನ್ನು ಬಿಡಿಸಿ ಇನ್ನಷ್ಟು ವಲಯಗಳನ್ನು ಗಳಿಸೋಣ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ಮತ್ತೆ ಆಡಲು ಸಿದ್ಧರಿದ್ದೀರಾ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ತಟ್ಟುಗಳು: %2$lldರಲ್ಲಿ %1$lld</string>
 	<key>parentGate.title</key>
 	<string>ವಯಸ್ಕರ ಅನುಮತಿ ಅಗತ್ಯ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ವಲಯಗಳಿಂದ ಲಭ್ಯ</string>
 	<key>premium.availableFromStart</key>
 	<string>ಆರಂಭದಿಂದಲೇ ಲಭ್ಯ</string>
 	<key>premium.characterUnlocked</key>
 	<string>ಹೊಸ ಪಾತ್ರವನ್ನು ತೆರೆಯಲಾಗಿದೆ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ನೀನು %lld ವಲಯಗಳನ್ನು ಗಳಿಸಿದ್ದೀಯ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium ಜೊತೆಗೆ ಮಾತ್ರ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ನೀನು ಈಗ ಆಟದ ಮಧ್ಯದಲ್ಲಿದ್ದೀಯ. ಮೊದಲು ಅದನ್ನು ಮುಗಿಸು, ಅಥವಾ ಇನ್ನೂ ಆರಂಭಿಸದ ಹಂತವನ್ನು ಆರಿಸಿ ಟ್ಯುಟೋರಿಯಲ್ ಆಡು.</string>
 	<key>tutorial.notice.title</key>
 	<string>ಆಟದ ಆರಂಭದಲ್ಲಿ ಮಾತ್ರ</string>
+	<key>tutorial.step1</key>
+	<string>ನನ್ನನ್ನು ಹಿಡಿದು ಮೇಲಕ್ಕೆ ಅಥವಾ ಕೆಳಕ್ಕೆ ಎಳೆ, ನಾನು ಗಾಳಿಯಲ್ಲಿ ಹಾರುತ್ತೇನೆ!</string>
+	<key>tutorial.step2</key>
+	<string>ನನ್ನ ಮೇಲೋ ಕೆಳಗೋ ಟ್ಯಾಪ್ ಮಾಡು. ನಾನು ನೇರವಾಗಿ ಆ ದಿಕ್ಕಿಗೆ ಹಾರುತ್ತೇನೆ!</string>
+	<key>tutorial.step3</key>
+	<string>ಸರಿಯಾದ ಉತ್ತರ ಕಾಣುತ್ತಿಲ್ಲವೇ? ವಲಯಗಳ ಕೆಳಗಿನಿಂದ ಹಾರಿ ಹೋಗು!</string>
+	<key>tutorial.step4</key>
+	<string>ವಲಯಗಳ ಮೇಲಿನ ಲೆಕ್ಕವನ್ನು ಬೇಗ ಬಿಡಿಸು! ಸರಿಯಾದ ಉತ್ತರದ ಮೂಲಕ ಹಾರಿ 1 ಅಂಕ ಗಳಿಸು.</string>
+	<key>tutorial.step5</key>
+	<string>ಉತ್ತರ ಗೊತ್ತೇ? TURBOಗಾಗಿ ಸರಿಯಾದ ವಲಯ ಟ್ಯಾಪ್ ಮಾಡು! ಕೋನ್ ಮುಂಚೆ ಟ್ಯಾಪ್ ಮಾಡಿ 2 ಅಂಕ ಗಳಿಸು.</string>
+	<key>tutorial.step6</key>
+	<string>ಎಚ್ಚರಿಕೆ! ತಪ್ಪು ವಲಯದ ಮೂಲಕ ಹಾರಿದರೆ ಒಂದು ಜೀವ ಕಳೆದುಕೊಳ್ಳುತ್ತೀಯ.</string>
+	<key>tutorial.step7</key>
+	<string>ಎಲ್ಲವೂ ಗೊತ್ತಾಯಿತು! ಈಗ ಹಾರುವ ಸಮಯ. ಶುಭವಾಗಲಿ!</string>
 </dict>
 </plist>

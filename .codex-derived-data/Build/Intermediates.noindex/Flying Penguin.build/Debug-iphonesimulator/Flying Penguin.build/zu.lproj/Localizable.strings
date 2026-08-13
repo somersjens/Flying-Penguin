@@ -54,6 +54,8 @@
 	<string>Usuzofika</string>
 	<key>game.encouragement.complete</key>
 	<string>Konke kulungile!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Uqoqe wonke amaringi</string>
 	<key>game.end.completionSuffix</key>
 	<string>kuqediwe!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Izibalo lapho **wengeza** inombolo.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Hlanganisa %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Kuleli zinga ungaqoqa kuze kufike **%lld amaringi**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Izibalo lapho **uhlukanisa** inombolo.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Igama lakho</string>
 	<key>name.whatsYourName</key>
 	<string>Ungubani igama lakho?</string>
+	<key>notif.animal.body %@</key>
+	<string>Zuza amanye amaringi ambalwa ukuze uvule %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Izilwane zakho zilindile. Buyela emdlalweni uqhubeke nokuqoqa amaringi!</string>
 	<key>notif.comeback.title</key>
 	<string>Siyakukhumbula! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>I-Hungry Frog Premium ifaka amazinga angama-%lld esihlokweni ngasinye nazo zonke izilwane eziyi-10. I-adventure iyaqhubeka!</string>
 	<key>notif.premium.title</key>
 	<string>Vula amazinga engeziwe nezilwane! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Sekudlule izinsuku ezingu-%lld. Masixazulule izibalo bese sithola amaringi engeziwe!</string>
 	<key>notif.reactivate.title</key>
 	<string>Usulungele ukudlala futhi? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Ukuthepha: %1$lld kokungu-%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Kudingeka imvume yomuntu omdala</string>
+	<key>premium.availableAt %lld</key>
+	<string>Kutholakala kusukela ku-%lld amaringi</string>
 	<key>premium.availableFromStart</key>
 	<string>Kutholakala kusukela ekuqaleni</string>
 	<key>premium.characterUnlocked</key>
 	<string>KUVULWE UMLINGISWA OMUSHA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Uzuze amaringi angu-%lld</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Okwe-Premium kuphela</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Usaphakathi komdlalo. Qeda wona, noma ukhethe izinga ongakaliqali, ukuze udlale ukufundiswa.</string>
 	<key>tutorial.notice.title</key>
 	<string>Ekuqaleni komdlalo kuphela</string>
+	<key>tutorial.step1</key>
+	<string>Ngibambe ungidonsele phezulu noma phansi ukuze ngindize emoyeni!</string>
+	<key>tutorial.step2</key>
+	<string>Thinta ngenhla noma ngezansi kwami. Ngizondiza ngiqonde kuleyo ndlela!</string>
+	<key>tutorial.step3</key>
+	<string>Awuyiboni impendulo efanele? Ndiza ngaphansi kwamaringi!</string>
+	<key>tutorial.step4</key>
+	<string>Xazulula ngokushesha isibalo esingaphezu kwamaringi! Ndiza empendulweni efanele uthole iphuzu eli-1.</string>
+	<key>tutorial.step5</key>
+	<string>Uyazi impendulo? Thinta iringi efanele ukuze uthole TURBO! Thinta ngaphambi kwekhoni uthole amaphuzu ama-2.</string>
+	<key>tutorial.step6</key>
+	<string>Qaphela! Uma undiza eringini engalungile, uzolahlekelwa impilo eyodwa.</string>
+	<key>tutorial.step7</key>
+	<string>Usukwazi konke! Isikhathi sokundiza. Inhlanhla!</string>
 </dict>
 </plist>

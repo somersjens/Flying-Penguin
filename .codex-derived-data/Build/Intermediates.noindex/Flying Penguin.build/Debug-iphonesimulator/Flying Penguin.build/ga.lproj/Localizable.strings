@@ -54,6 +54,8 @@
 	<string>Tá tú beagnach ann</string>
 	<key>game.encouragement.complete</key>
 	<string>Scór foirfe!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Bhailigh tú na fonsaí go léir</string>
 	<key>game.end.completionSuffix</key>
 	<string>críochnaithe!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Suimeanna ina **gcuireann tú** uimhir leis.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Cuir %lld leis</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Is féidir leat suas le **%lld fonsa** a bhailiú sa leibhéal seo.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Suimeanna ina **roinneann tú** uimhir.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>D’ainm</string>
 	<key>name.whatsYourName</key>
 	<string>Cad is ainm duit?</string>
+	<key>notif.animal.body %@</key>
+	<string>Faigh cúpla fonsa eile chun %@ a dhíghlasáil! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tá d’ainmhithe ag fanacht. Tar ar ais agus lean ort ag bailiú fonsaí!</string>
 	<key>notif.comeback.title</key>
 	<string>Is fada uainn thú! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Cuimsíonn Hungry Frog Premium %lld leibhéal do gach ábhar agus do gach 10 n-ainmhí. Leanann an eachtra ar aghaidh!</string>
 	<key>notif.premium.title</key>
 	<string>Díghlasáil níos mó leibhéil agus ainmhithe! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Tá %lld lá caite. Réitímis cúpla suim agus faighimis tuilleadh fonsaí!</string>
 	<key>notif.reactivate.title</key>
 	<string>Réidh le himirt arís? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tapálacha: %1$lld as %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cead duine fásta de dhíth</string>
+	<key>premium.availableAt %lld</key>
+	<string>Ar fáil ó %lld fonsa</string>
 	<key>premium.availableFromStart</key>
 	<string>Ar fáil ón tús</string>
 	<key>premium.characterUnlocked</key>
 	<string>CARACHTAR NUA DÍGHLASÁILTE</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Tá %lld fonsa tuillte agat</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eisiach le Préimh</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Tá tú i lár cluiche. Críochnaigh é, nó roghnaigh leibhéal nár thosaigh tú fós, chun an treoir a imirt.</string>
 	<key>tutorial.notice.title</key>
 	<string>Ag tús cluiche amháin</string>
+	<key>tutorial.step1</key>
+	<string>Coinnigh greim orm agus tarraing suas nó síos mé chun eitilt san aer!</string>
+	<key>tutorial.step2</key>
+	<string>Tapáil os mo chionn nó fúm. Eitleoidh mé díreach sa treo sin!</string>
+	<key>tutorial.step3</key>
+	<string>Ní fheiceann tú an freagra ceart? Tum faoi na fonsaí!</string>
+	<key>tutorial.step4</key>
+	<string>Réitigh an tsuim os cionn na bhfonsaí go tapa! Eitil tríd an bhfreagra ceart agus faigh 1 phointe.</string>
+	<key>tutorial.step5</key>
+	<string>An bhfuil an freagra ar eolas agat? Tapáil an fonsa ceart do TURBO! Tapáil roimh an gcón agus faigh 2 phointe.</string>
+	<key>tutorial.step6</key>
+	<string>Seachain! Má eitlíonn tú tríd an bhfonsa mícheart, caillfidh tú beatha.</string>
+	<key>tutorial.step7</key>
+	<string>Tá gach rud ar eolas agat! Am eitilt. Ádh mór!</string>
 </dict>
 </plist>

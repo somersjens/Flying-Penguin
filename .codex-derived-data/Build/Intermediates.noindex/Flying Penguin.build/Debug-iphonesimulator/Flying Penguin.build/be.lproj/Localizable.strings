@@ -54,6 +54,8 @@
 	<string>Ты амаль дайшоў</string>
 	<key>game.encouragement.complete</key>
 	<string>Усё правільна!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ты сабраў усе абручы</string>
 	<key>game.end.completionSuffix</key>
 	<string>завершана!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Прыклады, дзе трэба **дадаць** лік.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Дадаць %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На гэтым узроўні можна сабраць да **%lld абручоў**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Прыклады, дзе трэба **дзяліць** лік.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Тваё імя</string>
 	<key>name.whatsYourName</key>
 	<string>Як цябе завуць?</string>
+	<key>notif.animal.body %@</key>
+	<string>Збяры яшчэ некалькі абручоў, каб адкрыць %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Твае жывёлы чакаюць. Вяртайся ў гульню і працягвай збіраць абручы!</string>
 	<key>notif.comeback.title</key>
 	<string>Мы сумуем па табе! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium уключае %lld узроўняў для кожнай тэмы і ўсіх 10 жывёл. Прыгоды працягваюцца!</string>
 	<key>notif.premium.title</key>
 	<string>Разблакуйце больш узроўняў і жывёл! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Прайшло %lld дзён. Давай рашаць прыклады і зарабляць больш абручоў!</string>
 	<key>notif.reactivate.title</key>
 	<string>Гатовы зноў гуляць? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Націсканні: %1$lld з %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Патрэбна згода дарослага</string>
+	<key>premium.availableAt %lld</key>
+	<string>Даступна ад %lld абручоў</string>
 	<key>premium.availableFromStart</key>
 	<string>Даступна з самага пачатку</string>
 	<key>premium.characterUnlocked</key>
 	<string>АДКРЫТЫ НОВЫ ПЕРСАНАЖ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ты зарабіў %lld абручоў</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Эксклюзіўна з Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Ты ўжо гуляеш. Скончы гульню або выберы яшчэ не пачаты ўзровень, каб прайсці навучанне.</string>
 	<key>tutorial.notice.title</key>
 	<string>Толькі ў пачатку гульні</string>
+	<key>tutorial.step1</key>
+	<string>Трымай мяне і цягні ўверх або ўніз, каб я ляцеў!</string>
+	<key>tutorial.step2</key>
+	<string>Націсні вышэй або ніжэй мяне. Я палячу проста туды!</string>
+	<key>tutorial.step3</key>
+	<string>Не бачыш правільны адказ? Нырні пад абручамі!</string>
+	<key>tutorial.step4</key>
+	<string>Хутка рашы прыклад над абручамі! Праляці праз правільны адказ і атрымай 1 бал.</string>
+	<key>tutorial.step5</key>
+	<string>Ведаеш адказ? Націсні правільны абруч для TURBO! Націсні да конуса і атрымай 2 балы.</string>
+	<key>tutorial.step6</key>
+	<string>Асцярожна! Праляціш праз няправільны абруч — страціш жыццё.</string>
+	<key>tutorial.step7</key>
+	<string>Ты ўсё ведаеш! Час ляцець. Поспехаў!</string>
 </dict>
 </plist>

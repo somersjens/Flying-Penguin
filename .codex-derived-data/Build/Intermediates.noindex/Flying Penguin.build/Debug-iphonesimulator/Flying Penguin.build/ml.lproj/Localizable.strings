@@ -54,6 +54,8 @@
 	<string>ഇനി കുറച്ചേ ഉള്ളൂ</string>
 	<key>game.encouragement.complete</key>
 	<string>പൂർണ്ണ സ്കോർ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>നീ എല്ലാ വളയങ്ങളും ശേഖരിച്ചു</string>
 	<key>game.end.completionSuffix</key>
 	<string>പൂർത്തിയായി!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ഒരു സംഖ്യ **കൂട്ടുന്ന** കണക്കുകൾ.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld കൂട്ടുക</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ഈ ലെവലിൽ പരമാവധി **%lld വളയങ്ങൾ** ശേഖരിക്കാം.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ഒരു സംഖ്യ **ഹരിക്കുന്ന** കണക്കുകൾ.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>നിന്റെ പേര്</string>
 	<key>name.whatsYourName</key>
 	<string>നിന്റെ പേരെന്താണ്?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ അൺലോക്ക് ചെയ്യാൻ കുറച്ച് വളയങ്ങൾ കൂടി നേടൂ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>നിന്റെ മൃഗങ്ങൾ കാത്തിരിക്കുന്നു. തിരികെ വന്ന് വളയങ്ങൾ ശേഖരിക്കുന്നത് തുടരൂ!</string>
 	<key>notif.comeback.title</key>
 	<string>എനിക്ക് നിന്നെ മിസ്സാകും! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ജമ്പിംഗ് ഫോക്സ് പ്രീമിയത്തിൽ ഓരോ വിഷയത്തിനും എല്ലാ 10 മൃഗങ്ങൾക്കും %lld ലെവലുകൾ ഉൾപ്പെടുന്നു. സാഹസികത തുടരുന്നു!</string>
 	<key>notif.premium.title</key>
 	<string>കൂടുതൽ ലെവലുകളും മൃഗങ്ങളും അൺലോക്ക് ചെയ്യുക! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ദിവസമായി. കുറച്ച് കണക്കുകൾ ചെയ്യാം, കൂടുതൽ വളയങ്ങൾ നേടാം!</string>
 	<key>notif.reactivate.title</key>
 	<string>വീണ്ടും കളിക്കാൻ തയ്യാറാണോ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>തട്ടുകൾ: %1$lldൽ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>മുതിർന്നയാളുടെ അനുമതി വേണം</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld വളയങ്ങളിൽ നിന്ന് ലഭ്യം</string>
 	<key>premium.availableFromStart</key>
 	<string>തുടക്കം മുതൽ ലഭ്യം</string>
 	<key>premium.characterUnlocked</key>
 	<string>പുതിയ കഥാപാത്രം തുറന്നു</string>
+	<key>premium.earnedCards %lld</key>
+	<string>നീ %lld വളയങ്ങൾ നേടി</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium-ൽ മാത്രം</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>നീ ഇപ്പോൾ ഒരു കളിയുടെ നടുവിലാണ്. അത് തീർക്കൂ, അല്ലെങ്കിൽ തുടങ്ങാത്തൊരു ലെവൽ തിരഞ്ഞെടുത്ത് ട്യൂട്ടോറിയൽ കളിക്കൂ.</string>
 	<key>tutorial.notice.title</key>
 	<string>കളിയുടെ തുടക്കത്തിൽ മാത്രം</string>
+	<key>tutorial.step1</key>
+	<string>എന്നെ പിടിച്ച് മുകളിലേക്കോ താഴേക്കോ വലിക്കൂ, ഞാൻ വായുവിലൂടെ പറക്കും!</string>
+	<key>tutorial.step2</key>
+	<string>എന്റെ മുകളിലോ താഴെയോ ടാപ്പ് ചെയ്യൂ. ഞാൻ നേരെ ആ ദിശയിൽ പറക്കും!</string>
+	<key>tutorial.step3</key>
+	<string>ശരിയായ ഉത്തരം കാണുന്നില്ലേ? വളയങ്ങളുടെ അടിയിലൂടെ പോകൂ!</string>
+	<key>tutorial.step4</key>
+	<string>വളയങ്ങളുടെ മുകളിലെ കണക്ക് വേഗം ചെയ്യൂ! ശരിയുത്തരത്തിലൂടെ പറന്ന് 1 പോയിന്റ് നേടൂ.</string>
+	<key>tutorial.step5</key>
+	<string>ഉത്തരം അറിയാമോ? TURBOയ്ക്ക് ശരിയായ വളയം ടാപ്പ് ചെയ്യൂ! കോണിന് മുമ്പ് ടാപ്പ് ചെയ്ത് 2 പോയിന്റ് നേടൂ.</string>
+	<key>tutorial.step6</key>
+	<string>ശ്രദ്ധിക്കൂ! തെറ്റായ വളയത്തിലൂടെ പറന്നാൽ ഒരു ജീവൻ നഷ്ടപ്പെടും.</string>
+	<key>tutorial.step7</key>
+	<string>എല്ലാം അറിയാം! ഇനി പറക്കാം. ആശംസകൾ!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Już prawie</string>
 	<key>game.encouragement.complete</key>
 	<string>Idealnie!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Zebrano wszystkie obręcze</string>
 	<key>game.end.completionSuffix</key>
 	<string>ukończono!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Działania, w których **dodajesz** liczbę.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Dodaj %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Na tym poziomie możesz zebrać do **%lld obręczy**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Działania, w których **dzielisz** liczbę.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Twoje imię</string>
 	<key>name.whatsYourName</key>
 	<string>Jak masz na imię?</string>
+	<key>notif.animal.body %@</key>
+	<string>Zdobądź jeszcze kilka obręczy, aby odblokować %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Twoje zwierzęta czekają. Wracaj do gry i zbieraj kolejne obręcze!</string>
 	<key>notif.comeback.title</key>
 	<string>Tęsknimy za tobą! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium zawiera %lld poziomów dla każdego tematu i wszystkich 10 zwierząt. Przygoda trwa!</string>
 	<key>notif.premium.title</key>
 	<string>Odblokuj więcej poziomów i zwierząt! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Minęło %lld dni. Rozwiążmy kilka działań i zdobądźmy więcej obręczy!</string>
 	<key>notif.reactivate.title</key>
 	<string>Gotowy do ponownej gry? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Stuknięcia: %1$lld z %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Wymagana zgoda dorosłego</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dostępne od %lld obręczy</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostępne od początku</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODBLOKOWANO NOWĄ POSTAĆ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Zdobyto %lld obręczy</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Tylko z Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Jesteś w trakcie gry. Dokończ ją albo wybierz jeszcze nierozpoczęty poziom, aby uruchomić samouczek.</string>
 	<key>tutorial.notice.title</key>
 	<string>Tylko na początku gry</string>
+	<key>tutorial.step1</key>
+	<string>Przytrzymaj mnie i przeciągnij w górę lub w dół, żebym leciał/a!</string>
+	<key>tutorial.step2</key>
+	<string>Dotknij nad lub pod mną. Polecę prosto w tę stronę!</string>
+	<key>tutorial.step3</key>
+	<string>Nie widzisz poprawnej odpowiedzi? Zanurkuj pod obręczami!</string>
+	<key>tutorial.step4</key>
+	<string>Szybko rozwiąż działanie nad obręczami! Przeleć przez dobrą odpowiedź i zdobądź 1 punkt.</string>
+	<key>tutorial.step5</key>
+	<string>Znasz odpowiedź? Dotknij dobrej obręczy, by włączyć TURBO! Dotknij przed pachołkiem i zdobądź 2 punkty.</string>
+	<key>tutorial.step6</key>
+	<string>Uważaj! Jeśli przelecisz przez złą obręcz, stracisz jedno życie.</string>
+	<key>tutorial.step7</key>
+	<string>Wiesz już wszystko! Czas lecieć. Powodzenia!</string>
 </dict>
 </plist>

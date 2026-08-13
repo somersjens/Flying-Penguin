@@ -54,6 +54,8 @@
 	<string>Mindjárt megvagy</string>
 	<key>game.encouragement.complete</key>
 	<string>Minden tökéletes!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Összegyűjtötted az összes karikát</string>
 	<key>game.end.completionSuffix</key>
 	<string>kész!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Feladatok, ahol egy számot **hozzáadsz**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>+ %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Ezen a pályán legfeljebb **%lld karikát** gyűjthetsz.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Feladatok, ahol egy számot **elosztasz**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>A neved</string>
 	<key>name.whatsYourName</key>
 	<string>Hogy hívnak?</string>
+	<key>notif.animal.body %@</key>
+	<string>Szerezz még néhány karikát %@ feloldásához! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Az állataid várnak. Ugorj vissza, és gyűjts tovább karikákat!</string>
 	<key>notif.comeback.title</key>
 	<string>Hiányzol nekünk! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>A Hungry Frog Premium %lld szintet tartalmaz minden témához és mind a 10 állathoz. A kaland folytatódik!</string>
 	<key>notif.premium.title</key>
 	<string>Nyisson meg több szintet és állatot! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld nap telt el. Oldjunk meg pár feladatot, és szerezzünk még karikákat!</string>
 	<key>notif.reactivate.title</key>
 	<string>Újra játékra készen állsz? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Koppintások: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Felnőtt jóváhagyása szükséges</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld karikától elérhető</string>
 	<key>premium.availableFromStart</key>
 	<string>Kezdettől elérhető</string>
 	<key>premium.characterUnlocked</key>
 	<string>ÚJ KARAKTER FELOLDVA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld karikát szereztél</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Kizárólag Premiummal</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Már játékban vagy. Fejezd be, vagy válassz egy még el nem kezdett pályát az oktatóhoz.</string>
 	<key>tutorial.notice.title</key>
 	<string>Csak a játék elején</string>
+	<key>tutorial.step1</key>
+	<string>Fogj meg, és húzz fel vagy le, hogy a levegőben repüljek!</string>
+	<key>tutorial.step2</key>
+	<string>Koppints fölém vagy alám. Egyenesen arra repülök!</string>
+	<key>tutorial.step3</key>
+	<string>Nem látod a helyes választ? Bukj a karikák alá!</string>
+	<key>tutorial.step4</key>
+	<string>Gyorsan oldd meg a karikák fölötti feladatot! Repülj át a helyes válaszon, és szerezz 1 pontot.</string>
+	<key>tutorial.step5</key>
+	<string>Tudod a választ? Koppints a jó karikára a TURBO-hoz! Koppints a bója előtt, és szerezz 2 pontot.</string>
+	<key>tutorial.step6</key>
+	<string>Vigyázz! Ha rossz karikán repülsz át, elveszítesz egy életet.</string>
+	<key>tutorial.step7</key>
+	<string>Mindent tudsz! Ideje repülni. Sok sikert!</string>
 </dict>
 </plist>

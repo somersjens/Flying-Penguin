@@ -54,6 +54,8 @@
 	<string>Deyarli yetib kelding</string>
 	<key>game.encouragement.complete</key>
 	<string>Zo‘r, hammasi to‘g‘ri!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Barcha chambarlarni to‘pladingiz</string>
 	<key>game.end.completionSuffix</key>
 	<string>tugadi!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Sonni **qo‘shadigan** misollar.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld qo‘sh</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Bu bosqichda **%lld chambargacha** to‘plash mumkin.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sonni **bo‘ladigan** misollar.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Isming</string>
 	<key>name.whatsYourName</key>
 	<string>Isming nima?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ qulfini ochish uchun yana bir nechta chambar yig‘ing! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Hayvonlaringiz kutmoqda. O‘yinga qayting va chambar yig‘ishda davom eting!</string>
 	<key>notif.comeback.title</key>
 	<string>Biz sizni sog'indik! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium har bir mavzu va barcha 10 hayvonlar uchun %lld darajani o'z ichiga oladi. Sarguzasht davom etmoqda!</string>
 	<key>notif.premium.title</key>
 	<string>Ko'proq darajalar va hayvonlarni oching! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld kun o‘tdi. Bir nechta misol yechib, ko‘proq chambar yig‘amiz!</string>
 	<key>notif.reactivate.title</key>
 	<string>Yana o'ynashga tayyormisiz? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Bosishlar: %1$lld tadan %2$lld ta</string>
 	<key>parentGate.title</key>
 	<string>Kattalar tasdig‘i kerak</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld chambardan boshlab</string>
 	<key>premium.availableFromStart</key>
 	<string>Boshidan mavjud</string>
 	<key>premium.characterUnlocked</key>
 	<string>YANGI QAHRAMON OCHILDI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Siz %lld chambar yig‘dingiz</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Faqat Premium bilan</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Sen hozir o‘yin o‘ynayapsan. Avval uni tugat yoki boshlamagan bosqichni tanla, keyin o‘rgatishni boshlagin.</string>
 	<key>tutorial.notice.title</key>
 	<string>Faqat o‘yin boshida</string>
+	<key>tutorial.step1</key>
+	<string>Meni ushlab, yuqoriga yoki pastga torting, shunda havoda uchaman!</string>
+	<key>tutorial.step2</key>
+	<string>Ustimga yoki pastimga bosing. To‘g‘ri o‘sha tomonga uchaman!</string>
+	<key>tutorial.step3</key>
+	<string>To‘g‘ri javob ko‘rinmayaptimi? Chambarlar ostidan uching!</string>
+	<key>tutorial.step4</key>
+	<string>Chambarlar ustidagi misolni tez yeching! To‘g‘ri javobdan uchib o‘tib 1 ball oling.</string>
+	<key>tutorial.step5</key>
+	<string>Javobni bilasizmi? TURBO uchun to‘g‘ri chambarni bosing! Konusdan oldin bosib 2 ball oling.</string>
+	<key>tutorial.step6</key>
+	<string>Ehtiyot bo‘ling! Noto‘g‘ri chambardan uchsangiz, bir jon yo‘qotasiz.</string>
+	<key>tutorial.step7</key>
+	<string>Hammasini bilasiz! Uchish vaqti. Omad!</string>
 </dict>
 </plist>

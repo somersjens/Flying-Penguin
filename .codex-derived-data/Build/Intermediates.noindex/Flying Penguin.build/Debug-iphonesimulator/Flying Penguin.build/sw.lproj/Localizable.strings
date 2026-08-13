@@ -54,6 +54,8 @@
 	<string>Karibu umefika</string>
 	<key>game.encouragement.complete</key>
 	<string>Alama kamili!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Umekusanya vitanzi vyote</string>
 	<key>game.end.completionSuffix</key>
 	<string>imekamilika!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Maswali ya **kujumlisha** namba.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Jumlisha %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Katika kiwango hiki unaweza kukusanya hadi **%lld vitanzi**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Maswali ya **kugawanya** namba.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Jina lako</string>
 	<key>name.whatsYourName</key>
 	<string>Unaitwa nani?</string>
+	<key>notif.animal.body %@</key>
+	<string>Pata vitanzi vichache zaidi ili kufungua %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Wanyama wako wanakusubiri. Rudi kucheza na uendelee kukusanya vitanzi!</string>
 	<key>notif.comeback.title</key>
 	<string>Tunakukumbuka! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Kuruka Fox Premium inajumuisha viwango %lld kwa kila mada na wanyama wote 10. Matukio yanaendelea!</string>
 	<key>notif.premium.title</key>
 	<string>Fungua viwango zaidi na wanyama! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Imepita siku %lld. Tutatue hesabu chache na kupata vitanzi zaidi!</string>
 	<key>notif.reactivate.title</key>
 	<string>Je, uko tayari kucheza tena? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Miguso: %1$lld kati ya %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Idhini ya mtu mzima inahitajika</string>
+	<key>premium.availableAt %lld</key>
+	<string>Inapatikana kuanzia vitanzi %lld</string>
 	<key>premium.availableFromStart</key>
 	<string>Inapatikana tangu mwanzo</string>
 	<key>premium.characterUnlocked</key>
 	<string>MHUSIKA MPYA AMEFUNGULIWA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Umepata vitanzi %lld</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Kwa Premium pekee</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Uko katikati ya mchezo. Maliza, au chagua kiwango ambacho hujaanza, ili kucheza mafunzo.</string>
 	<key>tutorial.notice.title</key>
 	<string>Mwanzoni mwa mchezo tu</string>
+	<key>tutorial.step1</key>
+	<string>Nishike na uniburute juu au chini ili niruke hewani!</string>
+	<key>tutorial.step2</key>
+	<string>Gusa juu au chini yangu. Nitaruka moja kwa moja upande huo!</string>
+	<key>tutorial.step3</key>
+	<string>Huoni jibu sahihi? Pita chini ya vitanzi!</string>
+	<key>tutorial.step4</key>
+	<string>Tatua haraka hesabu iliyo juu ya vitanzi! Pitia jibu sahihi na upate pointi 1.</string>
+	<key>tutorial.step5</key>
+	<string>Unajua jibu? Gusa kitanzi sahihi kwa TURBO! Gusa kabla ya koni na upate pointi 2.</string>
+	<key>tutorial.step6</key>
+	<string>Jihadhari! Ukipitia kitanzi kisicho sahihi, utapoteza uhai mmoja.</string>
+	<key>tutorial.step7</key>
+	<string>Unajua kila kitu! Wakati wa kuruka. Bahati njema!</string>
 </dict>
 </plist>

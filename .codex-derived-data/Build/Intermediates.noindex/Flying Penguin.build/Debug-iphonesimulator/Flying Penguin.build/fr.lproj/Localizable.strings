@@ -54,6 +54,8 @@
 	<string>Tu y es presque</string>
 	<key>game.encouragement.complete</key>
 	<string>Score parfait !</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Tu as ramassé tous les cerceaux</string>
 	<key>game.end.completionSuffix</key>
 	<string>terminé !</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Calculs où tu **ajoutes** un nombre.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plus %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Tu peux ramasser jusqu’à **%lld cerceaux** dans ce niveau.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Calculs où tu **divises** un nombre.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Ton prénom</string>
 	<key>name.whatsYourName</key>
 	<string>Comment t’appelles-tu ?</string>
+	<key>notif.animal.body %@</key>
+	<string>Gagne encore quelques cerceaux pour débloquer %@ ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tes animaux t’attendent. Reviens jouer et continue à ramasser des cerceaux !</string>
 	<key>notif.comeback.title</key>
 	<string>Tu nous manques ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium comprend %lld niveaux pour chaque sujet et les 10 animaux. L'aventure continue !</string>
 	<key>notif.premium.title</key>
 	<string>Débloquez plus de niveaux et d'animaux ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Ça fait %lld jours. Résolvons quelques calculs et gagnons plus de cerceaux !</string>
 	<key>notif.reactivate.title</key>
 	<string>Prêt à rejouer ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Touches : %1$lld sur %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Autorisation d’un adulte requise</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponible dès %lld cerceaux</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponible dès le début</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOUVEAU PERSONNAGE DÉBLOQUÉ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Tu as gagné %lld cerceaux</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusif avec Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Tu es en pleine partie. Termine-la ou choisis un niveau que tu n’as pas encore commencé pour lancer le tutoriel.</string>
 	<key>tutorial.notice.title</key>
 	<string>Seulement au début d’une partie</string>
+	<key>tutorial.step1</key>
+	<string>Attrape-moi et fais-moi glisser vers le haut ou le bas pour me faire voler !</string>
+	<key>tutorial.step2</key>
+	<string>Touche au-dessus ou en dessous de moi. Je volerai tout droit dans cette direction !</string>
+	<key>tutorial.step3</key>
+	<string>Tu ne vois pas la bonne réponse ? Passe sous les cerceaux !</string>
+	<key>tutorial.step4</key>
+	<string>Résous vite le calcul au-dessus des cerceaux ! Traverse la bonne réponse et marque 1 point.</string>
+	<key>tutorial.step5</key>
+	<string>Tu connais la réponse ? Touche le bon cerceau pour le TURBO ! Touche avant le cône et marque 2 points.</string>
+	<key>tutorial.step6</key>
+	<string>Attention ! Si tu traverses le mauvais cerceau, tu perdras une vie.</string>
+	<key>tutorial.step7</key>
+	<string>Tu sais tout ! Il est temps de voler. Bonne chance !</string>
 </dict>
 </plist>

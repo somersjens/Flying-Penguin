@@ -54,6 +54,8 @@
 	<string>तू जवळपास पोहोचलास</string>
 	<key>game.encouragement.complete</key>
 	<string>पूर्ण गुण!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>तू सर्व वलये गोळा केलीस</string>
 	<key>game.end.completionSuffix</key>
 	<string>पूर्ण!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ज्यात संख्या \*\*जोडायची\*\* अशी उदाहरणे.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld जोडा</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>या लेव्हलमध्ये तू जास्तीत जास्त **%lld वलये** गोळा करू शकतोस.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ज्यात संख्येला \*\*भागायचे\*\* अशी उदाहरणे.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>तुझं नाव</string>
 	<key>name.whatsYourName</key>
 	<string>तुझं नाव काय?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ अनलॉक करण्यासाठी आणखी काही वलये मिळव! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>तुझे प्राणी वाट पाहत आहेत. पुन्हा खेळात ये आणि वलये गोळा करत राहा!</string>
 	<key>notif.comeback.title</key>
 	<string>आम्हाला तुमची आठवण येते! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>जंपिंग फॉक्स प्रीमियममध्ये प्रत्येक विषयासाठी %lld स्तर आणि सर्व 10 प्राण्यांचा समावेश आहे. साहस चालूच राहते!</string>
 	<key>notif.premium.title</key>
 	<string>अधिक स्तर आणि प्राणी अनलॉक करा! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld दिवस झाले. काही गणिते सोडवूया आणि आणखी वलये मिळवूया!</string>
 	<key>notif.reactivate.title</key>
 	<string>पुन्हा खेळण्यासाठी तयार आहात? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>टॅप: %1$lld पैकी %2$lld</string>
 	<key>parentGate.title</key>
 	<string>मोठ्या व्यक्तीची परवानगी हवी</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld वलयांपासून उपलब्ध</string>
 	<key>premium.availableFromStart</key>
 	<string>सुरुवातीपासून उपलब्ध</string>
 	<key>premium.characterUnlocked</key>
 	<string>नवीन पात्र उघडले</string>
+	<key>premium.earnedCards %lld</key>
+	<string>तू %lld वलये मिळवलीस</string>
 	<key>premium.exclusiveBadge</key>
 	<string>फक्त Premium सोबत</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>तू खेळाच्या मध्ये आहेस. आधी तो पूर्ण कर, किंवा सुरू न केलेला स्तर निवडून ट्युटोरियल खेळ.</string>
 	<key>tutorial.notice.title</key>
 	<string>फक्त खेळाच्या सुरुवातीला</string>
+	<key>tutorial.step1</key>
+	<string>मला धरून वर किंवा खाली ओढ, म्हणजे मी हवेत उडेन!</string>
+	<key>tutorial.step2</key>
+	<string>माझ्या वर किंवा खाली टॅप कर. मी सरळ त्या दिशेने उडेन!</string>
+	<key>tutorial.step3</key>
+	<string>बरोबर उत्तर दिसत नाही? वलयांच्या खालून जा!</string>
+	<key>tutorial.step4</key>
+	<string>वलयांच्या वरचे गणित पटकन सोडव! बरोबर उत्तरातून उड आणि 1 गुण मिळव.</string>
+	<key>tutorial.step5</key>
+	<string>उत्तर माहीत आहे? TURBO साठी योग्य वलयावर टॅप कर! कोनच्या आधी टॅप करून 2 गुण मिळव.</string>
+	<key>tutorial.step6</key>
+	<string>सावध! चुकीच्या वलयातून उडालास तर एक जीव गमावशील.</string>
+	<key>tutorial.step7</key>
+	<string>तुला सगळं कळलं! आता उडायची वेळ. शुभेच्छा!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>আর একটু বাকি</string>
 	<key>game.encouragement.complete</key>
 	<string>একদম ঠিক!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>তুমি সব বলয় সংগ্রহ করেছ</string>
 	<key>game.end.completionSuffix</key>
 	<string>সম্পূর্ণ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>যেসব অঙ্কে একটি সংখ্যা **যোগ** করো।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld যোগ</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>এই লেভেলে তুমি সর্বোচ্চ **%lld বলয়** সংগ্রহ করতে পারো।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>যেসব অঙ্কে একটি সংখ্যা দিয়ে **ভাগ** করো।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>তোমার নাম</string>
 	<key>name.whatsYourName</key>
 	<string>তোমার নাম কী?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ আনলক করতে আরও কয়েকটি বলয় অর্জন করো! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>তোমার প্রাণীরা অপেক্ষা করছে। আবার খেলায় ফিরে আরও বলয় সংগ্রহ করো!</string>
 	<key>notif.comeback.title</key>
 	<string>আমরা আপনাকে মিস করি! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>জাম্পিং ফক্স প্রিমিয়ামে প্রতিটি বিষয়ের জন্য %lldটি স্তর এবং সমস্ত 10টি প্রাণী রয়েছে। অ্যাডভেঞ্চার চলতে থাকে!</string>
 	<key>notif.premium.title</key>
 	<string>আরও স্তর এবং প্রাণী আনলক করুন! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld দিন হয়ে গেছে। কিছু অঙ্ক করি আর আরও বলয় অর্জন করি!</string>
 	<key>notif.reactivate.title</key>
 	<string>আবার খেলার জন্য প্রস্তুত? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ট্যাপ: %1$lld-এর মধ্যে %2$lld</string>
 	<key>parentGate.title</key>
 	<string>প্রাপ্তবয়স্কের অনুমতি দরকার</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld বলয় থেকে পাওয়া যাবে</string>
 	<key>premium.availableFromStart</key>
 	<string>শুরু থেকেই পাওয়া যাবে</string>
 	<key>premium.characterUnlocked</key>
 	<string>নতুন চরিত্র আনলক হয়েছে</string>
+	<key>premium.earnedCards %lld</key>
+	<string>তুমি %lld বলয় অর্জন করেছ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>শুধু Premium-এ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>তুমি এখন একটি খেলার মাঝখানে আছ। আগে সেটি শেষ করো, অথবা টিউটোরিয়ালের জন্য শুরু না করা একটি লেভেল বেছে নাও।</string>
 	<key>tutorial.notice.title</key>
 	<string>শুধু খেলার শুরুতে</string>
+	<key>tutorial.step1</key>
+	<string>আমাকে ধরে ওপর বা নিচে টেনে নাও, তাহলে আমি আকাশে উড়ব!</string>
+	<key>tutorial.step2</key>
+	<string>আমার ওপর বা নিচে ট্যাপ করো। আমি সোজা সেদিকেই উড়ব!</string>
+	<key>tutorial.step3</key>
+	<string>সঠিক উত্তর দেখতে পাচ্ছ না? বলয়গুলোর নিচ দিয়ে চলে যাও!</string>
+	<key>tutorial.step4</key>
+	<string>বলয়ের ওপরের অঙ্কটি দ্রুত করো! সঠিক উত্তরের মধ্য দিয়ে উড়ে 1 পয়েন্ট পাও।</string>
+	<key>tutorial.step5</key>
+	<string>উত্তর জানো? TURBO-এর জন্য সঠিক বলয়ে ট্যাপ করো! কোনের আগে ট্যাপ করে 2 পয়েন্ট পাও।</string>
+	<key>tutorial.step6</key>
+	<string>সাবধান! ভুল বলয়ের মধ্য দিয়ে উড়লে একটি জীবন হারাবে।</string>
+	<key>tutorial.step7</key>
+	<string>সবই জানো! এবার উড়ার সময়। শুভকামনা!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>ເກືອບຮອດແລ້ວ</string>
 	<key>game.encouragement.complete</key>
 	<string>ຖືກທຸກຂໍ້!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ເຈົ້າເກັບວົງໄດ້ຄົບແລ້ວ</string>
 	<key>game.end.completionSuffix</key>
 	<string>ສຳເລັດ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ໂຈດທີ່ເຈົ້າ **ບວກ** ຕົວເລກ.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>ບວກ %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ໃນດ່ານນີ້ ເຈົ້າເກັບໄດ້ສູງສຸດ **%lld ວົງ**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ໂຈດທີ່ເຈົ້າ **ຫານ** ຕົວເລກ.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ຊື່ຂອງເຈົ້າ</string>
 	<key>name.whatsYourName</key>
 	<string>ເຈົ້າຊື່ຫຍັງ?</string>
+	<key>notif.animal.body %@</key>
+	<string>ເກັບວົງອີກໜ້ອຍໜຶ່ງເພື່ອປົດລັອກ %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ສັດຂອງເຈົ້າກຳລັງລໍຖ້າ. ກັບມາຫຼິ້ນ ແລະເກັບວົງຕໍ່!</string>
 	<key>notif.comeback.title</key>
 	<string>ພວກເຮົາຄິດຮອດເຈົ້າ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium ປະກອບມີ %lld ລະດັບສຳລັບທຸກໆຫົວຂໍ້ ແລະສັດທັງໝົດ 10 ໂຕ. ການຜະຈົນໄພສືບຕໍ່!</string>
 	<key>notif.premium.title</key>
 	<string>ປົດລັອກຫຼາຍລະດັບ ແລະສັດ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ມື້ແລ້ວ. ມາແກ້ໂຈດເລກ ແລະເກັບວົງເພີ່ມກັນ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ພ້ອມ​ທີ່​ຈະ​ຫຼິ້ນ​ອີກ​ເທື່ອ​ຫນຶ່ງ​? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ແຕະ: %1$lld ຈາກ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ຕ້ອງມີຜູ້ໃຫຍ່ອະນຸມັດ</string>
+	<key>premium.availableAt %lld</key>
+	<string>ໃຊ້ໄດ້ເມື່ອມີ %lld ວົງ</string>
 	<key>premium.availableFromStart</key>
 	<string>ມີໃຫ້ໃຊ້ຕັ້ງແຕ່ເລີ່ມ</string>
 	<key>premium.characterUnlocked</key>
 	<string>ປົດລັອກຕົວລະຄອນໃໝ່ແລ້ວ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ເຈົ້າໄດ້ %lld ວົງ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ສະເພາະ Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ເຈົ້າກຳລັງຫຼິ້ນຢູ່. ຫຼິ້ນໃຫ້ຈົບ ຫຼື ເລືອກດ່ານທີ່ຍັງບໍ່ໄດ້ເລີ່ມ ເພື່ອຫຼິ້ນບົດສອນ.</string>
 	<key>tutorial.notice.title</key>
 	<string>ໄດ້ສະເພາະຕອນເລີ່ມເກມ</string>
+	<key>tutorial.step1</key>
+	<string>ຈັບຂ້ອຍແລ້ວລາກຂຶ້ນຫຼືລົງ ເພື່ອໃຫ້ຂ້ອຍບິນ!</string>
+	<key>tutorial.step2</key>
+	<string>ແຕະເທິງຫຼືລຸ່ມຂ້ອຍ. ຂ້ອຍຈະບິນກົງໄປທາງນັ້ນ!</string>
+	<key>tutorial.step3</key>
+	<string>ບໍ່ເຫັນຄຳຕອບທີ່ຖືກບໍ? ບິນລົງລຸ່ມວົງ!</string>
+	<key>tutorial.step4</key>
+	<string>ແກ້ໂຈດເທິງວົງໃຫ້ໄວ! ບິນຜ່ານຄຳຕອບຖືກ ແລະໄດ້ 1 ຄະແນນ.</string>
+	<key>tutorial.step5</key>
+	<string>ຮູ້ຄຳຕອບແລ້ວ? ແຕະວົງທີ່ຖືກເພື່ອ TURBO! ແຕະກ່ອນກວຍແລ້ວໄດ້ 2 ຄະແນນ.</string>
+	<key>tutorial.step6</key>
+	<string>ລະວັງ! ຖ້າບິນຜ່ານວົງຜິດ ຈະເສຍຊີວິດໜຶ່ງ.</string>
+	<key>tutorial.step7</key>
+	<string>ເຈົ້າຮູ້ໝົດແລ້ວ! ເຖິງເວລາບິນ. ໂຊກດີ!</string>
 </dict>
 </plist>

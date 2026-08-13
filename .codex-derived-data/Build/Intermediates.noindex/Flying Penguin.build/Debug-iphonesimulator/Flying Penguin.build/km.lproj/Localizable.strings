@@ -54,6 +54,8 @@
 	<string>អ្នកជិតបានហើយ</string>
 	<key>game.encouragement.complete</key>
 	<string>ពិន្ទុពេញ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>អ្នកបានប្រមូលរង្វង់ទាំងអស់</string>
 	<key>game.end.completionSuffix</key>
 	<string>រួចរាល់!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>លំហាត់ដែលអ្នក **បូក** ចំនួនមួយ។</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>បូក %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>នៅកម្រិតនេះ អ្នកអាចប្រមូលបានរហូតដល់ **%lld រង្វង់**។</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>លំហាត់ដែលអ្នក **ចែក** ចំនួនមួយ។</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ឈ្មោះរបស់អ្នក</string>
 	<key>name.whatsYourName</key>
 	<string>អ្នកឈ្មោះអ្វី?</string>
+	<key>notif.animal.body %@</key>
+	<string>រករង្វង់បន្ថែមបន្តិច ដើម្បីដោះសោ %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>សត្វរបស់អ្នកកំពុងរង់ចាំ។ ត្រឡប់មកលេង ហើយបន្តប្រមូលរង្វង់!</string>
 	<key>notif.comeback.title</key>
 	<string>យើងនឹកអ្នក! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium រួមបញ្ចូលកម្រិត %lld សម្រាប់គ្រប់ប្រធានបទ និងសត្វទាំង 10 ។ដំណើរផ្សងព្រេងនៅតែបន្ត!</string>
 	<key>notif.premium.title</key>
 	<string>ដោះសោកម្រិតនិងសត្វកាន់តែច្រើន! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ថ្ងៃហើយ។ តោះដោះស្រាយលំហាត់គណិត និងរករង្វង់បន្ថែម!</string>
 	<key>notif.reactivate.title</key>
 	<string>ត្រៀម​លេង​ម្ដង​ទៀត​ហើយ​ឬ​នៅ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ចំនួនប៉ះ៖ %1$lld ក្នុងចំណោម %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ត្រូវការការយល់ព្រមពីមនុស្សពេញវ័យ</string>
+	<key>premium.availableAt %lld</key>
+	<string>អាចប្រើបានពី %lld រង្វង់</string>
 	<key>premium.availableFromStart</key>
 	<string>មានតាំងពីដំបូង</string>
 	<key>premium.characterUnlocked</key>
 	<string>បានដោះសោតួអង្គថ្មី</string>
+	<key>premium.earnedCards %lld</key>
+	<string>អ្នករកបាន %lld រង្វង់</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ផ្តាច់មុខជាមួយ Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>អ្នកកំពុងលេងហ្គេម។ លេងឱ្យចប់ ឬជ្រើសលេវែលដែលមិនទាន់ចាប់ផ្តើម ដើម្បីលេងការណែនាំ។</string>
 	<key>tutorial.notice.title</key>
 	<string>បានតែនៅដើមហ្គេម</string>
+	<key>tutorial.step1</key>
+	<string>ចាប់ខ្ញុំ ហើយអូសឡើងឬចុះ ដើម្បីឱ្យខ្ញុំហោះក្នុងអាកាស!</string>
+	<key>tutorial.step2</key>
+	<string>ប៉ះខាងលើឬខាងក្រោមខ្ញុំ។ ខ្ញុំនឹងហោះត្រង់ទៅទិសនោះ!</string>
+	<key>tutorial.step3</key>
+	<string>មិនឃើញចម្លើយត្រឹមត្រូវទេ? ហោះចុះក្រោមរង្វង់!</string>
+	<key>tutorial.step4</key>
+	<string>ដោះស្រាយលំហាត់លើរង្វង់ឱ្យលឿន! ហោះកាត់ចម្លើយត្រឹមត្រូវ ហើយបាន 1 ពិន្ទុ។</string>
+	<key>tutorial.step5</key>
+	<string>ដឹងចម្លើយហើយ? ប៉ះរង្វង់ត្រឹមត្រូវសម្រាប់ TURBO! ប៉ះមុនកោណ ហើយបាន 2 ពិន្ទុ។</string>
+	<key>tutorial.step6</key>
+	<string>ប្រយ័ត្ន! បើហោះកាត់រង្វង់ខុស អ្នកនឹងបាត់បង់ជីវិតមួយ។</string>
+	<key>tutorial.step7</key>
+	<string>អ្នកដឹងគ្រប់យ៉ាងហើយ! ដល់ពេលហោះ។ សំណាងល្អ!</string>
 </dict>
 </plist>

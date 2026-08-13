@@ -54,6 +54,8 @@
 	<string>Ти майже там</string>
 	<key>game.encouragement.complete</key>
 	<string>Ідеально!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ти зібрав усі обручі</string>
 	<key>game.end.completionSuffix</key>
 	<string>завершено!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Приклади, де треба \*\*додати\*\* число.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Додати %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На цьому рівні можна зібрати до **%lld обручів**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Приклади, де треба \*\*ділити\*\* число.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Твоє ім’я</string>
 	<key>name.whatsYourName</key>
 	<string>Як тебе звати?</string>
+	<key>notif.animal.body %@</key>
+	<string>Збери ще кілька обручів, щоб відкрити %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Твої тварини чекають. Повертайся до гри й продовжуй збирати обручі!</string>
 	<key>notif.comeback.title</key>
 	<string>ми сумуємо за тобою! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium містить %lld рівнів для кожної теми та всіх 10 тварин. Пригоди тривають!</string>
 	<key>notif.premium.title</key>
 	<string>Розблокуйте більше рівнів і тварин! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Минуло %lld днів. Розв’яжімо кілька прикладів і заробімо ще обручів!</string>
 	<key>notif.reactivate.title</key>
 	<string>Готові грати знову? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Дотики: %1$lld з %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Потрібне схвалення дорослого</string>
+	<key>premium.availableAt %lld</key>
+	<string>Доступно від %lld обручів</string>
 	<key>premium.availableFromStart</key>
 	<string>Доступно від самого початку</string>
 	<key>premium.characterUnlocked</key>
 	<string>ВІДКРИТО НОВОГО ПЕРСОНАЖА</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ти заробив %lld обручів</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ексклюзивно з Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Ти вже граєш. Заверши гру або вибери рівень, який ще не починав, щоб пройти навчання.</string>
 	<key>tutorial.notice.title</key>
 	<string>Лише на початку гри</string>
+	<key>tutorial.step1</key>
+	<string>Тримай мене й тягни вгору або вниз, щоб я летів у повітрі!</string>
+	<key>tutorial.step2</key>
+	<string>Натисни вище або нижче мене. Я полечу прямо в той бік!</string>
+	<key>tutorial.step3</key>
+	<string>Не бачиш правильної відповіді? Пірнай під обручами!</string>
+	<key>tutorial.step4</key>
+	<string>Швидко розв’яжи приклад над обручами! Пролети крізь правильну відповідь і отримай 1 бал.</string>
+	<key>tutorial.step5</key>
+	<string>Знаєш відповідь? Натисни правильний обруч для TURBO! Натисни до конуса й отримай 2 бали.</string>
+	<key>tutorial.step6</key>
+	<string>Обережно! Пролетиш крізь неправильний обруч — втратиш одне життя.</string>
+	<key>tutorial.step7</key>
+	<string>Ти все знаєш! Час летіти. Удачі!</string>
 </dict>
 </plist>

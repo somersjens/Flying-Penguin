@@ -54,6 +54,8 @@
 	<string>ئاز قالدى</string>
 	<key>game.encouragement.complete</key>
 	<string>ھەممىسى توغرا!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>بارلىق چەمبەرلەرنى يىغدىڭىز</string>
 	<key>game.end.completionSuffix</key>
 	<string>تامام!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>بىر ساننى **قوشىدىغان** مىساللار.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld نى قوش</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>بۇ دەرىجىدە ئەڭ كۆپ **%lld چەمبەر** يىغالايسىز.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>بىر ساننى **بۆلىدىغان** مىساللار.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ئىسمىڭ</string>
 	<key>name.whatsYourName</key>
 	<string>ئىسمىڭ نېمە؟</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ نى ئېچىش ئۈچۈن يەنە بىر قانچە چەمبەر توپلاڭ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ھايۋانلىرىڭىز كۈتۈۋاتىدۇ. ئويۇنغا قايتىپ، چەمبەر يىغىشنى داۋاملاشتۇرۇڭ!</string>
 	<key>notif.comeback.title</key>
 	<string>سېنى سېغىندۇق! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>سەكرەش تۈلكە مۇكاپاتى ھەر بىر تېما ۋە 10 ھايۋاننىڭ %lld دەرىجىسىنى ئۆز ئىچىگە ئالىدۇ. تەۋەككۈلچىلىك داۋاملىشىدۇ!</string>
 	<key>notif.premium.title</key>
 	<string>تېخىمۇ كۆپ قاتلام ۋە ھايۋانلارنى ئېچىڭ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld كۈن بولدى. بىر قانچە ھېسابنى يېشىپ، تېخىمۇ كۆپ چەمبەر تاپايلى!</string>
 	<key>notif.reactivate.title</key>
 	<string>قايتا ئويناشقا تەييارمۇ؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>چېكىش: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>چوڭ كىشىنىڭ تەستىقى كېرەك</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld چەمبەردىن باشلاپ بار</string>
 	<key>premium.availableFromStart</key>
 	<string>باشتىنلا ئىشلەتكىلى بولىدۇ</string>
 	<key>premium.characterUnlocked</key>
 	<string>يېڭى پېرسوناژ ئېچىلدى</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld چەمبەر تاپتىڭىز</string>
 	<key>premium.exclusiveBadge</key>
 	<string>پەقەت Premium بىلەن</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>سەن ھازىر ئويۇننىڭ ئوتتۇرىسىدا. ئالدى بىلەن تۈگەت ياكى باشلانمىغان دەرىجىنى تاللا، ئاندىن قوللانمىنى ئوينىغىن.</string>
 	<key>tutorial.notice.title</key>
 	<string>پەقەت ئويۇن بېشىدا</string>
+	<key>tutorial.step1</key>
+	<string>مېنى تۇتۇپ ئۈستىگە ياكى ئاستىغا سۆرەڭ، مەن ھاۋادا ئۇچىمەن!</string>
+	<key>tutorial.step2</key>
+	<string>مېنىڭ ئۈستۈمگە ياكى ئاستىمغا چېكىڭ. مەن توغرا شۇ تەرەپكە ئۇچىمەن!</string>
+	<key>tutorial.step3</key>
+	<string>توغرا جاۋاب كۆرۈنمەمدۇ؟ چەمبەرلەرنىڭ ئاستىدىن ئۆتۈڭ!</string>
+	<key>tutorial.step4</key>
+	<string>چەمبەر ئۈستىدىكى ھېسابنى تېز يېشىڭ! توغرا جاۋابتىن ئۇچۇپ ئۆتۈپ 1 نومۇر ئېلىڭ.</string>
+	<key>tutorial.step5</key>
+	<string>جاۋابنى بىلەمسىز؟ TURBO ئۈچۈن توغرا چەمبەرنى چېكىڭ! كوناكتىن بۇرۇن چېكىپ 2 نومۇر ئېلىڭ.</string>
+	<key>tutorial.step6</key>
+	<string>دىققەت! خاتا چەمبەردىن ئۇچسىڭىز بىر جاننى يوقىتىسىز.</string>
+	<key>tutorial.step7</key>
+	<string>ھەممىنى بىلدىڭىز! ئۇچىدىغان ۋاقىت كەلدى. ئامەت!</string>
 </dict>
 </plist>

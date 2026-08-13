@@ -54,6 +54,8 @@
 	<string>Жетіп қалдың</string>
 	<key>game.encouragement.complete</key>
 	<string>Керемет! Бәрі дұрыс!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Барлық шеңберді жинадың</string>
 	<key>game.end.completionSuffix</key>
 	<string>аяқталды!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Санды **қосатын** есептер.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld қосу</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Бұл деңгейде **%lld шеңберге** дейін жинай аласың.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Санды **бөлетін** есептер.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Атың</string>
 	<key>name.whatsYourName</key>
 	<string>Атың кім?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ашу үшін тағы бірнеше шеңбер жина! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Жануарларың күтіп отыр. Ойынға қайта кіріп, шеңбер жинауды жалғастыр!</string>
 	<key>notif.comeback.title</key>
 	<string>Біз сені сағындық! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium әр тақырыпқа және барлық 10 жануарға арналған %lld деңгейді қамтиды. Шытырман оқиға жалғасуда!</string>
 	<key>notif.premium.title</key>
 	<string>Көбірек деңгейлер мен жануарлардың құлпын ашыңыз! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld күн өтті. Бірнеше есеп шығарып, тағы шеңбер жинайық!</string>
 	<key>notif.reactivate.title</key>
 	<string>Қайта ойнауға дайынсыз ба? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Түртулер: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Ересек адамның рұқсаты қажет</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld шеңберден қолжетімді</string>
 	<key>premium.availableFromStart</key>
 	<string>Басынан бастап қолжетімді</string>
 	<key>premium.characterUnlocked</key>
 	<string>ЖАҢА КЕЙІПКЕР АШЫЛДЫ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld шеңбер жинадың</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Тек Premium арқылы</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Ойынның ортасындасың. Алдымен аяқта немесе әлі бастамаған деңгейді таңдап, үйретуді ойна.</string>
 	<key>tutorial.notice.title</key>
 	<string>Тек ойын басында</string>
+	<key>tutorial.step1</key>
+	<string>Мені ұстап, жоғары не төмен сүйре — ауада ұшамын!</string>
+	<key>tutorial.step2</key>
+	<string>Менің үстіме не астыма түрт. Сол жаққа тура ұшамын!</string>
+	<key>tutorial.step3</key>
+	<string>Дұрыс жауап көрінбей ме? Шеңберлердің астынан сүңгі!</string>
+	<key>tutorial.step4</key>
+	<string>Шеңберлер үстіндегі есепті тез шығар! Дұрыс жауаптан ұшып өтіп, 1 ұпай ал.</string>
+	<key>tutorial.step5</key>
+	<string>Жауапты білесің бе? TURBO үшін дұрыс шеңберді түрт! Конусқа дейін түртіп, 2 ұпай ал.</string>
+	<key>tutorial.step6</key>
+	<string>Абайла! Қате шеңберден ұшсаң, бір өмір жоғалтасың.</string>
+	<key>tutorial.step7</key>
+	<string>Бәрін білесің! Ұшатын уақыт келді. Сәттілік!</string>
 </dict>
 </plist>

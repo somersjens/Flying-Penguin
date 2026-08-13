@@ -54,6 +54,8 @@
 	<string>Oled peaaegu kohal</string>
 	<key>game.encouragement.complete</key>
 	<string>Täiuslik tulemus!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Sa kogusid kõik rõngad</string>
 	<key>game.end.completionSuffix</key>
 	<string>valmis!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Tehted, kus sa arvu **liidad**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Liida %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Sellel tasemel saad koguda kuni **%lld rõngast**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Tehted, kus sa arvu **jagad**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Sinu nimi</string>
 	<key>name.whatsYourName</key>
 	<string>Mis su nimi on?</string>
+	<key>notif.animal.body %@</key>
+	<string>Teeni veel mõned rõngad, et %@ avada! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Sinu loomad ootavad. Tule mängu tagasi ja kogu veel rõngaid!</string>
 	<key>notif.comeback.title</key>
 	<string>Me igatseme sind! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium sisaldab %lld taset iga teema ja kõigi 10 looma jaoks. Seiklus jätkub!</string>
 	<key>notif.premium.title</key>
 	<string>Avage rohkem tasemeid ja loomi! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Möödas on %lld päeva. Lahendame mõned tehted ja teenime veel rõngaid!</string>
 	<key>notif.reactivate.title</key>
 	<string>Kas olete uuesti mängimiseks valmis? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Puudutusi: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Vajalik täiskasvanu kinnitus</string>
+	<key>premium.availableAt %lld</key>
+	<string>Saadaval alates %lld rõngast</string>
 	<key>premium.availableFromStart</key>
 	<string>Kohe algusest saadaval</string>
 	<key>premium.characterUnlocked</key>
 	<string>UUS TEGELANE AVATUD</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Oled teeninud %lld rõngast</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ainult Premiumiga</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Sul on mäng pooleli. Lõpeta see või vali tase, mida sa pole veel alustanud, et õpetust mängida.</string>
 	<key>tutorial.notice.title</key>
 	<string>Ainult mängu alguses</string>
+	<key>tutorial.step1</key>
+	<string>Hoia minust kinni ja lohista üles või alla, et ma õhus lendaksin!</string>
+	<key>tutorial.step2</key>
+	<string>Puuduta minu kohal või all. Lendan otse selles suunas!</string>
+	<key>tutorial.step3</key>
+	<string>Õiget vastust ei näe? Sukeldu rõngaste alt läbi!</string>
+	<key>tutorial.step4</key>
+	<string>Lahenda kiiresti rõngaste kohal olev tehe! Lenda läbi õige vastuse ja saa 1 punkt.</string>
+	<key>tutorial.step5</key>
+	<string>Tead vastust? TURBO jaoks puuduta õiget rõngast! Puuduta enne koonust ja saa 2 punkti.</string>
+	<key>tutorial.step6</key>
+	<string>Ettevaatust! Vale rõnga läbimisel kaotad ühe elu.</string>
+	<key>tutorial.step7</key>
+	<string>Sa tead kõike! Aeg lennata. Edu!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Už si skoro tam</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfektné, všetko správne!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Zozbieral/a si všetky obruče</string>
 	<key>game.end.completionSuffix</key>
 	<string>hotovo!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Príklady, kde číslo **pripočítaš**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pripočítaj %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>V tejto úrovni môžeš nazbierať až **%lld obručí**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Príklady, kde číslo **delíš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tvoje meno</string>
 	<key>name.whatsYourName</key>
 	<string>Ako sa voláš?</string>
+	<key>notif.animal.body %@</key>
+	<string>Získaj ešte pár obručí a odomkni %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tvoje zvieratá čakajú. Vráť sa do hry a zbieraj ďalšie obruče!</string>
 	<key>notif.comeback.title</key>
 	<string>Chýbaš nám! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium obsahuje %lld úrovní pre každú tému a všetkých 10 zvierat. Dobrodružstvo pokračuje!</string>
 	<key>notif.premium.title</key>
 	<string>Odomknite ďalšie úrovne a zvieratá! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Prešlo %lld dní. Vyriešme pár príkladov a získajme ďalšie obruče!</string>
 	<key>notif.reactivate.title</key>
 	<string>Ste pripravení hrať znova? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Ťuknutia: %1$lld z %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebné schválenie dospelého</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dostupné od %lld obručí</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupné od začiatku</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODOMKNUTÁ NOVÁ POSTAVA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Získal/a si %lld obručí</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exkluzívne s Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Už hráš hru. Dokonči ju alebo vyber úroveň, ktorú si ešte nezačal, a spusti návod.</string>
 	<key>tutorial.notice.title</key>
 	<string>Len na začiatku hry</string>
+	<key>tutorial.step1</key>
+	<string>Chyť ma a potiahni hore alebo dole, aby som mohol/la lietať!</string>
+	<key>tutorial.step2</key>
+	<string>Ťukni nado mňa alebo podo mňa. Poletím priamo tým smerom!</string>
+	<key>tutorial.step3</key>
+	<string>Nevidíš správnu odpoveď? Ponor sa pod obruče!</string>
+	<key>tutorial.step4</key>
+	<string>Rýchlo vyrieš príklad nad obručami! Preleť cez správnu odpoveď a získaj 1 bod.</string>
+	<key>tutorial.step5</key>
+	<string>Poznáš odpoveď? Ťukni na správny obruč pre TURBO! Ťukni pred kužeľom a získaj 2 body.</string>
+	<key>tutorial.step6</key>
+	<string>Pozor! Ak preletíš cez nesprávny obruč, stratíš jeden život.</string>
+	<key>tutorial.step7</key>
+	<string>Už vieš všetko! Čas letieť. Veľa šťastia!</string>
 </dict>
 </plist>

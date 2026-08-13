@@ -54,6 +54,8 @@
 	<string>ရောက်ခါနီးပြီ</string>
 	<key>game.encouragement.complete</key>
 	<string>အမှတ်ပြည့်!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ကွင်းအားလုံးကို စုဆောင်းပြီးပြီ</string>
 	<key>game.end.completionSuffix</key>
 	<string>ပြီးပြီ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ဂဏန်းတစ်ခုကို **ပေါင်း**တဲ့ ပုစ္ဆာတွေ။</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ပေါင်း</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ဒီအဆင့်မှာ **%lld ကွင်း** အထိ စုဆောင်းနိုင်တယ်။</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ဂဏန်းတစ်ခုကို **စား**တဲ့ ပုစ္ဆာတွေ။</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>မင်းနာမည်</string>
 	<key>name.whatsYourName</key>
 	<string>မင်းနာမည် ဘာလဲ။</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ကိုဖွင့်ဖို့ နောက်ထပ်ကွင်းအနည်းငယ် ရယူပါ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>မင်းရဲ့တိရစ္ဆာန်တွေ စောင့်နေတယ်။ ပြန်ကစားပြီး ကွင်းတွေ ဆက်စုပါ!</string>
 	<key>notif.comeback.title</key>
 	<string>တို့တွေမင်းကိုသတိရနေတယ်! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium တွင် အကြောင်းအရာတိုင်းအတွက် အဆင့် %lld နှင့် တိရစ္ဆာန် 10 ကောင်တို့ပါဝင်သည်။စွန့်စားခန်းသည် ဆက်သွားနေသည်။</string>
 	<key>notif.premium.title</key>
 	<string>အဆင့်များနှင့် တိရစ္ဆာန်များကို လော့ခ်ဖွင့်ပါ။ 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ရက်ကြာပြီ။ သင်္ချာပုစ္ဆာနည်းနည်း ဖြေပြီး ကွင်းတွေ ထပ်ရယူရအောင်!</string>
 	<key>notif.reactivate.title</key>
 	<string>ပြန်ကစားဖို့ အဆင်သင့်ဖြစ်ပြီလား။ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>တို့ချက်: %1$lld မှ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>လူကြီးအတည်ပြုချက် လိုသည်</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ကွင်းမှ ရနိုင်သည်</string>
 	<key>premium.availableFromStart</key>
 	<string>အစကတည်းက ရနိုင်သည်</string>
 	<key>premium.characterUnlocked</key>
 	<string>ဇာတ်ကောင်အသစ် ဖွင့်ပြီးပြီ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld ကွင်း ရရှိပြီး</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium အတွက်သာ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ဂိမ်းကစားနေတုန်းပါ။ အရင်ဆုံးပြီးအောင်ကစားပါ၊ ဒါမှမဟုတ် မစရသေးတဲ့ အဆင့်တစ်ခုရွေးပြီး သင်ခန်းစာကစားပါ။</string>
 	<key>tutorial.notice.title</key>
 	<string>ဂိမ်းစချိန်မှာပဲ</string>
+	<key>tutorial.step1</key>
+	<string>ငါ့ကိုဖိထားပြီး အပေါ် သို့မဟုတ် အောက်ကိုဆွဲပါ။ လေထဲမှာ ပျံမယ်!</string>
+	<key>tutorial.step2</key>
+	<string>ငါ့အပေါ် သို့မဟုတ် အောက်ကို တို့ပါ။ အဲဒီဘက်ကို တန်းပျံမယ်!</string>
+	<key>tutorial.step3</key>
+	<string>အဖြေမှန် မမြင်ဘူးလား? ကွင်းတွေအောက်ကနေ လျှောဆင်းပါ!</string>
+	<key>tutorial.step4</key>
+	<string>ကွင်းတွေအပေါ်က ပုစ္ဆာကို မြန်မြန်ဖြေပါ! အဖြေမှန်ကနေ ပျံပြီး 1 မှတ်ရယူပါ။</string>
+	<key>tutorial.step5</key>
+	<string>အဖြေသိပြီလား? TURBO အတွက် ကွင်းမှန်ကိုတို့ပါ! ကွန်မတိုင်ခင်တို့ပြီး 2 မှတ်ရယူပါ။</string>
+	<key>tutorial.step6</key>
+	<string>သတိထား! ကွင်းမှားကနေ ပျံသွားရင် အသက်တစ်ခု ဆုံးရှုံးမယ်။</string>
+	<key>tutorial.step7</key>
+	<string>အားလုံးသိပြီ! ပျံဖို့အချိန်ရောက်ပြီ။ ကံကောင်းပါစေ!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>ཁྱེད་རང་ཕལ་ཆེར་སླེབས་སོང་།</string>
 	<key>game.encouragement.complete</key>
 	<string>ཡོངས་སུ་འགྲིག!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ཁྱེད་ཀྱིས་ཨ་ལོང་ཚང་མ་བསྡུས་ཟིན།</string>
 	<key>game.end.completionSuffix</key>
 	<string>ཚར་སོང་!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>གྲངས་ཤིག **སྣོན་པའི** རྩིས།</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld སྣོན</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>རིམ་པ་འདིར **%lld ཨ་ལོང་** བར་བསྡུ་ཆོག</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>གྲངས་ཤིག **བགོ་བའི** རྩིས།</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ཁྱེད་ཀྱི་མིང་།</string>
 	<key>name.whatsYourName</key>
 	<string>ཁྱེད་ཀྱི་མིང་ལ་ག་རེ་ཟེར།</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ཁ་ཕྱེ་བར་ཨ་ལོང་ཁ་ཤས་ད་དུང་བསྡུས། 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ཁྱེད་ཀྱི་སྲོག་ཆགས་ཚོས་སྒུག་བཞིན་འདུག ཕྱིར་ལོག་ནས་ཨ་ལོང་མུ་མཐུད་བསྡུས།</string>
 	<key>notif.comeback.title</key>
 	<string>ང་ཚོས་ཁྱེད་རང་དྲན་གི་འདུག . 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>མཆོང་རྒྱུག་ཕོགས་ཀྱི་སྔོན་ཐོན་ནང་བརྗོད་གཞི་རེ་རེ་དང་སེམས་ཅན་10ཚང་མའི་ཆེད་དུ་རིམ་པ་%lldཚུད་ཡོད།མྱོང་ཚོར་དེ་མུ་མཐུད་དུ་འགྲོ་བཞིན་ཡོད།</string>
 	<key>notif.premium.title</key>
 	<string>གནས་རིམ་དང་སེམས་ཅན་མང་བ་ཕྱེ་རོགས། . 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ཉིན་འགོར་སོང་། རྩིས་འགའ་ཞིག་བརྒྱབ་ནས་ཨ་ལོང་མང་ཙམ་བསྡུ་ཡ།</string>
 	<key>notif.reactivate.title</key>
 	<string>བསྐྱར་དུ་རྩེད་མོ་རྩེད་རྒྱུར་གྲ་སྒྲིག་ཡིན་ནམ། . 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>རེག་པ། %1$lld ནས་ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>མི་རྒན་པའི་ཆོག་མཆན་དགོས།</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ཨ་ལོང་ནས་ཐོབ་ཐུབ།</string>
 	<key>premium.availableFromStart</key>
 	<string>ཐོག་མ་ནས་སྤྱོད་ཆོག</string>
 	<key>premium.characterUnlocked</key>
 	<string>མི་སྣ་གསར་པ་ཁ་ཕྱེ་ཟིན།</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld ཨ་ལོང་ཐོབ་ཟིན།</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium ཁོ་ནར་ཡོད།</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ཁྱེད་ད་ལྟ་རྩེད་མོ་ཞིག་རྩེ་བཞིན་ཡོད། དེ་ཚར་བར་རྩེའམ། ཡང་ན་འགོ་མ་བཙུགས་པའི་རིམ་པ་ཞིག་བདམས་ནས་སློབ་ཁྲིད་རྩེས།</string>
 	<key>tutorial.notice.title</key>
 	<string>རྩེད་མོ་འགོ་འཛུགས་སྐབས་ཁོ་ན</string>
+	<key>tutorial.step1</key>
+	<string>ང་འཇུས་ནས་ཡར་མར་འདྲུད། ང་མཁའ་ལ་འཕུར་ཐུབ།</string>
+	<key>tutorial.step2</key>
+	<string>ངའི་སྟེང་ངམ་འོག་ལ་རེག ང་ཐད་ཀར་ཕྱོགས་དེར་འཕུར་གྱི་ཡིན།</string>
+	<key>tutorial.step3</key>
+	<string>ལན་འགྲིག་པ་མཐོང་མི་ཐུབ་བམ། ཨ་ལོང་གི་འོག་ནས་འཕུར།</string>
+	<key>tutorial.step4</key>
+	<string>ཨ་ལོང་སྟེང་གི་རྩིས་མགྱོགས་པོ་བརྒྱབ། ལན་འགྲིག་པའི་ནང་ནས་འཕུར་ནས་སྐར 1 ལོན།</string>
+	<key>tutorial.step5</key>
+	<string>ལན་ཤེས་སམ། TURBO ཆེད་ཨ་ལོང་འགྲིག་པར་རེག ཀོན་གྱི་སྔོན་ལ་རེག་ནས་སྐར 2 ལོན།</string>
+	<key>tutorial.step6</key>
+	<string>གཟབ་གཟབ། ཨ་ལོང་ནོར་བའི་ནང་ནས་འཕུར་ན་ཚེ་གཅིག་ཤོར་གྱི་རེད།</string>
+	<key>tutorial.step7</key>
+	<string>ཚང་མ་ཤེས་སོང་། ད་འཕུར་རན་སོང་། བཀྲ་ཤིས།</string>
 </dict>
 </plist>

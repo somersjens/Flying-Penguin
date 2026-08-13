@@ -54,6 +54,8 @@
 	<string>இன்னும் கொஞ்சம்தான்</string>
 	<key>game.encouragement.complete</key>
 	<string>அருமை, எல்லாம் சரி!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>எல்லா வளையங்களையும் சேகரித்துவிட்டாய்</string>
 	<key>game.end.completionSuffix</key>
 	<string>முடிந்தது!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ஒரு எண்ணை **கூட்டும்** கணக்குகள்.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld கூட்டு</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>இந்த நிலையில் அதிகபட்சம் **%lld வளையங்கள்** சேகரிக்கலாம்.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ஒரு எண்ணை **வகுக்கும்** கணக்குகள்.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>உன் பெயர்</string>
 	<key>name.whatsYourName</key>
 	<string>உன் பெயர் என்ன?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ஐ திறக்க இன்னும் சில வளையங்களைப் பெறு! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>உன் விலங்குகள் காத்திருக்கின்றன. மீண்டும் வந்து மேலும் வளையங்களை சேகரி!</string>
 	<key>notif.comeback.title</key>
 	<string>நாங்கள் உங்களை இழக்கிறோம்! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ஜம்பிங் ஃபாக்ஸ் பிரீமியம் ஒவ்வொரு தலைப்புக்கும் அனைத்து 10 விலங்குகளுக்கும் %lld நிலைகளை உள்ளடக்கியது. சாகசம் தொடர்கிறது!</string>
 	<key>notif.premium.title</key>
 	<string>மேலும் நிலைகளையும் விலங்குகளையும் திறக்கவும்! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld நாட்கள் ஆகிவிட்டன. சில கணக்குகளை செய்து மேலும் வளையங்கள் பெறலாம்!</string>
 	<key>notif.reactivate.title</key>
 	<string>மீண்டும் விளையாடத் தயாரா? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>தட்டல்கள்: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>பெரியவர் அனுமதி தேவை</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld வளையங்களிலிருந்து கிடைக்கும்</string>
 	<key>premium.availableFromStart</key>
 	<string>தொடக்கத்திலிருந்தே கிடைக்கும்</string>
 	<key>premium.characterUnlocked</key>
 	<string>புதிய கதாபாத்திரம் திறக்கப்பட்டது</string>
+	<key>premium.earnedCards %lld</key>
+	<string>நீ %lld வளையங்கள் பெற்றாய்</string>
 	<key>premium.exclusiveBadge</key>
 	<string>பிரீமியத்தில் மட்டும்</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>நீ ஏற்கனவே ஒரு விளையாட்டில் இருக்கிறாய். அதை முடி அல்லது தொடங்காத நிலையைத் தேர்ந்தெடுத்து பயிற்சியை விளையாடு.</string>
 	<key>tutorial.notice.title</key>
 	<string>விளையாட்டின் தொடக்கத்தில் மட்டும்</string>
+	<key>tutorial.step1</key>
+	<string>என்னைப் பிடித்து மேலோ கீழோ இழு; நான் காற்றில் பறப்பேன்!</string>
+	<key>tutorial.step2</key>
+	<string>என் மேலோ கீழோ தட்டு. நான் நேராக அந்தத் திசையில் பறப்பேன்!</string>
+	<key>tutorial.step3</key>
+	<string>சரியான பதில் தெரியவில்லையா? வளையங்களின் கீழே பறந்து செல்!</string>
+	<key>tutorial.step4</key>
+	<string>வளையங்களின் மேலுள்ள கணக்கை விரைவாக செய்! சரியான பதிலில் பறந்து 1 புள்ளி பெறு.</string>
+	<key>tutorial.step5</key>
+	<string>பதில் தெரியுமா? TURBOக்கு சரியான வளையத்தைத் தட்டு! கோனுக்கு முன் தட்டி 2 புள்ளிகள் பெறு.</string>
+	<key>tutorial.step6</key>
+	<string>கவனம்! தவறான வளையத்தில் பறந்தால் ஒரு உயிரை இழப்பாய்.</string>
+	<key>tutorial.step7</key>
+	<string>எல்லாம் தெரிந்துவிட்டது! இப்போது பறக்கும் நேரம். வாழ்த்துகள்!</string>
 </dict>
 </plist>

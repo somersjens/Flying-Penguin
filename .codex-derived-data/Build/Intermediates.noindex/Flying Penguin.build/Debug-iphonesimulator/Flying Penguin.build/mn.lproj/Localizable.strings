@@ -54,6 +54,8 @@
 	<string>Бараг боллоо</string>
 	<key>game.encouragement.complete</key>
 	<string>Төгс оноо!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Чи бүх цагиргийг цуглууллаа</string>
 	<key>game.end.completionSuffix</key>
 	<string>дууслаа!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Тоог **нэмэх** бодлогууд.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld-ыг нэм</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Энэ түвшинд **%lld цагираг** хүртэл цуглуулж болно.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Тоог **хуваах** бодлогууд.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Чиний нэр</string>
 	<key>name.whatsYourName</key>
 	<string>Чамайг хэн гэдэг вэ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@-г нээхийн тулд дахиад хэдэн цагираг аваарай! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Амьтад чинь хүлээж байна. Тоглоомдоо эргэн орж, цагираг цуглуулаарай!</string>
 	<key>notif.comeback.title</key>
 	<string>Бид чамайг санаж байна! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium нь сэдэв бүрийн %lld түвшин болон бүх 10 амьтныг агуулдаг. Адал явдал үргэлжилсээр байна!</string>
 	<key>notif.premium.title</key>
 	<string>Илүү олон түвшин, амьтдын түгжээг нээ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld өдөр өнгөрлөө. Хэдэн бодлого бодоод илүү олон цагираг авъя!</string>
 	<key>notif.reactivate.title</key>
 	<string>Дахин тоглоход бэлэн үү? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Товшилт: %1$lld-аас %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Насанд хүрэгчийн зөвшөөрөл хэрэгтэй</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld цагирагтай үед нээгдэнэ</string>
 	<key>premium.availableFromStart</key>
 	<string>Эхнээсээ нээлттэй</string>
 	<key>premium.characterUnlocked</key>
 	<string>ШИНЭ ДҮР НЭЭГДЛЭЭ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Чи %lld цагираг авлаа</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Зөвхөн Premium-д</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Чи тоглож байна. Эхлээд дуусга, эсвэл эхлээгүй түвшин сонгоод зааврыг тоглоорой.</string>
 	<key>tutorial.notice.title</key>
 	<string>Зөвхөн тоглоомын эхэнд</string>
+	<key>tutorial.step1</key>
+	<string>Намайг бариад дээш эсвэл доош чирвэл би агаарт ниснэ!</string>
+	<key>tutorial.step2</key>
+	<string>Миний дээр эсвэл доор товш. Би шууд тэр зүг ниснэ!</string>
+	<key>tutorial.step3</key>
+	<string>Зөв хариу харагдахгүй байна уу? Цагиргуудын доогуур шумба!</string>
+	<key>tutorial.step4</key>
+	<string>Цагиргуудын дээрх бодлогыг хурдан бод! Зөв хариугаар нисээд 1 оноо аваарай.</string>
+	<key>tutorial.step5</key>
+	<string>Хариуг мэдэж байна уу? TURBO-д зөв цагиргийг товш! Конусын өмнө товшоод 2 оноо аваарай.</string>
+	<key>tutorial.step6</key>
+	<string>Болгоомжтой! Буруу цагиргаар нисвэл нэг амь алдана.</string>
+	<key>tutorial.step7</key>
+	<string>Чи бүгдийг мэдлээ! Нисэх цаг боллоо. Амжилт!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Bạn gần tới rồi</string>
 	<key>game.encouragement.complete</key>
 	<string>Điểm tuyệt đối!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Bạn đã thu thập tất cả vòng</string>
 	<key>game.end.completionSuffix</key>
 	<string>hoàn thành!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Bài toán **cộng** một số.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Cộng %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Ở màn này, bạn có thể thu thập tối đa **%lld vòng**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Bài toán **chia** một số.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tên của bạn</string>
 	<key>name.whatsYourName</key>
 	<string>Bạn tên gì?</string>
+	<key>notif.animal.body %@</key>
+	<string>Kiếm thêm vài vòng để mở khóa %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Các con vật đang chờ bạn. Quay lại chơi và tiếp tục thu thập vòng nhé!</string>
 	<key>notif.comeback.title</key>
 	<string>Chúng tôi nhớ bạn! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium bao gồm %lld cấp độ cho mọi chủ đề và tất cả 10 con vật. Cuộc phiêu lưu vẫn tiếp tục!</string>
 	<key>notif.premium.title</key>
 	<string>Mở khóa nhiều cấp độ và động vật hơn! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Đã %lld ngày rồi. Cùng giải vài phép tính và kiếm thêm vòng nhé!</string>
 	<key>notif.reactivate.title</key>
 	<string>Sẵn sàng chơi lại chưa? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Số lần chạm: %1$lld trên %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cần người lớn xác nhận</string>
+	<key>premium.availableAt %lld</key>
+	<string>Có từ %lld vòng</string>
 	<key>premium.availableFromStart</key>
 	<string>Có thể dùng ngay từ đầu</string>
 	<key>premium.characterUnlocked</key>
 	<string>ĐÃ MỞ KHÓA NHÂN VẬT MỚI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Bạn đã kiếm được %lld vòng</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Độc quyền với Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Bạn đang chơi dở. Hãy chơi xong hoặc chọn một màn chưa bắt đầu để xem hướng dẫn.</string>
 	<key>tutorial.notice.title</key>
 	<string>Chỉ khi bắt đầu trò chơi</string>
+	<key>tutorial.step1</key>
+	<string>Giữ và kéo tôi lên hoặc xuống để tôi bay trong không trung!</string>
+	<key>tutorial.step2</key>
+	<string>Chạm phía trên hoặc dưới tôi. Tôi sẽ bay thẳng theo hướng đó!</string>
+	<key>tutorial.step3</key>
+	<string>Không thấy đáp án đúng? Hãy bay xuống dưới các vòng!</string>
+	<key>tutorial.step4</key>
+	<string>Giải nhanh phép tính phía trên các vòng! Bay qua đáp án đúng để được 1 điểm.</string>
+	<key>tutorial.step5</key>
+	<string>Biết đáp án rồi? Chạm vòng đúng để TURBO! Chạm trước cọc tiêu để được 2 điểm.</string>
+	<key>tutorial.step6</key>
+	<string>Cẩn thận! Bay qua vòng sai và bạn sẽ mất một mạng.</string>
+	<key>tutorial.step7</key>
+	<string>Bạn biết hết rồi! Đến lúc bay. Chúc may mắn!</string>
 </dict>
 </plist>

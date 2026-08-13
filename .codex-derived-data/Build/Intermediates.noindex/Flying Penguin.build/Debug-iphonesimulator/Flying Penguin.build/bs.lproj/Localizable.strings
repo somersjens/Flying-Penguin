@@ -54,6 +54,8 @@
 	<string>Još malo</string>
 	<key>game.encouragement.complete</key>
 	<string>Savršen rezultat!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Sakupio/la si sve obruče</string>
 	<key>game.end.completionSuffix</key>
 	<string>završeno!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Zadaci gdje broj **sabiraš**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Dodaj %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Na ovom nivou možeš skupiti do **%lld obruča**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Zadaci gdje broj **dijeliš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tvoje ime</string>
 	<key>name.whatsYourName</key>
 	<string>Kako se zoveš?</string>
+	<key>notif.animal.body %@</key>
+	<string>Osvoji još nekoliko obruča da otključaš %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tvoje životinje čekaju. Vrati se u igru i nastavi skupljati obruče!</string>
 	<key>notif.comeback.title</key>
 	<string>Nedostaješ nam! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium uključuje %lld nivoa za svaku temu i svih 10 životinja. Avantura se nastavlja!</string>
 	<key>notif.premium.title</key>
 	<string>Otključajte više nivoa i životinja! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Prošlo je %lld dana. Riješimo nekoliko zadataka i osvojimo još obruča!</string>
 	<key>notif.reactivate.title</key>
 	<string>Spremni za ponovno igranje? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Dodiri: %1$lld od %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebno odobrenje odrasle osobe</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dostupno od %lld obruča</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupno od početka</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOVI LIK JE OTKLJUČAN</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Osvojio/la si %lld obruča</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ekskluzivno uz Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Već igraš. Završi igru ili izaberi nivo koji još nisi započeo/la da pokreneš uputstvo.</string>
 	<key>tutorial.notice.title</key>
 	<string>Samo na početku igre</string>
+	<key>tutorial.step1</key>
+	<string>Drži me i povuci gore ili dolje da letim kroz zrak!</string>
+	<key>tutorial.step2</key>
+	<string>Tapni iznad ili ispod mene. Poletjet ću ravno tamo!</string>
+	<key>tutorial.step3</key>
+	<string>Ne vidiš tačan odgovor? Zaroni ispod obruča!</string>
+	<key>tutorial.step4</key>
+	<string>Brzo riješi zadatak iznad obruča! Proleti kroz tačan odgovor i osvoji 1 bod.</string>
+	<key>tutorial.step5</key>
+	<string>Znaš odgovor? Tapni tačan obruč za TURBO! Tapni prije čunja i osvoji 2 boda.</string>
+	<key>tutorial.step6</key>
+	<string>Pazi! Ako proletiš kroz pogrešan obruč, izgubit ćeš jedan život.</string>
+	<key>tutorial.step7</key>
+	<string>Sve znaš! Vrijeme je za let. Sretno!</string>
 </dict>
 </plist>

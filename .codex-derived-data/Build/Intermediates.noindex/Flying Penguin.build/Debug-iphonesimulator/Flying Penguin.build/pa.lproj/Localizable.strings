@@ -54,6 +54,8 @@
 	<string>ਤੁਸੀਂ ਲਗਭਗ ਪਹੁੰਚ ਗਏ</string>
 	<key>game.encouragement.complete</key>
 	<string>ਬਿਲਕੁਲ ਸਹੀ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ਤੁਸੀਂ ਸਾਰੇ ਛੱਲੇ ਇਕੱਠੇ ਕਰ ਲਏ</string>
 	<key>game.end.completionSuffix</key>
 	<string>ਪੂਰਾ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਸੰਖਿਆ **ਜੋੜਦੇ** ਹੋ।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ਜੋੜੋ</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ਇਸ ਲੈਵਲ ਵਿੱਚ ਤੁਸੀਂ ਵੱਧ ਤੋਂ ਵੱਧ **%lld ਛੱਲੇ** ਇਕੱਠੇ ਕਰ ਸਕਦੇ ਹੋ।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ਜਿੱਥੇ ਤੁਸੀਂ ਇੱਕ ਸੰਖਿਆ ਨੂੰ **ਭਾਗ** ਦਿੰਦੇ ਹੋ।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ਤੁਹਾਡਾ ਨਾਮ</string>
 	<key>name.whatsYourName</key>
 	<string>ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ਨੂੰ ਅਨਲੌਕ ਕਰਨ ਲਈ ਕੁਝ ਹੋਰ ਛੱਲੇ ਕਮਾਓ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ਤੁਹਾਡੇ ਜਾਨਵਰ ਉਡੀਕ ਰਹੇ ਹਨ। ਵਾਪਸ ਖੇਡੋ ਅਤੇ ਹੋਰ ਛੱਲੇ ਇਕੱਠੇ ਕਰੋ!</string>
 	<key>notif.comeback.title</key>
 	<string>ਅਸੀਂ ਤੁਹਾਨੂੰ ਯਾਦ ਕਰਦੇ ਹਾਂ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ਜੰਪਿੰਗ ਫੌਕਸ ਪ੍ਰੀਮੀਅਮ ਵਿੱਚ ਹਰ ਵਿਸ਼ੇ ਲਈ %lld ਪੱਧਰ ਅਤੇ ਸਾਰੇ 10 ਜਾਨਵਰ ਸ਼ਾਮਲ ਹਨ। ਸਾਹਸ ਜਾਰੀ ਰਹਿੰਦਾ ਹੈ!</string>
 	<key>notif.premium.title</key>
 	<string>ਹੋਰ ਪੱਧਰਾਂ ਅਤੇ ਜਾਨਵਰਾਂ ਨੂੰ ਅਨਲੌਕ ਕਰੋ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ਦਿਨ ਹੋ ਗਏ। ਕੁਝ ਹਿਸਾਬ ਕਰੀਏ ਅਤੇ ਹੋਰ ਛੱਲੇ ਕਮਾਈਏ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ਦੁਬਾਰਾ ਖੇਡਣ ਲਈ ਤਿਆਰ ਹੋ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ਟੈਪ: %1$lld ਵਿੱਚੋਂ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ਵੱਡੇ ਦੀ ਮਨਜ਼ੂਰੀ ਲੋੜੀਂਦੀ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ਛੱਲਿਆਂ ਤੋਂ ਉਪਲਬਧ</string>
 	<key>premium.availableFromStart</key>
 	<string>ਸ਼ੁਰੂ ਤੋਂ ਉਪਲਬਧ</string>
 	<key>premium.characterUnlocked</key>
 	<string>ਨਵਾਂ ਕਿਰਦਾਰ ਅਨਲੌਕ ਹੋਇਆ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ਤੁਸੀਂ %lld ਛੱਲੇ ਕਮਾਏ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ਸਿਰਫ਼ Premium ਨਾਲ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ਤੁਸੀਂ ਇੱਕ ਖੇਡ ਦੇ ਵਿਚਕਾਰ ਹੋ। ਪਹਿਲਾਂ ਇਸਨੂੰ ਪੂਰਾ ਕਰੋ ਜਾਂ ਕੋਈ ਨਾ-ਸ਼ੁਰੂ ਕੀਤਾ ਲੈਵਲ ਚੁਣੋ, ਫਿਰ ਟਿਊਟੋਰਿਅਲ ਖੇਡੋ।</string>
 	<key>tutorial.notice.title</key>
 	<string>ਸਿਰਫ਼ ਖੇਡ ਦੀ ਸ਼ੁਰੂਆਤ ਵਿੱਚ</string>
+	<key>tutorial.step1</key>
+	<string>ਮੈਨੂੰ ਫੜੋ ਅਤੇ ਉੱਪਰ ਜਾਂ ਹੇਠਾਂ ਖਿੱਚੋ ਤਾਂ ਕਿ ਮੈਂ ਹਵਾ ਵਿੱਚ ਉੱਡਾਂ!</string>
+	<key>tutorial.step2</key>
+	<string>ਮੇਰੇ ਉੱਪਰ ਜਾਂ ਹੇਠਾਂ ਟੈਪ ਕਰੋ। ਮੈਂ ਸਿੱਧਾ ਉਸੇ ਪਾਸੇ ਉੱਡਾਂਗਾ!</string>
+	<key>tutorial.step3</key>
+	<string>ਸਹੀ ਜਵਾਬ ਨਹੀਂ ਦਿਖ ਰਿਹਾ? ਛੱਲਿਆਂ ਦੇ ਹੇਠੋਂ ਲੰਘੋ!</string>
+	<key>tutorial.step4</key>
+	<string>ਛੱਲਿਆਂ ਉੱਪਰ ਵਾਲਾ ਹਿਸਾਬ ਜਲਦੀ ਕਰੋ! ਸਹੀ ਜਵਾਬ ਵਿੱਚੋਂ ਉੱਡ ਕੇ 1 ਅੰਕ ਲਵੋ।</string>
+	<key>tutorial.step5</key>
+	<string>ਜਵਾਬ ਪਤਾ ਹੈ? TURBO ਲਈ ਸਹੀ ਛੱਲੇ 'ਤੇ ਟੈਪ ਕਰੋ! ਕੋਨ ਤੋਂ ਪਹਿਲਾਂ ਟੈਪ ਕਰਕੇ 2 ਅੰਕ ਲਵੋ।</string>
+	<key>tutorial.step6</key>
+	<string>ਸਾਵਧਾਨ! ਗਲਤ ਛੱਲੇ ਵਿੱਚੋਂ ਉੱਡੇ ਤਾਂ ਇੱਕ ਜ਼ਿੰਦਗੀ ਗੁਆਓਗੇ।</string>
+	<key>tutorial.step7</key>
+	<string>ਤੁਹਾਨੂੰ ਸਭ ਪਤਾ ਹੈ! ਹੁਣ ਉੱਡਣ ਦਾ ਸਮਾਂ। ਸ਼ੁਭਕਾਮਨਾਵਾਂ!</string>
 </dict>
 </plist>

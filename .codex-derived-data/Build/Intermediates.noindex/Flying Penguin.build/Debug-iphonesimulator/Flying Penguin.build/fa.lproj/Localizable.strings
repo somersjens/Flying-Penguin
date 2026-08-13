@@ -54,6 +54,8 @@
 	<string>تقریباً رسیدی</string>
 	<key>game.encouragement.complete</key>
 	<string>امتیاز کامل!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>همهٔ حلقه‌ها را جمع کردی</string>
 	<key>game.end.completionSuffix</key>
 	<string>کامل شد!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>تمرین‌هایی که در آن عددی را **جمع** می‌کنی.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>جمع %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>در این مرحله می‌توانی تا **%lld حلقه** جمع کنی.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>تمرین‌هایی که در آن عددی را **تقسیم** می‌کنی.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>نام تو</string>
 	<key>name.whatsYourName</key>
 	<string>اسمت چیست؟</string>
+	<key>notif.animal.body %@</key>
+	<string>چند حلقهٔ دیگر بگیر تا %@ را باز کنی! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>حیوان‌هایت منتظرند. برگرد و به جمع کردن حلقه‌ها ادامه بده!</string>
 	<key>notif.comeback.title</key>
 	<string>دلمون برات تنگ شده! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium شامل %lld سطح برای هر موضوع و هر 10 حیوان است. ماجرا همچنان ادامه دارد!</string>
 	<key>notif.premium.title</key>
 	<string>سطوح و حیوانات بیشتر را باز کنید! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld روز گذشته. چند مسئله حل کنیم و حلقه‌های بیشتری بگیریم!</string>
 	<key>notif.reactivate.title</key>
 	<string>برای بازی دوباره آماده اید؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>تعداد ضربه‌ها: %1$lld از %2$lld</string>
 	<key>parentGate.title</key>
 	<string>تأیید بزرگسال لازم است</string>
+	<key>premium.availableAt %lld</key>
+	<string>از %lld حلقه در دسترس</string>
 	<key>premium.availableFromStart</key>
 	<string>از ابتدا در دسترس است</string>
 	<key>premium.characterUnlocked</key>
 	<string>شخصیت جدید باز شد</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld حلقه به دست آوردی</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ویژهٔ Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>وسط بازی هستی. اول تمامش کن یا مرحله‌ای را انتخاب کن که هنوز شروع نکرده‌ای تا آموزش را بازی کنی.</string>
 	<key>tutorial.notice.title</key>
 	<string>فقط اول بازی</string>
+	<key>tutorial.step1</key>
+	<string>من را بگیر و بالا یا پایین بکش تا در هوا پرواز کنم!</string>
+	<key>tutorial.step2</key>
+	<string>بالا یا پایین من بزن. مستقیم همان طرف پرواز می‌کنم!</string>
+	<key>tutorial.step3</key>
+	<string>جواب درست را نمی‌بینی؟ از زیر حلقه‌ها رد شو!</string>
+	<key>tutorial.step4</key>
+	<string>مسئلهٔ بالای حلقه‌ها را سریع حل کن! از جواب درست رد شو و ۱ امتیاز بگیر.</string>
+	<key>tutorial.step5</key>
+	<string>جواب را می‌دانی؟ برای TURBO روی حلقهٔ درست بزن! قبل از مخروط بزن و ۲ امتیاز بگیر.</string>
+	<key>tutorial.step6</key>
+	<string>مواظب باش! اگر از حلقهٔ اشتباه رد شوی، یک جان از دست می‌دهی.</string>
+	<key>tutorial.step7</key>
+	<string>همه‌چیز را بلدی! وقت پرواز است. موفق باشی!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Xa case estás</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfecto, todo ben!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Recolliches todos os aros</string>
 	<key>game.end.completionSuffix</key>
 	<string>completado!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Contas nas que \*\*sumas\*\* un número.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Sumar %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Neste nivel podes recoller ata **%lld aros**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Contas nas que \*\*divides\*\* un número.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>O teu nome</string>
 	<key>name.whatsYourName</key>
 	<string>Como te chamas?</string>
+	<key>notif.animal.body %@</key>
+	<string>Gaña uns cantos aros máis para desbloquear %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Os teus animais están agardando. Volve ao xogo e segue recollendo aros!</string>
 	<key>notif.comeback.title</key>
 	<string>Botámoste de menos! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium inclúe %lld niveis para cada tema e os 10 animais. A aventura continúa!</string>
 	<key>notif.premium.title</key>
 	<string>Desbloquea máis niveis e animais! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Pasaron %lld días. Resolvamos unhas contas e gañemos máis aros!</string>
 	<key>notif.reactivate.title</key>
 	<string>Listo para xogar de novo? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Toques: %1$lld de %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Precísase a aprobación dun adulto</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dispoñible desde %lld aros</string>
 	<key>premium.availableFromStart</key>
 	<string>Dispoñible desde o inicio</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOVO PERSONAXE DESBLOQUEADO</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Gañaches %lld aros</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusivo con Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Estás no medio dunha partida. Remátaa ou escolle un nivel que aínda non empezaches para facer o tutorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Só ao comezo da partida</string>
+	<key>tutorial.step1</key>
+	<string>Agárrame e arrástrame arriba ou abaixo para voar polo aire!</string>
+	<key>tutorial.step2</key>
+	<string>Toca por riba ou por baixo de min. Voarei directo cara alí!</string>
+	<key>tutorial.step3</key>
+	<string>Non ves a resposta correcta? Mergúllate por baixo dos aros!</string>
+	<key>tutorial.step4</key>
+	<string>Resolve axiña a conta sobre os aros! Voa pola resposta correcta e gaña 1 punto.</string>
+	<key>tutorial.step5</key>
+	<string>Xa sabes a resposta? Toca o aro correcto para TURBO! Toca antes do cono e gaña 2 puntos.</string>
+	<key>tutorial.step6</key>
+	<string>Ollo! Se voas polo aro incorrecto, perderás unha vida.</string>
+	<key>tutorial.step7</key>
+	<string>Xa o sabes todo! Hora de voar. Boa sorte!</string>
 </dict>
 </plist>

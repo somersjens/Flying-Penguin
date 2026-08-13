@@ -54,6 +54,8 @@
 	<string>Ci sei quasi</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfetto, tutto giusto!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Hai raccolto tutti i cerchi</string>
 	<key>game.end.completionSuffix</key>
 	<string>completato!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Calcoli in cui **aggiungi** un numero.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Più %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>In questo livello puoi raccogliere fino a **%lld cerchi**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Calcoli in cui **dividi** un numero.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Il tuo nome</string>
 	<key>name.whatsYourName</key>
 	<string>Come ti chiami?</string>
+	<key>notif.animal.body %@</key>
+	<string>Guadagna qualche cerchio in più per sbloccare %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>I tuoi animali ti aspettano. Torna a giocare e continua a raccogliere cerchi!</string>
 	<key>notif.comeback.title</key>
 	<string>Ci manchi! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium include %lld livelli per ogni argomento e tutti i 10 animali. L'avventura continua!</string>
 	<key>notif.premium.title</key>
 	<string>Sblocca più livelli e animali! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Sono passati %lld giorni. Risolviamo qualche calcolo e guadagniamo altri cerchi!</string>
 	<key>notif.reactivate.title</key>
 	<string>Pronti a giocare di nuovo? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tocchi: %1$lld su %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Serve l’approvazione di un adulto</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponibile da %lld cerchi</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponibile dall’inizio</string>
 	<key>premium.characterUnlocked</key>
 	<string>NUOVO PERSONAGGIO SBLOCCATO</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Hai guadagnato %lld cerchi</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Esclusivo con Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Stai già giocando. Finisci la partita o scegli un livello non iniziato per fare il tutorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Solo a inizio partita</string>
+	<key>tutorial.step1</key>
+	<string>Afferrami e trascinami su o giù per farmi volare!</string>
+	<key>tutorial.step2</key>
+	<string>Tocca sopra o sotto di me. Volerò dritto in quella direzione!</string>
+	<key>tutorial.step3</key>
+	<string>Non vedi la risposta giusta? Passa sotto i cerchi!</string>
+	<key>tutorial.step4</key>
+	<string>Risolvi in fretta il calcolo sopra i cerchi! Vola nella risposta giusta e ottieni 1 punto.</string>
+	<key>tutorial.step5</key>
+	<string>Sai già la risposta? Tocca il cerchio giusto per TURBO! Tocca prima del cono e ottieni 2 punti.</string>
+	<key>tutorial.step6</key>
+	<string>Attenzione! Se voli nel cerchio sbagliato, perderai una vita.</string>
+	<key>tutorial.step7</key>
+	<string>Sai tutto! È ora di volare. Buona fortuna!</string>
 </dict>
 </plist>

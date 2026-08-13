@@ -54,6 +54,8 @@
 	<string>Neredeyse bitti</string>
 	<key>game.encouragement.complete</key>
 	<string>Kusursuz!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Tüm çemberleri topladın</string>
 	<key>game.end.completionSuffix</key>
 	<string>tamamlandı!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Bir sayıyı **eklediğin** işlemler.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ekle</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Bu seviyede en fazla **%lld çember** toplayabilirsin.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Bir sayıyı **böldüğün** işlemler.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Adın</string>
 	<key>name.whatsYourName</key>
 	<string>Adın ne?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ kilidini açmak için birkaç çember daha kazan! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Hayvanların seni bekliyor. Oyuna dön ve çember toplamaya devam et!</string>
 	<key>notif.comeback.title</key>
 	<string>Seni özledik! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium, her konu ve 10 hayvanın tümü için %lld seviye içerir. Macera devam ediyor!</string>
 	<key>notif.premium.title</key>
 	<string>Daha fazla seviyenin ve hayvanın kilidini açın! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld gün geçti. Birkaç işlem çözelim ve daha fazla çember kazanalım!</string>
 	<key>notif.reactivate.title</key>
 	<string>Tekrar oynamaya hazır mısın? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Dokunma: %1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Yetişkin onayı gerekli</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld çemberden itibaren</string>
 	<key>premium.availableFromStart</key>
 	<string>Başlangıçtan itibaren kullanılabilir</string>
 	<key>premium.characterUnlocked</key>
 	<string>YENİ KARAKTER AÇILDI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld çember kazandın</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Yalnızca Premium ile</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Bir oyunun ortasındasın. Önce bitir ya da eğitim için henüz başlamadığın bir seviye seç.</string>
 	<key>tutorial.notice.title</key>
 	<string>Sadece oyunun başında</string>
+	<key>tutorial.step1</key>
+	<string>Beni tutup yukarı veya aşağı sürükle, havada uçayım!</string>
+	<key>tutorial.step2</key>
+	<string>Üstüme veya altıma dokun. Doğruca o yöne uçacağım!</string>
+	<key>tutorial.step3</key>
+	<string>Doğru cevabı göremiyor musun? Çemberlerin altından geç!</string>
+	<key>tutorial.step4</key>
+	<string>Çemberlerin üstündeki işlemi hızlıca çöz! Doğru cevaptan uç ve 1 puan kazan.</string>
+	<key>tutorial.step5</key>
+	<string>Cevabı biliyor musun? TURBO için doğru çembere dokun! Koniden önce dokun ve 2 puan kazan.</string>
+	<key>tutorial.step6</key>
+	<string>Dikkat! Yanlış çemberden uçarsan bir can kaybedersin.</string>
+	<key>tutorial.step7</key>
+	<string>Her şeyi biliyorsun! Uçma zamanı. Bol şans!</string>
 </dict>
 </plist>

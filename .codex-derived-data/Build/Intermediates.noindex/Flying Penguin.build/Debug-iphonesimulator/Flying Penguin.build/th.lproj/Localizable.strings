@@ -54,6 +54,8 @@
 	<string>อีกนิดเดียว</string>
 	<key>game.encouragement.complete</key>
 	<string>ยอดเยี่ยม ถูกหมด!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>คุณเก็บห่วงครบทั้งหมดแล้ว</string>
 	<key>game.end.completionSuffix</key>
 	<string>เสร็จแล้ว!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>โจทย์ที่ให้ **บวก** ตัวเลข</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>บวก %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ด่านนี้เก็บได้สูงสุด **%lld ห่วง**</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>โจทย์ที่ให้ **หาร** ตัวเลข</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ชื่อของเธอ</string>
 	<key>name.whatsYourName</key>
 	<string>เธอชื่ออะไร?</string>
+	<key>notif.animal.body %@</key>
+	<string>เก็บห่วงเพิ่มอีกนิดเพื่อปลดล็อก %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>สัตว์ของคุณกำลังรออยู่ กลับมาเล่นและเก็บห่วงต่อกันเถอะ!</string>
 	<key>notif.comeback.title</key>
 	<string>เราคิดถึงคุณ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium มี %lld ด่านสำหรับทุกหัวข้อและสัตว์ทั้งหมด 10 ตัวการผจญภัยดำเนินต่อไป!</string>
 	<key>notif.premium.title</key>
 	<string>ปลดล็อคระดับและสัตว์เพิ่มเติม! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>ผ่านไป %lld วันแล้ว มาทำโจทย์คณิตแล้วเก็บห่วงเพิ่มกัน!</string>
 	<key>notif.reactivate.title</key>
 	<string>พร้อมที่จะเล่นอีกครั้งหรือยัง? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>แตะแล้ว: %1$lld จาก %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ต้องได้รับอนุมัติจากผู้ใหญ่</string>
+	<key>premium.availableAt %lld</key>
+	<string>ใช้ได้เมื่อมี %lld ห่วง</string>
 	<key>premium.availableFromStart</key>
 	<string>ใช้ได้ตั้งแต่เริ่มต้น</string>
 	<key>premium.characterUnlocked</key>
 	<string>ปลดล็อกตัวละครใหม่แล้ว</string>
+	<key>premium.earnedCards %lld</key>
+	<string>คุณได้ %lld ห่วง</string>
 	<key>premium.exclusiveBadge</key>
 	<string>เฉพาะ Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>กำลังเล่นอยู่ เล่นให้จบ หรือเลือกด่านที่ยังไม่ได้เริ่มเพื่อเล่นบทสอน</string>
 	<key>tutorial.notice.title</key>
 	<string>ใช้ได้ตอนเริ่มเกมเท่านั้น</string>
+	<key>tutorial.step1</key>
+	<string>กดค้างที่ฉันแล้วลากขึ้นหรือลง เพื่อให้ฉันบินไปในอากาศ!</string>
+	<key>tutorial.step2</key>
+	<string>แตะเหนือหรือใต้ตัวฉัน ฉันจะบินตรงไปทางนั้น!</string>
+	<key>tutorial.step3</key>
+	<string>ไม่เห็นคำตอบที่ถูกใช่ไหม? บินลอดใต้ห่วงไปเลย!</string>
+	<key>tutorial.step4</key>
+	<string>รีบทำโจทย์เหนือห่วง! บินผ่านคำตอบที่ถูกแล้วรับ 1 คะแนน</string>
+	<key>tutorial.step5</key>
+	<string>รู้คำตอบแล้ว? แตะห่วงที่ถูกเพื่อใช้ TURBO! แตะก่อนกรวยแล้วรับ 2 คะแนน</string>
+	<key>tutorial.step6</key>
+	<string>ระวัง! ถ้าบินผ่านห่วงผิด คุณจะเสียชีวิตหนึ่งครั้ง</string>
+	<key>tutorial.step7</key>
+	<string>รู้ครบแล้ว! ได้เวลาบิน ขอให้โชคดี!</string>
 </dict>
 </plist>

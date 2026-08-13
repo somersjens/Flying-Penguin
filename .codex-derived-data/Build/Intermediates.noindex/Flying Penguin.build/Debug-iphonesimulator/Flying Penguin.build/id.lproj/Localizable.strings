@@ -54,6 +54,8 @@
 	<string>Sedikit lagi</string>
 	<key>game.encouragement.complete</key>
 	<string>Nilai sempurna!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Kamu sudah mengumpulkan semua simpai</string>
 	<key>game.end.completionSuffix</key>
 	<string>selesai!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Soal untuk \*\*menambah\*\* angka.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Tambah %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Di level ini kamu bisa mengumpulkan hingga **%lld simpai**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Soal untuk \*\*membagi\*\* angka.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Namamu</string>
 	<key>name.whatsYourName</key>
 	<string>Siapa namamu?</string>
+	<key>notif.animal.body %@</key>
+	<string>Dapatkan beberapa simpai lagi untuk membuka %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Hewanmu menunggu. Ayo kembali bermain dan terus kumpulkan simpai!</string>
 	<key>notif.comeback.title</key>
 	<string>Kami merindukanmu! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium mencakup %lld level untuk setiap topik dan 10 hewan. Petualangan terus berlanjut!</string>
 	<key>notif.premium.title</key>
 	<string>Buka lebih banyak level dan hewan! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Sudah %lld hari. Yuk selesaikan beberapa soal dan dapatkan lebih banyak simpai!</string>
 	<key>notif.reactivate.title</key>
 	<string>Siap bermain lagi? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Ketukan: %1$lld dari %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Perlu persetujuan orang dewasa</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tersedia mulai %lld simpai</string>
 	<key>premium.availableFromStart</key>
 	<string>Tersedia sejak awal</string>
 	<key>premium.characterUnlocked</key>
 	<string>KARAKTER BARU TERBUKA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Kamu mendapat %lld simpai</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusif dengan Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Kamu sedang bermain. Selesaikan dulu, atau pilih level yang belum kamu mulai untuk mengikuti tutorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Hanya di awal permainan</string>
+	<key>tutorial.step1</key>
+	<string>Pegang aku lalu seret ke atas atau bawah agar aku terbang di udara!</string>
+	<key>tutorial.step2</key>
+	<string>Ketuk di atas atau bawahku. Aku akan terbang lurus ke arah itu!</string>
+	<key>tutorial.step3</key>
+	<string>Tidak melihat jawaban yang benar? Menyelamlah di bawah simpai!</string>
+	<key>tutorial.step4</key>
+	<string>Cepat selesaikan soal di atas simpai! Terbang lewat jawaban benar dan raih 1 poin.</string>
+	<key>tutorial.step5</key>
+	<string>Sudah tahu jawabannya? Ketuk simpai yang benar untuk TURBO! Ketuk sebelum kerucut dan raih 2 poin.</string>
+	<key>tutorial.step6</key>
+	<string>Hati-hati! Jika terbang lewat simpai yang salah, kamu kehilangan satu nyawa.</string>
+	<key>tutorial.step7</key>
+	<string>Kamu sudah tahu semuanya! Saatnya terbang. Semoga berhasil!</string>
 </dict>
 </plist>

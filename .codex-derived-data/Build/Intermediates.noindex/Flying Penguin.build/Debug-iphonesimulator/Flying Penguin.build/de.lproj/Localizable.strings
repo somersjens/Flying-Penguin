@@ -54,6 +54,8 @@
 	<string>Du bist fast da</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfekt, alles richtig!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Du hast alle Reifen gesammelt</string>
 	<key>game.end.completionSuffix</key>
 	<string>geschafft!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Aufgaben, bei denen du eine Zahl **addierst**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plus %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Du kannst in diesem Level bis zu **%lld Reifen** sammeln.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Aufgaben, bei denen du eine Zahl **teilst**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Dein Name</string>
 	<key>name.whatsYourName</key>
 	<string>Wie heißt du?</string>
+	<key>notif.animal.body %@</key>
+	<string>Sammle noch ein paar Reifen, um %@ freizuschalten! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Deine Tiere warten. Spring wieder rein und sammle weiter Reifen!</string>
 	<key>notif.comeback.title</key>
 	<string>Wir vermissen dich! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium umfasst %lld Level für jedes Thema und alle 10 Tiere. Das Abenteuer geht weiter!</string>
 	<key>notif.premium.title</key>
 	<string>Schalte mehr Level und Tiere frei! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld Tage sind vergangen. Löse ein paar Aufgaben und verdiene mehr Reifen!</string>
 	<key>notif.reactivate.title</key>
 	<string>Bereit, wieder zu spielen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tipps: %1$lld von %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Bestätigung eines Erwachsenen nötig</string>
+	<key>premium.availableAt %lld</key>
+	<string>Verfügbar ab %lld Reifen</string>
 	<key>premium.availableFromStart</key>
 	<string>Von Anfang an verfügbar</string>
 	<key>premium.characterUnlocked</key>
 	<string>NEUE FIGUR FREIGESCHALTET</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Du hast %lld Reifen verdient</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exklusiv mit Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Du bist mitten im Spiel. Beende es oder wähle ein noch nicht gestartetes Level, um das Tutorial zu spielen.</string>
 	<key>tutorial.notice.title</key>
 	<string>Nur am Spielanfang</string>
+	<key>tutorial.step1</key>
+	<string>Halte mich fest und zieh mich hoch oder runter, damit ich durch die Luft fliege!</string>
+	<key>tutorial.step2</key>
+	<string>Tippe über oder unter mich. Ich fliege direkt in diese Richtung!</string>
+	<key>tutorial.step3</key>
+	<string>Siehst du die richtige Antwort nicht? Tauch unter den Reifen durch!</string>
+	<key>tutorial.step4</key>
+	<string>Löse schnell die Aufgabe über den Reifen! Flieg durch die richtige Antwort und hol dir 1 Punkt.</string>
+	<key>tutorial.step5</key>
+	<string>Weißt du die Antwort? Tippe den richtigen Reifen für TURBO! Tippe vor dem Kegel und hol dir 2 Punkte.</string>
+	<key>tutorial.step6</key>
+	<string>Vorsicht! Fliegst du durch den falschen Reifen, verlierst du ein Leben.</string>
+	<key>tutorial.step7</key>
+	<string>Du weißt alles! Zeit zu fliegen. Viel Glück!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>अब लगभग पुग्यौ</string>
 	<key>game.encouragement.complete</key>
 	<string>सबै सही!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>तिमीले सबै घेराहरू सङ्कलन गर्यौ</string>
 	<key>game.end.completionSuffix</key>
 	<string>पूरा भयो!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>एउटा संख्या **जोड्ने** हिसाब।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld जोड</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>यो लेभलमा बढीमा **%lld घेरा** सङ्कलन गर्न सक्छौ।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>एउटा संख्या **भाग गर्ने** हिसाब।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>तिम्रो नाम</string>
 	<key>name.whatsYourName</key>
 	<string>तिम्रो नाम के हो?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ अनलक गर्न केही घेरा अझ कमाऊ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>तिम्रा जनावरहरू पर्खिरहेका छन्। फेरि खेलमा आऊ र घेरा सङ्कलन गरिरह!</string>
 	<key>notif.comeback.title</key>
 	<string>हामी तपाईंलाई सम्झन्छौं! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>जम्पिङ फक्स प्रिमियमले हरेक विषय र सबै 10 जनावरहरूको लागि %lld स्तरहरू समावेश गर्दछ। साहसिक कार्य जारी छ!</string>
 	<key>notif.premium.title</key>
 	<string>थप स्तर र जनावरहरू अनलक गर्नुहोस्! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld दिन भयो। केही हिसाब गरौँ र अझ घेरा कमाऔँ!</string>
 	<key>notif.reactivate.title</key>
 	<string>फेरि खेल्न तयार हुनुहुन्छ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ट्याप: %1$lld मध्ये %2$lld</string>
 	<key>parentGate.title</key>
 	<string>वयस्कको स्वीकृति चाहिन्छ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld घेरादेखि उपलब्ध</string>
 	<key>premium.availableFromStart</key>
 	<string>सुरुदेखि उपलब्ध</string>
 	<key>premium.characterUnlocked</key>
 	<string>नयाँ पात्र खुल्यो</string>
+	<key>premium.earnedCards %lld</key>
+	<string>तिमीले %lld घेरा कमायौ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium मा मात्र</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>तिमी खेलकै बीचमा छौ। पहिले सकाऊ, वा सुरु नगरेको लेभल छान, अनि ट्युटोरियल खेल।</string>
 	<key>tutorial.notice.title</key>
 	<string>खेलको सुरुमा मात्र</string>
+	<key>tutorial.step1</key>
+	<string>मलाई समातेर माथि वा तल तान, म हावामा उड्छु!</string>
+	<key>tutorial.step2</key>
+	<string>मेरो माथि वा तल ट्याप गर। म सीधै त्यतैतिर उड्छु!</string>
+	<key>tutorial.step3</key>
+	<string>सही उत्तर देखिँदैन? घेराहरूको तलबाट जाऊ!</string>
+	<key>tutorial.step4</key>
+	<string>घेरामाथिको हिसाब छिटो गर! सही उत्तरबाट उडेर 1 अंक पाऊ।</string>
+	<key>tutorial.step5</key>
+	<string>उत्तर थाहा छ? TURBO का लागि सही घेरामा ट्याप गर! कोनअघि ट्याप गरेर 2 अंक पाऊ।</string>
+	<key>tutorial.step6</key>
+	<string>होसियार! गलत घेराबाट उड्यौ भने एउटा जीवन गुमाउँछौ।</string>
+	<key>tutorial.step7</key>
+	<string>तिमीलाई सबै थाहा भयो! अब उड्ने समय। शुभकामना!</string>
 </dict>
 </plist>

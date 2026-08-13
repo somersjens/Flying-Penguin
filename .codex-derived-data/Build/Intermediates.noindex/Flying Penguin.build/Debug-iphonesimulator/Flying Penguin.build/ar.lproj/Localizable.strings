@@ -54,6 +54,8 @@
 	<string>أوشكت على الوصول</string>
 	<key>game.encouragement.complete</key>
 	<string>علامة كاملة!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>جمعت كل الحلقات</string>
 	<key>game.end.completionSuffix</key>
 	<string>اكتمل!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>مسائل **تضيف** فيها عددًا.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>أضف %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>يمكنك جمع حتى **%lld حلقة** في هذا المستوى.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>مسائل **تقسم** فيها عددًا.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>اسمك</string>
 	<key>name.whatsYourName</key>
 	<string>ما اسمك؟</string>
+	<key>notif.animal.body %@</key>
+	<string>اجمع بضع حلقات أخرى لفتح %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>حيواناتك تنتظرك. عُد إلى اللعب وواصل جمع الحلقات!</string>
 	<key>notif.comeback.title</key>
 	<string>إننا نفتقدك! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>يتضمن Hungry Frog Premium %lld مستوى لكل موضوع وجميع الحيوانات العشرة. المغامرة مستمرة!</string>
 	<key>notif.premium.title</key>
 	<string>فتح المزيد من المستويات والحيوانات! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>مرّ %lld يومًا. لنحل بعض المسائل ونكسب مزيدًا من الحلقات!</string>
 	<key>notif.reactivate.title</key>
 	<string>على استعداد للعب مرة أخرى؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>الضغطات: %1$lld من %2$lld</string>
 	<key>parentGate.title</key>
 	<string>موافقة شخص بالغ مطلوبة</string>
+	<key>premium.availableAt %lld</key>
+	<string>متاح من %lld حلقة</string>
 	<key>premium.availableFromStart</key>
 	<string>متاح منذ البداية</string>
 	<key>premium.characterUnlocked</key>
 	<string>تم فتح شخصية جديدة</string>
+	<key>premium.earnedCards %lld</key>
+	<string>جمعت %lld حلقة</string>
 	<key>premium.exclusiveBadge</key>
 	<string>حصري مع Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>أنت في منتصف لعبة. أنهِها أو اختر مستوى لم تبدأه بعد لتلعب التدريب.</string>
 	<key>tutorial.notice.title</key>
 	<string>فقط في بداية اللعبة</string>
+	<key>tutorial.step1</key>
+	<string>أمسكني واسحبني لأعلى أو لأسفل كي أطير في الهواء!</string>
+	<key>tutorial.step2</key>
+	<string>اضغط فوقي أو تحتي. سأطير مباشرة في ذلك الاتجاه!</string>
+	<key>tutorial.step3</key>
+	<string>لا ترى الإجابة الصحيحة؟ انخفض ومرّ من تحت الحلقات!</string>
+	<key>tutorial.step4</key>
+	<string>حل المسألة فوق الحلقات بسرعة! طر عبر الإجابة الصحيحة لتحصل على نقطة واحدة.</string>
+	<key>tutorial.step5</key>
+	<string>تعرف الإجابة؟ اضغط الحلقة الصحيحة لـ TURBO! اضغط قبل المخروط لتحصل على نقطتين.</string>
+	<key>tutorial.step6</key>
+	<string>انتبه! إذا طرت عبر الحلقة الخاطئة فستفقد حياة.</string>
+	<key>tutorial.step7</key>
+	<string>أصبحت تعرف كل شيء! حان وقت الطيران. بالتوفيق!</string>
 </dict>
 </plist>

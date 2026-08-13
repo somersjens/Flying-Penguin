@@ -54,6 +54,8 @@
 	<string>Du er nesten fremme</string>
 	<key>game.encouragement.complete</key>
 	<string>Alt riktig!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Du har samlet alle ringene</string>
 	<key>game.end.completionSuffix</key>
 	<string>fullført!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Oppgaver der du **legger til** et tall.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pluss %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>På dette nivået kan du samle opptil **%lld ringer**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Oppgaver der du **deler** et tall.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Navnet ditt</string>
 	<key>name.whatsYourName</key>
 	<string>Hva heter du?</string>
+	<key>notif.animal.body %@</key>
+	<string>Tjen noen flere ringer for å låse opp %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Dyrene dine venter. Hopp inn igjen og fortsett å samle ringer!</string>
 	<key>notif.comeback.title</key>
 	<string>Vi savner deg! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium inkluderer %lld nivåer for hvert emne og alle 10 dyrene. Eventyret fortsetter!</string>
 	<key>notif.premium.title</key>
 	<string>Lås opp flere nivåer og dyr! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Det har gått %lld dager. La oss løse noen regnestykker og tjene flere ringer!</string>
 	<key>notif.reactivate.title</key>
 	<string>Klar til å spille igjen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Trykk: %1$lld av %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Godkjenning fra en voksen kreves</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tilgjengelig fra %lld ringer</string>
 	<key>premium.availableFromStart</key>
 	<string>Tilgjengelig fra starten</string>
 	<key>premium.characterUnlocked</key>
 	<string>NY FIGUR LÅST OPP</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Du har tjent %lld ringer</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusiv med Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Du er midt i et spill. Fullfør det, eller velg et nivå du ikke har startet ennå, for å spille veiledningen.</string>
 	<key>tutorial.notice.title</key>
 	<string>Bare ved starten av et spill</string>
+	<key>tutorial.step1</key>
+	<string>Hold meg og dra meg opp eller ned så jeg kan fly gjennom luften!</string>
+	<key>tutorial.step2</key>
+	<string>Trykk over eller under meg. Jeg flyr rett den veien!</string>
+	<key>tutorial.step3</key>
+	<string>Ser du ikke riktig svar? Dykk under ringene!</string>
+	<key>tutorial.step4</key>
+	<string>Løs raskt regnestykket over ringene! Fly gjennom riktig svar og få 1 poeng.</string>
+	<key>tutorial.step5</key>
+	<string>Vet du svaret? Trykk på riktig ring for TURBO! Trykk før kjeglen og få 2 poeng.</string>
+	<key>tutorial.step6</key>
+	<string>Pass på! Flyr du gjennom feil ring, mister du ett liv.</string>
+	<key>tutorial.step7</key>
+	<string>Du kan alt! Tid for å fly. Lykke til!</string>
 </dict>
 </plist>

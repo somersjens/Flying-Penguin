@@ -54,6 +54,8 @@
 	<string>Edhe pak</string>
 	<key>game.encouragement.complete</key>
 	<string>Rezultat perfekt!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>I mblodhe të gjitha rrathët</string>
 	<key>game.end.completionSuffix</key>
 	<string>përfunduar!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Ushtrime ku **mbledh** një numër.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Shto %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Në këtë nivel mund të mbledhësh deri në **%lld rrathë**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Ushtrime ku **pjesëton** një numër.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Emri yt</string>
 	<key>name.whatsYourName</key>
 	<string>Si quhesh?</string>
+	<key>notif.animal.body %@</key>
+	<string>Mblidh edhe disa rrathë për të zhbllokuar %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Kafshët e tua po presin. Kthehu dhe mblidh edhe rrathë!</string>
 	<key>notif.comeback.title</key>
 	<string>Na mungoni! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium përfshin %lld nivele për çdo temë dhe të 10 kafshët. Aventura vazhdon!</string>
 	<key>notif.premium.title</key>
 	<string>Zhbllokoni më shumë nivele dhe kafshë! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Kanë kaluar %lld ditë. Zgjidh disa veprime dhe fito më shumë rrathë!</string>
 	<key>notif.reactivate.title</key>
 	<string>Gati për të luajtur përsëri? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Prekje: %1$lld nga %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Duhet miratimi i një të rrituri</string>
+	<key>premium.availableAt %lld</key>
+	<string>Në dispozicion nga %lld rrathë</string>
 	<key>premium.availableFromStart</key>
 	<string>I disponueshëm që nga fillimi</string>
 	<key>premium.characterUnlocked</key>
 	<string>U ZHBLLOKUA NJË PERSONAZH I RI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ke fituar %lld rrathë</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ekskluziv me Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Je në mes të një loje. Mbaroje ose zgjidh një nivel që s’e ke nisur, për të luajtur udhëzimin.</string>
 	<key>tutorial.notice.title</key>
 	<string>Vetëm në fillim të lojës</string>
+	<key>tutorial.step1</key>
+	<string>Më mbaj dhe më tërhiq lart ose poshtë që të fluturoj!</string>
+	<key>tutorial.step2</key>
+	<string>Prek sipër ose poshtë meje. Do të fluturoj drejt andej!</string>
+	<key>tutorial.step3</key>
+	<string>S’e sheh përgjigjen e saktë? Zhytu poshtë rrathëve!</string>
+	<key>tutorial.step4</key>
+	<string>Zgjidh shpejt veprimin mbi rrathë! Fluturo te përgjigjja e saktë dhe merr 1 pikë.</string>
+	<key>tutorial.step5</key>
+	<string>E di përgjigjen? Prek rrethin e saktë për TURBO! Prek para konit dhe merr 2 pikë.</string>
+	<key>tutorial.step6</key>
+	<string>Kujdes! Nëse kalon nëpër rrethin e gabuar, humbet një jetë.</string>
+	<key>tutorial.step7</key>
+	<string>I di të gjitha! Koha për të fluturuar. Paç fat!</string>
 </dict>
 </plist>

@@ -331,10 +331,10 @@ final class TutorialCenter: ObservableObject {
         UserDefaults.standard.bool(forKey: Self.completedKey)
     }
 
-    /// Called as the welcome flow hands over: the first level of whatever the
-    /// player just chose is what they will be taught on.
-    func requestAutoStart(topic: MathTopic) {
-        autoStartLevel = MathLevel(topic: topic, index: 1)
+    /// Called as the welcome flow hands over: the level selected by the
+    /// player's starting-point choice is what they will be taught on.
+    func requestAutoStart(topic: MathTopic, index: Int) {
+        autoStartLevel = MathLevel(topic: topic, index: index)
         isHandingOverFromWelcome = true
     }
 

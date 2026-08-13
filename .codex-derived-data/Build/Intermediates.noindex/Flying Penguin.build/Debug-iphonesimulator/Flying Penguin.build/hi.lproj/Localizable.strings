@@ -54,6 +54,8 @@
 	<string>बस पहुँचने वाले हो</string>
 	<key>game.encouragement.complete</key>
 	<string>पूरे अंक!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>तुमने सभी छल्ले इकट्ठे कर लिए</string>
 	<key>game.end.completionSuffix</key>
 	<string>पूरा!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ऐसे सवाल जिनमें संख्या **जोड़ते** हो।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld जोड़ो</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>इस लेवल में तुम अधिकतम **%lld छल्ले** इकट्ठे कर सकते हो।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ऐसे सवाल जिनमें संख्या को **भाग** देते हो।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>तुम्हारा नाम</string>
 	<key>name.whatsYourName</key>
 	<string>तुम्हारा नाम क्या है?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ को अनलॉक करने के लिए कुछ और छल्ले कमाओ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>तुम्हारे जानवर इंतज़ार कर रहे हैं। वापस आओ और छल्ले इकट्ठे करते रहो!</string>
 	<key>notif.comeback.title</key>
 	<string>हमें आपकी याद आती है! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>जंपिंग फॉक्स प्रीमियम में प्रत्येक विषय और सभी 10 जानवरों के लिए %lld स्तर शामिल हैं। साहसिक कार्य चलता रहता है!</string>
 	<key>notif.premium.title</key>
 	<string>अधिक स्तरों और जानवरों को अनलॉक करें! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld दिन हो गए। कुछ सवाल हल करें और और छल्ले कमाएँ!</string>
 	<key>notif.reactivate.title</key>
 	<string>फिर से खेलने के लिए तैयार हैं? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>टैप: %1$lld में से %2$lld</string>
 	<key>parentGate.title</key>
 	<string>किसी बड़े की मंज़ूरी चाहिए</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld छल्लों से उपलब्ध</string>
 	<key>premium.availableFromStart</key>
 	<string>शुरू से उपलब्ध</string>
 	<key>premium.characterUnlocked</key>
 	<string>नया किरदार अनलॉक हुआ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>तुमने %lld छल्ले कमाए</string>
 	<key>premium.exclusiveBadge</key>
 	<string>सिर्फ़ Premium के साथ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>तुम खेल के बीच में हो। पहले इसे पूरा करो, या ऐसा लेवल चुनो जो अभी शुरू नहीं किया है, फिर ट्यूटोरियल खेलो।</string>
 	<key>tutorial.notice.title</key>
 	<string>सिर्फ खेल की शुरुआत में</string>
+	<key>tutorial.step1</key>
+	<string>मुझे पकड़कर ऊपर या नीचे खींचो, ताकि मैं हवा में उड़ सकूँ!</string>
+	<key>tutorial.step2</key>
+	<string>मेरे ऊपर या नीचे टैप करो। मैं सीधे उसी तरफ उड़ूँगा!</string>
+	<key>tutorial.step3</key>
+	<string>सही जवाब नहीं दिख रहा? छल्लों के नीचे से निकल जाओ!</string>
+	<key>tutorial.step4</key>
+	<string>छल्लों के ऊपर का सवाल जल्दी हल करो! सही जवाब से उड़कर 1 अंक पाओ।</string>
+	<key>tutorial.step5</key>
+	<string>जवाब पता है? TURBO के लिए सही छल्ले पर टैप करो! कोन से पहले टैप करके 2 अंक पाओ।</string>
+	<key>tutorial.step6</key>
+	<string>सावधान! गलत छल्ले से उड़ोगे तो एक जान चली जाएगी।</string>
+	<key>tutorial.step7</key>
+	<string>तुम सब जान गए! अब उड़ने का समय है। शुभकामनाएँ!</string>
 </dict>
 </plist>

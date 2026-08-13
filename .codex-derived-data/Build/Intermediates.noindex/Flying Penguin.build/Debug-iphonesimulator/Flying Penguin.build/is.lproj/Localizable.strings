@@ -54,6 +54,8 @@
 	<string>Þú ert næstum komin(n)</string>
 	<key>game.encouragement.complete</key>
 	<string>Fullkomið!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Þú safnaðir öllum hringjunum</string>
 	<key>game.end.completionSuffix</key>
 	<string>lokið!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Dæmi þar sem þú **leggur við** tölu.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plús %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Í þessu borði geturðu safnað allt að **%lld hringjum**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Dæmi þar sem þú **deilir** tölu.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Nafnið þitt</string>
 	<key>name.whatsYourName</key>
 	<string>Hvað heitir þú?</string>
+	<key>notif.animal.body %@</key>
+	<string>Safnaðu nokkrum hringjum í viðbót til að opna %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Dýrin þín bíða. Hoppaðu aftur inn og haltu áfram að safna hringjum!</string>
 	<key>notif.comeback.title</key>
 	<string>Við söknum þín! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium inniheldur %lld stig fyrir hvert efni og öll 10 dýrin. Ævintýrið heldur áfram!</string>
 	<key>notif.premium.title</key>
 	<string>Opnaðu fleiri stig og dýr! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Það eru %lld dagar síðan. Leysum nokkur dæmi og vinnum fleiri hringi!</string>
 	<key>notif.reactivate.title</key>
 	<string>Tilbúinn til að spila aftur? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Pikk: %1$lld af %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Samþykki fullorðins þarf</string>
+	<key>premium.availableAt %lld</key>
+	<string>Fæst frá %lld hringjum</string>
 	<key>premium.availableFromStart</key>
 	<string>Í boði frá upphafi</string>
 	<key>premium.characterUnlocked</key>
 	<string>NÝ PERSÓNA OPNUÐ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Þú hefur unnið %lld hringi</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Aðeins með Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Þú ert í miðjum leik. Kláraðu hann eða veldu borð sem þú hefur ekki byrjað á til að spila kennsluna.</string>
 	<key>tutorial.notice.title</key>
 	<string>Aðeins í byrjun leiks</string>
+	<key>tutorial.step1</key>
+	<string>Haltu mér og dragðu mig upp eða niður svo ég geti flogið!</string>
+	<key>tutorial.step2</key>
+	<string>Pikkaðu fyrir ofan eða neðan mig. Ég flýg beint þangað!</string>
+	<key>tutorial.step3</key>
+	<string>Sérðu ekki rétta svarið? Kafaðu undir hringina!</string>
+	<key>tutorial.step4</key>
+	<string>Leystu dæmið yfir hringjunum hratt! Fljúgðu í gegnum rétta svarið og fáðu 1 stig.</string>
+	<key>tutorial.step5</key>
+	<string>Veistu svarið? Pikkaðu á rétta hringinn fyrir TURBO! Pikkaðu fyrir keiluna og fáðu 2 stig.</string>
+	<key>tutorial.step6</key>
+	<string>Passaðu þig! Ef þú flýgur í gegnum rangan hring missirðu eitt líf.</string>
+	<key>tutorial.step7</key>
+	<string>Þú kannt þetta allt! Tími til að fljúga. Gangi þér vel!</string>
 </dict>
 </plist>

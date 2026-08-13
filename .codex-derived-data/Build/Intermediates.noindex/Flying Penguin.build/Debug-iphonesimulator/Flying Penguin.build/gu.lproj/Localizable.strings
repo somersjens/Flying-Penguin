@@ -54,6 +54,8 @@
 	<string>તમે લગભગ પહોંચી ગયા</string>
 	<key>game.encouragement.complete</key>
 	<string>બધું એકદમ સાચું!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>તમે બધા વલયો એકત્ર કર્યા</string>
 	<key>game.end.completionSuffix</key>
 	<string>પૂર્ણ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>જે દાખલામાં સંખ્યા **ઉમેરો**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ઉમેરો</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>આ લેવલમાં તમે વધુમાં વધુ **%lld વલયો** એકત્ર કરી શકો છો.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>જે દાખલામાં સંખ્યાને **ભાગો**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>તમારું નામ</string>
 	<key>name.whatsYourName</key>
 	<string>તમારું નામ શું છે?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ અનલૉક કરવા થોડા વધુ વલયો મેળવો! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>તમારા પ્રાણીઓ રાહ જોઈ રહ્યા છે. પાછા આવો અને વધુ વલયો એકત્ર કરો!</string>
 	<key>notif.comeback.title</key>
 	<string>અમે તમને યાદ કરીએ છીએ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>જમ્પિંગ ફોક્સ પ્રીમિયમમાં દરેક વિષય માટે %lld સ્તરો અને તમામ 10 પ્રાણીઓનો સમાવેશ થાય છે. સાહસ ચાલુ રહે છે!</string>
 	<key>notif.premium.title</key>
 	<string>વધુ સ્તરો અને પ્રાણીઓને અનલૉક કરો! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld દિવસ થયા. થોડા દાખલા ઉકેલીએ અને વધુ વલયો મેળવીએ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ફરીથી રમવા માટે તૈયાર છો? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ટેપ: %1$lld માંથી %2$lld</string>
 	<key>parentGate.title</key>
 	<string>મોટા વ્યક્તિની મંજૂરી જરૂરી</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld વલયથી ઉપલબ્ધ</string>
 	<key>premium.availableFromStart</key>
 	<string>શરૂઆતથી ઉપલબ્ધ</string>
 	<key>premium.characterUnlocked</key>
 	<string>નવું પાત્ર ખૂલ્યું</string>
+	<key>premium.earnedCards %lld</key>
+	<string>તમે %lld વલયો મેળવ્યા</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ફક્ત Premium સાથે</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>તમે રમતની વચ્ચે છો. પહેલાં પૂરી કરો અથવા ન શરૂ કરેલું લેવલ પસંદ કરીને ટ્યુટોરિયલ રમો.</string>
 	<key>tutorial.notice.title</key>
 	<string>ફક્ત રમતની શરૂઆતમાં</string>
+	<key>tutorial.step1</key>
+	<string>મને પકડીને ઉપર કે નીચે ખેંચો જેથી હું હવામાં ઉડી શકું!</string>
+	<key>tutorial.step2</key>
+	<string>મારા ઉપર કે નીચે ટેપ કરો. હું સીધો એ દિશામાં ઉડીશ!</string>
+	<key>tutorial.step3</key>
+	<string>સાચો જવાબ દેખાતો નથી? વલયો નીચે ડાઇવ કરો!</string>
+	<key>tutorial.step4</key>
+	<string>વલયો ઉપરનો દાખલો ઝડપથી ઉકેલો! સાચા જવાબમાંથી ઉડીને 1 પોઇન્ટ મેળવો.</string>
+	<key>tutorial.step5</key>
+	<string>જવાબ ખબર છે? TURBO માટે સાચા વલય પર ટેપ કરો! કોન પહેલાં ટેપ કરીને 2 પોઇન્ટ મેળવો.</string>
+	<key>tutorial.step6</key>
+	<string>સાવધાન! ખોટા વલયમાંથી ઉડશો તો એક જીવન ગુમાવશો.</string>
+	<key>tutorial.step7</key>
+	<string>તમને બધું આવડે છે! હવે ઉડવાનો સમય. શુભેચ્છા!</string>
 </dict>
 </plist>

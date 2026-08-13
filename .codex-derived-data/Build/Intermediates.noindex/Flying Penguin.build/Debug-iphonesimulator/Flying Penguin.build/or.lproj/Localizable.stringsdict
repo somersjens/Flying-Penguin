@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ଆଉ ମାତ୍ର %lld ବାକି! ⭕</string>
+			<key>other</key>
+			<string>ଆଉ ମାତ୍ର %lld ବାକି! ⭕</string>
+		</dict>
+	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -16,6 +32,22 @@
 			<string>ଆଜି %lld ମିନିଟ୍ ଖେଳି ଆଉ କିଛି ସଂଗ୍ରହ କର।</string>
 			<key>other</key>
 			<string>ଆଜି %lld ମିନିଟ୍ ଖେଳି ଆଉ କିଛି ସଂଗ୍ରହ କର।</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld ସଂଗ୍ରହ ହେଲା! ⭕</string>
+			<key>other</key>
+			<string>%lld ସଂଗ୍ରହ ହେଲା! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -64,6 +96,38 @@
 			<string>ତୁମର ଦ daily ନିକ ଖେଳିବା ଧାରା %lld ଦିନରେ ପହଞ୍ଚିଛି! 🔥</string>
 			<key>other</key>
 			<string>ତୁମର ଦ daily ନିକ ଖେଳିବା ଧାରା %lld ଦିନରେ ପହଞ୍ଚିଛି! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ମୋଟ %lld ଅଛି। ଆଉ କିଛି ପାଇଁ ପ୍ରସ୍ତୁତ?</string>
+			<key>other</key>
+			<string>ମୋଟ %lld ଅଛି। ଆଉ କିଛି ପାଇଁ ପ୍ରସ୍ତୁତ?</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ଏହି ସପ୍ତାହରେ %lld! 🎉</string>
+			<key>other</key>
+			<string>ଏହି ସପ୍ତାହରେ %lld! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

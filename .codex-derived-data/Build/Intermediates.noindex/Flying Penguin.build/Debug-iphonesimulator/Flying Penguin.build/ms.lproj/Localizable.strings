@@ -54,6 +54,8 @@
 	<string>Hampir sampai</string>
 	<key>game.encouragement.complete</key>
 	<string>Skor sempurna!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Kamu telah mengumpul semua gelung</string>
 	<key>game.end.completionSuffix</key>
 	<string>selesai!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Soalan yang kamu **tambah** nombor.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Tambah %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Dalam tahap ini, kamu boleh mengumpul sehingga **%lld gelung**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Soalan yang kamu **bahagi** nombor.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Nama kamu</string>
 	<key>name.whatsYourName</key>
 	<string>Siapa nama kamu?</string>
+	<key>notif.animal.body %@</key>
+	<string>Dapatkan beberapa gelung lagi untuk membuka %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Haiwan kamu sedang menunggu. Kembali bermain dan terus kumpul gelung!</string>
 	<key>notif.comeback.title</key>
 	<string>Kami rindu awak! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium termasuk %lld tahap untuk setiap topik dan kesemua 10 haiwan. Pengembaraan diteruskan!</string>
 	<key>notif.premium.title</key>
 	<string>Buka kunci lebih banyak tahap dan haiwan! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Sudah %lld hari. Mari selesaikan beberapa soalan dan dapatkan lebih banyak gelung!</string>
 	<key>notif.reactivate.title</key>
 	<string>Bersedia untuk bermain lagi? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Ketikan: %1$lld daripada %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Kelulusan orang dewasa diperlukan</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tersedia mulai %lld gelung</string>
 	<key>premium.availableFromStart</key>
 	<string>Tersedia sejak mula</string>
 	<key>premium.characterUnlocked</key>
 	<string>WATAK BAHARU DIBUKA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Kamu memperoleh %lld gelung</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusif dengan Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Kamu sedang bermain. Habiskan dulu, atau pilih tahap yang belum dimulakan untuk bermain tutorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Hanya pada awal permainan</string>
+	<key>tutorial.step1</key>
+	<string>Pegang saya dan seret ke atas atau bawah supaya saya boleh terbang!</string>
+	<key>tutorial.step2</key>
+	<string>Ketik di atas atau bawah saya. Saya akan terbang terus ke arah itu!</string>
+	<key>tutorial.step3</key>
+	<string>Tak nampak jawapan betul? Terbang di bawah gelung!</string>
+	<key>tutorial.step4</key>
+	<string>Cepat selesaikan soalan di atas gelung! Terbang melalui jawapan betul dan dapat 1 mata.</string>
+	<key>tutorial.step5</key>
+	<string>Dah tahu jawapan? Ketik gelung betul untuk TURBO! Ketik sebelum kon dan dapat 2 mata.</string>
+	<key>tutorial.step6</key>
+	<string>Awas! Jika terbang melalui gelung yang salah, kamu akan hilang satu nyawa.</string>
+	<key>tutorial.step7</key>
+	<string>Kamu dah tahu semuanya! Masa untuk terbang. Semoga berjaya!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Ты почти у цели</string>
 	<key>game.encouragement.complete</key>
 	<string>Идеально!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ты собрал все обручи</string>
 	<key>game.end.completionSuffix</key>
 	<string>готово!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Примеры, где нужно \*\*прибавить\*\* число.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Плюс %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На этом уровне можно собрать до **%lld обручей**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Примеры, где нужно \*\*делить\*\* число.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Твоё имя</string>
 	<key>name.whatsYourName</key>
 	<string>Как тебя зовут?</string>
+	<key>notif.animal.body %@</key>
+	<string>Собери ещё несколько обручей, чтобы открыть %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Твои животные ждут. Возвращайся в игру и продолжай собирать обручи!</string>
 	<key>notif.comeback.title</key>
 	<string>Мы скучаем по тебе! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium включает в себя %lld уровней на каждую тему и всех 10 животных. Приключение продолжается!</string>
 	<key>notif.premium.title</key>
 	<string>Разблокируйте больше уровней и животных! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Прошло %lld дней. Давай решим несколько примеров и заработаем ещё обручи!</string>
 	<key>notif.reactivate.title</key>
 	<string>Готовы сыграть снова? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Нажатия: %1$lld из %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Нужно подтверждение взрослого</string>
+	<key>premium.availableAt %lld</key>
+	<string>Доступно от %lld обручей</string>
 	<key>premium.availableFromStart</key>
 	<string>Доступно с самого начала</string>
 	<key>premium.characterUnlocked</key>
 	<string>ОТКРЫТ НОВЫЙ ПЕРСОНАЖ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ты заработал %lld обручей</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Эксклюзивно с Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Ты уже играешь. Закончи игру или выбери ещё не начатый уровень, чтобы пройти обучение.</string>
 	<key>tutorial.notice.title</key>
 	<string>Только в начале игры</string>
+	<key>tutorial.step1</key>
+	<string>Удерживай меня и тяни вверх или вниз, чтобы я летел по воздуху!</string>
+	<key>tutorial.step2</key>
+	<string>Нажми выше или ниже меня. Я полечу прямо в ту сторону!</string>
+	<key>tutorial.step3</key>
+	<string>Не видишь правильный ответ? Нырни под обручами!</string>
+	<key>tutorial.step4</key>
+	<string>Быстро реши пример над обручами! Пролети через правильный ответ и получи 1 очко.</string>
+	<key>tutorial.step5</key>
+	<string>Знаешь ответ? Нажми на правильный обруч для TURBO! Нажми до конуса и получи 2 очка.</string>
+	<key>tutorial.step6</key>
+	<string>Осторожно! Пролетишь через неверный обруч — потеряешь одну жизнь.</string>
+	<key>tutorial.step7</key>
+	<string>Ты всё знаешь! Пора лететь. Удачи!</string>
 </dict>
 </plist>

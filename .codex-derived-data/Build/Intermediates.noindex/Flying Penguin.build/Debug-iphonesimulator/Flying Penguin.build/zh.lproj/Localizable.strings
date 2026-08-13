@@ -54,6 +54,8 @@
 	<string>就快到了</string>
 	<key>game.encouragement.complete</key>
 	<string>满分！</string>
+	<key>game.end.completionSubtitle</key>
+	<string>你收集了所有圆环</string>
 	<key>game.end.completionSuffix</key>
 	<string>完成！</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>把一个数\*\*加上\*\*另一个数。</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>加 %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>本关最多可收集 **%lld 个圆环**。</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>把一个数\*\*除以\*\*另一个数。</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>你的名字</string>
 	<key>name.whatsYourName</key>
 	<string>你叫什么名字？</string>
+	<key>notif.animal.body %@</key>
+	<string>再赚几个圆环就能解锁 %@！🐼</string>
+	<key>notif.comeback.body</key>
+	<string>你的动物们在等你。回来继续收集圆环吧！</string>
 	<key>notif.comeback.title</key>
 	<string>我们想你！ 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium 包含每个主题的 %lld 个关卡和全部 10 种动物。冒险仍在继续！</string>
 	<key>notif.premium.title</key>
 	<string>解锁更多关卡和动物！ 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>已经 %lld 天了。来做几道算术题，再赚些圆环吧！</string>
 	<key>notif.reactivate.title</key>
 	<string>准备好再玩了吗？ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>轻点次数：%1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>需要成年人同意</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld 个圆环即可获得</string>
 	<key>premium.availableFromStart</key>
 	<string>从一开始即可使用</string>
 	<key>premium.characterUnlocked</key>
 	<string>已解锁新角色</string>
+	<key>premium.earnedCards %lld</key>
+	<string>你已赚得 %lld 个圆环</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium 专属</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>你正在游戏中。先完成它，或选择一个还没开始的关卡，再开始教程。</string>
 	<key>tutorial.notice.title</key>
 	<string>只能在游戏开始时</string>
+	<key>tutorial.step1</key>
+	<string>按住我，上下拖动，让我在空中飞起来！</string>
+	<key>tutorial.step2</key>
+	<string>点我上方或下方，我会直接朝那个方向飞！</string>
+	<key>tutorial.step3</key>
+	<string>看不到正确答案？从圆环下面钻过去！</string>
+	<key>tutorial.step4</key>
+	<string>快算出圆环上方的算式！飞过正确答案，得 1 分。</string>
+	<key>tutorial.step5</key>
+	<string>已经知道答案？点正确圆环开启 TURBO！在路锥前点中可得 2 分。</string>
+	<key>tutorial.step6</key>
+	<string>小心！飞过错误的圆环会失去一条命。</string>
+	<key>tutorial.step7</key>
+	<string>你全都学会了！该起飞了。祝你好运！</string>
 </dict>
 </plist>

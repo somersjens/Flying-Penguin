@@ -54,6 +54,8 @@
 	<string>Ja gairebé hi ets</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfecte, tot bé!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Has recollit tots els cèrcols</string>
 	<key>game.end.completionSuffix</key>
 	<string>completat!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Sumes on **afegeixes** un nombre.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Suma %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>En aquest nivell pots recollir fins a **%lld cèrcols**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sumes on **divideixes** un nombre.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>El teu nom</string>
 	<key>name.whatsYourName</key>
 	<string>Com et dius?</string>
+	<key>notif.animal.body %@</key>
+	<string>Guanya uns quants cèrcols més per desbloquejar %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Els teus animals t’esperen. Torna a jugar i continua recollint cèrcols!</string>
 	<key>notif.comeback.title</key>
 	<string>Et trobem a faltar! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium inclou %lld nivells per a cada tema i els 10 animals. L'aventura segueix endavant!</string>
 	<key>notif.premium.title</key>
 	<string>Desbloqueja més nivells i animals! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Han passat %lld dies. Resolem unes quantes sumes i guanyem més cèrcols!</string>
 	<key>notif.reactivate.title</key>
 	<string>Preparat per tornar a jugar? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tocs: %1$lld de %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cal l’aprovació d’un adult</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponible des de %lld cèrcols</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponible des del principi</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOU PERSONATGE DESBLOQUEJAT</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Has guanyat %lld cèrcols</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusiu amb Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Estàs enmig d’una partida. Acaba-la o tria un nivell que encara no hagis començat per jugar el tutorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Només a l’inici d’una partida</string>
+	<key>tutorial.step1</key>
+	<string>Agafa’m i arrossega’m amunt o avall per volar per l’aire!</string>
+	<key>tutorial.step2</key>
+	<string>Toca per sobre o per sota meu. Volaré recte cap allà!</string>
+	<key>tutorial.step3</key>
+	<string>No veus la resposta correcta? Passa per sota dels cèrcols!</string>
+	<key>tutorial.step4</key>
+	<string>Resol ràpid la suma sobre els cèrcols! Vola per la resposta correcta i guanya 1 punt.</string>
+	<key>tutorial.step5</key>
+	<string>Ja saps la resposta? Toca el cèrcol correcte per al TURBO! Toca abans del con i guanya 2 punts.</string>
+	<key>tutorial.step6</key>
+	<string>Compte! Si passes pel cèrcol equivocat, perdràs una vida.</string>
+	<key>tutorial.step7</key>
+	<string>Ja ho saps tot! És hora de volar. Bona sort!</string>
 </dict>
 </plist>

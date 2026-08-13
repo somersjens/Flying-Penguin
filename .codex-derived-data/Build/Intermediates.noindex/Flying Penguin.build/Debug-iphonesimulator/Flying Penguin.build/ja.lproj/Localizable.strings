@@ -54,6 +54,8 @@
 	<string>あとちょっと</string>
 	<key>game.encouragement.complete</key>
 	<string>全問正解！</string>
+	<key>game.end.completionSubtitle</key>
+	<string>フープを全部集めたよ</string>
 	<key>game.end.completionSuffix</key>
 	<string>クリア！</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>数を\*\*たす\*\*問題。</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lldをたす</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>このレベルでは **%lld個のフープ** まで集められます。</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>数を\*\*わる\*\*問題。</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>なまえ</string>
 	<key>name.whatsYourName</key>
 	<string>きみのなまえは？</string>
+	<key>notif.animal.body %@</key>
+	<string>あと少しフープを集めると %@ をアンロック！🐼</string>
+	<key>notif.comeback.body</key>
+	<string>動物たちが待っているよ。戻って、もっとフープを集めよう！</string>
 	<key>notif.comeback.title</key>
 	<string>私たちはあなたがいなくて寂しいです！ 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog プレミアムには、すべてのトピックと 10 匹すべての動物の %lld レベルが含まれています。冒険はまだまだ続きます！</string>
 	<key>notif.premium.title</key>
 	<string>さらに多くのレベルと動物をアンロックしましょう！ 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld日ぶりだね。計算問題を解いて、もっとフープをゲットしよう！</string>
 	<key>notif.reactivate.title</key>
 	<string>もう一度プレイする準備はできましたか? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>タップ：%1$lld／%2$lld</string>
 	<key>parentGate.title</key>
 	<string>大人の承認が必要です</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld個のフープで利用可能</string>
 	<key>premium.availableFromStart</key>
 	<string>最初から使用可能</string>
 	<key>premium.characterUnlocked</key>
 	<string>新しいキャラクターをアンロック！</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld個のフープを獲得</string>
 	<key>premium.exclusiveBadge</key>
 	<string>プレミアム限定</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ゲームの途中だよ。まず終わらせるか、まだ始めていないレベルをえらんで、チュートリアルを始めよう。</string>
 	<key>tutorial.notice.title</key>
 	<string>ゲームの最初だけ</string>
+	<key>tutorial.step1</key>
+	<string>ぼくを押さえて上下にドラッグすると、空を飛べるよ！</string>
+	<key>tutorial.step2</key>
+	<string>ぼくの上か下をタップしてね。その方向へまっすぐ飛ぶよ！</string>
+	<key>tutorial.step3</key>
+	<string>正しい答えが見えない？フープの下をくぐろう！</string>
+	<key>tutorial.step4</key>
+	<string>フープの上の計算を急いで解こう！正しい答えを通ると1ポイント！</string>
+	<key>tutorial.step5</key>
+	<string>答えが分かった？正しいフープをタップしてTURBO！コーンの手前でタップすると2ポイント！</string>
+	<key>tutorial.step6</key>
+	<string>気をつけて！間違ったフープを通るとライフを1つ失うよ。</string>
+	<key>tutorial.step7</key>
+	<string>もう全部分かったね！さあ飛ぼう。がんばって！</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Tú ert næstan komin</string>
 	<key>game.encouragement.complete</key>
 	<string>Alt rætt!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Tú hevur savnað allar ringarnar</string>
 	<key>game.end.completionSuffix</key>
 	<string>liðugt!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Uppgávur, har tú **leggur afturat**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pluss %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Á hesum stiginum kanst tú savna upp í **%lld ringar**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Uppgávur, har tú **deilir** eitt tal.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Títt navn</string>
 	<key>name.whatsYourName</key>
 	<string>Hvat eitur tú?</string>
+	<key>notif.animal.body %@</key>
+	<string>Vinn nakrar ringar afturat fyri at lata %@ upp! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Djórini hjá tær bíða. Kom aftur og halt fram at savna ringar!</string>
 	<key>notif.comeback.title</key>
 	<string>Vit sakna teg! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium inniheldur %lld stig til hvørt evni og øll 10 djórini. Ævintýrið heldur fram!</string>
 	<key>notif.premium.title</key>
 	<string>Læs fleiri stig og djór upp! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Tað eru %lld dagar síðani. Loysa vit nøkur roknistykki og vinna fleiri ringar!</string>
 	<key>notif.reactivate.title</key>
 	<string>Klárur at spæla aftur? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Trýst: %1$lld av %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Góðkenning frá vaksnum krevst</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tøkt frá %lld ringum</string>
 	<key>premium.availableFromStart</key>
 	<string>Tøkt frá byrjan</string>
 	<key>premium.characterUnlocked</key>
 	<string>NÝGGJUR PERSÓNUR LATIN UPP</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Tú hevur vunnið %lld ringar</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Bert við Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Tú ert mitt í einum spæli. Ger tað liðugt, ella vel eitt stig, tú ikki ert farin undir, fyri at spæla vegleiðingina.</string>
 	<key>tutorial.notice.title</key>
 	<string>Bara í byrjanini</string>
+	<key>tutorial.step1</key>
+	<string>Halt mær og drag meg upp ella niður, so eg kann flúgva!</string>
+	<key>tutorial.step2</key>
+	<string>Trýst oman fyri ella niðan fyri meg. Eg flúgvi beint tann vegin!</string>
+	<key>tutorial.step3</key>
+	<string>Sært tú ikki rætta svarið? Kava undir ringarnar!</string>
+	<key>tutorial.step4</key>
+	<string>Rokna skjótt stykkið yvir ringunum! Flúgv gjøgnum rætta svarið og fá 1 stig.</string>
+	<key>tutorial.step5</key>
+	<string>Kennir tú svarið? Trýst á rætta ringin fyri TURBO! Trýst áðrenn keyluna og fá 2 stig.</string>
+	<key>tutorial.step6</key>
+	<string>Varða teg! Flýgur tú gjøgnum skeivan ring, missir tú eitt lív.</string>
+	<key>tutorial.step7</key>
+	<string>Nú veitst tú alt! Tíð at flúgva. Góða eydnu!</string>
 </dict>
 </plist>

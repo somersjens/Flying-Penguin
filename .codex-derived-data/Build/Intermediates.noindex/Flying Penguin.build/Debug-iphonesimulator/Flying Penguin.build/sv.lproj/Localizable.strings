@@ -54,6 +54,8 @@
 	<string>Du är nästan framme</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfekt resultat!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Du har samlat alla ringar</string>
 	<key>game.end.completionSuffix</key>
 	<string>klart!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Tal där du **adderar** ett tal.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plus %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>På den här nivån kan du samla upp till **%lld ringar**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Tal där du **delar** ett tal.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Ditt namn</string>
 	<key>name.whatsYourName</key>
 	<string>Vad heter du?</string>
+	<key>notif.animal.body %@</key>
+	<string>Tjäna några ringar till för att låsa upp %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Dina djur väntar. Hoppa in igen och fortsätt samla ringar!</string>
 	<key>notif.comeback.title</key>
 	<string>Vi saknar dig! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium innehåller %lld nivåer för varje ämne och alla 10 djur. Äventyret fortsätter!</string>
 	<key>notif.premium.title</key>
 	<string>Lås upp fler nivåer och djur! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Det har gått %lld dagar. Lös några tal och tjäna fler ringar!</string>
 	<key>notif.reactivate.title</key>
 	<string>Redo att spela igen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tryck: %1$lld av %2$lld</string>
 	<key>parentGate.title</key>
 	<string>En vuxen måste godkänna</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tillgänglig från %lld ringar</string>
 	<key>premium.availableFromStart</key>
 	<string>Tillgänglig från början</string>
 	<key>premium.characterUnlocked</key>
 	<string>NY KARAKTÄR UPPLÅST</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Du har tjänat %lld ringar</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exklusiv med Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Du är mitt i ett spel. Spela klart eller välj en nivå du inte har börjat på för att köra guiden.</string>
 	<key>tutorial.notice.title</key>
 	<string>Bara i början av ett spel</string>
+	<key>tutorial.step1</key>
+	<string>Håll i mig och dra mig upp eller ner så att jag flyger genom luften!</string>
+	<key>tutorial.step2</key>
+	<string>Tryck ovanför eller under mig. Jag flyger rakt åt det hållet!</string>
+	<key>tutorial.step3</key>
+	<string>Ser du inte rätt svar? Dyk under ringarna!</string>
+	<key>tutorial.step4</key>
+	<string>Lös snabbt talet ovanför ringarna! Flyg genom rätt svar och få 1 poäng.</string>
+	<key>tutorial.step5</key>
+	<string>Vet du svaret? Tryck på rätt ring för TURBO! Tryck före konen och få 2 poäng.</string>
+	<key>tutorial.step6</key>
+	<string>Se upp! Flyger du genom fel ring förlorar du ett liv.</string>
+	<key>tutorial.step7</key>
+	<string>Du kan allt! Dags att flyga. Lycka till!</string>
 </dict>
 </plist>

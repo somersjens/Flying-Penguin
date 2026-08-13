@@ -54,6 +54,8 @@
 	<string>거의 다 왔어요</string>
 	<key>game.encouragement.complete</key>
 	<string>완벽해!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>후프를 모두 모았어요</string>
 	<key>game.end.completionSuffix</key>
 	<string>완료!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>숫자를 **더하는** 문제.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld 더하기</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>이 레벨에서는 **%lld개의 후프**까지 모을 수 있어요.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>숫자를 **나누는** 문제.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>이름</string>
 	<key>name.whatsYourName</key>
 	<string>이름이 뭐예요?</string>
+	<key>notif.animal.body %@</key>
+	<string>후프를 조금 더 모아 %@을(를) 잠금 해제하세요! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>동물들이 기다리고 있어요. 다시 돌아와 후프를 계속 모아 보세요!</string>
 	<key>notif.comeback.title</key>
 	<string>우리는 당신이 그리워요! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog 프리미엄에는 모든 주제와 10가지 동물에 대한 %lld개의 레벨이 포함되어 있습니다. 모험은 계속됩니다!</string>
 	<key>notif.premium.title</key>
 	<string>더 많은 레벨과 동물을 잠금 해제하세요! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld일이 지났어요. 계산 문제를 풀고 후프를 더 모아 봐요!</string>
 	<key>notif.reactivate.title</key>
 	<string>다시 플레이할 준비가 되셨나요? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>누른 횟수: %1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>어른의 승인이 필요해요</string>
+	<key>premium.availableAt %lld</key>
+	<string>후프 %lld개부터 이용 가능</string>
 	<key>premium.availableFromStart</key>
 	<string>처음부터 사용 가능</string>
 	<key>premium.characterUnlocked</key>
 	<string>새 캐릭터 잠금 해제!</string>
+	<key>premium.earnedCards %lld</key>
+	<string>후프 %lld개를 모았어요</string>
 	<key>premium.exclusiveBadge</key>
 	<string>프리미엄 전용</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>게임 중이에요. 먼저 끝내거나 아직 시작하지 않은 레벨을 골라 튜토리얼을 해 보세요.</string>
 	<key>tutorial.notice.title</key>
 	<string>게임 시작할 때만</string>
+	<key>tutorial.step1</key>
+	<string>나를 누른 채 위아래로 끌면 공중을 날 수 있어요!</string>
+	<key>tutorial.step2</key>
+	<string>내 위나 아래를 탭하세요. 그쪽으로 곧장 날아갈게요!</string>
+	<key>tutorial.step3</key>
+	<string>정답이 안 보여요? 후프 아래로 내려가세요!</string>
+	<key>tutorial.step4</key>
+	<string>후프 위의 계산을 빨리 풀어요! 정답을 통과하면 1점을 얻어요.</string>
+	<key>tutorial.step5</key>
+	<string>답을 알아요? TURBO를 위해 정답 후프를 탭하세요! 콘 전에 탭하면 2점을 얻어요.</string>
+	<key>tutorial.step6</key>
+	<string>조심해요! 틀린 후프를 통과하면 목숨 하나를 잃어요.</string>
+	<key>tutorial.step7</key>
+	<string>이제 다 알았어요! 날아갈 시간이에요. 행운을 빌어요!</string>
 </dict>
 </plist>

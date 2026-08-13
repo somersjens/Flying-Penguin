@@ -54,6 +54,8 @@
 	<string>Još malo</string>
 	<key>game.encouragement.complete</key>
 	<string>Savršen rezultat!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Сакупио/ла си све обруче</string>
 	<key>game.end.completionSuffix</key>
 	<string>završeno!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Zadaci u kojima **sabiraš** broj.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Saberi %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На овом нивоу можеш сакупити до **%lld обруча**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Zadaci u kojima **deliš** broj.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tvoje ime</string>
 	<key>name.whatsYourName</key>
 	<string>Kako se zoveš?</string>
+	<key>notif.animal.body %@</key>
+	<string>Освоји још неколико обруча да откључаш %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Твоје животиње чекају. Врати се у игру и настави да сакупљаш обруче!</string>
 	<key>notif.comeback.title</key>
 	<string>Nedostaješ nam! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Jumping Fok Premium uključuje %lld nivoa za svaku temu i svih 10 životinja. Avantura se nastavlja!</string>
 	<key>notif.premium.title</key>
 	<string>Otključajte više nivoa i životinja! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Прошло је %lld дана. Решимо неколико задатака и освојимо још обруча!</string>
 	<key>notif.reactivate.title</key>
 	<string>Spremni da ponovo igrate? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Dodiri: %1$lld od %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebno je odobrenje odrasle osobe</string>
+	<key>premium.availableAt %lld</key>
+	<string>Доступно од %lld обруча</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupno od početka</string>
 	<key>premium.characterUnlocked</key>
 	<string>OTKLjUČAN JE NOVI LIK</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Освојио/ла си %lld обруча</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ekskluzivno uz Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Usred si igre. Završi je ili izaberi nivo koji još nisi počeo da bi pokrenuo uputstvo.</string>
 	<key>tutorial.notice.title</key>
 	<string>Samo na početku igre</string>
+	<key>tutorial.step1</key>
+	<string>Држи ме и повуци горе или доле да летим кроз ваздух!</string>
+	<key>tutorial.step2</key>
+	<string>Додирни изнад или испод мене. Полетећу право тамо!</string>
+	<key>tutorial.step3</key>
+	<string>Не видиш тачан одговор? Зарони испод обруча!</string>
+	<key>tutorial.step4</key>
+	<string>Брзо реши задатак изнад обруча! Пролети кроз тачан одговор и освоји 1 поен.</string>
+	<key>tutorial.step5</key>
+	<string>Знаш одговор? Додирни тачан обруч за TURBO! Додирни пре чуња и освоји 2 поена.</string>
+	<key>tutorial.step6</key>
+	<string>Пази! Ако пролетиш кроз погрешан обруч, изгубићеш један живот.</string>
+	<key>tutorial.step7</key>
+	<string>Све знаш! Време је за лет. Срећно!</string>
 </dict>
 </plist>

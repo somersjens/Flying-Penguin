@@ -54,6 +54,8 @@
 	<string>Skoraj si tam</string>
 	<key>game.encouragement.complete</key>
 	<string>Vse pravilno!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Zbral/a si vse obroče</string>
 	<key>game.end.completionSuffix</key>
 	<string>končano!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Računi, kjer število **prišteješ**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Prištej %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Na tej stopnji lahko zbereš do **%lld obročev**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Računi, kjer število **deliš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tvoje ime</string>
 	<key>name.whatsYourName</key>
 	<string>Kako ti je ime?</string>
+	<key>notif.animal.body %@</key>
+	<string>Prisluži si še nekaj obročev, da odkleneš %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tvoje živali čakajo. Vrni se v igro in nadaljuj z zbiranjem obročev!</string>
 	<key>notif.comeback.title</key>
 	<string>Pogrešamo te! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium vključuje %lld stopenj za vsako temo in vseh 10 živali. Pustolovščina se nadaljuje!</string>
 	<key>notif.premium.title</key>
 	<string>Odkleni več stopenj in živali! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Minilo je %lld dni. Rešimo nekaj računov in si prislužimo še več obročev!</string>
 	<key>notif.reactivate.title</key>
 	<string>Ste pripravljeni znova igrati? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Dotiki: %1$lld od %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebna je odobritev odrasle osebe</string>
+	<key>premium.availableAt %lld</key>
+	<string>Na voljo od %lld obročev</string>
 	<key>premium.availableFromStart</key>
 	<string>Na voljo od začetka</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODKLENJEN NOV LIK</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Prislužil/a si %lld obročev</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ekskluzivno s Premiumom</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Sredi igre si. Dokončaj jo ali izberi stopnjo, ki je še nisi začel, da lahko odigraš vadnico.</string>
 	<key>tutorial.notice.title</key>
 	<string>Samo na začetku igre</string>
+	<key>tutorial.step1</key>
+	<string>Primi me in me povleci gor ali dol, da bom letel/a po zraku!</string>
+	<key>tutorial.step2</key>
+	<string>Tapni nad ali pod mano. Poletel/a bom naravnost v tisto smer!</string>
+	<key>tutorial.step3</key>
+	<string>Ne vidiš pravilnega odgovora? Potopi se pod obroče!</string>
+	<key>tutorial.step4</key>
+	<string>Hitro reši račun nad obroči! Poleti skozi pravilen odgovor in dobi 1 točko.</string>
+	<key>tutorial.step5</key>
+	<string>Veš odgovor? Tapni pravi obroč za TURBO! Tapni pred stožcem in dobi 2 točki.</string>
+	<key>tutorial.step6</key>
+	<string>Pazi! Če poletiš skozi napačen obroč, izgubiš eno življenje.</string>
+	<key>tutorial.step7</key>
+	<string>Vse veš! Čas je za letenje. Srečno!</string>
 </dict>
 </plist>

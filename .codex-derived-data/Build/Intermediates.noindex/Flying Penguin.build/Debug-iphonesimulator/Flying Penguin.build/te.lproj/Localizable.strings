@@ -54,6 +54,8 @@
 	<string>దాదాపు చేరుకున్నావు</string>
 	<key>game.encouragement.complete</key>
 	<string>అన్నీ కరెక్ట్!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>నువ్వు అన్ని వలయాలను సేకరించావు</string>
 	<key>game.end.completionSuffix</key>
 	<string>పూర్తయింది!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ఒక సంఖ్యను **కలిపే** లెక్కలు.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld కలుపు</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ఈ లెవెల్‌లో గరిష్ఠంగా **%lld వలయాలు** సేకరించవచ్చు.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ఒక సంఖ్యను **భాగించే** లెక్కలు.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>నీ పేరు</string>
 	<key>name.whatsYourName</key>
 	<string>నీ పేరేంటి?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ను అన్‌లాక్ చేయడానికి ఇంకొన్ని వలయాలు సంపాదించు! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>నీ జంతువులు ఎదురు చూస్తున్నాయి. తిరిగి వచ్చి వలయాలు సేకరించడం కొనసాగించు!</string>
 	<key>notif.comeback.title</key>
 	<string>నువ్వు గుర్తొస్తున్నావు! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ప్రతి అంశానికి %lld లెవల్‌లు, మొత్తం 10 జంతువుల కోసం ప్రీమియం తీసుకో — సాహసం కొనసాగుతుంది.</string>
 	<key>notif.premium.title</key>
 	<string>మరిన్ని లెవల్‌లు, జంతువులను తెరువు! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld రోజులు అయ్యాయి. కొన్ని లెక్కలు చేసి మరిన్ని వలయాలు సంపాదిద్దాం!</string>
 	<key>notif.reactivate.title</key>
 	<string>మళ్లీ ఆడటానికి సిద్ధమా? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>తాకినవి: %1$lldలో %2$lld</string>
 	<key>parentGate.title</key>
 	<string>పెద్దవారి ఆమోదం అవసరం</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld వలయాల నుంచి అందుబాటులో</string>
 	<key>premium.availableFromStart</key>
 	<string>మొదటి నుంచి అందుబాటులో</string>
 	<key>premium.characterUnlocked</key>
 	<string>కొత్త పాత్ర తెరుచుకుంది</string>
+	<key>premium.earnedCards %lld</key>
+	<string>నువ్వు %lld వలయాలు సంపాదించావు</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ప్రీమియంతో మాత్రమే</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>నువ్వు ఇప్పటికే ఆటలో ఉన్నావు. దాన్ని పూర్తి చేయి లేదా ఇంకా మొదలుపెట్టని లెవెల్ ఎంచుకుని ట్యుటోరియల్ ఆడు.</string>
 	<key>tutorial.notice.title</key>
 	<string>ఆట మొదట్లో మాత్రమే</string>
+	<key>tutorial.step1</key>
+	<string>నన్ను పట్టుకుని పైకి లేదా కిందికి లాగు; నేను గాల్లో ఎగురుతాను!</string>
+	<key>tutorial.step2</key>
+	<string>నా పైన లేదా కింద ట్యాప్ చేయి. నేను నేరుగా ఆ దిశలో ఎగురుతాను!</string>
+	<key>tutorial.step3</key>
+	<string>సరైన సమాధానం కనిపించడంలేదా? వలయాల కింద నుంచి వెళ్లు!</string>
+	<key>tutorial.step4</key>
+	<string>వలయాల పైనున్న లెక్కను త్వరగా చేయి! సరైన సమాధానం గుండా ఎగిరి 1 పాయింట్ పొందు.</string>
+	<key>tutorial.step5</key>
+	<string>సమాధానం తెలుసా? TURBO కోసం సరైన వలయాన్ని ట్యాప్ చేయి! కోన్‌కు ముందు ట్యాప్ చేసి 2 పాయింట్లు పొందు.</string>
+	<key>tutorial.step6</key>
+	<string>జాగ్రత్త! తప్పు వలయం గుండా ఎగిరితే ఒక ప్రాణం కోల్పోతావు.</string>
+	<key>tutorial.step7</key>
+	<string>అన్నీ తెలుసుకున్నావు! ఇప్పుడు ఎగరాల్సిన సమయం. శుభాకాంక్షలు!</string>
 </dict>
 </plist>

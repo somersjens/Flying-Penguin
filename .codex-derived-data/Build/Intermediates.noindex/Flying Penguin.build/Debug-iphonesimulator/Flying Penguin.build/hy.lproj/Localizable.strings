@@ -54,6 +54,8 @@
 	<string>Գրեթե հասել ես</string>
 	<key>game.encouragement.complete</key>
 	<string>Կատարյալ արդյունք!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Դու հավաքեցիր բոլոր օղակները</string>
 	<key>game.end.completionSuffix</key>
 	<string>ավարտված է։</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Օրինակներ, որտեղ թիվ ես **գումարում**։</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Գումարել %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld օղակ**։</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Օրինակներ, որտեղ թիվ ես **բաժանում**։</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Քո անունը</string>
 	<key>name.whatsYourName</key>
 	<string>Ինչպե՞ս ես կոչվում։</string>
+	<key>notif.animal.body %@</key>
+	<string>Հավաքիր ևս մի քանի օղակ՝ %@-ը բացելու համար։ 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Քո կենդանիները սպասում են։ Վերադարձիր ու շարունակիր օղակներ հավաքել։</string>
 	<key>notif.comeback.title</key>
 	<string>Մենք կարոտում ենք քեզ: 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium-ը ներառում է %lld մակարդակ յուրաքանչյուր թեմայի և բոլոր 10 կենդանիների համար:Արկածը շարունակվում է:</string>
 	<key>notif.premium.title</key>
 	<string>Բացեք ավելի շատ մակարդակներ և կենդանիներ: 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Անցել է %lld օր։ Լուծենք մի քանի օրինակ ու ավելի շատ օղակներ վաստակենք։</string>
 	<key>notif.reactivate.title</key>
 	<string>Պատրա՞ստ եք նորից խաղալ: 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Հպումներ՝ %1$lld՝ %2$lld-ից</string>
 	<key>parentGate.title</key>
 	<string>Պահանջվում է մեծահասակի հաստատում</string>
+	<key>premium.availableAt %lld</key>
+	<string>Հասանելի է %lld օղակից</string>
 	<key>premium.availableFromStart</key>
 	<string>Հասանելի է սկզբից</string>
 	<key>premium.characterUnlocked</key>
 	<string>ՆՈՐ ԿԵՐՊԱՐԸ ԲԱՑՎԵՑ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Դու վաստակել ես %lld օղակ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Բացառիկ՝ Premium-ով</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Դու խաղի մեջ ես։ Ավարտիր այն կամ ընտրիր չսկսած մակարդակ՝ ուսուցումը խաղալու համար։</string>
 	<key>tutorial.notice.title</key>
 	<string>Միայն խաղի սկզբում</string>
+	<key>tutorial.step1</key>
+	<string>Բռնիր ինձ ու քաշիր վեր կամ վար, որ օդում թռչեմ։</string>
+	<key>tutorial.step2</key>
+	<string>Հպիր ինձնից վեր կամ վար։ Ես ուղիղ այդ կողմ կթռչեմ։</string>
+	<key>tutorial.step3</key>
+	<string>Չե՞ս տեսնում ճիշտ պատասխանը։ Սուզվիր օղակների տակով։</string>
+	<key>tutorial.step4</key>
+	<string>Արագ լուծիր օղակների վերևի օրինակը։ Թռիր ճիշտ պատասխանի միջով և ստացիր 1 միավոր։</string>
+	<key>tutorial.step5</key>
+	<string>Գիտե՞ս պատասխանը։ Հպիր ճիշտ օղակին TURBO-ի համար։ Հպիր մինչև կոնը և ստացիր 2 միավոր։</string>
+	<key>tutorial.step6</key>
+	<string>Զգույշ։ Սխալ օղակի միջով թռչելիս մեկ կյանք կկորցնես։</string>
+	<key>tutorial.step7</key>
+	<string>Ամեն ինչ գիտես։ Թռչելու ժամանակն է։ Հաջողություն։</string>
 </dict>
 </plist>

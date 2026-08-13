@@ -54,6 +54,8 @@
 	<string>Σχεδόν έφτασες</string>
 	<key>game.encouragement.complete</key>
 	<string>Τέλειο σκορ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Μάζεψες όλα τα στεφάνια</string>
 	<key>game.end.completionSuffix</key>
 	<string>ολοκληρώθηκε!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Ασκήσεις όπου **προσθέτεις** έναν αριθμό.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Πρόσθεσε %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Σε αυτό το επίπεδο μπορείς να μαζέψεις έως **%lld στεφάνια**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Ασκήσεις όπου **διαιρείς** έναν αριθμό.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Το όνομά σου</string>
 	<key>name.whatsYourName</key>
 	<string>Πώς σε λένε;</string>
+	<key>notif.animal.body %@</key>
+	<string>Κέρδισε λίγα ακόμα στεφάνια για να ξεκλειδώσεις %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Τα ζωάκια σου περιμένουν. Γύρνα στο παιχνίδι και συνέχισε να μαζεύεις στεφάνια!</string>
 	<key>notif.comeback.title</key>
 	<string>Μας λείπεις! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Το Hungry Frog Premium περιλαμβάνει %lld επίπεδα για κάθε θέμα και τα 10 ζώα. Η περιπέτεια συνεχίζεται!</string>
 	<key>notif.premium.title</key>
 	<string>Ξεκλειδώστε περισσότερα επίπεδα και ζώα! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Πέρασαν %lld ημέρες. Ας λύσουμε μερικές πράξεις και ας κερδίσουμε κι άλλα στεφάνια!</string>
 	<key>notif.reactivate.title</key>
 	<string>Είστε έτοιμοι να παίξετε ξανά; 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Πατήματα: %1$lld από %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Χρειάζεται έγκριση ενήλικα</string>
+	<key>premium.availableAt %lld</key>
+	<string>Διαθέσιμο από %lld στεφάνια</string>
 	<key>premium.availableFromStart</key>
 	<string>Διαθέσιμο από την αρχή</string>
 	<key>premium.characterUnlocked</key>
 	<string>ΞΕΚΛΕΙΔΩΘΗΚΕ ΝΕΟΣ ΧΑΡΑΚΤΗΡΑΣ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Κέρδισες %lld στεφάνια</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Αποκλειστικά με Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Παίζεις ήδη ένα παιχνίδι. Τελείωσέ το ή διάλεξε επίπεδο που δεν έχεις ξεκινήσει για να παίξεις τον οδηγό.</string>
 	<key>tutorial.notice.title</key>
 	<string>Μόνο στην αρχή του παιχνιδιού</string>
+	<key>tutorial.step1</key>
+	<string>Κράτησέ με και σύρε με πάνω ή κάτω για να πετάξω στον αέρα!</string>
+	<key>tutorial.step2</key>
+	<string>Πάτησε πάνω ή κάτω από μένα. Θα πετάξω ευθεία προς τα εκεί!</string>
+	<key>tutorial.step3</key>
+	<string>Δεν βλέπεις τη σωστή απάντηση; Βούτα κάτω από τα στεφάνια!</string>
+	<key>tutorial.step4</key>
+	<string>Λύσε γρήγορα την πράξη πάνω από τα στεφάνια! Πέτα από τη σωστή απάντηση και πάρε 1 πόντο.</string>
+	<key>tutorial.step5</key>
+	<string>Ξέρεις την απάντηση; Πάτησε το σωστό στεφάνι για TURBO! Πάτησε πριν τον κώνο και πάρε 2 πόντους.</string>
+	<key>tutorial.step6</key>
+	<string>Πρόσεχε! Αν πετάξεις από το λάθος στεφάνι, θα χάσεις μια ζωή.</string>
+	<key>tutorial.step7</key>
+	<string>Τα ξέρεις όλα! Ώρα να πετάξεις. Καλή τύχη!</string>
 </dict>
 </plist>

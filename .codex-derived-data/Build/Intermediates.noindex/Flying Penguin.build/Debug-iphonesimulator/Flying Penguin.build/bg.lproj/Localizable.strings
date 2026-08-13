@@ -54,6 +54,8 @@
 	<string>Почти успя</string>
 	<key>game.encouragement.complete</key>
 	<string>Всичко вярно!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Събра всички обръчи</string>
 	<key>game.end.completionSuffix</key>
 	<string>завършено!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Задачи, в които **събираш** число.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Плюс %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>В това ниво можеш да събереш до **%lld обръча**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Задачи, в които **делиш** число.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Твоето име</string>
 	<key>name.whatsYourName</key>
 	<string>Как се казваш?</string>
+	<key>notif.animal.body %@</key>
+	<string>Спечели още няколко обръча, за да отключиш %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Животните ти чакат. Върни се в играта и продължи да събираш обръчи!</string>
 	<key>notif.comeback.title</key>
 	<string>Липсваш ни! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium включва %lld нива за всяка тема и всички 10 животни. Приключението продължава!</string>
 	<key>notif.premium.title</key>
 	<string>Отключете повече нива и животни! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Минаха %lld дни. Да решим няколко задачи и да спечелим още обръчи!</string>
 	<key>notif.reactivate.title</key>
 	<string>Готови ли сте да играете отново? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Докосвания: %1$lld от %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Нужно е одобрение от възрастен</string>
+	<key>premium.availableAt %lld</key>
+	<string>Достъпно от %lld обръча</string>
 	<key>premium.availableFromStart</key>
 	<string>Достъпно от самото начало</string>
 	<key>premium.characterUnlocked</key>
 	<string>ОТКЛЮЧЕН Е НОВ ГЕРОЙ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Спечели %lld обръча</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ексклузивно с Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Вече играеш. Завърши играта или избери ниво, което още не си започнал, за да пуснеш урока.</string>
 	<key>tutorial.notice.title</key>
 	<string>Само в началото на игра</string>
+	<key>tutorial.step1</key>
+	<string>Хвани ме и ме плъзни нагоре или надолу, за да полетя!</string>
+	<key>tutorial.step2</key>
+	<string>Докосни над или под мен. Ще полетя право натам!</string>
+	<key>tutorial.step3</key>
+	<string>Не виждаш верния отговор? Гмурни се под обръчите!</string>
+	<key>tutorial.step4</key>
+	<string>Реши бързо задачата над обръчите! Мини през верния отговор и вземи 1 точка.</string>
+	<key>tutorial.step5</key>
+	<string>Знаеш отговора? Докосни верния обръч за TURBO! Докосни преди конуса и вземи 2 точки.</string>
+	<key>tutorial.step6</key>
+	<string>Внимавай! Ако минеш през грешния обръч, ще загубиш един живот.</string>
+	<key>tutorial.step7</key>
+	<string>Вече знаеш всичко! Време е за полет. Успех!</string>
 </dict>
 </plist>

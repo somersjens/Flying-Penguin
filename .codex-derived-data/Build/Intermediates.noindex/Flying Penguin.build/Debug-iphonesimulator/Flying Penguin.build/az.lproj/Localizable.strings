@@ -54,6 +54,8 @@
 	<string>Az qalıb</string>
 	<key>game.encouragement.complete</key>
 	<string>Əla! Hamısı düzdür!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Bütün halqaları topladın</string>
 	<key>game.end.completionSuffix</key>
 	<string>tamamlandı!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Bir ədədi **topladığın** misallar.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld əlavə et</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Bu səviyyədə **%lld halqaya** qədər toplaya bilərsən.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Bir ədədi **böldüyün** misallar.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Adın</string>
 	<key>name.whatsYourName</key>
 	<string>Adın nədir?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ kilidini açmaq üçün bir neçə halqa da qazan! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Heyvanların səni gözləyir. Oyuna qayıt və halqa toplamağa davam et!</string>
 	<key>notif.comeback.title</key>
 	<string>Sizin üçün darıxırıq! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium hər mövzu və bütün 10 heyvan üçün %lld səviyyəni ehtiva edir. Macəra davam edir!</string>
 	<key>notif.premium.title</key>
 	<string>Daha çox səviyyələrin və heyvanların kilidini açın! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld gün keçib. Gəlin bir neçə misal həll edib daha çox halqa qazanaq!</string>
 	<key>notif.reactivate.title</key>
 	<string>Yenidən oynamağa hazırsınız? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Toxunuşlar: %1$lld-dən %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Böyük təsdiqi lazımdır</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld halqadan etibarən</string>
 	<key>premium.availableFromStart</key>
 	<string>Əvvəldən əlçatandır</string>
 	<key>premium.characterUnlocked</key>
 	<string>YENİ PERSONAJ AÇILDI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld halqa qazandın</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Yalnız Premium ilə</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Hazırda oyun oynayırsan. Əvvəl onu bitir və ya başlamadığın səviyyəni seç, sonra təlimi oyna.</string>
 	<key>tutorial.notice.title</key>
 	<string>Yalnız oyunun əvvəlində</string>
+	<key>tutorial.step1</key>
+	<string>Məni tut və yuxarı-aşağı sürüklə ki, havada uçum!</string>
+	<key>tutorial.step2</key>
+	<string>Üstümə və ya altıma toxun. Düz həmin istiqamətə uçacağam!</string>
+	<key>tutorial.step3</key>
+	<string>Düzgün cavabı görmürsən? Halqaların altından keç!</string>
+	<key>tutorial.step4</key>
+	<string>Halqaların üstündəki misalı tez həll et! Düzgün cavabdan uç və 1 xal qazan.</string>
+	<key>tutorial.step5</key>
+	<string>Cavabı bilirsən? TURBO üçün düzgün halqaya toxun! Konusdan əvvəl toxun və 2 xal qazan.</string>
+	<key>tutorial.step6</key>
+	<string>Diqqət! Səhv halqadan uçsan, bir can itirəcəksən.</string>
+	<key>tutorial.step7</key>
+	<string>Hər şeyi bilirsən! Uçmaq vaxtıdır. Uğurlar!</string>
 </dict>
 </plist>

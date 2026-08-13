@@ -54,6 +54,8 @@
 	<string>Уште малку</string>
 	<key>game.encouragement.complete</key>
 	<string>Сè точно!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ги собра сите обрачи</string>
 	<key>game.end.completionSuffix</key>
 	<string>завршено!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Задачи каде **додаваш** број.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Плус %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На ова ниво можеш да собереш до **%lld обрачи**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Задачи каде **делиш** број.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Твоето име</string>
 	<key>name.whatsYourName</key>
 	<string>Како се викаш?</string>
+	<key>notif.animal.body %@</key>
+	<string>Освои уште неколку обрачи за да го отклучиш %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Твоите животни чекаат. Врати се во игра и продолжи да собираш обрачи!</string>
 	<key>notif.comeback.title</key>
 	<string>Ни недостигаш! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium вклучува %lld нивоа за секоја тема и сите 10 животни. Авантурата продолжува!</string>
 	<key>notif.premium.title</key>
 	<string>Отклучете повеќе нивоа и животни! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Поминаа %lld дена. Да решиме неколку задачи и да освоиме уште обрачи!</string>
 	<key>notif.reactivate.title</key>
 	<string>Подготвени да играте повторно? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Допири: %1$lld од %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Потребно е одобрение од возрасен</string>
+	<key>premium.availableAt %lld</key>
+	<string>Достапно од %lld обрачи</string>
 	<key>premium.availableFromStart</key>
 	<string>Достапно од почеток</string>
 	<key>premium.characterUnlocked</key>
 	<string>ОТКЛУЧЕН Е НОВ ЛИК</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Освои %lld обрачи</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ексклузивно со Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Веќе играш. Заврши ја играта или избери ниво што не си го почнал за да го пуштиш упатството.</string>
 	<key>tutorial.notice.title</key>
 	<string>Само на почетокот</string>
+	<key>tutorial.step1</key>
+	<string>Држи ме и повлечи ме нагоре или надолу за да летам!</string>
+	<key>tutorial.step2</key>
+	<string>Допрете над или под мене. Ќе летам право во таа насока!</string>
+	<key>tutorial.step3</key>
+	<string>Не го гледаш точниот одговор? Нурни под обрачите!</string>
+	<key>tutorial.step4</key>
+	<string>Брзо реши ја задачата над обрачите! Летај низ точниот одговор и освои 1 поен.</string>
+	<key>tutorial.step5</key>
+	<string>Го знаеш одговорот? Допрете го точниот обрач за TURBO! Допрете пред конусот и освои 2 поени.</string>
+	<key>tutorial.step6</key>
+	<string>Внимавај! Ако леташ низ погрешен обрач, ќе изгубиш еден живот.</string>
+	<key>tutorial.step7</key>
+	<string>Знаеш сè! Време е за летање. Среќно!</string>
 </dict>
 </plist>

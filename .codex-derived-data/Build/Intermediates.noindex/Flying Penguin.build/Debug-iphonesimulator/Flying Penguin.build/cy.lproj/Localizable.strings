@@ -54,6 +54,8 @@
 	<string>Rwyt ti bron yno</string>
 	<key>game.encouragement.complete</key>
 	<string>Sgôr berffaith!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Rwyt ti wedi casglu’r cylchoedd i gyd</string>
 	<key>game.end.completionSuffix</key>
 	<string>wedi'i gwblhau!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Symiau lle rwyt ti’n **adio** rhif.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Adio %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Yn y lefel hon, gelli di gasglu hyd at **%lld cylch**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Symiau lle rwyt ti’n **rhannu** rhif.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Dy enw</string>
 	<key>name.whatsYourName</key>
 	<string>Beth yw dy enw?</string>
+	<key>notif.animal.body %@</key>
+	<string>Enilla ychydig mwy o gylchoedd i ddatgloi %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Mae dy anifeiliaid yn aros. Tyrd yn ôl a dal ati i gasglu cylchoedd!</string>
 	<key>notif.comeback.title</key>
 	<string>Rydym yn colli chi! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Mae Premiwm Hungry Frog yn cynnwys %lld lefel ar gyfer pob pwnc a phob un o'r 10 anifail. Mae'r antur yn dal i fynd!</string>
 	<key>notif.premium.title</key>
 	<string>Datgloi mwy o lefelau ac anifeiliaid! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Mae %lld diwrnod wedi mynd heibio. Beth am ddatrys symiau ac ennill mwy o gylchoedd?</string>
 	<key>notif.reactivate.title</key>
 	<string>Barod i chwarae eto? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Tapiau: %1$lld o %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Angen cymeradwyaeth oedolyn</string>
+	<key>premium.availableAt %lld</key>
+	<string>Ar gael o %lld cylch</string>
 	<key>premium.availableFromStart</key>
 	<string>Ar gael o’r dechrau</string>
 	<key>premium.characterUnlocked</key>
 	<string>CYMERIAD NEWYDD WEDI’I DDATGLOI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Rwyt ti wedi ennill %lld cylch</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Yn unigryw gyda Premiwm</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Rwyt ti yng nghanol gêm. Gorffen hi, neu ddewis lefel heb ei dechrau eto, i chwarae’r tiwtorial.</string>
 	<key>tutorial.notice.title</key>
 	<string>Dim ond ar ddechrau gêm</string>
+	<key>tutorial.step1</key>
+	<string>Dalia fi a llusga fi i fyny neu i lawr er mwyn i mi hedfan!</string>
+	<key>tutorial.step2</key>
+	<string>Tapa uwchben neu islaw fi. Byddaf yn hedfan yn syth i’r cyfeiriad hwnnw!</string>
+	<key>tutorial.step3</key>
+	<string>Methu gweld yr ateb cywir? Plymia o dan y cylchoedd!</string>
+	<key>tutorial.step4</key>
+	<string>Datrys y swm uwchben y cylchoedd yn gyflym! Hedfana drwy’r ateb cywir a chael 1 pwynt.</string>
+	<key>tutorial.step5</key>
+	<string>Yn gwybod yr ateb? Tapa’r cylch cywir am TURBO! Tapa cyn y côn a chael 2 bwynt.</string>
+	<key>tutorial.step6</key>
+	<string>Gwylia allan! Hedfana drwy’r cylch anghywir a byddi di’n colli bywyd.</string>
+	<key>tutorial.step7</key>
+	<string>Rwyt ti’n gwybod popeth! Amser hedfan. Pob lwc!</string>
 </dict>
 </plist>

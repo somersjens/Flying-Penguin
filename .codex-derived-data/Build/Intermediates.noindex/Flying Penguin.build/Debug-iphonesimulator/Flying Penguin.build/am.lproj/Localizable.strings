@@ -54,6 +54,8 @@
 	<string>ልትደርስ ነው</string>
 	<key>game.encouragement.complete</key>
 	<string>ሁሉም ትክክል!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ቀለበቶቹን ሁሉ ሰብስበሃል</string>
 	<key>game.end.completionSuffix</key>
 	<string>ተጠናቋል!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ቁጥርን **የምትደምርባቸው** ስሌቶች።</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ጨምር</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>በዚህ ደረጃ እስከ **%lld ቀለበት** መሰብሰብ ትችላለህ።</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ቁጥርን **የምትከፍልባቸው** ስሌቶች።</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ስምህ</string>
 	<key>name.whatsYourName</key>
 	<string>ስምህ ማን ነው?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ን ለመክፈት ጥቂት ተጨማሪ ቀለበቶችን አግኝ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>እንስሳትህ እየጠበቁህ ነው። ተመለስና ተጨማሪ ቀለበቶችን ሰብስብ!</string>
 	<key>notif.comeback.title</key>
 	<string>ትናፍቀናለህ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ዝላይ ፎክስ ፕሪሚየም ለእያንዳንዱ ርዕስ %lld ደረጃዎችን እና ሁሉንም 10 እንስሳትን ያካትታል።ጀብዱ ይቀጥላል!</string>
 	<key>notif.premium.title</key>
 	<string>ተጨማሪ ደረጃዎችን እና እንስሳትን ይክፈቱ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ቀናት አልፈዋል። ጥቂት ሂሳቦችን እንፍታና ተጨማሪ ቀለበቶችን እናግኝ!</string>
 	<key>notif.reactivate.title</key>
 	<string>እንደገና ለመጫወት ዝግጁ ነዎት? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ንክኪዎች፦ %1$lld ከ%2$lld</string>
 	<key>parentGate.title</key>
 	<string>የአዋቂ ፈቃድ ያስፈልጋል</string>
+	<key>premium.availableAt %lld</key>
+	<string>ከ%lld ቀለበት ጀምሮ ይገኛል</string>
 	<key>premium.availableFromStart</key>
 	<string>ከመጀመሪያው ይገኛል</string>
 	<key>premium.characterUnlocked</key>
 	<string>አዲስ ገጸ ባህሪ ተከፍቷል</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld ቀለበት አግኝተሃል</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ለPremium ብቻ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ጨዋታ መሀል ነህ። መጀመሪያ ጨርሰው፣ ወይም ያልጀመርከውን ደረጃ ምረጥና መማሪያውን ተጫወት።</string>
 	<key>tutorial.notice.title</key>
 	<string>በጨዋታ መጀመሪያ ብቻ</string>
+	<key>tutorial.step1</key>
+	<string>ያዘኝና ወደ ላይ ወይም ወደ ታች ጎትተኝ፤ በአየር ላይ እበራለሁ!</string>
+	<key>tutorial.step2</key>
+	<string>ከላዬ ወይም ከታቼ ንካ። ቀጥታ ወደዚያ እበራለሁ!</string>
+	<key>tutorial.step3</key>
+	<string>ትክክለኛውን መልስ አላየህም? ከቀለበቶቹ በታች ግባ!</string>
+	<key>tutorial.step4</key>
+	<string>ከቀለበቶቹ በላይ ያለውን ሂሳብ ፈጥነህ ፍታ! ትክክለኛውን መልስ አልፈህ 1 ነጥብ አግኝ።</string>
+	<key>tutorial.step5</key>
+	<string>መልሱን ታውቃለህ? ለTURBO ትክክለኛውን ቀለበት ንካ! ከኮኑ በፊት ንካና 2 ነጥብ አግኝ።</string>
+	<key>tutorial.step6</key>
+	<string>ተጠንቀቅ! በተሳሳተ ቀለበት ካለፍክ አንድ ሕይወት ታጣለህ።</string>
+	<key>tutorial.step7</key>
+	<string>ሁሉንም ታውቃለህ! የመብረር ጊዜ ነው። መልካም ዕድል!</string>
 </dict>
 </plist>

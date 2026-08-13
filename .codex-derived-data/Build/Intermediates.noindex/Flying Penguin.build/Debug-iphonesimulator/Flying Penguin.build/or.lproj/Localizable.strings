@@ -54,6 +54,8 @@
 	<string>ଆଉ ଟିକେ ବାକି</string>
 	<key>game.encouragement.complete</key>
 	<string>ସବୁଠି ଠିକ୍!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ତୁମେ ସବୁ ବଳୟ ସଂଗ୍ରହ କରିଛ</string>
 	<key>game.end.completionSuffix</key>
 	<string>ସମ୍ପୂର୍ଣ୍ଣ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>ଯେଉଁ ସମରେ ଏକ ସଂଖ୍ୟା **ଯୋଗ** କର।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ଯୋଗ</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ଏହି ସ୍ତରରେ ସର୍ବାଧିକ **%lld ବଳୟ** ସଂଗ୍ରହ କରିପାରିବ।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ଯେଉଁ ସମରେ ଏକ ସଂଖ୍ୟାକୁ **ଭାଗ** କର।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ତୁମ ନାମ</string>
 	<key>name.whatsYourName</key>
 	<string>ତୁମ ନାମ କ’ଣ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ ଖୋଲିବା ପାଇଁ ଆଉ କିଛି ବଳୟ ଅର୍ଜନ କର! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ତୁମର ପଶୁମାନେ ଅପେକ୍ଷା କରୁଛନ୍ତି। ପୁଣି ଖେଳ ଏବଂ ବଳୟ ସଂଗ୍ରହ କର!</string>
 	<key>notif.comeback.title</key>
 	<string>ଆମେ ତୁମକୁ ମନେ ପକାଉଛୁ! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>ଜମ୍ପ୍ ଫକ୍ସ ପ୍ରିମିୟମ୍ ପ୍ରତ୍ୟେକ ବିଷୟ ଏବଂ ସମସ୍ତ 10 ପ୍ରାଣୀ ପାଇଁ %lld ସ୍ତର ଅନ୍ତର୍ଭୁକ୍ତ କରେ |ଦୁ venture ସାହସିକ କାର୍ଯ୍ୟ ଜାରି ରଖେ!</string>
 	<key>notif.premium.title</key>
 	<string>ଅଧିକ ସ୍ତର ଏବଂ ପଶୁମାନଙ୍କୁ ଅନଲକ୍ କରନ୍ତୁ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ଦିନ ହେଲା। କିଛି ଗଣିତ କରି ଆଉ ବଳୟ ଅର୍ଜନ କରିବା!</string>
 	<key>notif.reactivate.title</key>
 	<string>ପୁନର୍ବାର ଖେଳିବାକୁ ପ୍ରସ୍ତୁତ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>ଟ୍ୟାପ୍: %1$lld ମଧ୍ୟରୁ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ବୟସ୍କଙ୍କ ଅନୁମୋଦନ ଆବଶ୍ୟକ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ବଳୟରୁ ଉପଲବ୍ଧ</string>
 	<key>premium.availableFromStart</key>
 	<string>ଆରମ୍ଭରୁ ଉପଲବ୍ଧ</string>
 	<key>premium.characterUnlocked</key>
 	<string>ନୂଆ ଚରିତ୍ର ଖୋଲିଗଲା</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ତୁମେ %lld ବଳୟ ଅର୍ଜନ କରିଛ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>କେବଳ Premium ସହିତ</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ତୁମେ ଏବେ ଏକ ଖେଳ ମଝିରେ ଅଛ। ପ୍ରଥମେ ସେଟା ସାର, କିମ୍ବା ଆରମ୍ଭ ନକରା ଲେଭେଲ୍ ବାଛି ଟ୍ୟୁଟୋରିଆଲ୍ ଖେଳ।</string>
 	<key>tutorial.notice.title</key>
 	<string>କେବଳ ଖେଳ ଆରମ୍ଭରେ</string>
+	<key>tutorial.step1</key>
+	<string>ମୋତେ ଧରି ଉପରକୁ କିମ୍ବା ତଳକୁ ଟାଣ, ମୁଁ ଆକାଶରେ ଉଡିବି!</string>
+	<key>tutorial.step2</key>
+	<string>ମୋ ଉପରେ କିମ୍ବା ତଳେ ଟ୍ୟାପ୍ କର। ମୁଁ ସିଧା ସେହି ଦିଗକୁ ଉଡିବି!</string>
+	<key>tutorial.step3</key>
+	<string>ଠିକ୍ ଉତ୍ତର ଦେଖୁନାହିଁ? ବଳୟଗୁଡ଼ିକ ତଳେ ଯାଅ!</string>
+	<key>tutorial.step4</key>
+	<string>ବଳୟ ଉପରର ଗଣିତ ଶୀଘ୍ର କର! ଠିକ୍ ଉତ୍ତର ଭିତରୁ ଉଡି 1 ପଏଣ୍ଟ ନିଅ।</string>
+	<key>tutorial.step5</key>
+	<string>ଉତ୍ତର ଜାଣିଛ? TURBO ପାଇଁ ଠିକ୍ ବଳୟ ଟ୍ୟାପ୍ କର! କୋନ୍ ପୂର୍ବରୁ ଟ୍ୟାପ୍ କରି 2 ପଏଣ୍ଟ ନିଅ।</string>
+	<key>tutorial.step6</key>
+	<string>ସାବଧାନ! ଭୁଲ ବଳୟ ଭିତରୁ ଉଡିଲେ ଗୋଟିଏ ଜୀବନ ହରାଇବ।</string>
+	<key>tutorial.step7</key>
+	<string>ସବୁ ଜାଣିଗଲା! ଏବେ ଉଡିବାର ସମୟ। ଶୁଭେଚ୍ଛା!</string>
 </dict>
 </plist>

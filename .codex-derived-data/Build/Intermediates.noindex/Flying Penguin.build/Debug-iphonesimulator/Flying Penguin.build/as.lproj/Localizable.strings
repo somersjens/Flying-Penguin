@@ -54,6 +54,8 @@
 	<string>আৰু অলপ বাকী</string>
 	<key>game.encouragement.complete</key>
 	<string>একেবাৰে ঠিক!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>তুমি সকলো বলয় সংগ্ৰহ কৰিলা</string>
 	<key>game.end.completionSuffix</key>
 	<string>সম্পূৰ্ণ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>য’ত তুমি এটা সংখ্যা **যোগ** কৰা অংক।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld যোগ</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>এই স্তৰত তুমি সৰ্বাধিক **%lld বলয়** সংগ্ৰহ কৰিব পাৰা।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>য’ত তুমি এটা সংখ্যাক **ভাগ** কৰা অংক।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>তোমাৰ নাম</string>
 	<key>name.whatsYourName</key>
 	<string>তোমাৰ নাম কি?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ আনলক কৰিবলৈ আৰু কেইটামান বলয় অৰ্জন কৰা! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>তোমাৰ জন্তুবোৰ অপেক্ষা কৰি আছে। পুনৰ খেলি আৰু বলয় সংগ্ৰহ কৰা!</string>
 	<key>notif.comeback.title</key>
 	<string>আমি তোমাক মিছ কৰিছো! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>জাম্পিং ফক্স প্ৰিমিয়ামত প্ৰতিটো বিষয় আৰু সকলো 10টা প্ৰাণীৰ বাবে %lldটা স্তৰ অন্তৰ্ভুক্ত কৰা হৈছে। দুঃসাহসিক অভিযান চলি থাকে!</string>
 	<key>notif.premium.title</key>
 	<string>অধিক স্তৰ আৰু প্ৰাণী আনলক! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld দিন হ’ল। কেইটামান অংক সমাধান কৰি আৰু বলয় অৰ্জন কৰোঁ!</string>
 	<key>notif.reactivate.title</key>
 	<string>আকৌ খেলিবলৈ সাজুনে? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>টেপ: %1$lld ৰ ভিতৰত %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ডাঙৰৰ অনুমোদন লাগিব</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld বলয়ৰ পৰা উপলব্ধ</string>
 	<key>premium.availableFromStart</key>
 	<string>আৰম্ভণিৰ পৰাই উপলব্ধ</string>
 	<key>premium.characterUnlocked</key>
 	<string>নতুন চৰিত্ৰ খোলা হ’ল</string>
+	<key>premium.earnedCards %lld</key>
+	<string>তুমি %lld বলয় অৰ্জন কৰিলা</string>
 	<key>premium.exclusiveBadge</key>
 	<string>কেৱল Premium-ত</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>তুমি এতিয়া এটা খেলৰ মাজত আছা। প্ৰথমে শেষ কৰা, বা আৰম্ভ নকৰা লেভেল বাছি টিউটোৰিয়েল খেলা।</string>
 	<key>tutorial.notice.title</key>
 	<string>কেৱল খেলৰ আৰম্ভণিতে</string>
+	<key>tutorial.step1</key>
+	<string>মোক ধৰি ওপৰলৈ বা তললৈ টানা, মই আকাশত উৰিম!</string>
+	<key>tutorial.step2</key>
+	<string>মোৰ ওপৰত বা তলত টেপ কৰা। মই পোনে সেইফালে উৰিম!</string>
+	<key>tutorial.step3</key>
+	<string>সঠিক উত্তৰ দেখা নাই? বলয়বোৰৰ তলেদি ডুব মাৰা!</string>
+	<key>tutorial.step4</key>
+	<string>বলয়ৰ ওপৰৰ অংকটো সোনকালে কৰা! সঠিক উত্তৰৰ মাজেৰে উৰি 1 পইণ্ট লোৱা।</string>
+	<key>tutorial.step5</key>
+	<string>উত্তৰ জানানে? TURBOৰ বাবে সঠিক বলয়ত টেপ কৰা! কনৰ আগতে টেপ কৰি 2 পইণ্ট লোৱা।</string>
+	<key>tutorial.step6</key>
+	<string>সাৱধান! ভুল বলয়ৰ মাজেৰে উৰিলে এটা জীৱন হেৰুৱাবা।</string>
+	<key>tutorial.step7</key>
+	<string>তুমি সকলো জানিলা! এতিয়া উৰাৰ সময়। শুভকামনা!</string>
 </dict>
 </plist>

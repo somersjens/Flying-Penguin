@@ -54,6 +54,8 @@
 	<string>Beveik pasiekei</string>
 	<key>game.encouragement.complete</key>
 	<string>Puikiai! Viskas teisingai!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Surinkai visus lankus</string>
 	<key>game.end.completionSuffix</key>
 	<string>baigta!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Uždaviniai, kuriuose skaičių **pridedi**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pridėti %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Šiame lygyje gali surinkti iki **%lld lankų**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Uždaviniai, kuriuose skaičių **daliji**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tavo vardas</string>
 	<key>name.whatsYourName</key>
 	<string>Koks tavo vardas?</string>
+	<key>notif.animal.body %@</key>
+	<string>Surink dar kelis lankus ir atrakink %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tavo gyvūnai laukia. Grįžk į žaidimą ir toliau rink lankus!</string>
 	<key>notif.comeback.title</key>
 	<string>Mes tavęs pasiilgome! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium apima %lld lygius kiekvienai temai ir visiems 10 gyvūnų. Nuotykis tęsiasi!</string>
 	<key>notif.premium.title</key>
 	<string>Atrakinkite daugiau lygių ir gyvūnų! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Praėjo %lld dienos. Išspręskime kelis uždavinius ir uždirbkime daugiau lankų!</string>
 	<key>notif.reactivate.title</key>
 	<string>Pasiruošę vėl žaisti? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Bakstelėjimai: %1$lld iš %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Reikia suaugusiojo patvirtinimo</string>
+	<key>premium.availableAt %lld</key>
+	<string>Pasiekiama nuo %lld lankų</string>
 	<key>premium.availableFromStart</key>
 	<string>Pasiekiama nuo pradžių</string>
 	<key>premium.characterUnlocked</key>
 	<string>ATRAKINTAS NAUJAS VEIKĖJAS</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Uždirbai %lld lankų</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Tik su Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Jau žaidi. Pabaik žaidimą arba pasirink dar nepradėtą lygį, kad galėtum žaisti pamokėlę.</string>
 	<key>tutorial.notice.title</key>
 	<string>Tik žaidimo pradžioje</string>
+	<key>tutorial.step1</key>
+	<string>Laikyk mane ir tempk aukštyn arba žemyn, kad skrisčiau ore!</string>
+	<key>tutorial.step2</key>
+	<string>Bakstelėk virš arba po manimi. Skrisiu tiesiai ta kryptimi!</string>
+	<key>tutorial.step3</key>
+	<string>Nematai teisingo atsakymo? Nerk po lankais!</string>
+	<key>tutorial.step4</key>
+	<string>Greitai išspręsk uždavinį virš lankų! Skrisk per teisingą atsakymą ir gauk 1 tašką.</string>
+	<key>tutorial.step5</key>
+	<string>Žinai atsakymą? Bakstelėk teisingą lanką TURBO! Bakstelėk prieš kūgį ir gauk 2 taškus.</string>
+	<key>tutorial.step6</key>
+	<string>Atsargiai! Jei skrisi per neteisingą lanką, prarasi vieną gyvybę.</string>
+	<key>tutorial.step7</key>
+	<string>Viską žinai! Laikas skristi. Sėkmės!</string>
 </dict>
 </plist>

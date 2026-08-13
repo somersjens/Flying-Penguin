@@ -54,6 +54,8 @@
 	<string>Aproape ai reușit</string>
 	<key>game.encouragement.complete</key>
 	<string>Scor perfect!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ai adunat toate cercurile</string>
 	<key>game.end.completionSuffix</key>
 	<string>complet!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Exerciții în care **aduni** un număr.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Adună %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>În acest nivel poți aduna până la **%lld cercuri**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Exerciții în care **împarți** un număr.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Numele tău</string>
 	<key>name.whatsYourName</key>
 	<string>Cum te cheamă?</string>
+	<key>notif.animal.body %@</key>
+	<string>Mai câștigă câteva cercuri pentru a debloca %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Animalele tale așteaptă. Revino în joc și continuă să aduni cercuri!</string>
 	<key>notif.comeback.title</key>
 	<string>Ne e dor de tine! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium include %lld de niveluri pentru fiecare subiect și toate cele 10 animale. Aventura continuă!</string>
 	<key>notif.premium.title</key>
 	<string>Deblochează mai multe niveluri și animale! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Au trecut %lld zile. Hai să rezolvăm câteva exerciții și să câștigăm mai multe cercuri!</string>
 	<key>notif.reactivate.title</key>
 	<string>Sunteți gata să jucați din nou? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Atingeri: %1$lld din %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Este necesară aprobarea unui adult</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponibil de la %lld cercuri</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponibil de la început</string>
 	<key>premium.characterUnlocked</key>
 	<string>PERSONAJ NOU DEBLOCAT</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ai câștigat %lld cercuri</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusiv cu Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Ești în mijlocul unui joc. Termină-l sau alege un nivel neînceput ca să joci tutorialul.</string>
 	<key>tutorial.notice.title</key>
 	<string>Doar la începutul jocului</string>
+	<key>tutorial.step1</key>
+	<string>Ține-mă și trage-mă în sus sau în jos ca să zbor prin aer!</string>
+	<key>tutorial.step2</key>
+	<string>Atinge deasupra sau dedesubtul meu. Voi zbura direct în acea direcție!</string>
+	<key>tutorial.step3</key>
+	<string>Nu vezi răspunsul corect? Treci pe sub cercuri!</string>
+	<key>tutorial.step4</key>
+	<string>Rezolvă repede exercițiul deasupra cercurilor! Zboară prin răspunsul corect și ia 1 punct.</string>
+	<key>tutorial.step5</key>
+	<string>Știi răspunsul? Atinge cercul corect pentru TURBO! Atinge înainte de con și ia 2 puncte.</string>
+	<key>tutorial.step6</key>
+	<string>Atenție! Dacă zbori prin cercul greșit, pierzi o viață.</string>
+	<key>tutorial.step7</key>
+	<string>Știi tot! E timpul să zbori. Succes!</string>
 </dict>
 </plist>

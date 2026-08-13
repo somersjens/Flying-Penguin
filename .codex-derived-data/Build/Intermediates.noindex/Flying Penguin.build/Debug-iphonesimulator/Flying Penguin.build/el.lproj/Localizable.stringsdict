@@ -2,6 +2,22 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Μόνο %lld στεφάνι ακόμα! ⭕</string>
+			<key>other</key>
+			<string>Μόνο %lld στεφάνια ακόμα! ⭕</string>
+		</dict>
+	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -16,6 +32,22 @@
 			<string>Παίξε %lld λεπτό σήμερα και μάζεψε λίγα ακόμα.</string>
 			<key>other</key>
 			<string>Παίξε %lld λεπτό σήμερα και μάζεψε λίγα ακόμα.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Μαζεύτηκε %lld στεφάνι! ⭕</string>
+			<key>other</key>
+			<string>Μαζεύτηκαν %lld στεφάνια! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -64,6 +96,38 @@
 			<string>Το καθημερινό σερί παιχνιδιού σας έφτασε τις %lld ημέρες! 🔥</string>
 			<key>other</key>
 			<string>Το καθημερινό σερί παιχνιδιού σας έφτασε τις %lld ημέρες! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Έχεις συνολικά %lld στεφάνι. Έτοιμος/η για λίγα ακόμα;</string>
+			<key>other</key>
+			<string>Έχεις συνολικά %lld στεφάνια. Έτοιμος/η για λίγα ακόμα;</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld στεφάνι αυτή την εβδομάδα! 🎉</string>
+			<key>other</key>
+			<string>%lld στεφάνια αυτή την εβδομάδα! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

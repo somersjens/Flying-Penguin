@@ -54,6 +54,8 @@
 	<string>Olet melkein perillä</string>
 	<key>game.encouragement.complete</key>
 	<string>Täydet pisteet!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Keräsit kaikki vanteet</string>
 	<key>game.end.completionSuffix</key>
 	<string>valmis!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Laskuja, joissa **lisäät** luvun.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Lisää %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Tällä tasolla voit kerätä enintään **%lld vannetta**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Laskuja, joissa **jaat** luvun.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Nimesi</string>
 	<key>name.whatsYourName</key>
 	<string>Mikä sinun nimesi on?</string>
+	<key>notif.animal.body %@</key>
+	<string>Ansaitse vielä muutama vanne avataksesi hahmon %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Eläimesi odottavat. Palaa peliin ja jatka vanteiden keräämistä!</string>
 	<key>notif.comeback.title</key>
 	<string>Kaipaamme sinua! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium sisältää %lld tasoa jokaiselle aiheelle ja kaikille 10 eläimelle. Seikkailu jatkuu!</string>
 	<key>notif.premium.title</key>
 	<string>Avaa lisää tasoja ja eläimiä! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld päivää on kulunut. Ratkaistaan laskuja ja ansaitaan lisää vanteita!</string>
 	<key>notif.reactivate.title</key>
 	<string>Oletko valmis pelaamaan uudelleen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Napautukset: %1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Aikuisen hyväksyntä tarvitaan</string>
+	<key>premium.availableAt %lld</key>
+	<string>Saatavilla %lld vanteesta alkaen</string>
 	<key>premium.availableFromStart</key>
 	<string>Saatavilla alusta asti</string>
 	<key>premium.characterUnlocked</key>
 	<string>UUSI HAHMO AVATTU</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Olet ansainnut %lld vannetta</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Vain Premiumilla</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Olet jo kesken pelin. Pelaa se loppuun tai valitse taso, jota et ole vielä aloittanut, jotta voit pelata opastuksen.</string>
 	<key>tutorial.notice.title</key>
 	<string>Vain pelin alussa</string>
+	<key>tutorial.step1</key>
+	<string>Pidä minusta kiinni ja vedä ylös tai alas, niin lennän ilmassa!</string>
+	<key>tutorial.step2</key>
+	<string>Napauta ylä- tai alapuolelleni. Lennän suoraan siihen suuntaan!</string>
+	<key>tutorial.step3</key>
+	<string>Etkö näe oikeaa vastausta? Sukella vanteiden alta!</string>
+	<key>tutorial.step4</key>
+	<string>Ratkaise nopeasti vanteiden yllä oleva lasku! Lennä oikean vastauksen läpi ja saat 1 pisteen.</string>
+	<key>tutorial.step5</key>
+	<string>Tiedätkö vastauksen? Napauta oikeaa vannetta TURBOA varten! Napauta ennen kartiota ja saat 2 pistettä.</string>
+	<key>tutorial.step6</key>
+	<string>Varo! Jos lennät väärän vanteen läpi, menetät yhden elämän.</string>
+	<key>tutorial.step7</key>
+	<string>Osaat kaiken! Aika lentää. Onnea!</string>
 </dict>
 </plist>

@@ -54,6 +54,8 @@
 	<string>Už tam skoro jsi</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfektní skóre!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Sebral/a jsi všechny obruče</string>
 	<key>game.end.completionSuffix</key>
 	<string>hotovo!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>Příklady, kde číslo **přičítáš**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Přičti %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>V této úrovni můžeš sebrat až **%lld obručí**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Příklady, kde číslem **dělíš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>Tvé jméno</string>
 	<key>name.whatsYourName</key>
 	<string>Jak se jmenuješ?</string>
+	<key>notif.animal.body %@</key>
+	<string>Získej ještě pár obručí a odemkni %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tvoje zvířata čekají. Vrať se do hry a sbírej další obruče!</string>
 	<key>notif.comeback.title</key>
 	<string>Chybíš nám! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium obsahuje %lld úrovní pro každé téma a všech 10 zvířat. Dobrodružství pokračuje!</string>
 	<key>notif.premium.title</key>
 	<string>Odemkněte další úrovně a zvířata! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Už je to %lld dní. Vyřešme pár příkladů a získejme další obruče!</string>
 	<key>notif.reactivate.title</key>
 	<string>Jste připraveni znovu hrát? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>Klepnutí: %1$lld z %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Nutné schválení dospělým</string>
+	<key>premium.availableAt %lld</key>
+	<string>Dostupné od %lld obručí</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupné od začátku</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODEMČENA NOVÁ POSTAVA</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Získal/a jsi %lld obručí</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exkluzivně s Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>Už hraješ. Hru dokonči nebo vyber úroveň, kterou jsi ještě nezačal, a spusť návod.</string>
 	<key>tutorial.notice.title</key>
 	<string>Jen na začátku hry</string>
+	<key>tutorial.step1</key>
+	<string>Chyť mě a táhni nahoru nebo dolů, ať můžu létat!</string>
+	<key>tutorial.step2</key>
+	<string>Klepni nade mě nebo pode mě. Poletím přímo tím směrem!</string>
+	<key>tutorial.step3</key>
+	<string>Nevidíš správnou odpověď? Proleť pod obručemi!</string>
+	<key>tutorial.step4</key>
+	<string>Rychle spočítej příklad nad obručemi! Proleť správnou odpovědí a získej 1 bod.</string>
+	<key>tutorial.step5</key>
+	<string>Znáš odpověď? Klepni na správný obruč pro TURBO! Klepni před kuželem a získej 2 body.</string>
+	<key>tutorial.step6</key>
+	<string>Pozor! Když proletíš špatným obručem, ztratíš jeden život.</string>
+	<key>tutorial.step7</key>
+	<string>Všechno už víš! Čas letět. Hodně štěstí!</string>
 </dict>
 </plist>

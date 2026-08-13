@@ -54,6 +54,8 @@
 	<string>තව ටිකයි</string>
 	<key>game.encouragement.complete</key>
 	<string>සියල්ල හරි!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ඔයා වළලු සියල්ල එකතු කළා</string>
 	<key>game.end.completionSuffix</key>
 	<string>සම්පූර්ණයි!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>අංකයක් **එකතු කරන** ගණන්.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld එකතු කරන්න</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>මේ මට්ටමේදී **%lld වළලු** දක්වා එකතු කළ හැක.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>අංකයක් **බෙදන** ගණන්.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>ඔබේ නම</string>
 	<key>name.whatsYourName</key>
 	<string>ඔබේ නම මොකක්ද?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@ අගුළු හැරීමට තවත් වළලු කිහිපයක් උපයන්න! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ඔයාගේ සතුන් බලාගෙන ඉන්නවා. ආපහු ඇවිත් වළලු එකතු කරගෙන යන්න!</string>
 	<key>notif.comeback.title</key>
 	<string>අපිට ඔයාව දැනෙනවා! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium හි සෑම මාතෘකාවක් සඳහාම මට්ටම් %lldක් සහ සියලුම සතුන් 10ක් ඇතුළත් වේ. වික්‍රමය දිගටම පවතී!</string>
 	<key>notif.premium.title</key>
 	<string>තවත් මට්ටම් සහ සතුන් අගුළු හරින්න! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld දිනක් ගතවුණා. ගණන් ටිකක් විසඳලා තවත් වළලු උපයමු!</string>
 	<key>notif.reactivate.title</key>
 	<string>නැවත ක්‍රීඩා කිරීමට සූදානම්ද? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>තට්ටු: %1$lld න් %2$lld</string>
 	<key>parentGate.title</key>
 	<string>වැඩිහිටි අනුමැතිය අවශ්‍යයි</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld වළලු සිට ලබාගත හැක</string>
 	<key>premium.availableFromStart</key>
 	<string>ආරම්භයේ සිට ලබා ගත හැක</string>
 	<key>premium.characterUnlocked</key>
 	<string>නව චරිතයක් විවෘතයි</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ඔයා %lld වළලු උපයාගත්තා</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium සමඟ පමණි</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>ඔයා දැනටමත් ක්‍රීඩාවක් අතරමැද. ඒක ඉවර කරන්න, නැත්නම් තවම පටන් නොගත් මට්ටමක් තෝරලා පුහුණුව කරන්න.</string>
 	<key>tutorial.notice.title</key>
 	<string>ක්‍රීඩාව පටන් ගන්නකොට විතරයි</string>
+	<key>tutorial.step1</key>
+	<string>මාව අල්ලගෙන ඉහළට හෝ පහළට ඇදගෙන යන්න, එතකොට මම පියාඹනවා!</string>
+	<key>tutorial.step2</key>
+	<string>මගේ ඉහළින් හෝ පහළින් ටැප් කරන්න. මම කෙළින්ම ඒ දිශාවට පියාඹනවා!</string>
+	<key>tutorial.step3</key>
+	<string>හරි උත්තරය පේන්නේ නැද්ද? වළලු යටින් යන්න!</string>
+	<key>tutorial.step4</key>
+	<string>වළලු උඩ තියෙන ගණන ඉක්මනින් විසඳන්න! හරි උත්තරයෙන් පියාඹලා ලකුණ 1ක් ගන්න.</string>
+	<key>tutorial.step5</key>
+	<string>උත්තරය දන්නවද? TURBO සඳහා හරි වළල්ල ටැප් කරන්න! කෝනයට කලින් ටැප් කරලා ලකුණු 2ක් ගන්න.</string>
+	<key>tutorial.step6</key>
+	<string>පරිස්සම්! වැරදි වළල්ලෙන් පියාඹුවොත් ජීවිතයක් අහිමි වෙනවා.</string>
+	<key>tutorial.step7</key>
+	<string>ඔයාට හැමදේම දන්නවා! දැන් පියාඹමු. සුබ පැතුම්!</string>
 </dict>
 </plist>

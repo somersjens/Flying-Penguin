@@ -54,6 +54,8 @@
 	<string>כמעט הגעתם</string>
 	<key>game.encouragement.complete</key>
 	<string>ציון מושלם!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>אספת את כל החישוקים</string>
 	<key>game.end.completionSuffix</key>
 	<string>הושלם!</string>
 	<key>game.end.gameOverTitle</key>
@@ -124,6 +126,8 @@
 	<string>תרגילים שבהם **מוסיפים** מספר.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>הוספת %lld</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>בשלב הזה אפשר לאסוף עד **%lld חישוקים**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>תרגילים שבהם **מחלקים** מספר.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -188,6 +192,10 @@
 	<string>השם שלך</string>
 	<key>name.whatsYourName</key>
 	<string>איך קוראים לך?</string>
+	<key>notif.animal.body %@</key>
+	<string>אספו עוד כמה חישוקים כדי לפתוח את %@! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>החיות שלך מחכות. חזרו למשחק והמשיכו לאסוף חישוקים!</string>
 	<key>notif.comeback.title</key>
 	<string>אנחנו מתגעגעים אליך! 👋</string>
 	<key>notif.day3.title</key>
@@ -196,6 +204,8 @@
 	<string>Hungry Frog Premium כולל %lld רמות לכל נושא וכל 10 החיות. ההרפתקה ממשיכה!</string>
 	<key>notif.premium.title</key>
 	<string>פתח עוד רמות וחיות! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>עברו %lld ימים. בואו נפתור כמה תרגילים ונרוויח עוד חישוקים!</string>
 	<key>notif.reactivate.title</key>
 	<string>מוכן לשחק שוב? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -248,10 +258,14 @@
 	<string>הקשות: %1$lld מתוך %2$lld</string>
 	<key>parentGate.title</key>
 	<string>נדרש אישור מבוגר</string>
+	<key>premium.availableAt %lld</key>
+	<string>זמין מ-%lld חישוקים</string>
 	<key>premium.availableFromStart</key>
 	<string>זמין מההתחלה</string>
 	<key>premium.characterUnlocked</key>
 	<string>דמות חדשה נפתחה</string>
+	<key>premium.earnedCards %lld</key>
+	<string>הרווחת %lld חישוקים</string>
 	<key>premium.exclusiveBadge</key>
 	<string>בלעדי עם Premium</string>
 	<key>premium.feature.animals.subtitle</key>
@@ -338,5 +352,19 @@
 	<string>אתם באמצע משחק. סיימו אותו, או בחרו שלב שעוד לא התחלתם, כדי לשחק בהדרכה.</string>
 	<key>tutorial.notice.title</key>
 	<string>רק בתחילת משחק</string>
+	<key>tutorial.step1</key>
+	<string>החזיקו אותי וגררו למעלה או למטה כדי שאעוף באוויר!</string>
+	<key>tutorial.step2</key>
+	<string>הקישו מעליי או מתחתיי. אעוף ישר לכיוון הזה!</string>
+	<key>tutorial.step3</key>
+	<string>לא רואים את התשובה הנכונה? צללו מתחת לחישוקים!</string>
+	<key>tutorial.step4</key>
+	<string>פתרו מהר את התרגיל שמעל החישוקים! עופו דרך התשובה הנכונה וקבלו נקודה אחת.</string>
+	<key>tutorial.step5</key>
+	<string>יודעים את התשובה? הקישו על החישוק הנכון ל-TURBO! הקישו לפני הקונוס וקבלו 2 נקודות.</string>
+	<key>tutorial.step6</key>
+	<string>זהירות! אם תעופו דרך החישוק הלא נכון, תאבדו חיים.</string>
+	<key>tutorial.step7</key>
+	<string>אתם יודעים הכול! הגיע הזמן לעוף. בהצלחה!</string>
 </dict>
 </plist>
