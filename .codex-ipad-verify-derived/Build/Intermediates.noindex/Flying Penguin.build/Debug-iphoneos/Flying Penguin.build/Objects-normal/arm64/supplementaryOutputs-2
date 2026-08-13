@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/MathQuestion.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathQuestion.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathQuestion.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathQuestion.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathQuestion.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathQuestion.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/MathTopic.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathTopic.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathTopic.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathTopic.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathTopic.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MathTopic.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/MemoryGame.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MemoryGame.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MemoryGame.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MemoryGame.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MemoryGame.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphoneos/Flying Penguin.build/Objects-normal/arm64/MemoryGame.swiftdeps"
+  }
+}

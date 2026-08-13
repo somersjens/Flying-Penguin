@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/AppAudio.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppAudio.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppAudio.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppAudio.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppAudio.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppAudio.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/AppSettings.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppSettings.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppSettings.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppSettings.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppSettings.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/AppSettings.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/ElephantChallengeApp.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/ElephantChallengeApp.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/ElephantChallengeApp.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/ElephantChallengeApp.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/ElephantChallengeApp.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/ElephantChallengeApp.swiftdeps"
+  }
+}

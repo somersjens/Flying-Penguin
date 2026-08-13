@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Arth</string>
+	<key>character.bunny</key>
+	<string>Cwningen</string>
+	<key>character.crab</key>
+	<string>Cranc</string>
+	<key>character.dog</key>
+	<string>Ci</string>
+	<key>character.elephant</key>
+	<string>Eliffant</string>
+	<key>character.fox</key>
+	<string>Llwynog</string>
+	<key>character.frog</key>
+	<string>Broga</string>
+	<key>character.lion</key>
+	<string>Llew</string>
+	<key>character.octopus</key>
+	<string>Octopws</string>
+	<key>character.penguin</key>
+	<string>Pengwin</string>
+	<key>common.cancel</key>
+	<string>Canslo</string>
+	<key>common.continue</key>
+	<string>Parhau</string>
+	<key>common.done</key>
+	<string>Wedi gorffen</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld mun</string>
+	<key>common.ok</key>
+	<string>Iawn</string>
+	<key>common.save</key>
+	<string>Cadw</string>
+	<key>currency.hoop.plural</key>
+	<string>cylchoedd</string>
+	<key>currency.hoop.singular</key>
+	<string>cylch</string>
+	<key>game.combo %lld</key>
+	<string>Cyfuniad! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Cais da</string>
+	<key>game.encouragement.1</key>
+	<string>Mae'n ddechrau</string>
+	<key>game.encouragement.2</key>
+	<string>Dalia ati i ymarfer</string>
+	<key>game.encouragement.3</key>
+	<string>Ddim yn ddrwg o gwbl</string>
+	<key>game.encouragement.4</key>
+	<string>Da iawn</string>
+	<key>game.encouragement.5</key>
+	<string>Perfformiad gwych</string>
+	<key>game.encouragement.6</key>
+	<string>Da iawn ti</string>
+	<key>game.encouragement.7</key>
+	<string>Chwarae gwych</string>
+	<key>game.encouragement.8</key>
+	<string>Mae'r diwedd yn y golwg</string>
+	<key>game.encouragement.9</key>
+	<string>Rwyt ti bron yno</string>
+	<key>game.encouragement.complete</key>
+	<string>Sgôr berffaith!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Enillaist ti bob pwynt.</string>
+	<key>game.end.completionSuffix</key>
+	<string>wedi'i gwblhau!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Diwedd y gêm</string>
+	<key>game.end.mainMenu</key>
+	<string>Prif ddewislen</string>
+	<key>game.end.playAgain</key>
+	<string>Chwarae eto</string>
+	<key>game.highScore</key>
+	<string>Sgôr uchaf</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Nôl i'r brif ddewislen</string>
+	<key>game.intro.continue</key>
+	<string>Parhau</string>
+	<key>game.intro.progressPaused</key>
+	<string>Mae dy gynnydd wedi’i oedi.</string>
+	<key>game.intro.start</key>
+	<string>Dechrau'r lefel</string>
+	<key>game.intro.startTutorial</key>
+	<string>Dechrau’r tiwtorial</string>
+	<key>game.streakBoost.title</key>
+	<string>Pwyntiau dwbl!</string>
+	<key>goal.period</key>
+	<string>Cyfnod y nod</string>
+	<key>goal.promptDaily</key>
+	<string>Sawl munud wyt ti eisiau chwarae bob dydd?</string>
+	<key>goal.promptWeekly</key>
+	<string>Sawl munud wyt ti eisiau chwarae bob wythnos?</string>
+	<key>goal.title</key>
+	<string>Nod chwarae</string>
+	<key>goalPeriod.daily</key>
+	<string>Bob dydd</string>
+	<key>goalPeriod.weekly</key>
+	<string>Bob wythnos</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld arall</string>
+	<key>home.totalLabel</key>
+	<string>Cyfanswm</string>
+	<key>info.mode.fractions.header</key>
+	<string>Rhannau</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Un rhan neu sawl rhan</string>
+	<key>info.mode.fractions.single</key>
+	<string>Un rhan bob tro</string>
+	<key>info.mode.header</key>
+	<string>Trefn</string>
+	<key>info.mode.mixed</key>
+	<string>Cymysg â lefelau is</string>
+	<key>info.mode.order</key>
+	<string>Trefn benodol</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Gan gynnwys rhifau degol</string>
+	<key>info.mode.percentages.header</key>
+	<string>Math</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Heb rifau degol</string>
+	<key>info.mode.random</key>
+	<string>Trefn ar hap</string>
+	<key>info.super.all</key>
+	<string>Adio, tynnu, lluosi, rhannu a chanrannau</string>
+	<key>info.super.basic</key>
+	<string>Adio a thynnu</string>
+	<key>info.super.fraction</key>
+	<string>Adio, tynnu, lluosi a rhannu</string>
+	<key>info.super.times</key>
+	<string>Adio, tynnu a lluosi</string>
+	<key>info.topic.header</key>
+	<string>Mathau o symiau</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Symiau lle rwyt ti’n **adio** rhif.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Adio %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Gallwch gasglu hyd at **%lld moronen** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Gallwch gasglu hyd at **%lld iâr** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Gallwch gasglu hyd at **%lld pysgodyn** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Gallwch gasglu hyd at **%lld pot mêl** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Gallwch gasglu hyd at **%lld cylchoedd** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Gallwch gasglu hyd at **%lld bisged ci** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Gallwch gasglu hyd at **%lld darn o gig** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Gallwch gasglu hyd at **%lld cnau mwnci** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Gallwch gasglu hyd at **%lld perl** yn y lefel hon.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Gallwch gasglu hyd at **%lld berdysen** yn y lefel hon.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Symiau lle rwyt ti’n **rhannu** rhif.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Rhannu â %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Cwestiynau hyd at **lefel %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Cwestiynau o **lefel 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Popeth yn gymysg**: adio, tynnu, lluosi, ffracsiynau a chanrannau.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Cymysgedd %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Bob amser **un rhan** o gyfan.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Un rhan neu fwy** o gyfan.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Cwestiynau mewn **trefn benodol**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Atebion **heb ddegolion**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Atebion hefyd **gyda degolion**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Cwestiynau mewn **trefn ar hap**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Symiau gyda **chanrannau**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ o rif</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Symiau lle rwyt ti’n **tynnu** rhif.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Tynnu %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Symiau lle rwyt ti’n **lluosi**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Tabl %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MWYAF</string>
+	<key>menu.moreLevels</key>
+	<string>Mwy o lefelau</string>
+	<key>menu.premiumLevels</key>
+	<string>Lefelau Premiwm</string>
+	<key>menu.startHere</key>
+	<string>Dechrau yma</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Datgloi mwy gyda Premiwm</string>
+	<key>mode.fractions.multiple</key>
+	<string>Sawl un</string>
+	<key>mode.fractions.single</key>
+	<string>Un rhan</string>
+	<key>mode.mixed</key>
+	<string>Cymysg</string>
+	<key>mode.order</key>
+	<string>Trefn</string>
+	<key>mode.percentages.decimal</key>
+	<string>Degol</string>
+	<key>mode.percentages.whole</key>
+	<string>Cyfan</string>
+	<key>mode.random</key>
+	<string>Ar hap</string>
+	<key>name.placeholder</key>
+	<string>Dy enw</string>
+	<key>name.whatsYourName</key>
+	<string>Beth yw dy enw?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Enillwch ychydig mwy o dlysau i ddatgloi'r anifail hwn! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Mae eich anifeiliaid yn aros. Dewch yn ôl i chwarae a daliwch ati i gasglu cylchoedd!</string>
+	<key>notif.comeback.title</key>
+	<string>Rydym yn colli chi! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Gadewch i ni wneud i ddiwrnod 3 ddigwydd! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Mae Premiwm Hungry Frog yn cynnwys %lld lefel ar gyfer pob pwnc a phob un o'r 10 anifail. Mae'r antur yn dal i fynd!</string>
+	<key>notif.premium.title</key>
+	<string>Datgloi mwy o lefelau ac anifeiliaid! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Mae wedi bod yn %lld diwrnod. Gadewch i ni ddatrys rhai ymarferion mathemateg ac ennill mwy o dlysau!</string>
+	<key>notif.reactivate.title</key>
+	<string>Barod i chwarae eto? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Gwahanol symiau cymysg gyda'i gilydd.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Eitha da'n barod</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Ymarfer gyda symiau mewn trefn.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Newydd ddechrau</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Symiau mewn trefn ar hap.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Wedi ymarfer tipyn</string>
+	<key>onboarding.level.title</key>
+	<string>Pa mor dda wyt ti ar hyn yn barod?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Dewch i ddechrau. Beth yw dy enw?</string>
+	<key>onboarding.name.title</key>
+	<string>Fu gwneud symiau erioed mor hwyl!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Dewis bwnc i ddechrau.</string>
+	<key>onboarding.subject.title</key>
+	<string>Beth wyt ti eisiau ei ddysgu?</string>
+	<key>parentGate.approved</key>
+	<string>Cymeradwywyd</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Ceisiadau: %1$lld o %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Dal: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>cylch</string>
+	<key>parentGate.shape.diamond</key>
+	<string>diemwnt</string>
+	<key>parentGate.shape.heart</key>
+	<string>calon</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>hecsagon</string>
+	<key>parentGate.shape.plus</key>
+	<string>plws</string>
+	<key>parentGate.shape.square</key>
+	<string>sgwâr</string>
+	<key>parentGate.shape.star</key>
+	<string>seren</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triongl</string>
+	<key>parentGate.subtitle</key>
+	<string>I amddiffyn chwaraewyr ifanc, rhaid i oedolyn gwblhau'r gwiriad hwn cyn parhau at y pryniant.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Tapiau: %1$lld o %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Angen cymeradwyaeth oedolyn</string>
+	<key>premium.availableAt %lld</key>
+	<string>Ar gael o %lld tlws</string>
+	<key>premium.availableFromStart</key>
+	<string>Ar gael o’r dechrau</string>
+	<key>premium.characterUnlocked</key>
+	<string>CYMERIAD NEWYDD WEDI’I DDATGLOI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Rwyt ti wedi ennill %lld cylchoedd</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Yn unigryw gyda Premiwm</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Gyda Premiwm, gelli di chwarae'n rhydd gyda'r 10 anifail.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Mynediad at bob anifail</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Digon o symiau newydd i'w hymarfer bob amser.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 lefel i bob pwnc</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Chwarae heb unrhyw darfu.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Dim hysbysebion</string>
+	<key>premium.oneTime</key>
+	<string>Pryniant unwaith. Yn eiddo i ti am byth.</string>
+	<key>premium.restore</key>
+	<string>Adfer pryniannau</string>
+	<key>premium.start</key>
+	<string>Dechrau</string>
+	<key>premium.storeUnavailable</key>
+	<string>Nid yw'r siop ar gael ar hyn o bryd. Rho gynnig arall arni nes ymlaen.</string>
+	<key>premium.unlock</key>
+	<string>Datgloi Premiwm</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Datgloi Premiwm · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Wedi’i ddatgloi gyda Premiwm</string>
+	<key>result.complete</key>
+	<string>Lefel wedi’i chwblhau!</string>
+	<key>result.stopped</key>
+	<string>Wedi oedi</string>
+	<key>settings.character</key>
+	<string>Cymeriad</string>
+	<key>settings.characterInfo</key>
+	<string>Mae pob anifail yn rhoi ei thema liw ei hun i'r gêm gyfan.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Personol: %lld mun</string>
+	<key>settings.dailyGoal</key>
+	<string>Nod dyddiol</string>
+	<key>settings.goalInfo</key>
+	<string>Mae nod y gyfres yn dechrau ar 5 munud y dydd. Dim ond amser chwarae gweithredol sy'n cyfrif.</string>
+	<key>settings.music</key>
+	<string>Cerddoriaeth</string>
+	<key>settings.playGoals</key>
+	<string>Nodau chwarae</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premiwm wedi'i ddatgloi. Diolch!</string>
+	<key>settings.sound</key>
+	<string>Sain</string>
+	<key>settings.soundEffects</key>
+	<string>Cerddoriaeth ac effeithiau</string>
+	<key>settings.soundInfo</key>
+	<string>Diffodd y sain i chwarae’n dawel. Mae’r gêm yn gweithio yn union yr un fath.</string>
+	<key>settings.title</key>
+	<string>Gosodiadau</string>
+	<key>streak.dayOne</key>
+	<string>Diwrnod 1</string>
+	<key>topic.addition</key>
+	<string>Adio</string>
+	<key>topic.addition.detail</key>
+	<string>Adio yn unig</string>
+	<key>topic.fractions</key>
+	<string>Ffracsiynau</string>
+	<key>topic.fractions.detail</key>
+	<string>Rhannu yn unig</string>
+	<key>topic.mixed</key>
+	<string>Cymysgedd</string>
+	<key>topic.mixed.detail</key>
+	<string>Symiau cymysg</string>
+	<key>topic.percentages</key>
+	<string>Canrannau</string>
+	<key>topic.percentages.detail</key>
+	<string>Canrannau yn unig</string>
+	<key>topic.subtraction</key>
+	<string>Tynnu</string>
+	<key>topic.subtraction.detail</key>
+	<string>Tynnu yn unig</string>
+	<key>topic.tables</key>
+	<string>Tablau</string>
+	<key>topic.tables.detail</key>
+	<string>Lluosi yn unig</string>
+	<key>tutorial.notice.message</key>
+	<string>Rwyt ti yng nghanol gêm. Gorffen hi, neu ddewis lefel heb ei dechrau eto, i chwarae’r tiwtorial.</string>
+	<key>tutorial.notice.title</key>
+	<string>Dim ond ar ddechrau gêm</string>
+</dict>
+</plist>

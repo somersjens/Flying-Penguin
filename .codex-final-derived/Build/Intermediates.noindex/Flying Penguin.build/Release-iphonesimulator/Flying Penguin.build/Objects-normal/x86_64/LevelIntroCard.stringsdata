@@ -1,0 +1,160 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/LevelIntroCard.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "levelIntro.addition.title %lld",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.addition.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.subtraction.title %lld",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.subtraction.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.tables.title %lld",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.tables.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.fractions.title %lld",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.fractions.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.percentages.title %@",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.percentages.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.mixed.title %lld",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.mixed.intro",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.levelRange.first",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "levelIntro.levelRange %lld",
+        "location": {
+          "startingColumn": 21,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.intro.continue",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 246
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.intro.startTutorial",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 247
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.intro.start",
+        "location": {
+          "startingColumn": 63,
+          "startingLine": 247
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.intro.backToMainMenu",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 265
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.intro.progressPaused",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 289
+        }
+      }
+    ]
+  },
+  "version": 1
+}

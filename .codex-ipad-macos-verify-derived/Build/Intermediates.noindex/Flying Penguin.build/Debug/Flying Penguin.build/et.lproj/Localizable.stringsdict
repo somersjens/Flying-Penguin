@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Jäänud on vaid %lld rõngas! ⭕</string>
+			<key>other</key>
+			<string>Jäänud on vaid %lld rõngas! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Mängi täna %lld minut ja kogu veel mõned.</string>
+			<key>other</key>
+			<string>Mängi täna %lld minut ja kogu veel mõned.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld rõngas kogutud! ⭕</string>
+			<key>other</key>
+			<string>%lld rõngas kogutud! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Alustage %lld-minutilist mänguseanssi ja pikendage oma igapäevast mänguseeriat.</string>
+			<key>other</key>
+			<string>Alustage %lld-minutilist mänguseanssi ja pikendage oma igapäevast mänguseeriat.</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Mängige %lld minutit ja jätkake oma igapäevast mänguseeriat!</string>
+			<key>other</key>
+			<string>Mängige %lld minutit ja jätkake oma igapäevast mänguseeriat!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Teie igapäevane mänguseeria on jõudnud %lld päevani! 🔥</string>
+			<key>other</key>
+			<string>Teie igapäevane mänguseeria on jõudnud %lld päevani! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>See toob kokku %lld rõngas. Hämmastav töö!</string>
+			<key>other</key>
+			<string>See toob kokku %lld rõngas. Hämmastav töö!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Teenisite sel nädalal %lld rõngas! 🎉</string>
+			<key>other</key>
+			<string>Teenisite sel nädalal %lld rõngas! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Hoia %1$@ %2$lld sekundit all.</string>
+			<key>other</key>
+			<string>Hoia %1$@ %2$lld sekundit all.</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>Puuduta nüüd %2$@ %1$lld korda.</string>
+			<key>other</key>
+			<string>Puuduta nüüd %2$@ %1$lld korda.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

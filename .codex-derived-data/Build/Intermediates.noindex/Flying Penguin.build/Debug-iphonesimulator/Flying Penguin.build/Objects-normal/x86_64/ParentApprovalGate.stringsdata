@@ -1,0 +1,72 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/ParentApprovalGate.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "parentGate.title",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 103
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.subtitle",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.holdInstruction %@ %lld",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.tapInstruction %lld %@",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 229
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.holdProgress %lld",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.tapProgress %lld %lld",
+        "location": {
+          "startingColumn": 17,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.attempts %lld %lld",
+        "location": {
+          "startingColumn": 11,
+          "startingLine": 243
+        }
+      },
+      {
+        "comment": "",
+        "key": "parentGate.approved",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 216
+        }
+      }
+    ]
+  },
+  "version": 1
+}

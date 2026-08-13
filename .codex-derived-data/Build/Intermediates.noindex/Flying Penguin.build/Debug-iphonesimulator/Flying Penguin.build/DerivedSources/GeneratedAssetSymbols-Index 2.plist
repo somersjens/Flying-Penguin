@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACColorNameLaunchBackground</string>
+			<key>relativePath</key>
+			<string>./LaunchBackground.colorset</string>
+			<key>swiftSymbol</key>
+			<string>launchBackground</string>
+		</dict>
+	</array>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName1BackArm</string>
+			<key>relativePath</key>
+			<string>./1_back_arm.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_1BackArm</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName1BodyOnly</string>
+			<key>relativePath</key>
+			<string>./1_body_only.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_1BodyOnly</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName1FrontArm</string>
+			<key>relativePath</key>
+			<string>./1_front_arm.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_1FrontArm</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName1MainCharacter</string>
+			<key>relativePath</key>
+			<string>./1_main_character.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_1MainCharacter</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName2BackArm</string>
+			<key>relativePath</key>
+			<string>./2_back_arm.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_2BackArm</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName2BodyOnly</string>
+			<key>relativePath</key>
+			<string>./2_body_only.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_2BodyOnly</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName2FrontArm</string>
+			<key>relativePath</key>
+			<string>./2_front_arm.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_2FrontArm</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageName2MainCharacter</string>
+			<key>relativePath</key>
+			<string>./2_main_character.imageset</string>
+			<key>swiftSymbol</key>
+			<string>_2MainCharacter</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameCanon</string>
+			<key>relativePath</key>
+			<string>./canon.imageset</string>
+			<key>swiftSymbol</key>
+			<string>canon</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront1</string>
+			<key>relativePath</key>
+			<string>./front_1.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front1</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront10</string>
+			<key>relativePath</key>
+			<string>./front_10.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front10</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront2</string>
+			<key>relativePath</key>
+			<string>./front_2.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front2</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront3</string>
+			<key>relativePath</key>
+			<string>./front_3.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front3</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront4</string>
+			<key>relativePath</key>
+			<string>./front_4.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front4</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront5</string>
+			<key>relativePath</key>
+			<string>./front_5.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front5</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront6</string>
+			<key>relativePath</key>
+			<string>./front_6.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front6</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront7</string>
+			<key>relativePath</key>
+			<string>./front_7.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front7</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront8</string>
+			<key>relativePath</key>
+			<string>./front_8.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front8</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameFront9</string>
+			<key>relativePath</key>
+			<string>./front_9.imageset</string>
+			<key>swiftSymbol</key>
+			<string>front9</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameHoopCurrency</string>
+			<key>relativePath</key>
+			<string>./hoop_currency.imageset</string>
+			<key>swiftSymbol</key>
+			<string>hoopCurrency</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNamePoop</string>
+			<key>relativePath</key>
+			<string>./poop.imageset</string>
+			<key>swiftSymbol</key>
+			<string>poop</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb1</string>
+			<key>relativePath</key>
+			<string>./thumb_1.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb1</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb10</string>
+			<key>relativePath</key>
+			<string>./thumb_10.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb10</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb2</string>
+			<key>relativePath</key>
+			<string>./thumb_2.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb2</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb3</string>
+			<key>relativePath</key>
+			<string>./thumb_3.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb3</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb4</string>
+			<key>relativePath</key>
+			<string>./thumb_4.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb4</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb5</string>
+			<key>relativePath</key>
+			<string>./thumb_5.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb5</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb6</string>
+			<key>relativePath</key>
+			<string>./thumb_6.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb6</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb7</string>
+			<key>relativePath</key>
+			<string>./thumb_7.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb7</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb8</string>
+			<key>relativePath</key>
+			<string>./thumb_8.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb8</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameThumb9</string>
+			<key>relativePath</key>
+			<string>./thumb_9.imageset</string>
+			<key>swiftSymbol</key>
+			<string>thumb9</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>

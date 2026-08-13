@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>នៅសល់តែ %lld រង្វង់ទេ! ⭕</string>
+			<key>other</key>
+			<string>នៅសល់តែ %lld រង្វង់ទេ! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>លេងថ្ងៃនេះ %lld នាទី ហើយប្រមូលបន្ថែមបន្តិចទៀត។</string>
+			<key>other</key>
+			<string>លេងថ្ងៃនេះ %lld នាទី ហើយប្រមូលបន្ថែមបន្តិចទៀត។</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ប្រមូលបានរង្វង់ %lld! ⭕</string>
+			<key>other</key>
+			<string>ប្រមូលបានរង្វង់ %lld! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ចាប់ផ្តើមវគ្គលេងរយៈពេល %lld នាទី និងពង្រីកការលេងប្រចាំថ្ងៃរបស់អ្នក។</string>
+			<key>other</key>
+			<string>ចាប់ផ្តើមវគ្គលេងរយៈពេល %lld នាទី និងពង្រីកការលេងប្រចាំថ្ងៃរបស់អ្នក។</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>លេងរយៈពេល %lld នាទីហើយបន្តការលេងប្រចាំថ្ងៃរបស់អ្នក!</string>
+			<key>other</key>
+			<string>លេងរយៈពេល %lld នាទីហើយបន្តការលេងប្រចាំថ្ងៃរបស់អ្នក!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ការលេងប្រចាំថ្ងៃរបស់អ្នកបានឈានដល់ %lld ថ្ងៃហើយ! 🔥</string>
+			<key>other</key>
+			<string>ការលេងប្រចាំថ្ងៃរបស់អ្នកបានឈានដល់ %lld ថ្ងៃហើយ! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>នោះនាំឱ្យចំនួនសរុបរបស់អ្នកដល់ %lld រង្វង់។ការងារ​អស្ចារ្យ!</string>
+			<key>other</key>
+			<string>នោះនាំឱ្យចំនួនសរុបរបស់អ្នកដល់ %lld រង្វង់។ការងារ​អស្ចារ្យ!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>អ្នកទទួលបានរង្វង់ចំនួន %lld នៅសប្តាហ៍នេះ! 🎉</string>
+			<key>other</key>
+			<string>អ្នកទទួលបានរង្វង់ចំនួន %lld នៅសប្តាហ៍នេះ! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ចុច %1$@ ឱ្យជាប់ %2$lld វិនាទី។</string>
+			<key>other</key>
+			<string>ចុច %1$@ ឱ្យជាប់ %2$lld វិនាទី។</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ឥឡូវប៉ះ %2$@ ចំនួន %1$lld ដង។</string>
+			<key>other</key>
+			<string>ឥឡូវប៉ះ %2$@ ចំនួន %1$lld ដង។</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

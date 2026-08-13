@@ -1,0 +1,32 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Tutorial.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "tutorial.notice.title",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 433
+        }
+      },
+      {
+        "comment": "",
+        "key": "tutorial.notice.message",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 438
+        }
+      },
+      {
+        "comment": "",
+        "key": "common.ok",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 445
+        }
+      }
+    ]
+  },
+  "version": 1
+}

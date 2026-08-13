@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Ведмідь</string>
+	<key>character.bunny</key>
+	<string>Зайчик</string>
+	<key>character.crab</key>
+	<string>Краб</string>
+	<key>character.dog</key>
+	<string>Пес</string>
+	<key>character.elephant</key>
+	<string>Слон</string>
+	<key>character.fox</key>
+	<string>Лис</string>
+	<key>character.frog</key>
+	<string>Жаба</string>
+	<key>character.lion</key>
+	<string>Лев</string>
+	<key>character.octopus</key>
+	<string>Восьминіг</string>
+	<key>character.penguin</key>
+	<string>Пінгвін</string>
+	<key>common.cancel</key>
+	<string>Скасувати</string>
+	<key>common.continue</key>
+	<string>Далі</string>
+	<key>common.done</key>
+	<string>Готово</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld хв</string>
+	<key>common.ok</key>
+	<string>ОК</string>
+	<key>common.save</key>
+	<string>Зберегти</string>
+	<key>currency.hoop.plural</key>
+	<string>обручі</string>
+	<key>currency.hoop.singular</key>
+	<string>обруч</string>
+	<key>game.combo %lld</key>
+	<string>Комбо! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Гарна спроба</string>
+	<key>game.encouragement.1</key>
+	<string>Це вже початок</string>
+	<key>game.encouragement.2</key>
+	<string>Тренуйся далі</string>
+	<key>game.encouragement.3</key>
+	<string>Зовсім непогано</string>
+	<key>game.encouragement.4</key>
+	<string>Добре виходить</string>
+	<key>game.encouragement.5</key>
+	<string>Чудовий результат</string>
+	<key>game.encouragement.6</key>
+	<string>Молодець</string>
+	<key>game.encouragement.7</key>
+	<string>Дуже добре зіграно</string>
+	<key>game.encouragement.8</key>
+	<string>Фініш уже близько</string>
+	<key>game.encouragement.9</key>
+	<string>Ти майже там</string>
+	<key>game.encouragement.complete</key>
+	<string>Ідеально!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ти здобув усі бали.</string>
+	<key>game.end.completionSuffix</key>
+	<string>завершено!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Гру завершено</string>
+	<key>game.end.mainMenu</key>
+	<string>Головне меню</string>
+	<key>game.end.playAgain</key>
+	<string>Ще раз</string>
+	<key>game.highScore</key>
+	<string>Рекорд</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Назад до меню</string>
+	<key>game.intro.continue</key>
+	<string>Продовжити</string>
+	<key>game.intro.progressPaused</key>
+	<string>Прогрес призупинено.</string>
+	<key>game.intro.start</key>
+	<string>Почати рівень</string>
+	<key>game.intro.startTutorial</key>
+	<string>Почати навчання</string>
+	<key>game.streakBoost.title</key>
+	<string>Подвійні бали!</string>
+	<key>goal.period</key>
+	<string>Період цілі</string>
+	<key>goal.promptDaily</key>
+	<string>Скільки хвилин на день ти хочеш грати?</string>
+	<key>goal.promptWeekly</key>
+	<string>Скільки хвилин на тиждень ти хочеш грати?</string>
+	<key>goal.title</key>
+	<string>Ігрова ціль</string>
+	<key>goalPeriod.daily</key>
+	<string>Щодня</string>
+	<key>goalPeriod.weekly</key>
+	<string>Щотижня</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ще %lld</string>
+	<key>home.totalLabel</key>
+	<string>Усього</string>
+	<key>info.mode.fractions.header</key>
+	<string>Частини</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Одна або кілька частин</string>
+	<key>info.mode.fractions.single</key>
+	<string>Завжди одна частина</string>
+	<key>info.mode.header</key>
+	<string>Порядок</string>
+	<key>info.mode.mixed</key>
+	<string>Разом із нижчими рівнями</string>
+	<key>info.mode.order</key>
+	<string>Фіксований порядок</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>З десятковими числами</string>
+	<key>info.mode.percentages.header</key>
+	<string>Тип</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Без десяткових чисел</string>
+	<key>info.mode.random</key>
+	<string>Випадковий порядок</string>
+	<key>info.super.all</key>
+	<string>Додавання, віднімання, множення, ділення й відсотки</string>
+	<key>info.super.basic</key>
+	<string>Додавання й віднімання</string>
+	<key>info.super.fraction</key>
+	<string>Додавання, віднімання, множення й ділення</string>
+	<key>info.super.times</key>
+	<string>Додавання, віднімання й множення</string>
+	<key>info.topic.header</key>
+	<string>Види прикладів</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Приклади, де треба \*\*додати\*\* число.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Додати %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld морквин\*\*.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld курчат\*\*.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld рибок\*\*.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld баночок меду\*\*.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld обручі\*\*.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld собачих смаколиків\*\*.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld шматків м’яса\*\*.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld арахісин\*\*.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld перлин\*\*.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>На цьому рівні можна зібрати до \*\*%lld креветок\*\*.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Приклади, де треба \*\*ділити\*\* число.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Ділити на %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Завдання до \*\*рівня %lld\*\*.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Завдання з \*\*рівня 1\*\*.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>\*\*Усе впереміш\*\*: плюс, мінус, множення, дроби й відсотки.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Супермікс %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Завжди \*\*одна частина\*\* цілого.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>\*\*Одна чи кілька частин\*\* цілого.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Завдання у \*\*сталому порядку\*\*.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Відповіді \*\*без десяткових дробів\*\*.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Також відповіді \*\*з десятковими дробами\*\*.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Завдання \*\*впереміш\*\*.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Приклади з \*\*відсотками\*\*.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ від числа</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Приклади, де треба \*\*відняти\*\* число.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Відняти %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Приклади, де треба \*\*множити\*\*.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Множення на %lld</string>
+	<key>menu.maximumCount</key>
+	<string>МАКС</string>
+	<key>menu.moreLevels</key>
+	<string>Більше рівнів</string>
+	<key>menu.premiumLevels</key>
+	<string>Преміум-рівні</string>
+	<key>menu.startHere</key>
+	<string>Почни тут</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Відкрий більше з Преміум</string>
+	<key>mode.fractions.multiple</key>
+	<string>Кілька</string>
+	<key>mode.fractions.single</key>
+	<string>Одна</string>
+	<key>mode.mixed</key>
+	<string>Змішано</string>
+	<key>mode.order</key>
+	<string>Порядок</string>
+	<key>mode.percentages.decimal</key>
+	<string>Десяткові</string>
+	<key>mode.percentages.whole</key>
+	<string>Цілі</string>
+	<key>mode.random</key>
+	<string>Випадково</string>
+	<key>name.placeholder</key>
+	<string>Твоє ім’я</string>
+	<key>name.whatsYourName</key>
+	<string>Як тебе звати?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Заробіть ще кілька обручі, щоб розблокувати цю тварину! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Ваші тварини чекають. Повертайтеся до гри та продовжуйте збирати обручі!</string>
+	<key>notif.comeback.title</key>
+	<string>ми сумуємо за тобою! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Давайте зробимо день 3! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium містить %lld рівнів для кожної теми та всіх 10 тварин. Пригоди тривають!</string>
+	<key>notif.premium.title</key>
+	<string>Розблокуйте більше рівнів і тварин! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Минуло %lld дні. Давайте розв’яжемо кілька математичних вправ і заробимо більше обручі!</string>
+	<key>notif.reactivate.title</key>
+	<string>Готові грати знову? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Різні змішані завдання впереміш.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Уже досить добре</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Тренуй завдання по порядку.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Щойно почав</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Завдання у випадковому порядку.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Уже трохи тренувався</string>
+	<key>onboarding.level.title</key>
+	<string>Наскільки добре ти це вже вмієш?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Почнімо! Як тебе звати?</string>
+	<key>onboarding.name.title</key>
+	<string>Рахувати ще ніколи не було так весело!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Обери тему для початку.</string>
+	<key>onboarding.subject.title</key>
+	<string>Що ти хочеш вивчати?</string>
+	<key>parentGate.approved</key>
+	<string>Підтверджено</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Спроби: %1$lld з %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Утримувати: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>коло</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ромб</string>
+	<key>parentGate.shape.heart</key>
+	<string>серце</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>шестикутник</string>
+	<key>parentGate.shape.plus</key>
+	<string>плюс</string>
+	<key>parentGate.shape.square</key>
+	<string>квадрат</string>
+	<key>parentGate.shape.star</key>
+	<string>зірка</string>
+	<key>parentGate.shape.triangle</key>
+	<string>трикутник</string>
+	<key>parentGate.subtitle</key>
+	<string>Щоб захистити маленьких гравців, дорослий має пройти цю перевірку перед покупкою.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Дотики: %1$lld з %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Потрібне схвалення дорослого</string>
+	<key>premium.availableAt %lld</key>
+	<string>Доступно від %lld трофеїв</string>
+	<key>premium.availableFromStart</key>
+	<string>Доступно від самого початку</string>
+	<key>premium.characterUnlocked</key>
+	<string>ВІДКРИТО НОВОГО ПЕРСОНАЖА</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ти зібрав %lld обручі</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Ексклюзивно з Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>З Преміум можна вільно грати всіма 10 тваринами.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Усі тварини доступні</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Завжди багато нових завдань для тренування.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 рівнів у кожній темі</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Грай без жодних перерв.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Без реклами</string>
+	<key>premium.oneTime</key>
+	<string>Одна покупка. Назавжди твоє.</string>
+	<key>premium.restore</key>
+	<string>Відновити покупки</string>
+	<key>premium.start</key>
+	<string>Почати</string>
+	<key>premium.storeUnavailable</key>
+	<string>Магазин зараз недоступний. Спробуй пізніше.</string>
+	<key>premium.unlock</key>
+	<string>Відкрити Преміум</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Відкрити Преміум · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Відкрито з Premium</string>
+	<key>result.complete</key>
+	<string>Рівень пройдено!</string>
+	<key>result.stopped</key>
+	<string>Призупинено</string>
+	<key>settings.character</key>
+	<string>Персонаж</string>
+	<key>settings.characterInfo</key>
+	<string>Кожна тварина додає грі власну кольорову тему.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Власна ціль: %lld хв</string>
+	<key>settings.dailyGoal</key>
+	<string>Щоденна ціль</string>
+	<key>settings.goalInfo</key>
+	<string>Серія починається з 5 хвилин на день. Рахується лише активний час гри.</string>
+	<key>settings.music</key>
+	<string>Музика</string>
+	<key>settings.playGoals</key>
+	<string>Ігрові цілі</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Преміум відкрито. Дякуємо!</string>
+	<key>settings.sound</key>
+	<string>Звук</string>
+	<key>settings.soundEffects</key>
+	<string>Музика й ефекти</string>
+	<key>settings.soundInfo</key>
+	<string>Вимкни звук, щоб грати тихо. Гра працюватиме так само.</string>
+	<key>settings.title</key>
+	<string>Налаштування</string>
+	<key>streak.dayOne</key>
+	<string>День 1</string>
+	<key>topic.addition</key>
+	<string>Додавання</string>
+	<key>topic.addition.detail</key>
+	<string>Лише додавання</string>
+	<key>topic.fractions</key>
+	<string>Дроби</string>
+	<key>topic.fractions.detail</key>
+	<string>Лише ділення</string>
+	<key>topic.mixed</key>
+	<string>Супермікс</string>
+	<key>topic.mixed.detail</key>
+	<string>Різні дії</string>
+	<key>topic.percentages</key>
+	<string>Відсотки</string>
+	<key>topic.percentages.detail</key>
+	<string>Лише відсотки</string>
+	<key>topic.subtraction</key>
+	<string>Віднімання</string>
+	<key>topic.subtraction.detail</key>
+	<string>Лише віднімання</string>
+	<key>topic.tables</key>
+	<string>Множення</string>
+	<key>topic.tables.detail</key>
+	<string>Лише множення</string>
+	<key>tutorial.notice.message</key>
+	<string>Ти вже граєш. Заверши гру або вибери рівень, який ще не починав, щоб пройти навчання.</string>
+	<key>tutorial.notice.title</key>
+	<string>Лише на початку гри</string>
+</dict>
+</plist>

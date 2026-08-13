@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Ayı</string>
+	<key>character.bunny</key>
+	<string>Tavşan</string>
+	<key>character.crab</key>
+	<string>Yengeç</string>
+	<key>character.dog</key>
+	<string>Köpek</string>
+	<key>character.elephant</key>
+	<string>Fil</string>
+	<key>character.fox</key>
+	<string>Tilki</string>
+	<key>character.frog</key>
+	<string>Kurbağa</string>
+	<key>character.lion</key>
+	<string>Aslan</string>
+	<key>character.octopus</key>
+	<string>Ahtapot</string>
+	<key>character.penguin</key>
+	<string>Penguen</string>
+	<key>common.cancel</key>
+	<string>İptal</string>
+	<key>common.continue</key>
+	<string>Devam</string>
+	<key>common.done</key>
+	<string>Bitti</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld dk</string>
+	<key>common.ok</key>
+	<string>Tamam</string>
+	<key>common.save</key>
+	<string>Kaydet</string>
+	<key>currency.hoop.plural</key>
+	<string>çemberler</string>
+	<key>currency.hoop.singular</key>
+	<string>çember</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Güzel deneme</string>
+	<key>game.encouragement.1</key>
+	<string>İyi bir başlangıç</string>
+	<key>game.encouragement.2</key>
+	<string>Çalışmaya devam</string>
+	<key>game.encouragement.3</key>
+	<string>Hiç fena değil</string>
+	<key>game.encouragement.4</key>
+	<string>İyi gidiyorsun</string>
+	<key>game.encouragement.5</key>
+	<string>Güzel başarı</string>
+	<key>game.encouragement.6</key>
+	<string>Aferin</string>
+	<key>game.encouragement.7</key>
+	<string>Çok iyi oynadın</string>
+	<key>game.encouragement.8</key>
+	<string>Bitiş yaklaştı</string>
+	<key>game.encouragement.9</key>
+	<string>Neredeyse bitti</string>
+	<key>game.encouragement.complete</key>
+	<string>Kusursuz!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Her puanı hak ettin.</string>
+	<key>game.end.completionSuffix</key>
+	<string>tamamlandı!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Oyun bitti</string>
+	<key>game.end.mainMenu</key>
+	<string>Ana menü</string>
+	<key>game.end.playAgain</key>
+	<string>Tekrar oyna</string>
+	<key>game.highScore</key>
+	<string>Rekor</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Ana menüye dön</string>
+	<key>game.intro.continue</key>
+	<string>Devam et</string>
+	<key>game.intro.progressPaused</key>
+	<string>İlerlemen duraklatıldı.</string>
+	<key>game.intro.start</key>
+	<string>Seviyeyi başlat</string>
+	<key>game.intro.startTutorial</key>
+	<string>Eğitimi başlat</string>
+	<key>game.streakBoost.title</key>
+	<string>Çifte puan!</string>
+	<key>goal.period</key>
+	<string>Hedef dönemi</string>
+	<key>goal.promptDaily</key>
+	<string>Günde kaç dakika oynamak istiyorsun?</string>
+	<key>goal.promptWeekly</key>
+	<string>Haftada kaç dakika oynamak istiyorsun?</string>
+	<key>goal.title</key>
+	<string>Oyun hedefi</string>
+	<key>goalPeriod.daily</key>
+	<string>Günlük</string>
+	<key>goalPeriod.weekly</key>
+	<string>Haftalık</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld daha</string>
+	<key>home.totalLabel</key>
+	<string>Toplam</string>
+	<key>info.mode.fractions.header</key>
+	<string>Parçalar</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Tek ve birden çok parça</string>
+	<key>info.mode.fractions.single</key>
+	<string>Her zaman tek parça</string>
+	<key>info.mode.header</key>
+	<string>Sıra</string>
+	<key>info.mode.mixed</key>
+	<string>Önceki seviyelerle karışık</string>
+	<key>info.mode.order</key>
+	<string>Sabit sıra</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Ondalıklı sayılarla</string>
+	<key>info.mode.percentages.header</key>
+	<string>Tür</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Ondalıklı sayılar olmadan</string>
+	<key>info.mode.random</key>
+	<string>Rastgele sıra</string>
+	<key>info.super.all</key>
+	<string>Toplama, çıkarma, çarpma, bölme ve yüzdeler</string>
+	<key>info.super.basic</key>
+	<string>Toplama ve çıkarma</string>
+	<key>info.super.fraction</key>
+	<string>Toplama, çıkarma, çarpma ve bölme</string>
+	<key>info.super.times</key>
+	<string>Toplama, çıkarma ve çarpma</string>
+	<key>info.topic.header</key>
+	<string>İşlem türleri</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Bir sayıyı **eklediğin** işlemler.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lld ekle</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Bu seviyede en fazla **%lld havuç** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Bu seviyede en fazla **%lld tavuk** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Bu seviyede en fazla **%lld balık** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Bu seviyede en fazla **%lld bal kavanozu** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Bu seviyede en fazla **%lld çemberler** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Bu seviyede en fazla **%lld köpek bisküvisi** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Bu seviyede en fazla **%lld et parçası** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Bu seviyede en fazla **%lld yer fıstığı** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Bu seviyede en fazla **%lld inci** toplayabilirsin.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Bu seviyede en fazla **%lld karides** toplayabilirsin.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Bir sayıyı **böldüğün** işlemler.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>%lld ile böl</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>**%lld. seviyeye** kadar sorular.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>**1. seviyeden** sorular.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Hepsi karışık**: artı, eksi, çarpma, kesir ve yüzde.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Süper miks %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Her zaman bütünün **tek bir parçası**.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>Bütünün **bir veya daha fazla parçası**.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Sorular **sabit sırada**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Cevaplar **ondalıksız**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>**Ondalıklı** cevaplar da.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Sorular **karışık sırada**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>**Yüzdeli** işlemler.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>Sayının %@ kadarı</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Bir sayıyı **çıkardığın** işlemler.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lld çıkar</string>
+	<key>levelIntro.tables.intro</key>
+	<string>**Çarpma** işlemleri.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld çarpım tablosu</string>
+	<key>menu.maximumCount</key>
+	<string>MAKS.</string>
+	<key>menu.moreLevels</key>
+	<string>Daha fazla seviye</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium seviyeler</string>
+	<key>menu.startHere</key>
+	<string>Buradan başla</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Premium ile daha fazlasını aç</string>
+	<key>mode.fractions.multiple</key>
+	<string>Birden çok</string>
+	<key>mode.fractions.single</key>
+	<string>Tek</string>
+	<key>mode.mixed</key>
+	<string>Karışık</string>
+	<key>mode.order</key>
+	<string>Sıra</string>
+	<key>mode.percentages.decimal</key>
+	<string>Ondalık</string>
+	<key>mode.percentages.whole</key>
+	<string>Tam</string>
+	<key>mode.random</key>
+	<string>Rastgele</string>
+	<key>name.placeholder</key>
+	<string>Adın</string>
+	<key>name.whatsYourName</key>
+	<string>Adın ne?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Bu hayvanın kilidini açmak için birkaç çemberler daha kazanın! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Hayvanlarınız bekliyor. Oynamak için geri gelin ve çemberler toplamaya devam edin!</string>
+	<key>notif.comeback.title</key>
+	<string>Seni özledik! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Haydi 3. günü gerçekleştirelim! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium, her konu ve 10 hayvanın tümü için %lld seviye içerir. Macera devam ediyor!</string>
+	<key>notif.premium.title</key>
+	<string>Daha fazla seviyenin ve hayvanın kilidini açın! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld gün oldu. Hadi bazı matematik alıştırmalarını çözelim ve daha fazla çemberler kazanalım!</string>
+	<key>notif.reactivate.title</key>
+	<string>Tekrar oynamaya hazır mısın? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Farklı karışık işlemler bir arada.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Şimdiden oldukça iyi</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Sıralı işlemlerle çalış.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Yeni başladım</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>İşlemler rastgele sırada.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Biraz çalıştım</string>
+	<key>onboarding.level.title</key>
+	<string>Bunda ne kadar iyisin?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Haydi başlayalım. Adın ne?</string>
+	<key>onboarding.name.title</key>
+	<string>İşlem yapmak hiç bu kadar eğlenceli olmamıştı!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Başlamak için bir konu seç.</string>
+	<key>onboarding.subject.title</key>
+	<string>Ne öğrenmek istiyorsun?</string>
+	<key>parentGate.approved</key>
+	<string>Onaylandı</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Deneme: %1$lld/%2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Basılı tut: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>daire</string>
+	<key>parentGate.shape.diamond</key>
+	<string>baklava</string>
+	<key>parentGate.shape.heart</key>
+	<string>kalp</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>altıgen</string>
+	<key>parentGate.shape.plus</key>
+	<string>artı</string>
+	<key>parentGate.shape.square</key>
+	<string>kare</string>
+	<key>parentGate.shape.star</key>
+	<string>yıldız</string>
+	<key>parentGate.shape.triangle</key>
+	<string>üçgen</string>
+	<key>parentGate.subtitle</key>
+	<string>Küçük oyuncuları korumak için satın alma işlemine geçmeden önce bir yetişkin bu kontrolü tamamlamalıdır.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Dokunma: %1$lld/%2$lld</string>
+	<key>parentGate.title</key>
+	<string>Yetişkin onayı gerekli</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld kupadan itibaren kullanılabilir</string>
+	<key>premium.availableFromStart</key>
+	<string>Başlangıçtan itibaren kullanılabilir</string>
+	<key>premium.characterUnlocked</key>
+	<string>YENİ KARAKTER AÇILDI</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld çemberler kazandın</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Yalnızca Premium ile</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Premium ile 10 hayvanın hepsiyle özgürce oynarsın.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Tüm hayvanlara erişim</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Çalışmak için her zaman yeterince yeni soru.</string>
+	<key>premium.feature.levels.title</key>
+	<string>Konu başına 99 seviye</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Hiç kesinti olmadan oyna.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Reklamsız</string>
+	<key>premium.oneTime</key>
+	<string>Tek seferlik satın alma. Sonsuza kadar senin.</string>
+	<key>premium.restore</key>
+	<string>Satın alımları geri yükle</string>
+	<key>premium.start</key>
+	<string>Başla</string>
+	<key>premium.storeUnavailable</key>
+	<string>Mağaza şu anda kullanılamıyor. Lütfen daha sonra tekrar dene.</string>
+	<key>premium.unlock</key>
+	<string>Premium'u aç</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Premium'u aç · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premium ile açıldı</string>
+	<key>result.complete</key>
+	<string>Seviye tamam!</string>
+	<key>result.stopped</key>
+	<string>Duraklatıldı</string>
+	<key>settings.character</key>
+	<string>Karakter</string>
+	<key>settings.characterInfo</key>
+	<string>Her hayvan tüm oyuna kendi renk temasını getirir.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Özel: %lld dk</string>
+	<key>settings.dailyGoal</key>
+	<string>Günlük hedef</string>
+	<key>settings.goalInfo</key>
+	<string>Seri hedefi günde 5 dakikayla başlar. Yalnızca aktif oyun süresi sayılır.</string>
+	<key>settings.music</key>
+	<string>Müzik</string>
+	<key>settings.playGoals</key>
+	<string>Oyun hedefleri</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium açıldı. Teşekkürler!</string>
+	<key>settings.sound</key>
+	<string>Ses</string>
+	<key>settings.soundEffects</key>
+	<string>Müzik ve efektler</string>
+	<key>settings.soundInfo</key>
+	<string>Sessiz oynamak için sesi kapat. Oyun aynı şekilde devam eder.</string>
+	<key>settings.title</key>
+	<string>Ayarlar</string>
+	<key>streak.dayOne</key>
+	<string>1. gün</string>
+	<key>topic.addition</key>
+	<string>Toplama</string>
+	<key>topic.addition.detail</key>
+	<string>Sadece toplama</string>
+	<key>topic.fractions</key>
+	<string>Kesirler</string>
+	<key>topic.fractions.detail</key>
+	<string>Sadece bölme</string>
+	<key>topic.mixed</key>
+	<string>Süper miks</string>
+	<key>topic.mixed.detail</key>
+	<string>Karışık işlemler</string>
+	<key>topic.percentages</key>
+	<string>Yüzdeler</string>
+	<key>topic.percentages.detail</key>
+	<string>Sadece yüzdeler</string>
+	<key>topic.subtraction</key>
+	<string>Çıkarma</string>
+	<key>topic.subtraction.detail</key>
+	<string>Sadece çıkarma</string>
+	<key>topic.tables</key>
+	<string>Çarpım</string>
+	<key>topic.tables.detail</key>
+	<string>Sadece çarpma</string>
+	<key>tutorial.notice.message</key>
+	<string>Bir oyunun ortasındasın. Önce bitir ya da eğitim için henüz başlamadığın bir seviye seç.</string>
+	<key>tutorial.notice.title</key>
+	<string>Sadece oyunun başında</string>
+</dict>
+</plist>

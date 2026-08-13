@@ -1,0 +1,128 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/SettingsView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "settings.title",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 46
+        }
+      },
+      {
+        "comment": "",
+        "key": "common.done",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.sound",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.soundInfo",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.soundEffects",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.music",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.playGoals",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 106
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.goalInfo",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 140
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.dailyGoal",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.customMinutes %lld",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 136
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.characterInfo",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 168
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.character",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "settings.premiumUnlocked",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 230
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.restore",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 254
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.unlock",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 241
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>فقط %lld حلقه باقی مانده است! ⭕</string>
+			<key>other</key>
+			<string>فقط %lld حلقه باقی مانده است! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>امروز %lld دقیقه بازی کن و چندتای دیگر جمع کن.</string>
+			<key>other</key>
+			<string>امروز %lld دقیقه بازی کن و چندتای دیگر جمع کن.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld حلقه جمع شد! ⭕</string>
+			<key>other</key>
+			<string>%lld حلقه جمع شد! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>یک جلسه بازی %lld دقیقه ای را شروع کنید و بازی روزانه خود را افزایش دهید.</string>
+			<key>other</key>
+			<string>یک جلسه بازی %lld دقیقه ای را شروع کنید و بازی روزانه خود را افزایش دهید.</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld دقیقه بازی کنید و بازی های روزانه خود را ادامه دهید!</string>
+			<key>other</key>
+			<string>%lld دقیقه بازی کنید و بازی های روزانه خود را ادامه دهید!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>بازی روزانه شما به %lld روز رسیده است! 🔥</string>
+			<key>other</key>
+			<string>بازی روزانه شما به %lld روز رسیده است! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>که مجموع حلقه شما را به %lld می رساند. کار شگفت انگیز!</string>
+			<key>other</key>
+			<string>که مجموع حلقه شما را به %lld می رساند. کار شگفت انگیز!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>شما در این هفته %lld حلقه به دست آوردید! 🎉</string>
+			<key>other</key>
+			<string>شما در این هفته %lld حلقه به دست آوردید! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ را %2$lld ثانیه نگه دارید.</string>
+			<key>other</key>
+			<string>%1$@ را %2$lld ثانیه نگه دارید.</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>حالا %1$lld بار روی %2$@ بزنید.</string>
+			<key>other</key>
+			<string>حالا %1$lld بار روی %2$@ بزنید.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

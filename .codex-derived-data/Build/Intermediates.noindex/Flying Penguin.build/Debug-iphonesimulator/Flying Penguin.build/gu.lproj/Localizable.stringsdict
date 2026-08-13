@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>માત્ર %lld વલય બાકી છે! ⭕</string>
+			<key>other</key>
+			<string>માત્ર %lld વલય બાકી છે! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld મિનિટ રમો અને થોડાં વધુ ભેગાં કરો.</string>
+			<key>other</key>
+			<string>%lld મિનિટ રમો અને થોડાં વધુ ભેગાં કરો.</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld વલય ભેગી! ⭕</string>
+			<key>other</key>
+			<string>%lld વલય ભેગી! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld-મિનિટનું રમતનું સત્ર શરૂ કરો અને તમારી દૈનિક રમવાની સ્ટ્રીકને લંબાવો.</string>
+			<key>other</key>
+			<string>%lld-મિનિટનું રમતનું સત્ર શરૂ કરો અને તમારી દૈનિક રમવાની સ્ટ્રીકને લંબાવો.</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld મિનિટ રમો અને તમારી દૈનિક રમતની સિલસિલો ચાલુ રાખો!</string>
+			<key>other</key>
+			<string>%lld મિનિટ રમો અને તમારી દૈનિક રમતની સિલસિલો ચાલુ રાખો!</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>તમારી દૈનિક રમવાની શ્રેણી %lld દિવસ સુધી પહોંચી ગઈ છે! 🔥</string>
+			<key>other</key>
+			<string>તમારી દૈનિક રમવાની શ્રેણી %lld દિવસ સુધી પહોંચી ગઈ છે! 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>તે તમારી કુલ %lld વલય લાવે છે. અમેઝિંગ કામ!</string>
+			<key>other</key>
+			<string>તે તમારી કુલ %lld વલય લાવે છે. અમેઝિંગ કામ!</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>તમે આ અઠવાડિયે %lld વલય મેળવી છે! 🎉</string>
+			<key>other</key>
+			<string>તમે આ અઠવાડિયે %lld વલય મેળવી છે! 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ ને %2$lld સેકન્ડ દબાવી રાખો.</string>
+			<key>other</key>
+			<string>%1$@ ને %2$lld સેકન્ડ દબાવી રાખો.</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>હવે %2$@ પર %1$lld વાર ટેપ કરો.</string>
+			<key>other</key>
+			<string>હવે %2$@ પર %1$lld વાર ટેપ કરો.</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,16 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/GameView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "game.combo %lld",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 629
+        }
+      }
+    ]
+  },
+  "version": 1
+}

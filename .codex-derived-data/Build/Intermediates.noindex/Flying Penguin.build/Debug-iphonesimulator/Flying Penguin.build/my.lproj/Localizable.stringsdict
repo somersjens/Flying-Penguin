@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>notif.animal.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ကွင်း %lld ခုပဲကျန်တော့တယ်။ ⭕</string>
+			<key>other</key>
+			<string>ကွင်း %lld ခုပဲကျန်တော့တယ်။ ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.cards.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ဒီနေ့ %lld မိနစ် ကစားပြီး နည်းနည်းထပ်စုပါ။</string>
+			<key>other</key>
+			<string>ဒီနေ့ %lld မိနစ် ကစားပြီး နည်းနည်းထပ်စုပါ။</string>
+		</dict>
+	</dict>
+	<key>notif.cards.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld ကွင်း စုမိပြီ! ⭕</string>
+			<key>other</key>
+			<string>%lld ကွင်း စုမိပြီ! ⭕</string>
+		</dict>
+	</dict>
+	<key>notif.day3.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld မိနစ်ကြာ ကစားချိန်ကို စတင်ပြီး သင်၏နေ့စဥ်ကစားခြင်းကို သက်တမ်းတိုးပါ။</string>
+			<key>other</key>
+			<string>%lld မိနစ်ကြာ ကစားချိန်ကို စတင်ပြီး သင်၏နေ့စဥ်ကစားခြင်းကို သက်တမ်းတိုးပါ။</string>
+		</dict>
+	</dict>
+	<key>notif.streak.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%lld မိနစ်လောက်ကစားပြီး သင့်နေ့စဥ်ကစားခြင်းကို ဆက်လက်လုပ်ဆောင်ပါ။</string>
+			<key>other</key>
+			<string>%lld မိနစ်လောက်ကစားပြီး သင့်နေ့စဥ်ကစားခြင်းကို ဆက်လက်လုပ်ဆောင်ပါ။</string>
+		</dict>
+	</dict>
+	<key>notif.streak.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>သင်၏နေ့စဥ်ကစားနည်းသည် %lld ရက်သို့ရောက်ရှိသွားပါပြီ။ 🔥</string>
+			<key>other</key>
+			<string>သင်၏နေ့စဥ်ကစားနည်းသည် %lld ရက်သို့ရောက်ရှိသွားပါပြီ။ 🔥</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.body %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>ဒါက မင်းရဲ့ စုစုပေါင်း ကွင်း %lld ကို ယူဆောင်လာပေးတယ်။အံ့သြဖွယ်အလုပ်။</string>
+			<key>other</key>
+			<string>ဒါက မင်းရဲ့ စုစုပေါင်း ကွင်း %lld ကို ယူဆောင်လာပေးတယ်။အံ့သြဖွယ်အလုပ်။</string>
+		</dict>
+	</dict>
+	<key>notif.weekly.title %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>သင်သည် ဤအပတ်တွင် ကွင်း %lld ရရှိခဲ့သည်။ 🎉</string>
+			<key>other</key>
+			<string>သင်သည် ဤအပတ်တွင် ကွင်း %lld ရရှိခဲ့သည်။ 🎉</string>
+		</dict>
+	</dict>
+	<key>parentGate.holdInstruction %@ %lld</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%2$#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>%1$@ ကို %2$lld စက္ကန့် ဖိထားပါ။</string>
+			<key>other</key>
+			<string>%1$@ ကို %2$lld စက္ကန့် ဖိထားပါ။</string>
+		</dict>
+	</dict>
+	<key>parentGate.tapInstruction %lld %@</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>lld</string>
+			<key>one</key>
+			<string>အခု %2$@ ကို %1$lld ကြိမ် တို့ပါ။</string>
+			<key>other</key>
+			<string>အခု %2$@ ကို %1$lld ကြိမ် တို့ပါ။</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

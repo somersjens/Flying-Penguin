@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Արջ</string>
+	<key>character.bunny</key>
+	<string>Նապաստակ</string>
+	<key>character.crab</key>
+	<string>Խեցգետին</string>
+	<key>character.dog</key>
+	<string>Շուն</string>
+	<key>character.elephant</key>
+	<string>Փիղ</string>
+	<key>character.fox</key>
+	<string>Աղվես</string>
+	<key>character.frog</key>
+	<string>Գորտ</string>
+	<key>character.lion</key>
+	<string>Առյուծ</string>
+	<key>character.octopus</key>
+	<string>Ութոտնուկ</string>
+	<key>character.penguin</key>
+	<string>Պինգվին</string>
+	<key>common.cancel</key>
+	<string>Չեղարկել</string>
+	<key>common.continue</key>
+	<string>Շարունակել</string>
+	<key>common.done</key>
+	<string>Պատրաստ է</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld ր</string>
+	<key>common.ok</key>
+	<string>Լավ</string>
+	<key>common.save</key>
+	<string>Պահել</string>
+	<key>currency.hoop.plural</key>
+	<string>օղակներ</string>
+	<key>currency.hoop.singular</key>
+	<string>օղակ</string>
+	<key>game.combo %lld</key>
+	<string>Կոմբո! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Լավ փորձ էր</string>
+	<key>game.encouragement.1</key>
+	<string>Սա սկիզբն է</string>
+	<key>game.encouragement.2</key>
+	<string>Շարունակի՛ր փորձել</string>
+	<key>game.encouragement.3</key>
+	<string>Բոլորովին վատ չէ</string>
+	<key>game.encouragement.4</key>
+	<string>Լավ ես անում</string>
+	<key>game.encouragement.5</key>
+	<string>Հիանալի արդյունք</string>
+	<key>game.encouragement.6</key>
+	<string>Ապրե՛ս</string>
+	<key>game.encouragement.7</key>
+	<string>Շատ լավ խաղացիր</string>
+	<key>game.encouragement.8</key>
+	<string>Վերջը մոտ է</string>
+	<key>game.encouragement.9</key>
+	<string>Գրեթե հասել ես</string>
+	<key>game.encouragement.complete</key>
+	<string>Կատարյալ արդյունք!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Դու վաստակեցիր բոլոր միավորները։</string>
+	<key>game.end.completionSuffix</key>
+	<string>ավարտված է։</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Խաղն ավարտվեց</string>
+	<key>game.end.mainMenu</key>
+	<string>Գլխավոր ընտրացանկ</string>
+	<key>game.end.playAgain</key>
+	<string>Կրկին խաղալ</string>
+	<key>game.highScore</key>
+	<string>Լավագույն հաշիվ</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Դեպի գլխավոր ընտրացանկ</string>
+	<key>game.intro.continue</key>
+	<string>Շարունակել</string>
+	<key>game.intro.progressPaused</key>
+	<string>Առաջընթացը դադարեցված է։</string>
+	<key>game.intro.start</key>
+	<string>Սկսել մակարդակը</string>
+	<key>game.intro.startTutorial</key>
+	<string>Սկսել ուսուցումը</string>
+	<key>game.streakBoost.title</key>
+	<string>Կրկնակի միավորներ!</string>
+	<key>goal.period</key>
+	<string>Նպատակի շրջան</string>
+	<key>goal.promptDaily</key>
+	<string>Օրական քանի՞ րոպե ես ուզում խաղալ։</string>
+	<key>goal.promptWeekly</key>
+	<string>Շաբաթական քանի՞ րոպե ես ուզում խաղալ։</string>
+	<key>goal.title</key>
+	<string>Խաղի նպատակ</string>
+	<key>goalPeriod.daily</key>
+	<string>Օրական</string>
+	<key>goalPeriod.weekly</key>
+	<string>Շաբաթական</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ևս %lld</string>
+	<key>home.totalLabel</key>
+	<string>Ընդամենը</string>
+	<key>info.mode.fractions.header</key>
+	<string>Մասեր</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Մեկ և մի քանի մաս</string>
+	<key>info.mode.fractions.single</key>
+	<string>Միշտ մեկ մաս</string>
+	<key>info.mode.header</key>
+	<string>Հերթականություն</string>
+	<key>info.mode.mixed</key>
+	<string>Խառը՝ ավելի ցածր մակարդակների հետ</string>
+	<key>info.mode.order</key>
+	<string>Հաստատուն հերթականություն</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Նաև տասնորդական թվերով</string>
+	<key>info.mode.percentages.header</key>
+	<string>Տեսակ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Առանց տասնորդական թվերի</string>
+	<key>info.mode.random</key>
+	<string>Պատահական հերթականություն</string>
+	<key>info.super.all</key>
+	<string>Գումարում, հանում, բազմապատկում, բաժանում և տոկոսներ</string>
+	<key>info.super.basic</key>
+	<string>Գումարում և հանում</string>
+	<key>info.super.fraction</key>
+	<string>Գումարում, հանում, բազմապատկում և բաժանում</string>
+	<key>info.super.times</key>
+	<string>Գումարում, հանում և բազմապատկում</string>
+	<key>info.topic.header</key>
+	<string>Վարժությունների տեսակներ</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Օրինակներ, որտեղ թիվ ես **գումարում**։</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Գումարել %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld գազար**։</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld հավ**։</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld ձուկ**։</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld բանկա մեղր**։</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld օղակներ**։</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld շան թխվածք**։</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld կտոր միս**։</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld գետնանուշ**։</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld մարգարիտ**։</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld ծովախեցգետին**։</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Օրինակներ, որտեղ թիվ ես **բաժանում**։</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Բաժանել %lld-ի</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Հարցեր մինչև **%lld մակարդակ**։</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Հարցեր՝ **1-ին մակարդակից**։</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Ամեն ինչ խառնված**՝ գումարում, հանում, բազմապատկում, կոտորակներ ու տոկոսներ։</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Սուպերմիքս %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Ամբողջի միշտ **մեկ մասը**։</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>Ամբողջի **մեկ կամ մի քանի մաս**։</string>
+	<key>levelIntro.mode.order</key>
+	<string>Հարցերը՝ **հաստատուն հերթով**։</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Պատասխաններ՝ **առանց տասնորդականի**։</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Նաև պատասխաններ՝ **տասնորդականներով**։</string>
+	<key>levelIntro.mode.random</key>
+	<string>Հարցերը՝ **խառը հերթով**։</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Օրինակներ՝ **տոկոսներով**։</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>Թվի %@-ը</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Օրինակներ, որտեղ թիվ ես **հանում**։</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Հանել %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Օրինակներ, որտեղ **բազմապատկում ես**։</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld-ի աղյուսակ</string>
+	<key>menu.maximumCount</key>
+	<string>Առավ.</string>
+	<key>menu.moreLevels</key>
+	<string>Ավելի շատ մակարդակներ</string>
+	<key>menu.premiumLevels</key>
+	<string>Պրեմիում մակարդակներ</string>
+	<key>menu.startHere</key>
+	<string>Սկսիր այստեղ</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Բացիր ավելին Պրեմիումով</string>
+	<key>mode.fractions.multiple</key>
+	<string>Մի քանի</string>
+	<key>mode.fractions.single</key>
+	<string>Մեկ</string>
+	<key>mode.mixed</key>
+	<string>Խառը</string>
+	<key>mode.order</key>
+	<string>Հերթ</string>
+	<key>mode.percentages.decimal</key>
+	<string>Տասնորդական</string>
+	<key>mode.percentages.whole</key>
+	<string>Ամբողջ</string>
+	<key>mode.random</key>
+	<string>Պատահական</string>
+	<key>name.placeholder</key>
+	<string>Քո անունը</string>
+	<key>name.whatsYourName</key>
+	<string>Ինչպե՞ս ես կոչվում։</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Վաստակեք ևս մի քանի օղակներ՝ այս կենդանուն բացելու համար: 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Ձեր կենդանիները սպասում են:Վերադարձեք խաղալու և շարունակեք օղակներ հավաքել:</string>
+	<key>notif.comeback.title</key>
+	<string>Մենք կարոտում ենք քեզ: 👋</string>
+	<key>notif.day3.title</key>
+	<string>Եկեք կատարենք 3-րդ օրը: ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium-ը ներառում է %lld մակարդակ յուրաքանչյուր թեմայի և բոլոր 10 կենդանիների համար:Արկածը շարունակվում է:</string>
+	<key>notif.premium.title</key>
+	<string>Բացեք ավելի շատ մակարդակներ և կենդանիներ: 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Անցել է %lld օր։Եկեք լուծենք որոշ մաթեմատիկական վարժություններ և վաստակենք ավելի շատ օղակներ:</string>
+	<key>notif.reactivate.title</key>
+	<string>Պատրա՞ստ եք նորից խաղալ: 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Տարբեր խառը առաջադրանքներ միասին։</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Արդեն բավական լավ է</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Փորձիր հերթականությամբ տրված առաջադրանքներ։</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Հենց նոր եմ սկսել</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Առաջադրանքներ՝ պատահական հերթականությամբ։</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Արդեն մի քիչ փորձել եմ</string>
+	<key>onboarding.level.title</key>
+	<string>Որքա՞ն լավ գիտես սա արդեն։</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Սկսենք։ Ինչպե՞ս ես կոչվում։</string>
+	<key>onboarding.name.title</key>
+	<string>Հաշվելը երբեք այսքան զվարճալի չի եղել։</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Ընտրիր թեմա՝ սկսելու համար։</string>
+	<key>onboarding.subject.title</key>
+	<string>Ի՞նչ ես ուզում սովորել։</string>
+	<key>parentGate.approved</key>
+	<string>Հաստատված է</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Փորձեր՝ %1$lld՝ %2$lld-ից</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Պահել՝ %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>շրջան</string>
+	<key>parentGate.shape.diamond</key>
+	<string>շեղանկյուն</string>
+	<key>parentGate.shape.heart</key>
+	<string>սիրտ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>վեցանկյուն</string>
+	<key>parentGate.shape.plus</key>
+	<string>գումարման նշան</string>
+	<key>parentGate.shape.square</key>
+	<string>քառակուսի</string>
+	<key>parentGate.shape.star</key>
+	<string>աստղ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>եռանկյուն</string>
+	<key>parentGate.subtitle</key>
+	<string>Փոքրիկ խաղացողներին պաշտպանելու համար մեծահասակը պետք է անցնի այս ստուգումը՝ գնումը շարունակելուց առաջ։</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Հպումներ՝ %1$lld՝ %2$lld-ից</string>
+	<key>parentGate.title</key>
+	<string>Պահանջվում է մեծահասակի հաստատում</string>
+	<key>premium.availableAt %lld</key>
+	<string>Հասանելի է %lld գավաթից</string>
+	<key>premium.availableFromStart</key>
+	<string>Հասանելի է սկզբից</string>
+	<key>premium.characterUnlocked</key>
+	<string>ՆՈՐ ԿԵՐՊԱՐԸ ԲԱՑՎԵՑ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Վաստակել ես %lld օղակներ</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Բացառիկ՝ Premium-ով</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Պրեմիումով կարող ես ազատ խաղալ բոլոր 10 կենդանիներով։</string>
+	<key>premium.feature.animals.title</key>
+	<string>Բոլոր կենդանիները հասանելի են</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Միշտ կան բավական նոր առաջադրանքներ փորձելու համար։</string>
+	<key>premium.feature.levels.title</key>
+	<string>Յուրաքանչյուր թեմայում՝ 99 մակարդակ</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Խաղա առանց ընդհատումների։</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Առանց գովազդի</string>
+	<key>premium.oneTime</key>
+	<string>Մեկանգամյա գնում։ Ընդմիշտ քոնն է։</string>
+	<key>premium.restore</key>
+	<string>Վերականգնել գնումները</string>
+	<key>premium.start</key>
+	<string>Սկսել</string>
+	<key>premium.storeUnavailable</key>
+	<string>Խանութն այժմ հասանելի չէ։ Փորձեք ավելի ուշ։</string>
+	<key>premium.unlock</key>
+	<string>Բացել Պրեմիումը</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Բացել Պրեմիումը · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Բացվեց Premium-ով</string>
+	<key>result.complete</key>
+	<string>Մակարդակն ավարտված է!</string>
+	<key>result.stopped</key>
+	<string>Դադարեցված</string>
+	<key>settings.character</key>
+	<string>Կերպար</string>
+	<key>settings.characterInfo</key>
+	<string>Յուրաքանչյուր կենդանի ամբողջ խաղին տալիս է իր գունային ձևավորումը։</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Հատուկ՝ %lld ր</string>
+	<key>settings.dailyGoal</key>
+	<string>Օրական նպատակ</string>
+	<key>settings.goalInfo</key>
+	<string>Շարքի նպատակը սկսվում է օրական 5 րոպեից։ Հաշվվում է միայն ակտիվ խաղաժամանակը։</string>
+	<key>settings.music</key>
+	<string>Երաժշտություն</string>
+	<key>settings.playGoals</key>
+	<string>Խաղի նպատակներ</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Պրեմիումը բացված է։ Շնորհակալություն։</string>
+	<key>settings.sound</key>
+	<string>Ձայն</string>
+	<key>settings.soundEffects</key>
+	<string>Երաժշտություն և էֆեկտներ</string>
+	<key>settings.soundInfo</key>
+	<string>Անջատիր ձայնը՝ լուռ խաղալու համար։ Խաղը նույն կերպ է աշխատում։</string>
+	<key>settings.title</key>
+	<string>Կարգավորումներ</string>
+	<key>streak.dayOne</key>
+	<string>Օր 1</string>
+	<key>topic.addition</key>
+	<string>Գումարում</string>
+	<key>topic.addition.detail</key>
+	<string>Միայն գումարում</string>
+	<key>topic.fractions</key>
+	<string>Կոտորակներ</string>
+	<key>topic.fractions.detail</key>
+	<string>Միայն բաժանում</string>
+	<key>topic.mixed</key>
+	<string>Սուպերմիքս</string>
+	<key>topic.mixed.detail</key>
+	<string>Խառը գործողություններ</string>
+	<key>topic.percentages</key>
+	<string>Տոկոսներ</string>
+	<key>topic.percentages.detail</key>
+	<string>Միայն տոկոսներ</string>
+	<key>topic.subtraction</key>
+	<string>Հանում</string>
+	<key>topic.subtraction.detail</key>
+	<string>Միայն հանում</string>
+	<key>topic.tables</key>
+	<string>Աղյուսակներ</string>
+	<key>topic.tables.detail</key>
+	<string>Միայն բազմապատկում</string>
+	<key>tutorial.notice.message</key>
+	<string>Դու խաղի մեջ ես։ Ավարտիր այն կամ ընտրիր չսկսած մակարդակ՝ ուսուցումը խաղալու համար։</string>
+	<key>tutorial.notice.title</key>
+	<string>Միայն խաղի սկզբում</string>
+</dict>
+</plist>

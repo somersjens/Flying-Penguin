@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Bjørn</string>
+	<key>character.bunny</key>
+	<string>Kanina</string>
+	<key>character.crab</key>
+	<string>Krabbi</string>
+	<key>character.dog</key>
+	<string>Hundur</string>
+	<key>character.elephant</key>
+	<string>Fílur</string>
+	<key>character.fox</key>
+	<string>Revur</string>
+	<key>character.frog</key>
+	<string>Froskur</string>
+	<key>character.lion</key>
+	<string>Leyva</string>
+	<key>character.octopus</key>
+	<string>Høgguslokkur</string>
+	<key>character.penguin</key>
+	<string>Pingvinur</string>
+	<key>common.cancel</key>
+	<string>Angra</string>
+	<key>common.continue</key>
+	<string>Víðari</string>
+	<key>common.done</key>
+	<string>Liðugt</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>Í lagi</string>
+	<key>common.save</key>
+	<string>Goym</string>
+	<key>currency.hoop.plural</key>
+	<string>ringar</string>
+	<key>currency.hoop.singular</key>
+	<string>ringur</string>
+	<key>game.combo %lld</key>
+	<string>Combo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Gott roynt</string>
+	<key>game.encouragement.1</key>
+	<string>Ein góð byrjan</string>
+	<key>game.encouragement.2</key>
+	<string>Halt fram at venja</string>
+	<key>game.encouragement.3</key>
+	<string>Ikki so galið</string>
+	<key>game.encouragement.4</key>
+	<string>Tað gongur væl</string>
+	<key>game.encouragement.5</key>
+	<string>Flott avrik</string>
+	<key>game.encouragement.6</key>
+	<string>Væl gjørt</string>
+	<key>game.encouragement.7</key>
+	<string>Sera væl spælt</string>
+	<key>game.encouragement.8</key>
+	<string>Málið er í eygsjón</string>
+	<key>game.encouragement.9</key>
+	<string>Tú ert næstan komin</string>
+	<key>game.encouragement.complete</key>
+	<string>Alt rætt!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Tú vann hvørt einasta stig.</string>
+	<key>game.end.completionSuffix</key>
+	<string>liðugt!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Spælið er liðugt</string>
+	<key>game.end.mainMenu</key>
+	<string>Høvuðsvalmynd</string>
+	<key>game.end.playAgain</key>
+	<string>Spæl aftur</string>
+	<key>game.highScore</key>
+	<string>Met</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Aftur til høvuðsvalmynd</string>
+	<key>game.intro.continue</key>
+	<string>Halt fram</string>
+	<key>game.intro.progressPaused</key>
+	<string>Framstigið er steðgað.</string>
+	<key>game.intro.start</key>
+	<string>Byrja stig</string>
+	<key>game.intro.startTutorial</key>
+	<string>Byrja vegleiðing</string>
+	<key>game.streakBoost.title</key>
+	<string>Tvístig!</string>
+	<key>goal.period</key>
+	<string>Málskeið</string>
+	<key>goal.promptDaily</key>
+	<string>Hvussu nógvar minuttir vilt tú spæla um dagin?</string>
+	<key>goal.promptWeekly</key>
+	<string>Hvussu nógvar minuttir vilt tú spæla um vikuna?</string>
+	<key>goal.title</key>
+	<string>Spælimál</string>
+	<key>goalPeriod.daily</key>
+	<string>Dagliga</string>
+	<key>goalPeriod.weekly</key>
+	<string>Vikuliga</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld eftir</string>
+	<key>home.totalLabel</key>
+	<string>Í alt</string>
+	<key>info.mode.fractions.header</key>
+	<string>Partar</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Ein og fleiri partar</string>
+	<key>info.mode.fractions.single</key>
+	<string>Altíð ein partur</string>
+	<key>info.mode.header</key>
+	<string>Raðfylgja</string>
+	<key>info.mode.mixed</key>
+	<string>Blandað við lægri stigum</string>
+	<key>info.mode.order</key>
+	<string>Føst raðfylgja</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Við desimaltølum</string>
+	<key>info.mode.percentages.header</key>
+	<string>Slag</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Uttan desimaltøl</string>
+	<key>info.mode.random</key>
+	<string>Tilvildarlig raðfylgja</string>
+	<key>info.super.all</key>
+	<string>Samlegging, frádráttur, falding, býting og prosent</string>
+	<key>info.super.basic</key>
+	<string>Samlegging og frádráttur</string>
+	<key>info.super.fraction</key>
+	<string>Samlegging, frádráttur, falding og býting</string>
+	<key>info.super.times</key>
+	<string>Samlegging, frádráttur og falding</string>
+	<key>info.topic.header</key>
+	<string>Sløg av uppgávum</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Uppgávur, har tú **leggur afturat**.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Pluss %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Tú kanst savna upp í **%lld gularøtur** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Tú kanst savna upp í **%lld hønur** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Tú kanst savna upp í **%lld fiskar** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Tú kanst savna upp í **%lld hunangskrukkur** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Tú kanst savna upp í **%lld ringar** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Tú kanst savna upp í **%lld hundakex** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Tú kanst savna upp í **%lld kjøtbitar** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Tú kanst savna upp í **%lld jarðnøtir** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Tú kanst savna upp í **%lld perlur** í hesum stigi.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Tú kanst savna upp í **%lld rækjur** í hesum stigi.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Uppgávur, har tú **deilir** eitt tal.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Deil við %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Uppgávur upp í **stig %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Uppgávur frá **stigi 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Alt blandað**: pluss, minus, ferðir, brot og prosent.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Altíð **ein partur** av einum heili.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Ein ella fleiri partar** av einum heili.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Uppgávur í **føstum raðfylgi**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Svar **uttan desimaltøl**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Eisini svar **við desimaltølum**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Uppgávur í **tilvildarligum raðfylgi**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Uppgávur við **prosentum**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ av einum tali</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Uppgávur, har tú **tekur frá**.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Minus %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Uppgávur, har tú **falda við**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld-tabellin</string>
+	<key>menu.maximumCount</key>
+	<string>MAKS</string>
+	<key>menu.moreLevels</key>
+	<string>Fleiri stig</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium-stig</string>
+	<key>menu.startHere</key>
+	<string>Byrja her</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Lat meira upp við Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Fleiri</string>
+	<key>mode.fractions.single</key>
+	<string>Ein</string>
+	<key>mode.mixed</key>
+	<string>Blandað</string>
+	<key>mode.order</key>
+	<string>Rað</string>
+	<key>mode.percentages.decimal</key>
+	<string>Desimaltal</string>
+	<key>mode.percentages.whole</key>
+	<string>Heilt</string>
+	<key>mode.random</key>
+	<string>Tilvild</string>
+	<key>name.placeholder</key>
+	<string>Títt navn</string>
+	<key>name.whatsYourName</key>
+	<string>Hvat eitur tú?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Tjen nøkur ringar afturat fyri at læsa hetta djórið upp! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Tíni djór bíða. Kom aftur at spæla og halt áfram at savna ringar!</string>
+	<key>notif.comeback.title</key>
+	<string>Vit sakna teg! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Latið okkum fáa dag 3 at henda! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium inniheldur %lld stig til hvørt evni og øll 10 djórini. Ævintýrið heldur fram!</string>
+	<key>notif.premium.title</key>
+	<string>Læs fleiri stig og djór upp! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Tað eru %lld dagar síðani. Latið okkum loysa nakrar støddfrøðiligar uppgávur og vinna okkum fleiri ringar!</string>
+	<key>notif.reactivate.title</key>
+	<string>Klárur at spæla aftur? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Ymisk blandingsstykki hvørt um annað.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Longu rættiliga dugnalig/ur</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Ven roknistykki í raðfylgju.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Júst byrjað</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Roknistykki í tilvildarligari raðfylgju.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Hevur vant eitt sindur</string>
+	<key>onboarding.level.title</key>
+	<string>Hvussu dugnalig/ur ert tú longu?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Latið okkum byrja. Hvat eitur tú?</string>
+	<key>onboarding.name.title</key>
+	<string>Tað hevur ongantíð verið so stuttligt at rokna!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Vel eitt evni at byrja við.</string>
+	<key>onboarding.subject.title</key>
+	<string>Hvat vilt tú læra?</string>
+	<key>parentGate.approved</key>
+	<string>Góðkent</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Royndir: %1$lld av %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Halt inni: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>sirkul</string>
+	<key>parentGate.shape.diamond</key>
+	<string>diamantur</string>
+	<key>parentGate.shape.heart</key>
+	<string>hjarta</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>sekskantur</string>
+	<key>parentGate.shape.plus</key>
+	<string>pluss</string>
+	<key>parentGate.shape.square</key>
+	<string>fýrkantur</string>
+	<key>parentGate.shape.star</key>
+	<string>stjørna</string>
+	<key>parentGate.shape.triangle</key>
+	<string>tríkantur</string>
+	<key>parentGate.subtitle</key>
+	<string>Fyri at verja ung spælandi má ein vaksin gera hesa kanningina, áðrenn keypið kann halda fram.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Trýst: %1$lld av %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Góðkenning frá vaksnum krevst</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tøkt frá %lld steypum</string>
+	<key>premium.availableFromStart</key>
+	<string>Tøkt frá byrjan</string>
+	<key>premium.characterUnlocked</key>
+	<string>NÝGGJUR PERSÓNUR LATIN UPP</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Tú hevur vunnið %lld ringar</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Bert við Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Við Premium kanst tú spæla frítt við øllum 10 dýrunum.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Atgongd til øll dýr</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Altíð nóg nógv nýggj roknistykki at venja.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 stig í hvørjum evni</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Spæl heilt uttan órógv.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Eingar lýsingar</string>
+	<key>premium.oneTime</key>
+	<string>Eitt eingangsk keyp. Títt í allar ævir.</string>
+	<key>premium.restore</key>
+	<string>Endurheimta keyp</string>
+	<key>premium.start</key>
+	<string>Byrja</string>
+	<key>premium.storeUnavailable</key>
+	<string>Handilin er ikki tøkur beint nú. Royn aftur seinni.</string>
+	<key>premium.unlock</key>
+	<string>Lat Premium upp</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Lat Premium upp · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Latið upp við Premium</string>
+	<key>result.complete</key>
+	<string>Stigið er liðugt!</string>
+	<key>result.stopped</key>
+	<string>Steðgað</string>
+	<key>settings.character</key>
+	<string>Figurur</string>
+	<key>settings.characterInfo</key>
+	<string>Hvørt dýr gevur øllum spælinum sítt egna litaevni.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Sersniðið: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Dagligt mál</string>
+	<key>settings.goalInfo</key>
+	<string>Raðmálið byrjar við 5 minuttum um dagin. Bara virkin spælitíð telur.</string>
+	<key>settings.music</key>
+	<string>Tónleikur</string>
+	<key>settings.playGoals</key>
+	<string>Spælimál</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium er latið upp. Takk!</string>
+	<key>settings.sound</key>
+	<string>Ljóð</string>
+	<key>settings.soundEffects</key>
+	<string>Tónleikur og ljóð</string>
+	<key>settings.soundInfo</key>
+	<string>Sløkk ljóðið fyri at spæla stillisliga. Spælið virkar júst eins.</string>
+	<key>settings.title</key>
+	<string>Stillingar</string>
+	<key>streak.dayOne</key>
+	<string>Dagur 1</string>
+	<key>topic.addition</key>
+	<string>Pluss</string>
+	<key>topic.addition.detail</key>
+	<string>Bara pluss</string>
+	<key>topic.fractions</key>
+	<string>Brot</string>
+	<key>topic.fractions.detail</key>
+	<string>Bara deiling</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Blandaðar uppgávur</string>
+	<key>topic.percentages</key>
+	<string>Prosent</string>
+	<key>topic.percentages.detail</key>
+	<string>Bara prosent</string>
+	<key>topic.subtraction</key>
+	<string>Minus</string>
+	<key>topic.subtraction.detail</key>
+	<string>Bara minus</string>
+	<key>topic.tables</key>
+	<string>Tabellir</string>
+	<key>topic.tables.detail</key>
+	<string>Bara falda við</string>
+	<key>tutorial.notice.message</key>
+	<string>Tú ert mitt í einum spæli. Ger tað liðugt, ella vel eitt stig, tú ikki ert farin undir, fyri at spæla vegleiðingina.</string>
+	<key>tutorial.notice.title</key>
+	<string>Bara í byrjanini</string>
+</dict>
+</plist>

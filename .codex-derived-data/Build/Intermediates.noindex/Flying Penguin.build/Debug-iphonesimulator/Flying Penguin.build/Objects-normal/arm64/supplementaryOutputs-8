@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/LevelIntroCard.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/LevelIntroCard.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/LevelIntroCard.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/LevelIntroCard.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/LevelIntroCard.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/LevelIntroCard.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Localization.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/Localization.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/Localization.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/Localization.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/Localization.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/Localization.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/MenuPolarBackground.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/MenuPolarBackground.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/MenuPolarBackground.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/MenuPolarBackground.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/MenuPolarBackground.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/arm64/MenuPolarBackground.swiftdeps"
+  }
+}

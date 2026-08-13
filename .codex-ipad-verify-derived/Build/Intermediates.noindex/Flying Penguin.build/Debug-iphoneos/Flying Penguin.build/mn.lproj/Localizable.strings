@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Баавгай</string>
+	<key>character.bunny</key>
+	<string>Туулай</string>
+	<key>character.crab</key>
+	<string>Хавч</string>
+	<key>character.dog</key>
+	<string>Нохой</string>
+	<key>character.elephant</key>
+	<string>Заан</string>
+	<key>character.fox</key>
+	<string>Үнэг</string>
+	<key>character.frog</key>
+	<string>Мэлхий</string>
+	<key>character.lion</key>
+	<string>Арслан</string>
+	<key>character.octopus</key>
+	<string>Наймаалж</string>
+	<key>character.penguin</key>
+	<string>Оцон шувуу</string>
+	<key>common.cancel</key>
+	<string>Цуцлах</string>
+	<key>common.continue</key>
+	<string>Үргэлжлүүлэх</string>
+	<key>common.done</key>
+	<string>Боллоо</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld мин</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Хадгалах</string>
+	<key>currency.hoop.plural</key>
+	<string>цагирагууд</string>
+	<key>currency.hoop.singular</key>
+	<string>цагираг</string>
+	<key>game.combo %lld</key>
+	<string>Комбо! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Сайн оролдлоо</string>
+	<key>game.encouragement.1</key>
+	<string>Сайхан эхлэл</string>
+	<key>game.encouragement.2</key>
+	<string>Дахин давтаарай</string>
+	<key>game.encouragement.3</key>
+	<string>Муугүй шүү</string>
+	<key>game.encouragement.4</key>
+	<string>Сайн байна</string>
+	<key>game.encouragement.5</key>
+	<string>Сайхан тоглолоо</string>
+	<key>game.encouragement.6</key>
+	<string>Мундаг</string>
+	<key>game.encouragement.7</key>
+	<string>Маш сайн тоглолоо</string>
+	<key>game.encouragement.8</key>
+	<string>Бариа ойрхон байна</string>
+	<key>game.encouragement.9</key>
+	<string>Бараг боллоо</string>
+	<key>game.encouragement.complete</key>
+	<string>Төгс оноо!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Чи бүх оноогоо авлаа.</string>
+	<key>game.end.completionSuffix</key>
+	<string>дууслаа!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Тоглоом дууслаа</string>
+	<key>game.end.mainMenu</key>
+	<string>Үндсэн цэс</string>
+	<key>game.end.playAgain</key>
+	<string>Дахин тоглох</string>
+	<key>game.highScore</key>
+	<string>Дээд оноо</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Үндсэн цэс рүү буцах</string>
+	<key>game.intro.continue</key>
+	<string>Үргэлжлүүлэн тоглох</string>
+	<key>game.intro.progressPaused</key>
+	<string>Ахиц түр зогссон.</string>
+	<key>game.intro.start</key>
+	<string>Түвшинг эхлүүлэх</string>
+	<key>game.intro.startTutorial</key>
+	<string>Заавар эхлүүлэх</string>
+	<key>game.streakBoost.title</key>
+	<string>Давхар оноо!</string>
+	<key>goal.period</key>
+	<string>Зорилгын хугацаа</string>
+	<key>goal.promptDaily</key>
+	<string>Өдөрт хэдэн минут тоглох вэ?</string>
+	<key>goal.promptWeekly</key>
+	<string>Долоо хоногт хэдэн минут тоглох вэ?</string>
+	<key>goal.title</key>
+	<string>Тоглох зорилго</string>
+	<key>goalPeriod.daily</key>
+	<string>Өдөр бүр</string>
+	<key>goalPeriod.weekly</key>
+	<string>Долоо хоног бүр</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>дахиад %lld</string>
+	<key>home.totalLabel</key>
+	<string>Нийт</string>
+	<key>info.mode.fractions.header</key>
+	<string>Хэсэг</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Нэг болон олон хэсэг</string>
+	<key>info.mode.fractions.single</key>
+	<string>Үргэлж нэг хэсэг</string>
+	<key>info.mode.header</key>
+	<string>Дараалал</string>
+	<key>info.mode.mixed</key>
+	<string>Доод түвшинтэй холих</string>
+	<key>info.mode.order</key>
+	<string>Тогтсон дараалал</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Аравтын бутархайтай</string>
+	<key>info.mode.percentages.header</key>
+	<string>Төрөл</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Аравтын бутархайгүй</string>
+	<key>info.mode.random</key>
+	<string>Санамсаргүй дараалал</string>
+	<key>info.super.all</key>
+	<string>Нэмэх, хасах, үржүүлэх, хуваах, хувь</string>
+	<key>info.super.basic</key>
+	<string>Нэмэх ба хасах</string>
+	<key>info.super.fraction</key>
+	<string>Нэмэх, хасах, үржүүлэх, хуваах</string>
+	<key>info.super.times</key>
+	<string>Нэмэх, хасах, үржүүлэх</string>
+	<key>info.topic.header</key>
+	<string>Бодлогын төрлүүд</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Тоог **нэмэх** бодлогууд.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lld-ыг нэм</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Энэ түвшинд **%lld лууван** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Энэ түвшинд **%lld тахиа** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Энэ түвшинд **%lld загас** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Энэ түвшинд **%lld балтай сав** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Энэ түвшинд **%lld цагирагууд** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Энэ түвшинд **%lld нохойн жигнэмэг** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Энэ түвшинд **%lld мах** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Энэ түвшинд **%lld газрын самар** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Энэ түвшинд **%lld сувд** цуглуулж болно.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Энэ түвшинд **%lld сам хорхой** цуглуулж болно.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Тоог **хуваах** бодлогууд.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>%lld-д хуваа</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>**%lld-р түвшин** хүртэлх бодлогууд.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>**1-р түвшний** бодлогууд.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Бүгд холилдоно**: нэмэх, хасах, үржих, бутархай, хувь.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Супермикс %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Бүхлийн **нэг хэсэг**.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>Бүхлийн **нэг эсвэл хэдэн хэсэг**.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Бодлогууд **тогтсон дарааллаар**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Хариу **аравтын бутархайгүй**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Мөн **аравтын бутархайтай** хариу.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Бодлогууд **санамсаргүй дарааллаар**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>**Хувьтай** бодлогууд.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>Тооны %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Тоог **хасах** бодлогууд.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lld-ыг хас</string>
+	<key>levelIntro.tables.intro</key>
+	<string>**Үржүүлэх** бодлогууд.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld-ийн хүрд</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>Бусад түвшин</string>
+	<key>menu.premiumLevels</key>
+	<string>Премиум түвшин</string>
+	<key>menu.startHere</key>
+	<string>Эндээс эхэл</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Премиумаар илүүг нээ</string>
+	<key>mode.fractions.multiple</key>
+	<string>Олон</string>
+	<key>mode.fractions.single</key>
+	<string>Нэг</string>
+	<key>mode.mixed</key>
+	<string>Хольсон</string>
+	<key>mode.order</key>
+	<string>Дараалал</string>
+	<key>mode.percentages.decimal</key>
+	<string>Аравтын</string>
+	<key>mode.percentages.whole</key>
+	<string>Бүхэл</string>
+	<key>mode.random</key>
+	<string>Санамсаргүй</string>
+	<key>name.placeholder</key>
+	<string>Чиний нэр</string>
+	<key>name.whatsYourName</key>
+	<string>Чамайг хэн гэдэг вэ?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Энэ амьтны түгжээг тайлахын тулд хэд хэдэн цагирагууд цуглуулаарай! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Таны амьтад хүлээж байна. Тоглохоор буцаж ирээд цагирагууд цуглуулж байгаарай!</string>
+	<key>notif.comeback.title</key>
+	<string>Бид чамайг санаж байна! 👋</string>
+	<key>notif.day3.title</key>
+	<string>3 дахь өдрөө амжилттай болгоцгооё! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium нь сэдэв бүрийн %lld түвшин болон бүх 10 амьтныг агуулдаг. Адал явдал үргэлжилсээр байна!</string>
+	<key>notif.premium.title</key>
+	<string>Илүү олон түвшин, амьтдын түгжээг нээ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld хонож байна. Математикийн дасгалуудыг шийдэж, илүү олон цагирагууд олцгооё!</string>
+	<key>notif.reactivate.title</key>
+	<string>Дахин тоглоход бэлэн үү? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Өөр өөр холимог бодлогууд.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Аль хэдийн сайн</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Бодлогуудыг дарааллаар давт.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Дөнгөж эхэлсэн</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Бодлогууд санамсаргүй дараалалтай.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Бага зэрэг давтсан</string>
+	<key>onboarding.level.title</key>
+	<string>Чи үүнийг хэр сайн мэдэх вэ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Эхэлцгээе. Чамайг хэн гэдэг вэ?</string>
+	<key>onboarding.name.title</key>
+	<string>Бодлого бодох ийм хөгжилтэй байгаагүй!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Эхлэх сэдвээ сонго.</string>
+	<key>onboarding.subject.title</key>
+	<string>Юу сурмаар байна?</string>
+	<key>parentGate.approved</key>
+	<string>Зөвшөөрлөө</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Оролдлого: %1$lld-аас %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Дарах: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>дугуй</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ромбо</string>
+	<key>parentGate.shape.heart</key>
+	<string>зүрх</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>зургаан өнцөгт</string>
+	<key>parentGate.shape.plus</key>
+	<string>нэмэх тэмдэг</string>
+	<key>parentGate.shape.square</key>
+	<string>дөрвөлжин</string>
+	<key>parentGate.shape.star</key>
+	<string>од</string>
+	<key>parentGate.shape.triangle</key>
+	<string>гурвалжин</string>
+	<key>parentGate.subtitle</key>
+	<string>Бяцхан тоглогчдыг хамгаалахын тулд худалдан авалтаас өмнө насанд хүрсэн хүн энэ шалгалтыг давах ёстой.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Товшилт: %1$lld-аас %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Насанд хүрэгчийн зөвшөөрөл хэрэгтэй</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld цомоос эхлэн нээгдэнэ</string>
+	<key>premium.availableFromStart</key>
+	<string>Эхнээсээ нээлттэй</string>
+	<key>premium.characterUnlocked</key>
+	<string>ШИНЭ ДҮР НЭЭГДЛЭЭ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Чи %lld цагирагууд цуглууллаа</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Зөвхөн Premium-д</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Премиумтай бол 10 амьтнаар бүгдээр нь чөлөөтэй тоглоно.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Бүх амьтныг ашиглах</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Давтах шинэ бодлого үргэлж хангалттай.</string>
+	<key>premium.feature.levels.title</key>
+	<string>Сэдэв бүрд 99 түвшин</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Ямар ч саадгүй тогло.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Зар сурталчилгаагүй</string>
+	<key>premium.oneTime</key>
+	<string>Нэг удаагийн худалдан авалт. Үүрд чинийх.</string>
+	<key>premium.restore</key>
+	<string>Худалдан авалтыг сэргээх</string>
+	<key>premium.start</key>
+	<string>Эхлэх</string>
+	<key>premium.storeUnavailable</key>
+	<string>Дэлгүүр одоогоор ажиллахгүй байна. Дараа дахин оролдоорой.</string>
+	<key>premium.unlock</key>
+	<string>Премиум нээх</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Премиум нээх · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premium-аар нээгдсэн</string>
+	<key>result.complete</key>
+	<string>Түвшин дууслаа!</string>
+	<key>result.stopped</key>
+	<string>Түр зогссон</string>
+	<key>settings.character</key>
+	<string>Дүр</string>
+	<key>settings.characterInfo</key>
+	<string>Амьтан бүр тоглоомд өөрийн өнгөний загварыг өгнө.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Өөрийн: %lld мин</string>
+	<key>settings.dailyGoal</key>
+	<string>Өдрийн зорилго</string>
+	<key>settings.goalInfo</key>
+	<string>Дарааллын зорилго өдөрт 5 минутаас эхэлнэ. Зөвхөн идэвхтэй тоглосон хугацааг тооцно.</string>
+	<key>settings.music</key>
+	<string>Хөгжим</string>
+	<key>settings.playGoals</key>
+	<string>Тоглох зорилгууд</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Премиум нээгдлээ. Баярлалаа!</string>
+	<key>settings.sound</key>
+	<string>Дуу</string>
+	<key>settings.soundEffects</key>
+	<string>Хөгжим ба эффект</string>
+	<key>settings.soundInfo</key>
+	<string>Дууг унтраавал чимээгүй тоглоно. Тоглоом хэвээрээ ажиллана.</string>
+	<key>settings.title</key>
+	<string>Тохиргоо</string>
+	<key>streak.dayOne</key>
+	<string>1 дэх өдөр</string>
+	<key>topic.addition</key>
+	<string>Нэмэх</string>
+	<key>topic.addition.detail</key>
+	<string>Зөвхөн нэмэх</string>
+	<key>topic.fractions</key>
+	<string>Бутархай</string>
+	<key>topic.fractions.detail</key>
+	<string>Зөвхөн хуваах</string>
+	<key>topic.mixed</key>
+	<string>Супермикс</string>
+	<key>topic.mixed.detail</key>
+	<string>Холимог үйлдэл</string>
+	<key>topic.percentages</key>
+	<string>Хувь</string>
+	<key>topic.percentages.detail</key>
+	<string>Зөвхөн хувь</string>
+	<key>topic.subtraction</key>
+	<string>Хасах</string>
+	<key>topic.subtraction.detail</key>
+	<string>Зөвхөн хасах</string>
+	<key>topic.tables</key>
+	<string>Хүрд</string>
+	<key>topic.tables.detail</key>
+	<string>Зөвхөн үржүүлэх</string>
+	<key>tutorial.notice.message</key>
+	<string>Чи тоглож байна. Эхлээд дуусга, эсвэл эхлээгүй түвшин сонгоод зааврыг тоглоорой.</string>
+	<key>tutorial.notice.title</key>
+	<string>Зөвхөн тоглоомын эхэнд</string>
+</dict>
+</plist>

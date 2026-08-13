@@ -1,0 +1,112 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/HomeComponents.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "goalPeriod.daily",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "goalPeriod.weekly",
+        "location": {
+          "startingColumn": 52,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "common.minutesShort %lld %lld",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "streak.dayOne",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "goal.title",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "goal.period",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "goal.promptWeekly",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "goal.promptDaily",
+        "location": {
+          "startingColumn": 64,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "name.whatsYourName",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 230
+        }
+      },
+      {
+        "comment": "",
+        "key": "name.placeholder",
+        "location": {
+          "startingColumn": 63,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "menu.startHere",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 630
+        }
+      },
+      {
+        "comment": "",
+        "key": "menu.maximumCount",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 894
+        }
+      },
+      {
+        "comment": "",
+        "key": "home.cardsRemaining %lld",
+        "location": {
+          "startingColumn": 11,
+          "startingLine": 1332
+        }
+      }
+    ]
+  },
+  "version": 1
+}

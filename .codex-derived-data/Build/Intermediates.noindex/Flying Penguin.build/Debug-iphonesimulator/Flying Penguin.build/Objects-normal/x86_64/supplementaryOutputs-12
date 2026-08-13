@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/PausedSessionStore.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PausedSessionStore.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PausedSessionStore.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PausedSessionStore.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PausedSessionStore.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PausedSessionStore.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/PracticeMode.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PracticeMode.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PracticeMode.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PracticeMode.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PracticeMode.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/PracticeMode.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Core/ProgressStore.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/ProgressStore.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/ProgressStore.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/ProgressStore.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/ProgressStore.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-derived-data/Build/Intermediates.noindex/Flying Penguin.build/Debug-iphonesimulator/Flying Penguin.build/Objects-normal/x86_64/ProgressStore.swiftdeps"
+  }
+}

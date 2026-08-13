@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>クマ</string>
+	<key>character.bunny</key>
+	<string>ウサギ</string>
+	<key>character.crab</key>
+	<string>カニ</string>
+	<key>character.dog</key>
+	<string>イヌ</string>
+	<key>character.elephant</key>
+	<string>ゾウ</string>
+	<key>character.fox</key>
+	<string>キツネ</string>
+	<key>character.frog</key>
+	<string>カエル</string>
+	<key>character.lion</key>
+	<string>ライオン</string>
+	<key>character.octopus</key>
+	<string>タコ</string>
+	<key>character.penguin</key>
+	<string>ペンギン</string>
+	<key>common.cancel</key>
+	<string>キャンセル</string>
+	<key>common.continue</key>
+	<string>つづける</string>
+	<key>common.done</key>
+	<string>できた</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld分</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>ほぞん</string>
+	<key>currency.hoop.plural</key>
+	<string>フープ</string>
+	<key>currency.hoop.singular</key>
+	<string>フープ</string>
+	<key>game.combo %lld</key>
+	<string>コンボ！ +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>よくがんばったね</string>
+	<key>game.encouragement.1</key>
+	<string>いいスタート</string>
+	<key>game.encouragement.2</key>
+	<string>れんしゅうをつづけよう</string>
+	<key>game.encouragement.3</key>
+	<string>なかなかいいね</string>
+	<key>game.encouragement.4</key>
+	<string>いいかんじ</string>
+	<key>game.encouragement.5</key>
+	<string>いいできだね</string>
+	<key>game.encouragement.6</key>
+	<string>よくできました</string>
+	<key>game.encouragement.7</key>
+	<string>とってもよくできたね</string>
+	<key>game.encouragement.8</key>
+	<string>ゴールはもうすぐ</string>
+	<key>game.encouragement.9</key>
+	<string>あとちょっと</string>
+	<key>game.encouragement.complete</key>
+	<string>全問正解！</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ぜんぶのポイントをとったよ。</string>
+	<key>game.end.completionSuffix</key>
+	<string>クリア！</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ゲームオーバー</string>
+	<key>game.end.mainMenu</key>
+	<string>メインメニュー</string>
+	<key>game.end.playAgain</key>
+	<string>もう一度</string>
+	<key>game.highScore</key>
+	<string>ハイスコア</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>メインメニューにもどる</string>
+	<key>game.intro.continue</key>
+	<string>つづきから</string>
+	<key>game.intro.progressPaused</key>
+	<string>つづきは一時停止中。</string>
+	<key>game.intro.start</key>
+	<string>レベルをはじめる</string>
+	<key>game.intro.startTutorial</key>
+	<string>チュートリアル開始</string>
+	<key>game.streakBoost.title</key>
+	<string>ポイント2倍！</string>
+	<key>goal.period</key>
+	<string>目標の期間</string>
+	<key>goal.promptDaily</key>
+	<string>1日に何分あそびたい？</string>
+	<key>goal.promptWeekly</key>
+	<string>1週間に何分あそびたい？</string>
+	<key>goal.title</key>
+	<string>あそぶ目標</string>
+	<key>goalPeriod.daily</key>
+	<string>毎日</string>
+	<key>goalPeriod.weekly</key>
+	<string>毎週</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>あと%lld</string>
+	<key>home.totalLabel</key>
+	<string>合計</string>
+	<key>info.mode.fractions.header</key>
+	<string>パーツ</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>1つまたはいくつかのパーツ</string>
+	<key>info.mode.fractions.single</key>
+	<string>いつも1つのパーツ</string>
+	<key>info.mode.header</key>
+	<string>順番</string>
+	<key>info.mode.mixed</key>
+	<string>前のレベルもまぜる</string>
+	<key>info.mode.order</key>
+	<string>決まった順番</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>小数あり</string>
+	<key>info.mode.percentages.header</key>
+	<string>しゅるい</string>
+	<key>info.mode.percentages.whole</key>
+	<string>小数なし</string>
+	<key>info.mode.random</key>
+	<string>ランダムな順番</string>
+	<key>info.super.all</key>
+	<string>たし算、ひき算、かけ算、わり算、パーセント</string>
+	<key>info.super.basic</key>
+	<string>たし算とひき算</string>
+	<key>info.super.fraction</key>
+	<string>たし算、ひき算、かけ算、わり算</string>
+	<key>info.super.times</key>
+	<string>たし算、ひき算、かけ算</string>
+	<key>info.topic.header</key>
+	<string>問題の種類</string>
+	<key>levelIntro.addition.intro</key>
+	<string>数を\*\*たす\*\*問題。</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lldをたす</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>このレベルで\*\*%lldこのにんじん\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>このレベルで\*\*%lldわのニワトリ\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>このレベルで\*\*%lldひきの魚\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>このレベルで\*\*%lldこのはちみつ\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>このレベルで\*\*%lldひきのフープ\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>このレベルで\*\*%lldこの犬のおやつ\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>このレベルで\*\*%lldこのお肉\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>このレベルで\*\*%lldこのピーナッツ\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>このレベルで\*\*%lldこの真珠\*\*を集められるよ。</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>このレベルで\*\*%lldひきのエビ\*\*を集められるよ。</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>数を\*\*わる\*\*問題。</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>%lldでわる</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>\*\*レベル%lldまで\*\*の問題。</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>\*\*レベル1\*\*の問題。</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>\*\*ぜんぶミックス\*\*: たし算、ひき算、かけ算、分数、パーセント。</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>スーパーミックス %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>全体の\*\*1つの部分\*\*。</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>全体の\*\*1つ以上の部分\*\*。</string>
+	<key>levelIntro.mode.order</key>
+	<string>問題は\*\*決まった順番\*\*。</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>答えは\*\*小数なし\*\*。</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>\*\*小数の答え\*\*もあるよ。</string>
+	<key>levelIntro.mode.random</key>
+	<string>問題は\*\*ランダム\*\*。</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>\*\*パーセント\*\*の問題。</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>数の%@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>数を\*\*ひく\*\*問題。</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lldをひく</string>
+	<key>levelIntro.tables.intro</key>
+	<string>\*\*かけ算\*\*の問題。</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lldの段</string>
+	<key>menu.maximumCount</key>
+	<string>最大</string>
+	<key>menu.moreLevels</key>
+	<string>もっとレベル</string>
+	<key>menu.premiumLevels</key>
+	<string>プレミアムレベル</string>
+	<key>menu.startHere</key>
+	<string>ここからスタート</string>
+	<key>menu.unlockWithPremium</key>
+	<string>プレミアムでもっと遊ぼう</string>
+	<key>mode.fractions.multiple</key>
+	<string>いくつか</string>
+	<key>mode.fractions.single</key>
+	<string>1つ</string>
+	<key>mode.mixed</key>
+	<string>まぜる</string>
+	<key>mode.order</key>
+	<string>順番</string>
+	<key>mode.percentages.decimal</key>
+	<string>小数</string>
+	<key>mode.percentages.whole</key>
+	<string>整数</string>
+	<key>mode.random</key>
+	<string>ランダム</string>
+	<key>name.placeholder</key>
+	<string>なまえ</string>
+	<key>name.whatsYourName</key>
+	<string>きみのなまえは？</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: この動物のロックを解除するには、さらにいくつかのフープを獲得してください! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>あなたの動物たちが待っています。再びプレイしてフープを集め続けましょう!</string>
+	<key>notif.comeback.title</key>
+	<string>私たちはあなたがいなくて寂しいです！ 👋</string>
+	<key>notif.day3.title</key>
+	<string>3日目も実現させましょう！ ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog プレミアムには、すべてのトピックと 10 匹すべての動物の %lld レベルが含まれています。冒険はまだまだ続きます！</string>
+	<key>notif.premium.title</key>
+	<string>さらに多くのレベルと動物をアンロックしましょう！ 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld日が経ちました。数学の練習問題を解いて、より多くのフープを獲得しましょう!</string>
+	<key>notif.reactivate.title</key>
+	<string>もう一度プレイする準備はできましたか? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>いろいろなミックス問題。</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>もうけっこうできる</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>順番どおりの問題をれんしゅう。</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>はじめたばかり</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>ランダムな順番の問題。</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>少しれんしゅうした</string>
+	<key>onboarding.level.title</key>
+	<string>もうどれくらいできる？</string>
+	<key>onboarding.name.subtitle</key>
+	<string>さあ、はじめよう。きみのなまえは？</string>
+	<key>onboarding.name.title</key>
+	<string>計算ってこんなに楽しい！</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>最初にやるテーマをえらぼう。</string>
+	<key>onboarding.subject.title</key>
+	<string>何を学びたい？</string>
+	<key>parentGate.approved</key>
+	<string>承認ずみ</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>回数：%1$lld／%2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>長押し：%lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>まる</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ひし形</string>
+	<key>parentGate.shape.heart</key>
+	<string>ハート</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>六角形</string>
+	<key>parentGate.shape.plus</key>
+	<string>プラス</string>
+	<key>parentGate.shape.square</key>
+	<string>四角</string>
+	<key>parentGate.shape.star</key>
+	<string>星</string>
+	<key>parentGate.shape.triangle</key>
+	<string>三角</string>
+	<key>parentGate.subtitle</key>
+	<string>小さなお子さまを守るため、購入に進む前に大人の方がこの確認を行ってください。</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>タップ：%1$lld／%2$lld</string>
+	<key>parentGate.title</key>
+	<string>大人の承認が必要です</string>
+	<key>premium.availableAt %lld</key>
+	<string>トロフィー%lld個で使用可能</string>
+	<key>premium.availableFromStart</key>
+	<string>最初から使用可能</string>
+	<key>premium.characterUnlocked</key>
+	<string>新しいキャラクターをアンロック！</string>
+	<key>premium.earnedCards %lld</key>
+	<string>フープを%lld匹ゲット</string>
+	<key>premium.exclusiveBadge</key>
+	<string>プレミアム限定</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>プレミアムなら、10ぴきの動物すべてで自由に遊べます。</string>
+	<key>premium.feature.animals.title</key>
+	<string>すべての動物が使える</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>れんしゅうできる新しい問題がいつもたくさん。</string>
+	<key>premium.feature.levels.title</key>
+	<string>テーマごとに99レベル</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>じゃまされずにずっと遊べます。</string>
+	<key>premium.feature.noAds.title</key>
+	<string>広告なし</string>
+	<key>premium.oneTime</key>
+	<string>一度買えば、ずっと使えます。</string>
+	<key>premium.restore</key>
+	<string>購入を復元</string>
+	<key>premium.start</key>
+	<string>スタート</string>
+	<key>premium.storeUnavailable</key>
+	<string>今はストアを使えません。あとでもう一度お試しください。</string>
+	<key>premium.unlock</key>
+	<string>プレミアムを購入</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>プレミアムを購入・%@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>プレミアムでアンロック</string>
+	<key>result.complete</key>
+	<string>レベルクリア！</string>
+	<key>result.stopped</key>
+	<string>一時停止中</string>
+	<key>settings.character</key>
+	<string>キャラクター</string>
+	<key>settings.characterInfo</key>
+	<string>動物ごとに、ゲーム全体の色テーマが変わります。</string>
+	<key>settings.customMinutes %lld</key>
+	<string>カスタム：%lld分</string>
+	<key>settings.dailyGoal</key>
+	<string>毎日の目標</string>
+	<key>settings.goalInfo</key>
+	<string>れんぞく目標は1日5分から。実際に遊んだ時間だけ数えます。</string>
+	<key>settings.music</key>
+	<string>音楽</string>
+	<key>settings.playGoals</key>
+	<string>あそぶ目標</string>
+	<key>settings.premiumUnlocked</key>
+	<string>プレミアムを使えるようになりました。ありがとう！</string>
+	<key>settings.sound</key>
+	<string>サウンド</string>
+	<key>settings.soundEffects</key>
+	<string>音楽と効果音</string>
+	<key>settings.soundInfo</key>
+	<string>音をオフにすると静かに遊べるよ。ゲームの遊び方は同じだよ。</string>
+	<key>settings.title</key>
+	<string>設定</string>
+	<key>streak.dayOne</key>
+	<string>1日目</string>
+	<key>topic.addition</key>
+	<string>たし算</string>
+	<key>topic.addition.detail</key>
+	<string>たし算だけ</string>
+	<key>topic.fractions</key>
+	<string>分数</string>
+	<key>topic.fractions.detail</key>
+	<string>わり算だけ</string>
+	<key>topic.mixed</key>
+	<string>スーパーミックス</string>
+	<key>topic.mixed.detail</key>
+	<string>いろんな計算</string>
+	<key>topic.percentages</key>
+	<string>パーセント</string>
+	<key>topic.percentages.detail</key>
+	<string>パーセントだけ</string>
+	<key>topic.subtraction</key>
+	<string>ひき算</string>
+	<key>topic.subtraction.detail</key>
+	<string>ひき算だけ</string>
+	<key>topic.tables</key>
+	<string>九九</string>
+	<key>topic.tables.detail</key>
+	<string>かけ算だけ</string>
+	<key>tutorial.notice.message</key>
+	<string>ゲームの途中だよ。まず終わらせるか、まだ始めていないレベルをえらんで、チュートリアルを始めよう。</string>
+	<key>tutorial.notice.title</key>
+	<string>ゲームの最初だけ</string>
+</dict>
+</plist>

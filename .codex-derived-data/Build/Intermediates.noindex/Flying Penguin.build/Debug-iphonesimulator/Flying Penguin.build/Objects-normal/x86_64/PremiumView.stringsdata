@@ -1,0 +1,96 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/PremiumView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "premium.feature.levels.title",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 286
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.feature.levels.subtitle",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 287
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.feature.animals.title",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 290
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.feature.animals.subtitle",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 291
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.feature.noAds.title",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 294
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.feature.noAds.subtitle",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 295
+        }
+      },
+      {
+        "comment": "",
+        "key": "common.done",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 477
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.oneTime",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 513
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.restore",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 525
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.unlockWithPrice %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 547
+        }
+      },
+      {
+        "comment": "",
+        "key": "premium.unlock",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 549
+        }
+      }
+    ]
+  },
+  "version": 1
+}

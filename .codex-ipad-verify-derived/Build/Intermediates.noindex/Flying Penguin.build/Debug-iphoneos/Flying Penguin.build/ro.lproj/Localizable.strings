@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Urs</string>
+	<key>character.bunny</key>
+	<string>Iepuraș</string>
+	<key>character.crab</key>
+	<string>Crab</string>
+	<key>character.dog</key>
+	<string>Câine</string>
+	<key>character.elephant</key>
+	<string>Elefant</string>
+	<key>character.fox</key>
+	<string>Vulpe</string>
+	<key>character.frog</key>
+	<string>Broască</string>
+	<key>character.lion</key>
+	<string>Leu</string>
+	<key>character.octopus</key>
+	<string>Caracatiță</string>
+	<key>character.penguin</key>
+	<string>Pinguin</string>
+	<key>common.cancel</key>
+	<string>Anulează</string>
+	<key>common.continue</key>
+	<string>Continuă</string>
+	<key>common.done</key>
+	<string>Gata</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Salvează</string>
+	<key>currency.hoop.plural</key>
+	<string>cercuri</string>
+	<key>currency.hoop.singular</key>
+	<string>cerc</string>
+	<key>game.combo %lld</key>
+	<string>Combo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Bună încercare</string>
+	<key>game.encouragement.1</key>
+	<string>E un început</string>
+	<key>game.encouragement.2</key>
+	<string>Continuă să exersezi</string>
+	<key>game.encouragement.3</key>
+	<string>Nu e rău deloc</string>
+	<key>game.encouragement.4</key>
+	<string>Te descurci bine</string>
+	<key>game.encouragement.5</key>
+	<string>Rezultat frumos</string>
+	<key>game.encouragement.6</key>
+	<string>Bravo</string>
+	<key>game.encouragement.7</key>
+	<string>Foarte bine</string>
+	<key>game.encouragement.8</key>
+	<string>Finalul e aproape</string>
+	<key>game.encouragement.9</key>
+	<string>Aproape ai reușit</string>
+	<key>game.encouragement.complete</key>
+	<string>Scor perfect!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Ai câștigat fiecare punct.</string>
+	<key>game.end.completionSuffix</key>
+	<string>complet!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Joc încheiat</string>
+	<key>game.end.mainMenu</key>
+	<string>Meniu principal</string>
+	<key>game.end.playAgain</key>
+	<string>Joacă din nou</string>
+	<key>game.highScore</key>
+	<string>Record</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Înapoi la meniul principal</string>
+	<key>game.intro.continue</key>
+	<string>Continuă</string>
+	<key>game.intro.progressPaused</key>
+	<string>Progresul e în pauză.</string>
+	<key>game.intro.start</key>
+	<string>Începe nivelul</string>
+	<key>game.intro.startTutorial</key>
+	<string>Începe tutorialul</string>
+	<key>game.streakBoost.title</key>
+	<string>Puncte duble!</string>
+	<key>goal.period</key>
+	<string>Perioada obiectivului</string>
+	<key>goal.promptDaily</key>
+	<string>Câte minute vrei să te joci pe zi?</string>
+	<key>goal.promptWeekly</key>
+	<string>Câte minute vrei să te joci pe săptămână?</string>
+	<key>goal.title</key>
+	<string>Obiectiv de joc</string>
+	<key>goalPeriod.daily</key>
+	<string>Zilnic</string>
+	<key>goalPeriod.weekly</key>
+	<string>Săptămânal</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>încă %lld</string>
+	<key>home.totalLabel</key>
+	<string>Total</string>
+	<key>info.mode.fractions.header</key>
+	<string>Părți</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Una sau mai multe părți</string>
+	<key>info.mode.fractions.single</key>
+	<string>Mereu o singură parte</string>
+	<key>info.mode.header</key>
+	<string>Ordine</string>
+	<key>info.mode.mixed</key>
+	<string>Amestecat cu niveluri mai ușoare</string>
+	<key>info.mode.order</key>
+	<string>Ordine fixă</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Cu numere zecimale</string>
+	<key>info.mode.percentages.header</key>
+	<string>Tip</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Fără numere zecimale</string>
+	<key>info.mode.random</key>
+	<string>Ordine aleatorie</string>
+	<key>info.super.all</key>
+	<string>Adunare, scădere, înmulțire, împărțire și procente</string>
+	<key>info.super.basic</key>
+	<string>Adunare și scădere</string>
+	<key>info.super.fraction</key>
+	<string>Adunare, scădere, înmulțire și împărțire</string>
+	<key>info.super.times</key>
+	<string>Adunare, scădere și înmulțire</string>
+	<key>info.topic.header</key>
+	<string>Tipuri de exerciții</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Exerciții în care **aduni** un număr.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Adună %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Poți strânge până la **%lld morcovi** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Poți strânge până la **%lld găini** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Poți strânge până la **%lld pești** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Poți strânge până la **%lld borcane cu miere** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Poți strânge până la **%lld cercuri** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Poți strânge până la **%lld biscuiți pentru câini** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Poți strânge până la **%lld bucăți de carne** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Poți strânge până la **%lld arahide** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Poți strânge până la **%lld perle** în acest nivel.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Poți strânge până la **%lld creveți** în acest nivel.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Exerciții în care **împarți** un număr.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Împarte la %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Întrebări până la **nivelul %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Întrebări de la **nivelul 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Totul amestecat**: plus, minus, ori, fracții și procente.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermix %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Mereu **o singură parte** dintr-un întreg.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Una sau mai multe părți** dintr-un întreg.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Întrebări în **ordine fixă**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Răspunsuri **fără zecimale**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Și răspunsuri **cu zecimale**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Întrebări în **ordine aleatoare**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Exerciții cu **procente**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ dintr-un număr</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Exerciții în care **scazi** un număr.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Scade %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Exerciții în care **înmulțești**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Tabla lui %lld</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>Mai multe niveluri</string>
+	<key>menu.premiumLevels</key>
+	<string>Niveluri premium</string>
+	<key>menu.startHere</key>
+	<string>Începe aici</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Deblochează mai mult cu Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Mai multe</string>
+	<key>mode.fractions.single</key>
+	<string>Una</string>
+	<key>mode.mixed</key>
+	<string>Amestecat</string>
+	<key>mode.order</key>
+	<string>Ordine</string>
+	<key>mode.percentages.decimal</key>
+	<string>Zecimal</string>
+	<key>mode.percentages.whole</key>
+	<string>Întreg</string>
+	<key>mode.random</key>
+	<string>Aleatoriu</string>
+	<key>name.placeholder</key>
+	<string>Numele tău</string>
+	<key>name.whatsYourName</key>
+	<string>Cum te cheamă?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Câștigă încă câteva cercuri pentru a debloca acest animal! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Animalele tale așteaptă. Întoarce-te să joci și continuă să strângi cercuri!</string>
+	<key>notif.comeback.title</key>
+	<string>Ne e dor de tine! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Să facem ziua 3 să se întâmple! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium include %lld de niveluri pentru fiecare subiect și toate cele 10 animale. Aventura continuă!</string>
+	<key>notif.premium.title</key>
+	<string>Deblochează mai multe niveluri și animale! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Au trecut %lld zile. Să rezolvăm câteva exerciții de matematică și să câștigăm mai multe cercuri!</string>
+	<key>notif.reactivate.title</key>
+	<string>Sunteți gata să jucați din nou? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Exerciții mixte diferite, toate împreună.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Te descurci deja bine</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Exersează cu exerciții în ordine.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Abia ai început</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Exerciții în ordine aleatorie.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Ai exersat deja puțin</string>
+	<key>onboarding.level.title</key>
+	<string>Cât de bine te descurci deja?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Să începem. Cum te cheamă?</string>
+	<key>onboarding.name.title</key>
+	<string>Calculele nu au fost niciodată atât de distractive!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Alege un subiect cu care să începi.</string>
+	<key>onboarding.subject.title</key>
+	<string>Ce vrei să înveți?</string>
+	<key>parentGate.approved</key>
+	<string>Aprobat</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Încercări: %1$lld din %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Ține apăsat: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>cerc</string>
+	<key>parentGate.shape.diamond</key>
+	<string>romb</string>
+	<key>parentGate.shape.heart</key>
+	<string>inimă</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>hexagon</string>
+	<key>parentGate.shape.plus</key>
+	<string>plus</string>
+	<key>parentGate.shape.square</key>
+	<string>pătrat</string>
+	<key>parentGate.shape.star</key>
+	<string>stea</string>
+	<key>parentGate.shape.triangle</key>
+	<string>triunghi</string>
+	<key>parentGate.subtitle</key>
+	<string>Pentru a proteja copiii, un adult trebuie să treacă această verificare înainte de cumpărare.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Atingeri: %1$lld din %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Este necesară aprobarea unui adult</string>
+	<key>premium.availableAt %lld</key>
+	<string>Disponibil de la %lld trofee</string>
+	<key>premium.availableFromStart</key>
+	<string>Disponibil de la început</string>
+	<key>premium.characterUnlocked</key>
+	<string>PERSONAJ NOU DEBLOCAT</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Ai strâns %lld cercuri</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Exclusiv cu Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Cu Premium te joci liber cu toate cele 10 animale.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Acces la toate animalele</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Mereu exerciții noi pentru exersat.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 de niveluri pe subiect</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Joacă-te fără întreruperi.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Fără reclame</string>
+	<key>premium.oneTime</key>
+	<string>O singură plată. Al tău pentru totdeauna.</string>
+	<key>premium.restore</key>
+	<string>Restaurează achizițiile</string>
+	<key>premium.start</key>
+	<string>Începe</string>
+	<key>premium.storeUnavailable</key>
+	<string>Magazinul nu este disponibil acum. Încearcă din nou mai târziu.</string>
+	<key>premium.unlock</key>
+	<string>Deblochează Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Deblochează Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Deblocat cu Premium</string>
+	<key>result.complete</key>
+	<string>Nivel terminat!</string>
+	<key>result.stopped</key>
+	<string>În pauză</string>
+	<key>settings.character</key>
+	<string>Personaj</string>
+	<key>settings.characterInfo</key>
+	<string>Fiecare animal aduce propria temă de culori în tot jocul.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Personalizat: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Obiectiv zilnic</string>
+	<key>settings.goalInfo</key>
+	<string>Seria începe cu 5 minute pe zi. Contează doar timpul în care te joci.</string>
+	<key>settings.music</key>
+	<string>Muzică</string>
+	<key>settings.playGoals</key>
+	<string>Obiective de joc</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium deblocat. Mulțumim!</string>
+	<key>settings.sound</key>
+	<string>Sunet</string>
+	<key>settings.soundEffects</key>
+	<string>Muzică și efecte</string>
+	<key>settings.soundInfo</key>
+	<string>Oprește sunetul ca să joci în liniște. Jocul rămâne la fel.</string>
+	<key>settings.title</key>
+	<string>Setări</string>
+	<key>streak.dayOne</key>
+	<string>Ziua 1</string>
+	<key>topic.addition</key>
+	<string>Adunări</string>
+	<key>topic.addition.detail</key>
+	<string>Doar adunări</string>
+	<key>topic.fractions</key>
+	<string>Fracții</string>
+	<key>topic.fractions.detail</key>
+	<string>Doar împărțiri</string>
+	<key>topic.mixed</key>
+	<string>Supermix</string>
+	<key>topic.mixed.detail</key>
+	<string>Operații mixte</string>
+	<key>topic.percentages</key>
+	<string>Procente</string>
+	<key>topic.percentages.detail</key>
+	<string>Doar procente</string>
+	<key>topic.subtraction</key>
+	<string>Scăderi</string>
+	<key>topic.subtraction.detail</key>
+	<string>Doar scăderi</string>
+	<key>topic.tables</key>
+	<string>Table</string>
+	<key>topic.tables.detail</key>
+	<string>Doar înmulțiri</string>
+	<key>tutorial.notice.message</key>
+	<string>Ești în mijlocul unui joc. Termină-l sau alege un nivel neînceput ca să joci tutorialul.</string>
+	<key>tutorial.notice.title</key>
+	<string>Doar la începutul jocului</string>
+</dict>
+</plist>

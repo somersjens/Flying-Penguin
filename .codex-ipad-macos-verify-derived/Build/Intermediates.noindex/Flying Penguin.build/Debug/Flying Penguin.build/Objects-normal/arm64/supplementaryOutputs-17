@@ -1,0 +1,23 @@
+{
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/Notifications.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/Notifications.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/Notifications.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/Notifications.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/Notifications.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/Notifications.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/OnboardingView.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/OnboardingView.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/OnboardingView.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/OnboardingView.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/OnboardingView.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/OnboardingView.swiftdeps"
+  },
+  "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/ParentApprovalGate.swift" : {
+    "const-values" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/ParentApprovalGate.swiftconstvalues",
+    "dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/ParentApprovalGate.d",
+    "diagnostics" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/ParentApprovalGate.dia",
+    "object" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/ParentApprovalGate.o",
+    "swift-dependencies" : "/Users/jenssomers/Desktop/Flying Penguin/.codex-ipad-macos-verify-derived/Build/Intermediates.noindex/Flying Penguin.build/Debug/Flying Penguin.build/Objects-normal/arm64/ParentApprovalGate.swiftdeps"
+  }
+}

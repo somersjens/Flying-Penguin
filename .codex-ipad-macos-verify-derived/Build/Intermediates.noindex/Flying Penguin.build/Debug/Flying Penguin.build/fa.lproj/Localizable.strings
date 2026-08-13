@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>خرس</string>
+	<key>character.bunny</key>
+	<string>خرگوش</string>
+	<key>character.crab</key>
+	<string>خرچنگ</string>
+	<key>character.dog</key>
+	<string>سگ</string>
+	<key>character.elephant</key>
+	<string>فیل</string>
+	<key>character.fox</key>
+	<string>روباه</string>
+	<key>character.frog</key>
+	<string>قورباغه</string>
+	<key>character.lion</key>
+	<string>شیر</string>
+	<key>character.octopus</key>
+	<string>هشت‌پا</string>
+	<key>character.penguin</key>
+	<string>پنگوئن</string>
+	<key>common.cancel</key>
+	<string>لغو</string>
+	<key>common.continue</key>
+	<string>ادامه</string>
+	<key>common.done</key>
+	<string>تمام</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld دقیقه</string>
+	<key>common.ok</key>
+	<string>باشه</string>
+	<key>common.save</key>
+	<string>ذخیره</string>
+	<key>currency.hoop.plural</key>
+	<string>حلقه‌ها</string>
+	<key>currency.hoop.singular</key>
+	<string>حلقه</string>
+	<key>game.combo %lld</key>
+	<string>کمبو! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>تلاش خوبی بود</string>
+	<key>game.encouragement.1</key>
+	<string>شروع خوبی است</string>
+	<key>game.encouragement.2</key>
+	<string>به تمرین ادامه بده</string>
+	<key>game.encouragement.3</key>
+	<string>اصلاً بد نبود</string>
+	<key>game.encouragement.4</key>
+	<string>آفرین، خوب پیش می‌روی</string>
+	<key>game.encouragement.5</key>
+	<string>عملکرد خوبی بود</string>
+	<key>game.encouragement.6</key>
+	<string>آفرین</string>
+	<key>game.encouragement.7</key>
+	<string>خیلی خوب بازی کردی</string>
+	<key>game.encouragement.8</key>
+	<string>پایان نزدیک است</string>
+	<key>game.encouragement.9</key>
+	<string>تقریباً رسیدی</string>
+	<key>game.encouragement.complete</key>
+	<string>امتیاز کامل!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>همهٔ امتیازها را به دست آوردی.</string>
+	<key>game.end.completionSuffix</key>
+	<string>کامل شد!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>پایان بازی</string>
+	<key>game.end.mainMenu</key>
+	<string>منوی اصلی</string>
+	<key>game.end.playAgain</key>
+	<string>دوباره بازی کن</string>
+	<key>game.highScore</key>
+	<string>رکورد</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>بازگشت به منوی اصلی</string>
+	<key>game.intro.continue</key>
+	<string>ادامه</string>
+	<key>game.intro.progressPaused</key>
+	<string>پیشرفتت متوقف شده.</string>
+	<key>game.intro.start</key>
+	<string>شروع مرحله</string>
+	<key>game.intro.startTutorial</key>
+	<string>شروع آموزش</string>
+	<key>game.streakBoost.title</key>
+	<string>امتیاز دوبرابر!</string>
+	<key>goal.period</key>
+	<string>بازهٔ هدف</string>
+	<key>goal.promptDaily</key>
+	<string>روزانه چند دقیقه می‌خواهی بازی کنی؟</string>
+	<key>goal.promptWeekly</key>
+	<string>هفته‌ای چند دقیقه می‌خواهی بازی کنی؟</string>
+	<key>goal.title</key>
+	<string>هدف بازی</string>
+	<key>goalPeriod.daily</key>
+	<string>روزانه</string>
+	<key>goalPeriod.weekly</key>
+	<string>هفتگی</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld تا دیگر</string>
+	<key>home.totalLabel</key>
+	<string>مجموع</string>
+	<key>info.mode.fractions.header</key>
+	<string>بخش‌ها</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>یک یا چند بخش</string>
+	<key>info.mode.fractions.single</key>
+	<string>همیشه یک بخش</string>
+	<key>info.mode.header</key>
+	<string>ترتیب</string>
+	<key>info.mode.mixed</key>
+	<string>ترکیب با مرحله‌های پایین‌تر</string>
+	<key>info.mode.order</key>
+	<string>ترتیب ثابت</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>با عددهای اعشاری</string>
+	<key>info.mode.percentages.header</key>
+	<string>نوع</string>
+	<key>info.mode.percentages.whole</key>
+	<string>بدون عددهای اعشاری</string>
+	<key>info.mode.random</key>
+	<string>ترتیب تصادفی</string>
+	<key>info.super.all</key>
+	<string>جمع، تفریق، ضرب، تقسیم و درصد</string>
+	<key>info.super.basic</key>
+	<string>جمع و تفریق</string>
+	<key>info.super.fraction</key>
+	<string>جمع، تفریق، ضرب و تقسیم</string>
+	<key>info.super.times</key>
+	<string>جمع، تفریق و ضرب</string>
+	<key>info.topic.header</key>
+	<string>نوع تمرین‌ها</string>
+	<key>levelIntro.addition.intro</key>
+	<string>تمرین‌هایی که در آن عددی را **جمع** می‌کنی.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>جمع %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>در این مرحله تا **%lld هویج** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>در این مرحله تا **%lld مرغ** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>در این مرحله تا **%lld ماهی** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>در این مرحله تا **%lld ظرف عسل** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>در این مرحله تا **%lld حلقه‌ها** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>در این مرحله تا **%lld بیسکویت سگ** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>در این مرحله تا **%lld تکه گوشت** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>در این مرحله تا **%lld بادام‌زمینی** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>در این مرحله تا **%lld مروارید** می‌توانی جمع کنی.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>در این مرحله تا **%lld میگو** می‌توانی جمع کنی.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>تمرین‌هایی که در آن عددی را **تقسیم** می‌کنی.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>تقسیم بر %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>سؤال‌ها تا **مرحله %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>سؤال‌ها از **مرحله 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**همه باهم**: جمع، تفریق، ضرب، کسر و درصد.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>سوپرمیکس %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>همیشه **یک بخش** از یک کل.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**یک یا چند بخش** از یک کل.</string>
+	<key>levelIntro.mode.order</key>
+	<string>سؤال‌ها با **ترتیب ثابت**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>جواب‌ها **بدون اعشار**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>جواب‌ها **با اعشار** هم هستند.</string>
+	<key>levelIntro.mode.random</key>
+	<string>سؤال‌ها **درهم** هستند.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>تمرین‌های **درصدی**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ از یک عدد</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>تمرین‌هایی که در آن عددی را **کم** می‌کنی.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>منهای %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>تمرین‌هایی که در آن **ضرب** می‌کنی.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>جدول %lld</string>
+	<key>menu.maximumCount</key>
+	<string>حداکثر</string>
+	<key>menu.moreLevels</key>
+	<string>مرحله‌های بیشتر</string>
+	<key>menu.premiumLevels</key>
+	<string>مرحله‌های پریمیوم</string>
+	<key>menu.startHere</key>
+	<string>از اینجا شروع کن</string>
+	<key>menu.unlockWithPremium</key>
+	<string>با نسخهٔ ویژه بیشتر باز کن</string>
+	<key>mode.fractions.multiple</key>
+	<string>چندبخشی</string>
+	<key>mode.fractions.single</key>
+	<string>یک‌بخشی</string>
+	<key>mode.mixed</key>
+	<string>مخلوط</string>
+	<key>mode.order</key>
+	<string>ترتیب</string>
+	<key>mode.percentages.decimal</key>
+	<string>اعشاری</string>
+	<key>mode.percentages.whole</key>
+	<string>صحیح</string>
+	<key>mode.random</key>
+	<string>تصادفی</string>
+	<key>name.placeholder</key>
+	<string>نام تو</string>
+	<key>name.whatsYourName</key>
+	<string>اسمت چیست؟</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: برای باز کردن قفل این حیوان چند تروفی دیگر به دست آورید! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>حیوانات شما منتظر هستند. برای بازی برگردید و به جمع آوری حلقه‌ها ادامه دهید!</string>
+	<key>notif.comeback.title</key>
+	<string>دلمون برات تنگ شده! 👋</string>
+	<key>notif.day3.title</key>
+	<string>اجازه دهید روز 3 اتفاق بیفتد! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium شامل %lld سطح برای هر موضوع و هر 10 حیوان است. ماجرا همچنان ادامه دارد!</string>
+	<key>notif.premium.title</key>
+	<string>سطوح و حیوانات بیشتر را باز کنید! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld روز گذشتبیایید چند تمرین ریاضی را حل کنیم و حلقه‌ها بیشتری کسب کنیم!</string>
+	<key>notif.reactivate.title</key>
+	<string>برای بازی دوباره آماده اید؟ 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>تمرین‌های ترکیبی مختلف با هم.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>همین حالا هم خیلی خوبی</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>تمرین با سؤال‌های مرتب.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>تازه شروع کرده‌ام</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>سؤال‌ها با ترتیب تصادفی.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>کمی تمرین کرده‌ام</string>
+	<key>onboarding.level.title</key>
+	<string>الان چقدر در این موضوع خوبی؟</string>
+	<key>onboarding.name.subtitle</key>
+	<string>شروع کنیم. اسمت چیست؟</string>
+	<key>onboarding.name.title</key>
+	<string>حل کردن سؤال‌ها هیچ‌وقت این‌قدر بامزه نبوده!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>یک موضوع برای شروع انتخاب کن.</string>
+	<key>onboarding.subject.title</key>
+	<string>دوست داری چه چیزی یاد بگیری؟</string>
+	<key>parentGate.approved</key>
+	<string>تأیید شد</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>تلاش‌ها: %1$lld از %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>نگه‌دار: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>دایره</string>
+	<key>parentGate.shape.diamond</key>
+	<string>لوزی</string>
+	<key>parentGate.shape.heart</key>
+	<string>قلب</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>شش‌ضلعی</string>
+	<key>parentGate.shape.plus</key>
+	<string>علامت جمع</string>
+	<key>parentGate.shape.square</key>
+	<string>مربع</string>
+	<key>parentGate.shape.star</key>
+	<string>ستاره</string>
+	<key>parentGate.shape.triangle</key>
+	<string>مثلث</string>
+	<key>parentGate.subtitle</key>
+	<string>برای محافظت از بازیکنان خردسال، یک بزرگسال باید پیش از ادامهٔ خرید این بررسی را انجام دهد.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>تعداد ضربه‌ها: %1$lld از %2$lld</string>
+	<key>parentGate.title</key>
+	<string>تأیید بزرگسال لازم است</string>
+	<key>premium.availableAt %lld</key>
+	<string>از %lld جام در دسترس است</string>
+	<key>premium.availableFromStart</key>
+	<string>از ابتدا در دسترس است</string>
+	<key>premium.characterUnlocked</key>
+	<string>شخصیت جدید باز شد</string>
+	<key>premium.earnedCards %lld</key>
+	<string>%lld حلقه‌ها به دست آوردی</string>
+	<key>premium.exclusiveBadge</key>
+	<string>ویژهٔ Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>با نسخهٔ ویژه، آزادانه با هر ۱۰ حیوان بازی می‌کنی.</string>
+	<key>premium.feature.animals.title</key>
+	<string>دسترسی به همهٔ حیوان‌ها</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>همیشه تمرین‌های تازه برای حل کردن داری.</string>
+	<key>premium.feature.levels.title</key>
+	<string>۹۹ مرحله برای هر موضوع</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>کاملاً بدون وقفه بازی کن.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>بدون تبلیغ</string>
+	<key>premium.oneTime</key>
+	<string>یک‌بار بخر، برای همیشه مال تو.</string>
+	<key>premium.restore</key>
+	<string>بازیابی خریدها</string>
+	<key>premium.start</key>
+	<string>شروع</string>
+	<key>premium.storeUnavailable</key>
+	<string>فروشگاه فعلاً در دسترس نیست. بعداً دوباره تلاش کنید.</string>
+	<key>premium.unlock</key>
+	<string>باز کردن نسخهٔ ویژه</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>باز کردن نسخهٔ ویژه · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>با Premium باز شد</string>
+	<key>result.complete</key>
+	<string>مرحله تمام شد!</string>
+	<key>result.stopped</key>
+	<string>متوقف</string>
+	<key>settings.character</key>
+	<string>شخصیت</string>
+	<key>settings.characterInfo</key>
+	<string>هر حیوان، رنگ‌وبوی خودش را به کل بازی می‌دهد.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>دلخواه: %lld دقیقه</string>
+	<key>settings.dailyGoal</key>
+	<string>هدف روزانه</string>
+	<key>settings.goalInfo</key>
+	<string>هدف زنجیره از روزی ۵ دقیقه شروع می‌شود. فقط زمان بازی فعال حساب می‌شود.</string>
+	<key>settings.music</key>
+	<string>موسیقی</string>
+	<key>settings.playGoals</key>
+	<string>هدف‌های بازی</string>
+	<key>settings.premiumUnlocked</key>
+	<string>نسخهٔ ویژه باز شد. ممنون!</string>
+	<key>settings.sound</key>
+	<string>صدا</string>
+	<key>settings.soundEffects</key>
+	<string>موسیقی و افکت‌ها</string>
+	<key>settings.soundInfo</key>
+	<string>برای بازی بی‌صدا، صدا را خاموش کن. بازی همان‌طور کار می‌کند.</string>
+	<key>settings.title</key>
+	<string>تنظیمات</string>
+	<key>streak.dayOne</key>
+	<string>روز ۱</string>
+	<key>topic.addition</key>
+	<string>جمع</string>
+	<key>topic.addition.detail</key>
+	<string>فقط جمع</string>
+	<key>topic.fractions</key>
+	<string>کسرها</string>
+	<key>topic.fractions.detail</key>
+	<string>فقط تقسیم</string>
+	<key>topic.mixed</key>
+	<string>سوپرمیکس</string>
+	<key>topic.mixed.detail</key>
+	<string>عملیات ترکیبی</string>
+	<key>topic.percentages</key>
+	<string>درصدها</string>
+	<key>topic.percentages.detail</key>
+	<string>فقط درصد</string>
+	<key>topic.subtraction</key>
+	<string>تفریق</string>
+	<key>topic.subtraction.detail</key>
+	<string>فقط تفریق</string>
+	<key>topic.tables</key>
+	<string>جدول ضرب</string>
+	<key>topic.tables.detail</key>
+	<string>فقط ضرب</string>
+	<key>tutorial.notice.message</key>
+	<string>وسط بازی هستی. اول تمامش کن یا مرحله‌ای را انتخاب کن که هنوز شروع نکرده‌ای تا آموزش را بازی کنی.</string>
+	<key>tutorial.notice.title</key>
+	<string>فقط اول بازی</string>
+</dict>
+</plist>

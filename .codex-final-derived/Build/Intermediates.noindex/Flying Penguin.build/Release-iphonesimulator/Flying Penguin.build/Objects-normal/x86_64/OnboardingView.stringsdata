@@ -1,0 +1,64 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/OnboardingView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "name.placeholder",
+        "location": {
+          "startingColumn": 65,
+          "startingLine": 127
+        }
+      },
+      {
+        "comment": "",
+        "key": "common.continue",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "onboarding.name.subtitle",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 121
+        }
+      },
+      {
+        "comment": "",
+        "key": "onboarding.name.title",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "onboarding.subject.subtitle",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 158
+        }
+      },
+      {
+        "comment": "",
+        "key": "onboarding.subject.title",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "onboarding.level.title",
+        "location": {
+          "startingColumn": 25,
+          "startingLine": 218
+        }
+      }
+    ]
+  },
+  "version": 1
+}

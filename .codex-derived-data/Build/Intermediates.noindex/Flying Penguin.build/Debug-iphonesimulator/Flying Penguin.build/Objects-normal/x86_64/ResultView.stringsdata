@@ -1,0 +1,64 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/ResultView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "game.end.gameOverTitle",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "result.complete",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 65
+        }
+      },
+      {
+        "comment": "",
+        "key": "result.stopped",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.end.completionSuffix",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 259
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.highScore",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 351
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.end.playAgain",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 384
+        }
+      },
+      {
+        "comment": "",
+        "key": "game.end.mainMenu",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 399
+        }
+      }
+    ]
+  },
+  "version": 1
+}

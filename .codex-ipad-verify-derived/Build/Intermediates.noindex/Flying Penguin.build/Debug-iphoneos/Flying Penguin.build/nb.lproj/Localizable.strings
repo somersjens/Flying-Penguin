@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Bjørn</string>
+	<key>character.bunny</key>
+	<string>Kanin</string>
+	<key>character.crab</key>
+	<string>Krabbe</string>
+	<key>character.dog</key>
+	<string>Hund</string>
+	<key>character.elephant</key>
+	<string>Elefant</string>
+	<key>character.fox</key>
+	<string>Rev</string>
+	<key>character.frog</key>
+	<string>Frosk</string>
+	<key>character.lion</key>
+	<string>Løve</string>
+	<key>character.octopus</key>
+	<string>Blekksprut</string>
+	<key>character.penguin</key>
+	<string>Pingvin</string>
+	<key>common.cancel</key>
+	<string>Avbryt</string>
+	<key>common.continue</key>
+	<string>Fortsett</string>
+	<key>common.done</key>
+	<string>Ferdig</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld min</string>
+	<key>common.ok</key>
+	<string>OK</string>
+	<key>common.save</key>
+	<string>Lagre</string>
+	<key>currency.hoop.plural</key>
+	<string>ringer</string>
+	<key>currency.hoop.singular</key>
+	<string>ring</string>
+	<key>game.combo %lld</key>
+	<string>Kombo! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Godt forsøk</string>
+	<key>game.encouragement.1</key>
+	<string>En god start</string>
+	<key>game.encouragement.2</key>
+	<string>Fortsett å øve</string>
+	<key>game.encouragement.3</key>
+	<string>Ikke verst</string>
+	<key>game.encouragement.4</key>
+	<string>Bra jobbet</string>
+	<key>game.encouragement.5</key>
+	<string>Flott innsats</string>
+	<key>game.encouragement.6</key>
+	<string>Godt gjort</string>
+	<key>game.encouragement.7</key>
+	<string>Kjempebra spilt</string>
+	<key>game.encouragement.8</key>
+	<string>Målet er i sikte</string>
+	<key>game.encouragement.9</key>
+	<string>Du er nesten fremme</string>
+	<key>game.encouragement.complete</key>
+	<string>Alt riktig!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Du fortjente hvert poeng.</string>
+	<key>game.end.completionSuffix</key>
+	<string>fullført!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Spillet er slutt</string>
+	<key>game.end.mainMenu</key>
+	<string>Hovedmeny</string>
+	<key>game.end.playAgain</key>
+	<string>Spill igjen</string>
+	<key>game.highScore</key>
+	<string>Rekord</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Tilbake til hovedmenyen</string>
+	<key>game.intro.continue</key>
+	<string>Fortsett</string>
+	<key>game.intro.progressPaused</key>
+	<string>Fremgangen er satt på pause.</string>
+	<key>game.intro.start</key>
+	<string>Start nivå</string>
+	<key>game.intro.startTutorial</key>
+	<string>Start veiledning</string>
+	<key>game.streakBoost.title</key>
+	<string>Doble poeng!</string>
+	<key>goal.period</key>
+	<string>Målperiode</string>
+	<key>goal.promptDaily</key>
+	<string>Hvor mange minutter vil du spille hver dag?</string>
+	<key>goal.promptWeekly</key>
+	<string>Hvor mange minutter vil du spille hver uke?</string>
+	<key>goal.title</key>
+	<string>Spillemål</string>
+	<key>goalPeriod.daily</key>
+	<string>Daglig</string>
+	<key>goalPeriod.weekly</key>
+	<string>Ukentlig</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld til</string>
+	<key>home.totalLabel</key>
+	<string>Totalt</string>
+	<key>info.mode.fractions.header</key>
+	<string>Deler</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Én eller flere deler</string>
+	<key>info.mode.fractions.single</key>
+	<string>Alltid én del</string>
+	<key>info.mode.header</key>
+	<string>Rekkefølge</string>
+	<key>info.mode.mixed</key>
+	<string>Blandet med lavere nivåer</string>
+	<key>info.mode.order</key>
+	<string>Fast rekkefølge</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Med desimaltall</string>
+	<key>info.mode.percentages.header</key>
+	<string>Type</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Uten desimaltall</string>
+	<key>info.mode.random</key>
+	<string>Tilfeldig rekkefølge</string>
+	<key>info.super.all</key>
+	<string>Addisjon, subtraksjon, multiplikasjon, divisjon og prosent</string>
+	<key>info.super.basic</key>
+	<string>Addisjon og subtraksjon</string>
+	<key>info.super.fraction</key>
+	<string>Addisjon, subtraksjon, multiplikasjon og divisjon</string>
+	<key>info.super.times</key>
+	<string>Addisjon, subtraksjon og multiplikasjon</string>
+	<key>info.topic.header</key>
+	<string>Typer oppgaver</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Oppgaver der du **legger til** et tall.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Pluss %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Du kan samle opptil **%lld gulrøtter** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Du kan samle opptil **%lld kyllinger** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Du kan samle opptil **%lld fisker** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Du kan samle opptil **%lld honningkrukker** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Du kan samle opptil **%lld ringer** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Du kan samle opptil **%lld hundekjeks** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Du kan samle opptil **%lld kjøttbiter** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Du kan samle opptil **%lld peanøtter** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Du kan samle opptil **%lld perler** på dette nivået.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Du kan samle opptil **%lld reker** på dette nivået.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Oppgaver der du **deler** et tall.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Del på %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Oppgaver opptil **nivå %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Oppgaver fra **nivå 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Alt blandet**: pluss, minus, gange, brøk og prosent.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Supermiks %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Alltid **én del** av en hel.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Én eller flere deler** av en hel.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Oppgaver i **fast rekkefølge**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Svar **uten desimaler**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Også svar **med desimaler**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Oppgaver i **tilfeldig rekkefølge**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Oppgaver med **prosent**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ av et tall</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Oppgaver der du **trekker fra** et tall.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Minus %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Oppgaver der du **ganger**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lld-gangen</string>
+	<key>menu.maximumCount</key>
+	<string>MAKS</string>
+	<key>menu.moreLevels</key>
+	<string>Flere nivåer</string>
+	<key>menu.premiumLevels</key>
+	<string>Premium-nivåer</string>
+	<key>menu.startHere</key>
+	<string>Start her</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Lås opp mer med Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Flere</string>
+	<key>mode.fractions.single</key>
+	<string>Én del</string>
+	<key>mode.mixed</key>
+	<string>Blandet</string>
+	<key>mode.order</key>
+	<string>Rekkefølge</string>
+	<key>mode.percentages.decimal</key>
+	<string>Desimal</string>
+	<key>mode.percentages.whole</key>
+	<string>Heltall</string>
+	<key>mode.random</key>
+	<string>Tilfeldig</string>
+	<key>name.placeholder</key>
+	<string>Navnet ditt</string>
+	<key>name.whatsYourName</key>
+	<string>Hva heter du?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Tjen noen flere ringer for å låse opp dette dyret! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Dyrene dine venter. Kom tilbake for å spille og fortsett å samle ringer!</string>
+	<key>notif.comeback.title</key>
+	<string>Vi savner deg! 👋</string>
+	<key>notif.day3.title</key>
+	<string>La oss få dag 3 til å skje! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Hungry Frog Premium inkluderer %lld nivåer for hvert emne og alle 10 dyrene. Eventyret fortsetter!</string>
+	<key>notif.premium.title</key>
+	<string>Lås opp flere nivåer og dyr! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Det har gått %lld dager. La oss løse noen matematikkøvelser og tjene flere ringer!</string>
+	<key>notif.reactivate.title</key>
+	<string>Klar til å spille igjen? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Forskjellige miksoppgaver sammen.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Allerede ganske god</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Øv på oppgaver i rekkefølge.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Nettopp begynt</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Oppgaver i tilfeldig rekkefølge.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Har øvd litt</string>
+	<key>onboarding.level.title</key>
+	<string>Hvor god er du allerede?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>La oss begynne. Hva heter du?</string>
+	<key>onboarding.name.title</key>
+	<string>Regning har aldri vært så gøy!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Velg et emne å starte med.</string>
+	<key>onboarding.subject.title</key>
+	<string>Hva vil du lære?</string>
+	<key>parentGate.approved</key>
+	<string>Godkjent</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Forsøk: %1$lld av %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Hold: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>sirkel</string>
+	<key>parentGate.shape.diamond</key>
+	<string>diamant</string>
+	<key>parentGate.shape.heart</key>
+	<string>hjerte</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>sekskant</string>
+	<key>parentGate.shape.plus</key>
+	<string>pluss</string>
+	<key>parentGate.shape.square</key>
+	<string>firkant</string>
+	<key>parentGate.shape.star</key>
+	<string>stjerne</string>
+	<key>parentGate.shape.triangle</key>
+	<string>trekant</string>
+	<key>parentGate.subtitle</key>
+	<string>For å beskytte unge spillere må en voksen fullføre denne kontrollen før kjøpet kan fortsette.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Trykk: %1$lld av %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Godkjenning fra en voksen kreves</string>
+	<key>premium.availableAt %lld</key>
+	<string>Tilgjengelig fra %lld trofeer</string>
+	<key>premium.availableFromStart</key>
+	<string>Tilgjengelig fra starten</string>
+	<key>premium.characterUnlocked</key>
+	<string>NY FIGUR LÅST OPP</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Du har tjent %lld ringer</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Eksklusiv med Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Med Premium kan du spille fritt med alle de 10 dyrene.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Tilgang til alle dyrene</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Alltid nok nye oppgaver å øve på.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 nivåer per emne</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Spill helt uten avbrytelser.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Ingen reklame</string>
+	<key>premium.oneTime</key>
+	<string>Engangskjøp. Ditt for alltid.</string>
+	<key>premium.restore</key>
+	<string>Gjenopprett kjøp</string>
+	<key>premium.start</key>
+	<string>Start</string>
+	<key>premium.storeUnavailable</key>
+	<string>Butikken er ikke tilgjengelig nå. Prøv igjen senere.</string>
+	<key>premium.unlock</key>
+	<string>Lås opp Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Lås opp Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Låst opp med Premium</string>
+	<key>result.complete</key>
+	<string>Nivå fullført!</string>
+	<key>result.stopped</key>
+	<string>Pause</string>
+	<key>settings.character</key>
+	<string>Figur</string>
+	<key>settings.characterInfo</key>
+	<string>Hvert dyr gir hele spillet sitt eget fargetema.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Egendefinert: %lld min</string>
+	<key>settings.dailyGoal</key>
+	<string>Daglig mål</string>
+	<key>settings.goalInfo</key>
+	<string>Rekkemålet starter på 5 minutter per dag. Bare aktiv spilletid teller.</string>
+	<key>settings.music</key>
+	<string>Musikk</string>
+	<key>settings.playGoals</key>
+	<string>Spillemål</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Premium er låst opp. Takk!</string>
+	<key>settings.sound</key>
+	<string>Lyd</string>
+	<key>settings.soundEffects</key>
+	<string>Musikk og lyder</string>
+	<key>settings.soundInfo</key>
+	<string>Slå av lyden for å spille stille. Spillet fungerer akkurat likt.</string>
+	<key>settings.title</key>
+	<string>Innstillinger</string>
+	<key>streak.dayOne</key>
+	<string>Dag 1</string>
+	<key>topic.addition</key>
+	<string>Addisjon</string>
+	<key>topic.addition.detail</key>
+	<string>Bare addisjon</string>
+	<key>topic.fractions</key>
+	<string>Brøk</string>
+	<key>topic.fractions.detail</key>
+	<string>Bare divisjon</string>
+	<key>topic.mixed</key>
+	<string>Supermiks</string>
+	<key>topic.mixed.detail</key>
+	<string>Blandede regnearter</string>
+	<key>topic.percentages</key>
+	<string>Prosent</string>
+	<key>topic.percentages.detail</key>
+	<string>Bare prosent</string>
+	<key>topic.subtraction</key>
+	<string>Subtraksjon</string>
+	<key>topic.subtraction.detail</key>
+	<string>Bare subtraksjon</string>
+	<key>topic.tables</key>
+	<string>Ganging</string>
+	<key>topic.tables.detail</key>
+	<string>Bare multiplikasjon</string>
+	<key>tutorial.notice.message</key>
+	<string>Du er midt i et spill. Fullfør det, eller velg et nivå du ikke har startet ennå, for å spille veiledningen.</string>
+	<key>tutorial.notice.title</key>
+	<string>Bare ved starten av et spill</string>
+</dict>
+</plist>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>دب</string>
+	<key>character.bunny</key>
+	<string>أرنب</string>
+	<key>character.crab</key>
+	<string>سلطعون</string>
+	<key>character.dog</key>
+	<string>كلب</string>
+	<key>character.elephant</key>
+	<string>فيل</string>
+	<key>character.fox</key>
+	<string>ثعلب</string>
+	<key>character.frog</key>
+	<string>ضفدع</string>
+	<key>character.lion</key>
+	<string>أسد</string>
+	<key>character.octopus</key>
+	<string>أخطبوط</string>
+	<key>character.penguin</key>
+	<string>بطريق</string>
+	<key>common.cancel</key>
+	<string>إلغاء</string>
+	<key>common.continue</key>
+	<string>متابعة</string>
+	<key>common.done</key>
+	<string>تم</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld د</string>
+	<key>common.ok</key>
+	<string>حسنًا</string>
+	<key>common.save</key>
+	<string>حفظ</string>
+	<key>currency.hoop.plural</key>
+	<string>حلقات</string>
+	<key>currency.hoop.singular</key>
+	<string>حلقة</string>
+	<key>game.combo %lld</key>
+	<string>سلسلة! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>محاولة جيدة</string>
+	<key>game.encouragement.1</key>
+	<string>بداية موفقة</string>
+	<key>game.encouragement.2</key>
+	<string>واصل التمرّن</string>
+	<key>game.encouragement.3</key>
+	<string>ليس سيئًا</string>
+	<key>game.encouragement.4</key>
+	<string>أداء جيد</string>
+	<key>game.encouragement.5</key>
+	<string>أداء رائع</string>
+	<key>game.encouragement.6</key>
+	<string>أحسنت</string>
+	<key>game.encouragement.7</key>
+	<string>لعب رائع جدًا</string>
+	<key>game.encouragement.8</key>
+	<string>النهاية قريبة</string>
+	<key>game.encouragement.9</key>
+	<string>أوشكت على الوصول</string>
+	<key>game.encouragement.complete</key>
+	<string>علامة كاملة!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>كسبت كل النقاط.</string>
+	<key>game.end.completionSuffix</key>
+	<string>اكتمل!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>انتهت اللعبة</string>
+	<key>game.end.mainMenu</key>
+	<string>القائمة الرئيسية</string>
+	<key>game.end.playAgain</key>
+	<string>العب مجددًا</string>
+	<key>game.highScore</key>
+	<string>أعلى نتيجة</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>العودة للقائمة الرئيسية</string>
+	<key>game.intro.continue</key>
+	<string>متابعة اللعب</string>
+	<key>game.intro.progressPaused</key>
+	<string>توقف تقدمك مؤقتًا.</string>
+	<key>game.intro.start</key>
+	<string>ابدأ المستوى</string>
+	<key>game.intro.startTutorial</key>
+	<string>ابدأ التدريب</string>
+	<key>game.streakBoost.title</key>
+	<string>نقاط مضاعفة!</string>
+	<key>goal.period</key>
+	<string>فترة الهدف</string>
+	<key>goal.promptDaily</key>
+	<string>كم دقيقة تريد أن تلعب يوميًا؟</string>
+	<key>goal.promptWeekly</key>
+	<string>كم دقيقة تريد أن تلعب أسبوعيًا؟</string>
+	<key>goal.title</key>
+	<string>هدف اللعب</string>
+	<key>goalPeriod.daily</key>
+	<string>يوميًا</string>
+	<key>goalPeriod.weekly</key>
+	<string>أسبوعيًا</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>%lld أخرى</string>
+	<key>home.totalLabel</key>
+	<string>المجموع</string>
+	<key>info.mode.fractions.header</key>
+	<string>الأجزاء</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>جزء واحد أو عدة أجزاء</string>
+	<key>info.mode.fractions.single</key>
+	<string>جزء واحد دائمًا</string>
+	<key>info.mode.header</key>
+	<string>الترتيب</string>
+	<key>info.mode.mixed</key>
+	<string>مختلط مع المستويات السابقة</string>
+	<key>info.mode.order</key>
+	<string>ترتيب ثابت</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>يشمل الأعداد العشرية</string>
+	<key>info.mode.percentages.header</key>
+	<string>النوع</string>
+	<key>info.mode.percentages.whole</key>
+	<string>من دون أعداد عشرية</string>
+	<key>info.mode.random</key>
+	<string>ترتيب عشوائي</string>
+	<key>info.super.all</key>
+	<string>الجمع والطرح والضرب والقسمة والنسب المئوية</string>
+	<key>info.super.basic</key>
+	<string>الجمع والطرح</string>
+	<key>info.super.fraction</key>
+	<string>الجمع والطرح والضرب والقسمة</string>
+	<key>info.super.times</key>
+	<string>الجمع والطرح والضرب</string>
+	<key>info.topic.header</key>
+	<string>أنواع المسائل</string>
+	<key>levelIntro.addition.intro</key>
+	<string>مسائل **تضيف** فيها عددًا.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>أضف %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>يمكنك جمع حتى **%lld جزرة** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>يمكنك جمع حتى **%lld دجاجة** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>يمكنك جمع حتى **%lld سمكة** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>يمكنك جمع حتى **%lld وعاء عسل** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>يمكنك جمع حتى **%lld حلقات** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>يمكنك جمع حتى **%lld بسكويتة للكلاب** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>يمكنك جمع حتى **%lld قطعة لحم** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>يمكنك جمع حتى **%lld حبة فول سوداني** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>يمكنك جمع حتى **%lld لؤلؤة** في هذا المستوى.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>يمكنك جمع حتى **%lld روبيان** في هذا المستوى.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>مسائل **تقسم** فيها عددًا.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>اقسم على %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>أسئلة حتى **المستوى %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>أسئلة من **المستوى 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**كل شيء مختلط**: جمع، طرح، ضرب، كسور ونِسَب مئوية.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>مزيج خارق %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>دائمًا **جزء واحد** من الكل.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**جزء واحد أو أكثر** من الكل.</string>
+	<key>levelIntro.mode.order</key>
+	<string>الأسئلة **بترتيب ثابت**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>إجابات **بلا أعداد عشرية**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>وأيضًا إجابات **بأعداد عشرية**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>الأسئلة **بترتيب عشوائي**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>مسائل فيها **نِسَب مئوية**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ من عدد</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>مسائل **تطرح** فيها عددًا.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>اطرح %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>مسائل **تضرب** فيها.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>جدول %lld</string>
+	<key>menu.maximumCount</key>
+	<string>أقصى</string>
+	<key>menu.moreLevels</key>
+	<string>مستويات أكثر</string>
+	<key>menu.premiumLevels</key>
+	<string>مستويات مميزة</string>
+	<key>menu.startHere</key>
+	<string>ابدأ هنا</string>
+	<key>menu.unlockWithPremium</key>
+	<string>افتح المزيد مع المميز</string>
+	<key>mode.fractions.multiple</key>
+	<string>متعدد</string>
+	<key>mode.fractions.single</key>
+	<string>واحد</string>
+	<key>mode.mixed</key>
+	<string>مختلط</string>
+	<key>mode.order</key>
+	<string>ترتيب</string>
+	<key>mode.percentages.decimal</key>
+	<string>عشري</string>
+	<key>mode.percentages.whole</key>
+	<string>صحيح</string>
+	<key>mode.random</key>
+	<string>عشوائي</string>
+	<key>name.placeholder</key>
+	<string>اسمك</string>
+	<key>name.whatsYourName</key>
+	<string>ما اسمك؟</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: احصل على المزيد من حلقات لفتح هذا الحيوان! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>حيواناتك تنتظر. عد للعب واستمر في جمع حلقات!</string>
+	<key>notif.comeback.title</key>
+	<string>إننا نفتقدك! 👋</string>
+	<key>notif.day3.title</key>
+	<string>دعونا نجعل اليوم الثالث يحدث! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>يتضمن Hungry Frog Premium %lld مستوى لكل موضوع وجميع الحيوانات العشرة. المغامرة مستمرة!</string>
+	<key>notif.premium.title</key>
+	<string>فتح المزيد من المستويات والحيوانات! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>لقد مرت %lld أيام. دعونا نحل بعض تمارين الرياضيات ونكسب المزيد من حلقات!</string>
+	<key>notif.reactivate.title</key>
+	<string>على استعداد للعب مرة أخرى؟ 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>مسائل مختلطة مختلفة معًا.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>جيد جدًا بالفعل</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>تدرّب على المسائل بالترتيب.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>بدأت للتو</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>مسائل بترتيب عشوائي.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>تمرّنت قليلًا</string>
+	<key>onboarding.level.title</key>
+	<string>ما مدى إتقانك لهذا؟</string>
+	<key>onboarding.name.subtitle</key>
+	<string>لنبدأ. ما اسمك؟</string>
+	<key>onboarding.name.title</key>
+	<string>لم تكن المسائل ممتعة هكذا من قبل!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>اختر موضوعًا لتبدأ به.</string>
+	<key>onboarding.subject.title</key>
+	<string>ماذا تريد أن تتعلم؟</string>
+	<key>parentGate.approved</key>
+	<string>تمت الموافقة</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>المحاولات: %1$lld من %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>اضغط مطولًا: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>دائرة</string>
+	<key>parentGate.shape.diamond</key>
+	<string>معيّن</string>
+	<key>parentGate.shape.heart</key>
+	<string>قلب</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>سداسي</string>
+	<key>parentGate.shape.plus</key>
+	<string>زائد</string>
+	<key>parentGate.shape.square</key>
+	<string>مربع</string>
+	<key>parentGate.shape.star</key>
+	<string>نجمة</string>
+	<key>parentGate.shape.triangle</key>
+	<string>مثلث</string>
+	<key>parentGate.subtitle</key>
+	<string>لحماية اللاعبين الصغار، يجب أن يُكمل شخص بالغ هذا التحقق قبل متابعة الشراء.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>الضغطات: %1$lld من %2$lld</string>
+	<key>parentGate.title</key>
+	<string>موافقة شخص بالغ مطلوبة</string>
+	<key>premium.availableAt %lld</key>
+	<string>متاح بدءًا من %lld كأسًا</string>
+	<key>premium.availableFromStart</key>
+	<string>متاح منذ البداية</string>
+	<key>premium.characterUnlocked</key>
+	<string>تم فتح شخصية جديدة</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ربحت %lld من حلقات</string>
+	<key>premium.exclusiveBadge</key>
+	<string>حصري مع Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>مع المميز، يمكنك اللعب بحرية بكل الحيوانات العشرة.</string>
+	<key>premium.feature.animals.title</key>
+	<string>كل الحيوانات متاحة</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>مسائل جديدة كافية دائمًا للتمرّن.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 مستوى لكل موضوع</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>العب بلا أي مقاطعات.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>بلا إعلانات</string>
+	<key>premium.oneTime</key>
+	<string>شراء مرة واحدة. لك للأبد.</string>
+	<key>premium.restore</key>
+	<string>استعادة المشتريات</string>
+	<key>premium.start</key>
+	<string>ابدأ</string>
+	<key>premium.storeUnavailable</key>
+	<string>المتجر غير متاح الآن. حاول لاحقًا.</string>
+	<key>premium.unlock</key>
+	<string>فتح المميز</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>فتح المميز · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>تم فتحه مع Premium</string>
+	<key>result.complete</key>
+	<string>اكتمل المستوى!</string>
+	<key>result.stopped</key>
+	<string>متوقف مؤقتًا</string>
+	<key>settings.character</key>
+	<string>الشخصية</string>
+	<key>settings.characterInfo</key>
+	<string>يمنح كل حيوان اللعبة كلها ألوانه الخاصة.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>مخصص: %lld د</string>
+	<key>settings.dailyGoal</key>
+	<string>الهدف اليومي</string>
+	<key>settings.goalInfo</key>
+	<string>يبدأ هدف الاستمرار بـ5 دقائق يوميًا. يُحسب وقت اللعب الفعلي فقط.</string>
+	<key>settings.music</key>
+	<string>الموسيقى</string>
+	<key>settings.playGoals</key>
+	<string>أهداف اللعب</string>
+	<key>settings.premiumUnlocked</key>
+	<string>تم فتح المميز. شكرًا لك!</string>
+	<key>settings.sound</key>
+	<string>الصوت</string>
+	<key>settings.soundEffects</key>
+	<string>الموسيقى والمؤثرات</string>
+	<key>settings.soundInfo</key>
+	<string>أوقف الصوت لتلعب بهدوء. اللعبة تعمل بالطريقة نفسها.</string>
+	<key>settings.title</key>
+	<string>الإعدادات</string>
+	<key>streak.dayOne</key>
+	<string>اليوم 1</string>
+	<key>topic.addition</key>
+	<string>الجمع</string>
+	<key>topic.addition.detail</key>
+	<string>الجمع فقط</string>
+	<key>topic.fractions</key>
+	<string>الكسور</string>
+	<key>topic.fractions.detail</key>
+	<string>القسمة فقط</string>
+	<key>topic.mixed</key>
+	<string>مزيج خارق</string>
+	<key>topic.mixed.detail</key>
+	<string>عمليات مختلطة</string>
+	<key>topic.percentages</key>
+	<string>النسب المئوية</string>
+	<key>topic.percentages.detail</key>
+	<string>النسب المئوية فقط</string>
+	<key>topic.subtraction</key>
+	<string>الطرح</string>
+	<key>topic.subtraction.detail</key>
+	<string>الطرح فقط</string>
+	<key>topic.tables</key>
+	<string>الجداول</string>
+	<key>topic.tables.detail</key>
+	<string>الضرب فقط</string>
+	<key>tutorial.notice.message</key>
+	<string>أنت في منتصف لعبة. أنهِها أو اختر مستوى لم تبدأه بعد لتلعب التدريب.</string>
+	<key>tutorial.notice.title</key>
+	<string>فقط في بداية اللعبة</string>
+</dict>
+</plist>

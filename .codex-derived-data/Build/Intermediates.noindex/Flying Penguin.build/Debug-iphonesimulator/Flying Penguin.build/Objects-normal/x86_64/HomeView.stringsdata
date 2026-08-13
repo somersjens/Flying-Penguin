@@ -1,0 +1,56 @@
+{
+  "source": "/Users/jenssomers/Desktop/Flying Penguin/Flying Penguin/HomeView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "home.totalLabel",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 426
+        }
+      },
+      {
+        "comment": "",
+        "key": "info.topic.header",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 539
+        }
+      },
+      {
+        "comment": "",
+        "key": "info.topic.header",
+        "location": {
+          "startingColumn": 41,
+          "startingLine": 663
+        }
+      },
+      {
+        "comment": "",
+        "key": "menu.premiumLevels",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 851
+        }
+      },
+      {
+        "comment": "",
+        "key": "menu.moreLevels",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 882
+        }
+      },
+      {
+        "comment": "",
+        "key": "menu.unlockWithPremium",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 885
+        }
+      }
+    ]
+  },
+  "version": 1
+}

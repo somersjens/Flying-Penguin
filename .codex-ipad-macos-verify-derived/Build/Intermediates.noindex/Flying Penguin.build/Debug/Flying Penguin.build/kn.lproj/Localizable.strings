@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>ಕರಡಿ</string>
+	<key>character.bunny</key>
+	<string>ಮೊಲ</string>
+	<key>character.crab</key>
+	<string>ಏಡಿ</string>
+	<key>character.dog</key>
+	<string>ನಾಯಿ</string>
+	<key>character.elephant</key>
+	<string>ಆನೆ</string>
+	<key>character.fox</key>
+	<string>ನರಿ</string>
+	<key>character.frog</key>
+	<string>ಕಪ್ಪೆ</string>
+	<key>character.lion</key>
+	<string>ಸಿಂಹ</string>
+	<key>character.octopus</key>
+	<string>ಆಕ್ಟೋಪಸ್</string>
+	<key>character.penguin</key>
+	<string>ಪೆಂಗ್ವಿನ್</string>
+	<key>common.cancel</key>
+	<string>ರದ್ದು</string>
+	<key>common.continue</key>
+	<string>ಮುಂದೆ</string>
+	<key>common.done</key>
+	<string>ಆಯಿತು</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld ನಿಮಿ</string>
+	<key>common.ok</key>
+	<string>ಸರಿ</string>
+	<key>common.save</key>
+	<string>ಉಳಿಸು</string>
+	<key>currency.hoop.plural</key>
+	<string>ವಲಯಗಳು</string>
+	<key>currency.hoop.singular</key>
+	<string>ವಲಯ</string>
+	<key>game.combo %lld</key>
+	<string>ಕಾಂಬೋ! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>ಒಳ್ಳೆಯ ಪ್ರಯತ್ನ</string>
+	<key>game.encouragement.1</key>
+	<string>ಇದು ಒಳ್ಳೆಯ ಆರಂಭ</string>
+	<key>game.encouragement.2</key>
+	<string>ಅಭ್ಯಾಸ ಮುಂದುವರಿಸು</string>
+	<key>game.encouragement.3</key>
+	<string>ತುಂಬಾ ಕೆಟ್ಟಿಲ್ಲ</string>
+	<key>game.encouragement.4</key>
+	<string>ಚೆನ್ನಾಗಿ ಮಾಡುತ್ತಿದ್ದೀಯ</string>
+	<key>game.encouragement.5</key>
+	<string>ಚೆನ್ನಾದ ಸಾಧನೆ</string>
+	<key>game.encouragement.6</key>
+	<string>ಚೆನ್ನಾಗಿ ಮಾಡಿದೆ</string>
+	<key>game.encouragement.7</key>
+	<string>ತುಂಬಾ ಚೆನ್ನಾಗಿ ಆಡಿದೆ</string>
+	<key>game.encouragement.8</key>
+	<string>ಅಂತ್ಯ ಹತ್ತಿರದಲ್ಲಿದೆ</string>
+	<key>game.encouragement.9</key>
+	<string>ಇನ್ನೇನು ತಲುಪುತ್ತೀಯ</string>
+	<key>game.encouragement.complete</key>
+	<string>ಎಲ್ಲವೂ ಸರಿಯಾಗಿದೆ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>ಪ್ರತಿ ಅಂಕವನ್ನೂ ಗಳಿಸಿದ್ದೀಯ.</string>
+	<key>game.end.completionSuffix</key>
+	<string>ಪೂರ್ಣ!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>ಆಟ ಮುಗಿತು</string>
+	<key>game.end.mainMenu</key>
+	<string>ಮುಖ್ಯ ಮೆನು</string>
+	<key>game.end.playAgain</key>
+	<string>ಮತ್ತೆ ಆಡು</string>
+	<key>game.highScore</key>
+	<string>ಅತ್ಯುತ್ತಮ ಅಂಕ</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>ಮುಖ್ಯ ಮೆನುಗೆ ಹಿಂತಿರುಗು</string>
+	<key>game.intro.continue</key>
+	<string>ಮುಂದುವರಿಸು</string>
+	<key>game.intro.progressPaused</key>
+	<string>ನಿನ್ನ ಪ್ರಗತಿ ನಿಂತಿದೆ.</string>
+	<key>game.intro.start</key>
+	<string>ಹಂತ ಆರಂಭಿಸು</string>
+	<key>game.intro.startTutorial</key>
+	<string>ಟ್ಯುಟೋರಿಯಲ್ ಆರಂಭಿಸು</string>
+	<key>game.streakBoost.title</key>
+	<string>ಡಬಲ್ ಪಾಯಿಂಟ್‌ಗಳು!</string>
+	<key>goal.period</key>
+	<string>ಗುರಿಯ ಅವಧಿ</string>
+	<key>goal.promptDaily</key>
+	<string>ದಿನಕ್ಕೆ ಎಷ್ಟು ನಿಮಿಷ ಆಡಲು ಬಯಸುತ್ತೀಯ?</string>
+	<key>goal.promptWeekly</key>
+	<string>ವಾರಕ್ಕೆ ಎಷ್ಟು ನಿಮಿಷ ಆಡಲು ಬಯಸುತ್ತೀಯ?</string>
+	<key>goal.title</key>
+	<string>ಆಟದ ಗುರಿ</string>
+	<key>goalPeriod.daily</key>
+	<string>ಪ್ರತಿದಿನ</string>
+	<key>goalPeriod.weekly</key>
+	<string>ಪ್ರತಿವಾರ</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>ಇನ್ನೂ %lld</string>
+	<key>home.totalLabel</key>
+	<string>ಒಟ್ಟು</string>
+	<key>info.mode.fractions.header</key>
+	<string>ಭಾಗಗಳು</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>ಒಂದು ಮತ್ತು ಹಲವು ಭಾಗಗಳು</string>
+	<key>info.mode.fractions.single</key>
+	<string>ಯಾವಾಗಲೂ ಒಂದು ಭಾಗ</string>
+	<key>info.mode.header</key>
+	<string>ಕ್ರಮ</string>
+	<key>info.mode.mixed</key>
+	<string>ಕೆಳ ಹಂತಗಳೊಂದಿಗೆ ಮಿಶ್ರ</string>
+	<key>info.mode.order</key>
+	<string>ನಿಗದಿತ ಕ್ರಮ</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>ದಶಮಾಂಶಗಳೊಂದಿಗೆ</string>
+	<key>info.mode.percentages.header</key>
+	<string>ವಿಧ</string>
+	<key>info.mode.percentages.whole</key>
+	<string>ದಶಮಾಂಶಗಳಿಲ್ಲದೆ</string>
+	<key>info.mode.random</key>
+	<string>ಯಾದೃಚ್ಛಿಕ ಕ್ರಮ</string>
+	<key>info.super.all</key>
+	<string>ಕೂಡಿಸುವಿಕೆ, ಕಳೆಯುವಿಕೆ, ಗುಣಾಕಾರ, ಭಾಗಾಕಾರ ಮತ್ತು ಶೇಕಡಾವಾರು</string>
+	<key>info.super.basic</key>
+	<string>ಕೂಡಿಸುವಿಕೆ ಮತ್ತು ಕಳೆಯುವಿಕೆ</string>
+	<key>info.super.fraction</key>
+	<string>ಕೂಡಿಸುವಿಕೆ, ಕಳೆಯುವಿಕೆ, ಗುಣಾಕಾರ ಮತ್ತು ಭಾಗಾಕಾರ</string>
+	<key>info.super.times</key>
+	<string>ಕೂಡಿಸುವಿಕೆ, ಕಳೆಯುವಿಕೆ ಮತ್ತು ಗುಣಾಕಾರ</string>
+	<key>info.topic.header</key>
+	<string>ಲೆಕ್ಕಗಳ ವಿಧಗಳು</string>
+	<key>levelIntro.addition.intro</key>
+	<string>ಸಂಖ್ಯೆಯನ್ನು **ಕೂಡಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>%lld ಸೇರಿಸು</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕ್ಯಾರೆಟ್‌ಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕೋಳಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮೀನುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಜೇನು ಕುಡಿಕೆಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ವಲಯಗಳು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ನಾಯಿ ಬಿಸ್ಕತ್‌ಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮಾಂಸದ ತುಂಡುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕಡಲೆಕಾಯಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮುತ್ತುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಸೀಗಡಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>ಸಂಖ್ಯೆಯನ್ನು **ಭಾಗಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>%lldರಿಂದ ಭಾಗಿಸು</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>**ಹಂತ %lld** ವರೆಗಿನ ಪ್ರಶ್ನೆಗಳು.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>**ಹಂತ 1**ರ ಪ್ರಶ್ನೆಗಳು.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**ಎಲ್ಲವೂ ಮಿಶ್ರ**: ಪ್ಲಸ್, ಮೈನಸ್, ಗುಣಾಕಾರ, ಭಿನ್ನರಾಶಿ ಮತ್ತು ಶೇಕಡಾ.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>ಸೂಪರ್‌ಮಿಕ್ಸ್ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>ಒಟ್ಟಿನ **ಒಂದು ಭಾಗ** ಮಾತ್ರ.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>ಒಟ್ಟಿನ **ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಭಾಗಗಳು**.</string>
+	<key>levelIntro.mode.order</key>
+	<string>ಪ್ರಶ್ನೆಗಳು **ನಿಗದಿತ ಕ್ರಮದಲ್ಲಿ**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>ಉತ್ತರಗಳು **ದಶಮಾಂಶವಿಲ್ಲದೆ**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>ಉತ್ತರಗಳು **ದಶಮಾಂಶದೊಂದಿಗೆ** ಕೂಡ.</string>
+	<key>levelIntro.mode.random</key>
+	<string>ಪ್ರಶ್ನೆಗಳು **ಯಾದೃಚ್ಛಿಕ ಕ್ರಮದಲ್ಲಿ**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>**ಶೇಕಡಾ** ಇರುವ ಲೆಕ್ಕಗಳು.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>ಸಂಖ್ಯೆಯ %@</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>ಸಂಖ್ಯೆಯನ್ನು **ಕಳೆಯುವ** ಲೆಕ್ಕಗಳು.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>%lld ಕಳೆ</string>
+	<key>levelIntro.tables.intro</key>
+	<string>**ಗುಣಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>%lldರ ಪಾಠ</string>
+	<key>menu.maximumCount</key>
+	<string>MAX</string>
+	<key>menu.moreLevels</key>
+	<string>ಇನ್ನಷ್ಟು ಹಂತಗಳು</string>
+	<key>menu.premiumLevels</key>
+	<string>ಪ್ರೀಮಿಯಂ ಹಂತಗಳು</string>
+	<key>menu.startHere</key>
+	<string>ಇಲ್ಲಿಂದ ಆರಂಭಿಸು</string>
+	<key>menu.unlockWithPremium</key>
+	<string>ಪ್ರೀಮಿಯಂ ಮೂಲಕ ಇನ್ನಷ್ಟು ತೆರೆಯಿರಿ</string>
+	<key>mode.fractions.multiple</key>
+	<string>ಹಲವು</string>
+	<key>mode.fractions.single</key>
+	<string>ಒಂದು</string>
+	<key>mode.mixed</key>
+	<string>ಮಿಶ್ರ</string>
+	<key>mode.order</key>
+	<string>ಕ್ರಮ</string>
+	<key>mode.percentages.decimal</key>
+	<string>ದಶಮಾಂಶ</string>
+	<key>mode.percentages.whole</key>
+	<string>ಪೂರ್ಣ</string>
+	<key>mode.random</key>
+	<string>ಯಾದೃಚ್ಛಿಕ</string>
+	<key>name.placeholder</key>
+	<string>ನಿನ್ನ ಹೆಸರು</string>
+	<key>name.whatsYourName</key>
+	<string>ನಿನ್ನ ಹೆಸರೇನು?</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: ಈ ಪ್ರಾಣಿಯನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಇನ್ನೂ ಕೆಲವು ವಲಯಗಳು ಗಳಿಸಿ! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>ನಿಮ್ಮ ಪ್ರಾಣಿಗಳು ಕಾಯುತ್ತಿವೆ. ಆಡಲು ಹಿಂತಿರುಗಿ ಮತ್ತು ವಲಯಗಳು ಸಂಗ್ರಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಿ!</string>
+	<key>notif.comeback.title</key>
+	<string>ನಾವು ನಿನ್ನನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೇವೆ! 👋</string>
+	<key>notif.day3.title</key>
+	<string>3 ನೇ ದಿನವನ್ನು ಮಾಡೋಣ! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>ಜಂಪಿಂಗ್ ಫಾಕ್ಸ್ ಪ್ರೀಮಿಯಂ ಪ್ರತಿ ವಿಷಯ ಮತ್ತು ಎಲ್ಲಾ 10 ಪ್ರಾಣಿಗಳಿಗೆ %lld ಹಂತಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಸಾಹಸವು ಮುಂದುವರಿಯುತ್ತದೆ!</string>
+	<key>notif.premium.title</key>
+	<string>ಹೆಚ್ಚಿನ ಮಟ್ಟಗಳು ಮತ್ತು ಪ್ರಾಣಿಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>%lld ದಿನಗಳಾಗಿವೆ. ಕೆಲವು ಗಣಿತ ವ್ಯಾಯಾಮಗಳನ್ನು ಪರಿಹರಿಸೋಣ ಮತ್ತು ಹೆಚ್ಚಿನ ವಲಯಗಳು ಗಳಿಸೋಣ!</string>
+	<key>notif.reactivate.title</key>
+	<string>ಮತ್ತೆ ಆಡಲು ಸಿದ್ಧರಿದ್ದೀರಾ? 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>ಬೇರೆ ಬೇರೆ ಮಿಶ್ರ ಲೆಕ್ಕಗಳು.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>ಈಗಲೇ ಚೆನ್ನಾಗಿದ್ದೀಯ</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>ಕ್ರಮದ ಲೆಕ್ಕಗಳನ್ನು ಅಭ್ಯಾಸ ಮಾಡು.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>ಈಗಷ್ಟೇ ಆರಂಭಿಸಿದೆ</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>ಯಾದೃಚ್ಛಿಕ ಕ್ರಮದ ಲೆಕ್ಕಗಳು.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>ಸ್ವಲ್ಪ ಅಭ್ಯಾಸವಾಗಿದೆ</string>
+	<key>onboarding.level.title</key>
+	<string>ಇದರಲ್ಲಿ ಈಗಾಗಲೇ ಎಷ್ಟು ಚೆನ್ನಾಗಿದ್ದೀಯ?</string>
+	<key>onboarding.name.subtitle</key>
+	<string>ಆರಂಭಿಸೋಣ. ನಿನ್ನ ಹೆಸರೇನು?</string>
+	<key>onboarding.name.title</key>
+	<string>ಲೆಕ್ಕ ಮಾಡುವುದು ಇಷ್ಟು ಮಜವಾಗಿರಲಿಲ್ಲ!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>ಆರಂಭಿಸಲು ಒಂದು ವಿಷಯ ಆರಿಸು.</string>
+	<key>onboarding.subject.title</key>
+	<string>ನೀನು ಏನು ಕಲಿಯಲು ಬಯಸುತ್ತೀಯ?</string>
+	<key>parentGate.approved</key>
+	<string>ಅನುಮೋದಿಸಲಾಗಿದೆ</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>ಪ್ರಯತ್ನಗಳು: %2$lldರಲ್ಲಿ %1$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>ಒತ್ತಿಹಿಡಿ: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>ವೃತ್ತ</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ವಜ್ರ</string>
+	<key>parentGate.shape.heart</key>
+	<string>ಹೃದಯ</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>ಷಟ್ಕೋನ</string>
+	<key>parentGate.shape.plus</key>
+	<string>ಪ್ಲಸ್</string>
+	<key>parentGate.shape.square</key>
+	<string>ಚೌಕ</string>
+	<key>parentGate.shape.star</key>
+	<string>ನಕ್ಷತ್ರ</string>
+	<key>parentGate.shape.triangle</key>
+	<string>ತ್ರಿಕೋನ</string>
+	<key>parentGate.subtitle</key>
+	<string>ಚಿಕ್ಕ ಆಟಗಾರರನ್ನು ರಕ್ಷಿಸಲು, ಖರೀದಿಗೆ ಮುಂದುವರಿಯುವ ಮೊದಲು ವಯಸ್ಕರು ಈ ಪರಿಶೀಲನೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಬೇಕು.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>ತಟ್ಟುಗಳು: %2$lldರಲ್ಲಿ %1$lld</string>
+	<key>parentGate.title</key>
+	<string>ವಯಸ್ಕರ ಅನುಮತಿ ಅಗತ್ಯ</string>
+	<key>premium.availableAt %lld</key>
+	<string>%lld ಟ್ರೋಫಿಗಳಿಂದ ಲಭ್ಯ</string>
+	<key>premium.availableFromStart</key>
+	<string>ಆರಂಭದಿಂದಲೇ ಲಭ್ಯ</string>
+	<key>premium.characterUnlocked</key>
+	<string>ಹೊಸ ಪಾತ್ರವನ್ನು ತೆರೆಯಲಾಗಿದೆ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>ನೀನು %lld ವಲಯಗಳು ಗಳಿಸಿದ್ದೀಯ</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Premium ಜೊತೆಗೆ ಮಾತ್ರ</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>ಪ್ರೀಮಿಯಂನಲ್ಲಿ ಎಲ್ಲಾ 10 ಪ್ರಾಣಿಗಳೊಂದಿಗೆ ಮುಕ್ತವಾಗಿ ಆಡು.</string>
+	<key>premium.feature.animals.title</key>
+	<string>ಎಲ್ಲಾ ಪ್ರಾಣಿಗಳಿಗೆ ಪ್ರವೇಶ</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>ಅಭ್ಯಾಸಕ್ಕೆ ಯಾವಾಗಲೂ ಸಾಕಷ್ಟು ಹೊಸ ಲೆಕ್ಕಗಳು.</string>
+	<key>premium.feature.levels.title</key>
+	<string>ಪ್ರತಿ ವಿಷಯಕ್ಕೆ 99 ಹಂತಗಳು</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>ಯಾವುದೇ ಅಡ್ಡಿಯಿಲ್ಲದೆ ಆಡು.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>ಜಾಹೀರಾತುಗಳಿಲ್ಲ</string>
+	<key>premium.oneTime</key>
+	<string>ಒಮ್ಮೆ ಖರೀದಿ. ಸದಾಕಾಲ ನಿನ್ನದು.</string>
+	<key>premium.restore</key>
+	<string>ಖರೀದಿಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸು</string>
+	<key>premium.start</key>
+	<string>ಪ್ರಾರಂಭಿಸಿ</string>
+	<key>premium.storeUnavailable</key>
+	<string>ಅಂಗಡಿ ಈಗ ಲಭ್ಯವಿಲ್ಲ. ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</string>
+	<key>premium.unlock</key>
+	<string>ಪ್ರೀಮಿಯಂ ತೆರೆಯಿರಿ</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>ಪ್ರೀಮಿಯಂ ತೆರೆಯಿರಿ · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Premium ಮೂಲಕ ತೆರೆಯಲಾಗಿದೆ</string>
+	<key>result.complete</key>
+	<string>ಹಂತ ಮುಗಿದಿದೆ!</string>
+	<key>result.stopped</key>
+	<string>ನಿಲ್ಲಿಸಲಾಗಿದೆ</string>
+	<key>settings.character</key>
+	<string>ಪಾತ್ರ</string>
+	<key>settings.characterInfo</key>
+	<string>ಪ್ರತಿ ಪ್ರಾಣಿಯೂ ಇಡೀ ಆಟಕ್ಕೆ ತನ್ನದೇ ಬಣ್ಣದ ಥೀಮ್ ನೀಡುತ್ತದೆ.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>ಕಸ್ಟಮ್: %lld ನಿಮಿ</string>
+	<key>settings.dailyGoal</key>
+	<string>ದೈನಂದಿನ ಗುರಿ</string>
+	<key>settings.goalInfo</key>
+	<string>ಸತತ ಆಟದ ಗುರಿ ದಿನಕ್ಕೆ 5 ನಿಮಿಷದಿಂದ ಆರಂಭವಾಗುತ್ತದೆ. ಸಕ್ರಿಯವಾಗಿ ಆಡಿದ ಸಮಯ ಮಾತ್ರ ಲೆಕ್ಕಕ್ಕೆ ಸೇರುತ್ತದೆ.</string>
+	<key>settings.music</key>
+	<string>ಸಂಗೀತ</string>
+	<key>settings.playGoals</key>
+	<string>ಆಟದ ಗುರಿಗಳು</string>
+	<key>settings.premiumUnlocked</key>
+	<string>ಪ್ರೀಮಿಯಂ ತೆರೆಯಿತು. ಧನ್ಯವಾದಗಳು!</string>
+	<key>settings.sound</key>
+	<string>ಧ್ವನಿ</string>
+	<key>settings.soundEffects</key>
+	<string>ಸಂಗೀತ ಮತ್ತು ಪರಿಣಾಮಗಳು</string>
+	<key>settings.soundInfo</key>
+	<string>ಮೌನವಾಗಿ ಆಡಲು ಧ್ವನಿ ಆರಿಸು. ಆಟ ಹಾಗೆಯೇ ಕೆಲಸ ಮಾಡುತ್ತದೆ.</string>
+	<key>settings.title</key>
+	<string>ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+	<key>streak.dayOne</key>
+	<string>ದಿನ 1</string>
+	<key>topic.addition</key>
+	<string>ಕೂಡಿಸುವುದು</string>
+	<key>topic.addition.detail</key>
+	<string>ಕೂಡಿಸುವುದು ಮಾತ್ರ</string>
+	<key>topic.fractions</key>
+	<string>ಭಿನ್ನರಾಶಿಗಳು</string>
+	<key>topic.fractions.detail</key>
+	<string>ಭಾಗಿಸುವುದು ಮಾತ್ರ</string>
+	<key>topic.mixed</key>
+	<string>ಸೂಪರ್‌ಮಿಕ್ಸ್</string>
+	<key>topic.mixed.detail</key>
+	<string>ಮಿಶ್ರ ಲೆಕ್ಕಗಳು</string>
+	<key>topic.percentages</key>
+	<string>ಶೇಕಡಾ</string>
+	<key>topic.percentages.detail</key>
+	<string>ಶೇಕಡಾ ಮಾತ್ರ</string>
+	<key>topic.subtraction</key>
+	<string>ಕಳೆಯುವುದು</string>
+	<key>topic.subtraction.detail</key>
+	<string>ಕಳೆಯುವುದು ಮಾತ್ರ</string>
+	<key>topic.tables</key>
+	<string>ಪಾಠಗಳು</string>
+	<key>topic.tables.detail</key>
+	<string>ಗುಣಿಸುವುದು ಮಾತ್ರ</string>
+	<key>tutorial.notice.message</key>
+	<string>ನೀನು ಈಗ ಆಟದ ಮಧ್ಯದಲ್ಲಿದ್ದೀಯ. ಮೊದಲು ಅದನ್ನು ಮುಗಿಸು, ಅಥವಾ ಇನ್ನೂ ಆರಂಭಿಸದ ಹಂತವನ್ನು ಆರಿಸಿ ಟ್ಯುಟೋರಿಯಲ್ ಆಡು.</string>
+	<key>tutorial.notice.title</key>
+	<string>ಆಟದ ಆರಂಭದಲ್ಲಿ ಮಾತ್ರ</string>
+</dict>
+</plist>

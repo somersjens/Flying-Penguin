@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>character.bear</key>
+	<string>Αρκούδα</string>
+	<key>character.bunny</key>
+	<string>Λαγός</string>
+	<key>character.crab</key>
+	<string>Καβούρι</string>
+	<key>character.dog</key>
+	<string>Σκύλος</string>
+	<key>character.elephant</key>
+	<string>Ελέφαντας</string>
+	<key>character.fox</key>
+	<string>Αλεπού</string>
+	<key>character.frog</key>
+	<string>Βάτραχος</string>
+	<key>character.lion</key>
+	<string>Λιοντάρι</string>
+	<key>character.octopus</key>
+	<string>Χταπόδι</string>
+	<key>character.penguin</key>
+	<string>Πιγκουίνος</string>
+	<key>common.cancel</key>
+	<string>Ακύρωση</string>
+	<key>common.continue</key>
+	<string>Συνέχεια</string>
+	<key>common.done</key>
+	<string>Έτοιμο</string>
+	<key>common.minutesShort %lld %lld</key>
+	<string>%1$lld/%2$lld λεπ.</string>
+	<key>common.ok</key>
+	<string>ΟΚ</string>
+	<key>common.save</key>
+	<string>Αποθήκευση</string>
+	<key>currency.hoop.plural</key>
+	<string>στεφάνια</string>
+	<key>currency.hoop.singular</key>
+	<string>στεφάνι</string>
+	<key>game.combo %lld</key>
+	<string>Σερί! +%lld</string>
+	<key>game.encouragement.0</key>
+	<string>Καλή προσπάθεια</string>
+	<key>game.encouragement.1</key>
+	<string>Μια καλή αρχή</string>
+	<key>game.encouragement.2</key>
+	<string>Συνέχισε την εξάσκηση</string>
+	<key>game.encouragement.3</key>
+	<string>Καθόλου άσχημα</string>
+	<key>game.encouragement.4</key>
+	<string>Τα πας καλά</string>
+	<key>game.encouragement.5</key>
+	<string>Ωραία επίδοση</string>
+	<key>game.encouragement.6</key>
+	<string>Μπράβο</string>
+	<key>game.encouragement.7</key>
+	<string>Έπαιξες πολύ καλά</string>
+	<key>game.encouragement.8</key>
+	<string>Το τέλος πλησιάζει</string>
+	<key>game.encouragement.9</key>
+	<string>Σχεδόν έφτασες</string>
+	<key>game.encouragement.complete</key>
+	<string>Τέλειο σκορ!</string>
+	<key>game.end.completionSubtitle</key>
+	<string>Κέρδισες κάθε πόντο.</string>
+	<key>game.end.completionSuffix</key>
+	<string>ολοκληρώθηκε!</string>
+	<key>game.end.gameOverTitle</key>
+	<string>Τέλος παιχνιδιού</string>
+	<key>game.end.mainMenu</key>
+	<string>Κύριο μενού</string>
+	<key>game.end.playAgain</key>
+	<string>Παίξε ξανά</string>
+	<key>game.highScore</key>
+	<string>Ρεκόρ</string>
+	<key>game.intro.backToMainMenu</key>
+	<string>Πίσω στο κύριο μενού</string>
+	<key>game.intro.continue</key>
+	<string>Συνέχεια</string>
+	<key>game.intro.progressPaused</key>
+	<string>Η πρόοδός σου σταμάτησε.</string>
+	<key>game.intro.start</key>
+	<string>Έναρξη επιπέδου</string>
+	<key>game.intro.startTutorial</key>
+	<string>Ξεκίνα οδηγό</string>
+	<key>game.streakBoost.title</key>
+	<string>Διπλοί πόντοι!</string>
+	<key>goal.period</key>
+	<string>Περίοδος στόχου</string>
+	<key>goal.promptDaily</key>
+	<string>Πόσα λεπτά θέλεις να παίζεις κάθε μέρα;</string>
+	<key>goal.promptWeekly</key>
+	<string>Πόσα λεπτά θέλεις να παίζεις κάθε εβδομάδα;</string>
+	<key>goal.title</key>
+	<string>Στόχος παιχνιδιού</string>
+	<key>goalPeriod.daily</key>
+	<string>Καθημερινά</string>
+	<key>goalPeriod.weekly</key>
+	<string>Εβδομαδιαία</string>
+	<key>home.cardsRemaining %lld</key>
+	<string>άλλα %lld</string>
+	<key>home.totalLabel</key>
+	<string>Σύνολο</string>
+	<key>info.mode.fractions.header</key>
+	<string>Μέρη</string>
+	<key>info.mode.fractions.multiple</key>
+	<string>Ένα ή περισσότερα μέρη</string>
+	<key>info.mode.fractions.single</key>
+	<string>Πάντα ένα μέρος</string>
+	<key>info.mode.header</key>
+	<string>Σειρά</string>
+	<key>info.mode.mixed</key>
+	<string>Μίξη με προηγούμενα επίπεδα</string>
+	<key>info.mode.order</key>
+	<string>Σταθερή σειρά</string>
+	<key>info.mode.percentages.decimal</key>
+	<string>Με δεκαδικούς αριθμούς</string>
+	<key>info.mode.percentages.header</key>
+	<string>Τύπος</string>
+	<key>info.mode.percentages.whole</key>
+	<string>Χωρίς δεκαδικούς αριθμούς</string>
+	<key>info.mode.random</key>
+	<string>Τυχαία σειρά</string>
+	<key>info.super.all</key>
+	<string>Πρόσθεση, αφαίρεση, πολλαπλασιασμός, διαίρεση και ποσοστά</string>
+	<key>info.super.basic</key>
+	<string>Πρόσθεση και αφαίρεση</string>
+	<key>info.super.fraction</key>
+	<string>Πρόσθεση, αφαίρεση, πολλαπλασιασμός και διαίρεση</string>
+	<key>info.super.times</key>
+	<string>Πρόσθεση, αφαίρεση και πολλαπλασιασμός</string>
+	<key>info.topic.header</key>
+	<string>Είδη ασκήσεων</string>
+	<key>levelIntro.addition.intro</key>
+	<string>Ασκήσεις όπου **προσθέτεις** έναν αριθμό.</string>
+	<key>levelIntro.addition.title %lld</key>
+	<string>Πρόσθεσε %lld</string>
+	<key>levelIntro.cardsBullet.carrot %lld</key>
+	<string>Μάζεψε έως **%lld καρότα** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.chicken %lld</key>
+	<string>Μάζεψε έως **%lld κότες** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.fish %lld</key>
+	<string>Μάζεψε έως **%lld ψάρια** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.honey %lld</key>
+	<string>Μάζεψε έως **%lld βαζάκια μέλι** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.hoop %lld</key>
+	<string>Μάζεψε έως **%lld στεφάνια** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.kibble %lld</key>
+	<string>Μάζεψε έως **%lld μπισκότα σκύλου** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.meat %lld</key>
+	<string>Μάζεψε έως **%lld κομμάτια κρέας** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.peanut %lld</key>
+	<string>Μάζεψε έως **%lld φιστίκια** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.pearl %lld</key>
+	<string>Μάζεψε έως **%lld μαργαριτάρια** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.cardsBullet.shrimp %lld</key>
+	<string>Μάζεψε έως **%lld γαρίδες** σε αυτό το επίπεδο.</string>
+	<key>levelIntro.fractions.intro</key>
+	<string>Ασκήσεις όπου **διαιρείς** έναν αριθμό.</string>
+	<key>levelIntro.fractions.title %lld</key>
+	<string>Διαίρεσε με %lld</string>
+	<key>levelIntro.levelRange %lld</key>
+	<string>Ασκήσεις έως **επίπεδο %lld**.</string>
+	<key>levelIntro.levelRange.first</key>
+	<string>Ασκήσεις από **επίπεδο 1**.</string>
+	<key>levelIntro.mixed.intro</key>
+	<string>**Όλα μαζί**: πρόσθεση, αφαίρεση, πολλαπλασιασμός, κλάσματα και ποσοστά.</string>
+	<key>levelIntro.mixed.title %lld</key>
+	<string>Σούπερ μιξ %lld</string>
+	<key>levelIntro.mode.fractions.order</key>
+	<string>Πάντα **ένα μέρος** ενός όλου.</string>
+	<key>levelIntro.mode.fractions.random</key>
+	<string>**Ένα ή περισσότερα μέρη** ενός όλου.</string>
+	<key>levelIntro.mode.order</key>
+	<string>Ασκήσεις σε **σταθερή σειρά**.</string>
+	<key>levelIntro.mode.percentages.order</key>
+	<string>Απαντήσεις **χωρίς δεκαδικά**.</string>
+	<key>levelIntro.mode.percentages.random</key>
+	<string>Και απαντήσεις **με δεκαδικά**.</string>
+	<key>levelIntro.mode.random</key>
+	<string>Ασκήσεις σε **τυχαία σειρά**.</string>
+	<key>levelIntro.percentages.intro</key>
+	<string>Ασκήσεις με **ποσοστά**.</string>
+	<key>levelIntro.percentages.title %@</key>
+	<string>%@ ενός αριθμού</string>
+	<key>levelIntro.subtraction.intro</key>
+	<string>Ασκήσεις όπου **αφαιρείς** έναν αριθμό.</string>
+	<key>levelIntro.subtraction.title %lld</key>
+	<string>Αφαίρεσε %lld</string>
+	<key>levelIntro.tables.intro</key>
+	<string>Ασκήσεις όπου **πολλαπλασιάζεις**.</string>
+	<key>levelIntro.tables.title %lld</key>
+	<string>Προπαίδεια %lld</string>
+	<key>menu.maximumCount</key>
+	<string>ΜΕΓ.</string>
+	<key>menu.moreLevels</key>
+	<string>Περισσότερα επίπεδα</string>
+	<key>menu.premiumLevels</key>
+	<string>Επίπεδα Premium</string>
+	<key>menu.startHere</key>
+	<string>Ξεκίνα εδώ</string>
+	<key>menu.unlockWithPremium</key>
+	<string>Ξεκλείδωσε περισσότερα με Premium</string>
+	<key>mode.fractions.multiple</key>
+	<string>Πολλά</string>
+	<key>mode.fractions.single</key>
+	<string>Ένα</string>
+	<key>mode.mixed</key>
+	<string>Μικτά</string>
+	<key>mode.order</key>
+	<string>Σειρά</string>
+	<key>mode.percentages.decimal</key>
+	<string>Δεκαδικοί</string>
+	<key>mode.percentages.whole</key>
+	<string>Ακέραιοι</string>
+	<key>mode.random</key>
+	<string>Τυχαία</string>
+	<key>name.placeholder</key>
+	<string>Το όνομά σου</string>
+	<key>name.whatsYourName</key>
+	<string>Πώς σε λένε;</string>
+	<key>notif.animal.body %@</key>
+	<string>%@: Κερδίστε μερικά ακόμη στεφάνια για να ξεκλειδώσετε αυτό το ζώο! 🐼</string>
+	<key>notif.comeback.body</key>
+	<string>Τα ζώα σας περιμένουν. Επιστρέψτε για να παίξετε και συνεχίστε να μαζεύετε στεφάνια!</string>
+	<key>notif.comeback.title</key>
+	<string>Μας λείπεις! 👋</string>
+	<key>notif.day3.title</key>
+	<string>Ας κάνουμε την 3η μέρα να συμβεί! ⭐</string>
+	<key>notif.premium.body %lld</key>
+	<string>Το Hungry Frog Premium περιλαμβάνει %lld επίπεδα για κάθε θέμα και τα 10 ζώα. Η περιπέτεια συνεχίζεται!</string>
+	<key>notif.premium.title</key>
+	<string>Ξεκλειδώστε περισσότερα επίπεδα και ζώα! 🌈</string>
+	<key>notif.reactivate.body %lld</key>
+	<string>Έχουν περάσει %lld μέρες. Ας λύσουμε μερικές ασκήσεις μαθηματικών και ας κερδίσουμε περισσότερα στεφάνια!</string>
+	<key>notif.reactivate.title</key>
+	<string>Είστε έτοιμοι να παίξετε ξανά; 🎮</string>
+	<key>onboarding.level.advanced.subtitle</key>
+	<string>Διαφορετικές μικτές ασκήσεις μαζί.</string>
+	<key>onboarding.level.advanced.title</key>
+	<string>Ήδη αρκετά καλός</string>
+	<key>onboarding.level.beginner.subtitle</key>
+	<string>Εξάσκηση με ασκήσεις στη σειρά.</string>
+	<key>onboarding.level.beginner.title</key>
+	<string>Μόλις ξεκίνησα</string>
+	<key>onboarding.level.intermediate.subtitle</key>
+	<string>Ασκήσεις σε τυχαία σειρά.</string>
+	<key>onboarding.level.intermediate.title</key>
+	<string>Έχω κάνει λίγη εξάσκηση</string>
+	<key>onboarding.level.title</key>
+	<string>Πόσο καλός είσαι ήδη σε αυτό;</string>
+	<key>onboarding.name.subtitle</key>
+	<string>Ας ξεκινήσουμε. Πώς σε λένε;</string>
+	<key>onboarding.name.title</key>
+	<string>Οι ασκήσεις δεν ήταν ποτέ τόσο διασκεδαστικές!</string>
+	<key>onboarding.subject.subtitle</key>
+	<string>Διάλεξε ένα θέμα για να ξεκινήσεις.</string>
+	<key>onboarding.subject.title</key>
+	<string>Τι θέλεις να μάθεις;</string>
+	<key>parentGate.approved</key>
+	<string>Εγκρίθηκε</string>
+	<key>parentGate.attempts %lld %lld</key>
+	<string>Προσπάθειες: %1$lld από %2$lld</string>
+	<key>parentGate.holdProgress %lld</key>
+	<string>Κράτημα: %lld</string>
+	<key>parentGate.shape.circle</key>
+	<string>κύκλο</string>
+	<key>parentGate.shape.diamond</key>
+	<string>ρόμβο</string>
+	<key>parentGate.shape.heart</key>
+	<string>καρδιά</string>
+	<key>parentGate.shape.hexagon</key>
+	<string>εξάγωνο</string>
+	<key>parentGate.shape.plus</key>
+	<string>συν</string>
+	<key>parentGate.shape.square</key>
+	<string>τετράγωνο</string>
+	<key>parentGate.shape.star</key>
+	<string>αστέρι</string>
+	<key>parentGate.shape.triangle</key>
+	<string>τρίγωνο</string>
+	<key>parentGate.subtitle</key>
+	<string>Για την προστασία των μικρών παικτών, ένας ενήλικας πρέπει να ολοκληρώσει αυτόν τον έλεγχο πριν από την αγορά.</string>
+	<key>parentGate.tapProgress %lld %lld</key>
+	<string>Πατήματα: %1$lld από %2$lld</string>
+	<key>parentGate.title</key>
+	<string>Χρειάζεται έγκριση ενήλικα</string>
+	<key>premium.availableAt %lld</key>
+	<string>Διαθέσιμο από %lld τρόπαια</string>
+	<key>premium.availableFromStart</key>
+	<string>Διαθέσιμο από την αρχή</string>
+	<key>premium.characterUnlocked</key>
+	<string>ΞΕΚΛΕΙΔΩΘΗΚΕ ΝΕΟΣ ΧΑΡΑΚΤΗΡΑΣ</string>
+	<key>premium.earnedCards %lld</key>
+	<string>Κέρδισες %lld στεφάνια</string>
+	<key>premium.exclusiveBadge</key>
+	<string>Αποκλειστικά με Premium</string>
+	<key>premium.feature.animals.subtitle</key>
+	<string>Με το Premium παίζεις ελεύθερα και με τα 10 ζωάκια.</string>
+	<key>premium.feature.animals.title</key>
+	<string>Όλα τα ζωάκια</string>
+	<key>premium.feature.levels.subtitle</key>
+	<string>Πάντα νέες ασκήσεις για εξάσκηση.</string>
+	<key>premium.feature.levels.title</key>
+	<string>99 επίπεδα ανά θέμα</string>
+	<key>premium.feature.noAds.subtitle</key>
+	<string>Παίξε χωρίς καμία διακοπή.</string>
+	<key>premium.feature.noAds.title</key>
+	<string>Χωρίς διαφημίσεις</string>
+	<key>premium.oneTime</key>
+	<string>Μία αγορά. Δικό σου για πάντα.</string>
+	<key>premium.restore</key>
+	<string>Επαναφορά αγορών</string>
+	<key>premium.start</key>
+	<string>Έναρξη</string>
+	<key>premium.storeUnavailable</key>
+	<string>Το κατάστημα δεν είναι διαθέσιμο τώρα. Δοκίμασε ξανά αργότερα.</string>
+	<key>premium.unlock</key>
+	<string>Ξεκλείδωσε το Premium</string>
+	<key>premium.unlockWithPrice %@</key>
+	<string>Ξεκλείδωσε το Premium · %@</string>
+	<key>premium.unlockedWithPremium</key>
+	<string>Ξεκλειδώθηκε με Premium</string>
+	<key>result.complete</key>
+	<string>Τέλος επιπέδου!</string>
+	<key>result.stopped</key>
+	<string>Σε παύση</string>
+	<key>settings.character</key>
+	<string>Χαρακτήρας</string>
+	<key>settings.characterInfo</key>
+	<string>Κάθε ζωάκι δίνει στο παιχνίδι το δικό του χρωματικό θέμα.</string>
+	<key>settings.customMinutes %lld</key>
+	<string>Προσαρμογή: %lld λεπ.</string>
+	<key>settings.dailyGoal</key>
+	<string>Καθημερινός στόχος</string>
+	<key>settings.goalInfo</key>
+	<string>Ο στόχος σερί ξεκινά από 5 λεπτά τη μέρα. Μετρά μόνο ο ενεργός χρόνος παιχνιδιού.</string>
+	<key>settings.music</key>
+	<string>Μουσική</string>
+	<key>settings.playGoals</key>
+	<string>Στόχοι παιχνιδιού</string>
+	<key>settings.premiumUnlocked</key>
+	<string>Το Premium ξεκλειδώθηκε. Ευχαριστούμε!</string>
+	<key>settings.sound</key>
+	<string>Ήχος</string>
+	<key>settings.soundEffects</key>
+	<string>Μουσική και εφέ</string>
+	<key>settings.soundInfo</key>
+	<string>Κλείσε τον ήχο για να παίξεις ήσυχα. Το παιχνίδι μένει ίδιο.</string>
+	<key>settings.title</key>
+	<string>Ρυθμίσεις</string>
+	<key>streak.dayOne</key>
+	<string>Ημέρα 1</string>
+	<key>topic.addition</key>
+	<string>Πρόσθεση</string>
+	<key>topic.addition.detail</key>
+	<string>Μόνο πρόσθεση</string>
+	<key>topic.fractions</key>
+	<string>Κλάσματα</string>
+	<key>topic.fractions.detail</key>
+	<string>Μόνο διαίρεση</string>
+	<key>topic.mixed</key>
+	<string>Σούπερ μιξ</string>
+	<key>topic.mixed.detail</key>
+	<string>Μικτές πράξεις</string>
+	<key>topic.percentages</key>
+	<string>Ποσοστά</string>
+	<key>topic.percentages.detail</key>
+	<string>Μόνο ποσοστά</string>
+	<key>topic.subtraction</key>
+	<string>Αφαίρεση</string>
+	<key>topic.subtraction.detail</key>
+	<string>Μόνο αφαίρεση</string>
+	<key>topic.tables</key>
+	<string>Προπαίδεια</string>
+	<key>topic.tables.detail</key>
+	<string>Μόνο πολλαπλασιασμός</string>
+	<key>tutorial.notice.message</key>
+	<string>Παίζεις ήδη ένα παιχνίδι. Τελείωσέ το ή διάλεξε επίπεδο που δεν έχεις ξεκινήσει για να παίξεις τον οδηγό.</string>
+	<key>tutorial.notice.title</key>
+	<string>Μόνο στην αρχή του παιχνιδιού</string>
+</dict>
+</plist>
