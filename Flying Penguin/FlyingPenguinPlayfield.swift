@@ -1,5 +1,8 @@
 import SwiftUI
 import Combine
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// A stable, lifecycle-controlled source for simulation frames. Keeping the
 /// publisher itself stable lets SwiftUI always invoke the current `tick`
@@ -258,6 +261,7 @@ struct FlyingPenguinPlayfield: View {
                         AnswerHoop(text: option.text,
                                    tint: character.color,
                                    size: hoopSize,
+                                   textScale: answerTextScale(for: set.options),
                                    feedback: set.feedback(for: option.id))
                             .position(x: set.x, y: lanes[index])
                     }
@@ -272,6 +276,7 @@ struct FlyingPenguinPlayfield: View {
                         AnswerHoop(text: option.text,
                                    tint: character.color,
                                    size: hoopSize,
+                                   textScale: answerTextScale(for: previewOptions),
                                    feedback: .none)
                             .position(x: previewX, y: lanes[index])
                     }
@@ -286,6 +291,7 @@ struct FlyingPenguinPlayfield: View {
                         AnswerHoop(text: option.text,
                                    tint: character.color,
                                    size: hoopSize,
+                                   textScale: answerTextScale(for: shownOptions),
                                    feedback: feedback(for: option.id))
                             .position(x: hoopX, y: lanes[index])
                     }
@@ -838,6 +844,33 @@ struct FlyingPenguinPlayfield: View {
     /// Which of the three hoops carries the answer, if any of them does.
     private var correctHoopIndex: Int? {
         shownOptions.firstIndex { $0.isCorrect }
+    }
+
+    /// The answer capsule has a fixed safe width inside the hoop. Its font
+    /// scale is calculated from the widest option and then shared by all three
+    /// answers, so a longer fraction never bursts its hoop or makes one lane
+    /// look arbitrarily smaller than the other two.
+    private func answerTextScale(for options: [AnswerOption]) -> CGFloat {
+        guard hoopSize > 0, !options.isEmpty else { return 1 }
+        let baseSize = hoopSize * 0.29
+        let availableWidth = hoopSize * 0.62
+
+#if canImport(UIKit)
+        let baseFont = UIFont.systemFont(ofSize: baseSize, weight: .heavy)
+        let roundedDescriptor = baseFont.fontDescriptor.withDesign(.rounded)
+            ?? baseFont.fontDescriptor
+        let roundedFont = UIFont(descriptor: roundedDescriptor, size: baseSize)
+        let widest = options.map { option in
+            (option.text as NSString).size(withAttributes: [.font: roundedFont]).width
+        }.max() ?? 0
+        guard widest > availableWidth else { return 1 }
+        return max(0.40, min(1, availableWidth / widest))
+#else
+        // The production target is iOS. This conservative fallback preserves
+        // the same grouped behaviour in previews on platforms without UIKit.
+        let longest = CGFloat(options.map { $0.text.count }.max() ?? 1)
+        return max(0.40, min(1, 3 / longest))
+#endif
     }
 
     /// Where a held set comes to a stop: fully in frame, and still comfortably
@@ -2236,6 +2269,7 @@ private struct AnswerHoop: View {
     let text: String
     let tint: Color
     let size: CGFloat
+    let textScale: CGFloat
     let feedback: HoopFeedback
 
     private var feedbackGradient: AngularGradient {
@@ -2295,13 +2329,17 @@ private struct AnswerHoop: View {
             Circle().strokeBorder(.white.opacity(0.75), lineWidth: 2)
                 .padding(size * 0.09)
             Text(text)
-                .font(.system(size: size * 0.29, weight: .black, design: .rounded))
+                .font(.system(size: size * 0.29 * textScale,
+                              weight: .black,
+                              design: .rounded))
                 .foregroundStyle(Color(red: 0.04, green: 0.16, blue: 0.38))
                 .lineLimit(1)
-                .minimumScaleFactor(0.35)
+                // The fixed frame gives `minimumScaleFactor` an actual width
+                // to fit into. Without it, a long label sizes its capsule
+                // first and can paint over the hoop's inner opening.
+                .minimumScaleFactor(0.40)
                 .allowsTightening(true)
-                .padding(.horizontal, size * 0.12)
-                .padding(.vertical, size * 0.06)
+                .frame(width: size * 0.62, height: size * 0.40)
                 .background(.white.opacity(0.94), in: Capsule())
         }
         .frame(width: size, height: size)

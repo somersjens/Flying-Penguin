@@ -442,7 +442,7 @@ struct GameView: View {
     private var hudStackSpacing: CGFloat { isPad ? 8 : 5 }
     private var hudHeartSize: CGFloat { isPad ? 34 : 22 }
     private var pauseGlyphSize: CGFloat { isPad ? 27 : 18 }
-    private var hudNumberSize: CGFloat { isPad ? 33 : 21 }
+    private var hudNumberSize: CGFloat { isPad ? 29 : 19 }
 
     /// Just the bubbles banked this session. What the board holds is quoted on
     /// the start card and again on the result card, so the playing field does
@@ -456,8 +456,14 @@ struct GameView: View {
                 .font(.system(size: hudNumberSize, weight: .heavy, design: .rounded))
                 .monospacedDigit()
                 .lineLimit(1)
+                .minimumScaleFactor(0.65)
+                .allowsTightening(true)
                 .contentTransition(.numericText(value: Double(model.cards)))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                // Keep multi-digit scores optically inside the same circle on
+                // both phone and iPad instead of letting their glyphs press
+                // against the ring.
+                .frame(width: hudControlSize * 0.72,
+                       height: hudControlSize * 0.72)
                 .foregroundStyle(.white)
         }
         .frame(width: hudControlSize, height: hudControlSize)
