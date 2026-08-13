@@ -22,8 +22,6 @@
 	<string>Pweza</string>
 	<key>character.penguin</key>
 	<string>Pengwini</string>
-	<key>common.cancel</key>
-	<string>Ghairi</string>
 	<key>common.continue</key>
 	<string>Endelea</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Sawa</string>
-	<key>common.save</key>
-	<string>Hifadhi</string>
-	<key>currency.hoop.plural</key>
-	<string>vitanzi</string>
-	<key>currency.hoop.singular</key>
-	<string>kitanzi</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Karibu umefika</string>
 	<key>game.encouragement.complete</key>
 	<string>Alama kamili!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Umeshinda kila pointi.</string>
 	<key>game.end.completionSuffix</key>
 	<string>imekamilika!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Anza kiwango</string>
 	<key>game.intro.startTutorial</key>
 	<string>Anza mafunzo</string>
-	<key>game.streakBoost.title</key>
-	<string>Pointi mara mbili!</string>
 	<key>goal.period</key>
 	<string>Kipindi cha lengo</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Maswali ya **kujumlisha** namba.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Jumlisha %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Unaweza kukusanya hadi **karoti %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Unaweza kukusanya hadi **kuku %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Unaweza kukusanya hadi **samaki %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Unaweza kukusanya hadi **vyungu %lld vya asali** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Unaweza kukusanya hadi **vitanzi %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Unaweza kukusanya hadi **biskuti %lld za mbwa** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Unaweza kukusanya hadi **vipande %lld vya nyama** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Unaweza kukusanya hadi **karanga %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Unaweza kukusanya hadi **lulu %lld** katika kiwango hiki.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Unaweza kukusanya hadi **uduvi %lld** katika kiwango hiki.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Maswali ya **kugawanya** namba.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Jina lako</string>
 	<key>name.whatsYourName</key>
 	<string>Unaitwa nani?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Pata vitavitavitavitanzi vichache zaidi ili kumfungulia mnyama huyu! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Wanyama wako wanasubiri. Rudi kucheza na uendelee kukusanya vitavitavitavitanzi!</string>
 	<key>notif.comeback.title</key>
 	<string>Tunakukumbuka! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Kuruka Fox Premium inajumuisha viwango %lld kwa kila mada na wanyama wote 10. Matukio yanaendelea!</string>
 	<key>notif.premium.title</key>
 	<string>Fungua viwango zaidi na wanyama! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Imekuwa siku %lld. Wacha tusuluhishe mazoezi kadhaa ya hesabu na tupate nyara zaidi!</string>
 	<key>notif.reactivate.title</key>
 	<string>Je, uko tayari kucheza tena? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Miguso: %1$lld kati ya %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Idhini ya mtu mzima inahitajika</string>
-	<key>premium.availableAt %lld</key>
-	<string>Inapatikana kuavitavitavitavitanzia vikombe %lld</string>
 	<key>premium.availableFromStart</key>
 	<string>Inapatikana tangu mwanzo</string>
 	<key>premium.characterUnlocked</key>
 	<string>MHUSIKA MPYA AMEFUNGULIWA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Umepata vitavitavitavitanzi %lld</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Kwa Premium pekee</string>
 	<key>premium.feature.animals.subtitle</key>

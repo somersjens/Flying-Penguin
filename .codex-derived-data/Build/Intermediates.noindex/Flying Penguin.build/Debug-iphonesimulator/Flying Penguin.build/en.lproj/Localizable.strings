@@ -22,8 +22,6 @@
 	<string>Octopus</string>
 	<key>character.penguin</key>
 	<string>Penguin</string>
-	<key>common.cancel</key>
-	<string>Cancel</string>
 	<key>common.continue</key>
 	<string>Continue</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Save</string>
-	<key>currency.hoop.plural</key>
-	<string>hoops</string>
-	<key>currency.hoop.singular</key>
-	<string>hoop</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -64,26 +56,6 @@
 	<string>Perfect score!</string>
 	<key>game.end.completionSubtitle</key>
 	<string>You collected all the hoops</string>
-	<key>game.end.completionSubtitle.carrot</key>
-	<string>You collected all the carrots</string>
-	<key>game.end.completionSubtitle.chicken</key>
-	<string>You collected all the chickens</string>
-	<key>game.end.completionSubtitle.fish</key>
-	<string>You collected all the fish</string>
-	<key>game.end.completionSubtitle.honey</key>
-	<string>You collected all the pots of honey</string>
-	<key>game.end.completionSubtitle.hoop</key>
-	<string>You collected all the hoops</string>
-	<key>game.end.completionSubtitle.kibble</key>
-	<string>You collected all the dog biscuits</string>
-	<key>game.end.completionSubtitle.meat</key>
-	<string>You collected all the pieces of meat</string>
-	<key>game.end.completionSubtitle.peanut</key>
-	<string>You collected all the peanuts</string>
-	<key>game.end.completionSubtitle.pearl</key>
-	<string>You collected all the pearls</string>
-	<key>game.end.completionSubtitle.shrimp</key>
-	<string>You collected all the shrimp</string>
 	<key>game.end.completionSuffix</key>
 	<string>complete!</string>
 	<key>game.end.gameOverTitle</key>
@@ -104,8 +76,6 @@
 	<string>Start</string>
 	<key>game.intro.startTutorial</key>
 	<string>Start tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Double points!</string>
 	<key>goal.period</key>
 	<string>Period</string>
 	<key>goal.promptDaily</key>
@@ -156,26 +126,8 @@
 	<string>Sums where you **add** a number.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Add %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>You can collect up to **%lld carrots** in this level.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>You can collect up to **%lld chickens** in this level.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>You can collect up to **%lld fish** in this level.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>You can collect up to **%lld pots of honey** in this level.</string>
 	<key>levelIntro.cardsBullet.hoop %lld</key>
 	<string>You can collect up to **%lld hoops** in this level.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>You can collect up to **%lld dog biscuits** in this level.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>You can collect up to **%lld pieces of meat** in this level.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>You can collect up to **%lld peanuts** in this level.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>You can collect up to **%lld pearls** in this level.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>You can collect up to **%lld shrimp** in this level.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sums where you **divide** a number.</string>
 	<key>levelIntro.fractions.title %lld</key>

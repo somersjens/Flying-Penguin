@@ -22,8 +22,6 @@
 	<string>Mustekala</string>
 	<key>character.penguin</key>
 	<string>Pingviini</string>
-	<key>common.cancel</key>
-	<string>Peruuta</string>
 	<key>common.continue</key>
 	<string>Jatka</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Tallenna</string>
-	<key>currency.hoop.plural</key>
-	<string>vanteet</string>
-	<key>currency.hoop.singular</key>
-	<string>vanne</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Olet melkein perillä</string>
 	<key>game.encouragement.complete</key>
 	<string>Täydet pisteet!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Ansaitsit jokaisen pisteen.</string>
 	<key>game.end.completionSuffix</key>
 	<string>valmis!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Aloita taso</string>
 	<key>game.intro.startTutorial</key>
 	<string>Aloita opastus</string>
-	<key>game.streakBoost.title</key>
-	<string>Tuplapisteet!</string>
 	<key>goal.period</key>
 	<string>Tavoitejakso</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Laskuja, joissa **lisäät** luvun.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Lisää %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld porkkanaa**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld kanaa**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld kalaa**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld hunajapurkkia**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld vanteet**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld koirankeksiä**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld lihapalaa**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld maapähkinää**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld helmeä**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Voit kerätä tässä tasossa enintään **%lld katkarapua**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Laskuja, joissa **jaat** luvun.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Nimesi</string>
 	<key>name.whatsYourName</key>
 	<string>Mikä sinun nimesi on?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Ansaitse muutama vanteet lisää avataksesi tämän eläimen! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Eläimesi odottavat. Tule takaisin pelaamaan ja jatka kärpästen keräämistä!</string>
 	<key>notif.comeback.title</key>
 	<string>Kaipaamme sinua! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium sisältää %lld tasoa jokaiselle aiheelle ja kaikille 10 eläimelle. Seikkailu jatkuu!</string>
 	<key>notif.premium.title</key>
 	<string>Avaa lisää tasoja ja eläimiä! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Siitä on %lld päivää. Ratkaistaan ​​matemaattisia tehtäviä ja ansaitaan lisää vanteet!</string>
 	<key>notif.reactivate.title</key>
 	<string>Oletko valmis pelaamaan uudelleen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Napautukset: %1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Aikuisen hyväksyntä tarvitaan</string>
-	<key>premium.availableAt %lld</key>
-	<string>Saatavilla %lld pokaalista alkaen</string>
 	<key>premium.availableFromStart</key>
 	<string>Saatavilla alusta asti</string>
 	<key>premium.characterUnlocked</key>
 	<string>UUSI HAHMO AVATTU</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Olet ansainnut %lld vanteet</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Vain Premiumilla</string>
 	<key>premium.feature.animals.subtitle</key>

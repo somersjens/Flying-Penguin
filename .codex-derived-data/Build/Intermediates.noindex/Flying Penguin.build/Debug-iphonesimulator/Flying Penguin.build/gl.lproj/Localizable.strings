@@ -22,8 +22,6 @@
 	<string>Polbo</string>
 	<key>character.penguin</key>
 	<string>Pingüín</string>
-	<key>common.cancel</key>
-	<string>Cancelar</string>
 	<key>common.continue</key>
 	<string>Continuar</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Gardar</string>
-	<key>currency.hoop.plural</key>
-	<string>aros</string>
-	<key>currency.hoop.singular</key>
-	<string>aro</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Xa case estás</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfecto, todo ben!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Gañaches cada punto.</string>
 	<key>game.end.completionSuffix</key>
 	<string>completado!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Comezar nivel</string>
 	<key>game.intro.startTutorial</key>
 	<string>Comezar tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Puntos dobres!</string>
 	<key>goal.period</key>
 	<string>Período do obxectivo</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Contas nas que \*\*sumas\*\* un número.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Sumar %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld cenorias\*\*.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld galiñas\*\*.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld peixes\*\*.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld tarros de mel\*\*.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld aros\*\*.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld galletas para cans\*\*.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld anacos de carne\*\*.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld cacahuetes\*\*.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld perlas\*\*.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Neste nivel podes recoller ata \*\*%lld camaróns\*\*.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Contas nas que \*\*divides\*\* un número.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>O teu nome</string>
 	<key>name.whatsYourName</key>
 	<string>Como te chamas?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Gaña algúns aros máis para desbloquear este animal! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Os teus animais están esperando. Volve xogar e segue collendo aros!</string>
 	<key>notif.comeback.title</key>
 	<string>Botámoste de menos! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inclúe %lld niveis para cada tema e os 10 animais. A aventura continúa!</string>
 	<key>notif.premium.title</key>
 	<string>Desbloquea máis niveis e animais! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Xa pasaron %lld días. Resolvemos algúns exercicios de matemáticas e gañemos máis aros!</string>
 	<key>notif.reactivate.title</key>
 	<string>Listo para xogar de novo? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Toques: %1$lld de %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Precísase a aprobación dun adulto</string>
-	<key>premium.availableAt %lld</key>
-	<string>Dispoñible a partir de %lld trofeos</string>
 	<key>premium.availableFromStart</key>
 	<string>Dispoñible desde o inicio</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOVO PERSONAXE DESBLOQUEADO</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Conseguiches %lld aros</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusivo con Premium</string>
 	<key>premium.feature.animals.subtitle</key>

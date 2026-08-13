@@ -22,8 +22,6 @@
 	<string>Oktopus</string>
 	<key>character.penguin</key>
 	<string>Pinguin</string>
-	<key>common.cancel</key>
-	<string>Abbrechen</string>
 	<key>common.continue</key>
 	<string>Weiter</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld Min.</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Speichern</string>
-	<key>currency.hoop.plural</key>
-	<string>Reifen</string>
-	<key>currency.hoop.singular</key>
-	<string>Reifen</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Du bist fast da</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfekt, alles richtig!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Du hast jeden Punkt verdient.</string>
 	<key>game.end.completionSuffix</key>
 	<string>geschafft!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Level starten</string>
 	<key>game.intro.startTutorial</key>
 	<string>Tutorial starten</string>
-	<key>game.streakBoost.title</key>
-	<string>Doppelte Punkte!</string>
 	<key>goal.period</key>
 	<string>Zielzeitraum</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Aufgaben, bei denen du eine Zahl **addierst**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plus %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Du kannst hier bis zu **%lld Karotten** sammeln.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Du kannst hier bis zu **%lld Hühner** sammeln.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Du kannst hier bis zu **%lld Fische** sammeln.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Du kannst hier bis zu **%lld Honigtöpfe** sammeln.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Du kannst hier bis zu **%lld Reifen** sammeln.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Du kannst hier bis zu **%lld Hundekekse** sammeln.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Du kannst hier bis zu **%lld Fleischstücke** sammeln.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Du kannst hier bis zu **%lld Erdnüsse** sammeln.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Du kannst hier bis zu **%lld Perlen** sammeln.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Du kannst hier bis zu **%lld Garnelen** sammeln.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Aufgaben, bei denen du eine Zahl **teilst**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Dein Name</string>
 	<key>name.whatsYourName</key>
 	<string>Wie heißt du?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Verdiene noch ein paar Reifen, um dieses Tier freizuschalten! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Ihre Tiere warten. Kommen Sie zurück zum Spielen und sammeln Sie weiterhin Reifen!</string>
 	<key>notif.comeback.title</key>
 	<string>Wir vermissen dich! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium umfasst %lld Level für jedes Thema und alle 10 Tiere. Das Abenteuer geht weiter!</string>
 	<key>notif.premium.title</key>
 	<string>Schalte mehr Level und Tiere frei! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Es sind %lld Tage vergangen. Lasst uns ein paar Matheaufgaben lösen und mehr Reifen verdienen!</string>
 	<key>notif.reactivate.title</key>
 	<string>Bereit, wieder zu spielen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Tipps: %1$lld von %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Bestätigung eines Erwachsenen nötig</string>
-	<key>premium.availableAt %lld</key>
-	<string>Ab %lld Pokalen verfügbar</string>
 	<key>premium.availableFromStart</key>
 	<string>Von Anfang an verfügbar</string>
 	<key>premium.characterUnlocked</key>
 	<string>NEUE FIGUR FREIGESCHALTET</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Du hast %lld Reifen gesammelt</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exklusiv mit Premium</string>
 	<key>premium.feature.animals.subtitle</key>

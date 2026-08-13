@@ -22,8 +22,6 @@
 	<string>Caracatiță</string>
 	<key>character.penguin</key>
 	<string>Pinguin</string>
-	<key>common.cancel</key>
-	<string>Anulează</string>
 	<key>common.continue</key>
 	<string>Continuă</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Salvează</string>
-	<key>currency.hoop.plural</key>
-	<string>cercuri</string>
-	<key>currency.hoop.singular</key>
-	<string>cerc</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Aproape ai reușit</string>
 	<key>game.encouragement.complete</key>
 	<string>Scor perfect!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Ai câștigat fiecare punct.</string>
 	<key>game.end.completionSuffix</key>
 	<string>complet!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Începe nivelul</string>
 	<key>game.intro.startTutorial</key>
 	<string>Începe tutorialul</string>
-	<key>game.streakBoost.title</key>
-	<string>Puncte duble!</string>
 	<key>goal.period</key>
 	<string>Perioada obiectivului</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Exerciții în care **aduni** un număr.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Adună %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Poți strânge până la **%lld morcovi** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Poți strânge până la **%lld găini** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Poți strânge până la **%lld pești** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Poți strânge până la **%lld borcane cu miere** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Poți strânge până la **%lld cercuri** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Poți strânge până la **%lld biscuiți pentru câini** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Poți strânge până la **%lld bucăți de carne** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Poți strânge până la **%lld arahide** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Poți strânge până la **%lld perle** în acest nivel.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Poți strânge până la **%lld creveți** în acest nivel.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Exerciții în care **împarți** un număr.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Numele tău</string>
 	<key>name.whatsYourName</key>
 	<string>Cum te cheamă?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Câștigă încă câteva cercuri pentru a debloca acest animal! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Animalele tale așteaptă. Întoarce-te să joci și continuă să strângi cercuri!</string>
 	<key>notif.comeback.title</key>
 	<string>Ne e dor de tine! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium include %lld de niveluri pentru fiecare subiect și toate cele 10 animale. Aventura continuă!</string>
 	<key>notif.premium.title</key>
 	<string>Deblochează mai multe niveluri și animale! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Au trecut %lld zile. Să rezolvăm câteva exerciții de matematică și să câștigăm mai multe cercuri!</string>
 	<key>notif.reactivate.title</key>
 	<string>Sunteți gata să jucați din nou? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Atingeri: %1$lld din %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Este necesară aprobarea unui adult</string>
-	<key>premium.availableAt %lld</key>
-	<string>Disponibil de la %lld trofee</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponibil de la început</string>
 	<key>premium.characterUnlocked</key>
 	<string>PERSONAJ NOU DEBLOCAT</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Ai strâns %lld cercuri</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusiv cu Premium</string>
 	<key>premium.feature.animals.subtitle</key>

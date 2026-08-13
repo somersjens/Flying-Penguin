@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>只剩下%lld只圆环了！ ⭕</string>
-			<key>other</key>
-			<string>只剩下%lld只圆环了！ ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>今天玩 %lld 分钟，再多收集几个。</string>
 			<key>other</key>
 			<string>今天玩 %lld 分钟，再多收集几个。</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>已收集 %lld 只圆环！⭕</string>
-			<key>other</key>
-			<string>已收集 %lld 只圆环！⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>您的每日连续玩次数已达到 %lld 天！ 🔥</string>
 			<key>other</key>
 			<string>您的每日连续玩次数已达到 %lld 天！ 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>这将使您的圆环总数达到 %lld 只。了不起的工作！</string>
-			<key>other</key>
-			<string>这将使您的圆环总数达到 %lld 只。了不起的工作！</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>本周您赢得了 %lld 只圆环！ 🎉</string>
-			<key>other</key>
-			<string>本周您赢得了 %lld 只圆环！ 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

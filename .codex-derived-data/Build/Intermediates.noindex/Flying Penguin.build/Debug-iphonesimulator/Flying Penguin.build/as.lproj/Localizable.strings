@@ -22,8 +22,6 @@
 	<string>অক্টোপাছ</string>
 	<key>character.penguin</key>
 	<string>পেংগুইন</string>
-	<key>common.cancel</key>
-	<string>বাতিল</string>
 	<key>common.continue</key>
 	<string>আগলৈ</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld মিনিট</string>
 	<key>common.ok</key>
 	<string>ঠিক আছে</string>
-	<key>common.save</key>
-	<string>সংৰক্ষণ</string>
-	<key>currency.hoop.plural</key>
-	<string>বলয়বোৰ</string>
-	<key>currency.hoop.singular</key>
-	<string>বলয়</string>
 	<key>game.combo %lld</key>
 	<string>কম্বো! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>আৰু অলপ বাকী</string>
 	<key>game.encouragement.complete</key>
 	<string>একেবাৰে ঠিক!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>তুমি প্ৰতিটো পইণ্ট অৰ্জন কৰিলা।</string>
 	<key>game.end.completionSuffix</key>
 	<string>সম্পূৰ্ণ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>লেভেল আৰম্ভ</string>
 	<key>game.intro.startTutorial</key>
 	<string>টিউটোৰিয়েল আৰম্ভ</string>
-	<key>game.streakBoost.title</key>
-	<string>দুগুণ পইণ্ট!</string>
 	<key>goal.period</key>
 	<string>লক্ষ্যৰ সময়</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>য’ত তুমি এটা সংখ্যা **যোগ** কৰা অংক।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld যোগ</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld গাজৰ** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld কুকুৰা** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld মাছ** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld মৌৰ টেমা** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld বলয়বোৰ** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld কুকুৰৰ বিস্কুট** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld মাংসৰ টুকুৰা** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld বাদাম** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld মুকুতা** গোটাব পাৰিবা।</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>এই লেভেলত সৰ্বাধিক **%lld চিংৰি** গোটাব পাৰিবা।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>য’ত তুমি এটা সংখ্যাক **ভাগ** কৰা অংক।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>তোমাৰ নাম</string>
 	<key>name.whatsYourName</key>
 	<string>তোমাৰ নাম কি?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: এই জন্তুটোৰ তলা খুলিবলৈ আৰু কেইটামান বলয়বোৰ অৰ্জন কৰক! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>তোমাৰ জীৱ-জন্তুবোৰে ৰৈ আছে। খেলিবলৈ উভতি আহক আৰু বলয়বোৰ সংগ্ৰহ কৰি থাকিব!</string>
 	<key>notif.comeback.title</key>
 	<string>আমি তোমাক মিছ কৰিছো! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>জাম্পিং ফক্স প্ৰিমিয়ামত প্ৰতিটো বিষয় আৰু সকলো 10টা প্ৰাণীৰ বাবে %lldটা স্তৰ অন্তৰ্ভুক্ত কৰা হৈছে। দুঃসাহসিক অভিযান চলি থাকে!</string>
 	<key>notif.premium.title</key>
 	<string>অধিক স্তৰ আৰু প্ৰাণী আনলক! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld দিন হ'ল। আহকচোন কিছুমান গণিতৰ অনুশীলন সমাধান কৰি আৰু অধিক বলয়বোৰ উপাৰ্জন কৰো!</string>
 	<key>notif.reactivate.title</key>
 	<string>আকৌ খেলিবলৈ সাজুনে? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>টেপ: %1$lld ৰ ভিতৰত %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ডাঙৰৰ অনুমোদন লাগিব</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lldটা ট্ৰফীৰ পৰা উপলব্ধ</string>
 	<key>premium.availableFromStart</key>
 	<string>আৰম্ভণিৰ পৰাই উপলব্ধ</string>
 	<key>premium.characterUnlocked</key>
 	<string>নতুন চৰিত্ৰ খোলা হ’ল</string>
-	<key>premium.earnedCards %lld</key>
-	<string>তুমি %lld বলয়বোৰ গোটাইছা</string>
 	<key>premium.exclusiveBadge</key>
 	<string>কেৱল Premium-ত</string>
 	<key>premium.feature.animals.subtitle</key>

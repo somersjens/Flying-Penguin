@@ -22,8 +22,6 @@
 	<string>أخطبوط</string>
 	<key>character.penguin</key>
 	<string>بطريق</string>
-	<key>common.cancel</key>
-	<string>إلغاء</string>
 	<key>common.continue</key>
 	<string>متابعة</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld د</string>
 	<key>common.ok</key>
 	<string>حسنًا</string>
-	<key>common.save</key>
-	<string>حفظ</string>
-	<key>currency.hoop.plural</key>
-	<string>حلقات</string>
-	<key>currency.hoop.singular</key>
-	<string>حلقة</string>
 	<key>game.combo %lld</key>
 	<string>سلسلة! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>أوشكت على الوصول</string>
 	<key>game.encouragement.complete</key>
 	<string>علامة كاملة!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>كسبت كل النقاط.</string>
 	<key>game.end.completionSuffix</key>
 	<string>اكتمل!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>ابدأ المستوى</string>
 	<key>game.intro.startTutorial</key>
 	<string>ابدأ التدريب</string>
-	<key>game.streakBoost.title</key>
-	<string>نقاط مضاعفة!</string>
 	<key>goal.period</key>
 	<string>فترة الهدف</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>مسائل **تضيف** فيها عددًا.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>أضف %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>يمكنك جمع حتى **%lld جزرة** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>يمكنك جمع حتى **%lld دجاجة** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>يمكنك جمع حتى **%lld سمكة** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>يمكنك جمع حتى **%lld وعاء عسل** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>يمكنك جمع حتى **%lld حلقات** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>يمكنك جمع حتى **%lld بسكويتة للكلاب** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>يمكنك جمع حتى **%lld قطعة لحم** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>يمكنك جمع حتى **%lld حبة فول سوداني** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>يمكنك جمع حتى **%lld لؤلؤة** في هذا المستوى.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>يمكنك جمع حتى **%lld روبيان** في هذا المستوى.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>مسائل **تقسم** فيها عددًا.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>اسمك</string>
 	<key>name.whatsYourName</key>
 	<string>ما اسمك؟</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: احصل على المزيد من حلقات لفتح هذا الحيوان! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>حيواناتك تنتظر. عد للعب واستمر في جمع حلقات!</string>
 	<key>notif.comeback.title</key>
 	<string>إننا نفتقدك! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>يتضمن Hungry Frog Premium %lld مستوى لكل موضوع وجميع الحيوانات العشرة. المغامرة مستمرة!</string>
 	<key>notif.premium.title</key>
 	<string>فتح المزيد من المستويات والحيوانات! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>لقد مرت %lld أيام. دعونا نحل بعض تمارين الرياضيات ونكسب المزيد من حلقات!</string>
 	<key>notif.reactivate.title</key>
 	<string>على استعداد للعب مرة أخرى؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>الضغطات: %1$lld من %2$lld</string>
 	<key>parentGate.title</key>
 	<string>موافقة شخص بالغ مطلوبة</string>
-	<key>premium.availableAt %lld</key>
-	<string>متاح بدءًا من %lld كأسًا</string>
 	<key>premium.availableFromStart</key>
 	<string>متاح منذ البداية</string>
 	<key>premium.characterUnlocked</key>
 	<string>تم فتح شخصية جديدة</string>
-	<key>premium.earnedCards %lld</key>
-	<string>ربحت %lld من حلقات</string>
 	<key>premium.exclusiveBadge</key>
 	<string>حصري مع Premium</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -22,8 +22,6 @@
 	<string>មឹក</string>
 	<key>character.penguin</key>
 	<string>ភេនឃ្វីន</string>
-	<key>common.cancel</key>
-	<string>បោះបង់</string>
 	<key>common.continue</key>
 	<string>បន្ត</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld នាទី</string>
 	<key>common.ok</key>
 	<string>យល់ព្រម</string>
-	<key>common.save</key>
-	<string>រក្សាទុក</string>
-	<key>currency.hoop.plural</key>
-	<string>រង្វង់</string>
-	<key>currency.hoop.singular</key>
-	<string>រង្វង់</string>
 	<key>game.combo %lld</key>
 	<string>កុំបូ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>អ្នកជិតបានហើយ</string>
 	<key>game.encouragement.complete</key>
 	<string>ពិន្ទុពេញ!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>អ្នករកបានគ្រប់ពិន្ទុ។</string>
 	<key>game.end.completionSuffix</key>
 	<string>រួចរាល់!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>ចាប់ផ្តើមកម្រិត</string>
 	<key>game.intro.startTutorial</key>
 	<string>ចាប់ផ្តើមណែនាំ</string>
-	<key>game.streakBoost.title</key>
-	<string>ពិន្ទុគុណពីរ!</string>
 	<key>goal.period</key>
 	<string>រយៈពេលគោលដៅ</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>លំហាត់ដែលអ្នក **បូក** ចំនួនមួយ។</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>បូក %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ការ៉ុត %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **មាន់ %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ត្រី %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **ពាងទឹកឃ្មុំ %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **រង្វង់ %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **នំឆ្កែ %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **សាច់ %lld ដុំ** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **សណ្ដែកដី %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **គុជ %lld** ក្នុងលេវែលនេះ។</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>អ្នកអាចប្រមូលបានរហូតដល់ **បង្គា %lld** ក្នុងលេវែលនេះ។</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>លំហាត់ដែលអ្នក **ចែក** ចំនួនមួយ។</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ឈ្មោះរបស់អ្នក</string>
 	<key>name.whatsYourName</key>
 	<string>អ្នកឈ្មោះអ្វី?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: ទទួលបានរង្វង់ពីរបីទៀតដើម្បីដោះសោសត្វនេះ! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>សត្វរបស់អ្នកកំពុងរង់ចាំ។ត្រលប់មកលេង ហើយបន្តប្រមូលរង្វង់!</string>
 	<key>notif.comeback.title</key>
 	<string>យើងនឹកអ្នក! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium រួមបញ្ចូលកម្រិត %lld សម្រាប់គ្រប់ប្រធានបទ និងសត្វទាំង 10 ។ដំណើរផ្សងព្រេងនៅតែបន្ត!</string>
 	<key>notif.premium.title</key>
 	<string>ដោះសោកម្រិតនិងសត្វកាន់តែច្រើន! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>មានរយៈពេល %lld ថ្ងៃ។តោះ​ដោះស្រាយ​លំហាត់​គណិត​ខ្លះ​ហើយ​ឈ្នះ​រង្វង់​ទៀត!</string>
 	<key>notif.reactivate.title</key>
 	<string>ត្រៀម​លេង​ម្ដង​ទៀត​ហើយ​ឬ​នៅ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ចំនួនប៉ះ៖ %1$lld ក្នុងចំណោម %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ត្រូវការការយល់ព្រមពីមនុស្សពេញវ័យ</string>
-	<key>premium.availableAt %lld</key>
-	<string>មានចាប់ពីពាន %lld</string>
 	<key>premium.availableFromStart</key>
 	<string>មានតាំងពីដំបូង</string>
 	<key>premium.characterUnlocked</key>
 	<string>បានដោះសោតួអង្គថ្មី</string>
-	<key>premium.earnedCards %lld</key>
-	<string>អ្នករកបានរង្វង់ %lld</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ផ្តាច់មុខជាមួយ Premium</string>
 	<key>premium.feature.animals.subtitle</key>

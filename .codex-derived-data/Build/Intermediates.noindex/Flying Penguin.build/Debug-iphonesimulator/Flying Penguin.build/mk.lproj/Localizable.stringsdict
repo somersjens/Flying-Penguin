@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Уште само %lld обрач! ⭕</string>
-			<key>other</key>
-			<string>Уште само %lld обрач! ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>Играј %lld минута денес и собери уште неколку.</string>
 			<key>other</key>
 			<string>Играј %lld минута денес и собери уште неколку.</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>%lld обрач собрана! ⭕</string>
-			<key>other</key>
-			<string>%lld обрач собрана! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>Вашата дневна серија на игра достигна %lld дена! 🔥</string>
 			<key>other</key>
 			<string>Вашата дневна серија на игра достигна %lld дена! 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Тоа го носи вашиот вкупен број на %lld обрач. Неверојатна работа!</string>
-			<key>other</key>
-			<string>Тоа го носи вашиот вкупен број на %lld обрач. Неверојатна работа!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Заработивте %lld обрач оваа недела! 🎉</string>
-			<key>other</key>
-			<string>Заработивте %lld обрач оваа недела! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

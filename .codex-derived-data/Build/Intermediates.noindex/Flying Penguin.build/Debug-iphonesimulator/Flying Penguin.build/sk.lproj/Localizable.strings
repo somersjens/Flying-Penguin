@@ -22,8 +22,6 @@
 	<string>Chobotnica</string>
 	<key>character.penguin</key>
 	<string>Tučniak</string>
-	<key>common.cancel</key>
-	<string>Zrušiť</string>
 	<key>common.continue</key>
 	<string>Ďalej</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Uložiť</string>
-	<key>currency.hoop.plural</key>
-	<string>obruče</string>
-	<key>currency.hoop.singular</key>
-	<string>obruč</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Už si skoro tam</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfektné, všetko správne!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Získal si každý bod.</string>
 	<key>game.end.completionSuffix</key>
 	<string>hotovo!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Spustiť úroveň</string>
 	<key>game.intro.startTutorial</key>
 	<string>Spustiť návod</string>
-	<key>game.streakBoost.title</key>
-	<string>Dvojité body!</string>
 	<key>goal.period</key>
 	<string>Obdobie cieľa</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Príklady, kde číslo **pripočítaš**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pripočítaj %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld mrkiev**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld sliepok**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld rýb**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld pohárikov medu**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld obruče**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld psích sušienok**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld kúskov mäsa**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld arašidov**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld perál**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>V tejto úrovni môžeš nazbierať až **%lld kreviet**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Príklady, kde číslo **delíš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Tvoje meno</string>
 	<key>name.whatsYourName</key>
 	<string>Ako sa voláš?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Získajte niekoľko ďalších obruče a odomknite toto zviera! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Vaše zvieratá čakajú. Vráťte sa hrať a zbierajte obruče!</string>
 	<key>notif.comeback.title</key>
 	<string>Chýbaš nám! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium obsahuje %lld úrovní pre každú tému a všetkých 10 zvierat. Dobrodružstvo pokračuje!</string>
 	<key>notif.premium.title</key>
 	<string>Odomknite ďalšie úrovne a zvieratá! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Prešli %lld dni. Poďme vyriešiť nejaké matematické cvičenia a zarobiť viac obruče!</string>
 	<key>notif.reactivate.title</key>
 	<string>Ste pripravení hrať znova? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Ťuknutia: %1$lld z %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebné schválenie dospelého</string>
-	<key>premium.availableAt %lld</key>
-	<string>Dostupné od %lld trofejí</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupné od začiatku</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODOMKNUTÁ NOVÁ POSTAVA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Získal si %lld obruče</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exkluzívne s Premium</string>
 	<key>premium.feature.animals.subtitle</key>

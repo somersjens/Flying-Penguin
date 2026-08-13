@@ -22,8 +22,6 @@
 	<string>Kurita</string>
 	<key>character.penguin</key>
 	<string>Penguin</string>
-	<key>common.cancel</key>
-	<string>Batal</string>
 	<key>common.continue</key>
 	<string>Teruskan</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Simpan</string>
-	<key>currency.hoop.plural</key>
-	<string>gelung-gelung</string>
-	<key>currency.hoop.singular</key>
-	<string>gelung</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Hampir sampai</string>
 	<key>game.encouragement.complete</key>
 	<string>Skor sempurna!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Kamu berjaya dapat semua mata.</string>
 	<key>game.end.completionSuffix</key>
 	<string>selesai!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Mula tahap</string>
 	<key>game.intro.startTutorial</key>
 	<string>Mula tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Mata berganda!</string>
 	<key>goal.period</key>
 	<string>Tempoh sasaran</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Soalan yang kamu **tambah** nombor.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Tambah %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld lobak** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld ayam** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld ikan** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld balang madu** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld gelung-gelung** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld biskut anjing** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld ketul daging** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld kacang tanah** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld mutiara** dalam tahap ini.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Kamu boleh kumpul hingga **%lld udang** dalam tahap ini.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Soalan yang kamu **bahagi** nombor.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Nama kamu</string>
 	<key>name.whatsYourName</key>
 	<string>Siapa nama kamu?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Peroleh beberapa lagi gelung-gelung untuk membuka kunci haiwan ini! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Haiwan anda sedang menunggu. Kembali bermain dan terus mengumpul gelung-gelung!</string>
 	<key>notif.comeback.title</key>
 	<string>Kami rindu awak! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium termasuk %lld tahap untuk setiap topik dan kesemua 10 haiwan. Pengembaraan diteruskan!</string>
 	<key>notif.premium.title</key>
 	<string>Buka kunci lebih banyak tahap dan haiwan! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>dah %lld hari. Mari selesaikan beberapa latihan matematik dan dapatkan lebih banyak gelung-gelung!</string>
 	<key>notif.reactivate.title</key>
 	<string>Bersedia untuk bermain lagi? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Ketikan: %1$lld daripada %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Kelulusan orang dewasa diperlukan</string>
-	<key>premium.availableAt %lld</key>
-	<string>Tersedia mulai %lld trofi</string>
 	<key>premium.availableFromStart</key>
 	<string>Tersedia sejak mula</string>
 	<key>premium.characterUnlocked</key>
 	<string>WATAK BAHARU DIBUKA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Kamu sudah dapat %lld simpai-simpai</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusif dengan Premium</string>
 	<key>premium.feature.animals.subtitle</key>

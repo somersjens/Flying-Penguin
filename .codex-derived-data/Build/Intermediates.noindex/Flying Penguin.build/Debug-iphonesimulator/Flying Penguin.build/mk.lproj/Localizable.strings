@@ -22,8 +22,6 @@
 	<string>Октопод</string>
 	<key>character.penguin</key>
 	<string>Пингвин</string>
-	<key>common.cancel</key>
-	<string>Откажи</string>
 	<key>common.continue</key>
 	<string>Продолжи</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld мин</string>
 	<key>common.ok</key>
 	<string>ОК</string>
-	<key>common.save</key>
-	<string>Зачувај</string>
-	<key>currency.hoop.plural</key>
-	<string>обрачи</string>
-	<key>currency.hoop.singular</key>
-	<string>обрач</string>
 	<key>game.combo %lld</key>
 	<string>Комбо! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Уште малку</string>
 	<key>game.encouragement.complete</key>
 	<string>Сè точно!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Го освои секој поен.</string>
 	<key>game.end.completionSuffix</key>
 	<string>завршено!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Почни ниво</string>
 	<key>game.intro.startTutorial</key>
 	<string>Почни упатство</string>
-	<key>game.streakBoost.title</key>
-	<string>Двојни поени!</string>
 	<key>goal.period</key>
 	<string>Период на целта</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Задачи каде **додаваш** број.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Плус %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld моркови**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld кокошки**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld риби**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld тегли мед**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld обрачи**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld кучешки бисквити**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld парчиња месо**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld кикирики**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld бисери**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Во ова ниво можеш да собереш до **%lld ракчиња**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Задачи каде **делиш** број.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Твоето име</string>
 	<key>name.whatsYourName</key>
 	<string>Како се викаш?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Заработете уште неколку обрачи за да го отклучите ова животно! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Вашите животни чекаат. Вратете се да играте и продолжете да собирате обрачи!</string>
 	<key>notif.comeback.title</key>
 	<string>Ни недостигаш! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium вклучува %lld нивоа за секоја тема и сите 10 животни. Авантурата продолжува!</string>
 	<key>notif.premium.title</key>
 	<string>Отклучете повеќе нивоа и животни! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Поминаа %lld дена. Ајде да решиме неколку математички вежби и да заработиме повеќе обрачи!</string>
 	<key>notif.reactivate.title</key>
 	<string>Подготвени да играте повторно? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Допири: %1$lld од %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Потребно е одобрение од возрасен</string>
-	<key>premium.availableAt %lld</key>
-	<string>Достапно од %lld трофеи</string>
 	<key>premium.availableFromStart</key>
 	<string>Достапно од почеток</string>
 	<key>premium.characterUnlocked</key>
 	<string>ОТКЛУЧЕН Е НОВ ЛИК</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Собра %lld обрачи</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ексклузивно со Premium</string>
 	<key>premium.feature.animals.subtitle</key>

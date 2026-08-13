@@ -22,8 +22,6 @@
 	<string>Olagarroa</string>
 	<key>character.penguin</key>
 	<string>Pinguinoa</string>
-	<key>common.cancel</key>
-	<string>Utzi</string>
 	<key>common.continue</key>
 	<string>Jarraitu</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Ados</string>
-	<key>common.save</key>
-	<string>Gorde</string>
-	<key>currency.hoop.plural</key>
-	<string>uztaiak</string>
-	<key>currency.hoop.singular</key>
-	<string>uztai</string>
 	<key>game.combo %lld</key>
 	<string>Konboa! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Ia iritsi zara</string>
 	<key>game.encouragement.complete</key>
 	<string>Puntuazio perfektua!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Puntu guztiak irabazi dituzu.</string>
 	<key>game.end.completionSuffix</key>
 	<string>osatuta!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Hasi maila</string>
 	<key>game.intro.startTutorial</key>
 	<string>Hasi tutoriala</string>
-	<key>game.streakBoost.title</key>
-	<string>Puntu bikoitzak!</string>
 	<key>goal.period</key>
 	<string>Helburu-epea</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Zenbaki bat \*\*batzen\*\* duten eragiketak.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Gehitu %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Maila honetan gehienez \*\*%lld azenario\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Maila honetan gehienez \*\*%lld oilasko\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Maila honetan gehienez \*\*%lld arrain\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Maila honetan gehienez \*\*%lld ezti-pote\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Maila honetan gehienez \*\*%lld uztaiak\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Maila honetan gehienez \*\*%lld txakur-gaileta\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Maila honetan gehienez \*\*%lld haragi-zati\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Maila honetan gehienez \*\*%lld kakahuete\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Maila honetan gehienez \*\*%lld perla\*\* bil ditzakezu.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Maila honetan gehienez \*\*%lld ganba\*\* bil ditzakezu.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Zenbaki bat \*\*zatitzen\*\* duten eragiketak.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Zure izena</string>
 	<key>name.whatsYourName</key>
 	<string>Nola duzu izena?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Irabazi uztaiak batzuk animalia hau desblokeatzeko! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Zure animaliak zain daude. Itzuli jolastera eta jarraitu uztaiak biltzen!</string>
 	<key>notif.comeback.title</key>
 	<string>Faltan botatzen zaitugu! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium-ek %lld maila biltzen ditu gai bakoitzeko eta 10 animalia guztientzat. Abenturak aurrera jarraitzen du!</string>
 	<key>notif.premium.title</key>
 	<string>Desblokeatu maila eta animalia gehiago! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld egun pasa dira. Ebatzi ditzagun matematikako ariketa batzuk eta irabaz ditzagun garaikur gehiago!</string>
 	<key>notif.reactivate.title</key>
 	<string>Berriro jolasteko prest? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Sakatzeak: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Heldu baten baimena behar da</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld garaikurretik aurrera erabilgarri</string>
 	<key>premium.availableFromStart</key>
 	<string>Hasieratik erabilgarri</string>
 	<key>premium.characterUnlocked</key>
 	<string>PERTSONAIA BERRIA DESBLOKEATU DA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld uztaiak irabazi dituzu</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium-ekin esklusiboa</string>
 	<key>premium.feature.animals.subtitle</key>

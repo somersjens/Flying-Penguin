@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>ਸਿਰਫ਼ %lld ਛੱਲਾ ਬਾਕੀ ਹਨ! ⭕</string>
-			<key>other</key>
-			<string>ਸਿਰਫ਼ %lld ਛੱਲਾ ਬਾਕੀ ਹਨ! ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>ਅੱਜ %lld ਮਿੰਟ ਖੇਡੋ ਅਤੇ ਕੁਝ ਹੋਰ ਇਕੱਠੇ ਕਰੋ।</string>
 			<key>other</key>
 			<string>ਅੱਜ %lld ਮਿੰਟ ਖੇਡੋ ਅਤੇ ਕੁਝ ਹੋਰ ਇਕੱਠੇ ਕਰੋ।</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>%lld ਛੱਲਾ ਇਕੱਠੀ ਕੀਤੀ! ⭕</string>
-			<key>other</key>
-			<string>%lld ਛੱਲਾ ਇਕੱਠੀ ਕੀਤੀ! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>ਤੁਹਾਡੀ ਰੋਜ਼ਾਨਾ ਖੇਡਣ ਦੀ ਸਟ੍ਰੀਕ %lld ਦਿਨਾਂ ਤੱਕ ਪਹੁੰਚ ਗਈ ਹੈ! 🔥</string>
 			<key>other</key>
 			<string>ਤੁਹਾਡੀ ਰੋਜ਼ਾਨਾ ਖੇਡਣ ਦੀ ਸਟ੍ਰੀਕ %lld ਦਿਨਾਂ ਤੱਕ ਪਹੁੰਚ ਗਈ ਹੈ! 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>ਇਸ ਨਾਲ ਤੁਹਾਡੀ ਕੁੱਲ %lld ਛੱਲਾ ਹੋ ਜਾਂਦੀਆਂ ਹਨ। ਹੈਰਾਨੀਜਨਕ ਕੰਮ!</string>
-			<key>other</key>
-			<string>ਇਸ ਨਾਲ ਤੁਹਾਡੀ ਕੁੱਲ %lld ਛੱਲਾ ਹੋ ਜਾਂਦੀਆਂ ਹਨ। ਹੈਰਾਨੀਜਨਕ ਕੰਮ!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>ਤੁਸੀਂ ਇਸ ਹਫ਼ਤੇ %lld ਛੱਲਾ ਹਾਸਲ ਕੀਤੀਆਂ ਹਨ! 🎉</string>
-			<key>other</key>
-			<string>ਤੁਸੀਂ ਇਸ ਹਫ਼ਤੇ %lld ਛੱਲਾ ਹਾਸਲ ਕੀਤੀਆਂ ਹਨ! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

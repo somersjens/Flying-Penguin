@@ -22,8 +22,6 @@
 	<string>Наймаалж</string>
 	<key>character.penguin</key>
 	<string>Оцон шувуу</string>
-	<key>common.cancel</key>
-	<string>Цуцлах</string>
 	<key>common.continue</key>
 	<string>Үргэлжлүүлэх</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld мин</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Хадгалах</string>
-	<key>currency.hoop.plural</key>
-	<string>цагирагууд</string>
-	<key>currency.hoop.singular</key>
-	<string>цагираг</string>
 	<key>game.combo %lld</key>
 	<string>Комбо! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Бараг боллоо</string>
 	<key>game.encouragement.complete</key>
 	<string>Төгс оноо!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Чи бүх оноогоо авлаа.</string>
 	<key>game.end.completionSuffix</key>
 	<string>дууслаа!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Түвшинг эхлүүлэх</string>
 	<key>game.intro.startTutorial</key>
 	<string>Заавар эхлүүлэх</string>
-	<key>game.streakBoost.title</key>
-	<string>Давхар оноо!</string>
 	<key>goal.period</key>
 	<string>Зорилгын хугацаа</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Тоог **нэмэх** бодлогууд.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld-ыг нэм</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Энэ түвшинд **%lld лууван** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Энэ түвшинд **%lld тахиа** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Энэ түвшинд **%lld загас** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Энэ түвшинд **%lld балтай сав** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Энэ түвшинд **%lld цагирагууд** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Энэ түвшинд **%lld нохойн жигнэмэг** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Энэ түвшинд **%lld мах** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Энэ түвшинд **%lld газрын самар** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Энэ түвшинд **%lld сувд** цуглуулж болно.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Энэ түвшинд **%lld сам хорхой** цуглуулж болно.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Тоог **хуваах** бодлогууд.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Чиний нэр</string>
 	<key>name.whatsYourName</key>
 	<string>Чамайг хэн гэдэг вэ?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Энэ амьтны түгжээг тайлахын тулд хэд хэдэн цагирагууд цуглуулаарай! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Таны амьтад хүлээж байна. Тоглохоор буцаж ирээд цагирагууд цуглуулж байгаарай!</string>
 	<key>notif.comeback.title</key>
 	<string>Бид чамайг санаж байна! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium нь сэдэв бүрийн %lld түвшин болон бүх 10 амьтныг агуулдаг. Адал явдал үргэлжилсээр байна!</string>
 	<key>notif.premium.title</key>
 	<string>Илүү олон түвшин, амьтдын түгжээг нээ! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld хонож байна. Математикийн дасгалуудыг шийдэж, илүү олон цагирагууд олцгооё!</string>
 	<key>notif.reactivate.title</key>
 	<string>Дахин тоглоход бэлэн үү? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Товшилт: %1$lld-аас %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Насанд хүрэгчийн зөвшөөрөл хэрэгтэй</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld цомоос эхлэн нээгдэнэ</string>
 	<key>premium.availableFromStart</key>
 	<string>Эхнээсээ нээлттэй</string>
 	<key>premium.characterUnlocked</key>
 	<string>ШИНЭ ДҮР НЭЭГДЛЭЭ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Чи %lld цагирагууд цуглууллаа</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Зөвхөн Premium-д</string>
 	<key>premium.feature.animals.subtitle</key>

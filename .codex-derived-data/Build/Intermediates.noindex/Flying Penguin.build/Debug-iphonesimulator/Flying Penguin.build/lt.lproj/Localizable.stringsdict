@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Liko tik %lld lankass! ⭕</string>
-			<key>other</key>
-			<string>Liko tik %lld lankass! ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>Žaisk šiandien %lld minutę ir surink dar kelis.</string>
 			<key>other</key>
 			<string>Žaisk šiandien %lld minutę ir surink dar kelis.</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Surinkta %lld lankas! ⭕</string>
-			<key>other</key>
-			<string>Surinkta %lld lankas! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>Jūsų kasdienė žaidimų serija pasiekė %lld dienas! 🔥</string>
 			<key>other</key>
 			<string>Jūsų kasdienė žaidimų serija pasiekė %lld dienas! 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Tai padidins jūsų bendrą %lld lankas. Nuostabus darbas!</string>
-			<key>other</key>
-			<string>Tai padidins jūsų bendrą %lld lankas. Nuostabus darbas!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Šią savaitę pelnėte %lld lankas! 🎉</string>
-			<key>other</key>
-			<string>Šią savaitę pelnėte %lld lankas! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

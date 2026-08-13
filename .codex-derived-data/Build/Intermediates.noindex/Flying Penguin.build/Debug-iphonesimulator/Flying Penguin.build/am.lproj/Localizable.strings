@@ -22,8 +22,6 @@
 	<string>ኦክቶፐስ</string>
 	<key>character.penguin</key>
 	<string>ፔንግዊን</string>
-	<key>common.cancel</key>
-	<string>ሰርዝ</string>
 	<key>common.continue</key>
 	<string>ቀጥል</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld ደቂቃ</string>
 	<key>common.ok</key>
 	<string>እሺ</string>
-	<key>common.save</key>
-	<string>አስቀምጥ</string>
-	<key>currency.hoop.plural</key>
-	<string>ቀለበቶች</string>
-	<key>currency.hoop.singular</key>
-	<string>ቀለበት</string>
 	<key>game.combo %lld</key>
 	<string>ኮምቦ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>ልትደርስ ነው</string>
 	<key>game.encouragement.complete</key>
 	<string>ሁሉም ትክክል!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>እያንዳንዱን ነጥብ አግኝተሃል።</string>
 	<key>game.end.completionSuffix</key>
 	<string>ተጠናቋል!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>ደረጃውን ጀምር</string>
 	<key>game.intro.startTutorial</key>
 	<string>መማሪያውን ጀምር</string>
-	<key>game.streakBoost.title</key>
-	<string>ድርብ ነጥብ!</string>
 	<key>goal.period</key>
 	<string>የግብ ጊዜ</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ቁጥርን **የምትደምርባቸው** ስሌቶች።</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ጨምር</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ካሮት** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ዶሮ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ዓሣ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld የማር ማሰሮ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ቀለበቶች** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld የውሻ ብስኩት** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld የስጋ ቁራጭ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ኦቾሎኒ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ዕንቁ** መሰብሰብ ትችላለህ።</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>በዚህ ደረጃ እስከ **%lld ሽሪምፕ** መሰብሰብ ትችላለህ።</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ቁጥርን **የምትከፍልባቸው** ስሌቶች።</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ስምህ</string>
 	<key>name.whatsYourName</key>
 	<string>ስምህ ማን ነው?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: ይህን እንስሳ ለመክፈት ጥቂት ተጨማሪ ቀለበቶች ያግኙ! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>እንስሳትዎ እየጠበቁ ናቸው. ለመጫወት ይመለሱ እና ቀለበቶች መሰብሰብዎን ይቀጥሉ!</string>
 	<key>notif.comeback.title</key>
 	<string>ትናፍቀናለህ! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>ዝላይ ፎክስ ፕሪሚየም ለእያንዳንዱ ርዕስ %lld ደረጃዎችን እና ሁሉንም 10 እንስሳትን ያካትታል።ጀብዱ ይቀጥላል!</string>
 	<key>notif.premium.title</key>
 	<string>ተጨማሪ ደረጃዎችን እና እንስሳትን ይክፈቱ! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld ቀን ሆኖታል።አንዳንድ የሂሳብ ልምምዶችን እንፍታ እና ብዙ ቀለበቶች እናገኝ!</string>
 	<key>notif.reactivate.title</key>
 	<string>እንደገና ለመጫወት ዝግጁ ነዎት? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ንክኪዎች፦ %1$lld ከ%2$lld</string>
 	<key>parentGate.title</key>
 	<string>የአዋቂ ፈቃድ ያስፈልጋል</string>
-	<key>premium.availableAt %lld</key>
-	<string>ከ%lld ዋንጫዎች ጀምሮ ይገኛል</string>
 	<key>premium.availableFromStart</key>
 	<string>ከመጀመሪያው ይገኛል</string>
 	<key>premium.characterUnlocked</key>
 	<string>አዲስ ገጸ ባህሪ ተከፍቷል</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld ቀለበቶች አግኝተሃል</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ለPremium ብቻ</string>
 	<key>premium.feature.animals.subtitle</key>

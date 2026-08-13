@@ -22,8 +22,6 @@
 	<string>ಆಕ್ಟೋಪಸ್</string>
 	<key>character.penguin</key>
 	<string>ಪೆಂಗ್ವಿನ್</string>
-	<key>common.cancel</key>
-	<string>ರದ್ದು</string>
 	<key>common.continue</key>
 	<string>ಮುಂದೆ</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld ನಿಮಿ</string>
 	<key>common.ok</key>
 	<string>ಸರಿ</string>
-	<key>common.save</key>
-	<string>ಉಳಿಸು</string>
-	<key>currency.hoop.plural</key>
-	<string>ವಲಯಗಳು</string>
-	<key>currency.hoop.singular</key>
-	<string>ವಲಯ</string>
 	<key>game.combo %lld</key>
 	<string>ಕಾಂಬೋ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>ಇನ್ನೇನು ತಲುಪುತ್ತೀಯ</string>
 	<key>game.encouragement.complete</key>
 	<string>ಎಲ್ಲವೂ ಸರಿಯಾಗಿದೆ!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ಪ್ರತಿ ಅಂಕವನ್ನೂ ಗಳಿಸಿದ್ದೀಯ.</string>
 	<key>game.end.completionSuffix</key>
 	<string>ಪೂರ್ಣ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>ಹಂತ ಆರಂಭಿಸು</string>
 	<key>game.intro.startTutorial</key>
 	<string>ಟ್ಯುಟೋರಿಯಲ್ ಆರಂಭಿಸು</string>
-	<key>game.streakBoost.title</key>
-	<string>ಡಬಲ್ ಪಾಯಿಂಟ್‌ಗಳು!</string>
 	<key>goal.period</key>
 	<string>ಗುರಿಯ ಅವಧಿ</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ಸಂಖ್ಯೆಯನ್ನು **ಕೂಡಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ಸೇರಿಸು</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕ್ಯಾರೆಟ್‌ಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕೋಳಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮೀನುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಜೇನು ಕುಡಿಕೆಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ವಲಯಗಳು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ನಾಯಿ ಬಿಸ್ಕತ್‌ಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮಾಂಸದ ತುಂಡುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಕಡಲೆಕಾಯಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಮುತ್ತುಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>ಈ ಹಂತದಲ್ಲಿ ಗರಿಷ್ಠ **%lld ಸೀಗಡಿಗಳನ್ನು** ಸಂಗ್ರಹಿಸಬಹುದು.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ಸಂಖ್ಯೆಯನ್ನು **ಭಾಗಿಸುವ** ಲೆಕ್ಕಗಳು.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ನಿನ್ನ ಹೆಸರು</string>
 	<key>name.whatsYourName</key>
 	<string>ನಿನ್ನ ಹೆಸರೇನು?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: ಈ ಪ್ರಾಣಿಯನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಲು ಇನ್ನೂ ಕೆಲವು ವಲಯಗಳು ಗಳಿಸಿ! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>ನಿಮ್ಮ ಪ್ರಾಣಿಗಳು ಕಾಯುತ್ತಿವೆ. ಆಡಲು ಹಿಂತಿರುಗಿ ಮತ್ತು ವಲಯಗಳು ಸಂಗ್ರಹಿಸುವುದನ್ನು ಮುಂದುವರಿಸಿ!</string>
 	<key>notif.comeback.title</key>
 	<string>ನಾವು ನಿನ್ನನ್ನು ಕಳೆದುಕೊಳ್ಳುತ್ತೇವೆ! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>ಜಂಪಿಂಗ್ ಫಾಕ್ಸ್ ಪ್ರೀಮಿಯಂ ಪ್ರತಿ ವಿಷಯ ಮತ್ತು ಎಲ್ಲಾ 10 ಪ್ರಾಣಿಗಳಿಗೆ %lld ಹಂತಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಸಾಹಸವು ಮುಂದುವರಿಯುತ್ತದೆ!</string>
 	<key>notif.premium.title</key>
 	<string>ಹೆಚ್ಚಿನ ಮಟ್ಟಗಳು ಮತ್ತು ಪ್ರಾಣಿಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld ದಿನಗಳಾಗಿವೆ. ಕೆಲವು ಗಣಿತ ವ್ಯಾಯಾಮಗಳನ್ನು ಪರಿಹರಿಸೋಣ ಮತ್ತು ಹೆಚ್ಚಿನ ವಲಯಗಳು ಗಳಿಸೋಣ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ಮತ್ತೆ ಆಡಲು ಸಿದ್ಧರಿದ್ದೀರಾ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ತಟ್ಟುಗಳು: %2$lldರಲ್ಲಿ %1$lld</string>
 	<key>parentGate.title</key>
 	<string>ವಯಸ್ಕರ ಅನುಮತಿ ಅಗತ್ಯ</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ಟ್ರೋಫಿಗಳಿಂದ ಲಭ್ಯ</string>
 	<key>premium.availableFromStart</key>
 	<string>ಆರಂಭದಿಂದಲೇ ಲಭ್ಯ</string>
 	<key>premium.characterUnlocked</key>
 	<string>ಹೊಸ ಪಾತ್ರವನ್ನು ತೆರೆಯಲಾಗಿದೆ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>ನೀನು %lld ವಲಯಗಳು ಗಳಿಸಿದ್ದೀಯ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium ಜೊತೆಗೆ ಮಾತ್ರ</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target 'Flying Penguin' in project 'Flying Penguin' (no dependencies)

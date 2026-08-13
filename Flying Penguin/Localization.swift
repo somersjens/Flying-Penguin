@@ -144,7 +144,7 @@ struct AppLanguage: Identifiable, Hashable, Sendable {
         AppLanguage(code: "mr", flag: "\u{1F1EE}\u{1F1F3}"),  // Marathi
         AppLanguage(code: "mn", flag: "\u{1F1F2}\u{1F1F3}"),  // Mongolian
         AppLanguage(code: "ne", flag: "\u{1F1F3}\u{1F1F5}"),  // Nepali
-        AppLanguage(code: "no", flag: "\u{1F1F3}\u{1F1F4}"),  // Norwegian
+        AppLanguage(code: "nb", flag: "\u{1F1F3}\u{1F1F4}"),  // Norwegian Bokmål
         AppLanguage(code: "or", flag: "\u{1F1EE}\u{1F1F3}"),  // Odia
         AppLanguage(code: "fa", flag: "\u{1F1EE}\u{1F1F7}"),  // Persian
         AppLanguage(code: "pl", flag: "\u{1F1F5}\u{1F1F1}"),  // Polish

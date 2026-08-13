@@ -22,8 +22,6 @@
 	<string>অক্টোপাস</string>
 	<key>character.penguin</key>
 	<string>পেঙ্গুইন</string>
-	<key>common.cancel</key>
-	<string>বাতিল</string>
 	<key>common.continue</key>
 	<string>এগিয়ে</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld মিনিট</string>
 	<key>common.ok</key>
 	<string>ঠিক আছে</string>
-	<key>common.save</key>
-	<string>সংরক্ষণ</string>
-	<key>currency.hoop.plural</key>
-	<string>বলয়গুলো</string>
-	<key>currency.hoop.singular</key>
-	<string>বলয়</string>
 	<key>game.combo %lld</key>
 	<string>কম্বো! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>আর একটু বাকি</string>
 	<key>game.encouragement.complete</key>
 	<string>একদম ঠিক!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>প্রতিটি পয়েন্ট তুমি অর্জন করেছ।</string>
 	<key>game.end.completionSuffix</key>
 	<string>সম্পূর্ণ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>লেভেল শুরু</string>
 	<key>game.intro.startTutorial</key>
 	<string>টিউটোরিয়াল শুরু</string>
-	<key>game.streakBoost.title</key>
-	<string>দ্বিগুণ পয়েন্ট!</string>
 	<key>goal.period</key>
 	<string>লক্ষ্যের সময়কাল</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>যেসব অঙ্কে একটি সংখ্যা **যোগ** করো।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld যোগ</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি গাজর** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি মুরগি** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি মাছ** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি মধুর পাত্র** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি বলয়গুলো** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি কুকুরের বিস্কুট** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি মাংসের টুকরো** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি চিনাবাদাম** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি মুক্তা** সংগ্রহ করতে পারো।</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>এই লেভেলে সর্বোচ্চ **%lldটি চিংড়ি** সংগ্রহ করতে পারো।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>যেসব অঙ্কে একটি সংখ্যা দিয়ে **ভাগ** করো।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>তোমার নাম</string>
 	<key>name.whatsYourName</key>
 	<string>তোমার নাম কী?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: এই প্রাণীটিকে আনলক করতে আরও কয়েকটি বলয়গুলো অর্জন করুন! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>আপনার পশুরা অপেক্ষা করছে। খেলতে ফিরে আসুন এবং বলয়গুলো সংগ্রহ করতে থাকুন!</string>
 	<key>notif.comeback.title</key>
 	<string>আমরা আপনাকে মিস করি! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>জাম্পিং ফক্স প্রিমিয়ামে প্রতিটি বিষয়ের জন্য %lldটি স্তর এবং সমস্ত 10টি প্রাণী রয়েছে। অ্যাডভেঞ্চার চলতে থাকে!</string>
 	<key>notif.premium.title</key>
 	<string>আরও স্তর এবং প্রাণী আনলক করুন! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld দিন হয়ে গেল। আসুন কিছু গণিত অনুশীলন সমাধান করি এবং আরও বলয়গুলো অর্জন করি!</string>
 	<key>notif.reactivate.title</key>
 	<string>আবার খেলার জন্য প্রস্তুত? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ট্যাপ: %1$lld-এর মধ্যে %2$lld</string>
 	<key>parentGate.title</key>
 	<string>প্রাপ্তবয়স্কের অনুমতি দরকার</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lldটি ট্রফি থেকে পাওয়া যাবে</string>
 	<key>premium.availableFromStart</key>
 	<string>শুরু থেকেই পাওয়া যাবে</string>
 	<key>premium.characterUnlocked</key>
 	<string>নতুন চরিত্র আনলক হয়েছে</string>
-	<key>premium.earnedCards %lld</key>
-	<string>তুমি %lldটি বলয়গুলো পেয়েছ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>শুধু Premium-এ</string>
 	<key>premium.feature.animals.subtitle</key>

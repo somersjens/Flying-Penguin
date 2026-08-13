@@ -22,8 +22,6 @@
 	<string>Васьміног</string>
 	<key>character.penguin</key>
 	<string>Пінгвін</string>
-	<key>common.cancel</key>
-	<string>Скасаваць</string>
 	<key>common.continue</key>
 	<string>Далей</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld хв</string>
 	<key>common.ok</key>
 	<string>ОК</string>
-	<key>common.save</key>
-	<string>Захаваць</string>
-	<key>currency.hoop.plural</key>
-	<string>абручы</string>
-	<key>currency.hoop.singular</key>
-	<string>абруч</string>
 	<key>game.combo %lld</key>
 	<string>Комба! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Ты амаль дайшоў</string>
 	<key>game.encouragement.complete</key>
 	<string>Усё правільна!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Ты заслужыў кожны бал.</string>
 	<key>game.end.completionSuffix</key>
 	<string>завершана!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Пачаць узровень</string>
 	<key>game.intro.startTutorial</key>
 	<string>Пачаць навучанне</string>
-	<key>game.streakBoost.title</key>
-	<string>Падвойныя балы!</string>
 	<key>goal.period</key>
 	<string>Перыяд мэты</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Прыклады, дзе трэба **дадаць** лік.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Дадаць %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Тут можна сабраць да **%lld моркваў**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Тут можна сабраць да **%lld курачак**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Тут можна сабраць да **%lld рыбак**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Тут можна сабраць да **%lld слоікаў мёду**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Тут можна сабраць да **%lld абручы**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Тут можна сабраць да **%lld сабачых ласункаў**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Тут можна сабраць да **%lld кавалкаў мяса**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Тут можна сабраць да **%lld арахісаў**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Тут можна сабраць да **%lld жамчужын**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Тут можна сабраць да **%lld крэветак**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Прыклады, дзе трэба **дзяліць** лік.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Тваё імя</string>
 	<key>name.whatsYourName</key>
 	<string>Як цябе завуць?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Зарабіце яшчэ некалькі абручы, каб разблакаваць гэтую жывёлу! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Вашы жывёлы чакаюць. Вяртайцеся гуляць і працягвайце збіраць абручы!</string>
 	<key>notif.comeback.title</key>
 	<string>Мы сумуем па табе! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium уключае %lld узроўняў для кожнай тэмы і ўсіх 10 жывёл. Прыгоды працягваюцца!</string>
 	<key>notif.premium.title</key>
 	<string>Разблакуйце больш узроўняў і жывёл! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Прайшло %lld дні. Давайце разгадаем матэматычныя заданні і заробім больш абручы!</string>
 	<key>notif.reactivate.title</key>
 	<string>Гатовы зноў гуляць? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Націсканні: %1$lld з %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Патрэбна згода дарослага</string>
-	<key>premium.availableAt %lld</key>
-	<string>Даступна ад %lld трафеяў</string>
 	<key>premium.availableFromStart</key>
 	<string>Даступна з самага пачатку</string>
 	<key>premium.characterUnlocked</key>
 	<string>АДКРЫТЫ НОВЫ ПЕРСАНАЖ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>У цябе %lld абручы</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Эксклюзіўна з Premium</string>
 	<key>premium.feature.animals.subtitle</key>

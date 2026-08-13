@@ -22,8 +22,6 @@
 	<string>Ingwane</string>
 	<key>character.penguin</key>
 	<string>Iphengwini</string>
-	<key>common.cancel</key>
-	<string>Khansela</string>
 	<key>common.continue</key>
 	<string>Qhubeka</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld imin</string>
 	<key>common.ok</key>
 	<string>Kulungile</string>
-	<key>common.save</key>
-	<string>Londoloza</string>
-	<key>currency.hoop.plural</key>
-	<string>amaringi</string>
-	<key>currency.hoop.singular</key>
-	<string>iringi</string>
 	<key>game.combo %lld</key>
 	<string>I-Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Usuzofika</string>
 	<key>game.encouragement.complete</key>
 	<string>Konke kulungile!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Uthole wonke amaphuzu.</string>
 	<key>game.end.completionSuffix</key>
 	<string>kuqediwe!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Qala ileveli</string>
 	<key>game.intro.startTutorial</key>
 	<string>Qala ukufundiswa</string>
-	<key>game.streakBoost.title</key>
-	<string>Amaphuzu aphindwe kabili!</string>
 	<key>goal.period</key>
 	<string>Isikhathi somgomo</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Izibalo lapho **wengeza** inombolo.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Hlanganisa %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Ungaqoqa **izaqathe ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Ungaqoqa **izinkukhu ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Ungaqoqa **izinhlanzi ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Ungaqoqa **izimbiza zoju ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Ungaqoqa **amaringi ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Ungaqoqa **amabhisikidi ezinja angu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Ungaqoqa **izingcezu zenyama ezingu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Ungaqoqa **amantongomane angu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Ungaqoqa **amaparele angu-%lld** kuleli zinga.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Ungaqoqa **izimfanzi ezingu-%lld** kuleli zinga.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Izibalo lapho **uhlukanisa** inombolo.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Igama lakho</string>
 	<key>name.whatsYourName</key>
 	<string>Ungubani igama lakho?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Zuza ezinye amaringi ezimbalwa ukuze uvule lesi silwane! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Izilwane zakho zilindile. Buya uzodlala futhi uqhubeke nokuqoqa amaringi!</string>
 	<key>notif.comeback.title</key>
 	<string>Siyakukhumbula! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>I-Hungry Frog Premium ifaka amazinga angama-%lld esihlokweni ngasinye nazo zonke izilwane eziyi-10. I-adventure iyaqhubeka!</string>
 	<key>notif.premium.title</key>
 	<string>Vula amazinga engeziwe nezilwane! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Sekuphele izinsuku ezi-%lld. Ake sixazulule ezinye izivivinyo zezibalo futhi sizuze amaringi ezengeziwe!</string>
 	<key>notif.reactivate.title</key>
 	<string>Usulungele ukudlala futhi? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Ukuthepha: %1$lld kokungu-%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Kudingeka imvume yomuntu omdala</string>
-	<key>premium.availableAt %lld</key>
-	<string>Kutholakala kusukela ezindebeni ezingu-%lld</string>
 	<key>premium.availableFromStart</key>
 	<string>Kutholakala kusukela ekuqaleni</string>
 	<key>premium.characterUnlocked</key>
 	<string>KUVULWE UMLINGISWA OMUSHA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Usuzuze amaringi ezingu-%lld</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Okwe-Premium kuphela</string>
 	<key>premium.feature.animals.subtitle</key>

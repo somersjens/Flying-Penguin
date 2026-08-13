@@ -22,8 +22,6 @@
 	<string>ஆக்டோபஸ்</string>
 	<key>character.penguin</key>
 	<string>பென்குயின்</string>
-	<key>common.cancel</key>
-	<string>ரத்துசெய்</string>
 	<key>common.continue</key>
 	<string>தொடர்</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld நிமி</string>
 	<key>common.ok</key>
 	<string>சரி</string>
-	<key>common.save</key>
-	<string>சேமி</string>
-	<key>currency.hoop.plural</key>
-	<string>வளையங்கள்</string>
-	<key>currency.hoop.singular</key>
-	<string>வளையம்</string>
 	<key>game.combo %lld</key>
 	<string>காம்போ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>இன்னும் கொஞ்சம்தான்</string>
 	<key>game.encouragement.complete</key>
 	<string>அருமை, எல்லாம் சரி!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ஒவ்வொரு புள்ளியையும் பெற்றாய்.</string>
 	<key>game.end.completionSuffix</key>
 	<string>முடிந்தது!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>நிலையைத் தொடங்கு</string>
 	<key>game.intro.startTutorial</key>
 	<string>பயிற்சி தொடங்கு</string>
-	<key>game.streakBoost.title</key>
-	<string>இரட்டை புள்ளிகள்!</string>
 	<key>goal.period</key>
 	<string>இலக்கு காலம்</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ஒரு எண்ணை **கூட்டும்** கணக்குகள்.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld கூட்டு</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld காரட்** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld கோழி** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld மீன்** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld தேன் குடுவை** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld வளையங்கள்** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld நாய் பிஸ்கட்** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld இறைச்சித் துண்டு** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld வேர்க்கடலை** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld முத்து** சேகரிக்கலாம்.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>இந்த நிலையில் அதிகபட்சம் **%lld இறால்** சேகரிக்கலாம்.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ஒரு எண்ணை **வகுக்கும்** கணக்குகள்.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>உன் பெயர்</string>
 	<key>name.whatsYourName</key>
 	<string>உன் பெயர் என்ன?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: இந்த விலங்கைத் திறக்க இன்னும் சில வளையங்கள்ப் பெறுங்கள்! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>உங்கள் விலங்குகள் காத்திருக்கின்றன. விளையாட மீண்டும் வாருங்கள், வளையங்கள் சேகரித்துக்கொண்டே இருங்கள்!</string>
 	<key>notif.comeback.title</key>
 	<string>நாங்கள் உங்களை இழக்கிறோம்! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>ஜம்பிங் ஃபாக்ஸ் பிரீமியம் ஒவ்வொரு தலைப்புக்கும் அனைத்து 10 விலங்குகளுக்கும் %lld நிலைகளை உள்ளடக்கியது. சாகசம் தொடர்கிறது!</string>
 	<key>notif.premium.title</key>
 	<string>மேலும் நிலைகளையும் விலங்குகளையும் திறக்கவும்! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld நாட்கள் ஆகிவிட்டன. சில கணக்குகளைச் செய்து மேலும் வளையங்கள்ப் பெறுவோம்!</string>
 	<key>notif.reactivate.title</key>
 	<string>மீண்டும் விளையாடத் தயாரா? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>தட்டல்கள்: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>பெரியவர் அனுமதி தேவை</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld வளையங்கள் கிடைக்கும்</string>
 	<key>premium.availableFromStart</key>
 	<string>தொடக்கத்திலிருந்தே கிடைக்கும்</string>
 	<key>premium.characterUnlocked</key>
 	<string>புதிய கதாபாத்திரம் திறக்கப்பட்டது</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld வளையங்கள் பெற்றுள்ளாய்</string>
 	<key>premium.exclusiveBadge</key>
 	<string>பிரீமியத்தில் மட்டும்</string>
 	<key>premium.feature.animals.subtitle</key>

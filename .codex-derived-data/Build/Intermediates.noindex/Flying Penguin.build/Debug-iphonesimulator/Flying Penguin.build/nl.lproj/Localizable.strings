@@ -22,8 +22,6 @@
 	<string>Inktvis</string>
 	<key>character.penguin</key>
 	<string>Pinguïn</string>
-	<key>common.cancel</key>
-	<string>Annuleren</string>
 	<key>common.continue</key>
 	<string>Verder</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Oké</string>
-	<key>common.save</key>
-	<string>Opslaan</string>
-	<key>currency.hoop.plural</key>
-	<string>hoepels</string>
-	<key>currency.hoop.singular</key>
-	<string>hoepel</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -64,26 +56,6 @@
 	<string>Perfect, alles goed!</string>
 	<key>game.end.completionSubtitle</key>
 	<string>Je hebt alle hoepels verzameld</string>
-	<key>game.end.completionSubtitle.carrot</key>
-	<string>Je hebt alle wortels verzameld</string>
-	<key>game.end.completionSubtitle.chicken</key>
-	<string>Je hebt alle kippen verzameld</string>
-	<key>game.end.completionSubtitle.fish</key>
-	<string>Je hebt alle vissen verzameld</string>
-	<key>game.end.completionSubtitle.honey</key>
-	<string>Je hebt alle potjes honing verzameld</string>
-	<key>game.end.completionSubtitle.hoop</key>
-	<string>Je hebt alle hoepels verzameld</string>
-	<key>game.end.completionSubtitle.kibble</key>
-	<string>Je hebt alle hondenkoekjes verzameld</string>
-	<key>game.end.completionSubtitle.meat</key>
-	<string>Je hebt alle stukken vlees verzameld</string>
-	<key>game.end.completionSubtitle.peanut</key>
-	<string>Je hebt alle pinda's verzameld</string>
-	<key>game.end.completionSubtitle.pearl</key>
-	<string>Je hebt alle parels verzameld</string>
-	<key>game.end.completionSubtitle.shrimp</key>
-	<string>Je hebt alle garnalen verzameld</string>
 	<key>game.end.completionSuffix</key>
 	<string>afgerond!</string>
 	<key>game.end.gameOverTitle</key>
@@ -104,8 +76,6 @@
 	<string>Starten</string>
 	<key>game.intro.startTutorial</key>
 	<string>Start tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Dubbele punten!</string>
 	<key>goal.period</key>
 	<string>Periode</string>
 	<key>goal.promptDaily</key>
@@ -156,26 +126,8 @@
 	<string>Sommen waarbij je een getal **optelt**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plus %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Je kunt in dit level maximaal **%lld wortels** verzamelen.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Je kunt in dit level maximaal **%lld kippen** verzamelen.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Je kunt in dit level maximaal **%lld vissen** verzamelen.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Je kunt in dit level maximaal **%lld potjes honing** verzamelen.</string>
 	<key>levelIntro.cardsBullet.hoop %lld</key>
 	<string>Je kunt in dit level maximaal **%lld hoepels** verzamelen.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Je kunt in dit level maximaal **%lld hondenkoekjes** verzamelen.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Je kunt in dit level maximaal **%lld stukken vlees** verzamelen.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Je kunt in dit level maximaal **%lld pinda's** verzamelen.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Je kunt in dit level maximaal **%lld parels** verzamelen.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Je kunt in dit level maximaal **%lld garnalen** verzamelen.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sommen waarbij je een getal **deelt**.</string>
 	<key>levelIntro.fractions.title %lld</key>

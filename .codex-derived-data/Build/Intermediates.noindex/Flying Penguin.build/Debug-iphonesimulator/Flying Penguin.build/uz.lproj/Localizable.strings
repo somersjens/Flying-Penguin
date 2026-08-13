@@ -22,8 +22,6 @@
 	<string>Ahtapot</string>
 	<key>character.penguin</key>
 	<string>Pingvin</string>
-	<key>common.cancel</key>
-	<string>Bekor qilish</string>
 	<key>common.continue</key>
 	<string>Davom et</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld daq</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Saqlash</string>
-	<key>currency.hoop.plural</key>
-	<string>chambarlar</string>
-	<key>currency.hoop.singular</key>
-	<string>chambar</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Deyarli yetib kelding</string>
 	<key>game.encouragement.complete</key>
 	<string>Zo‘r, hammasi to‘g‘ri!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Har bir ballni qo‘lga kiritding.</string>
 	<key>game.end.completionSuffix</key>
 	<string>tugadi!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Bosqichni boshlash</string>
 	<key>game.intro.startTutorial</key>
 	<string>O‘rgatishni boshlash</string>
-	<key>game.streakBoost.title</key>
-	<string>Ikki hissa ball!</string>
 	<key>goal.period</key>
 	<string>Maqsad davri</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Sonni **qo‘shadigan** misollar.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld qo‘sh</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld sabzi** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld tovuq** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld baliq** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld asal idishi** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld chambarlar** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld it pechenyesi** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld go‘sht bo‘lagi** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld yeryong‘oq** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld marvarid** yig‘a olasan.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Bu bosqichda ko‘pi bilan **%lld krevetka** yig‘a olasan.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sonni **bo‘ladigan** misollar.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Isming</string>
 	<key>name.whatsYourName</key>
 	<string>Isming nima?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Bu hayvonning qulfini ochish uchun yana bir nechta chambarlar yutib oling! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Sizning hayvonlar kutmoqda. O'ynash uchun qaytib keling va chambarlar yig'ishda davom eting!</string>
 	<key>notif.comeback.title</key>
 	<string>Biz sizni sog'indik! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium har bir mavzu va barcha 10 hayvonlar uchun %lld darajani o'z ichiga oladi. Sarguzasht davom etmoqda!</string>
 	<key>notif.premium.title</key>
 	<string>Ko'proq darajalar va hayvonlarni oching! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld kun bo'ldi. Keling, matematika mashqlarini hal qilaylik va ko'proq chambarlar qo'lga kiritaylik!</string>
 	<key>notif.reactivate.title</key>
 	<string>Yana o'ynashga tayyormisiz? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Bosishlar: %1$lld tadan %2$lld ta</string>
 	<key>parentGate.title</key>
 	<string>Kattalar tasdig‘i kerak</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ta sovrindan boshlab mavjud</string>
 	<key>premium.availableFromStart</key>
 	<string>Boshidan mavjud</string>
 	<key>premium.characterUnlocked</key>
 	<string>YANGI QAHRAMON OCHILDI</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Sen %lld chambarlar yig‘ding</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Faqat Premium bilan</string>
 	<key>premium.feature.animals.subtitle</key>

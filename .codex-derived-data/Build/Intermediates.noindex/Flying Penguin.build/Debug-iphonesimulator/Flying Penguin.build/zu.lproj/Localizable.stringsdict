@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Kusele iringi ezi-%lld kuphela! ⭕</string>
-			<key>other</key>
-			<string>Kusele iringi ezi-%lld kuphela! ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>Dlala umzuzu ongu-%lld namuhla, uqoqe okunye futhi.</string>
 			<key>other</key>
 			<string>Dlala umzuzu ongu-%lld namuhla, uqoqe okunye futhi.</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Kuqoqwe iringi engu-%lld! ⭕</string>
-			<key>other</key>
-			<string>Kuqoqwe iringi engu-%lld! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>Ukudlala kwakho kwansuku zonke sekufinyelele ezinsukwini ezi-%lld! 🔥</string>
 			<key>other</key>
 			<string>Ukudlala kwakho kwansuku zonke sekufinyelele ezinsukwini ezi-%lld! 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Lokho kuletha isamba sakho sezindebe ezingu-%lld. Umsebenzi omangalisayo!</string>
-			<key>other</key>
-			<string>Lokho kuletha isamba sakho sezindebe ezingu-%lld. Umsebenzi omangalisayo!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Uzuze iringi ezingu-%lld kuleli sonto! 🎉</string>
-			<key>other</key>
-			<string>Uzuze iringi ezingu-%lld kuleli sonto! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

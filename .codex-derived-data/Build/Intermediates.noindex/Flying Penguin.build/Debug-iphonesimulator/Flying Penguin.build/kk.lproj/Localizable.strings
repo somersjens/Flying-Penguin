@@ -22,8 +22,6 @@
 	<string>Сегізаяқ</string>
 	<key>character.penguin</key>
 	<string>Пингвин</string>
-	<key>common.cancel</key>
-	<string>Бас тарту</string>
 	<key>common.continue</key>
 	<string>Жалғастыру</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld мин</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Сақтау</string>
-	<key>currency.hoop.plural</key>
-	<string>шеңберлер</string>
-	<key>currency.hoop.singular</key>
-	<string>шеңбер</string>
 	<key>game.combo %lld</key>
 	<string>Комбо! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Жетіп қалдың</string>
 	<key>game.encouragement.complete</key>
 	<string>Керемет! Бәрі дұрыс!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Әр ұпайды өзің жинадың.</string>
 	<key>game.end.completionSuffix</key>
 	<string>аяқталды!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Деңгейді бастау</string>
 	<key>game.intro.startTutorial</key>
 	<string>Үйретуді бастау</string>
-	<key>game.streakBoost.title</key>
-	<string>Екі есе ұпай!</string>
 	<key>goal.period</key>
 	<string>Мақсат кезеңі</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Санды **қосатын** есептер.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld қосу</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Бұл деңгейде **%lld сәбізге** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Бұл деңгейде **%lld тауыққа** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Бұл деңгейде **%lld балыққа** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Бұл деңгейде **%lld құты балға** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Бұл деңгейде **%lld шеңберлерға** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Бұл деңгейде **%lld ит печеньесіне** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Бұл деңгейде **%lld ет бөлігіне** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Бұл деңгейде **%lld жержаңғаққа** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Бұл деңгейде **%lld інжуге** дейін жинай аласың.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Бұл деңгейде **%lld асшаянға** дейін жинай аласың.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Санды **бөлетін** есептер.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Атың</string>
 	<key>name.whatsYourName</key>
 	<string>Атың кім?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Осы жануардың құлпын ашу үшін тағы бірнеше шеңберлер ұтып алыңыз! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Сіздің жануарларыңыз күтіп тұр. Ойынға оралыңыз және шеңберлерды жинауды жалғастырыңыз!</string>
 	<key>notif.comeback.title</key>
 	<string>Біз сені сағындық! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium әр тақырыпқа және барлық 10 жануарға арналған %lld деңгейді қамтиды. Шытырман оқиға жалғасуда!</string>
 	<key>notif.premium.title</key>
 	<string>Көбірек деңгейлер мен жануарлардың құлпын ашыңыз! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld күн болды. Математикалық жаттығуларды шешіп, көбірек шеңберлер ұтып алайық!</string>
 	<key>notif.reactivate.title</key>
 	<string>Қайта ойнауға дайынсыз ба? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Түртулер: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Ересек адамның рұқсаты қажет</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld жүлдеден бастап қолжетімді</string>
 	<key>premium.availableFromStart</key>
 	<string>Басынан бастап қолжетімді</string>
 	<key>premium.characterUnlocked</key>
 	<string>ЖАҢА КЕЙІПКЕР АШЫЛДЫ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld шеңберлер жинадың</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Тек Premium арқылы</string>
 	<key>premium.feature.animals.subtitle</key>

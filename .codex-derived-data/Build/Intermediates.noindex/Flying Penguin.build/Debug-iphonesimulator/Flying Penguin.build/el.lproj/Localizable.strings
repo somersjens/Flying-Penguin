@@ -22,8 +22,6 @@
 	<string>Χταπόδι</string>
 	<key>character.penguin</key>
 	<string>Πιγκουίνος</string>
-	<key>common.cancel</key>
-	<string>Ακύρωση</string>
 	<key>common.continue</key>
 	<string>Συνέχεια</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld λεπ.</string>
 	<key>common.ok</key>
 	<string>ΟΚ</string>
-	<key>common.save</key>
-	<string>Αποθήκευση</string>
-	<key>currency.hoop.plural</key>
-	<string>στεφάνια</string>
-	<key>currency.hoop.singular</key>
-	<string>στεφάνι</string>
 	<key>game.combo %lld</key>
 	<string>Σερί! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Σχεδόν έφτασες</string>
 	<key>game.encouragement.complete</key>
 	<string>Τέλειο σκορ!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Κέρδισες κάθε πόντο.</string>
 	<key>game.end.completionSuffix</key>
 	<string>ολοκληρώθηκε!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Έναρξη επιπέδου</string>
 	<key>game.intro.startTutorial</key>
 	<string>Ξεκίνα οδηγό</string>
-	<key>game.streakBoost.title</key>
-	<string>Διπλοί πόντοι!</string>
 	<key>goal.period</key>
 	<string>Περίοδος στόχου</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Ασκήσεις όπου **προσθέτεις** έναν αριθμό.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Πρόσθεσε %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Μάζεψε έως **%lld καρότα** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Μάζεψε έως **%lld κότες** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Μάζεψε έως **%lld ψάρια** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Μάζεψε έως **%lld βαζάκια μέλι** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Μάζεψε έως **%lld στεφάνια** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Μάζεψε έως **%lld μπισκότα σκύλου** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Μάζεψε έως **%lld κομμάτια κρέας** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Μάζεψε έως **%lld φιστίκια** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Μάζεψε έως **%lld μαργαριτάρια** σε αυτό το επίπεδο.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Μάζεψε έως **%lld γαρίδες** σε αυτό το επίπεδο.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Ασκήσεις όπου **διαιρείς** έναν αριθμό.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Το όνομά σου</string>
 	<key>name.whatsYourName</key>
 	<string>Πώς σε λένε;</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Κερδίστε μερικά ακόμη στεφάνια για να ξεκλειδώσετε αυτό το ζώο! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Τα ζώα σας περιμένουν. Επιστρέψτε για να παίξετε και συνεχίστε να μαζεύετε στεφάνια!</string>
 	<key>notif.comeback.title</key>
 	<string>Μας λείπεις! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Το Hungry Frog Premium περιλαμβάνει %lld επίπεδα για κάθε θέμα και τα 10 ζώα. Η περιπέτεια συνεχίζεται!</string>
 	<key>notif.premium.title</key>
 	<string>Ξεκλειδώστε περισσότερα επίπεδα και ζώα! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Έχουν περάσει %lld μέρες. Ας λύσουμε μερικές ασκήσεις μαθηματικών και ας κερδίσουμε περισσότερα στεφάνια!</string>
 	<key>notif.reactivate.title</key>
 	<string>Είστε έτοιμοι να παίξετε ξανά; 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Πατήματα: %1$lld από %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Χρειάζεται έγκριση ενήλικα</string>
-	<key>premium.availableAt %lld</key>
-	<string>Διαθέσιμο από %lld τρόπαια</string>
 	<key>premium.availableFromStart</key>
 	<string>Διαθέσιμο από την αρχή</string>
 	<key>premium.characterUnlocked</key>
 	<string>ΞΕΚΛΕΙΔΩΘΗΚΕ ΝΕΟΣ ΧΑΡΑΚΤΗΡΑΣ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Κέρδισες %lld στεφάνια</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Αποκλειστικά με Premium</string>
 	<key>premium.feature.animals.subtitle</key>

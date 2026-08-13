@@ -22,8 +22,6 @@
 	<string>Astoņkājis</string>
 	<key>character.penguin</key>
 	<string>Pingvīns</string>
-	<key>common.cancel</key>
-	<string>Atcelt</string>
 	<key>common.continue</key>
 	<string>Turpināt</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Labi</string>
-	<key>common.save</key>
-	<string>Saglabāt</string>
-	<key>currency.hoop.plural</key>
-	<string>riņķi</string>
-	<key>currency.hoop.singular</key>
-	<string>riņķis</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Tu esi gandrīz galā</string>
 	<key>game.encouragement.complete</key>
 	<string>Izcili, viss pareizi!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Tu nopelnīji katru punktu.</string>
 	<key>game.end.completionSuffix</key>
 	<string>pabeigts!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Sākt līmeni</string>
 	<key>game.intro.startTutorial</key>
 	<string>Sākt pamācību</string>
-	<key>game.streakBoost.title</key>
-	<string>Dubulti punkti!</string>
 	<key>goal.period</key>
 	<string>Mērķa periods</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Uzdevumi, kuros skaitli **pieskaiti**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pieskaiti %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld burkānu**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld vistu**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld zivju**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld medus burciņu**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld riņķi**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld suņu cepumu**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld gaļas gabaliņu**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld zemesriekstu**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld pērļu**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Šajā līmenī vari savākt ne vairāk kā **%lld garneļu**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Uzdevumi, kuros skaitli **dali**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Tavs vārds</string>
 	<key>name.whatsYourName</key>
 	<string>Kā tevi sauc?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Nopelniet vēl dažas riņķi, lai atbloķētu šo dzīvnieku! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Jūsu dzīvnieki gaida. Atgriezieties spēlēt un turpiniet vākt riņķi!</string>
 	<key>notif.comeback.title</key>
 	<string>Mums tevis pietrūkst! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium ietver %lld līmeņus katrai tēmai un visiem 10 dzīvniekiem. Piedzīvojums turpinās!</string>
 	<key>notif.premium.title</key>
 	<string>Atbloķējiet vairāk līmeņu un dzīvnieku! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Ir pagājušas %lld dienas. Atrisināsim dažus matemātikas uzdevumus un nopelnīsim vairāk riņķi!</string>
 	<key>notif.reactivate.title</key>
 	<string>Vai esat gatavs spēlēt vēlreiz? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Pieskārieni: %1$lld no %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Vajadzīgs pieaugušā apstiprinājums</string>
-	<key>premium.availableAt %lld</key>
-	<string>Pieejams no %lld trofejām</string>
 	<key>premium.availableFromStart</key>
 	<string>Pieejams jau no sākuma</string>
 	<key>premium.characterUnlocked</key>
 	<string>ATBLOĶĒTS JAUNS TĒLS</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Nopelnītas %lld riņķi</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Tikai ar Premium</string>
 	<key>premium.feature.animals.subtitle</key>

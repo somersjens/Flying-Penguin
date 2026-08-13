@@ -22,8 +22,6 @@
 	<string>Blekksprut</string>
 	<key>character.penguin</key>
 	<string>Pingvin</string>
-	<key>common.cancel</key>
-	<string>Avbryt</string>
 	<key>common.continue</key>
 	<string>Fortsett</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Lagre</string>
-	<key>currency.hoop.plural</key>
-	<string>ringer</string>
-	<key>currency.hoop.singular</key>
-	<string>ring</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Du er nesten fremme</string>
 	<key>game.encouragement.complete</key>
 	<string>Alt riktig!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Du fortjente hvert poeng.</string>
 	<key>game.end.completionSuffix</key>
 	<string>fullført!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Start nivå</string>
 	<key>game.intro.startTutorial</key>
 	<string>Start veiledning</string>
-	<key>game.streakBoost.title</key>
-	<string>Doble poeng!</string>
 	<key>goal.period</key>
 	<string>Målperiode</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Oppgaver der du **legger til** et tall.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pluss %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Du kan samle opptil **%lld gulrøtter** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Du kan samle opptil **%lld kyllinger** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Du kan samle opptil **%lld fisker** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Du kan samle opptil **%lld honningkrukker** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Du kan samle opptil **%lld ringer** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Du kan samle opptil **%lld hundekjeks** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Du kan samle opptil **%lld kjøttbiter** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Du kan samle opptil **%lld peanøtter** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Du kan samle opptil **%lld perler** på dette nivået.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Du kan samle opptil **%lld reker** på dette nivået.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Oppgaver der du **deler** et tall.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Navnet ditt</string>
 	<key>name.whatsYourName</key>
 	<string>Hva heter du?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Tjen noen flere ringer for å låse opp dette dyret! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Dyrene dine venter. Kom tilbake for å spille og fortsett å samle ringer!</string>
 	<key>notif.comeback.title</key>
 	<string>Vi savner deg! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inkluderer %lld nivåer for hvert emne og alle 10 dyrene. Eventyret fortsetter!</string>
 	<key>notif.premium.title</key>
 	<string>Lås opp flere nivåer og dyr! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Det har gått %lld dager. La oss løse noen matematikkøvelser og tjene flere ringer!</string>
 	<key>notif.reactivate.title</key>
 	<string>Klar til å spille igjen? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Trykk: %1$lld av %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Godkjenning fra en voksen kreves</string>
-	<key>premium.availableAt %lld</key>
-	<string>Tilgjengelig fra %lld trofeer</string>
 	<key>premium.availableFromStart</key>
 	<string>Tilgjengelig fra starten</string>
 	<key>premium.characterUnlocked</key>
 	<string>NY FIGUR LÅST OPP</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Du har tjent %lld ringer</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusiv med Premium</string>
 	<key>premium.feature.animals.subtitle</key>

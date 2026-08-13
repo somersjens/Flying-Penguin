@@ -47,7 +47,7 @@ LANGUAGES = [
     "my", "ca", "zh", "hr", "cs", "da", "nl", "en", "et", "fo", "fi", "fr",
     "gl", "ka", "de", "el", "gu", "he", "hi", "hu", "is", "id", "ga", "it",
     "ja", "kn", "kk", "km", "ko", "lo", "lv", "lt", "mk", "ms", "ml", "mr",
-    "mn", "ne", "no", "or", "fa", "pl", "pt", "pa", "ro", "ru", "sr", "si",
+    "mn", "ne", "nb", "or", "fa", "pl", "pt", "pa", "ro", "ru", "sr", "si",
     "sk", "sl", "es", "sw", "sv", "ta", "te", "th", "bo", "tr", "uk", "ur",
     "ug", "uz", "vi", "cy", "zu",
 ]
@@ -198,7 +198,7 @@ def build(pairs, kind, names, english_localization):
 CONTEXTS = [
     (r"^character\.",
      "An animal's name. Appears on its own under the artwork and inside "
-     "sentences such as \"3 more flies to unlock …\".", 14),
+     "sentences such as \"3 more hoops to unlock …\".", 14),
     (r"^common\.",
      "A button label, reused across the app.", 14),
     (r"^game\.combo",

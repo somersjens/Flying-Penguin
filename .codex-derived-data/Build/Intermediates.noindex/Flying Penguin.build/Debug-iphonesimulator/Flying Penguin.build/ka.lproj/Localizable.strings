@@ -22,8 +22,6 @@
 	<string>რვაფეხა</string>
 	<key>character.penguin</key>
 	<string>პინგვინი</string>
-	<key>common.cancel</key>
-	<string>გაუქმება</string>
 	<key>common.continue</key>
 	<string>გაგრძელება</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld წთ</string>
 	<key>common.ok</key>
 	<string>კარგი</string>
-	<key>common.save</key>
-	<string>შენახვა</string>
-	<key>currency.hoop.plural</key>
-	<string>რგოლები</string>
-	<key>currency.hoop.singular</key>
-	<string>რგოლი</string>
 	<key>game.combo %lld</key>
 	<string>კომბო! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>თითქმის მორჩი</string>
 	<key>game.encouragement.complete</key>
 	<string>ყველაფერი სწორია!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ყველა ქულა დაიმსახურე.</string>
 	<key>game.end.completionSuffix</key>
 	<string>დასრულებულია!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>დონის დაწყება</string>
 	<key>game.intro.startTutorial</key>
 	<string>გაკვეთილის დაწყება</string>
-	<key>game.streakBoost.title</key>
-	<string>ორმაგი ქულები!</string>
 	<key>goal.period</key>
 	<string>მიზნის პერიოდი</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>მაგალითები, სადაც რიცხვს \*\*უმატებ\*\*.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>მიამატე %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld სტაფილო\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld ქათამი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld თევზი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld ქილა თაფლი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld რგოლები\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld ძაღლის ორცხობილა\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld ნაჭერი ხორცი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld მიწის თხილი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld მარგალიტი\*\* შეგიძლია შეაგროვო.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>ამ დონეზე მაქსიმუმ \*\*%lld კრევეტი\*\* შეგიძლია შეაგროვო.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>მაგალითები, სადაც რიცხვს \*\*ყოფ\*\*.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>შენი სახელი</string>
 	<key>name.whatsYourName</key>
 	<string>რა გქვია?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: იშოვე კიდევ რამდენიმე ტროფი ამ ცხოველის განბლოკვისთვის! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>თქვენი ცხოველები გელოდებიან. დაბრუნდი სათამაშოდ და გააგრძელე რგოლების შეგროვება!</string>
 	<key>notif.comeback.title</key>
 	<string>გვენატრებით! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium მოიცავს %lld დონეს ყველა თემისთვის და 10-ვე ცხოველისთვის. თავგადასავალი გრძელდება!</string>
 	<key>notif.premium.title</key>
 	<string>გახსენით მეტი დონე და ცხოველები! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>უკვე %lld დღეა. მოდით გადავწყვიტოთ რამდენიმე მათემატიკური სავარჯიშო და მოვიგოთ მეტი თასი!</string>
 	<key>notif.reactivate.title</key>
 	<string>მზად ხართ კვლავ ითამაშოთ? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>შეხებები: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>საჭიროა უფროსის თანხმობა</string>
-	<key>premium.availableAt %lld</key>
-	<string>ხელმისაწვდომია %lld თასიდან</string>
 	<key>premium.availableFromStart</key>
 	<string>ხელმისაწვდომია თავიდანვე</string>
 	<key>premium.characterUnlocked</key>
 	<string>ახალი პერსონაჟი გაიხსნა</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld რგოლები გაქვს მოპოვებული</string>
 	<key>premium.exclusiveBadge</key>
 	<string>მხოლოდ Premium-ით</string>
 	<key>premium.feature.animals.subtitle</key>

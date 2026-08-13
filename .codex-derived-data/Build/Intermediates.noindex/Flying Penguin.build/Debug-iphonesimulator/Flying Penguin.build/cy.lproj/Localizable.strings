@@ -22,8 +22,6 @@
 	<string>Octopws</string>
 	<key>character.penguin</key>
 	<string>Pengwin</string>
-	<key>common.cancel</key>
-	<string>Canslo</string>
 	<key>common.continue</key>
 	<string>Parhau</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld mun</string>
 	<key>common.ok</key>
 	<string>Iawn</string>
-	<key>common.save</key>
-	<string>Cadw</string>
-	<key>currency.hoop.plural</key>
-	<string>cylchoedd</string>
-	<key>currency.hoop.singular</key>
-	<string>cylch</string>
 	<key>game.combo %lld</key>
 	<string>Cyfuniad! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Rwyt ti bron yno</string>
 	<key>game.encouragement.complete</key>
 	<string>Sgôr berffaith!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Enillaist ti bob pwynt.</string>
 	<key>game.end.completionSuffix</key>
 	<string>wedi'i gwblhau!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Dechrau'r lefel</string>
 	<key>game.intro.startTutorial</key>
 	<string>Dechrau’r tiwtorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Pwyntiau dwbl!</string>
 	<key>goal.period</key>
 	<string>Cyfnod y nod</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Symiau lle rwyt ti’n **adio** rhif.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Adio %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Gallwch gasglu hyd at **%lld moronen** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Gallwch gasglu hyd at **%lld iâr** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Gallwch gasglu hyd at **%lld pysgodyn** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Gallwch gasglu hyd at **%lld pot mêl** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Gallwch gasglu hyd at **%lld cylchoedd** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Gallwch gasglu hyd at **%lld bisged ci** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Gallwch gasglu hyd at **%lld darn o gig** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Gallwch gasglu hyd at **%lld cnau mwnci** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Gallwch gasglu hyd at **%lld perl** yn y lefel hon.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Gallwch gasglu hyd at **%lld berdysen** yn y lefel hon.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Symiau lle rwyt ti’n **rhannu** rhif.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Dy enw</string>
 	<key>name.whatsYourName</key>
 	<string>Beth yw dy enw?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Enillwch ychydig mwy o dlysau i ddatgloi'r anifail hwn! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Mae eich anifeiliaid yn aros. Dewch yn ôl i chwarae a daliwch ati i gasglu cylchoedd!</string>
 	<key>notif.comeback.title</key>
 	<string>Rydym yn colli chi! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Mae Premiwm Hungry Frog yn cynnwys %lld lefel ar gyfer pob pwnc a phob un o'r 10 anifail. Mae'r antur yn dal i fynd!</string>
 	<key>notif.premium.title</key>
 	<string>Datgloi mwy o lefelau ac anifeiliaid! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Mae wedi bod yn %lld diwrnod. Gadewch i ni ddatrys rhai ymarferion mathemateg ac ennill mwy o dlysau!</string>
 	<key>notif.reactivate.title</key>
 	<string>Barod i chwarae eto? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Tapiau: %1$lld o %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Angen cymeradwyaeth oedolyn</string>
-	<key>premium.availableAt %lld</key>
-	<string>Ar gael o %lld tlws</string>
 	<key>premium.availableFromStart</key>
 	<string>Ar gael o’r dechrau</string>
 	<key>premium.characterUnlocked</key>
 	<string>CYMERIAD NEWYDD WEDI’I DDATGLOI</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Rwyt ti wedi ennill %lld cylchoedd</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Yn unigryw gyda Premiwm</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -22,8 +22,6 @@
 	<string>תמנון</string>
 	<key>character.penguin</key>
 	<string>פינגווין</string>
-	<key>common.cancel</key>
-	<string>ביטול</string>
 	<key>common.continue</key>
 	<string>המשך</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld דק׳</string>
 	<key>common.ok</key>
 	<string>אוקיי</string>
-	<key>common.save</key>
-	<string>שמירה</string>
-	<key>currency.hoop.plural</key>
-	<string>חישוקים</string>
-	<key>currency.hoop.singular</key>
-	<string>חישוק</string>
 	<key>game.combo %lld</key>
 	<string>רצף! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>כמעט הגעתם</string>
 	<key>game.encouragement.complete</key>
 	<string>ציון מושלם!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>הרווחתם כל נקודה.</string>
 	<key>game.end.completionSuffix</key>
 	<string>הושלם!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>התחלת שלב</string>
 	<key>game.intro.startTutorial</key>
 	<string>להתחיל הדרכה</string>
-	<key>game.streakBoost.title</key>
-	<string>נקודות כפולות!</string>
 	<key>goal.period</key>
 	<string>תקופת היעד</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>תרגילים שבהם **מוסיפים** מספר.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>הוספת %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>אפשר לאסוף עד **%lld גזרים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>אפשר לאסוף עד **%lld תרנגולות** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>אפשר לאסוף עד **%lld דגים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>אפשר לאסוף עד **%lld צנצנות דבש** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>אפשר לאסוף עד **%lld חישוקים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>אפשר לאסוף עד **%lld עוגיות לכלבים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>אפשר לאסוף עד **%lld חתיכות בשר** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>אפשר לאסוף עד **%lld בוטנים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>אפשר לאסוף עד **%lld פנינים** בשלב הזה.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>אפשר לאסוף עד **%lld שרימפס** בשלב הזה.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>תרגילים שבהם **מחלקים** מספר.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>השם שלך</string>
 	<key>name.whatsYourName</key>
 	<string>איך קוראים לך?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: הרוויחו עוד כמה חישוקים כדי לפתוח את החיה הזו! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>החיות שלך מחכות. חזור לשחק ולהמשיך לאסוף חישוקים!</string>
 	<key>notif.comeback.title</key>
 	<string>אנחנו מתגעגעים אליך! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium כולל %lld רמות לכל נושא וכל 10 החיות. ההרפתקה ממשיכה!</string>
 	<key>notif.premium.title</key>
 	<string>פתח עוד רמות וחיות! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>עברו %lld ימים. בואו נפתור כמה תרגילי מתמטיקה ונרוויח עוד חישוקים!</string>
 	<key>notif.reactivate.title</key>
 	<string>מוכן לשחק שוב? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>הקשות: %1$lld מתוך %2$lld</string>
 	<key>parentGate.title</key>
 	<string>נדרש אישור מבוגר</string>
-	<key>premium.availableAt %lld</key>
-	<string>זמין החל מ־%lld גביעים</string>
 	<key>premium.availableFromStart</key>
 	<string>זמין מההתחלה</string>
 	<key>premium.characterUnlocked</key>
 	<string>דמות חדשה נפתחה</string>
-	<key>premium.earnedCards %lld</key>
-	<string>צברתם %lld חישוקים</string>
 	<key>premium.exclusiveBadge</key>
 	<string>בלעדי עם Premium</string>
 	<key>premium.feature.animals.subtitle</key>

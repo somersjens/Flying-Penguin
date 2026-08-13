@@ -22,8 +22,6 @@
 	<string>Осьминог</string>
 	<key>character.penguin</key>
 	<string>Пингвин</string>
-	<key>common.cancel</key>
-	<string>Отмена</string>
 	<key>common.continue</key>
 	<string>Дальше</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld мин</string>
 	<key>common.ok</key>
 	<string>ОК</string>
-	<key>common.save</key>
-	<string>Сохранить</string>
-	<key>currency.hoop.plural</key>
-	<string>обручи</string>
-	<key>currency.hoop.singular</key>
-	<string>обруч</string>
 	<key>game.combo %lld</key>
 	<string>Комбо! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Ты почти у цели</string>
 	<key>game.encouragement.complete</key>
 	<string>Идеально!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Каждое очко заслужено.</string>
 	<key>game.end.completionSuffix</key>
 	<string>готово!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Начать уровень</string>
 	<key>game.intro.startTutorial</key>
 	<string>Начать обучение</string>
-	<key>game.streakBoost.title</key>
-	<string>Двойные очки!</string>
 	<key>goal.period</key>
 	<string>Период цели</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Примеры, где нужно \*\*прибавить\*\* число.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Плюс %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld морковок\*\*.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld куриц\*\*.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld рыбок\*\*.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld горшочков мёда\*\*.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld обручи\*\*.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld собачьих печений\*\*.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld кусочков мяса\*\*.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld орешков\*\*.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld жемчужин\*\*.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>В этом уровне можно собрать до \*\*%lld креветок\*\*.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Примеры, где нужно \*\*делить\*\* число.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Твоё имя</string>
 	<key>name.whatsYourName</key>
 	<string>Как тебя зовут?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Заработайте еще несколько обручи, чтобы разблокировать это животное! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Ваши животные ждут. Возвращайтесь в игру и продолжайте собирать обручи!</string>
 	<key>notif.comeback.title</key>
 	<string>Мы скучаем по тебе! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium включает в себя %lld уровней на каждую тему и всех 10 животных. Приключение продолжается!</string>
 	<key>notif.premium.title</key>
 	<string>Разблокируйте больше уровней и животных! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Прошло %lld дня. Давайте решим несколько математических упражнений и заработаем больше обручи!</string>
 	<key>notif.reactivate.title</key>
 	<string>Готовы сыграть снова? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Нажатия: %1$lld из %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Нужно подтверждение взрослого</string>
-	<key>premium.availableAt %lld</key>
-	<string>Доступно от %lld трофеев</string>
 	<key>premium.availableFromStart</key>
 	<string>Доступно с самого начала</string>
 	<key>premium.characterUnlocked</key>
 	<string>ОТКРЫТ НОВЫЙ ПЕРСОНАЖ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Ты собрал %lld обручи</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Эксклюзивно с Premium</string>
 	<key>premium.feature.animals.subtitle</key>

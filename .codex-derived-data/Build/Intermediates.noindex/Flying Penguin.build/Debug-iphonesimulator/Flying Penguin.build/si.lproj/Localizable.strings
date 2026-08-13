@@ -22,8 +22,6 @@
 	<string>බූවල්ලා</string>
 	<key>character.penguin</key>
 	<string>පෙන්ගුවියා</string>
-	<key>common.cancel</key>
-	<string>අවලංගු</string>
 	<key>common.continue</key>
 	<string>ඉදිරියට</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld මිනි</string>
 	<key>common.ok</key>
 	<string>හරි</string>
-	<key>common.save</key>
-	<string>සුරකින්න</string>
-	<key>currency.hoop.plural</key>
-	<string>වළලු</string>
-	<key>currency.hoop.singular</key>
-	<string>වළල්ල</string>
 	<key>game.combo %lld</key>
 	<string>කොම්බෝ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>තව ටිකයි</string>
 	<key>game.encouragement.complete</key>
 	<string>සියල්ල හරි!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>හැම ලකුණක්ම ඔබ උපයාගත්තා.</string>
 	<key>game.end.completionSuffix</key>
 	<string>සම්පූර්ණයි!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>මට්ටම අරඹන්න</string>
 	<key>game.intro.startTutorial</key>
 	<string>පුහුණුව අරඹන්න</string>
-	<key>game.streakBoost.title</key>
-	<string>ලකුණු දෙගුණයි!</string>
 	<key>goal.period</key>
 	<string>ඉලක්ක කාලය</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>අංකයක් **එකතු කරන** ගණන්.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld එකතු කරන්න</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>මේ මට්ටමේ **කැරට් %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>මේ මට්ටමේ **කුකුළන් %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>මේ මට්ටමේ **මාළු %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>මේ මට්ටමේ **මී පැණි බඳුන් %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>මේ මට්ටමේ **වළලු %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>මේ මට්ටමේ **බලු බිස්කට් %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>මේ මට්ටමේ **මස් කැබලි %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>මේ මට්ටමේ **රටකජු %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>මේ මට්ටමේ **මුතු %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>මේ මට්ටමේ **ඉස්සන් %lldක්** දක්වා එකතු කරන්න පුළුවන්.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>අංකයක් **බෙදන** ගණන්.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ඔබේ නම</string>
 	<key>name.whatsYourName</key>
 	<string>ඔබේ නම මොකක්ද?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: මෙම සතා අගුලු හැරීමට තවත් වළලු කිහිපයක් උපයන්න! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>ඔබේ සතුන් බලා සිටී. ක්‍රීඩා කිරීමට නැවත පැමිණ වළලු එකතු කර ගන්න!</string>
 	<key>notif.comeback.title</key>
 	<string>අපිට ඔයාව දැනෙනවා! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium හි සෑම මාතෘකාවක් සඳහාම මට්ටම් %lldක් සහ සියලුම සතුන් 10ක් ඇතුළත් වේ. වික්‍රමය දිගටම පවතී!</string>
 	<key>notif.premium.title</key>
 	<string>තවත් මට්ටම් සහ සතුන් අගුළු හරින්න! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>දවස් %lldක් ගියා. අපි ගණිත අභ්‍යාස කිහිපයක් විසඳා තවත් වළලු උපයා ගනිමු!</string>
 	<key>notif.reactivate.title</key>
 	<string>නැවත ක්‍රීඩා කිරීමට සූදානම්ද? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>තට්ටු: %1$lld න් %2$lld</string>
 	<key>parentGate.title</key>
 	<string>වැඩිහිටි අනුමැතිය අවශ්‍යයි</string>
-	<key>premium.availableAt %lld</key>
-	<string>කුසලාන %lld සිට ලබා ගත හැක</string>
 	<key>premium.availableFromStart</key>
 	<string>ආරම්භයේ සිට ලබා ගත හැක</string>
 	<key>premium.characterUnlocked</key>
 	<string>නව චරිතයක් විවෘතයි</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld වළලු හම්බ කළා</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium සමඟ පමණි</string>
 	<key>premium.feature.animals.subtitle</key>

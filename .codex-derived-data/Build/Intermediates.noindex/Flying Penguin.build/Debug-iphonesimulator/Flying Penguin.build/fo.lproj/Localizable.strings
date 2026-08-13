@@ -22,8 +22,6 @@
 	<string>Høgguslokkur</string>
 	<key>character.penguin</key>
 	<string>Pingvinur</string>
-	<key>common.cancel</key>
-	<string>Angra</string>
 	<key>common.continue</key>
 	<string>Víðari</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Í lagi</string>
-	<key>common.save</key>
-	<string>Goym</string>
-	<key>currency.hoop.plural</key>
-	<string>ringar</string>
-	<key>currency.hoop.singular</key>
-	<string>ringur</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Tú ert næstan komin</string>
 	<key>game.encouragement.complete</key>
 	<string>Alt rætt!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Tú vann hvørt einasta stig.</string>
 	<key>game.end.completionSuffix</key>
 	<string>liðugt!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Byrja stig</string>
 	<key>game.intro.startTutorial</key>
 	<string>Byrja vegleiðing</string>
-	<key>game.streakBoost.title</key>
-	<string>Tvístig!</string>
 	<key>goal.period</key>
 	<string>Málskeið</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Uppgávur, har tú **leggur afturat**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pluss %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Tú kanst savna upp í **%lld gularøtur** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Tú kanst savna upp í **%lld hønur** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Tú kanst savna upp í **%lld fiskar** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Tú kanst savna upp í **%lld hunangskrukkur** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Tú kanst savna upp í **%lld ringar** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Tú kanst savna upp í **%lld hundakex** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Tú kanst savna upp í **%lld kjøtbitar** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Tú kanst savna upp í **%lld jarðnøtir** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Tú kanst savna upp í **%lld perlur** í hesum stigi.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Tú kanst savna upp í **%lld rækjur** í hesum stigi.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Uppgávur, har tú **deilir** eitt tal.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Títt navn</string>
 	<key>name.whatsYourName</key>
 	<string>Hvat eitur tú?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Tjen nøkur ringar afturat fyri at læsa hetta djórið upp! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Tíni djór bíða. Kom aftur at spæla og halt áfram at savna ringar!</string>
 	<key>notif.comeback.title</key>
 	<string>Vit sakna teg! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inniheldur %lld stig til hvørt evni og øll 10 djórini. Ævintýrið heldur fram!</string>
 	<key>notif.premium.title</key>
 	<string>Læs fleiri stig og djór upp! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Tað eru %lld dagar síðani. Latið okkum loysa nakrar støddfrøðiligar uppgávur og vinna okkum fleiri ringar!</string>
 	<key>notif.reactivate.title</key>
 	<string>Klárur at spæla aftur? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Trýst: %1$lld av %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Góðkenning frá vaksnum krevst</string>
-	<key>premium.availableAt %lld</key>
-	<string>Tøkt frá %lld steypum</string>
 	<key>premium.availableFromStart</key>
 	<string>Tøkt frá byrjan</string>
 	<key>premium.characterUnlocked</key>
 	<string>NÝGGJUR PERSÓNUR LATIN UPP</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Tú hevur vunnið %lld ringar</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Bert við Premium</string>
 	<key>premium.feature.animals.subtitle</key>

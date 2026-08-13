@@ -22,8 +22,6 @@
 	<string>Hobotnica</string>
 	<key>character.penguin</key>
 	<string>Pingvin</string>
-	<key>common.cancel</key>
-	<string>Odustani</string>
 	<key>common.continue</key>
 	<string>Nastavi</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>U redu</string>
-	<key>common.save</key>
-	<string>Spremi</string>
-	<key>currency.hoop.plural</key>
-	<string>obruči</string>
-	<key>currency.hoop.singular</key>
-	<string>obruč</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Još malo</string>
 	<key>game.encouragement.complete</key>
 	<string>Sve točno!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Svaki bod je tvoj.</string>
 	<key>game.end.completionSuffix</key>
 	<string>završeno!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Pokreni razinu</string>
 	<key>game.intro.startTutorial</key>
 	<string>Pokreni upute</string>
-	<key>game.streakBoost.title</key>
-	<string>Dupli bodovi!</string>
 	<key>goal.period</key>
 	<string>Razdoblje cilja</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Zadaci u kojima **zbrajaš** broj.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Zbroji %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld mrkvi**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld kokoši**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld riba**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld staklenki meda**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld obruči**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld psećih keksa**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld komada mesa**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld kikirikija**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld bisera**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>U ovoj razini možeš skupiti do **%lld kozica**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Zadaci u kojima broj **dijeliš**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Tvoje ime</string>
 	<key>name.whatsYourName</key>
 	<string>Kako se zoveš?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Zaradite još nekoliko obruči da otključate ovu životinju! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Vaše životinje čekaju. Vratite se igrati i nastavite skupljati obruči!</string>
 	<key>notif.comeback.title</key>
 	<string>nedostaješ nam! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium uključuje %lld razina za svaku temu i svih 10 životinja. Avantura nastavlja!</string>
 	<key>notif.premium.title</key>
 	<string>Otključajte više razina i životinja! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Prošla su %lld dana. Riješimo nekoliko matematičkih zadataka i osvojimo još obruči!</string>
 	<key>notif.reactivate.title</key>
 	<string>Jeste li spremni za ponovnu igru? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Dodiri: %1$lld od %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Potrebno odobrenje odrasle osobe</string>
-	<key>premium.availableAt %lld</key>
-	<string>Dostupno od %lld pehara</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostupno od početka</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOVI LIK JE OTKLJUČAN</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Zaslužio si %lld obruči</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ekskluzivno uz Premium</string>
 	<key>premium.feature.animals.subtitle</key>

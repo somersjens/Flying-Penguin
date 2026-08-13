@@ -22,8 +22,6 @@
 	<string>Kolkrabbi</string>
 	<key>character.penguin</key>
 	<string>Mörgæs</string>
-	<key>common.cancel</key>
-	<string>Hætta við</string>
 	<key>common.continue</key>
 	<string>Áfram</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld mín.</string>
 	<key>common.ok</key>
 	<string>Í lagi</string>
-	<key>common.save</key>
-	<string>Vista</string>
-	<key>currency.hoop.plural</key>
-	<string>hringir</string>
-	<key>currency.hoop.singular</key>
-	<string>hringur</string>
 	<key>game.combo %lld</key>
 	<string>Runa! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Þú ert næstum komin(n)</string>
 	<key>game.encouragement.complete</key>
 	<string>Fullkomið!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Þú vannst inn hvert stig.</string>
 	<key>game.end.completionSuffix</key>
 	<string>lokið!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Byrja borð</string>
 	<key>game.intro.startTutorial</key>
 	<string>Byrja kennslu</string>
-	<key>game.streakBoost.title</key>
-	<string>Tvöföld stig!</string>
 	<key>goal.period</key>
 	<string>Marktímabil</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Dæmi þar sem þú **leggur við** tölu.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Plús %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Þú getur safnað allt að **%lld gulrótum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Þú getur safnað allt að **%lld hænum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Þú getur safnað allt að **%lld fiskum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Þú getur safnað allt að **%lld hunangskrukkum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Þú getur safnað allt að **%lld hringirm** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Þú getur safnað allt að **%lld hundakexum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Þú getur safnað allt að **%lld kjötbitum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Þú getur safnað allt að **%lld hnetum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Þú getur safnað allt að **%lld perlum** í þessu borði.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Þú getur safnað allt að **%lld rækjum** í þessu borði.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Dæmi þar sem þú **deilir** tölu.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Nafnið þitt</string>
 	<key>name.whatsYourName</key>
 	<string>Hvað heitir þú?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Fáðu þér nokkra hringir í viðbót til að opna þetta dýr! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Dýrin þín bíða. Komdu aftur til að spila og haltu áfram að safna hringirm!</string>
 	<key>notif.comeback.title</key>
 	<string>Við söknum þín! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inniheldur %lld stig fyrir hvert efni og öll 10 dýrin. Ævintýrið heldur áfram!</string>
 	<key>notif.premium.title</key>
 	<string>Opnaðu fleiri stig og dýr! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Það eru %lld dagar síðan. Við skulum leysa nokkrar stærðfræðiæfingar og vinna okkur inn fleiri hringir!</string>
 	<key>notif.reactivate.title</key>
 	<string>Tilbúinn til að spila aftur? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Pikk: %1$lld af %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Samþykki fullorðins þarf</string>
-	<key>premium.availableAt %lld</key>
-	<string>Í boði frá %lld bikurum</string>
 	<key>premium.availableFromStart</key>
 	<string>Í boði frá upphafi</string>
 	<key>premium.characterUnlocked</key>
 	<string>NÝ PERSÓNA OPNUÐ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Þú hefur unnið %lld hringir</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Aðeins með Premium</string>
 	<key>premium.feature.animals.subtitle</key>

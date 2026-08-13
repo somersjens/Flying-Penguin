@@ -22,8 +22,6 @@
 	<string>سەككىزئاياغ</string>
 	<key>character.penguin</key>
 	<string>پىنگۋىن</string>
-	<key>common.cancel</key>
-	<string>بىكار قىل</string>
 	<key>common.continue</key>
 	<string>داۋاملاشتۇر</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld مىن</string>
 	<key>common.ok</key>
 	<string>ماقۇل</string>
-	<key>common.save</key>
-	<string>ساقلا</string>
-	<key>currency.hoop.plural</key>
-	<string>چەمبەرلەر</string>
-	<key>currency.hoop.singular</key>
-	<string>چەمبەر</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>ئاز قالدى</string>
 	<key>game.encouragement.complete</key>
 	<string>ھەممىسى توغرا!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ھەر بىر نومۇرغا لايىق بولدۇڭ.</string>
 	<key>game.end.completionSuffix</key>
 	<string>تامام!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>دەرىجىنى باشلا</string>
 	<key>game.intro.startTutorial</key>
 	<string>قوللانمىنى باشلا</string>
-	<key>game.streakBoost.title</key>
-	<string>قوش نومۇر!</string>
 	<key>goal.period</key>
 	<string>نىشان مۇددىتى</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>بىر ساننى **قوشىدىغان** مىساللار.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld نى قوش</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>بۇ دەرىجىدە **%lld سەۋزە** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>بۇ دەرىجىدە **%lld توخۇ** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>بۇ دەرىجىدە **%lld بېلىق** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>بۇ دەرىجىدە **%lld قاچا ھەسەل** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>بۇ دەرىجىدە **%lld چەمبەرلەر** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>بۇ دەرىجىدە **%lld ئىت پېچىنىسى** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>بۇ دەرىجىدە **%lld پارچە گۆش** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>بۇ دەرىجىدە **%lld يەر ياڭىقى** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>بۇ دەرىجىدە **%lld مەرۋايىت** توپلىيالايسەن.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>بۇ دەرىجىدە **%lld راك** توپلىيالايسەن.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>بىر ساننى **بۆلىدىغان** مىساللار.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ئىسمىڭ</string>
 	<key>name.whatsYourName</key>
 	<string>ئىسمىڭ نېمە؟</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: بۇ ھايۋاننىڭ قۇلۇپىنى ئېچىش ئۈچۈن يەنە بىر نەچچە چەمبەرلەر ئېرىشىڭ! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>ھايۋانلىرىڭىز ساقلاۋاتىدۇ. قايتىپ كېلىپ داۋاملىق چەمبەرلەر يىغىڭ!</string>
 	<key>notif.comeback.title</key>
 	<string>سېنى سېغىندۇق! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>سەكرەش تۈلكە مۇكاپاتى ھەر بىر تېما ۋە 10 ھايۋاننىڭ %lld دەرىجىسىنى ئۆز ئىچىگە ئالىدۇ. تەۋەككۈلچىلىك داۋاملىشىدۇ!</string>
 	<key>notif.premium.title</key>
 	<string>تېخىمۇ كۆپ قاتلام ۋە ھايۋانلارنى ئېچىڭ! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld كۈن بولدى. بەزى ماتېماتىكا مەشىقلىرىنى ھەل قىلىپ ، تېخىمۇ كۆپ چەمبەرلەر ئېرىشىمىز!</string>
 	<key>notif.reactivate.title</key>
 	<string>قايتا ئويناشقا تەييارمۇ؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>چېكىش: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>چوڭ كىشىنىڭ تەستىقى كېرەك</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld لوڭقىدىن باشلاپ ئىشلەتكىلى بولىدۇ</string>
 	<key>premium.availableFromStart</key>
 	<string>باشتىنلا ئىشلەتكىلى بولىدۇ</string>
 	<key>premium.characterUnlocked</key>
 	<string>يېڭى پېرسوناژ ئېچىلدى</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld چەمبەرلەر تاپتىڭ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>پەقەت Premium بىلەن</string>
 	<key>premium.feature.animals.subtitle</key>

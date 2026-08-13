@@ -22,8 +22,6 @@
 	<string>ऑक्टोपस</string>
 	<key>character.penguin</key>
 	<string>पेंग्विन</string>
-	<key>common.cancel</key>
-	<string>रद्द</string>
 	<key>common.continue</key>
 	<string>पुढे</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld मि.</string>
 	<key>common.ok</key>
 	<string>ठीक</string>
-	<key>common.save</key>
-	<string>जतन</string>
-	<key>currency.hoop.plural</key>
-	<string>वलये</string>
-	<key>currency.hoop.singular</key>
-	<string>वलय</string>
 	<key>game.combo %lld</key>
 	<string>कॉम्बो! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>तू जवळपास पोहोचलास</string>
 	<key>game.encouragement.complete</key>
 	<string>पूर्ण गुण!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>तू प्रत्येक गुण कमावलास.</string>
 	<key>game.end.completionSuffix</key>
 	<string>पूर्ण!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>स्तर सुरू कर</string>
 	<key>game.intro.startTutorial</key>
 	<string>ट्युटोरियल सुरू करा</string>
-	<key>game.streakBoost.title</key>
-	<string>दुप्पट गुण!</string>
 	<key>goal.period</key>
 	<string>ध्येय कालावधी</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ज्यात संख्या \*\*जोडायची\*\* अशी उदाहरणे.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld जोडा</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld गाजरे\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld कोंबड्या\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld मासे\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld मधाच्या बरण्या\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld वलये\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld कुत्र्यांची बिस्किटे\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld मांसाचे तुकडे\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld शेंगदाणे\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld मोती\*\* गोळा करता येतील.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>या स्तरात जास्तीत जास्त \*\*%lld कोळंब्या\*\* गोळा करता येतील.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ज्यात संख्येला \*\*भागायचे\*\* अशी उदाहरणे.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>तुझं नाव</string>
 	<key>name.whatsYourName</key>
 	<string>तुझं नाव काय?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: या प्राण्याला अनलॉक करण्यासाठी आणखी काही वलये मिळवा! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>तुमचे प्राणी वाट पाहत आहेत. खेळायला परत या आणि वलये गोळा करत रहा!</string>
 	<key>notif.comeback.title</key>
 	<string>आम्हाला तुमची आठवण येते! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>जंपिंग फॉक्स प्रीमियममध्ये प्रत्येक विषयासाठी %lld स्तर आणि सर्व 10 प्राण्यांचा समावेश आहे. साहस चालूच राहते!</string>
 	<key>notif.premium.title</key>
 	<string>अधिक स्तर आणि प्राणी अनलॉक करा! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld दिवस झाले. चला काही गणिताचे व्यायाम सोडवू आणि आणखी वलये मिळवू!</string>
 	<key>notif.reactivate.title</key>
 	<string>पुन्हा खेळण्यासाठी तयार आहात? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>टॅप: %1$lld पैकी %2$lld</string>
 	<key>parentGate.title</key>
 	<string>मोठ्या व्यक्तीची परवानगी हवी</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ट्रॉफींपासून उपलब्ध</string>
 	<key>premium.availableFromStart</key>
 	<string>सुरुवातीपासून उपलब्ध</string>
 	<key>premium.characterUnlocked</key>
 	<string>नवीन पात्र उघडले</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld वलये कमावल्या</string>
 	<key>premium.exclusiveBadge</key>
 	<string>फक्त Premium सोबत</string>
 	<key>premium.feature.animals.subtitle</key>

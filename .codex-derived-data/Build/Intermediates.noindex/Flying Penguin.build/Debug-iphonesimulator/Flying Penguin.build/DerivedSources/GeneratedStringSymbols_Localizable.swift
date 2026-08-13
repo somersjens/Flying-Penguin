@@ -89,13 +89,6 @@ nonisolated extension LocalizedStringResource {
     }
 
     /**
-     Localized string for key “common.cancel” in table “Localizable.xcstrings”.
-     */
-    static var commonCancel: LocalizedStringResource {
-        LocalizedStringResource("common.cancel", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
      Localized string for key “common.continue” in table “Localizable.xcstrings”.
      */
     static var commonContinue: LocalizedStringResource {
@@ -121,31 +114,6 @@ nonisolated extension LocalizedStringResource {
      */
     static var commonOk: LocalizedStringResource {
         LocalizedStringResource("common.ok", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Localized string for key “common.save” in table “Localizable.xcstrings”.
-     */
-    static var commonSave: LocalizedStringResource {
-        LocalizedStringResource("common.save", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Localized name of the hoop currency.
-     
-     Localized string for key “currency.hoop.plural” in table “Localizable.xcstrings”.
-     */
-    static var currencyHoopPlural: LocalizedStringResource {
-        LocalizedStringResource("currency.hoop.plural", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Localized name of the hoop currency.
-     
-     Localized string for key “currency.hoop.singular” in table “Localizable.xcstrings”.
-     */
-    static var currencyHoopSingular: LocalizedStringResource {
-        LocalizedStringResource("currency.hoop.singular", table: "Localizable", bundle: resourceBundleDescription)
     }
 
     /**
@@ -240,96 +208,6 @@ nonisolated extension LocalizedStringResource {
     }
 
     /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.carrot” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleCarrot: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.carrot", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.chicken” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleChicken: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.chicken", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.fish” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleFish: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.fish", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.honey” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleHoney: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.honey", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.hoop” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleHoop: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.hoop", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.kibble” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleKibble: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.kibble", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.meat” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleMeat: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.meat", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.peanut” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitlePeanut: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.peanut", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.pearl” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitlePearl: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.pearl", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Under the character on the result card when the board was filled. One sentence per food, so the noun can take whatever case, article and word order the language needs. A language that leaves these ten untranslated keeps its food-neutral "game.end.completionSubtitle" line instead of falling back to English.
-     
-     Localized string for key “game.end.completionSubtitle.shrimp” in table “Localizable.xcstrings”.
-     */
-    static var gameEndCompletionSubtitleShrimp: LocalizedStringResource {
-        LocalizedStringResource("game.end.completionSubtitle.shrimp", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
      Localized string for key “game.end.completionSuffix” in table “Localizable.xcstrings”.
      */
     static var gameEndCompletionSuffix: LocalizedStringResource {
@@ -397,13 +275,6 @@ nonisolated extension LocalizedStringResource {
      */
     static var gameIntroStartTutorial: LocalizedStringResource {
         LocalizedStringResource("game.intro.startTutorial", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     Localized string for key “game.streakBoost.title” in table “Localizable.xcstrings”.
-     */
-    static var gameStreakBoostTitle: LocalizedStringResource {
-        LocalizedStringResource("game.streakBoost.title", table: "Localizable", bundle: resourceBundleDescription)
     }
 
     /**
@@ -584,91 +455,10 @@ nonisolated extension LocalizedStringResource {
     /**
      The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
      
-     Localized string for key “levelIntro.cardsBullet.carrot %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletCarrot(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.carrot %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.chicken %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletChicken(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.chicken %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.fish %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletFish(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.fish %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.honey %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletHoney(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.honey %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
      Localized string for key “levelIntro.cardsBullet.hoop %lld” in table “Localizable.xcstrings”.
      */
     static func levelIntroCardsBulletHoop(_ arg1: Int) -> LocalizedStringResource {
         LocalizedStringResource("levelIntro.cardsBullet.hoop %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.kibble %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletKibble(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.kibble %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.meat %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletMeat(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.meat %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.peanut %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletPeanut(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.peanut %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.pearl %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletPearl(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.pearl %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
-    }
-
-    /**
-     The count is always 20, 30, 40 or 50 (GameConfig level maximums), which every language treats alike, so this needs no other plural form.
-     
-     Localized string for key “levelIntro.cardsBullet.shrimp %lld” in table “Localizable.xcstrings”.
-     */
-    static func levelIntroCardsBulletShrimp(_ arg1: Int) -> LocalizedStringResource {
-        LocalizedStringResource("levelIntro.cardsBullet.shrimp %lld", defaultValue: "\(arg1, specifier: "%lld")", table: "Localizable", bundle: resourceBundleDescription)
     }
 
     /**

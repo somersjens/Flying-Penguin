@@ -22,8 +22,6 @@
 	<string>Seekat</string>
 	<key>character.penguin</key>
 	<string>Pikkewyn</string>
-	<key>common.cancel</key>
-	<string>Kanselleer</string>
 	<key>common.continue</key>
 	<string>Gaan voort</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Stoor</string>
-	<key>currency.hoop.plural</key>
-	<string>hoepels</string>
-	<key>currency.hoop.singular</key>
-	<string>hoepel</string>
 	<key>game.combo %lld</key>
 	<string>Reeks! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Jy is amper daar</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfek, alles reg!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Jy het elke punt verdien.</string>
 	<key>game.end.completionSuffix</key>
 	<string>voltooi!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Begin vlak</string>
 	<key>game.intro.startTutorial</key>
 	<string>Begin tutoriaal</string>
-	<key>game.streakBoost.title</key>
-	<string>Dubbelpunte!</string>
 	<key>goal.period</key>
 	<string>Doeltydperk</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Somme waar jy 'n getal \*\*optel\*\*.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Tel %lld by</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Jy kan tot \*\*%lld wortels\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Jy kan tot \*\*%lld hoenders\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Jy kan tot \*\*%lld visse\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Jy kan tot \*\*%lld potte heuning\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Jy kan tot \*\*%lld hoepels\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Jy kan tot \*\*%lld hondekoekies\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Jy kan tot \*\*%lld stukke vleis\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Jy kan tot \*\*%lld grondboontjies\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Jy kan tot \*\*%lld pêrels\*\* in hierdie vlak versamel.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Jy kan tot \*\*%lld garnale\*\* in hierdie vlak versamel.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Somme waar jy 'n getal \*\*deel\*\*.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Jou naam</string>
 	<key>name.whatsYourName</key>
 	<string>Wat is jou naam?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Verdien nog 'n paar hoepels om hierdie dier te ontsluit! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Jou diere wag. Kom terug om te speel en hou aan om hoepels in te samel!</string>
 	<key>notif.comeback.title</key>
 	<string>Ons mis jou! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium bevat %lld vlakke vir elke onderwerp en al 10 diere. Die avontuur gaan voort!</string>
 	<key>notif.premium.title</key>
 	<string>Ontsluit meer vlakke en diere! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Dit is al %lld dae. Kom ons los 'n paar wiskunde-oefeninge op en verdien meer hoepels!</string>
 	<key>notif.reactivate.title</key>
 	<string>Gereed om weer te speel? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Tikke: %1$lld van %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Volwassene moet goedkeur</string>
-	<key>premium.availableAt %lld</key>
-	<string>Beskikbaar vanaf %lld trofeë</string>
 	<key>premium.availableFromStart</key>
 	<string>Van die begin af beskikbaar</string>
 	<key>premium.characterUnlocked</key>
 	<string>NUWE KARAKTER ONTSLUIT</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Jy het %lld hoepels verdien</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eksklusief met Premium</string>
 	<key>premium.feature.animals.subtitle</key>

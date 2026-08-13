@@ -22,8 +22,6 @@
 	<string>Bạch tuộc</string>
 	<key>character.penguin</key>
 	<string>Chim cánh cụt</string>
-	<key>common.cancel</key>
-	<string>Hủy</string>
 	<key>common.continue</key>
 	<string>Tiếp tục</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld phút</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Lưu</string>
-	<key>currency.hoop.plural</key>
-	<string>vòng</string>
-	<key>currency.hoop.singular</key>
-	<string>vòng</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Bạn gần tới rồi</string>
 	<key>game.encouragement.complete</key>
 	<string>Điểm tuyệt đối!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Bạn đã giành mọi điểm.</string>
 	<key>game.end.completionSuffix</key>
 	<string>hoàn thành!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Bắt đầu màn</string>
 	<key>game.intro.startTutorial</key>
 	<string>Bắt đầu hướng dẫn</string>
-	<key>game.streakBoost.title</key>
-	<string>Gấp đôi điểm!</string>
 	<key>goal.period</key>
 	<string>Khoảng thời gian</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Bài toán **cộng** một số.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Cộng %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld củ cà rốt** ở màn này.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld con gà** ở màn này.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld con cá** ở màn này.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld hũ mật ong** ở màn này.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld vòng** ở màn này.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld bánh cho chó** ở màn này.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld miếng thịt** ở màn này.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld hạt lạc** ở màn này.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld viên ngọc trai** ở màn này.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Bạn có thể nhặt tối đa **%lld con tôm** ở màn này.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Bài toán **chia** một số.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Tên của bạn</string>
 	<key>name.whatsYourName</key>
 	<string>Bạn tên gì?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Kiếm thêm một vài vòng để mở khóa con vật này! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Động vật của bạn đang chờ đợi. Hãy quay lại chơi và tiếp tục thu thập vòng!</string>
 	<key>notif.comeback.title</key>
 	<string>Chúng tôi nhớ bạn! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium bao gồm %lld cấp độ cho mọi chủ đề và tất cả 10 con vật. Cuộc phiêu lưu vẫn tiếp tục!</string>
 	<key>notif.premium.title</key>
 	<string>Mở khóa nhiều cấp độ và động vật hơn! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Đã %lld ngày rồi. Hãy giải một số bài tập toán và kiếm được nhiều vòng hơn!</string>
 	<key>notif.reactivate.title</key>
 	<string>Sẵn sàng chơi lại chưa? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Số lần chạm: %1$lld trên %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cần người lớn xác nhận</string>
-	<key>premium.availableAt %lld</key>
-	<string>Có thể dùng từ %lld cúp</string>
 	<key>premium.availableFromStart</key>
 	<string>Có thể dùng ngay từ đầu</string>
 	<key>premium.characterUnlocked</key>
 	<string>ĐÃ MỞ KHÓA NHÂN VẬT MỚI</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Bạn đã kiếm được %lld vòng</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Độc quyền với Premium</string>
 	<key>premium.feature.animals.subtitle</key>

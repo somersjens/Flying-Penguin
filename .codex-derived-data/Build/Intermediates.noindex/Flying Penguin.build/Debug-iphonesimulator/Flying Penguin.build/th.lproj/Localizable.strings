@@ -22,8 +22,6 @@
 	<string>หมึกยักษ์</string>
 	<key>character.penguin</key>
 	<string>เพนกวิน</string>
-	<key>common.cancel</key>
-	<string>ยกเลิก</string>
 	<key>common.continue</key>
 	<string>ต่อไป</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld นาที</string>
 	<key>common.ok</key>
 	<string>ตกลง</string>
-	<key>common.save</key>
-	<string>บันทึก</string>
-	<key>currency.hoop.plural</key>
-	<string>ห่วง</string>
-	<key>currency.hoop.singular</key>
-	<string>ห่วง</string>
 	<key>game.combo %lld</key>
 	<string>คอมโบ! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>อีกนิดเดียว</string>
 	<key>game.encouragement.complete</key>
 	<string>ยอดเยี่ยม ถูกหมด!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>เธอได้ทุกคะแนนด้วยตัวเอง</string>
 	<key>game.end.completionSuffix</key>
 	<string>เสร็จแล้ว!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>เริ่มด่าน</string>
 	<key>game.intro.startTutorial</key>
 	<string>เริ่มสอนเล่น</string>
-	<key>game.streakBoost.title</key>
-	<string>คะแนนสองเท่า!</string>
 	<key>goal.period</key>
 	<string>ช่วงเป้าหมาย</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>โจทย์ที่ให้ **บวก** ตัวเลข</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>บวก %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>ด่านนี้เก็บ **แครอต %lld หัว** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>ด่านนี้เก็บ **ไก่ %lld ตัว** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>ด่านนี้เก็บ **ปลา %lld ตัว** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>ด่านนี้เก็บ **น้ำผึ้ง %lld กระปุก** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>ด่านนี้เก็บ **ห่วง %lld ตัว** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>ด่านนี้เก็บ **ขนมสุนัข %lld ชิ้น** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>ด่านนี้เก็บ **เนื้อ %lld ชิ้น** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>ด่านนี้เก็บ **ถั่วลิสง %lld เม็ด** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>ด่านนี้เก็บ **ไข่มุก %lld เม็ด** ได้สูงสุด</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>ด่านนี้เก็บ **กุ้ง %lld ตัว** ได้สูงสุด</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>โจทย์ที่ให้ **หาร** ตัวเลข</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ชื่อของเธอ</string>
 	<key>name.whatsYourName</key>
 	<string>เธอชื่ออะไร?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: รับห่วงเพิ่มอีกเล็กน้อยเพื่อปลดล็อคสัตว์ตัวนี้! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>สัตว์ของคุณกำลังรออยู่กลับมาเล่นสะสมห่วงกันต่อ!</string>
 	<key>notif.comeback.title</key>
 	<string>เราคิดถึงคุณ! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium มี %lld ด่านสำหรับทุกหัวข้อและสัตว์ทั้งหมด 10 ตัวการผจญภัยดำเนินต่อไป!</string>
 	<key>notif.premium.title</key>
 	<string>ปลดล็อคระดับและสัตว์เพิ่มเติม! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>ผ่านมา %lld วันแล้วมาแก้แบบฝึกหัดคณิตศาสตร์และรับห่วงเพิ่มกันเถอะ!</string>
 	<key>notif.reactivate.title</key>
 	<string>พร้อมที่จะเล่นอีกครั้งหรือยัง? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>แตะแล้ว: %1$lld จาก %2$lld</string>
 	<key>parentGate.title</key>
 	<string>ต้องได้รับอนุมัติจากผู้ใหญ่</string>
-	<key>premium.availableAt %lld</key>
-	<string>ใช้ได้เมื่อมีถ้วยรางวัล %lld ใบ</string>
 	<key>premium.availableFromStart</key>
 	<string>ใช้ได้ตั้งแต่เริ่มต้น</string>
 	<key>premium.characterUnlocked</key>
 	<string>ปลดล็อกตัวละครใหม่แล้ว</string>
-	<key>premium.earnedCards %lld</key>
-	<string>คุณเก็บห่วงได้ %lld ตัว</string>
 	<key>premium.exclusiveBadge</key>
 	<string>เฉพาะ Premium</string>
 	<key>premium.feature.animals.subtitle</key>

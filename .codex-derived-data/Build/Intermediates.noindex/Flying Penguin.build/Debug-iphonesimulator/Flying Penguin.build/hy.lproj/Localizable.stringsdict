@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Մնացել է ընդամենը %lld օղակ: ⭕</string>
-			<key>other</key>
-			<string>Մնացել է ընդամենը %lld օղակ: ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>Խաղա այսօր %lld րոպե ու մի քիչ էլ ավելացրու։</string>
 			<key>other</key>
 			<string>Խաղա այսօր %lld րոպե ու մի քիչ էլ ավելացրու։</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>%lld օղակ հավաքեցիր! ⭕</string>
-			<key>other</key>
-			<string>%lld օղակ հավաքեցիր! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>Ձեր ամենօրյա խաղային շարանը հասել է %lld օրվա: 🔥</string>
 			<key>other</key>
 			<string>Ձեր ամենօրյա խաղային շարանը հասել է %lld օրվա: 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Դա ձեր ընդհանուր տիտղոսը հասցնում է %lld-ի:Զարմանալի աշխատանք!</string>
-			<key>other</key>
-			<string>Դա ձեր ընդհանուր տիտղոսը հասցնում է %lld-ի:Զարմանալի աշխատանք!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>Այս շաբաթ դուք վաստակեցիք %lld օղակ: 🎉</string>
-			<key>other</key>
-			<string>Այս շաբաթ դուք վաստակեցիք %lld օղակ: 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

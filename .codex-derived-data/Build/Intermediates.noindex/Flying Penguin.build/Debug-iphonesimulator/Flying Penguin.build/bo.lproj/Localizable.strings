@@ -22,8 +22,6 @@
 	<string>ཉ་ལག་བརྒྱད</string>
 	<key>character.penguin</key>
 	<string>པེང་གུན</string>
-	<key>common.cancel</key>
-	<string>ཕྱིར་འཐེན</string>
 	<key>common.continue</key>
 	<string>མུ་མཐུད</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld སྐར་མ</string>
 	<key>common.ok</key>
 	<string>འགྲིག</string>
-	<key>common.save</key>
-	<string>ཉར</string>
-	<key>currency.hoop.plural</key>
-	<string>ཨ་ལོང་</string>
-	<key>currency.hoop.singular</key>
-	<string>ཨ་ལོང་</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>ཁྱེད་རང་ཕལ་ཆེར་སླེབས་སོང་།</string>
 	<key>game.encouragement.complete</key>
 	<string>ཡོངས་སུ་འགྲིག!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>སྐར་མ་ཚང་མ་ཁྱེད་ཀྱིས་ཐོབ་སོང་།</string>
 	<key>game.end.completionSuffix</key>
 	<string>ཚར་སོང་!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>རིམ་པ་འགོ་འཛུགས</string>
 	<key>game.intro.startTutorial</key>
 	<string>སློབ་ཁྲིད་འགོ་འཛུགས</string>
-	<key>game.streakBoost.title</key>
-	<string>སྐར་གྲངས་ཉིས་འགྱུར!</string>
 	<key>goal.period</key>
 	<string>དམིགས་ཡུན</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>གྲངས་ཤིག **སྣོན་པའི** རྩིས།</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld སྣོན</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ལ་ཕུག %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **བྱ་ཕྲུག %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ཉ %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **སྦྲང་རྩིའི་རྫ %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ཨ་ལོང་ %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ཁྱི་ཟས %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ཤ་དུམ %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ས་སྐྱེས %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **མུ་ཏིག %lld** བསྡུ་ཐུབ།</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>རིམ་པ་འདིར་ཁྱེད་ཀྱིས **ཤ་སྲིན %lld** བསྡུ་ཐུབ།</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>གྲངས་ཤིག **བགོ་བའི** རྩིས།</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>ཁྱེད་ཀྱི་མིང་།</string>
 	<key>name.whatsYourName</key>
 	<string>ཁྱེད་ཀྱི་མིང་ལ་ག་རེ་ཟེར།</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: སེམས་ཅན་འདི་ཕྱེ་ཆེད་དུ་ཨ་ལོང་འགའ་ཤས་རག་རོགས། 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>ཁྱེད་ཀྱི་སེམས་ཅན་སྒུག་ནས་ཡོད།རྩེད་མོ་རྩེད་པར་ཕྱིར་ལོག་ནས་ཨ་ལོང་བསྡུ་རུབ་བྱེད་རོགས།</string>
 	<key>notif.comeback.title</key>
 	<string>ང་ཚོས་ཁྱེད་རང་དྲན་གི་འདུག . 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>མཆོང་རྒྱུག་ཕོགས་ཀྱི་སྔོན་ཐོན་ནང་བརྗོད་གཞི་རེ་རེ་དང་སེམས་ཅན་10ཚང་མའི་ཆེད་དུ་རིམ་པ་%lldཚུད་ཡོད།མྱོང་ཚོར་དེ་མུ་མཐུད་དུ་འགྲོ་བཞིན་ཡོད།</string>
 	<key>notif.premium.title</key>
 	<string>གནས་རིམ་དང་སེམས་ཅན་མང་བ་ཕྱེ་རོགས། . 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>ཉིན་ %lld ཕྱིན་སོང་།ང་ཚོས་ཨང་རྩིས་སྦྱོང་བརྡར་ཁ་ཤས་ཐག་གཅོད་བྱས་ནས་ཨ་ལོང་མང་བ་རག་རོགས།</string>
 	<key>notif.reactivate.title</key>
 	<string>བསྐྱར་དུ་རྩེད་མོ་རྩེད་རྒྱུར་གྲ་སྒྲིག་ཡིན་ནམ། . 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>རེག་པ། %1$lld ནས་ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>མི་རྒན་པའི་ཆོག་མཆན་དགོས།</string>
-	<key>premium.availableAt %lld</key>
-	<string>བྱ་དགའ་ %lld ནས་བཟུང་སྤྱོད་ཆོག</string>
 	<key>premium.availableFromStart</key>
 	<string>ཐོག་མ་ནས་སྤྱོད་ཆོག</string>
 	<key>premium.characterUnlocked</key>
 	<string>མི་སྣ་གསར་པ་ཁ་ཕྱེ་ཟིན།</string>
-	<key>premium.earnedCards %lld</key>
-	<string>ཁྱེད་ཀྱིས་ཨ་ལོང་ %lld ཐོབ་ཡོད།</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium ཁོ་ནར་ཡོད།</string>
 	<key>premium.feature.animals.subtitle</key>

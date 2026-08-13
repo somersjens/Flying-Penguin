@@ -22,8 +22,6 @@
 	<string>Ochtapas</string>
 	<key>character.penguin</key>
 	<string>Piongain</string>
-	<key>common.cancel</key>
-	<string>Cealaigh</string>
 	<key>common.continue</key>
 	<string>Ar aghaidh</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld nóim</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Sábháil</string>
-	<key>currency.hoop.plural</key>
-	<string>fonsaí</string>
-	<key>currency.hoop.singular</key>
-	<string>fonsa</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Tá tú beagnach ann</string>
 	<key>game.encouragement.complete</key>
 	<string>Scór foirfe!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Thuill tú gach pointe.</string>
 	<key>game.end.completionSuffix</key>
 	<string>críochnaithe!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Tosaigh an leibhéal</string>
 	<key>game.intro.startTutorial</key>
 	<string>Tosaigh an treoir</string>
-	<key>game.streakBoost.title</key>
-	<string>Pointí dúbailte!</string>
 	<key>goal.period</key>
 	<string>Tréimhse sprice</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Suimeanna ina **gcuireann tú** uimhir leis.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Cuir %lld leis</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Is féidir leat suas le **%lld cairéad** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Is féidir leat suas le **%lld sicín** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Is féidir leat suas le **%lld iasc** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Is féidir leat suas le **%lld próca meala** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Is féidir leat suas le **%lld fonsaí** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Is féidir leat suas le **%lld briosca madra** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Is féidir leat suas le **%lld píosa feola** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Is féidir leat suas le **%lld piseanna talún** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Is féidir leat suas le **%lld péarla** a bhailiú sa leibhéal seo.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Is féidir leat suas le **%lld ribí róibéis** a bhailiú sa leibhéal seo.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Suimeanna ina **roinneann tú** uimhir.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>D’ainm</string>
 	<key>name.whatsYourName</key>
 	<string>Cad is ainm duit?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Faigh cúpla fonsaí eile chun an t-ainmhí seo a dhíghlasáil! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Tá do chuid ainmhithe ag fanacht. Tar ar ais ag imirt agus lean ort ag bailiú fonsaí!</string>
 	<key>notif.comeback.title</key>
 	<string>Is fada uainn thú! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Cuimsíonn Hungry Frog Premium %lld leibhéal do gach ábhar agus do gach 10 n-ainmhí. Leanann an eachtra ar aghaidh!</string>
 	<key>notif.premium.title</key>
 	<string>Díghlasáil níos mó leibhéil agus ainmhithe! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Tá sé %lld lá. Déanaimis roinnt cleachtaí matamaitice a réiteach agus níos mó fonsaí a thuilleamh!</string>
 	<key>notif.reactivate.title</key>
 	<string>Réidh le himirt arís? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Tapálacha: %1$lld as %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cead duine fásta de dhíth</string>
-	<key>premium.availableAt %lld</key>
-	<string>Ar fáil ó %lld trófaí</string>
 	<key>premium.availableFromStart</key>
 	<string>Ar fáil ón tús</string>
 	<key>premium.characterUnlocked</key>
 	<string>CARACHTAR NUA DÍGHLASÁILTE</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Tá %lld fonsaí tuillte agat</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Eisiach le Préimh</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -22,8 +22,6 @@
 	<string>ઓક્ટોપસ</string>
 	<key>character.penguin</key>
 	<string>પેંગ્વિન</string>
-	<key>common.cancel</key>
-	<string>રદ કરો</string>
 	<key>common.continue</key>
 	<string>આગળ</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld મિનિટ</string>
 	<key>common.ok</key>
 	<string>ઓકે</string>
-	<key>common.save</key>
-	<string>સાચવો</string>
-	<key>currency.hoop.plural</key>
-	<string>વલયો</string>
-	<key>currency.hoop.singular</key>
-	<string>વલય</string>
 	<key>game.combo %lld</key>
 	<string>કોમ્બો! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>તમે લગભગ પહોંચી ગયા</string>
 	<key>game.encouragement.complete</key>
 	<string>બધું એકદમ સાચું!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>તમે દરેક પોઈન્ટ મેળવ્યો.</string>
 	<key>game.end.completionSuffix</key>
 	<string>પૂર્ણ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>લેવલ શરૂ કરો</string>
 	<key>game.intro.startTutorial</key>
 	<string>ટ્યુટોરિયલ શરૂ કરો</string>
-	<key>game.streakBoost.title</key>
-	<string>બમણા પોઇન્ટ!</string>
 	<key>goal.period</key>
 	<string>લક્ષ્ય સમયગાળો</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>જે દાખલામાં સંખ્યા **ઉમેરો**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ઉમેરો</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld ગાજર** ભેગાં કરી શકો.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld મરઘીઓ** ભેગી કરી શકો.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld માછલીઓ** ભેગી કરી શકો.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld મધના ડબ્બા** ભેગા કરી શકો.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld વલયો** ભેગી કરી શકો.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld કૂતરાના બિસ્કિટ** ભેગા કરી શકો.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld માંસના ટુકડા** ભેગા કરી શકો.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld શીંગદાણા** ભેગા કરી શકો.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld મોતી** ભેગાં કરી શકો.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>આ લેવલમાં વધુમાં વધુ **%lld ઝીંગા** ભેગા કરી શકો.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>જે દાખલામાં સંખ્યાને **ભાગો**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>તમારું નામ</string>
 	<key>name.whatsYourName</key>
 	<string>તમારું નામ શું છે?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: આ પ્રાણીને અનલૉક કરવા માટે થોડી વધુ વલયો કમાઓ! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>તમારા પ્રાણીઓ રાહ જોઈ રહ્યા છે. રમવા માટે પાછા આવો અને વલયો એકત્રિત કરવાનું ચાલુ રાખો!</string>
 	<key>notif.comeback.title</key>
 	<string>અમે તમને યાદ કરીએ છીએ! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>જમ્પિંગ ફોક્સ પ્રીમિયમમાં દરેક વિષય માટે %lld સ્તરો અને તમામ 10 પ્રાણીઓનો સમાવેશ થાય છે. સાહસ ચાલુ રહે છે!</string>
 	<key>notif.premium.title</key>
 	<string>વધુ સ્તરો અને પ્રાણીઓને અનલૉક કરો! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld દિવસ થઈ ગયા. ચાલો ગણિતની કેટલીક કસરતો ઉકેલીએ અને વધુ વલયો કમાઈએ!</string>
 	<key>notif.reactivate.title</key>
 	<string>ફરીથી રમવા માટે તૈયાર છો? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ટેપ: %1$lld માંથી %2$lld</string>
 	<key>parentGate.title</key>
 	<string>મોટા વ્યક્તિની મંજૂરી જરૂરી</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ટ્રોફીથી ઉપલબ્ધ</string>
 	<key>premium.availableFromStart</key>
 	<string>શરૂઆતથી ઉપલબ્ધ</string>
 	<key>premium.characterUnlocked</key>
 	<string>નવું પાત્ર ખૂલ્યું</string>
-	<key>premium.earnedCards %lld</key>
-	<string>તમે %lld વલયો મેળવી</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ફક્ત Premium સાથે</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -22,8 +22,6 @@
 	<string>章鱼</string>
 	<key>character.penguin</key>
 	<string>企鹅</string>
-	<key>common.cancel</key>
-	<string>取消</string>
 	<key>common.continue</key>
 	<string>继续</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld 分钟</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>保存</string>
-	<key>currency.hoop.plural</key>
-	<string>圆环</string>
-	<key>currency.hoop.singular</key>
-	<string>圆环</string>
 	<key>game.combo %lld</key>
 	<string>连击！+%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>就快到了</string>
 	<key>game.encouragement.complete</key>
 	<string>满分！</string>
-	<key>game.end.completionSubtitle</key>
-	<string>每一分都是你赢来的。</string>
 	<key>game.end.completionSuffix</key>
 	<string>完成！</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>开始关卡</string>
 	<key>game.intro.startTutorial</key>
 	<string>开始教程</string>
-	<key>game.streakBoost.title</key>
-	<string>双倍得分！</string>
 	<key>goal.period</key>
 	<string>目标周期</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>把一个数\*\*加上\*\*另一个数。</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>加 %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>本关最多可收集 \*\*%lld 根胡萝卜\*\*。</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>本关最多可收集 \*\*%lld 只鸡\*\*。</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>本关最多可收集 \*\*%lld 条鱼\*\*。</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>本关最多可收集 \*\*%lld 罐蜂蜜\*\*。</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>本关最多可收集 \*\*%lld 只圆环\*\*。</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>本关最多可收集 \*\*%lld 块狗饼干\*\*。</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>本关最多可收集 \*\*%lld 块肉\*\*。</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>本关最多可收集 \*\*%lld 颗花生\*\*。</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>本关最多可收集 \*\*%lld 颗珍珠\*\*。</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>本关最多可收集 \*\*%lld 只虾\*\*。</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>把一个数\*\*除以\*\*另一个数。</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>你的名字</string>
 	<key>name.whatsYourName</key>
 	<string>你叫什么名字？</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: 赢得更多圆环来解锁这只动物！ 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>你的动物正在等待。回来玩并继续收集圆环！</string>
 	<key>notif.comeback.title</key>
 	<string>我们想你！ 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium 包含每个主题的 %lld 个关卡和全部 10 种动物。冒险仍在继续！</string>
 	<key>notif.premium.title</key>
 	<string>解锁更多关卡和动物！ 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>已经%lld天了。让我们解决一些数学练习并赢得更多圆环！</string>
 	<key>notif.reactivate.title</key>
 	<string>准备好再玩了吗？ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>轻点次数：%1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>需要成年人同意</string>
-	<key>premium.availableAt %lld</key>
-	<string>获得 %lld 个奖杯后可用</string>
 	<key>premium.availableFromStart</key>
 	<string>从一开始即可使用</string>
 	<key>premium.characterUnlocked</key>
 	<string>已解锁新角色</string>
-	<key>premium.earnedCards %lld</key>
-	<string>你已获得 %lld 只圆环</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium 专属</string>
 	<key>premium.feature.animals.subtitle</key>

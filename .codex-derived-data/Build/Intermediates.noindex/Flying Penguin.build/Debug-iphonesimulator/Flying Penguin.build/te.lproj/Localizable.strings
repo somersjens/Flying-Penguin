@@ -22,8 +22,6 @@
 	<string>ఆక్టోపస్</string>
 	<key>character.penguin</key>
 	<string>పెంగ్విన్</string>
-	<key>common.cancel</key>
-	<string>రద్దు</string>
 	<key>common.continue</key>
 	<string>కొనసాగించు</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld నిమి</string>
 	<key>common.ok</key>
 	<string>సరే</string>
-	<key>common.save</key>
-	<string>సేవ్</string>
-	<key>currency.hoop.plural</key>
-	<string>వలయాలు</string>
-	<key>currency.hoop.singular</key>
-	<string>వలయం</string>
 	<key>game.combo %lld</key>
 	<string>కాంబో! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>దాదాపు చేరుకున్నావు</string>
 	<key>game.encouragement.complete</key>
 	<string>అన్నీ కరెక్ట్!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ప్రతి పాయింట్ సంపాదించావు.</string>
 	<key>game.end.completionSuffix</key>
 	<string>పూర్తయింది!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>లెవల్ ప్రారంభించు</string>
 	<key>game.intro.startTutorial</key>
 	<string>ట్యుటోరియల్ మొదలు</string>
-	<key>game.streakBoost.title</key>
-	<string>రెట్టింపు పాయింట్లు!</string>
 	<key>goal.period</key>
 	<string>లక్ష్య కాలం</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ఒక సంఖ్యను **కలిపే** లెక్కలు.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld కలుపు</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld క్యారెట్లు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld కోళ్లు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld చేపలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld తేనె కుండలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld వలయాలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld కుక్క బిస్కెట్లు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld మాంసం ముక్కలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld వేరుశెనగలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld ముత్యాలు** వరకు సేకరించవచ్చు.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>ఈ లెవెల్‌లో **%lld రొయ్యలు** వరకు సేకరించవచ్చు.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ఒక సంఖ్యను **భాగించే** లెక్కలు.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>నీ పేరు</string>
 	<key>name.whatsYourName</key>
 	<string>నీ పేరేంటి?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@ను తెరవడానికి మరికొన్ని వలయాలు సంపాదించు! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>నీ జంతువులు ఎదురుచూస్తున్నాయి. మళ్లీ వచ్చి వలయాలు సేకరిస్తూ ఉండు!</string>
 	<key>notif.comeback.title</key>
 	<string>నువ్వు గుర్తొస్తున్నావు! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>ప్రతి అంశానికి %lld లెవల్‌లు, మొత్తం 10 జంతువుల కోసం ప్రీమియం తీసుకో — సాహసం కొనసాగుతుంది.</string>
 	<key>notif.premium.title</key>
 	<string>మరిన్ని లెవల్‌లు, జంతువులను తెరువు! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld రోజులైంది. కొన్ని లెక్కలు చేసి మరిన్ని వలయాలు సంపాదిద్దాం!</string>
 	<key>notif.reactivate.title</key>
 	<string>మళ్లీ ఆడటానికి సిద్ధమా? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>తాకినవి: %1$lldలో %2$lld</string>
 	<key>parentGate.title</key>
 	<string>పెద్దవారి ఆమోదం అవసరం</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ట్రోఫీల నుంచి అందుబాటులో</string>
 	<key>premium.availableFromStart</key>
 	<string>మొదటి నుంచి అందుబాటులో</string>
 	<key>premium.characterUnlocked</key>
 	<string>కొత్త పాత్ర తెరుచుకుంది</string>
-	<key>premium.earnedCards %lld</key>
-	<string>నువ్వు %lld వలయాలు సంపాదించావు</string>
 	<key>premium.exclusiveBadge</key>
 	<string>ప్రీమియంతో మాత్రమే</string>
 	<key>premium.feature.animals.subtitle</key>

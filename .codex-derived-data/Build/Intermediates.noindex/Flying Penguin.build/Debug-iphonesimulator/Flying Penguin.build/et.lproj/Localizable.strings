@@ -22,8 +22,6 @@
 	<string>Kaheksajalg</string>
 	<key>character.penguin</key>
 	<string>Pingviin</string>
-	<key>common.cancel</key>
-	<string>Loobu</string>
 	<key>common.continue</key>
 	<string>Jätka</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Salvesta</string>
-	<key>currency.hoop.plural</key>
-	<string>rõngad</string>
-	<key>currency.hoop.singular</key>
-	<string>rõngas</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Oled peaaegu kohal</string>
 	<key>game.encouragement.complete</key>
 	<string>Täiuslik tulemus!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Sa teenisid kõik punktid välja.</string>
 	<key>game.end.completionSuffix</key>
 	<string>valmis!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Alusta taset</string>
 	<key>game.intro.startTutorial</key>
 	<string>Alusta õpetust</string>
-	<key>game.streakBoost.title</key>
-	<string>Topeltpunktid!</string>
 	<key>goal.period</key>
 	<string>Eesmärgi periood</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Tehted, kus sa arvu **liidad**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Liida %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld porgandit**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld kana**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld kala**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld meepurki**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld rõngad**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld koeraküpsist**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld lihatükki**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld maapähklit**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld pärlit**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Selles tasemes saad koguda kuni **%lld krevetti**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Tehted, kus sa arvu **jagad**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Sinu nimi</string>
 	<key>name.whatsYourName</key>
 	<string>Mis su nimi on?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Teenige selle looma avamiseks veel mõned rõngad! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Teie loomad ootavad. Tulge tagasi mängima ja jätkake rõngad kogumist!</string>
 	<key>notif.comeback.title</key>
 	<string>Me igatseme sind! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium sisaldab %lld taset iga teema ja kõigi 10 looma jaoks. Seiklus jätkub!</string>
 	<key>notif.premium.title</key>
 	<string>Avage rohkem tasemeid ja loomi! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld päeva on möödas. Lahendame mõned matemaatikaülesanded ja teenime rohkem rõngad!</string>
 	<key>notif.reactivate.title</key>
 	<string>Kas olete uuesti mängimiseks valmis? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Puudutusi: %1$lld / %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Vajalik täiskasvanu kinnitus</string>
-	<key>premium.availableAt %lld</key>
-	<string>Saadaval alates %lld karikast</string>
 	<key>premium.availableFromStart</key>
 	<string>Kohe algusest saadaval</string>
 	<key>premium.characterUnlocked</key>
 	<string>UUS TEGELANE AVATUD</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Oled teeninud %lld rõngad</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ainult Premiumiga</string>
 	<key>premium.feature.animals.subtitle</key>

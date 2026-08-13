@@ -22,8 +22,6 @@
 	<string>Ութոտնուկ</string>
 	<key>character.penguin</key>
 	<string>Պինգվին</string>
-	<key>common.cancel</key>
-	<string>Չեղարկել</string>
 	<key>common.continue</key>
 	<string>Շարունակել</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld ր</string>
 	<key>common.ok</key>
 	<string>Լավ</string>
-	<key>common.save</key>
-	<string>Պահել</string>
-	<key>currency.hoop.plural</key>
-	<string>օղակներ</string>
-	<key>currency.hoop.singular</key>
-	<string>օղակ</string>
 	<key>game.combo %lld</key>
 	<string>Կոմբո! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Գրեթե հասել ես</string>
 	<key>game.encouragement.complete</key>
 	<string>Կատարյալ արդյունք!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Դու վաստակեցիր բոլոր միավորները։</string>
 	<key>game.end.completionSuffix</key>
 	<string>ավարտված է։</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Սկսել մակարդակը</string>
 	<key>game.intro.startTutorial</key>
 	<string>Սկսել ուսուցումը</string>
-	<key>game.streakBoost.title</key>
-	<string>Կրկնակի միավորներ!</string>
 	<key>goal.period</key>
 	<string>Նպատակի շրջան</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Օրինակներ, որտեղ թիվ ես **գումարում**։</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Գումարել %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld գազար**։</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld հավ**։</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld ձուկ**։</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld բանկա մեղր**։</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld օղակներ**։</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld շան թխվածք**։</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld կտոր միս**։</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld գետնանուշ**։</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld մարգարիտ**։</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Այս մակարդակում կարող ես հավաքել մինչև **%lld ծովախեցգետին**։</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Օրինակներ, որտեղ թիվ ես **բաժանում**։</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Քո անունը</string>
 	<key>name.whatsYourName</key>
 	<string>Ինչպե՞ս ես կոչվում։</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Վաստակեք ևս մի քանի օղակներ՝ այս կենդանուն բացելու համար: 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Ձեր կենդանիները սպասում են:Վերադարձեք խաղալու և շարունակեք օղակներ հավաքել:</string>
 	<key>notif.comeback.title</key>
 	<string>Մենք կարոտում ենք քեզ: 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium-ը ներառում է %lld մակարդակ յուրաքանչյուր թեմայի և բոլոր 10 կենդանիների համար:Արկածը շարունակվում է:</string>
 	<key>notif.premium.title</key>
 	<string>Բացեք ավելի շատ մակարդակներ և կենդանիներ: 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Անցել է %lld օր։Եկեք լուծենք որոշ մաթեմատիկական վարժություններ և վաստակենք ավելի շատ օղակներ:</string>
 	<key>notif.reactivate.title</key>
 	<string>Պատրա՞ստ եք նորից խաղալ: 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Հպումներ՝ %1$lld՝ %2$lld-ից</string>
 	<key>parentGate.title</key>
 	<string>Պահանջվում է մեծահասակի հաստատում</string>
-	<key>premium.availableAt %lld</key>
-	<string>Հասանելի է %lld գավաթից</string>
 	<key>premium.availableFromStart</key>
 	<string>Հասանելի է սկզբից</string>
 	<key>premium.characterUnlocked</key>
 	<string>ՆՈՐ ԿԵՐՊԱՐԸ ԲԱՑՎԵՑ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Վաստակել ես %lld օղակներ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Բացառիկ՝ Premium-ով</string>
 	<key>premium.feature.animals.subtitle</key>

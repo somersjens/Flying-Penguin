@@ -22,8 +22,6 @@
 	<string>タコ</string>
 	<key>character.penguin</key>
 	<string>ペンギン</string>
-	<key>common.cancel</key>
-	<string>キャンセル</string>
 	<key>common.continue</key>
 	<string>つづける</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld分</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>ほぞん</string>
-	<key>currency.hoop.plural</key>
-	<string>フープ</string>
-	<key>currency.hoop.singular</key>
-	<string>フープ</string>
 	<key>game.combo %lld</key>
 	<string>コンボ！ +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>あとちょっと</string>
 	<key>game.encouragement.complete</key>
 	<string>全問正解！</string>
-	<key>game.end.completionSubtitle</key>
-	<string>ぜんぶのポイントをとったよ。</string>
 	<key>game.end.completionSuffix</key>
 	<string>クリア！</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>レベルをはじめる</string>
 	<key>game.intro.startTutorial</key>
 	<string>チュートリアル開始</string>
-	<key>game.streakBoost.title</key>
-	<string>ポイント2倍！</string>
 	<key>goal.period</key>
 	<string>目標の期間</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>数を\*\*たす\*\*問題。</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lldをたす</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>このレベルで\*\*%lldこのにんじん\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>このレベルで\*\*%lldわのニワトリ\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>このレベルで\*\*%lldひきの魚\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>このレベルで\*\*%lldこのはちみつ\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>このレベルで\*\*%lldひきのフープ\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>このレベルで\*\*%lldこの犬のおやつ\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>このレベルで\*\*%lldこのお肉\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>このレベルで\*\*%lldこのピーナッツ\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>このレベルで\*\*%lldこの真珠\*\*を集められるよ。</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>このレベルで\*\*%lldひきのエビ\*\*を集められるよ。</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>数を\*\*わる\*\*問題。</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>なまえ</string>
 	<key>name.whatsYourName</key>
 	<string>きみのなまえは？</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: この動物のロックを解除するには、さらにいくつかのフープを獲得してください! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>あなたの動物たちが待っています。再びプレイしてフープを集め続けましょう!</string>
 	<key>notif.comeback.title</key>
 	<string>私たちはあなたがいなくて寂しいです！ 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog プレミアムには、すべてのトピックと 10 匹すべての動物の %lld レベルが含まれています。冒険はまだまだ続きます！</string>
 	<key>notif.premium.title</key>
 	<string>さらに多くのレベルと動物をアンロックしましょう！ 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld日が経ちました。数学の練習問題を解いて、より多くのフープを獲得しましょう!</string>
 	<key>notif.reactivate.title</key>
 	<string>もう一度プレイする準備はできましたか? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>タップ：%1$lld／%2$lld</string>
 	<key>parentGate.title</key>
 	<string>大人の承認が必要です</string>
-	<key>premium.availableAt %lld</key>
-	<string>トロフィー%lld個で使用可能</string>
 	<key>premium.availableFromStart</key>
 	<string>最初から使用可能</string>
 	<key>premium.characterUnlocked</key>
 	<string>新しいキャラクターをアンロック！</string>
-	<key>premium.earnedCards %lld</key>
-	<string>フープを%lld匹ゲット</string>
 	<key>premium.exclusiveBadge</key>
 	<string>プレミアム限定</string>
 	<key>premium.feature.animals.subtitle</key>

@@ -22,8 +22,6 @@
 	<string>Aštuonkojis</string>
 	<key>character.penguin</key>
 	<string>Pingvinas</string>
-	<key>common.cancel</key>
-	<string>Atšaukti</string>
 	<key>common.continue</key>
 	<string>Tęsti</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>Gerai</string>
-	<key>common.save</key>
-	<string>Išsaugoti</string>
-	<key>currency.hoop.plural</key>
-	<string>lankai</string>
-	<key>currency.hoop.singular</key>
-	<string>lankas</string>
 	<key>game.combo %lld</key>
 	<string>Serija! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Beveik pasiekei</string>
 	<key>game.encouragement.complete</key>
 	<string>Puikiai! Viskas teisingai!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Uždirbai kiekvieną tašką.</string>
 	<key>game.end.completionSuffix</key>
 	<string>baigta!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Pradėti lygį</string>
 	<key>game.intro.startTutorial</key>
 	<string>Pradėti pamokėlę</string>
-	<key>game.streakBoost.title</key>
-	<string>Dvigubi taškai!</string>
 	<key>goal.period</key>
 	<string>Tikslo laikotarpis</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Uždaviniai, kuriuose skaičių **pridedi**.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Pridėti %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld morkų**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld vištų**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld žuvų**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld medaus puodynėlių**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld lankai**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld šunų skanėstų**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld mėsos gabalėlių**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld žemės riešutų**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld perlų**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Šiame lygyje gali surinkti iki **%lld krevečių**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Uždaviniai, kuriuose skaičių **daliji**.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Tavo vardas</string>
 	<key>name.whatsYourName</key>
 	<string>Koks tavo vardas?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Uždirbkite dar kelis lankai, kad atrakintumėte šį gyvūną! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Jūsų gyvūnai laukia. Grįžkite žaisti ir toliau rinkti lankai!</string>
 	<key>notif.comeback.title</key>
 	<string>Mes tavęs pasiilgome! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium apima %lld lygius kiekvienai temai ir visiems 10 gyvūnų. Nuotykis tęsiasi!</string>
 	<key>notif.premium.title</key>
 	<string>Atrakinkite daugiau lygių ir gyvūnų! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Praėjo %lld dienos. Išspręskime keletą matematikos pratimų ir pelnykime daugiau lankai!</string>
 	<key>notif.reactivate.title</key>
 	<string>Pasiruošę vėl žaisti? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Bakstelėjimai: %1$lld iš %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Reikia suaugusiojo patvirtinimo</string>
-	<key>premium.availableAt %lld</key>
-	<string>Pasiekiama nuo %lld trofėjų</string>
 	<key>premium.availableFromStart</key>
 	<string>Pasiekiama nuo pradžių</string>
 	<key>premium.characterUnlocked</key>
 	<string>ATRAKINTAS NAUJAS VEIKĖJAS</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Uždirbai %lld lankai</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Tik su Premium</string>
 	<key>premium.feature.animals.subtitle</key>

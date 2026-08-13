@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>notif.animal.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>پەقەت %lld چەمبەر! ⭕</string>
-			<key>other</key>
-			<string>پەقەت %lld چەمبەر! ⭕</string>
-		</dict>
-	</dict>
 	<key>notif.cards.body %lld</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -32,22 +16,6 @@
 			<string>بۈگۈن %lld مىنۇت ئويناپ، يەنە بىرنەچچە توپلا.</string>
 			<key>other</key>
 			<string>بۈگۈن %lld مىنۇت ئويناپ، يەنە بىرنەچچە توپلا.</string>
-		</dict>
-	</dict>
-	<key>notif.cards.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>%lld چەمبەر توپلاندى! ⭕</string>
-			<key>other</key>
-			<string>%lld چەمبەر توپلاندى! ⭕</string>
 		</dict>
 	</dict>
 	<key>notif.day3.body %lld</key>
@@ -96,38 +64,6 @@
 			<string>كۈندىلىك ئويناش ۋاقتىڭىز %lld كۈنگە يەتتى! 🔥</string>
 			<key>other</key>
 			<string>كۈندىلىك ئويناش ۋاقتىڭىز %lld كۈنگە يەتتى! 🔥</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.body %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>بۇ سىزنىڭ ئومۇمىي لوڭقىڭىزنى %lld چەمبەر يەتكۈزىدۇ. ھەيران قالارلىق خىزمەت!</string>
-			<key>other</key>
-			<string>بۇ سىزنىڭ ئومۇمىي لوڭقىڭىزنى %lld چەمبەر يەتكۈزىدۇ. ھەيران قالارلىق خىزمەت!</string>
-		</dict>
-	</dict>
-	<key>notif.weekly.title %lld</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>lld</string>
-			<key>one</key>
-			<string>بۇ ھەپتە %lld چەمبەر ئېرىشتىڭىز! 🎉</string>
-			<key>other</key>
-			<string>بۇ ھەپتە %lld چەمبەر ئېرىشتىڭىز! 🎉</string>
 		</dict>
 	</dict>
 	<key>parentGate.holdInstruction %@ %lld</key>

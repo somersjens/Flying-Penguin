@@ -22,8 +22,6 @@
 	<string>Ośmiornica</string>
 	<key>character.penguin</key>
 	<string>Pingwin</string>
-	<key>common.cancel</key>
-	<string>Anuluj</string>
 	<key>common.continue</key>
 	<string>Dalej</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Zapisz</string>
-	<key>currency.hoop.plural</key>
-	<string>obręcze</string>
-	<key>currency.hoop.singular</key>
-	<string>obręcz</string>
 	<key>game.combo %lld</key>
 	<string>Seria! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Już prawie</string>
 	<key>game.encouragement.complete</key>
 	<string>Idealnie!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Zdobywasz każdy punkt.</string>
 	<key>game.end.completionSuffix</key>
 	<string>ukończono!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Zacznij poziom</string>
 	<key>game.intro.startTutorial</key>
 	<string>Start samouczka</string>
-	<key>game.streakBoost.title</key>
-	<string>Podwójne punkty!</string>
 	<key>goal.period</key>
 	<string>Okres celu</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Działania, w których **dodajesz** liczbę.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Dodaj %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld marchewek**.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld kurczaków**.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld rybek**.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld słoików miodu**.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld obręcze**.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld psich ciastek**.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld kawałków mięsa**.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld orzeszków**.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld pereł**.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Na tym poziomie zbierzesz maks. **%lld krewetek**.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Działania, w których **dzielisz** liczbę.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Twoje imię</string>
 	<key>name.whatsYourName</key>
 	<string>Jak masz na imię?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Zdobądź jeszcze kilka obręcze, aby odblokować to zwierzę! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Twoje zwierzęta czekają. Wróć do gry i zbieraj obręcze!</string>
 	<key>notif.comeback.title</key>
 	<string>Tęsknimy za tobą! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium zawiera %lld poziomów dla każdego tematu i wszystkich 10 zwierząt. Przygoda trwa!</string>
 	<key>notif.premium.title</key>
 	<string>Odblokuj więcej poziomów i zwierząt! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Minęły %lld dni. Rozwiążmy kilka ćwiczeń matematycznych i zdobądźmy więcej obręcze!</string>
 	<key>notif.reactivate.title</key>
 	<string>Gotowy do ponownej gry? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Stuknięcia: %1$lld z %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Wymagana zgoda dorosłego</string>
-	<key>premium.availableAt %lld</key>
-	<string>Dostępne od %lld pucharów</string>
 	<key>premium.availableFromStart</key>
 	<string>Dostępne od początku</string>
 	<key>premium.characterUnlocked</key>
 	<string>ODBLOKOWANO NOWĄ POSTAĆ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Masz już %lld obręcze</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Tylko z Premium</string>
 	<key>premium.feature.animals.subtitle</key>

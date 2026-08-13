@@ -22,8 +22,6 @@
 	<string>آکٹوپس</string>
 	<key>character.penguin</key>
 	<string>پینگوئن</string>
-	<key>common.cancel</key>
-	<string>منسوخ</string>
 	<key>common.continue</key>
 	<string>جاری</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld منٹ</string>
 	<key>common.ok</key>
 	<string>ٹھیک ہے</string>
-	<key>common.save</key>
-	<string>محفوظ کریں</string>
-	<key>currency.hoop.plural</key>
-	<string>حلقے</string>
-	<key>currency.hoop.singular</key>
-	<string>حلقہ</string>
 	<key>game.combo %lld</key>
 	<string>کومبو! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>آپ تقریباً پہنچ گئے</string>
 	<key>game.encouragement.complete</key>
 	<string>پورے نمبر!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>آپ نے ہر پوائنٹ کمایا۔</string>
 	<key>game.end.completionSuffix</key>
 	<string>مکمل!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>لیول شروع کریں</string>
 	<key>game.intro.startTutorial</key>
 	<string>ٹیوٹوریل شروع کریں</string>
-	<key>game.streakBoost.title</key>
-	<string>دگنے پوائنٹس!</string>
 	<key>goal.period</key>
 	<string>ہدف کی مدت</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>وہ سوال جن میں آپ عدد **جمع** کرتے ہیں۔</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld جمع کریں</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld گاجریں** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld مرغیاں** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld مچھلیاں** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld شہد کے مرتبان** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld حلقے** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld کتے کے بسکٹ** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld گوشت کے ٹکڑے** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld مونگ پھلیاں** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld موتی** جمع کر سکتے ہیں۔</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>اس لیول میں آپ زیادہ سے زیادہ **%lld جھینگے** جمع کر سکتے ہیں۔</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>وہ سوال جن میں آپ عدد کو **تقسیم** کرتے ہیں۔</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>آپ کا نام</string>
 	<key>name.whatsYourName</key>
 	<string>آپ کا نام کیا ہے؟</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: اس جانور کو غیر مقفل کرنے کے لیے کچھ اور حلقے حاصل کریں! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>آپ کے جانور انتظار کر رہے ہیں۔کھیلنے کے لیے واپس آئیں اور حلقے جمع کرتے رہیں!</string>
 	<key>notif.comeback.title</key>
 	<string>ہم آپ کو یاد کرتے ہیں! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>جمپنگ فاکس پریمیم میں ہر موضوع کے لیے %lld لیولز اور تمام 10 جانور شامل ہیں۔ایڈونچر جاری ہے!</string>
 	<key>notif.premium.title</key>
 	<string>مزید سطحوں اور جانوروں کو غیر مقفل کریں! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld دن ہو گئے ہیں۔آئیے ریاضی کی کچھ مشقیں حل کریں اور مزید حلقے حاصل کریں!</string>
 	<key>notif.reactivate.title</key>
 	<string>دوبارہ کھیلنے کے لیے تیار ہیں؟ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>ٹیپس: %1$lld از %2$lld</string>
 	<key>parentGate.title</key>
 	<string>بالغ کی منظوری ضروری</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ٹرافیوں سے دستیاب</string>
 	<key>premium.availableFromStart</key>
 	<string>شروع سے دستیاب</string>
 	<key>premium.characterUnlocked</key>
 	<string>نیا کردار کھل گیا</string>
-	<key>premium.earnedCards %lld</key>
-	<string>آپ نے %lld حلقے حاصل کیں</string>
 	<key>premium.exclusiveBadge</key>
 	<string>صرف Premium کے ساتھ</string>
 	<key>premium.feature.animals.subtitle</key>

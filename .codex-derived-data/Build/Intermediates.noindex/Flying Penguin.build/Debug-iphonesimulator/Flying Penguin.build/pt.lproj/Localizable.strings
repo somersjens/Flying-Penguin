@@ -22,8 +22,6 @@
 	<string>Polvo</string>
 	<key>character.penguin</key>
 	<string>Pinguim</string>
-	<key>common.cancel</key>
-	<string>Cancelar</string>
 	<key>common.continue</key>
 	<string>Continuar</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>OK</string>
-	<key>common.save</key>
-	<string>Guardar</string>
-	<key>currency.hoop.plural</key>
-	<string>aros</string>
-	<key>currency.hoop.singular</key>
-	<string>aro</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Estás quase lá</string>
 	<key>game.encouragement.complete</key>
 	<string>Pontuação perfeita!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Ganhaste todos os pontos.</string>
 	<key>game.end.completionSuffix</key>
 	<string>concluído!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Começar nível</string>
 	<key>game.intro.startTutorial</key>
 	<string>Iniciar tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Pontos a dobrar!</string>
 	<key>goal.period</key>
 	<string>Período da meta</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Contas em que **somas** um número.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Somar %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Podes apanhar até **%lld cenouras** neste nível.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Podes apanhar até **%lld galinhas** neste nível.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Podes apanhar até **%lld peixes** neste nível.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Podes apanhar até **%lld frascos de mel** neste nível.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Podes apanhar até **%lld aros** neste nível.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Podes apanhar até **%lld biscoitos para cães** neste nível.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Podes apanhar até **%lld pedaços de carne** neste nível.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Podes apanhar até **%lld amendoins** neste nível.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Podes apanhar até **%lld pérolas** neste nível.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Podes apanhar até **%lld camarões** neste nível.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Contas em que **divides** um número.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>O teu nome</string>
 	<key>name.whatsYourName</key>
 	<string>Como te chamas?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Ganhe mais alguns aros para desbloquear este animal! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Seus animais estão esperando. Volte para jogar e continue coletando aros!</string>
 	<key>notif.comeback.title</key>
 	<string>Que saudades de você! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inclui %lld níveis para cada tópico e todos os 10 animais. A aventura continua!</string>
 	<key>notif.premium.title</key>
 	<string>Desbloqueie mais níveis e animais! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Já se passaram %lld dias. Vamos resolver alguns exercícios de matemática e ganhar mais aros!</string>
 	<key>notif.reactivate.title</key>
 	<string>Pronto para jogar de novo? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Toques: %1$lld de %2$lld</string>
 	<key>parentGate.title</key>
 	<string>É necessária a aprovação de um adulto</string>
-	<key>premium.availableAt %lld</key>
-	<string>Disponível a partir de %lld troféus</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponível desde o início</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOVA PERSONAGEM DESBLOQUEADA</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Já ganhaste %lld aros</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusivo com Premium</string>
 	<key>premium.feature.animals.subtitle</key>

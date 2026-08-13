@@ -22,8 +22,6 @@
 	<string>ऑक्टोपस</string>
 	<key>character.penguin</key>
 	<string>पेंगुइन</string>
-	<key>common.cancel</key>
-	<string>रद्द करें</string>
 	<key>common.continue</key>
 	<string>आगे</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld मिनट</string>
 	<key>common.ok</key>
 	<string>ठीक</string>
-	<key>common.save</key>
-	<string>सहेजें</string>
-	<key>currency.hoop.plural</key>
-	<string>छल्ले</string>
-	<key>currency.hoop.singular</key>
-	<string>छल्ला</string>
 	<key>game.combo %lld</key>
 	<string>कॉम्बो! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>बस पहुँचने वाले हो</string>
 	<key>game.encouragement.complete</key>
 	<string>पूरे अंक!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>तुमने हर अंक कमाया।</string>
 	<key>game.end.completionSuffix</key>
 	<string>पूरा!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>स्तर शुरू करें</string>
 	<key>game.intro.startTutorial</key>
 	<string>ट्यूटोरियल शुरू करो</string>
-	<key>game.streakBoost.title</key>
-	<string>दोगुने अंक!</string>
 	<key>goal.period</key>
 	<string>लक्ष्य अवधि</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ऐसे सवाल जिनमें संख्या **जोड़ते** हो।</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld जोड़ो</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>इस लेवल में **%lld गाजर** तक इकट्ठी कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>इस लेवल में **%lld मुर्गियाँ** तक इकट्ठी कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>इस लेवल में **%lld मछलियाँ** तक इकट्ठी कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>इस लेवल में **%lld शहद के बर्तन** तक इकट्ठे कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>इस लेवल में **%lld छल्ले** तक इकट्ठी कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>इस लेवल में **%lld कुत्ते के बिस्कुट** तक इकट्ठे कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>इस लेवल में **%lld मांस के टुकड़े** तक इकट्ठे कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>इस लेवल में **%lld मूंगफली** तक इकट्ठी कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>इस लेवल में **%lld मोती** तक इकट्ठे कर सकते हो।</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>इस लेवल में **%lld झींगे** तक इकट्ठे कर सकते हो।</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ऐसे सवाल जिनमें संख्या को **भाग** देते हो।</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>तुम्हारा नाम</string>
 	<key>name.whatsYourName</key>
 	<string>तुम्हारा नाम क्या है?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: इस जानवर को अनलॉक करने के लिए कुछ और छल्ले अर्जित करें! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>आपके जानवर इंतज़ार कर रहे हैं. खेलने के लिए वापस आएँ और छल्ले इकट्ठा करते रहें!</string>
 	<key>notif.comeback.title</key>
 	<string>हमें आपकी याद आती है! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>जंपिंग फॉक्स प्रीमियम में प्रत्येक विषय और सभी 10 जानवरों के लिए %lld स्तर शामिल हैं। साहसिक कार्य चलता रहता है!</string>
 	<key>notif.premium.title</key>
 	<string>अधिक स्तरों और जानवरों को अनलॉक करें! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld दिन हो गये. आइए गणित के कुछ अभ्यास हल करें और अधिक छल्ले अर्जित करें!</string>
 	<key>notif.reactivate.title</key>
 	<string>फिर से खेलने के लिए तैयार हैं? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>टैप: %1$lld में से %2$lld</string>
 	<key>parentGate.title</key>
 	<string>किसी बड़े की मंज़ूरी चाहिए</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld ट्रॉफियों से उपलब्ध</string>
 	<key>premium.availableFromStart</key>
 	<string>शुरू से उपलब्ध</string>
 	<key>premium.characterUnlocked</key>
 	<string>नया किरदार अनलॉक हुआ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>तुमने %lld छल्ले कमाईं</string>
 	<key>premium.exclusiveBadge</key>
 	<string>सिर्फ़ Premium के साथ</string>
 	<key>premium.feature.animals.subtitle</key>

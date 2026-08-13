@@ -22,8 +22,6 @@
 	<string>Восьминіг</string>
 	<key>character.penguin</key>
 	<string>Пінгвін</string>
-	<key>common.cancel</key>
-	<string>Скасувати</string>
 	<key>common.continue</key>
 	<string>Далі</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld хв</string>
 	<key>common.ok</key>
 	<string>ОК</string>
-	<key>common.save</key>
-	<string>Зберегти</string>
-	<key>currency.hoop.plural</key>
-	<string>обручі</string>
-	<key>currency.hoop.singular</key>
-	<string>обруч</string>
 	<key>game.combo %lld</key>
 	<string>Комбо! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Ти майже там</string>
 	<key>game.encouragement.complete</key>
 	<string>Ідеально!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Ти здобув усі бали.</string>
 	<key>game.end.completionSuffix</key>
 	<string>завершено!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Почати рівень</string>
 	<key>game.intro.startTutorial</key>
 	<string>Почати навчання</string>
-	<key>game.streakBoost.title</key>
-	<string>Подвійні бали!</string>
 	<key>goal.period</key>
 	<string>Період цілі</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Приклади, де треба \*\*додати\*\* число.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Додати %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld морквин\*\*.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld курчат\*\*.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld рибок\*\*.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld баночок меду\*\*.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld обручі\*\*.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld собачих смаколиків\*\*.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld шматків м’яса\*\*.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld арахісин\*\*.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld перлин\*\*.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>На цьому рівні можна зібрати до \*\*%lld креветок\*\*.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Приклади, де треба \*\*ділити\*\* число.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Твоє ім’я</string>
 	<key>name.whatsYourName</key>
 	<string>Як тебе звати?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Заробіть ще кілька обручі, щоб розблокувати цю тварину! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Ваші тварини чекають. Повертайтеся до гри та продовжуйте збирати обручі!</string>
 	<key>notif.comeback.title</key>
 	<string>ми сумуємо за тобою! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium містить %lld рівнів для кожної теми та всіх 10 тварин. Пригоди тривають!</string>
 	<key>notif.premium.title</key>
 	<string>Розблокуйте більше рівнів і тварин! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Минуло %lld дні. Давайте розв’яжемо кілька математичних вправ і заробимо більше обручі!</string>
 	<key>notif.reactivate.title</key>
 	<string>Готові грати знову? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Дотики: %1$lld з %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Потрібне схвалення дорослого</string>
-	<key>premium.availableAt %lld</key>
-	<string>Доступно від %lld трофеїв</string>
 	<key>premium.availableFromStart</key>
 	<string>Доступно від самого початку</string>
 	<key>premium.characterUnlocked</key>
 	<string>ВІДКРИТО НОВОГО ПЕРСОНАЖА</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Ти зібрав %lld обручі</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Ексклюзивно з Premium</string>
 	<key>premium.feature.animals.subtitle</key>

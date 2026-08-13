@@ -22,8 +22,6 @@
 	<string>Pop</string>
 	<key>character.penguin</key>
 	<string>Pingüí</string>
-	<key>common.cancel</key>
-	<string>Cancel·la</string>
 	<key>common.continue</key>
 	<string>Continua</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld min</string>
 	<key>common.ok</key>
 	<string>D’acord</string>
-	<key>common.save</key>
-	<string>Desa</string>
-	<key>currency.hoop.plural</key>
-	<string>cèrcols</string>
-	<key>currency.hoop.singular</key>
-	<string>cèrcol</string>
 	<key>game.combo %lld</key>
 	<string>Combo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Ja gairebé hi ets</string>
 	<key>game.encouragement.complete</key>
 	<string>Perfecte, tot bé!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Has guanyat tots els punts.</string>
 	<key>game.end.completionSuffix</key>
 	<string>completat!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Comença el nivell</string>
 	<key>game.intro.startTutorial</key>
 	<string>Inicia el tutorial</string>
-	<key>game.streakBoost.title</key>
-	<string>Punts dobles!</string>
 	<key>goal.period</key>
 	<string>Període de l’objectiu</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Sumes on **afegeixes** un nombre.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>Suma %lld</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Pots recollir fins a **%lld pastanagues** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Pots recollir fins a **%lld gallines** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Pots recollir fins a **%lld peixos** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Pots recollir fins a **%lld pots de mel** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Pots recollir fins a **%lld cèrcols** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Pots recollir fins a **%lld galetes de gos** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Pots recollir fins a **%lld trossos de carn** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Pots recollir fins a **%lld cacauets** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Pots recollir fins a **%lld perles** en aquest nivell.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Pots recollir fins a **%lld gambes** en aquest nivell.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Sumes on **divideixes** un nombre.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>El teu nom</string>
 	<key>name.whatsYourName</key>
 	<string>Com et dius?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Guanya uns quants cèrcols més per desbloquejar aquest animal! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Els teus animals estan esperant. Torna a jugar i segueix recollint cèrcols!</string>
 	<key>notif.comeback.title</key>
 	<string>Et trobem a faltar! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium inclou %lld nivells per a cada tema i els 10 animals. L'aventura segueix endavant!</string>
 	<key>notif.premium.title</key>
 	<string>Desbloqueja més nivells i animals! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>Han passat %lld dies. Anem a resoldre alguns exercicis de matemàtiques i guanyar més cèrcols!</string>
 	<key>notif.reactivate.title</key>
 	<string>Preparat per tornar a jugar? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Tocs: %1$lld de %2$lld</string>
 	<key>parentGate.title</key>
 	<string>Cal l’aprovació d’un adult</string>
-	<key>premium.availableAt %lld</key>
-	<string>Disponible a partir de %lld trofeus</string>
 	<key>premium.availableFromStart</key>
 	<string>Disponible des del principi</string>
 	<key>premium.characterUnlocked</key>
 	<string>NOU PERSONATGE DESBLOQUEJAT</string>
-	<key>premium.earnedCards %lld</key>
-	<string>Has aconseguit %lld cèrcols</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Exclusiu amb Premium</string>
 	<key>premium.feature.animals.subtitle</key>

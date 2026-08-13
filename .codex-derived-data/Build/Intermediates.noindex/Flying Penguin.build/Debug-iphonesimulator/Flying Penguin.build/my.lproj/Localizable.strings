@@ -22,8 +22,6 @@
 	<string>ရေဘဝဲ</string>
 	<key>character.penguin</key>
 	<string>ပင်ဂွင်း</string>
-	<key>common.cancel</key>
-	<string>မလုပ်တော့</string>
 	<key>common.continue</key>
 	<string>ဆက်ရန်</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld မိနစ်</string>
 	<key>common.ok</key>
 	<string>အိုကေ</string>
-	<key>common.save</key>
-	<string>သိမ်းရန်</string>
-	<key>currency.hoop.plural</key>
-	<string>ကွင်းများ</string>
-	<key>currency.hoop.singular</key>
-	<string>ကွင်း</string>
 	<key>game.combo %lld</key>
 	<string>ဆက်တိုက်! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>ရောက်ခါနီးပြီ</string>
 	<key>game.encouragement.complete</key>
 	<string>အမှတ်ပြည့်!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>အမှတ်တိုင်းကို ကိုယ်တိုင်ရခဲ့တယ်။</string>
 	<key>game.end.completionSuffix</key>
 	<string>ပြီးပြီ!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>အဆင့်စရန်</string>
 	<key>game.intro.startTutorial</key>
 	<string>သင်ခန်းစာ စမယ်</string>
-	<key>game.streakBoost.title</key>
-	<string>အမှတ်နှစ်ဆ!</string>
 	<key>goal.period</key>
 	<string>ပန်းတိုင်ကာလ</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>ဂဏန်းတစ်ခုကို **ပေါင်း**တဲ့ ပုစ္ဆာတွေ။</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ပေါင်း</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>ဒီအဆင့်မှာ **မုန်လာဥ %lld ခု** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>ဒီအဆင့်မှာ **ကြက် %lld ကောင်** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>ဒီအဆင့်မှာ **ငါး %lld ကောင်** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>ဒီအဆင့်မှာ **ပျားရည်အိုး %lld အိုး** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>ဒီအဆင့်မှာ **ကွင်းများ %lld ကောင်** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>ဒီအဆင့်မှာ **ခွေးမုန့် %lld ခု** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>ဒီအဆင့်မှာ **အသားတုံး %lld တုံး** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>ဒီအဆင့်မှာ **မြေပဲ %lld စေ့** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>ဒီအဆင့်မှာ **ပုလဲ %lld လုံး** အထိ စုလို့ရတယ်။</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>ဒီအဆင့်မှာ **ပုစွန် %lld ကောင်** အထိ စုလို့ရတယ်။</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>ဂဏန်းတစ်ခုကို **စား**တဲ့ ပုစ္ဆာတွေ။</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>မင်းနာမည်</string>
 	<key>name.whatsYourName</key>
 	<string>မင်းနာမည် ဘာလဲ။</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: ဤတိရစ္ဆာန်ကိုသော့ဖွင့်ရန် နောက်ထပ်ကွင်းများအချို့ကို ရယူလိုက်ပါ။ 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>မင်းရဲ့တိရစ္ဆာန်တွေက စောင့်နေတယ်။ပြန်လာကစားပြီး ကွင်းများတွေ ဆက်လက်စုဆောင်းလိုက်ပါ။</string>
 	<key>notif.comeback.title</key>
 	<string>တို့တွေမင်းကိုသတိရနေတယ်! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium တွင် အကြောင်းအရာတိုင်းအတွက် အဆင့် %lld နှင့် တိရစ္ဆာန် 10 ကောင်တို့ပါဝင်သည်။စွန့်စားခန်းသည် ဆက်သွားနေသည်။</string>
 	<key>notif.premium.title</key>
 	<string>အဆင့်များနှင့် တိရစ္ဆာန်များကို လော့ခ်ဖွင့်ပါ။ 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld ရက်ရှိပြီ။သင်္ချာလေ့ကျင့်ခန်းအချို့ကို ဖြေရှင်းပြီး ကွင်းများ ထပ်မံရယူကြပါစို့။</string>
 	<key>notif.reactivate.title</key>
 	<string>ပြန်ကစားဖို့ အဆင်သင့်ဖြစ်ပြီလား။ 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>တို့ချက်: %1$lld မှ %2$lld</string>
 	<key>parentGate.title</key>
 	<string>လူကြီးအတည်ပြုချက် လိုသည်</string>
-	<key>premium.availableAt %lld</key>
-	<string>ဆုဖလား %lld ခုမှ စ၍ ရနိုင်သည်</string>
 	<key>premium.availableFromStart</key>
 	<string>အစကတည်းက ရနိုင်သည်</string>
 	<key>premium.characterUnlocked</key>
 	<string>ဇာတ်ကောင်အသစ် ဖွင့်ပြီးပြီ</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld ကွင်းများ ရပြီ</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Premium အတွက်သာ</string>
 	<key>premium.feature.animals.subtitle</key>

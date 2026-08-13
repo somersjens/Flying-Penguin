@@ -84,7 +84,7 @@
       },
       {
         "comment": "",
-        "key": "common.cancel",
+        "key": "common.continue",
         "location": {
           "startingColumn": 33,
           "startingLine": 95
@@ -92,7 +92,7 @@
       },
       {
         "comment": "",
-        "key": "common.continue",
+        "key": "common.done",
         "location": {
           "startingColumn": 33,
           "startingLine": 102
@@ -100,18 +100,10 @@
       },
       {
         "comment": "",
-        "key": "common.done",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 109
-        }
-      },
-      {
-        "comment": "",
         "key": "common.minutesShort %lld %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 116
+          "startingLine": 109
         },
         "value": "%lld%lld"
       },
@@ -120,31 +112,7 @@
         "key": "common.ok",
         "location": {
           "startingColumn": 33,
-          "startingLine": 123
-        }
-      },
-      {
-        "comment": "",
-        "key": "common.save",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 130
-        }
-      },
-      {
-        "comment": "",
-        "key": "currency.hoop.plural",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 139
-        }
-      },
-      {
-        "comment": "",
-        "key": "currency.hoop.singular",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 148
+          "startingLine": 116
         }
       },
       {
@@ -152,7 +120,7 @@
         "key": "game.combo %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 155
+          "startingLine": 123
         },
         "value": "%lld"
       },
@@ -161,7 +129,7 @@
         "key": "game.encouragement.0",
         "location": {
           "startingColumn": 33,
-          "startingLine": 162
+          "startingLine": 130
         }
       },
       {
@@ -169,7 +137,7 @@
         "key": "game.encouragement.1",
         "location": {
           "startingColumn": 33,
-          "startingLine": 169
+          "startingLine": 137
         }
       },
       {
@@ -177,7 +145,7 @@
         "key": "game.encouragement.2",
         "location": {
           "startingColumn": 33,
-          "startingLine": 176
+          "startingLine": 144
         }
       },
       {
@@ -185,7 +153,7 @@
         "key": "game.encouragement.3",
         "location": {
           "startingColumn": 33,
-          "startingLine": 183
+          "startingLine": 151
         }
       },
       {
@@ -193,7 +161,7 @@
         "key": "game.encouragement.4",
         "location": {
           "startingColumn": 33,
-          "startingLine": 190
+          "startingLine": 158
         }
       },
       {
@@ -201,7 +169,7 @@
         "key": "game.encouragement.5",
         "location": {
           "startingColumn": 33,
-          "startingLine": 197
+          "startingLine": 165
         }
       },
       {
@@ -209,7 +177,7 @@
         "key": "game.encouragement.6",
         "location": {
           "startingColumn": 33,
-          "startingLine": 204
+          "startingLine": 172
         }
       },
       {
@@ -217,7 +185,7 @@
         "key": "game.encouragement.7",
         "location": {
           "startingColumn": 33,
-          "startingLine": 211
+          "startingLine": 179
         }
       },
       {
@@ -225,7 +193,7 @@
         "key": "game.encouragement.8",
         "location": {
           "startingColumn": 33,
-          "startingLine": 218
+          "startingLine": 186
         }
       },
       {
@@ -233,7 +201,7 @@
         "key": "game.encouragement.9",
         "location": {
           "startingColumn": 33,
-          "startingLine": 225
+          "startingLine": 193
         }
       },
       {
@@ -241,7 +209,7 @@
         "key": "game.encouragement.complete",
         "location": {
           "startingColumn": 33,
-          "startingLine": 232
+          "startingLine": 200
         }
       },
       {
@@ -249,87 +217,7 @@
         "key": "game.end.completionSubtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 239
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.carrot",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 248
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.chicken",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 257
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.fish",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 266
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.honey",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 275
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.hoop",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 284
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.kibble",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 293
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.meat",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 302
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.peanut",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 311
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.pearl",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 320
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.end.completionSubtitle.shrimp",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 329
+          "startingLine": 207
         }
       },
       {
@@ -337,7 +225,7 @@
         "key": "game.end.completionSuffix",
         "location": {
           "startingColumn": 33,
-          "startingLine": 336
+          "startingLine": 214
         }
       },
       {
@@ -345,7 +233,7 @@
         "key": "game.end.gameOverTitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 343
+          "startingLine": 221
         }
       },
       {
@@ -353,7 +241,7 @@
         "key": "game.end.mainMenu",
         "location": {
           "startingColumn": 33,
-          "startingLine": 350
+          "startingLine": 228
         }
       },
       {
@@ -361,7 +249,7 @@
         "key": "game.end.playAgain",
         "location": {
           "startingColumn": 33,
-          "startingLine": 357
+          "startingLine": 235
         }
       },
       {
@@ -369,7 +257,7 @@
         "key": "game.highScore",
         "location": {
           "startingColumn": 33,
-          "startingLine": 364
+          "startingLine": 242
         }
       },
       {
@@ -377,7 +265,7 @@
         "key": "game.intro.backToMainMenu",
         "location": {
           "startingColumn": 33,
-          "startingLine": 371
+          "startingLine": 249
         }
       },
       {
@@ -385,7 +273,7 @@
         "key": "game.intro.continue",
         "location": {
           "startingColumn": 33,
-          "startingLine": 378
+          "startingLine": 256
         }
       },
       {
@@ -393,7 +281,7 @@
         "key": "game.intro.progressPaused",
         "location": {
           "startingColumn": 33,
-          "startingLine": 385
+          "startingLine": 263
         }
       },
       {
@@ -401,7 +289,7 @@
         "key": "game.intro.start",
         "location": {
           "startingColumn": 33,
-          "startingLine": 392
+          "startingLine": 270
         }
       },
       {
@@ -409,15 +297,7 @@
         "key": "game.intro.startTutorial",
         "location": {
           "startingColumn": 33,
-          "startingLine": 399
-        }
-      },
-      {
-        "comment": "",
-        "key": "game.streakBoost.title",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 406
+          "startingLine": 277
         }
       },
       {
@@ -425,7 +305,7 @@
         "key": "goal.period",
         "location": {
           "startingColumn": 33,
-          "startingLine": 413
+          "startingLine": 284
         }
       },
       {
@@ -433,7 +313,7 @@
         "key": "goal.promptDaily",
         "location": {
           "startingColumn": 33,
-          "startingLine": 420
+          "startingLine": 291
         }
       },
       {
@@ -441,7 +321,7 @@
         "key": "goal.promptWeekly",
         "location": {
           "startingColumn": 33,
-          "startingLine": 427
+          "startingLine": 298
         }
       },
       {
@@ -449,7 +329,7 @@
         "key": "goal.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 434
+          "startingLine": 305
         }
       },
       {
@@ -457,7 +337,7 @@
         "key": "goalPeriod.daily",
         "location": {
           "startingColumn": 33,
-          "startingLine": 441
+          "startingLine": 312
         }
       },
       {
@@ -465,7 +345,7 @@
         "key": "goalPeriod.weekly",
         "location": {
           "startingColumn": 33,
-          "startingLine": 448
+          "startingLine": 319
         }
       },
       {
@@ -473,7 +353,7 @@
         "key": "home.cardsRemaining %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 455
+          "startingLine": 326
         },
         "value": "%lld"
       },
@@ -482,7 +362,7 @@
         "key": "home.totalLabel",
         "location": {
           "startingColumn": 33,
-          "startingLine": 462
+          "startingLine": 333
         }
       },
       {
@@ -490,7 +370,7 @@
         "key": "info.mode.fractions.header",
         "location": {
           "startingColumn": 33,
-          "startingLine": 469
+          "startingLine": 340
         }
       },
       {
@@ -498,7 +378,7 @@
         "key": "info.mode.fractions.multiple",
         "location": {
           "startingColumn": 33,
-          "startingLine": 476
+          "startingLine": 347
         }
       },
       {
@@ -506,7 +386,7 @@
         "key": "info.mode.fractions.single",
         "location": {
           "startingColumn": 33,
-          "startingLine": 483
+          "startingLine": 354
         }
       },
       {
@@ -514,7 +394,7 @@
         "key": "info.mode.header",
         "location": {
           "startingColumn": 33,
-          "startingLine": 490
+          "startingLine": 361
         }
       },
       {
@@ -522,7 +402,7 @@
         "key": "info.mode.mixed",
         "location": {
           "startingColumn": 33,
-          "startingLine": 497
+          "startingLine": 368
         }
       },
       {
@@ -530,7 +410,7 @@
         "key": "info.mode.order",
         "location": {
           "startingColumn": 33,
-          "startingLine": 504
+          "startingLine": 375
         }
       },
       {
@@ -538,7 +418,7 @@
         "key": "info.mode.percentages.decimal",
         "location": {
           "startingColumn": 33,
-          "startingLine": 511
+          "startingLine": 382
         }
       },
       {
@@ -546,7 +426,7 @@
         "key": "info.mode.percentages.header",
         "location": {
           "startingColumn": 33,
-          "startingLine": 518
+          "startingLine": 389
         }
       },
       {
@@ -554,7 +434,7 @@
         "key": "info.mode.percentages.whole",
         "location": {
           "startingColumn": 33,
-          "startingLine": 525
+          "startingLine": 396
         }
       },
       {
@@ -562,7 +442,7 @@
         "key": "info.mode.random",
         "location": {
           "startingColumn": 33,
-          "startingLine": 532
+          "startingLine": 403
         }
       },
       {
@@ -570,7 +450,7 @@
         "key": "info.super.all",
         "location": {
           "startingColumn": 33,
-          "startingLine": 539
+          "startingLine": 410
         }
       },
       {
@@ -578,7 +458,7 @@
         "key": "info.super.basic",
         "location": {
           "startingColumn": 33,
-          "startingLine": 546
+          "startingLine": 417
         }
       },
       {
@@ -586,7 +466,7 @@
         "key": "info.super.fraction",
         "location": {
           "startingColumn": 33,
-          "startingLine": 553
+          "startingLine": 424
         }
       },
       {
@@ -594,7 +474,7 @@
         "key": "info.super.times",
         "location": {
           "startingColumn": 33,
-          "startingLine": 560
+          "startingLine": 431
         }
       },
       {
@@ -602,7 +482,7 @@
         "key": "info.topic.header",
         "location": {
           "startingColumn": 33,
-          "startingLine": 567
+          "startingLine": 438
         }
       },
       {
@@ -610,7 +490,7 @@
         "key": "levelIntro.addition.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 574
+          "startingLine": 445
         }
       },
       {
@@ -618,43 +498,7 @@
         "key": "levelIntro.addition.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 581
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.carrot %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 590
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.chicken %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 599
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.fish %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 608
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.honey %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 617
+          "startingLine": 452
         },
         "value": "%lld"
       },
@@ -663,52 +507,7 @@
         "key": "levelIntro.cardsBullet.hoop %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 626
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.kibble %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 635
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.meat %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 644
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.peanut %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 653
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.pearl %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 662
-        },
-        "value": "%lld"
-      },
-      {
-        "comment": "",
-        "key": "levelIntro.cardsBullet.shrimp %lld",
-        "location": {
-          "startingColumn": 33,
-          "startingLine": 671
+          "startingLine": 461
         },
         "value": "%lld"
       },
@@ -717,7 +516,7 @@
         "key": "levelIntro.fractions.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 678
+          "startingLine": 468
         }
       },
       {
@@ -725,7 +524,7 @@
         "key": "levelIntro.fractions.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 685
+          "startingLine": 475
         },
         "value": "%lld"
       },
@@ -734,7 +533,7 @@
         "key": "levelIntro.levelRange %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 692
+          "startingLine": 482
         },
         "value": "%lld"
       },
@@ -743,7 +542,7 @@
         "key": "levelIntro.levelRange.first",
         "location": {
           "startingColumn": 33,
-          "startingLine": 699
+          "startingLine": 489
         }
       },
       {
@@ -751,7 +550,7 @@
         "key": "levelIntro.mixed.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 706
+          "startingLine": 496
         }
       },
       {
@@ -759,7 +558,7 @@
         "key": "levelIntro.mixed.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 713
+          "startingLine": 503
         },
         "value": "%lld"
       },
@@ -768,7 +567,7 @@
         "key": "levelIntro.mode.fractions.order",
         "location": {
           "startingColumn": 33,
-          "startingLine": 720
+          "startingLine": 510
         }
       },
       {
@@ -776,7 +575,7 @@
         "key": "levelIntro.mode.fractions.random",
         "location": {
           "startingColumn": 33,
-          "startingLine": 727
+          "startingLine": 517
         }
       },
       {
@@ -784,7 +583,7 @@
         "key": "levelIntro.mode.order",
         "location": {
           "startingColumn": 33,
-          "startingLine": 734
+          "startingLine": 524
         }
       },
       {
@@ -792,7 +591,7 @@
         "key": "levelIntro.mode.percentages.order",
         "location": {
           "startingColumn": 33,
-          "startingLine": 741
+          "startingLine": 531
         }
       },
       {
@@ -800,7 +599,7 @@
         "key": "levelIntro.mode.percentages.random",
         "location": {
           "startingColumn": 33,
-          "startingLine": 748
+          "startingLine": 538
         }
       },
       {
@@ -808,7 +607,7 @@
         "key": "levelIntro.mode.random",
         "location": {
           "startingColumn": 33,
-          "startingLine": 755
+          "startingLine": 545
         }
       },
       {
@@ -816,7 +615,7 @@
         "key": "levelIntro.percentages.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 762
+          "startingLine": 552
         }
       },
       {
@@ -824,7 +623,7 @@
         "key": "levelIntro.percentages.title %@",
         "location": {
           "startingColumn": 33,
-          "startingLine": 769
+          "startingLine": 559
         },
         "value": "%@"
       },
@@ -833,7 +632,7 @@
         "key": "levelIntro.subtraction.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 776
+          "startingLine": 566
         }
       },
       {
@@ -841,7 +640,7 @@
         "key": "levelIntro.subtraction.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 783
+          "startingLine": 573
         },
         "value": "%lld"
       },
@@ -850,7 +649,7 @@
         "key": "levelIntro.tables.intro",
         "location": {
           "startingColumn": 33,
-          "startingLine": 790
+          "startingLine": 580
         }
       },
       {
@@ -858,7 +657,7 @@
         "key": "levelIntro.tables.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 797
+          "startingLine": 587
         },
         "value": "%lld"
       },
@@ -867,7 +666,7 @@
         "key": "menu.maximumCount",
         "location": {
           "startingColumn": 33,
-          "startingLine": 804
+          "startingLine": 594
         }
       },
       {
@@ -875,7 +674,7 @@
         "key": "menu.moreLevels",
         "location": {
           "startingColumn": 33,
-          "startingLine": 811
+          "startingLine": 601
         }
       },
       {
@@ -883,7 +682,7 @@
         "key": "menu.premiumLevels",
         "location": {
           "startingColumn": 33,
-          "startingLine": 818
+          "startingLine": 608
         }
       },
       {
@@ -891,7 +690,7 @@
         "key": "menu.startHere",
         "location": {
           "startingColumn": 33,
-          "startingLine": 825
+          "startingLine": 615
         }
       },
       {
@@ -899,7 +698,7 @@
         "key": "menu.unlockWithPremium",
         "location": {
           "startingColumn": 33,
-          "startingLine": 832
+          "startingLine": 622
         }
       },
       {
@@ -907,7 +706,7 @@
         "key": "mode.fractions.multiple",
         "location": {
           "startingColumn": 33,
-          "startingLine": 839
+          "startingLine": 629
         }
       },
       {
@@ -915,7 +714,7 @@
         "key": "mode.fractions.single",
         "location": {
           "startingColumn": 33,
-          "startingLine": 846
+          "startingLine": 636
         }
       },
       {
@@ -923,7 +722,7 @@
         "key": "mode.mixed",
         "location": {
           "startingColumn": 33,
-          "startingLine": 853
+          "startingLine": 643
         }
       },
       {
@@ -931,7 +730,7 @@
         "key": "mode.order",
         "location": {
           "startingColumn": 33,
-          "startingLine": 860
+          "startingLine": 650
         }
       },
       {
@@ -939,7 +738,7 @@
         "key": "mode.percentages.decimal",
         "location": {
           "startingColumn": 33,
-          "startingLine": 867
+          "startingLine": 657
         }
       },
       {
@@ -947,7 +746,7 @@
         "key": "mode.percentages.whole",
         "location": {
           "startingColumn": 33,
-          "startingLine": 874
+          "startingLine": 664
         }
       },
       {
@@ -955,7 +754,7 @@
         "key": "mode.random",
         "location": {
           "startingColumn": 33,
-          "startingLine": 881
+          "startingLine": 671
         }
       },
       {
@@ -963,7 +762,7 @@
         "key": "name.placeholder",
         "location": {
           "startingColumn": 33,
-          "startingLine": 888
+          "startingLine": 678
         }
       },
       {
@@ -971,7 +770,7 @@
         "key": "name.whatsYourName",
         "location": {
           "startingColumn": 33,
-          "startingLine": 895
+          "startingLine": 685
         }
       },
       {
@@ -979,7 +778,7 @@
         "key": "notif.animal.body %@",
         "location": {
           "startingColumn": 33,
-          "startingLine": 902
+          "startingLine": 692
         },
         "value": "%@"
       },
@@ -988,7 +787,7 @@
         "key": "notif.animal.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 909
+          "startingLine": 699
         },
         "value": "%lld"
       },
@@ -997,7 +796,7 @@
         "key": "notif.cards.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 916
+          "startingLine": 706
         },
         "value": "%lld"
       },
@@ -1006,7 +805,7 @@
         "key": "notif.cards.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 923
+          "startingLine": 713
         },
         "value": "%lld"
       },
@@ -1015,7 +814,7 @@
         "key": "notif.comeback.body",
         "location": {
           "startingColumn": 33,
-          "startingLine": 930
+          "startingLine": 720
         }
       },
       {
@@ -1023,7 +822,7 @@
         "key": "notif.comeback.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 937
+          "startingLine": 727
         }
       },
       {
@@ -1031,7 +830,7 @@
         "key": "notif.day3.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 944
+          "startingLine": 734
         },
         "value": "%lld"
       },
@@ -1040,7 +839,7 @@
         "key": "notif.day3.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 951
+          "startingLine": 741
         }
       },
       {
@@ -1048,7 +847,7 @@
         "key": "notif.premium.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 960
+          "startingLine": 750
         },
         "value": "%lld"
       },
@@ -1057,7 +856,7 @@
         "key": "notif.premium.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 967
+          "startingLine": 757
         }
       },
       {
@@ -1065,7 +864,7 @@
         "key": "notif.reactivate.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 974
+          "startingLine": 764
         },
         "value": "%lld"
       },
@@ -1074,7 +873,7 @@
         "key": "notif.reactivate.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 981
+          "startingLine": 771
         }
       },
       {
@@ -1082,7 +881,7 @@
         "key": "notif.streak.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 988
+          "startingLine": 778
         },
         "value": "%lld"
       },
@@ -1091,7 +890,7 @@
         "key": "notif.streak.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 995
+          "startingLine": 785
         },
         "value": "%lld"
       },
@@ -1100,7 +899,7 @@
         "key": "notif.weekly.body %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1002
+          "startingLine": 792
         },
         "value": "%lld"
       },
@@ -1109,7 +908,7 @@
         "key": "notif.weekly.title %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1009
+          "startingLine": 799
         },
         "value": "%lld"
       },
@@ -1118,7 +917,7 @@
         "key": "onboarding.level.advanced.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1016
+          "startingLine": 806
         }
       },
       {
@@ -1126,7 +925,7 @@
         "key": "onboarding.level.advanced.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1023
+          "startingLine": 813
         }
       },
       {
@@ -1134,7 +933,7 @@
         "key": "onboarding.level.beginner.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1030
+          "startingLine": 820
         }
       },
       {
@@ -1142,7 +941,7 @@
         "key": "onboarding.level.beginner.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1037
+          "startingLine": 827
         }
       },
       {
@@ -1150,7 +949,7 @@
         "key": "onboarding.level.intermediate.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1044
+          "startingLine": 834
         }
       },
       {
@@ -1158,7 +957,7 @@
         "key": "onboarding.level.intermediate.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1051
+          "startingLine": 841
         }
       },
       {
@@ -1166,7 +965,7 @@
         "key": "onboarding.level.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1058
+          "startingLine": 848
         }
       },
       {
@@ -1174,7 +973,7 @@
         "key": "onboarding.name.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1065
+          "startingLine": 855
         }
       },
       {
@@ -1182,7 +981,7 @@
         "key": "onboarding.name.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1072
+          "startingLine": 862
         }
       },
       {
@@ -1190,7 +989,7 @@
         "key": "onboarding.subject.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1079
+          "startingLine": 869
         }
       },
       {
@@ -1198,7 +997,7 @@
         "key": "onboarding.subject.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1086
+          "startingLine": 876
         }
       },
       {
@@ -1206,7 +1005,7 @@
         "key": "parentGate.approved",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1093
+          "startingLine": 883
         }
       },
       {
@@ -1214,7 +1013,7 @@
         "key": "parentGate.attempts %lld %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1100
+          "startingLine": 890
         },
         "value": "%lld%lld"
       },
@@ -1223,7 +1022,7 @@
         "key": "parentGate.holdInstruction %@ %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1107
+          "startingLine": 897
         },
         "value": "%@%lld"
       },
@@ -1232,7 +1031,7 @@
         "key": "parentGate.holdProgress %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1114
+          "startingLine": 904
         },
         "value": "%lld"
       },
@@ -1241,7 +1040,7 @@
         "key": "parentGate.shape.circle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1121
+          "startingLine": 911
         }
       },
       {
@@ -1249,7 +1048,7 @@
         "key": "parentGate.shape.diamond",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1128
+          "startingLine": 918
         }
       },
       {
@@ -1257,7 +1056,7 @@
         "key": "parentGate.shape.heart",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1135
+          "startingLine": 925
         }
       },
       {
@@ -1265,7 +1064,7 @@
         "key": "parentGate.shape.hexagon",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1142
+          "startingLine": 932
         }
       },
       {
@@ -1273,7 +1072,7 @@
         "key": "parentGate.shape.plus",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1149
+          "startingLine": 939
         }
       },
       {
@@ -1281,7 +1080,7 @@
         "key": "parentGate.shape.square",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1156
+          "startingLine": 946
         }
       },
       {
@@ -1289,7 +1088,7 @@
         "key": "parentGate.shape.star",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1163
+          "startingLine": 953
         }
       },
       {
@@ -1297,7 +1096,7 @@
         "key": "parentGate.shape.triangle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1170
+          "startingLine": 960
         }
       },
       {
@@ -1305,7 +1104,7 @@
         "key": "parentGate.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1177
+          "startingLine": 967
         }
       },
       {
@@ -1313,7 +1112,7 @@
         "key": "parentGate.tapInstruction %lld %@",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1184
+          "startingLine": 974
         },
         "value": "%lld%@"
       },
@@ -1322,7 +1121,7 @@
         "key": "parentGate.tapProgress %lld %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1191
+          "startingLine": 981
         },
         "value": "%lld%lld"
       },
@@ -1331,7 +1130,7 @@
         "key": "parentGate.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1198
+          "startingLine": 988
         }
       },
       {
@@ -1339,7 +1138,7 @@
         "key": "premium.availableAt %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1207
+          "startingLine": 997
         },
         "value": "%lld"
       },
@@ -1348,7 +1147,7 @@
         "key": "premium.availableFromStart",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1214
+          "startingLine": 1004
         }
       },
       {
@@ -1356,7 +1155,7 @@
         "key": "premium.characterUnlocked",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1221
+          "startingLine": 1011
         }
       },
       {
@@ -1364,7 +1163,7 @@
         "key": "premium.earnedCards %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1230
+          "startingLine": 1020
         },
         "value": "%lld"
       },
@@ -1373,7 +1172,7 @@
         "key": "premium.exclusiveBadge",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1237
+          "startingLine": 1027
         }
       },
       {
@@ -1381,7 +1180,7 @@
         "key": "premium.feature.animals.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1244
+          "startingLine": 1034
         }
       },
       {
@@ -1389,7 +1188,7 @@
         "key": "premium.feature.animals.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1251
+          "startingLine": 1041
         }
       },
       {
@@ -1397,7 +1196,7 @@
         "key": "premium.feature.levels.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1258
+          "startingLine": 1048
         }
       },
       {
@@ -1405,7 +1204,7 @@
         "key": "premium.feature.levels.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1265
+          "startingLine": 1055
         }
       },
       {
@@ -1413,7 +1212,7 @@
         "key": "premium.feature.noAds.subtitle",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1272
+          "startingLine": 1062
         }
       },
       {
@@ -1421,7 +1220,7 @@
         "key": "premium.feature.noAds.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1279
+          "startingLine": 1069
         }
       },
       {
@@ -1429,7 +1228,7 @@
         "key": "premium.oneTime",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1286
+          "startingLine": 1076
         }
       },
       {
@@ -1437,7 +1236,7 @@
         "key": "premium.restore",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1293
+          "startingLine": 1083
         }
       },
       {
@@ -1445,7 +1244,7 @@
         "key": "premium.start",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1300
+          "startingLine": 1090
         }
       },
       {
@@ -1453,7 +1252,7 @@
         "key": "premium.storeUnavailable",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1307
+          "startingLine": 1097
         }
       },
       {
@@ -1461,7 +1260,7 @@
         "key": "premium.unlock",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1314
+          "startingLine": 1104
         }
       },
       {
@@ -1469,7 +1268,7 @@
         "key": "premium.unlockWithPrice %@",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1321
+          "startingLine": 1111
         },
         "value": "%@"
       },
@@ -1478,7 +1277,7 @@
         "key": "premium.unlockedWithPremium",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1328
+          "startingLine": 1118
         }
       },
       {
@@ -1486,7 +1285,7 @@
         "key": "result.complete",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1335
+          "startingLine": 1125
         }
       },
       {
@@ -1494,7 +1293,7 @@
         "key": "result.stopped",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1342
+          "startingLine": 1132
         }
       },
       {
@@ -1502,7 +1301,7 @@
         "key": "settings.character",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1349
+          "startingLine": 1139
         }
       },
       {
@@ -1510,7 +1309,7 @@
         "key": "settings.characterInfo",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1356
+          "startingLine": 1146
         }
       },
       {
@@ -1518,7 +1317,7 @@
         "key": "settings.customMinutes %lld",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1363
+          "startingLine": 1153
         },
         "value": "%lld"
       },
@@ -1527,7 +1326,7 @@
         "key": "settings.dailyGoal",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1370
+          "startingLine": 1160
         }
       },
       {
@@ -1535,7 +1334,7 @@
         "key": "settings.goalInfo",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1377
+          "startingLine": 1167
         }
       },
       {
@@ -1543,7 +1342,7 @@
         "key": "settings.music",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1384
+          "startingLine": 1174
         }
       },
       {
@@ -1551,7 +1350,7 @@
         "key": "settings.playGoals",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1391
+          "startingLine": 1181
         }
       },
       {
@@ -1559,7 +1358,7 @@
         "key": "settings.premiumUnlocked",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1398
+          "startingLine": 1188
         }
       },
       {
@@ -1567,7 +1366,7 @@
         "key": "settings.sound",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1405
+          "startingLine": 1195
         }
       },
       {
@@ -1575,7 +1374,7 @@
         "key": "settings.soundEffects",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1412
+          "startingLine": 1202
         }
       },
       {
@@ -1583,7 +1382,7 @@
         "key": "settings.soundInfo",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1419
+          "startingLine": 1209
         }
       },
       {
@@ -1591,7 +1390,7 @@
         "key": "settings.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1426
+          "startingLine": 1216
         }
       },
       {
@@ -1599,7 +1398,7 @@
         "key": "streak.dayOne",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1433
+          "startingLine": 1223
         }
       },
       {
@@ -1607,7 +1406,7 @@
         "key": "topic.addition",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1440
+          "startingLine": 1230
         }
       },
       {
@@ -1615,7 +1414,7 @@
         "key": "topic.addition.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1447
+          "startingLine": 1237
         }
       },
       {
@@ -1623,7 +1422,7 @@
         "key": "topic.fractions",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1454
+          "startingLine": 1244
         }
       },
       {
@@ -1631,7 +1430,7 @@
         "key": "topic.fractions.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1461
+          "startingLine": 1251
         }
       },
       {
@@ -1639,7 +1438,7 @@
         "key": "topic.mixed",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1468
+          "startingLine": 1258
         }
       },
       {
@@ -1647,7 +1446,7 @@
         "key": "topic.mixed.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1475
+          "startingLine": 1265
         }
       },
       {
@@ -1655,7 +1454,7 @@
         "key": "topic.percentages",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1482
+          "startingLine": 1272
         }
       },
       {
@@ -1663,7 +1462,7 @@
         "key": "topic.percentages.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1489
+          "startingLine": 1279
         }
       },
       {
@@ -1671,7 +1470,7 @@
         "key": "topic.subtraction",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1496
+          "startingLine": 1286
         }
       },
       {
@@ -1679,7 +1478,7 @@
         "key": "topic.subtraction.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1503
+          "startingLine": 1293
         }
       },
       {
@@ -1687,7 +1486,7 @@
         "key": "topic.tables",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1510
+          "startingLine": 1300
         }
       },
       {
@@ -1695,7 +1494,7 @@
         "key": "topic.tables.detail",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1517
+          "startingLine": 1307
         }
       },
       {
@@ -1703,7 +1502,7 @@
         "key": "tutorial.notice.message",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1524
+          "startingLine": 1314
         }
       },
       {
@@ -1711,7 +1510,7 @@
         "key": "tutorial.notice.title",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1531
+          "startingLine": 1321
         }
       },
       {
@@ -1719,7 +1518,7 @@
         "key": "tutorial.step1",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1538
+          "startingLine": 1328
         }
       },
       {
@@ -1727,7 +1526,7 @@
         "key": "tutorial.step2",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1545
+          "startingLine": 1335
         }
       },
       {
@@ -1735,7 +1534,7 @@
         "key": "tutorial.step3",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1552
+          "startingLine": 1342
         }
       },
       {
@@ -1743,7 +1542,7 @@
         "key": "tutorial.step4",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1559
+          "startingLine": 1349
         }
       },
       {
@@ -1751,7 +1550,7 @@
         "key": "tutorial.step5",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1566
+          "startingLine": 1356
         }
       },
       {
@@ -1759,7 +1558,7 @@
         "key": "tutorial.step6",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1573
+          "startingLine": 1363
         }
       },
       {
@@ -1767,7 +1566,7 @@
         "key": "tutorial.step7",
         "location": {
           "startingColumn": 33,
-          "startingLine": 1580
+          "startingLine": 1370
         }
       }
     ]

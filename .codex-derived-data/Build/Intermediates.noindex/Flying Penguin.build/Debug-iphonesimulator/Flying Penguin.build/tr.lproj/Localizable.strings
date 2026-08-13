@@ -22,8 +22,6 @@
 	<string>Ahtapot</string>
 	<key>character.penguin</key>
 	<string>Penguen</string>
-	<key>common.cancel</key>
-	<string>İptal</string>
 	<key>common.continue</key>
 	<string>Devam</string>
 	<key>common.done</key>
@@ -32,12 +30,6 @@
 	<string>%1$lld/%2$lld dk</string>
 	<key>common.ok</key>
 	<string>Tamam</string>
-	<key>common.save</key>
-	<string>Kaydet</string>
-	<key>currency.hoop.plural</key>
-	<string>çemberler</string>
-	<key>currency.hoop.singular</key>
-	<string>çember</string>
 	<key>game.combo %lld</key>
 	<string>Kombo! +%lld</string>
 	<key>game.encouragement.0</key>
@@ -62,8 +54,6 @@
 	<string>Neredeyse bitti</string>
 	<key>game.encouragement.complete</key>
 	<string>Kusursuz!</string>
-	<key>game.end.completionSubtitle</key>
-	<string>Her puanı hak ettin.</string>
 	<key>game.end.completionSuffix</key>
 	<string>tamamlandı!</string>
 	<key>game.end.gameOverTitle</key>
@@ -84,8 +74,6 @@
 	<string>Seviyeyi başlat</string>
 	<key>game.intro.startTutorial</key>
 	<string>Eğitimi başlat</string>
-	<key>game.streakBoost.title</key>
-	<string>Çifte puan!</string>
 	<key>goal.period</key>
 	<string>Hedef dönemi</string>
 	<key>goal.promptDaily</key>
@@ -136,26 +124,6 @@
 	<string>Bir sayıyı **eklediğin** işlemler.</string>
 	<key>levelIntro.addition.title %lld</key>
 	<string>%lld ekle</string>
-	<key>levelIntro.cardsBullet.carrot %lld</key>
-	<string>Bu seviyede en fazla **%lld havuç** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.chicken %lld</key>
-	<string>Bu seviyede en fazla **%lld tavuk** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.fish %lld</key>
-	<string>Bu seviyede en fazla **%lld balık** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.honey %lld</key>
-	<string>Bu seviyede en fazla **%lld bal kavanozu** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.hoop %lld</key>
-	<string>Bu seviyede en fazla **%lld çemberler** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.kibble %lld</key>
-	<string>Bu seviyede en fazla **%lld köpek bisküvisi** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.meat %lld</key>
-	<string>Bu seviyede en fazla **%lld et parçası** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.peanut %lld</key>
-	<string>Bu seviyede en fazla **%lld yer fıstığı** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.pearl %lld</key>
-	<string>Bu seviyede en fazla **%lld inci** toplayabilirsin.</string>
-	<key>levelIntro.cardsBullet.shrimp %lld</key>
-	<string>Bu seviyede en fazla **%lld karides** toplayabilirsin.</string>
 	<key>levelIntro.fractions.intro</key>
 	<string>Bir sayıyı **böldüğün** işlemler.</string>
 	<key>levelIntro.fractions.title %lld</key>
@@ -220,10 +188,6 @@
 	<string>Adın</string>
 	<key>name.whatsYourName</key>
 	<string>Adın ne?</string>
-	<key>notif.animal.body %@</key>
-	<string>%@: Bu hayvanın kilidini açmak için birkaç çemberler daha kazanın! 🐼</string>
-	<key>notif.comeback.body</key>
-	<string>Hayvanlarınız bekliyor. Oynamak için geri gelin ve çemberler toplamaya devam edin!</string>
 	<key>notif.comeback.title</key>
 	<string>Seni özledik! 👋</string>
 	<key>notif.day3.title</key>
@@ -232,8 +196,6 @@
 	<string>Hungry Frog Premium, her konu ve 10 hayvanın tümü için %lld seviye içerir. Macera devam ediyor!</string>
 	<key>notif.premium.title</key>
 	<string>Daha fazla seviyenin ve hayvanın kilidini açın! 🌈</string>
-	<key>notif.reactivate.body %lld</key>
-	<string>%lld gün oldu. Hadi bazı matematik alıştırmalarını çözelim ve daha fazla çemberler kazanalım!</string>
 	<key>notif.reactivate.title</key>
 	<string>Tekrar oynamaya hazır mısın? 🎮</string>
 	<key>onboarding.level.advanced.subtitle</key>
@@ -286,14 +248,10 @@
 	<string>Dokunma: %1$lld/%2$lld</string>
 	<key>parentGate.title</key>
 	<string>Yetişkin onayı gerekli</string>
-	<key>premium.availableAt %lld</key>
-	<string>%lld kupadan itibaren kullanılabilir</string>
 	<key>premium.availableFromStart</key>
 	<string>Başlangıçtan itibaren kullanılabilir</string>
 	<key>premium.characterUnlocked</key>
 	<string>YENİ KARAKTER AÇILDI</string>
-	<key>premium.earnedCards %lld</key>
-	<string>%lld çemberler kazandın</string>
 	<key>premium.exclusiveBadge</key>
 	<string>Yalnızca Premium ile</string>
 	<key>premium.feature.animals.subtitle</key>
