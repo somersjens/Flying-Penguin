@@ -87,6 +87,9 @@ struct TutorialPlan: Equatable {
     var preventsLifeLoss = false
     /// Only passing underneath is free; a wrong hoop costs a life as it should.
     var preventsBypassLifeLoss = false
+    /// The player has missed the dive lesson twice. The field demonstrates the
+    /// complete move on the next set: down, underneath, and back into the air.
+    var demonstratesDive = false
 
     var isRunning: Bool { step != nil }
 
@@ -179,6 +182,16 @@ final class TutorialDirector {
     private static let farewell = 3.5
     /// Sets the player may let pass in the turbo step before it waits for them.
     private static let turboFreeSets = 3
+    /// Height tapping is an optional refinement after dragging has already
+    /// proved the player can steer. Do not hold the rest of the tutorial here.
+    private static let tapLessonTimeout = 5.0
+    /// After two missed dive sets the next one becomes a visual demonstration,
+    /// so a child can never remain stuck on an action they have not understood.
+    private static let diveAttemptsBeforeDemonstration = 2
+    /// The life lesson offers two chances to notice and choose a wrong hoop.
+    /// After that, repeatedly taking the visibly safe answer no longer traps
+    /// the player in the tutorial.
+    private static let lifeLessonSafePassLimit = 2
 
     private var draggedLow = false
     private var draggedHigh = false
@@ -186,6 +199,8 @@ final class TutorialDirector {
     private var tappedAbove = false
     private var lostLifeToWrongHoop = false
     private var passedSetsInTurboStep = 0
+    private var missedDiveSets = 0
+    private var safePassesInLifeLesson = 0
     /// True between a step being satisfied and the next one arriving, so the
     /// step that is on its way out cannot be completed a second time.
     private var isAdvancing = false
@@ -195,6 +210,14 @@ final class TutorialDirector {
 
     func begin() {
         guard plan.step == nil else { return }
+        draggedLow = false
+        draggedHigh = false
+        tappedBelow = false
+        tappedAbove = false
+        lostLifeToWrongHoop = false
+        passedSetsInTurboStep = 0
+        missedDiveSets = 0
+        safePassesInLifeLesson = 0
         apply(.dragToFly)
     }
 
@@ -237,9 +260,17 @@ final class TutorialDirector {
 
         case .diveUnder:
             // Only going underneath the whole set teaches the lesson. A wrong
-            // hoop costs nothing here and simply brings the next set along.
+            // hoop costs nothing here. After two missed sets, demonstrate the
+            // complete move on the next one instead of leaving the child stuck.
             if event == .passedUnderSet {
                 advance(to: .correctHoop, after: Self.passHandover)
+            } else if event == .passedWrongHoop {
+                missedDiveSets += 1
+                if missedDiveSets >= Self.diveAttemptsBeforeDemonstration,
+                   !plan.demonstratesDive {
+                    plan.demonstratesDive = true
+                    onChange?()
+                }
             }
 
         case .correctHoop:
@@ -267,6 +298,11 @@ final class TutorialDirector {
                 lostLifeToWrongHoop = true
             case .collectedHeart where lostLifeToWrongHoop:
                 advance(to: .goodLuck, after: Self.heartHandover)
+            case .passedCorrectHoop, .passedUnderSet:
+                safePassesInLifeLesson += 1
+                if safePassesInLifeLesson >= Self.lifeLessonSafePassLimit {
+                    advance(to: .goodLuck, after: Self.passHandover)
+                }
             default: break
             }
 
@@ -293,6 +329,12 @@ final class TutorialDirector {
         isAdvancing = false
         plan = TutorialPlan.plan(for: step)
         onChange?()
+
+        guard step == .tapToFly else { return }
+        schedule(after: Self.tapLessonTimeout) { [weak self] in
+            guard let self, self.plan.step == .tapToFly, !self.isAdvancing else { return }
+            self.advance(to: .diveUnder, after: 0)
+        }
     }
 
     private func schedule(after delay: Double, work: @escaping () -> Void) {

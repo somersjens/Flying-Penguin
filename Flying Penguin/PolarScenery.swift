@@ -468,6 +468,11 @@ struct WaterSplash: View {
     let direction: WaterSplashDirection
     let strength: CGFloat
     let reduceMotion: Bool
+    /// Trailer capture renders arbitrary frames offscreen, so it can supply
+    /// the same splash at an exact 0...1 point without relying on wall-clock
+    /// SwiftUI animation. Normal gameplay leaves this nil and behaves exactly
+    /// as before.
+    var deterministicProgress: CGFloat? = nil
     @State private var expanded = false
 
     static func life(direction: WaterSplashDirection,
@@ -485,11 +490,12 @@ struct WaterSplash: View {
             let height = proxy.size.height
             let energy = 0.76 + clamped * 0.24
             let lift = height * (direction == .exiting ? 0.78 : 0.54) * energy
+            let progress = min(1, max(0, deterministicProgress ?? (expanded ? 1 : 0)))
             ZStack {
                 Ellipse()
                     .stroke(.white.opacity(0.92), lineWidth: max(3, width * 0.035))
                     .frame(width: width * 0.68, height: height * 0.24)
-                    .scaleEffect(expanded ? 1.35 : 0.28)
+                    .scaleEffect(0.28 + progress * (1.35 - 0.28))
 
                 ForEach(0..<9, id: \.self) { index in
                     let spread = (CGFloat(index) - 4) / 4
@@ -500,8 +506,9 @@ struct WaterSplash: View {
                         .frame(width: max(5, width * 0.045),
                                height: height * (direction == .exiting ? 0.34 : 0.25) * energy)
                         .rotationEffect(.degrees(Double(spread) * 52))
-                        .offset(x: expanded ? spread * width * 0.42 : 0,
-                                y: expanded ? -lift * (1 - abs(spread) * 0.38) : height * 0.08)
+                        .offset(x: progress * spread * width * 0.42,
+                                y: height * 0.08
+                                    + progress * (-lift * (1 - abs(spread) * 0.38) - height * 0.08))
                 }
 
                 ForEach(0..<7, id: \.self) { index in
@@ -510,18 +517,22 @@ struct WaterSplash: View {
                         .fill(.white.opacity(0.88))
                         .frame(width: max(4, width * 0.055),
                                height: max(4, width * 0.055))
-                        .offset(x: expanded ? spread * width * 0.52 : 0,
-                                y: expanded ? -lift * 0.56 - abs(spread) * height * 0.16 : 0)
+                        .offset(x: progress * spread * width * 0.52,
+                                y: progress * (-lift * 0.56 - abs(spread) * height * 0.16))
                 }
             }
             .frame(width: width, height: height)
             .position(x: width * 0.5, y: height * 0.55)
-            .opacity(expanded ? 0 : 1)
-            .animation(reduceMotion ? .easeOut(duration: 0.18)
-                       : .easeOut(duration: direction == .exiting ? 0.72 : 0.62),
+            .opacity(1 - progress)
+            .animation(deterministicProgress == nil
+                       ? (reduceMotion ? .easeOut(duration: 0.18)
+                          : .easeOut(duration: direction == .exiting ? 0.72 : 0.62))
+                       : nil,
                        value: expanded)
         }
-        .onAppear { expanded = true }
+        .onAppear {
+            if deterministicProgress == nil { expanded = true }
+        }
         .allowsHitTesting(false)
         .accessibilityHidden(true)
     }

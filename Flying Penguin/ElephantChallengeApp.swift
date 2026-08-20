@@ -33,6 +33,11 @@ struct ElephantChallengeApp: App {
     @StateObject private var tutorial = TutorialCenter.shared
 
     init() {
+        // The deterministic App Store trailer exporter is development tooling.
+        // It deliberately bypasses persistence, StoreKit, notifications and
+        // onboarding so an export cannot mutate a real player's state.
+        if TrailerRuntime.isExporting { return }
+
         // Bring stored progress up to the current version before anything can
         // read it: data written by Jumping Fox must never reach the new game.
         Progress.store.migrateIfNeeded()
@@ -57,56 +62,62 @@ struct ElephantChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                if onboardingComplete && !showsOnboardingReplay {
-                    HomeView {
-                        withAnimation(.easeInOut(duration: 0.35)) {
-                            showsOnboardingReplay = true
+            Group {
+                if TrailerRuntime.isExporting {
+                    TrailerExportHost()
+                } else {
+                    ZStack {
+                        if onboardingComplete && !showsOnboardingReplay {
+                            HomeView {
+                                withAnimation(.easeInOut(duration: 0.35)) {
+                                    showsOnboardingReplay = true
+                                }
+                            }
+                                // Both screens fade through each other rather than one
+                                // replacing the other, so the hand-over reads as a
+                                // single settling motion instead of a cut.
+                                .transition(.opacity.combined(with: .scale(scale: 1.015)))
+                        }
+                        // Stays on top for the whole hand-over to the tutorial: the menu
+                        // is built and settles behind it, and the guided level rises
+                        // over the very screen the last answer was given on. Without
+                        // this the menu would cross-fade in and straight back out, which
+                        // reads as a screen flashing past on the way to the game.
+                        if !onboardingComplete || showsOnboardingReplay
+                            || tutorial.isHandingOverFromWelcome {
+                            OnboardingView {
+                                withAnimation(.easeInOut(duration: 0.35)) {
+                                    showsOnboardingReplay = false
+                                }
+                            }
+                                .transition(.opacity.combined(with: .scale(scale: 0.99)))
                         }
                     }
-                        // Both screens fade through each other rather than one
-                        // replacing the other, so the hand-over reads as a
-                        // single settling motion instead of a cut.
-                        .transition(.opacity.combined(with: .scale(scale: 1.015)))
-                }
-                // Stays on top for the whole hand-over to the tutorial: the menu
-                // is built and settles behind it, and the guided level rises
-                // over the very screen the last answer was given on. Without
-                // this the menu would cross-fade in and straight back out, which
-                // reads as a screen flashing past on the way to the game.
-                if !onboardingComplete || showsOnboardingReplay
-                    || tutorial.isHandingOverFromWelcome {
-                    OnboardingView {
-                        withAnimation(.easeInOut(duration: 0.35)) {
-                            showsOnboardingReplay = false
+                    .animation(.easeInOut(duration: 0.42), value: onboardingComplete)
+                    .animation(.easeInOut(duration: 0.42), value: showsOnboardingReplay)
+                    // Re-renders every `Text` (and formats numbers) when the language
+                    // changes; combined with the bundle redirection this makes the
+                    // switch instant, no restart required.
+                    .environment(\.locale, language.locale)
+                    .environment(\.layoutDirection, language.effective.layoutDirection)
+                    .sheet(isPresented: Binding(
+                        get: { promotedPurchase.isAwaitingParentApproval },
+                        set: { isPresented in
+                            if !isPresented { promotedPurchase.cancelDeferredPurchase() }
                         }
+                    ),
+                           onDismiss: { promotedPurchase.cancelDeferredPurchase() }) {
+                        let character = CharacterCatalog.current(isPremium: PremiumStore.shared.isPremium)
+                        ParentApprovalGate(
+                            accent: character.color,
+                            deepColor: character.deepColor,
+                            onApproved: { promotedPurchase.approveDeferredPurchase() }
+                        )
+                        .gameEnvironment()
+                        .presentationDetents([.large])
+                        .presentationDragIndicator(.visible)
                     }
-                        .transition(.opacity.combined(with: .scale(scale: 0.99)))
                 }
-            }
-            .animation(.easeInOut(duration: 0.42), value: onboardingComplete)
-            .animation(.easeInOut(duration: 0.42), value: showsOnboardingReplay)
-            // Re-renders every `Text` (and formats numbers) when the language
-            // changes; combined with the bundle redirection this makes the
-            // switch instant, no restart required.
-            .environment(\.locale, language.locale)
-            .environment(\.layoutDirection, language.effective.layoutDirection)
-            .sheet(isPresented: Binding(
-                get: { promotedPurchase.isAwaitingParentApproval },
-                set: { isPresented in
-                    if !isPresented { promotedPurchase.cancelDeferredPurchase() }
-                }
-            ),
-                   onDismiss: { promotedPurchase.cancelDeferredPurchase() }) {
-                let character = CharacterCatalog.current(isPremium: PremiumStore.shared.isPremium)
-                ParentApprovalGate(
-                    accent: character.color,
-                    deepColor: character.deepColor,
-                    onApproved: { promotedPurchase.approveDeferredPurchase() }
-                )
-                .gameEnvironment()
-                .presentationDetents([.large])
-                .presentationDragIndicator(.visible)
             }
         }
     }

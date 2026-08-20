@@ -156,6 +156,13 @@ struct FlyingPenguinPlayfield: View {
     /// a set tapped a moment before it reaches the holding point would stop
     /// dead with nothing left to ask for.
     @State private var tutorialTurboTapped = false
+    /// Identifies the one set used for the automatic dive demonstration. The
+    /// director keeps its flag raised until that passage reports success, so a
+    /// round id is the guard that prevents re-arming it every frame.
+    @State private var tutorialAutoDiveRoundID: UUID?
+    /// Locks out competing touches from the start of the demonstration until
+    /// the penguin has climbed back into its normal flight band.
+    @State private var tutorialAutoDiveActive = false
 
     // iPad's squarer playfield already gives the character more visual weight.
     // Retain a small tablet lift without letting it crowd the sum and water.
@@ -361,6 +368,10 @@ struct FlyingPenguinPlayfield: View {
                         .position(x: splash.x, y: waterline)
                         .allowsHitTesting(false)
                 }
+
+                // Instruction graphics must sit above the near water layer:
+                // the dive target deliberately lives below the surface.
+                tutorialControlHint
 
                 if let answerEcho, entranceStage >= 5, !completionActive {
                     SolvedAnswerEchoView(prompt: answerEcho.prompt,
@@ -647,7 +658,56 @@ struct FlyingPenguinPlayfield: View {
         let canSurface = (1...4).contains(divePhase)
         return isRunning && entranceStage >= 5 && !completionActive
             && (isLive || canSurface) && (!resolved || canSurface)
-            && committedLaneIndex == nil
+            && committedLaneIndex == nil && !tutorialAutoDiveActive
+    }
+
+    /// The first three lessons each get a gesture-shaped cue in the world, not
+    /// another sentence in the message card. Their placement follows the
+    /// penguin, so up/down, tap-above/tap-below and the route under the hoops
+    /// remain understandable even when the child does not read the copy.
+    @ViewBuilder private var tutorialControlHint: some View {
+        if entranceStage >= 5, !completionActive {
+            switch tutorial.step {
+            case .dragToFly:
+                TutorialVerticalDragHint(size: penguinSize,
+                                         tint: character.deepColor,
+                                         reduceMotion: reduceMotion)
+                    .frame(width: penguinSize * 0.52, height: penguinSize * 1.72)
+                    .position(x: displayedPenguinX + penguinSize * 0.70,
+                              y: min(sceneSize.height - penguinSize * 0.88,
+                                     max(penguinSize * 0.88, displayedPenguinY)))
+                    .allowsHitTesting(false)
+
+            case .tapToFly:
+                TutorialHeightTapHint(penguin: CGPoint(x: displayedPenguinX,
+                                                       y: displayedPenguinY),
+                                      flightMaxY: flightMaxY,
+                                      size: penguinSize,
+                                      tint: character.deepColor,
+                                      reduceMotion: reduceMotion)
+                    .frame(width: sceneSize.width, height: sceneSize.height)
+                    .allowsHitTesting(false)
+
+            case .diveUnder:
+                TutorialDivePathHint(
+                    start: CGPoint(x: displayedPenguinX + penguinSize * 0.38,
+                                   y: displayedPenguinY + penguinSize * 0.16),
+                    end: CGPoint(x: min(sceneSize.width * 0.62,
+                                       max(displayedPenguinX + penguinSize * 1.15,
+                                           hoopX - penguinSize * 0.72)),
+                                 y: waterline + penguinSize * 0.13),
+                    size: penguinSize,
+                    tint: character.deepColor,
+                    reduceMotion: reduceMotion
+                )
+                .frame(width: sceneSize.width, height: sceneSize.height)
+                .opacity(tutorialAutoDiveActive ? 0.38 : 1)
+                .allowsHitTesting(false)
+
+            default:
+                EmptyView()
+            }
+        }
     }
 
     private var flightGesture: some Gesture {
@@ -1013,6 +1073,8 @@ struct FlyingPenguinPlayfield: View {
         hasPlacedRescueHeart = false
         tutorialHold = false
         tutorialTurboTapped = false
+        tutorialAutoDiveRoundID = nil
+        tutorialAutoDiveActive = false
         AppAudio.shared.playFireCrackle()
         let fuseDuration = reduceMotion ? 0.12 : 1.45
         let squeezeDuration = reduceMotion ? 0.06 : 0.24
@@ -1223,6 +1285,19 @@ struct FlyingPenguinPlayfield: View {
         if !tutorialHold { advanceWorld(dt: CGFloat(dt)) }
 
         guard entranceStage >= 5 else { return }
+
+        // Two missed dive sets turn the next one into a wordless demonstration.
+        // Start early enough for the complete descent to be visible before the
+        // rings reach the penguin, and hold user input until it has resurfaced.
+        if tutorial.demonstratesDive, !resolved, !shownOptions.isEmpty,
+           tutorialAutoDiveRoundID != activeRoundID,
+           hoopX <= sceneSize.width * 0.76 {
+            tutorialAutoDiveRoundID = activeRoundID
+            tutorialAutoDiveActive = true
+            dragStartY = nil
+            armDive()
+        }
+
         collectLifeHearts()
         if !reduceMotion { flightClock += dt }
 
@@ -1300,6 +1375,7 @@ struct FlyingPenguinPlayfield: View {
             // back into normal flight together.
             let reachedTarget = abs(targetPenguinY - penguinY) <= max(3, penguinSize * 0.018)
             if !surfaceSubmerged && reachedTarget {
+                tutorialAutoDiveActive = false
                 withAnimation(.easeInOut(duration: 0.30)) { divePhase = 4 }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.30) {
                     if divePhase == 4 { divePhase = 0 }
@@ -1413,6 +1489,18 @@ struct FlyingPenguinPlayfield: View {
                 onTutorialEvent(.passedCorrectHoop(withTurbo: usesSpeedBonus))
             } else {
                 onTutorialEvent(.passedWrongHoop)
+            }
+        }
+
+        // The ordinary rule intentionally leaves a player underwater until
+        // they choose a new height. The automatic lesson is a demonstration,
+        // though, so it also shows the matching climb back into the air.
+        if isBelowRings, tutorialAutoDiveRoundID == activeRoundID {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.30) {
+                guard tutorialAutoDiveActive else { return }
+                diveArmed = false
+                divePhase = 3
+                targetPenguinY = lanes[1]
             }
         }
         selectedOptionID = isBelowRings ? nil : selected.id
@@ -1537,6 +1625,8 @@ struct FlyingPenguinPlayfield: View {
         lifeHearts = []
         tutorialHold = false
         tutorialTurboTapped = false
+        tutorialAutoDiveRoundID = nil
+        tutorialAutoDiveActive = false
         // The world stops for the finale, so anything still drifting out of
         // frame would stand frozen in it.
         launchPlatformActive = false
@@ -1598,7 +1688,7 @@ struct FlyingPenguinPlayfield: View {
 /// Keeping the path inside an animatable modifier makes every intermediate
 /// frame follow the curve instead of interpolating in a straight line between
 /// a handful of state changes.
-private struct CompletionFlightEffect: AnimatableModifier {
+struct CompletionFlightEffect: AnimatableModifier {
     var progress: CGFloat
     let sceneSize: CGSize
     let start: CGPoint
@@ -1668,7 +1758,7 @@ private struct CompletionFlightEffect: AnimatableModifier {
     }
 }
 
-private enum PenguinPose: Equatable {
+enum PenguinPose: Equatable {
     case loaded
     case compressed
     case standing
@@ -1681,12 +1771,12 @@ private enum PenguinPose: Equatable {
     case recovering
 }
 
-private enum PenguinFlightMotion: Equatable { case rising, level, falling }
+enum PenguinFlightMotion: Equatable { case rising, level, falling }
 
 /// The three source canvases share exactly the same geometry. Keeping every
 /// layer full-size preserves the artist's alignment; only each arm rotates
 /// around its own fixed shoulder point.
-private struct RiggedPenguin: View {
+struct RiggedPenguin: View {
     let size: CGFloat
     let rig: CharacterRig
     let pose: PenguinPose
@@ -1808,36 +1898,40 @@ private struct RiggedPenguin: View {
     }
 }
 
-private enum CannonLaunchLayer: Equatable { case base, barrelForeground }
+enum CannonLaunchLayer: Equatable { case base, barrelForeground }
 
 /// Normalized coordinates keep the fuse, flame, floe, and muzzle flash tied to
 /// the cannon artwork even when its source texture is resized. The foreground
 /// pass has a real opening cut from its mask, keeping the penguin behind the
 /// barrel until it crosses the muzzle.
-private struct CannonLaunchScene: View {
+struct CannonLaunchScene: View {
     let stage: Int
     let reduceMotion: Bool
     let layer: CannonLaunchLayer
+    /// Offscreen promo rendering can drive the production fuse at an exact
+    /// point in its 1.45-second burn. Normal gameplay leaves this nil.
+    var deterministicFuseProgress: CGFloat? = nil
     @State private var burnProgress: CGFloat = 0
 
     var body: some View {
         GeometryReader { proxy in
             let width = proxy.size.width
             let height = proxy.size.height
+            let fuseProgress = min(0.58, max(0, deterministicFuseProgress ?? burnProgress))
             ZStack {
                 if layer == .base {
                     cannonArtwork(width: width, height: height)
 
                     CannonFusePath()
-                        .trim(from: burnProgress, to: 0.58)
+                        .trim(from: fuseProgress, to: 0.58)
                         .stroke(Color(red: 0.22, green: 0.10, blue: 0.035),
                                 style: StrokeStyle(lineWidth: width * 0.026, lineCap: .round))
 
                     if stage < 2 {
                         FuseFlame(reduceMotion: reduceMotion)
                             .frame(width: width * 0.13, height: width * 0.16)
-                            .scaleEffect(max(0.38, 1 - burnProgress * 0.72))
-                            .position(fusePoint(progress: burnProgress, in: proxy.size))
+                            .scaleEffect(max(0.38, 1 - fuseProgress * 0.72))
+                            .position(fusePoint(progress: fuseProgress, in: proxy.size))
                     }
 
                     if stage == 2 {
@@ -1854,9 +1948,11 @@ private struct CannonLaunchScene: View {
             }
         }
         .onAppear {
-            burnProgress = 0
-            withAnimation(.linear(duration: reduceMotion ? 0.12 : 1.45)) {
-                burnProgress = 0.58
+            if deterministicFuseProgress == nil {
+                burnProgress = 0
+                withAnimation(.linear(duration: reduceMotion ? 0.12 : 1.45)) {
+                    burnProgress = 0.58
+                }
             }
         }
     }
@@ -2055,7 +2151,7 @@ private struct TurboTimingBuoy: View {
     }
 }
 
-private struct TurboSpeedWake: View {
+struct TurboSpeedWake: View {
     let size: CGFloat
     let phase: Double
 
@@ -2170,6 +2266,201 @@ private struct LifeHeartView: View {
     }
 }
 
+/// A light touch trace gliding along a narrow rail. The moving contact point is
+/// the gesture; small open chevrons show its range without turning the hint into
+/// another piece of game UI.
+private struct TutorialVerticalDragHint: View {
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let clock = context.date.timeIntervalSinceReferenceDate
+            let travel = reduceMotion ? CGFloat.zero : CGFloat(sin(clock * 2.15))
+            GeometryReader { proxy in
+                let centreX = proxy.size.width * 0.5
+                let topY = proxy.size.height * 0.14
+                let bottomY = proxy.size.height * 0.86
+                let touchY = proxy.size.height * 0.5 + travel * proxy.size.height * 0.27
+                let ripple = reduceMotion ? CGFloat(0.55)
+                    : CGFloat((clock * 0.82).truncatingRemainder(dividingBy: 1))
+
+                ZStack {
+                    Path { path in
+                        path.move(to: CGPoint(x: centreX, y: topY))
+                        path.addLine(to: CGPoint(x: centreX, y: bottomY))
+                    }
+                    .stroke(.white.opacity(0.72),
+                            style: StrokeStyle(lineWidth: max(4, size * 0.040),
+                                               lineCap: .round))
+
+                    Capsule()
+                        .fill(tint.opacity(0.34))
+                        .frame(width: max(2, size * 0.018),
+                               height: bottomY - topY)
+                        .position(x: centreX, y: (topY + bottomY) * 0.5)
+
+                    directionMark("chevron.up", at: CGPoint(x: centreX, y: topY))
+                    directionMark("chevron.down", at: CGPoint(x: centreX, y: bottomY))
+
+                    Circle()
+                        .stroke(tint.opacity(Double(1 - ripple) * 0.34),
+                                lineWidth: max(1.5, size * 0.014))
+                        .frame(width: size * (0.20 + ripple * 0.18),
+                               height: size * (0.20 + ripple * 0.18))
+                        .position(x: centreX, y: touchY)
+
+                    Circle()
+                        .fill(.white.opacity(0.94))
+                        .frame(width: size * 0.18, height: size * 0.18)
+                        .overlay(Circle().stroke(tint.opacity(0.70), lineWidth: 2))
+                        .overlay(Circle().fill(tint).frame(width: size * 0.055,
+                                                          height: size * 0.055))
+                        .shadow(color: .black.opacity(0.12), radius: 2, y: 1)
+                        .position(x: centreX, y: touchY)
+                }
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    private func directionMark(_ symbol: String, at point: CGPoint) -> some View {
+        Image(systemName: symbol)
+            .font(.system(size: size * 0.13, weight: .bold))
+            .foregroundStyle(tint.opacity(0.78))
+            .shadow(color: .white.opacity(0.95), radius: 1.5)
+            .position(point)
+    }
+}
+
+/// Two quiet touch ripples alternate above and below the penguin. There is no
+/// literal hand or button chrome: the expanding contact rings carry the tap
+/// affordance, while a tiny chevron carries its direction.
+private struct TutorialHeightTapHint: View {
+    let penguin: CGPoint
+    let flightMaxY: CGFloat
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let clock = context.date.timeIntervalSinceReferenceDate
+            // The targets must remain geometrically above and below even when
+            // the penguin itself has reached an edge of the normal flight band.
+            // A tap outside that band still counts, then clamps movement safely.
+            let upperY = max(size * 0.24, penguin.y - size * 0.72)
+            let lowerY = min(flightMaxY + size * 0.46, penguin.y + size * 0.72)
+            ZStack {
+                tapTarget(symbol: "chevron.up", phase: pulse(clock, offset: 0),
+                          point: CGPoint(x: penguin.x, y: upperY))
+                tapTarget(symbol: "chevron.down", phase: pulse(clock, offset: .pi),
+                          point: CGPoint(x: penguin.x, y: lowerY))
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    private func pulse(_ clock: Double, offset: Double) -> CGFloat {
+        guard !reduceMotion else { return 0.55 }
+        return CGFloat((sin(clock * 2.8 + offset) + 1) * 0.5)
+    }
+
+    private func tapTarget(symbol: String,
+                           phase: CGFloat,
+                           point: CGPoint) -> some View {
+        ZStack {
+            Circle()
+                .stroke(tint.opacity(0.12 + Double(phase) * 0.34),
+                        lineWidth: max(1.5, size * 0.015))
+                .frame(width: size * (0.23 + phase * 0.19),
+                       height: size * (0.23 + phase * 0.19))
+
+            Circle()
+                .fill(.white.opacity(0.90))
+                .frame(width: size * 0.22, height: size * 0.22)
+                .overlay(Circle().stroke(tint.opacity(0.55), lineWidth: 1.5))
+                .shadow(color: .black.opacity(0.10), radius: 2, y: 1)
+
+            Image(systemName: symbol)
+                .font(.system(size: size * 0.095, weight: .bold))
+                .foregroundStyle(tint.opacity(0.82))
+        }
+        .opacity(0.58 + Double(phase) * 0.42)
+        .position(point)
+    }
+}
+
+/// A dashed route leaves the penguin, curves through the surface and ends in a
+/// pulsing down target beneath the hoop stack. It shows both where to press and
+/// what the resulting dive will do.
+private struct TutorialDivePathHint: View {
+    let start: CGPoint
+    let end: CGPoint
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let clock = context.date.timeIntervalSinceReferenceDate
+            let cycle = reduceMotion ? CGFloat(0.45)
+                : CGFloat((clock * 0.75).truncatingRemainder(dividingBy: 1))
+            let control1 = CGPoint(x: start.x + size * 0.62,
+                                   y: start.y + size * 0.20)
+            let control2 = CGPoint(x: end.x - size * 0.72,
+                                   y: end.y - size * 0.20)
+
+            ZStack {
+                divePath(control1: control1, control2: control2)
+                    .stroke(.white.opacity(0.94),
+                            style: StrokeStyle(lineWidth: max(8, size * 0.080),
+                                               lineCap: .round))
+
+                divePath(control1: control1, control2: control2)
+                    .stroke(tint.opacity(0.90),
+                            style: StrokeStyle(lineWidth: max(3, size * 0.035),
+                                               lineCap: .round,
+                                               dash: [size * 0.12, size * 0.09],
+                                               dashPhase: -cycle * size * 0.42))
+
+                Circle()
+                    .stroke(tint.opacity(Double(1 - cycle) * 0.68),
+                            lineWidth: max(3, size * 0.035))
+                    .frame(width: size * (0.48 + cycle * 0.42),
+                           height: size * (0.48 + cycle * 0.42))
+                    .position(end)
+
+                Image(systemName: "arrow.down")
+                    .font(.system(size: size * 0.25, weight: .black))
+                    .foregroundStyle(.white)
+                    .frame(width: size * 0.48, height: size * 0.48)
+                    .background(tint, in: Circle())
+                    .overlay(Circle().stroke(.white.opacity(0.97), lineWidth: 3))
+                    .shadow(color: .black.opacity(0.20), radius: 4, y: 2)
+                    .position(end)
+
+                Image(systemName: "hand.tap.fill")
+                    .font(.system(size: size * 0.24, weight: .black))
+                    .foregroundStyle(tint)
+                    .padding(size * 0.075)
+                    .background(.white.opacity(0.96), in: Circle())
+                    .shadow(color: .black.opacity(0.18), radius: 3, y: 2)
+                    .position(x: end.x + size * 0.48, y: end.y - size * 0.12)
+            }
+        }
+        .accessibilityHidden(true)
+    }
+
+    private func divePath(control1: CGPoint, control2: CGPoint) -> Path {
+        Path { path in
+            path.move(to: start)
+            path.addCurve(to: end, control1: control1, control2: control2)
+        }
+    }
+}
+
 /// Asks for a tap, on the one hoop the turbo lesson is about. Rings leave the
 /// rim while a hand stands off to the right, pointing back at it — off to the
 /// side deliberately, because a hand in the middle of the hoop covers the one
@@ -2223,11 +2514,11 @@ private struct RetiringHoopSet: Identifiable {
     }
 }
 
-private enum HoopFeedback: Equatable {
+enum HoopFeedback: Equatable {
     case none, inactive, correct, revealedCorrect, wrong, bonus, bypassed
 }
 
-private struct MovingQuestionBadge: View {
+struct MovingQuestionBadge: View {
     let prompt: String
     let character: AnimalCharacter
     let isPad: Bool
@@ -2265,7 +2556,7 @@ private struct SolvedAnswerEchoView: View {
     }
 }
 
-private struct AnswerHoop: View {
+struct AnswerHoop: View {
     let text: String
     let tint: Color
     let size: CGFloat
@@ -2416,7 +2707,7 @@ private struct BonusStarBurst: View {
 
 /// Near-side right arc of a hoop. It deliberately has no label or fill: those
 /// stay on the back layer and remain readable while the penguin crosses it.
-private struct AnswerHoopForeground: View {
+struct AnswerHoopForeground: View {
     let tint: Color
     let size: CGFloat
     let feedback: HoopFeedback
