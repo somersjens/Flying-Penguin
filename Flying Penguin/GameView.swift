@@ -71,6 +71,10 @@ struct GameView: View {
     @State private var livesFrame: CGRect = .zero
     /// Hearts on their way from the flight path to the meter.
     @State private var heartFlights: [HeartFlight] = []
+    /// The broken heart that explains a wrong tutorial hoop, travelling from
+    /// the lesson icon to the life that just disappeared from the meter.
+    @State private var tutorialHeartLossFlights: [HeartFlight] = []
+    @State private var tutorialMessageIconFrame: CGRect = .zero
     /// The short pop a heart leaves on the meter as it lands.
     @State private var heartLandings: [HeartLanding] = []
     /// Bumped when a heart lands, which is when the meter says "+1".
@@ -226,10 +230,8 @@ struct GameView: View {
                               // playing field costs nothing for them.
                               tutorial: model.tutorial,
                               tutorialMessage: tutorialMessage,
-                              onTutorialEvent: { model.reportTutorial($0) },
-                              // The one rescue heart of the session, and the
-                              // hearts the life lesson parks behind its wrong
-                              // hoops, share this pair of hooks.
+                              onTutorialEvent: handleTutorialEvent(_:),
+                              // The one rescue heart of a normal session.
                               isRescueHeartDue: model.isRescueHeartDue,
                               onRescueHeartPlaced: { model.placeRescueHeart() },
                               onLifeHeartCollected: collectLifeHeart(at:),
@@ -278,6 +280,13 @@ struct GameView: View {
                 }
                 .allowsHitTesting(false)
 
+                ForEach(tutorialHeartLossFlights) { flight in
+                    TutorialHeartLossFlightView(flight: flight,
+                                                tint: character.color,
+                                                size: hudHeartSize)
+                }
+                .allowsHitTesting(false)
+
                 ForEach(heartLandings) { landing in
                     HeartLandingPop(point: landing.point,
                                     tint: character.deepColor,
@@ -285,16 +294,55 @@ struct GameView: View {
                 }
                 .allowsHitTesting(false)
             }
-            .coordinateSpace(name: Self.gameSpace)
+            .coordinateSpace(name: TutorialMessageCoordinateSpace.game)
             .onPreferenceChange(LivesFrameKey.self) { livesFrame = $0 }
+            .onPreferenceChange(TutorialMessageIconFrameKey.self) {
+                tutorialMessageIconFrame = $0
+            }
         }
         .ignoresSafeArea()
     }
 
-    /// The name the playing field's own coordinates and the HUD's measured
-    /// frames agree in. Both fill the screen ignoring the safe area, so a point
-    /// the field hands over needs no conversion at all.
-    private static let gameSpace = "game"
+    /// A wrong passage in the life lesson gets one extra visual response before
+    /// the director schedules its hand-over to the farewell.
+    private func handleTutorialEvent(_ event: TutorialEvent) {
+        if event == .passedWrongHoop, model.tutorial.step == .wrongHoop {
+            flyTutorialHeartLossToHUD()
+        }
+        model.reportTutorial(event)
+    }
+
+    /// The life has already been charged by the engine when the passage is
+    /// reported. Its new value therefore identifies the exact slot that was
+    /// just emptied. Only after the broken heart reaches that slot is the life
+    /// restored, making the subtraction and the return two readable events.
+    private func flyTutorialHeartLossToHUD() {
+        let duration = reduceMotion ? 0.28 : 0.72
+        guard tutorialMessageIconFrame != .zero, livesFrame != .zero else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+                restoreTutorialLife(at: nil)
+            }
+            return
+        }
+        let target = livesTarget(filling: model.livesRemaining)
+        let flight = HeartFlight(
+            source: CGPoint(x: tutorialMessageIconFrame.midX,
+                            y: tutorialMessageIconFrame.midY),
+            target: target,
+            arc: isPad ? 96 : 68,
+            duration: duration
+        )
+        tutorialHeartLossFlights.append(flight)
+        DispatchQueue.main.asyncAfter(deadline: .now() + flight.duration) {
+            tutorialHeartLossFlights.removeAll { $0.id == flight.id }
+            restoreTutorialLife(at: target)
+        }
+    }
+
+    private func restoreTutorialLife(at point: CGPoint?) {
+        AppAudio.shared.playLifePickup()
+        landLifeHeart(at: point)
+    }
 
     /// A heart was flown into. The heart itself travels first, unchanged in
     /// size and shape, to the exact slot on the meter it is going to fill — and
@@ -392,7 +440,7 @@ struct GameView: View {
                     GeometryReader { proxy in
                         Color.clear.preference(
                             key: LivesFrameKey.self,
-                            value: proxy.frame(in: .named(Self.gameSpace))
+                            value: proxy.frame(in: .named(TutorialMessageCoordinateSpace.game))
                         )
                     }
                 }
@@ -581,9 +629,41 @@ private struct HeartFlightView: View {
     }
 }
 
-/// "+1" and a heart, once, beside the lives meter. It is the other half of the
-/// life lesson: the heart behind the wrong hoop is picked up, and this says what
-/// picking it up did.
+/// The loss lesson uses the same broken-heart glyph as its message and hoop
+/// markers. It travels to the newly empty HUD slot; the model restores that
+/// life only when this flight has finished.
+private struct TutorialHeartLossFlightView: View {
+    let flight: HeartFlight
+    let tint: Color
+    let size: CGFloat
+    @State private var progress: CGFloat = 0
+
+    var body: some View {
+        ZStack {
+            Image(systemName: "heart.slash.fill")
+                .foregroundStyle(.white.opacity(0.90))
+                .scaleEffect(1.22)
+            Image(systemName: "heart.slash.fill")
+                .foregroundStyle(tint)
+        }
+        .font(.system(size: size, weight: .black))
+        .frame(width: size, height: size)
+        .shadow(color: .black.opacity(0.18), radius: 3, y: 2)
+        .position(point(at: progress))
+        .onAppear {
+            withAnimation(.easeInOut(duration: flight.duration)) { progress = 1 }
+        }
+    }
+
+    private func point(at t: CGFloat) -> CGPoint {
+        CGPoint(x: flight.source.x + (flight.target.x - flight.source.x) * t,
+                y: flight.source.y + (flight.target.y - flight.source.y) * t
+                    - sin(t * .pi) * flight.arc)
+    }
+}
+
+/// "+1" and a heart, once, beside the lives meter. It confirms that a normal
+/// rescue heart from the flight path has restored one life.
 private struct LifeGainBadge: View {
     let token: Int
     let character: AnimalCharacter

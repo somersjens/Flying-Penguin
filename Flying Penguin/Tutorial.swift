@@ -17,6 +17,20 @@
 import SwiftUI
 import Combine
 
+/// The tutorial card and the HUD both publish geometry in this screen-wide
+/// coordinate space, allowing lesson feedback to travel exactly between them.
+enum TutorialMessageCoordinateSpace {
+    static let game = "game"
+}
+
+struct TutorialMessageIconFrameKey: PreferenceKey {
+    static let defaultValue = CGRect.zero
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
+        let next = nextValue()
+        if next != .zero { value = next }
+    }
+}
+
 // MARK: - Steps
 
 /// The seven taught beats of a guided run, in the order they are taught.
@@ -31,7 +45,7 @@ enum TutorialStep: Int, Equatable, CaseIterable {
     case correctHoop
     /// Tap that hoop before the cone for the doubled, accelerated approach.
     case turbo
-    /// What a wrong hoop costs, and the heart waiting behind it.
+    /// What a wrong hoop costs.
     case wrongHoop
     /// Handing the game over.
     case goodLuck
@@ -81,8 +95,8 @@ struct TutorialPlan: Equatable {
     var highlightsTurbo = false
     /// Freeze the next set as it arrives until the right hoop is tapped.
     var holdsForTurbo = false
-    /// A heart waits directly behind each wrong hoop.
-    var placesHearts = false
+    /// Put a broken-heart marker on each of the two wrong hoops.
+    var marksWrongHoops = false
     /// Nothing a mistake does during this step may cost a life.
     var preventsLifeLoss = false
     /// Only passing underneath is free; a wrong hoop costs a life as it should.
@@ -120,7 +134,7 @@ struct TutorialPlan: Equatable {
             plan.highlightsTurbo = true
         case .wrongHoop:
             plan.forcesCorrectAnswer = true
-            plan.placesHearts = true
+            plan.marksWrongHoops = true
             plan.preventsBypassLifeLoss = true
         case .goodLuck, .none:
             break
@@ -148,8 +162,6 @@ enum TutorialEvent: Equatable {
     case passedCorrectHoop(withTurbo: Bool)
     /// Flew through one of the wrong hoops.
     case passedWrongHoop
-    /// Picked up the heart waiting behind a wrong hoop.
-    case collectedHeart
 }
 
 // MARK: - Director
@@ -176,7 +188,8 @@ final class TutorialDirector {
     /// playing field's preview at that moment, so it can be re-tuned to the new
     /// lesson's rules before it ever becomes the set being flown at.
     private static let passHandover = 0.22
-    /// The life coming back is the whole point of step six; it gets its beat.
+    /// The broken heart flying to the lives meter and returning its life is the
+    /// point of step six; it gets enough time to land before the farewell.
     private static let heartHandover = 0.95
     /// How long the closing message stays up.
     private static let farewell = 3.5
@@ -197,7 +210,6 @@ final class TutorialDirector {
     private var draggedHigh = false
     private var tappedBelow = false
     private var tappedAbove = false
-    private var lostLifeToWrongHoop = false
     private var passedSetsInTurboStep = 0
     private var missedDiveSets = 0
     private var safePassesInLifeLesson = 0
@@ -214,7 +226,6 @@ final class TutorialDirector {
         draggedHigh = false
         tappedBelow = false
         tappedAbove = false
-        lostLifeToWrongHoop = false
         passedSetsInTurboStep = 0
         missedDiveSets = 0
         safePassesInLifeLesson = 0
@@ -295,8 +306,6 @@ final class TutorialDirector {
         case .wrongHoop:
             switch event {
             case .passedWrongHoop:
-                lostLifeToWrongHoop = true
-            case .collectedHeart where lostLifeToWrongHoop:
                 advance(to: .goodLuck, after: Self.heartHandover)
             case .passedCorrectHoop, .passedUnderSet:
                 safePassesInLifeLesson += 1
@@ -419,6 +428,14 @@ struct TutorialMessageCard: View {
             Image(systemName: symbolName)
                 .font(.system(size: isPad ? 26 : 20, weight: .bold))
                 .foregroundStyle(theme.color)
+                .background {
+                    GeometryReader { proxy in
+                        Color.clear.preference(
+                            key: TutorialMessageIconFrameKey.self,
+                            value: proxy.frame(in: .named(TutorialMessageCoordinateSpace.game))
+                        )
+                    }
+                }
 
             Text(verbatim: text)
                 .font(.system(size: isPad ? 20 : 15.5, weight: .heavy, design: .rounded))
@@ -498,7 +515,9 @@ struct TutorialNoticeCard: View {
             }
             .padding(24 * scale)
             .frame(width: isPad ? 420 : 340)
-            .background(.background.opacity(0.96),
+            // Same light fill as the start/pause card: `.background` turns
+            // black in Dark Mode against this card's deep-purple copy.
+            .background(Color.white.opacity(0.96),
                         in: RoundedRectangle(cornerRadius: 26, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 26, style: .continuous)
                 .stroke(theme.deepColor.opacity(0.14), lineWidth: 1))

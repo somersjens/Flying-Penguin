@@ -100,6 +100,10 @@ struct ElephantChallengeApp: App {
                     // switch instant, no restart required.
                     .environment(\.locale, language.locale)
                     .environment(\.layoutDirection, language.effective.layoutDirection)
+                    // Palettes and copy are authored for light surfaces. Without this,
+                    // Dark Mode turns system fills black and inverts `.primary` /
+                    // `.secondary` labels against those same light colours.
+                    .preferredColorScheme(.light)
                     .sheet(isPresented: Binding(
                         get: { promotedPurchase.isAwaitingParentApproval },
                         set: { isPresented in

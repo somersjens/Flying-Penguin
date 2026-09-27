@@ -43,8 +43,8 @@ final class GameViewModel: ObservableObject {
     /// the engine's state is.
     @Published private(set) var tutorial = TutorialPlan()
     /// Whether the session's one rescue heart is owed to the next set of hoops.
-    /// Never during a guided run: the lesson places hearts of its own, and two
-    /// kinds of heart in the air at once teaches nothing.
+    /// Never during a guided run: the life lesson is about losing a heart, and
+    /// a rescue heart in the same flight would teach the opposite thing.
     @Published private(set) var isRescueHeartDue = false
 
     /// Invalidates pending timed work when a round is superseded (restart, or
@@ -127,9 +127,6 @@ final class GameViewModel: ObservableObject {
         PlaytimeTracker.shared.registerInteraction()
         sync()
         haptic(.success)
-        // Only the lesson's heart is being waited for; in a normal run this is
-        // a no-op, because there is no step to advance.
-        director.report(.collectedHeart)
         return true
     }
 

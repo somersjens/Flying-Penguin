@@ -194,7 +194,9 @@ struct LevelIntroCard: View {
                     }
                     .padding(24 * scale)
                     .frame(maxWidth: isPad ? 900 : 760)
-                    .background(.background.opacity(0.93), in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+                    // Explicit white: `.background` follows Dark Mode and the
+                    // deep-purple copy on this card becomes unreadable.
+                    .background(Color.white.opacity(0.93), in: RoundedRectangle(cornerRadius: 28, style: .continuous))
                     .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: 28, style: .continuous)
                         .stroke(theme.deepColor.opacity(0.14), lineWidth: 1))

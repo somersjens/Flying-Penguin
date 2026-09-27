@@ -61,7 +61,7 @@ struct FlyingPenguinPlayfield: View {
     var isRescueHeartDue: Bool = false
     /// Raised the moment that heart is actually put in the world.
     var onRescueHeartPlaced: () -> Void = {}
-    /// A heart in the flight path was flown into, at this point on screen.
+    /// The session's rescue heart was flown into, at this point on screen.
     var onLifeHeartCollected: (CGPoint) -> Void = { _ in }
     /// How big a heart is drawn — the lives meter's own size, so the one that
     /// flies up to it neither grows nor shrinks on the way.
@@ -140,10 +140,8 @@ struct FlyingPenguinPlayfield: View {
     /// splash is sized by.
     @State private var diveStartY: CGFloat = 0
     @State private var flightClock: Double = 0
-    /// Every heart standing in the world: the ones the life lesson parks behind
-    /// its wrong hoops, and the session's single rescue heart. They travel on
-    /// the same conveyor as everything else, so they stay exactly where they
-    /// were placed relative to the set they belong to.
+    /// The session's single rescue heart. It travels on the same conveyor as
+    /// everything else, so it stays exactly where it was placed.
     @State private var lifeHearts: [LifeHeartPickup] = []
     /// Guards the rescue heart against being placed twice in one frame, before
     /// the engine's answer to the first placement has come back.
@@ -304,8 +302,8 @@ struct FlyingPenguinPlayfield: View {
                     }
                 }
 
-                // The lesson parks a heart per wrong hoop, just behind it;
-                // a rescue heart stands on its own, mid-way between two sets.
+                // A normal session's one rescue heart stands on its own,
+                // mid-way between two sets.
                 ForEach(lifeHearts) { heart in
                     LifeHeartView(size: lifeHeartSize,
                                   tint: character.deepColor,
@@ -348,6 +346,12 @@ struct FlyingPenguinPlayfield: View {
                 // penguin. The complete hoop below plus this arc above makes
                 // the character visibly pass through the opening.
                 hoopForegrounds
+
+                // In the life lesson the two wrong answers are marked on the
+                // near/right rim, so the warning remains visible over both the
+                // hoop and the penguin as it passes through. This replaces the
+                // full recovery hearts that used to stand behind the set.
+                tutorialWrongHoopMarkers
 
                 if launchPlatformActive {
                     cannonForeground
@@ -470,12 +474,6 @@ struct FlyingPenguinPlayfield: View {
     private func applyTutorialPlan() {
         tutorialHold = false
         tutorialTurboTapped = false
-        // The lesson's own hearts go with it. Whatever is left of them when it
-        // hands over — the untaken one of a pair, or a set placed just before
-        // the tutorial finished — is cleared, so the real game never starts
-        // with a free life floating in it. A rescue heart is nobody's lesson
-        // and stays where it is.
-        if !tutorial.placesHearts { lifeHearts.removeAll(where: \.isLesson) }
         if tutorial.hidesHoops {
             shownOptions = []
             shownPrompt = ""
@@ -483,7 +481,6 @@ struct FlyingPenguinPlayfield: View {
             previewPrompt = ""
             previewRoundID = nil
             activeRoundID = nil
-            lifeHearts.removeAll(where: \.isLesson)
             resolved = false
             return
         }
@@ -505,7 +502,6 @@ struct FlyingPenguinPlayfield: View {
         let presented = presentation(for: round)
         shownOptions = presented.options
         noCorrectAnswer = presented.hasNoCorrectAnswer
-        placeTutorialHearts()
     }
 
     /// The world this character flies across. Same flight, same cannon, same
@@ -690,6 +686,8 @@ struct FlyingPenguinPlayfield: View {
 
             case .diveUnder:
                 TutorialDivePathHint(
+                    penguin: CGPoint(x: displayedPenguinX,
+                                     y: displayedPenguinY),
                     start: CGPoint(x: displayedPenguinX + penguinSize * 0.38,
                                    y: displayedPenguinY + penguinSize * 0.16),
                     end: CGPoint(x: min(sceneSize.width * 0.62,
@@ -999,6 +997,34 @@ struct FlyingPenguinPlayfield: View {
         }
     }
 
+    /// The warning belongs to the two wrong answers themselves. Keeping it on
+    /// the right/near rim makes it legible both before and during a passage.
+    @ViewBuilder private var tutorialWrongHoopMarkers: some View {
+        if tutorial.marksWrongHoops, entranceStage >= 3, !completionActive {
+            ForEach(Array(previewOptions.enumerated()), id: \.element.id) { index, option in
+                if !option.isCorrect {
+                    BrokenHeartHoopMarker(size: hoopSize * 0.30,
+                                          tint: character.deepColor,
+                                          reduceMotion: reduceMotion)
+                        .position(x: previewX + hoopSize * 0.49,
+                                  y: lanes[index])
+                }
+            }
+
+            if !resolved {
+                ForEach(Array(shownOptions.enumerated()), id: \.element.id) { index, option in
+                    if !option.isCorrect {
+                        BrokenHeartHoopMarker(size: hoopSize * 0.30,
+                                              tint: character.deepColor,
+                                              reduceMotion: reduceMotion)
+                            .position(x: hoopX + hoopSize * 0.49,
+                                      y: lanes[index])
+                    }
+                }
+            }
+        }
+    }
+
     private func hoopOcclusionOpacity(at x: CGFloat) -> Double {
         let fadeStart = hoopSize * 1.15
         let fadeEnd = hoopSize * 0.82
@@ -1156,27 +1182,9 @@ struct FlyingPenguinPlayfield: View {
         bypassedWrongSet = false
         emphasizesCorrectAnswer = false
         tutorialTurboTapped = false
-        placeTutorialHearts()
         placeRescueHeartIfDue()
         // Keep the exact flight height between sets. Only a completed dive
         // changes it as part of its resurfacing sequence.
-    }
-
-    /// Parks a heart just behind every wrong hoop of the set being introduced.
-    /// Behind, because the conveyor runs right to left: a heart placed further
-    /// out arrives after the hoop it belongs to, which is exactly what makes it
-    /// reachable only to a penguin that has just flown through that hoop.
-    private func placeTutorialHearts() {
-        guard tutorial.placesHearts, !shownOptions.isEmpty else { return }
-        let offset = hoopSize * 0.95
-        lifeHearts.removeAll { $0.isLesson && $0.setID == activeRoundID }
-        lifeHearts += shownOptions.enumerated().compactMap { index, option in
-            guard !option.isCorrect else { return nil }
-            return LifeHeartPickup(setID: activeRoundID,
-                                   lane: index,
-                                   x: hoopX + offset,
-                                   isLesson: true)
-        }
     }
 
     /// The session's one rescue heart, placed halfway between the set that is
@@ -1189,10 +1197,8 @@ struct FlyingPenguinPlayfield: View {
               !tutorial.isRunning, !shownOptions.isEmpty,
               let lane = correctHoopIndex else { return }
         hasPlacedRescueHeart = true
-        lifeHearts.append(LifeHeartPickup(setID: activeRoundID,
-                                          lane: lane,
-                                          x: hoopX - ringSetSpacing * 0.5,
-                                          isLesson: false))
+        lifeHearts.append(LifeHeartPickup(lane: lane,
+                                          x: hoopX - ringSetSpacing * 0.5))
         onRescueHeartPlaced()
     }
 
@@ -1424,8 +1430,7 @@ struct FlyingPenguinPlayfield: View {
         }
         for index in retiringSets.indices { retiringSets[index].x -= speed * dt }
         retiringSets.removeAll { $0.x < -hoopSize * 0.65 }
-        // The lesson's hearts ride the same conveyor as the set they were
-        // placed behind, so the gap between hoop and heart never changes.
+        // The rescue heart rides the same conveyor as every set.
         if !lifeHearts.isEmpty {
             for index in lifeHearts.indices { lifeHearts[index].x -= speed * dt }
             lifeHearts.removeAll { $0.x < -hoopSize * 0.65 }
@@ -2232,18 +2237,13 @@ private struct SolvedAnswerEcho: Identifiable {
     let prompt: String
 }
 
-/// One heart standing in the world: behind the wrong hoop of the life lesson,
-/// or alone in the gap between two sets as the session's rescue. It carries its
-/// own position rather than an offset from a set, so the next set arriving
-/// cannot drag it along with it.
+/// The rescue heart standing in the gap between two sets. It carries its own
+/// position rather than an offset from a set, so the next set arriving cannot
+/// drag it along with it.
 private struct LifeHeartPickup: Identifiable {
     let id = UUID()
-    /// The round whose set this heart was placed with.
-    let setID: UUID?
     let lane: Int
     var x: CGFloat
-    /// True for the hearts the guided run puts out, which go when it ends.
-    let isLesson: Bool
 }
 
 /// A life waiting in the flight path. Deliberately the very same heart the
@@ -2263,6 +2263,34 @@ private struct LifeHeartView: View {
                 .shadow(color: .black.opacity(0.20), radius: 5, y: 3)
         }
         .frame(width: size, height: size)
+    }
+}
+
+/// A compact loss marker pinned to the right rim of each wrong tutorial hoop.
+private struct BrokenHeartHoopMarker: View {
+    let size: CGFloat
+    let tint: Color
+    let reduceMotion: Bool
+
+    var body: some View {
+        TimelineView(.animation(paused: reduceMotion)) { context in
+            let pulse = reduceMotion ? CGFloat.zero
+                : CGFloat(sin(context.date.timeIntervalSinceReferenceDate * .pi * 2.2))
+            ZStack {
+                Circle()
+                    .fill(.white.opacity(0.96))
+                    .overlay(Circle().stroke(tint.opacity(0.30), lineWidth: 1.5))
+
+                Image(systemName: "heart.slash.fill")
+                    .font(.system(size: size * 0.63, weight: .black))
+                    .foregroundStyle(tint)
+            }
+            .scaleEffect(1 + pulse * 0.055)
+            .shadow(color: .black.opacity(0.20), radius: 3, y: 2)
+        }
+        .frame(width: size, height: size)
+        .accessibilityHidden(true)
+        .allowsHitTesting(false)
     }
 }
 
@@ -2334,9 +2362,9 @@ private struct TutorialVerticalDragHint: View {
     }
 }
 
-/// Two quiet touch ripples alternate above and below the penguin. There is no
-/// literal hand or button chrome: the expanding contact rings carry the tap
-/// affordance, while a tiny chevron carries its direction.
+/// Two fingerprint-like touch points alternate above and below the penguin.
+/// Their broken outer ring and little tapping finger make each point read as a
+/// place on the playfield to touch, rather than as another game button.
 private struct TutorialHeightTapHint: View {
     let penguin: CGPoint
     let flightMaxY: CGFloat
@@ -2350,12 +2378,16 @@ private struct TutorialHeightTapHint: View {
             // The targets must remain geometrically above and below even when
             // the penguin itself has reached an edge of the normal flight band.
             // A tap outside that band still counts, then clamps movement safely.
-            let upperY = max(size * 0.24, penguin.y - size * 0.72)
-            let lowerY = min(flightMaxY + size * 0.46, penguin.y + size * 0.72)
+            let upperY = max(size * 0.24, penguin.y - size * 1.44)
+            let lowerY = min(flightMaxY + size * 0.46, penguin.y + size * 1.44)
+            let spin = reduceMotion ? CGFloat.zero
+                : CGFloat((clock * 0.12).truncatingRemainder(dividingBy: 1))
             ZStack {
-                tapTarget(symbol: "chevron.up", phase: pulse(clock, offset: 0),
+                tapTarget(phase: pulse(clock, offset: 0),
+                          spin: spin,
                           point: CGPoint(x: penguin.x, y: upperY))
-                tapTarget(symbol: "chevron.down", phase: pulse(clock, offset: .pi),
+                tapTarget(phase: pulse(clock, offset: .pi),
+                          spin: -spin,
                           point: CGPoint(x: penguin.x, y: lowerY))
             }
         }
@@ -2367,35 +2399,67 @@ private struct TutorialHeightTapHint: View {
         return CGFloat((sin(clock * 2.8 + offset) + 1) * 0.5)
     }
 
-    private func tapTarget(symbol: String,
-                           phase: CGFloat,
+    private func tapTarget(phase: CGFloat,
+                           spin: CGFloat,
                            point: CGPoint) -> some View {
         ZStack {
             Circle()
-                .stroke(tint.opacity(0.12 + Double(phase) * 0.34),
-                        lineWidth: max(1.5, size * 0.015))
-                .frame(width: size * (0.23 + phase * 0.19),
-                       height: size * (0.23 + phase * 0.19))
+                .stroke(.white.opacity(0.88),
+                        style: StrokeStyle(lineWidth: max(5, size * 0.050),
+                                           lineCap: .butt,
+                                           dash: [size * 0.105, size * 0.070]))
+                .frame(width: size * (0.50 + phase * 0.055),
+                       height: size * (0.50 + phase * 0.055))
+                .rotationEffect(.degrees(Double(spin) * 360))
 
             Circle()
-                .fill(.white.opacity(0.90))
-                .frame(width: size * 0.22, height: size * 0.22)
-                .overlay(Circle().stroke(tint.opacity(0.55), lineWidth: 1.5))
-                .shadow(color: .black.opacity(0.10), radius: 2, y: 1)
+                .stroke(tint.opacity(0.88),
+                        style: StrokeStyle(lineWidth: max(3, size * 0.030),
+                                           lineCap: .butt,
+                                           dash: [size * 0.105, size * 0.070]))
+                .frame(width: size * (0.50 + phase * 0.055),
+                       height: size * (0.50 + phase * 0.055))
+                .rotationEffect(.degrees(Double(spin) * 360))
 
-            Image(systemName: symbol)
-                .font(.system(size: size * 0.095, weight: .bold))
-                .foregroundStyle(tint.opacity(0.82))
+            Circle()
+                .stroke(.white.opacity(0.90), lineWidth: max(5, size * 0.050))
+                .frame(width: size * 0.36, height: size * 0.36)
+
+            Circle()
+                .stroke(tint.opacity(0.92), lineWidth: max(3, size * 0.030))
+                .frame(width: size * 0.36, height: size * 0.36)
+
+            Circle()
+                .fill(.white.opacity(0.96))
+                .frame(width: size * 0.23, height: size * 0.23)
+                .overlay(Circle().stroke(tint.opacity(0.88),
+                                         lineWidth: max(3, size * 0.026)))
+
+            Circle()
+                .fill(tint.opacity(0.92))
+                .frame(width: size * 0.085, height: size * 0.085)
+
+            Image(systemName: "hand.tap.fill")
+                .font(.system(size: size * 0.20, weight: .black))
+                .foregroundStyle(tint)
+                .padding(size * 0.045)
+                .background(.white.opacity(0.97), in: Circle())
+                .overlay(Circle().stroke(tint.opacity(0.20), lineWidth: 1))
+                .shadow(color: .black.opacity(0.18), radius: 3, y: 2)
+                .offset(x: size * 0.25,
+                        y: size * (0.18 - phase * 0.035))
         }
-        .opacity(0.58 + Double(phase) * 0.42)
+        .shadow(color: .black.opacity(0.10), radius: 2, y: 1)
+        .opacity(0.70 + Double(phase) * 0.30)
         .position(point)
     }
 }
 
-/// A dashed route leaves the penguin, curves through the surface and ends in a
-/// pulsing down target beneath the hoop stack. It shows both where to press and
-/// what the resulting dive will do.
+/// A dashed route leaves the penguin and curves beneath the hoop stack. The
+/// down arrow stays directly below the character; nothing instructional is
+/// parked underwater where contrast is poor.
 private struct TutorialDivePathHint: View {
+    let penguin: CGPoint
     let start: CGPoint
     let end: CGPoint
     let size: CGFloat
@@ -2425,29 +2489,17 @@ private struct TutorialDivePathHint: View {
                                                dash: [size * 0.12, size * 0.09],
                                                dashPhase: -cycle * size * 0.42))
 
-                Circle()
-                    .stroke(tint.opacity(Double(1 - cycle) * 0.68),
-                            lineWidth: max(3, size * 0.035))
-                    .frame(width: size * (0.48 + cycle * 0.42),
-                           height: size * (0.48 + cycle * 0.42))
-                    .position(end)
-
                 Image(systemName: "arrow.down")
-                    .font(.system(size: size * 0.25, weight: .black))
-                    .foregroundStyle(.white)
-                    .frame(width: size * 0.48, height: size * 0.48)
-                    .background(tint, in: Circle())
-                    .overlay(Circle().stroke(.white.opacity(0.97), lineWidth: 3))
-                    .shadow(color: .black.opacity(0.20), radius: 4, y: 2)
-                    .position(end)
-
-                Image(systemName: "hand.tap.fill")
-                    .font(.system(size: size * 0.24, weight: .black))
+                    .font(.system(size: size * 0.28, weight: .black))
                     .foregroundStyle(tint)
-                    .padding(size * 0.075)
+                    .padding(size * 0.055)
                     .background(.white.opacity(0.96), in: Circle())
-                    .shadow(color: .black.opacity(0.18), radius: 3, y: 2)
-                    .position(x: end.x + size * 0.48, y: end.y - size * 0.12)
+                    .overlay(Circle().stroke(tint.opacity(0.28), lineWidth: 2))
+                    .shadow(color: .black.opacity(0.18), radius: 4, y: 2)
+                    .offset(y: reduceMotion ? 0 : cycle * size * 0.10)
+                    .position(x: penguin.x,
+                              y: penguin.y + size * 0.66)
+
             }
         }
         .accessibilityHidden(true)

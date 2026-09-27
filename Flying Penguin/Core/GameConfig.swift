@@ -82,8 +82,7 @@ public enum GameConfig {
     // MARK: The rescue heart
 
     /// What a heart floating in the flight path puts back, in halves — one
-    /// whole life. It is the same heart in the guided run's life lesson, which
-    /// is what lets that lesson give back exactly what it just cost.
+    /// whole life.
     public static let lifeHeartRecoveryHalves = 2
     /// A session offers exactly one rescue heart, and only to a player who is
     /// down to this much life: one heart, or the last half of one.
